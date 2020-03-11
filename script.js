@@ -10,7 +10,7 @@ $( document ).ready(function() {
     var number = Math.floor(Math.random() * (max - min + 1)) + min;
     var total = '';
     for (i=0;i<number;i++)
-    	total = total + '[ ]';
+    	total = total + 'O';
     return total;
   };
   
