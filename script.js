@@ -17,7 +17,7 @@ $( document ).ready(function() {
 
   $('#btnGenerate').click(function(){
     $('.title').html(random(title[type()]));
-    $('.aspects').html(aspects('good')+', '+aspects('bad');
+    $('.aspects').html(aspects('good')+', '+aspects('bad'));
     $('.good').html(random(skills.skilled)+', '+random(skills.skilled));
     $('.bad').html(random(skills.bad));
     $('.stress').html(stress(0,2));
