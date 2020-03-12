@@ -1,5 +1,7 @@
 $( document ).ready(function() {
  
+  import { aspects } from './aspects.js';
+  
   // Script to open and close sidebar
   function w3_open() {
       document.getElementById("mySidebar").style.display = "block";
@@ -42,7 +44,7 @@ $( document ).ready(function() {
 
   $('#btnGenerate').click(function(){
     $('.title').html(random(title[type()]));
-    $('.aspects').html(random(aspects.good)+', '+random(aspects.bad));
+    $('.aspects').html(random(aspects('good')+', '+random(aspects('bad'));
     $('.good').html(random(skills.skilled)+', '+random(skills.skilled));
     $('.bad').html(random(skills.bad));
     $('.stress').html(stress(0,2));
