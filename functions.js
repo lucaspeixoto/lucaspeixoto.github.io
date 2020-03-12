@@ -10,7 +10,17 @@ function w3_close() {
 }
 
 function random(array) {
-   return array[Math.floor(Math.random() * array.length)]
+    return array[Math.floor(Math.random() * array.length)]
+};
+
+function exclusiveRandom(array,quantity) {
+    var pos, result, element;
+    for (i=0;i<quantity;i++){
+      pos = Math.floor(Math.random() * array.length);
+      element = array.splice(pos,1)
+      result.push(element[0]);
+    }
+    return result;
 };
 
 function stress(min, max) {
