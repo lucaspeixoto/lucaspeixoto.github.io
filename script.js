@@ -11,11 +11,11 @@ $( document ).ready(function() {
       document.getElementById("myOverlay").style.display = "none";
   }
 
-  var random = function(array) {
+  function random(array) {
      return array[Math.floor(Math.random() * array.length)]
   };
   
-  var stress = function(min, max) {
+  function stress(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     var number = Math.floor(Math.random() * (max - min + 1)) + min;
@@ -25,7 +25,7 @@ $( document ).ready(function() {
     return total;
   };
   
-  var type = function(type){
+  function type(type){
     return $('input[name=type]:checked').val()
   }
 
@@ -34,11 +34,6 @@ $( document ).ready(function() {
     ['Urso','Morcego','Lobo','Águia','Cachorro','Leão','Crocodilo','Macaco','Cobra'], //pos 1 - animal
     ['Pirata','Bandido','Guerreiro','Clérigo','Conjurador','Assassino','Elfo','Anão','Bárbaro'] //pos 2 - human
   ];
-
-  const aspects = {
-    good : ['Bom de briga','Ligeiro quando precisa','Olfato aguçado','Excelente caçador','Sabe se esconder','Bastante atlético','Pensamento rápido','Atento aos detalhes','Agilidade felina'],
-    bad : ['Tem medo de fogo','Sempre com fome','Um pouco distraído','Bastante desmotivado','Covarde sozinho','Bem barulhento','Não pode com magia']
-  }
 
   const skills = {
     skilled : ['Morder e arranhar','Bater e correr','Atacar freneticamente','Atacar em bando','Atacar sorrateiramente','Lutar sozinho','Emboscar','Provocar e assustar','Fugir do combate','Convocar aliados'],
