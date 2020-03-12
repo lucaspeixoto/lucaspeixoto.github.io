@@ -4,8 +4,8 @@ $( document ).ready(function() {
 
     $('.boxNPCs').html(
     '<div class="boxNPC">'+
-      '<h3 class="title">Humano</h3>'+
-      '<i><h4 class="aspects">'+aspects('good')+', '+aspects('bad')+'</h4></i>'+
+      '<h4 class="title">Humano</h4>'+
+      '<p><b><i>'+aspects('good')+', '+aspects('bad')+'</i></b></p>'+
       '<p><strong>Perito (+2) em:</strong> '+skills('skilled')+', '+skills('skilled')+'</p>'+
       '<p><strong>Ruim (-2) em:</strong> '+skills('bad')+'</p>'+
       '<p><strong>Estresse: </strong>'+stress(0,2)+'</p>'+
@@ -13,8 +13,8 @@ $( document ).ready(function() {
 
     $('.boxNPCs').append(
     '<div class="boxNPC">'+
-      '<h3 class="title">Humano</h3>'+
-      '<i><h4 class="aspects">'+aspects('good')+', '+aspects('bad')+'</h4></i>'+
+      '<h4 class="title">Humano</h4>'+
+      '<p><b><i>'+aspects('good')+', '+aspects('bad')+'</i></b></p>'+
       '<p><strong>Perito (+2) em:</strong> '+skills('skilled')+', '+skills('skilled')+'</p>'+
       '<p><strong>Ruim (-2) em:</strong> '+skills('bad')+'</p>'+
       '<p><strong>Estresse: </strong>'+stress(0,2)+'</p>'+
@@ -22,8 +22,8 @@ $( document ).ready(function() {
 
     $('.boxNPCs').append(
     '<div class="boxNPC">'+
-      '<h3 class="title">Humano</h3>'+
-      '<i><h4 class="aspects">'+aspects('good')+', '+aspects('bad')+'</h4></i>'+
+      '<h4 class="title">Humano</h4>'+
+      '<p><b><i>'+aspects('good')+', '+aspects('bad')+'</i></b></p>'+
       '<p><strong>Perito (+2) em:</strong> '+skills('skilled')+', '+skills('skilled')+'</p>'+
       '<p><strong>Ruim (-2) em:</strong> '+skills('bad')+'</p>'+
       '<p><strong>Estresse: </strong>'+stress(0,2)+'</p>'+
@@ -31,8 +31,8 @@ $( document ).ready(function() {
 
     $('.boxNPCs').append(
     '<div class="boxNPC">'+
-      '<h3 class="title">Humano</h3>'+
-      '<i><h4 class="aspects">'+aspects('good')+', '+aspects('bad')+'</h4></i>'+
+      '<h4 class="title">Humano</h4>'+
+      '<p><b><i>'+aspects('good')+', '+aspects('bad')+'</i></b></p>'+
       '<p><strong>Perito (+2) em:</strong> '+skills('skilled')+', '+skills('skilled')+'</p>'+
       '<p><strong>Ruim (-2) em:</strong> '+skills('bad')+'</p>'+
       '<p><strong>Estresse: </strong>'+stress(0,2)+'</p>'+
