@@ -1,7 +1,5 @@
 $( document ).ready(function() {
  
-  import { aspects } from './aspects.js';
-  
   // Script to open and close sidebar
   function w3_open() {
       document.getElementById("mySidebar").style.display = "block";
