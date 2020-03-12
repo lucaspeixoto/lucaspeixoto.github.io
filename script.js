@@ -3,15 +3,15 @@ $( document ).ready(function() {
   setTimeout(function() {
       $("#btnGerarNPC").trigger('click');
   },10);
-  
+
   $('#btnGerarNPC').click(function(){
 
     $('.boxNPCs').html(
     '<div class="boxNPC">'+
       '<center><h4>'+aspects('concept')+'</h4>'+
       '<p><b><i>'+aspects('good')+', '+aspects('problem')+'</i></b></p></center>'+
-      '<p><strong>Perito (+2) em:</strong> '+skills('skilled')+', '+skills('skilled')+'</p>'+
-      '<p><strong>Ruim (-2) em:</strong> '+skills('skilled')+'</p>'+
+      '<p><strong>Perito (+2) em:</strong> '+skills('skilled')+', '+skills('skilled')+', '+skills('skilled')+'</p>'+
+      '<p><strong>Ruim (-2) em:</strong> '+skills('skilled')+', '+skills('skilled')+'</p>'+
       '<p><strong>Estresse: </strong>'+stress(0,2)+'</p>'+
     '</div>');
 
@@ -19,8 +19,8 @@ $( document ).ready(function() {
     '<div class="boxNPC">'+
       '<center><h4>'+aspects('concept')+'</h4>'+
       '<p><b><i>'+aspects('good')+', '+aspects('problem')+'</i></b></p></center>'+
-      '<p><strong>Perito (+2) em:</strong> '+skills('skilled')+', '+skills('skilled')+'</p>'+
-      '<p><strong>Ruim (-2) em:</strong> '+skills('skilled')+'</p>'+
+      '<p><strong>Perito (+2) em:</strong> '+skills('skilled')+', '+skills('skilled')+', '+skills('skilled')'</p>'+
+      '<p><strong>Ruim (-2) em:</strong> '+skills('skilled')+', '+skills('skilled')+'</p>'+
       '<p><strong>Estresse: </strong>'+stress(0,2)+'</p>'+
     '</div>');
 
