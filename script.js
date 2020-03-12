@@ -17,6 +17,8 @@ $( document ).ready(function() {
       '<p><strong>Estresse: </strong>'+stress(0,2)+'</p>'+
     '</div>');
 
+    var npcSkills = exclusiveRandom(skills('skilled'),5);
+
     $('.boxNPCs').append(
     '<div class="boxNPC">'+
       '<center><h4>'+aspects('concept')+'</h4>'+
