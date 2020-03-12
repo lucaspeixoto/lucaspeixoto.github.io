@@ -1,11 +1,43 @@
 $( document ).ready(function() {
  
-  $('#btnGenerate').click(function(){
-    $('.title').html('Humano');
-    $('.aspects').html(aspects('good')+', '+aspects('bad'));
-    $('.good').html(skills('skilled')+', '+skills('skilled'));
-    $('.bad').html(skills('bad'));
-    $('.stress').html(stress(0,2)); 
+  $('#btnGerarNPC').click(function(){
+
+    $('.boxNPCs').html(
+    '<div>'+
+      '<h3 class="title">Humano</h3>'+
+      '<i><h4 class="aspects">'+aspects('good')+', '+aspects('bad')+'</h4></i>'+
+      '<p><strong>Perito (+2) em:</strong> '+skills('skilled')+', '+skills('skilled')+'</p>'+
+      '<p><strong>Ruim (-2) em:</strong> '+skills('bad')+'</p>'+
+      '<p><strong>Estresse: </strong>'+stress(0,2)+'</p>'+
+    '</div>');
+
+    $('.boxNPCs').append(
+    '<div>'+
+      '<h3 class="title">Humano</h3>'+
+      '<i><h4 class="aspects">'+aspects('good')+', '+aspects('bad')+'</h4></i>'+
+      '<p><strong>Perito (+2) em:</strong> '+skills('skilled')+', '+skills('skilled')+'</p>'+
+      '<p><strong>Ruim (-2) em:</strong> '+skills('bad')+'</p>'+
+      '<p><strong>Estresse: </strong>'+stress(0,2)+'</p>'+
+    '</div>');
+
+    $('.boxNPCs').append(
+    '<div>'+
+      '<h3 class="title">Humano</h3>'+
+      '<i><h4 class="aspects">'+aspects('good')+', '+aspects('bad')+'</h4></i>'+
+      '<p><strong>Perito (+2) em:</strong> '+skills('skilled')+', '+skills('skilled')+'</p>'+
+      '<p><strong>Ruim (-2) em:</strong> '+skills('bad')+'</p>'+
+      '<p><strong>Estresse: </strong>'+stress(0,2)+'</p>'+
+    '</div>');
+
+    $('.boxNPCs').append(
+    '<div>'+
+      '<h3 class="title">Humano</h3>'+
+      '<i><h4 class="aspects">'+aspects('good')+', '+aspects('bad')+'</h4></i>'+
+      '<p><strong>Perito (+2) em:</strong> '+skills('skilled')+', '+skills('skilled')+'</p>'+
+      '<p><strong>Ruim (-2) em:</strong> '+skills('bad')+'</p>'+
+      '<p><strong>Estresse: </strong>'+stress(0,2)+'</p>'+
+    '</div>');
+
   });
 
 });

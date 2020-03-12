@@ -40,16 +40,13 @@ fetch("./nav.html")
   </header>
   
   <div class="w3-container w3-padding-large" style="margin-bottom:32px">
-    <h4><b>Tipo de oponente:</b></h4>
+    <h4><b>São gerados 4 NPCs, dois aliados e dois inimigos. Clique no botão abaixo para gerá-los novamente.</b></h4>
     
-  	<p><input type="radio" name="type" value="0" checked>Monstro</p>
-  	<p><input type="radio" name="type" value="1">Animal</p>
-  	<p><input type="radio" name="type" value="2">Humanoide</p>
-  	<button id="btnGenerate">
-  	  Gerar oponente
-  	</button>
+    <button id="btnGerarNPC" class="w3-button w3-teal w3-padding-large w3-hover-black">Gerar NPCs</button>
 
-  	<div style="border: solid 1px black; border-radius: 5px; padding: 5px; margin: 10px; width: 500px">
+    <div class="boxNPCs" style="border: solid 1px black; border-radius: 5px; padding: 5px; margin: 10px; max-width: 500px; box-shadow:10px 10px 25px grey;"></div>
+
+  	<div >
   		<h3 class="title"></h3>
   		<i><h4 class="aspects"></h4></i>
   		<p><strong>Perito (+2) em:</strong> <span class="good"></span></p>
