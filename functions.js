@@ -21,4 +21,4 @@ function stress(min, max) {
   for (i=0;i<number;i++)
   	total = total + 'O';
   return total;
-};
+}; 
