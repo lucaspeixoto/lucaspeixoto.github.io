@@ -14,7 +14,7 @@ function random(array) {
 };
 
 function exclusiveRandom(array,quantity) {
-    var pos, result, element;
+    var pos, result = [], element;
     for (i=0;i<quantity;i++){
       pos = Math.floor(Math.random() * array.length);
       element = array.splice(pos,1)
