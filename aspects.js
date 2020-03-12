@@ -13,4 +13,3 @@ function aspects(type) {
     }
 
 };
-
