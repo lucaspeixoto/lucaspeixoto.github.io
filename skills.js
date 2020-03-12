@@ -3,11 +3,11 @@ function skills(type) {
     switch(type){
 
     	case "skilled":
-    	    return random(['Morder e arranhar','Bater e correr','Atacar freneticamente','Atacar em bando','Atacar sorrateiramente','Lutar sozinho','Emboscar','Provocar e assustar','Fugir do combate','Convocar aliados']);
+    	    return random(['Atletismo','Atirar','Comunicação','Condução','Conhecimentos','Contatos','Empatia','Enganar','Furtividade','Investigar','Lutar','Ofícios','Percepção','Provocar','Recursos','Roubo','Vigor','Vontade','Academia']);
     		break;
 
     	case "bad":
-    	    return random(['Defender-se','Lutar sozinho','Furtividade','Enganar','Pensar rápido','Raciocinar','Atirar','Continuar lutando','Se locomover']);
+    	    return random(['Atletismo','Atirar','Comunicação','Condução','Conhecimentos','Contatos','Empatia','Enganar','Furtividade','Investigar','Lutar','Ofícios','Percepção','Provocar','Recursos','Roubo','Vigor','Vontade','Academia']);
     		break;
 
     }
