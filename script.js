@@ -32,4 +32,22 @@ $( document ).ready(function() {
 
   });
 
+  $('#btnGerarFate').click(function(){
+
+    var classe = random(classes());
+    var raca = random(race());
+
+    $('.boxPersonagemFate').html(
+      '<p><i>Conceito:</i> '+random(classe.aspects())+' '+random(aspects('ancestry'))+'</p>'+
+      '<p><i>Raça:</i> '+random(raca.aspects())+'</p>'+
+      '<p><i>Problema:</i> '+random(aspects('problem'))+'</p>'+
+      '<p><strong>Perito (+2) em:</strong> '+npcSkills[0]+', '+npcSkills[1]+', '+npcSkills[2]+'</p>'+
+      '<p><strong>Ruim (-2) em:</strong> '+npcSkills[3]+', '+npcSkills[4]+'</p>'+
+      '<p><strong>Estresse: </strong>'+stress(0,2)+'</p>'
+    );   
+
+     $('.boxPersonagemFate').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '5px', 'margin': '10px', 'max-width': '500px', 'box-shadow': '5px 5px 10px lightgrey'});
+
+  });
+
 });
