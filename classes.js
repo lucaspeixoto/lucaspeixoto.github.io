@@ -11,7 +11,7 @@
 
 }*/
 
-function concept(type) {
+function classes(type) {
 
     if (type == '') 
         type = random(['thief','druid']);

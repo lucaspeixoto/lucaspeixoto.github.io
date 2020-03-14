@@ -35,8 +35,10 @@ $( document ).ready(function() {
 
   $('#btnGerarFate').click(function(){
 
-    var classe = concept();
-    var raca = race();
+    var classe = classes();
+    var raca = races();
+
+    var npcSkills = exclusiveRandom(skills('core'),5);
 
     $('.boxPersonagemFate').html(
       '<p><i>Conceito:</i> '+random(classe.aspects())+' '+random(aspects('ancestry'))+'</p>'+
