@@ -38,16 +38,16 @@ $( document ).ready(function() {
     //var classe = classes();
     //var raca = races();
 
-    var skills = exclusiveRandom(skills('core'),10);
+    var pericias = exclusiveRandom(skills('core'),10);
 
     $('.boxPersonagemFate').html(
     //  '<p><i>Conceito:</i> '+random(classe.aspects())+' '+random(aspects('ancestry'))+'</p>'+
     //  '<p><i>Raça:</i> '+random(raca.aspects())+'</p>'+
       '<p><i>Problema:</i> '+random(aspects('problem'))+'</p><br>'+
-      '<p><strong>Ótimo (+4):</strong> '+skills[0]+'</p>'+
-      '<p><strong>Bom (+3):</strong> '+skills[1]+', '+skills[2]+'</p>'+
-      '<p><strong>Razoável (+2):</strong> '+skills[3]+', '+skills[4]+', '+skills[5]+'</p>'+
-      '<p><strong>Regular (+1):</strong> '+skills[6]+', '+skills[7]+', '+skills[8]+', '+skills[9]+'</p>'+
+      '<p><strong>Ótimo (+4):</strong> '+pericias[0]+'</p>'+
+      '<p><strong>Bom (+3):</strong> '+pericias[1]+', '+pericias[2]+'</p>'+
+      '<p><strong>Razoável (+2):</strong> '+pericias[3]+', '+pericias[4]+', '+pericias[5]+'</p>'+
+      '<p><strong>Regular (+1):</strong> '+pericias[6]+', '+pericias[7]+', '+pericias[8]+', '+pericias[9]+'</p>'+
       '<p><strong>Estresse: </strong>'+stress(0,2)+'</p>'
     );   
 
