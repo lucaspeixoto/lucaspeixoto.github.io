@@ -1,4 +1,4 @@
-const template = {
+/*const template = {
 
     aspects: [],
     stunts: [],
@@ -9,7 +9,7 @@ const template = {
         stunts: []
     }
 
-}
+}*/
 
 function concept(type) {
 
