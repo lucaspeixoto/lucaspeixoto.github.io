@@ -10,23 +10,6 @@ function skills(type) {
     	    return ['Animais','Atletismo','Atirar','Comunicação','Condução','Conhecimentos','Contatos','Empatia','Enganar','Furtividade','Investigar','Lutar','Magia','Ocultismo','Ofícios','Percepção','Provocar','Recursos','Roubo','Vigor','Vontade'];
     		break;
 
-    	case "Alto Elfo":
-    	    return ['Conhecimentos'];
-    		break;
-
-    	case "halfling":
-    	    return [];
-    		break;
-
-    	case "druid":
-    	    return [];
-    		break;
-
-    	case "thief":
-    	    return [];
-    		break;
-
-
-    }
+    	}
 
 };

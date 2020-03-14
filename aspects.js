@@ -18,18 +18,6 @@ function aspects(type) {
             return ['Acólito','Artesão de Guilda','Mercador de Guilda','Artista','Gladiador','Charlatão','Criminoso','Espião','Eremita','Forasteiro','Herói do Povo','Marinheiro','Pirata','Nobre','Cavaleiro','Órfão','Sábio','Soldado'];
             break;
 
-        case "elf":
-            return ['Alto Elfo','Elfo da Floresta','Elfo Drow'];
-            break;
-
-        case "halfling":
-            return ['Halfling Pés Leves','Halfling Robusto','Halfling dos Vales'];
-            break;
-
-        case "thief":
-            return ['Ladino Assassino','Ladino Gatuno','Ladino Trapaceiro Arcano'];
-            break;
-
     }
 
 };
