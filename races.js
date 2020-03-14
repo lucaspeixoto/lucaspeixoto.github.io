@@ -5,7 +5,7 @@ function races(type) {
   
     switch(type){
     	case "halfling":
-    		return halfling {
+    		return halfling : {
 
 			    aspects: ['Halfling Pés Leves','Halfling Robusto','Halfling dos Vales'],
 			    stunts: ['Visão na penumbra: O halfling enxerga normalmente somente com um pequeno foco de luz.','Sortudo: O halfling pode, uma vez por sessão, re-rolar gratuimente uma jogada de dados.'],
@@ -28,7 +28,7 @@ function races(type) {
     		break;
 
     	case "elf":
-    		return elf {
+    		return elf : {
 
 			    aspects: ['Alto Elfo','Elfo da Floresta','Elfo Drow'],
 			    stunts: ['Visão na penumbra: O elfo enxerga normalmente somente com um pequeno foco de luz.','Atencioso: O elfo possui sentidos aguçados, recebe +2 em rolagens de Investigar para detectar portas e mecanismos secretos.'],
