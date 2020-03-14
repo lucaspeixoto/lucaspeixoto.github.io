@@ -41,8 +41,8 @@ $( document ).ready(function() {
     var pericias = exclusiveRandom(skills('core'),10);
 
     $('.boxPersonagemFate').html(
-      '<p><i>Conceito:</i> '+random(classe.aspects())+' '+random(aspects('ancestry'))+'</p>'+
-      '<p><i>Raça:</i> '+random(raca.aspects())+'</p>'+
+      '<p><i>Conceito:</i> '+random(classe.aspects)+' '+random(aspects('ancestry'))+'</p>'+
+      '<p><i>Raça:</i> '+random(raca.aspects)+'</p>'+
       '<p><i>Problema:</i> '+random(aspects('problem'))+'</p><br>'+
       '<p><strong>Ótimo (+4):</strong> '+pericias[0]+'</p>'+
       '<p><strong>Bom (+3):</strong> '+pericias[1]+', '+pericias[2]+'</p>'+
