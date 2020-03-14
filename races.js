@@ -1,4 +1,4 @@
-function races(type) {
+function races(type='') {
 
 	if (type == '') 
         type = random(['halfling','elf']);

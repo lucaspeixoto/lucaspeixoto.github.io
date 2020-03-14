@@ -1,4 +1,4 @@
-function aspects(type) {
+function aspects(type='') {
   
     switch(type){
 
