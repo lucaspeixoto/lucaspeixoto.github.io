@@ -11,7 +11,7 @@ const template = {
 
 }
 
-function classes(type) {
+function concept(type) {
 
     if (type == '') 
         type = random(['thief','druid']);
@@ -40,7 +40,7 @@ function classes(type) {
                     skills: ['Magia','Furtividade','Percepção'],
                     approach: ['Esperto'],
                     stunts: ['Conjuração: O ladino trapaceiro arcano é capaz de lançar magia arcana.','Mão mágicas malabaristas: O ladino trapaceiro arcano é capaz de conjurar a magia “mãos mágicas” gratuitamente.','Emboscada mágica: O ladino trapaceiro arcano ganha um impulso ao realizar uma magia contra um alvo que não esteja ciente de sua presença.']
-                };
+                }
             }
             break;
 

@@ -2,6 +2,7 @@ $( document ).ready(function() {
 
   setTimeout(function() {
       $("#btnGerarNPC").trigger('click');
+      $("#btnGerarFate").trigger('click');
   },10);
 
   $('#btnGerarNPC').click(function(){
@@ -34,7 +35,7 @@ $( document ).ready(function() {
 
   $('#btnGerarFate').click(function(){
 
-    var classe = random(classes());
+    var classe = random(concept());
     var raca = random(race());
 
     $('.boxPersonagemFate').html(
