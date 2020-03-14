@@ -44,10 +44,10 @@ $( document ).ready(function() {
       '<p><i>Conceito:</i> '+random(classe.aspects)+' '+random(aspects('ancestry'))+'</p>'+
       '<p><i>Raça:</i> '+random(raca.aspects)+'</p>'+
       '<p><i>Problema:</i> '+random(aspects('problem'))+'</p><br>'+
-      '<p><strong>Ótimo (+4):</strong> '+pericias[0]+'</p>'+
-      '<p><strong>Bom (+3):</strong> '+pericias[1]+', '+pericias[2]+'</p>'+
-      '<p><strong>Razoável (+2):</strong> '+pericias[3]+', '+pericias[4]+', '+pericias[5]+'</p>'+
-      '<p><strong>Regular (+1):</strong> '+pericias[6]+', '+pericias[7]+', '+pericias[8]+', '+pericias[9]+'</p>'+
+      '<p><strong>Ótimo (+4):</strong> '+pericias[0]+'<br>'+
+      '<strong>Bom (+3):</strong> '+pericias[1]+', '+pericias[2]+'<br>'+
+      '<strong>Razoável (+2):</strong> '+pericias[3]+', '+pericias[4]+', '+pericias[5]+'<br>'+
+      '<strong>Regular (+1):</strong> '+pericias[6]+', '+pericias[7]+', '+pericias[8]+', '+pericias[9]+'</p>'+
       '<p><strong>Estresse: </strong>'+stress(0,2)+'</p>'
     );   
 
