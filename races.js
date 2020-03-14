@@ -1,15 +1,3 @@
-const template = {
-
-    aspects: [],
-    stunts: [],
-    '': {
-        skills: [],
-        approach: [],
-        stunts: []
-    }
-
-}
-
 const halfling = {
 
     aspects: ['Halfling Pés Leves','Halfling Robusto','Halfling dos Vales'],
