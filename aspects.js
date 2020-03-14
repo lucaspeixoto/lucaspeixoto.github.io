@@ -26,10 +26,6 @@ function aspects(type) {
             return ['Halfling Pés Leves','Halfling Robusto','Halfling dos Vales'];
             break;
 
-        case "druid":
-            return ['Druida da Tempestade','Druida Primal','Druida da Folha'];
-            break;
-
         case "thief":
             return ['Ladino Assassino','Ladino Gatuno','Ladino Trapaceiro Arcano'];
             break;

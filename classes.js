@@ -1,14 +1,23 @@
+const druid = {
+
+    aspects: ['Druida da Tempestade','Druida Primal','Druida da Folha'],
+    stunts: ['Companheiro animal: O druida possui um companheiro animal, que irá obedecê-lo e também combater ao lado dele.','Sempre em alerta: O druida consegue perceber o seu redor com muito mais precisão, recebe +2 em Percepção em testes de Superar para não ser pego de surpresa.','Corpo fechado: O druida se torna imune a venenos e doenças, e não sente mais frio ou calor extremos.','Resoluto: O druida se torna mais resistente a danos mentais, recebe Armadura:1 em conflitos mentais.','Natureza atemporal: O druida não envelhece mais, nem precisa mais dormir ou se alimentar.','Caminho natural: O druida se desloca normalmente em uma floresta fechada, tanto por terra quanto por cima das árvores, ignorando aspectos que impossibilitem movimentos.'],
+    'Druida da Tempestade': {
+        skills: ['Magia','Vontade','Provocar'],
+        proficiency: ['Lutar simples, armaduras leves'],
+        stunts: []
+    }
+
+}
+
 function classes(type) {
   
     switch(type){
 
     	case "skilled":
-    	    return ['Atletismo','Atirar','Comunicação','Condução','Conhecimentos','Contatos','Empatia','Enganar','Furtividade','Investigar','Lutar','Ofícios','Percepção','Provocar','Recursos','Roubo','Vigor','Vontade','Academia','Animais','Magia','Duelos','Punhos','Intimidação','Liderança','Sobrevivência','Prontidão','Arte','Resistência','Jogos de Azar','Armas brancas','Armas de fogo','Poder','Mistérios','Discrição','Engenharia','Mecânica','Relacionamento','Brigar','Burocracia','Tecnologia','Demolições','Artilharia','Ciência','Tática','Medicina','Alquimia','Charme','Convicção','Disciplina','Motivação','Presença','Atitude','Ocultismo','Psíquico','Comércio','Submundo','Reputação','Computadores','Educação','Máquinas','Persuasão','Pesquisa','Segurança','Reparos','Espíritos','Disfarces','Programação','Eletrônica'];
+    	    return ;
     		break;
 
-    	case "core":
-    	    return ['Animais','Atletismo','Atirar','Comunicação','Condução','Conhecimentos','Contatos','Empatia','Enganar','Furtividade','Investigar','Lutar','Magia','Ocultismo','Ofícios','Percepção','Provocar','Recursos','Roubo','Vigor','Vontade'];
-    		break;
 
     }
 
