@@ -10,8 +10,8 @@ $( document ).ready(function() {
 
     $('.boxNPCs').html(
     '<div class="boxNPC">'+
-      '<center><h4>'+aspects('concept')+'</h4>'+
-      '<p><b><i>'+aspects('good')+', '+aspects('problem')+'</i></b></p></center>'+
+      '<center><h4>'+random(aspects('concept'))+'</h4>'+
+      '<p><b><i>'+random(aspects('good'))+', '+random(aspects('problem'))+'</i></b></p></center>'+
       '<p><strong>Perito (+2) em:</strong> '+npcSkills[0]+', '+npcSkills[1]+', '+npcSkills[2]+'</p>'+
       '<p><strong>Ruim (-2) em:</strong> '+npcSkills[3]+', '+npcSkills[4]+'</p>'+
       '<p><strong>Estresse: </strong>'+stress(0,2)+'</p>'+
@@ -21,8 +21,8 @@ $( document ).ready(function() {
 
     $('.boxNPCs').append(
     '<div class="boxNPC">'+
-      '<center><h4>'+aspects('concept')+'</h4>'+
-      '<p><b><i>'+aspects('good')+', '+aspects('problem')+'</i></b></p></center>'+
+      '<center><h4>'+random(aspects('concept')+'</h4>'+
+      '<p><b><i>'+random(aspects('good'))+', '+random(aspects('problem'))+'</i></b></p></center>'+
       '<p><strong>Perito (+2) em:</strong> '+npcSkills[0]+', '+npcSkills[1]+', '+npcSkills[2]+'</p>'+
       '<p><strong>Ruim (-2) em:</strong> '+npcSkills[3]+', '+npcSkills[4]+'</p>'+
       '<p><strong>Estresse: </strong>'+stress(0,2)+'</p>'+
