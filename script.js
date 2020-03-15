@@ -57,11 +57,11 @@ $( document ).ready(function() {
       random(classe[classeEspecifica].stunts)+'</p>'+
       '<p><h5>ESTRESSE</h5><br>'+
       '<strong>Físico: </strong>'+stress(2,3)+'<br>'+
-      '<strong>Mental: </strong>'+stress(2,3)+'</p>'++
+      '<strong>Mental: </strong>'+stress(2,3)+'</p>'+
       '<p><h5>CONSEQUÊNCIAS</h5><br>'+
       '<strong>Suave: </strong><br>'+
       '<strong>Moderada: </strong><br>'+
-      '<strong>Severa: </strong></p>'+
+      '<strong>Severa: </strong></p>'
     );   
 
      $('.boxPersonagemFate').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '5px', 'margin': '10px', 'max-width': '500px', 'box-shadow': '5px 5px 10px lightgrey'});
