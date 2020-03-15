@@ -50,10 +50,10 @@ function characterSkills(classSkills,raceSkill,allSkills) {
 }
 
 function characterStress(type,skills) {
-  var stress = '<i class="far fa-square"></i><i class="far fa-square"></i><i class="far fa-square"></i>';
+  var stress = '<i class="fa fa-square-o fa-fw"></i><i class="fa fa-square-o fa-fw"></i><i class="fa fa-square-o fa-fw"></i>';
   if(skills.indexOf(type) >= 0)
-    stress = stress + '<i class="far fa-square"></i>';
+    stress = stress + '<i class="fa fa-square-o fa-fw"></i>';
   if(skills.indexOf(type) <= 2 && skills.indexOf(type) >= 0)
-    stress = stress + '<i class="far fa-square"></i><i class="far fa-square"></i>';
+    stress = stress + '<i class="fa fa-square-o fa-fw"></i><i class="fa fa-square-o fa-fw"></i>';
   return stress;
 }
