@@ -60,18 +60,16 @@ function characterStress(type,skills) {
 
 
 function npcStunts(npcSkills){
-  var npcStuntsList = []; 
+  var npcStuntsList = [];
+  var pericias = skills('skilled');
   for(i=0;i<3;i++){
-    npcStuntsList.push(stunts(npcSkills[i]));
+    if (pericias.indexOf(npcSkills[i]) >= 0)
+      npcStuntsList.push(stunts(npcSkills[i]));
   }
 
-  if (typeof npcStuntsList !== 'undefined' && npcStuntsList.length > 0){
-    console.log(npcStuntsList);
-    specificStunt = random(npcStuntsList);
-    console.log(specificStunt);
-    return '<p>'+random(specificStunt)+'</p>';
-  } else {
+  if (typeof npcStuntsList !== 'undefined' && npcStuntsList.length > 0)
+    return '<p>'+random(random(npcStuntsList))+'</p>';
+  else
     return '';
-  }
-  
+    
 }
