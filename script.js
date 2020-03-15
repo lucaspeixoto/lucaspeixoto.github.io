@@ -45,25 +45,25 @@ $( document ).ready(function() {
 
     $('.boxPersonagemFate').html(
       '<p><strong>ASPECTOS</strong><br>'+
-      '<strong>&nbsp;&nbsp;Conceito:</strong> '+classeEspecifica+' '+random(aspects('ancestry'))+'<br>'+
-      '<strong>&nbsp;&nbsp;Raça:</strong> '+racaEspecifica+'<br>'+
-      '<strong>&nbsp;&nbsp;Problema:</strong> '+random(aspects('problem'))+'</p>'+
+      '<strong>&nbsp;&nbsp;&nbsp;Conceito:</strong> '+classeEspecifica+' '+random(aspects('ancestry'))+'<br>'+
+      '<strong>&nbsp;&nbsp;&nbsp;Raça:</strong> '+racaEspecifica+'<br>'+
+      '<strong>&nbsp;&nbsp;&nbsp;Problema:</strong> '+random(aspects('problem'))+'</p>'+
       '<p><strong>PERÍCIAS</strong><br>'+
-      '<strong>&nbsp;&nbsp;Ótimo (+4):</strong> '+pericias[0]+'<br>'+
-      '<strong>&nbsp;&nbsp;Bom (+3):</strong> '+pericias[1]+', '+pericias[2]+'<br>'+
-      '<strong>&nbsp;&nbsp;Razoável (+2):</strong> '+pericias[3]+', '+pericias[4]+', '+pericias[5]+'<br>'+
-      '<strong>&nbsp;&nbsp;Regular (+1):</strong> '+pericias[6]+', '+pericias[7]+', '+pericias[8]+', '+pericias[9]+'</p>'+
+      '<strong>&nbsp;&nbsp;&nbsp;Ótimo (+4):</strong> '+pericias[0]+'<br>'+
+      '<strong>&nbsp;&nbsp;&nbsp;Bom (+3):</strong> '+pericias[1]+', '+pericias[2]+'<br>'+
+      '<strong>&nbsp;&nbsp;&nbsp;Razoável (+2):</strong> '+pericias[3]+', '+pericias[4]+', '+pericias[5]+'<br>'+
+      '<strong>&nbsp;&nbsp;&nbsp;Regular (+1):</strong> '+pericias[6]+', '+pericias[7]+', '+pericias[8]+', '+pericias[9]+'</p>'+
       '<p><strong>FAÇANHAS</strong><br>'+
-      '&nbsp;&nbsp;'+boldString(random(facanhasRaca))+'<br>'+
-      '&nbsp;&nbsp;'+random(classe.stunts)+'<br>'+
-      '&nbsp;&nbsp;'+random(classe[classeEspecifica].stunts)+'</p>'+
+      '&nbsp;&nbsp;&nbsp;'+boldString(random(facanhasRaca))+'<br>'+
+      '&nbsp;&nbsp;&nbsp;'+random(classe.stunts)+'<br>'+
+      '&nbsp;&nbsp;&nbsp;'+random(classe[classeEspecifica].stunts)+'</p>'+
       '<p><strong>ESTRESSE</strong><br>'+
-      '<strong>&nbsp;&nbsp;Físico: </strong>'+stress(2,3)+'<br>'+
-      '<strong>&nbsp;&nbsp;Mental: </strong>'+stress(2,3)+'</p>'+
+      '<strong>&nbsp;&nbsp;&nbsp;Físico: </strong>'+stress(2,3)+'<br>'+
+      '<strong>&nbsp;&nbsp;&nbsp;Mental: </strong>'+stress(2,3)+'</p>'+
       '<p><strong>CONSEQUÊNCIAS</strong><br>'+
-      '<strong>&nbsp;&nbsp;Suave: </strong><br>'+
-      '<strong>&nbsp;&nbsp;Moderada: </strong><br>'+
-      '<strong>&nbsp;&nbsp;Severa: </strong></p>'
+      '<strong>&nbsp;&nbsp;&nbsp;Suave: </strong><br>'+
+      '<strong>&nbsp;&nbsp;&nbsp;Moderada: </strong><br>'+
+      '<strong>&nbsp;&nbsp;&nbsp;Severa: </strong></p>'
     );   
 
      $('.boxPersonagemFate').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '5px', 'margin': '10px', 'max-width': '500px', 'box-shadow': '5px 5px 10px lightgrey'});
