@@ -57,3 +57,11 @@ function characterStress(type,skills) {
     stress = stress + '<i class="fa fa-square-o"></i><i class="fa fa-square-o"></i>';
   return stress;
 }
+
+
+function npcStunts(npcSkills){
+  var npcStunts = []; 
+  for(i=0;i<3;i++)
+    npcStunts.push(stunts(npcSkills[i]));
+  return random(npcStunts);
+}

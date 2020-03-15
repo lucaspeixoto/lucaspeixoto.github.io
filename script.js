@@ -5,13 +5,6 @@ $( document ).ready(function() {
       $("#btnGerarFate").trigger('click');
   },10);
 
-  function npcStunts(npcSkills){
-    var npcStunts = []; 
-    for(i=0;i<3;i++)
-      npcStunts.push(stunts(npcSkills[i]));
-    return random(npcStunts);
-  }
-
   $('#btnGerarNPC').click(function(){
 
     var npcSkills = exclusiveRandom(skills('skilled'),5);
