@@ -54,7 +54,7 @@ $( document ).ready(function() {
       '<strong>&nbsp;&nbsp;&nbsp;Razoável (+2):</strong> '+pericias[3]+', '+pericias[4]+', '+pericias[5]+'<br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Regular (+1):</strong> '+pericias[6]+', '+pericias[7]+', '+pericias[8]+', '+pericias[9]+'</p>'+
       '<p><strong>FAÇANHAS</strong><br>'+
-      '&nbsp;&nbsp;&nbsp;'+boldString(random(facanhasRaca))+'<br>'+
+      '&nbsp;&nbsp;&nbsp;'+random(facanhasRaca)+'<br>'+
       '&nbsp;&nbsp;&nbsp;'+random(classe.stunts)+'<br>'+
       '&nbsp;&nbsp;&nbsp;'+random(classe[classeEspecifica].stunts)+'</p>'+
       '<p><strong>ESTRESSE</strong><br>'+
