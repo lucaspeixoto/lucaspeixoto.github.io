@@ -32,3 +32,7 @@ function stress(min, max) {
   	total = total + 'O';
   return total;
 }; 
+
+function boldString(input) {
+    return input.replace(new RegExp('(^|\\s)(:)(\\s|$)','ig'), '<strong>$1</strong>$2$3');
+}
