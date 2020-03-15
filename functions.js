@@ -65,7 +65,7 @@ function npcStunts(npcSkills){
     npcStunts.push(stunts(npcSkills[i]));
   }
 
-  if (npcStunts != "undefined"){
+  if (Array.isArray(npcStunts) && npcStunts.length){
     specificStunt = random(npcStunts);
     return '<p>'+random(specificStunt)+'</p>';
   } else {
