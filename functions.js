@@ -34,5 +34,5 @@ function stress(min, max) {
 }; 
 
 function boldString(input) {
-    return input.replace(new RegExp('(^|\\s)(:)(\\s|$)','ig'), '<strong>$1</strong>$2$3');
+    return input.replace(new RegExp('(^|\\s)(:)(\\s|$)','ig'), '<strong>$1$2</strong>$3');
 }
