@@ -63,7 +63,9 @@ function npcStunts(npcSkills){
   var npcStuntsList = [];
   var pericias = skills('skilled');
   for(i=0;i<3;i++){
+    console.log(npcSkills[i]);
     if (pericias.indexOf(npcSkills[i]) >= 0)
+      console.log(pericias.indexOf(npcSkills[i]));
       npcStuntsList.push(stunts(npcSkills[i]));
   }
 
