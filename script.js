@@ -8,6 +8,7 @@ $( document ).ready(function() {
   $('#btnGerarNPC').click(function(){
 
     var npcSkills = exclusiveRandom(skills('skilled'),5);
+    var stunts = NPCstunt(npcSkills);
 
     $('.boxNPCs').html(
     '<div class="boxNPC">'+
@@ -15,6 +16,7 @@ $( document ).ready(function() {
       '<p><b><i>'+random(aspects('good'))+', '+random(aspects('problem'))+'</i></b></p></center>'+
       '<p><strong>Perito (+2) em:</strong> '+npcSkills[0]+', '+npcSkills[1]+', '+npcSkills[2]+'</p>'+
       '<p><strong>Ruim (-2) em:</strong> '+npcSkills[3]+', '+npcSkills[4]+'</p>'+
+      '<p>'+random(stunts)+'</p>'+
       '<p><strong>Estresse: </strong>'+stress(0,2)+'</p>'+
     '</div>');
 
@@ -26,6 +28,7 @@ $( document ).ready(function() {
       '<p><b><i>'+random(aspects('good'))+', '+random(aspects('problem'))+'</i></b></p></center>'+
       '<p><strong>Perito (+2) em:</strong> '+npcSkills[0]+', '+npcSkills[1]+', '+npcSkills[2]+'</p>'+
       '<p><strong>Ruim (-2) em:</strong> '+npcSkills[3]+', '+npcSkills[4]+'</p>'+
+      '<p>'+random(stunts)+'</p>'+
       '<p><strong>Estresse: </strong>'+stress(0,2)+'</p>'+
     '</div>');
 
@@ -39,7 +42,7 @@ $( document ).ready(function() {
     var classeEspecifica = random(classe.aspects);
     var raca = races();
     var racaEspecifica = random(raca.aspects);
-    var pericias = characterSkills(classe[classeEspecifica].skills,raca[racaEspecifica].skills,skills('core'));
+    var pericias = characterSkills(classe[classeEspecifica].skills,raca[racaEspecifica].skills);
     var facanhasRaca = raca.stunts;
     facanhasRaca = facanhasRaca.concat(raca[racaEspecifica].stunts);
 

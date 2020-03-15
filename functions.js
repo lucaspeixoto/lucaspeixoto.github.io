@@ -29,18 +29,18 @@ function stress(min, max) {
   var number = Math.floor(Math.random() * (max - min + 1)) + min;
   var total = '';
   for (i=0;i<number;i++)
-  	total = total + 'O';
+  	total = total + '<i class="fa fa-square-o"></i> ';
   return total;
 };
 
-function characterSkills(classSkills,raceSkill,allSkills) {
+function characterSkills(classSkills,raceSkill) {
   var skills = exclusiveRandom(classSkills,5);
   if(skills.indexOf(raceSkill[0]) === -1) 
     skills.push(raceSkill[0]);
 
   var i = 0;
   while(i<=5){
-    var skill = random(allSkills);
+    var skill = random(skills('core'));
     if(skills.indexOf(skill) === -1){
       skills.push(skill);
       i++;
@@ -56,4 +56,12 @@ function characterStress(type,skills) {
   if(skills.indexOf(type) <= 2 && skills.indexOf(type) >= 0)
     stress = stress + '<i class="fa fa-square-o"></i><i class="fa fa-square-o"></i>';
   return stress;
+}
+
+function NPCstunt(skills) {
+  var stunts = [];
+  for(i=0;i<skills.length;i++){
+    stunts.push(stunts(skill[i]));
+  }
+  return stunts;
 }
