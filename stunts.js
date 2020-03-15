@@ -19,7 +19,7 @@ function stunts(type) {
             break;
 
         case "Conhecimentos":
-            return ['<strong>Já Li Sobre Isso: Você já leu centenas – se não milhares – de livros sobre inúmeros assuntos. Você pode gastar um ponto de destino para usar Conhecimentos no lugar de qualquer outra perícia em uma rolagem, desde que consiga explicar seu conhecimento sobre a ação que quer realizar.</strong>','<strong>Escudo da Razão:</strong> Você pode usar Conhecimentos como defesa contra tentativas de Provocar, contanto que consiga justificar sua habilidade de superar o medo através de pensamento racional e razão.','<strong>Especialista:</strong> Escolha um campo de especialização, como alquimia, criminologia ou zoologia. Você recebe +2 nas rolagens de Conhecimentos que estejam relacionadas ao seu campo de especialização.'];
+            return ['<strong>Já Li Sobre Isso:</strong> Você já leu centenas – se não milhares – de livros sobre inúmeros assuntos. Você pode gastar um ponto de destino para usar Conhecimentos no lugar de qualquer outra perícia em uma rolagem, desde que consiga explicar seu conhecimento sobre a ação que quer realizar.</strong>','<strong>Escudo da Razão:</strong> Você pode usar Conhecimentos como defesa contra tentativas de Provocar, contanto que consiga justificar sua habilidade de superar o medo através de pensamento racional e razão.','<strong>Especialista:</strong> Escolha um campo de especialização, como alquimia, criminologia ou zoologia. Você recebe +2 nas rolagens de Conhecimentos que estejam relacionadas ao seu campo de especialização.'];
             break;
 
         case "Contatos":
