@@ -39,7 +39,7 @@ $( document ).ready(function() {
     var classeEspecifica = random(classe.aspects);
     var raca = races();
     var racaEspecifica = random(raca.aspects);
-    var pericias = characterSkills(classe[classeEspecifica].skills,raca[racaEspecifica].skills);
+    var pericias = characterSkills(classe[classeEspecifica].skills,raca[racaEspecifica].skills,skills('core'));
     var facanhasRaca = raca.stunts;
     facanhasRaca = facanhasRaca.concat(raca[racaEspecifica].stunts);
 

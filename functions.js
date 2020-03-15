@@ -33,14 +33,14 @@ function stress(min, max) {
   return total;
 };
 
-function characterSkills(classSkills,raceSkill) {
+function characterSkills(classSkills,raceSkill,allSkills) {
   var skills = exclusiveRandom(classSkills,5);
   if(skills.indexOf(raceSkill[0]) === -1) 
     skills.push(raceSkill[0]);
 
   var i = 0;
   while(i<=5){
-    var skill = random(skills('core'));
+    var skill = random(allSkills);
     if(skills.indexOf(skill) === -1){
       skills.push(skill);
       i++;
