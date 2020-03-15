@@ -33,14 +33,14 @@ function stress(min, max) {
   return total;
 };
 
-function characterSkills(classSkills,raceSkill) {
+function characterSkills(classSkills,raceSkill,allSkills) {
   var skills = exclusiveRandom(classSkills,5);
   if(skills.indexOf(raceSkill[0]) === -1) 
     skills.push(raceSkill[0]);
 
   var i = 0;
   while(i<=5){
-    var skill = random(skills('core'));
+    var skill = random(allSkills);
     if(skills.indexOf(skill) === -1){
       skills.push(skill);
       i++;
@@ -56,12 +56,4 @@ function characterStress(type,skills) {
   if(skills.indexOf(type) <= 2 && skills.indexOf(type) >= 0)
     stress = stress + '<i class="fa fa-square-o"></i><i class="fa fa-square-o"></i>';
   return stress;
-}
-
-function NPCstunt(skills) {
-  var stunts = [];
-  for(i=0;i<skills.length;i++){
-    stunts.push(stunts(skills[i]));
-  }
-  return stunts;
 }
