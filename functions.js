@@ -61,7 +61,7 @@ function characterStress(type,skills) {
 function NPCstunt(skills) {
   var stunts = [];
   for(i=0;i<skills.length;i++){
-    stunts.push(stunts(skill[i]));
+    stunts.push(stunts(skills[i]));
   }
   return stunts;
 }
