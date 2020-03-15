@@ -66,8 +66,7 @@ function npcStunts(npcSkills){
   }
 
   if (typeof npcStuntsList !== 'undefined' && npcStuntsList.length > 0){
-    specificStunt = random(npcStuntsList);
-    return '<p>'+random(specificStunt)+'</p>';
+    return '<p>'+random(npcStuntsList)+'</p>';
   } else {
     return '';
   }
