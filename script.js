@@ -5,12 +5,17 @@ $( document ).ready(function() {
       $("#btnGerarFate").trigger('click');
   },10);
 
+  function npcStunts(npcSkills){
+    var npcStunts = []; 
+    for(i=0;i<3;i++)
+      npcStunts.push(stunts(npcSkills[i]));
+    return random(npcStunts);
+  }
+
   $('#btnGerarNPC').click(function(){
 
     var npcSkills = exclusiveRandom(skills('skilled'),5);
-    var npcStunts = [];
-    for(i=0;i<5;i++)
-      npcStunts.push(stunts(npcSkills[i]));
+    var npcStunts = npcStunts(npcSkills);
     
     $('.boxNPCs').html(
     '<div class="boxNPC">'+
@@ -23,9 +28,7 @@ $( document ).ready(function() {
     '</div>');
 
     var npcSkills = exclusiveRandom(skills('skilled'),5);
-    var npcStunts = [];
-    for(i=0;i<5;i++)
-      npcStunts.push(stunts(npcSkills[i]));
+    var npcStunts = npcStunts(npcSkills);
 
     $('.boxNPCs').append(
     '<div class="boxNPC">'+
