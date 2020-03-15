@@ -2,6 +2,10 @@ function stunts(type) {
   
     switch(type){
 
+        case "Animais":
+            return ['<strong>Empatia selvagem:</strong> Você recebe +2 em Animais em ações de Superar para acalmar os ânimos de um animal que esteja hostil.'];
+            break;
+
         case "Atletismo":
             return ['<strong>Corredor Audaz:</strong> Durante o conﬂito, você se move duas zonas sem precisar rolar os dados ao invés de apenas uma, desde que não haja aspectos de situação restringindo o seu movimento.','<strong>Parkour Hardcore:</strong> +2 quando quiser superar usando Atletismo em uma perseguição em telhados ou outro ambiente precário.','<strong>Reação Atordoante:</strong> Quando for bem-sucedido com estilo em uma defesa contra ataque de um oponente, você automaticamente contra -ataca com algum tipo de soco potente ou contundente. Você poderá colocar o aspecto Atordoado no seu oponente e ganhar uma invocação gratuita dele, ao invés de apenas um impulso.'];
             break;
@@ -46,8 +50,16 @@ function stunts(type) {
             return ['<strong>Mão Pesada:</strong> Quando é bem-sucedido com estilo em um ataque usando Lutar e escolher reduzir o resultado para obter um impulso, você ganha um aspecto de situação com uma invocação grátis ao invés do impulso.','<strong>Arma Reserva:</strong> Sempre que alguém estiver prestes a adicionar o aspecto de situação Desarmado em você ou similar, gaste um ponto de destino para declarar que você possui uma segunda arma. Ao invés de ganhar o aspecto de situação, seu oponente ganha um impulso, representando o momento de distração durante a troca de arma.','<strong>Golpe Matador:</strong> Uma vez por cena, ao causar uma consequência em um oponente, você pode gastar um ponto de destino para aumentar a severidade dela (então suave se torna moderada, moderada se torna severa). Se seu oponente receberia uma consequência severa, ele recebe a consequência severa mais uma segunda consequência ou tem que sair da luta.'];
             break;
 
+        case "Magia":
+            return ['<strong>Impulso de Mana</strong>: Você pode gastar 1 PD para conjurar uma magia mesmo que não tenha mais condições/energia para tal.'];
+            break;
+
         case "Ofícios":
             return ['<strong>Sempre Criando Coisas Úteis:</strong> Você não precisa gastar um ponto de destino para declarar que possui as ferramentas apropriadas para um trabalho em particular usando Ofícios, mesmo em situações extremas (como quando está numa prisão e longe do seu equipamento). Esse tipo de oposição deixa de existir.','<strong>Melhor Que Novo:</strong> Sempre que obtiver um sucesso com estilo numa ação de superar para consertar um dispositivo, você pode criar imediatamente um novo aspecto de situação (com uma invocação grátis) que reﬂita as melhorias realizadas, ao invés de apenas um impulso.','<strong>Precisão Cirúrgica:</strong> Quando usa Ofícios em um conﬂito envolvendo algum tipo de mecanismo, você pode filtrar alvos indesejados em ataques de zona inteira sem ter que dividir o dano (normalmente é necessário dividir sua rolagem entre os alvos).'];
+            break;
+
+        case "Ocultismo":
+            return ['<strong>Conhecimentos Ocultos</strong>: Você recebe +2 em Ocultismo ao Criar Vantagem quando encontra algum ser que não seja do mesmo plano que você.'];
             break;
 
         case "Percepção":
