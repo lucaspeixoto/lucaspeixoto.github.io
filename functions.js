@@ -60,13 +60,13 @@ function characterStress(type,skills) {
 
 
 function npcStunts(npcSkills){
-  var npcStunts = []; 
+  var npcStuntsList = []; 
   for(i=0;i<3;i++){
-    npcStunts.push(stunts(npcSkills[i]));
+    npcStuntsList.push(stunts(npcSkills[i]));
   }
 
-  if (typeof npcStunts !== 'undefined' && npcStunts.length > 0){
-    specificStunt = random(npcStunts);
+  if (typeof npcStuntsList !== 'undefined' && npcStuntsList.length > 0){
+    specificStunt = random(npcStuntsList);
     return '<p>'+random(specificStunt)+'</p>';
   } else {
     return '';
