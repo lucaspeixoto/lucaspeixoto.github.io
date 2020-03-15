@@ -40,28 +40,30 @@ $( document ).ready(function() {
     var raca = races();
     var racaEspecifica = random(raca.aspects);
     var pericias = exclusiveRandom(skills('core'),10);
+    var facanhasRaca = raca.stunts;
+    facanhasRaca = facanhasRaca.concat(raca[racaEspecifica].stunts);
 
     $('.boxPersonagemFate').html(
       '<p><strong>ASPECTOS</strong><br>'+
-      '<i>   Conceito:</i> '+classeEspecifica+' '+random(aspects('ancestry'))+'<br>'+
-      '<i>   Raça:</i> '+racaEspecifica+'<br>'+
-      '<i>   Problema:</i> '+random(aspects('problem'))+'</p>'+
+      '<i>&#9;Conceito:</i> '+classeEspecifica+' '+random(aspects('ancestry'))+'<br>'+
+      '<i>&#9;Raça:</i> '+racaEspecifica+'<br>'+
+      '<i>&#9;Problema:</i> '+random(aspects('problem'))+'</p>'+
       '<p><strong>PERÍCIAS</strong><br>'+
-      '<strong>   Ótimo (+4):</strong> '+pericias[0]+'<br>'+
-      '<strong>   Bom (+3):</strong> '+pericias[1]+', '+pericias[2]+'<br>'+
-      '<strong>   Razoável (+2):</strong> '+pericias[3]+', '+pericias[4]+', '+pericias[5]+'<br>'+
-      '<strong>   Regular (+1):</strong> '+pericias[6]+', '+pericias[7]+', '+pericias[8]+', '+pericias[9]+'</p>'+
+      '<strong>&#9;Ótimo (+4):</strong> '+pericias[0]+'<br>'+
+      '<strong>&#9;Bom (+3):</strong> '+pericias[1]+', '+pericias[2]+'<br>'+
+      '<strong>&#9;Razoável (+2):</strong> '+pericias[3]+', '+pericias[4]+', '+pericias[5]+'<br>'+
+      '<strong>&#9;Regular (+1):</strong> '+pericias[6]+', '+pericias[7]+', '+pericias[8]+', '+pericias[9]+'</p>'+
       '<p><strong>FAÇANHAS</strong><br>'+
-      '   '+random(raca[racaEspecifica].stunts)+'<br>'+
-      '   '+random(classe[classeEspecifica].stunts)+'<br>'+
-      '   '+random(classe[classeEspecifica].stunts)+'</p>'+
+      '&#9;'+random(facanhasRaca)+'<br>'+
+      '&#9;'+random(classe.stunts)+'<br>'+
+      '&#9;'+random(classe[classeEspecifica].stunts)+'</p>'+
       '<p><strong>ESTRESSE</strong><br>'+
-      '<strong>   Físico: </strong>'+stress(2,3)+'<br>'+
-      '<strong>   Mental: </strong>'+stress(2,3)+'</p>'+
+      '<strong>&#9;Físico: </strong>'+stress(2,3)+'<br>'+
+      '<strong>&#9;Mental: </strong>'+stress(2,3)+'</p>'+
       '<p><strong>CONSEQUÊNCIAS</strong><br>'+
-      '<strong>   Suave: </strong><br>'+
-      '<strong>   Moderada: </strong><br>'+
-      '<strong>   Severa: </strong></p>'
+      '<strong>&#9;Suave: </strong><br>'+
+      '<strong>&#9;Moderada: </strong><br>'+
+      '<strong>&#9;Severa: </strong></p>'
     );   
 
      $('.boxPersonagemFate').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '5px', 'margin': '10px', 'max-width': '500px', 'box-shadow': '5px 5px 10px lightgrey'});
