@@ -25,7 +25,7 @@ function classes(type='') {
                 stunts: ['<strong>Ataque furtivo:</strong> O ladino recebe +2 ao realizar um ataque contra um alvo distraído, que não está ciente de sua presença.','<strong>Evasão:</strong> Ao se defender de um ataque que atinge toda a zona, a rolagem do ladino é considerada um nível acima. Ex.: uma falha vira um empate, um empate vira sucesso e um sucesso vira sucesso com estilo.','<strong>Gíria de ladrão:</strong> O ladino é capaz de passar mensagens secretas durante uma conversa comum, desde que a outra pessoa também seja fluente na gíria de ladrão.','<strong>Ação ardilosa:</strong> O ladino recebe um impulso ao Criar Vantagem durante um conflito.','<strong>Talento confiável:</strong> O ladino não falha ao realizar uma ação de Superar, trate-a como um empate.','<strong>Sentido cego:</strong> O ladino é capaz de determinar a posição exata de um criatura se estiver apto a ouvi-la, mesmo que ela esteja escondida ou invisível.'],
                 'Ladino Assassino': {
                     proficiency: ['Lutar marcial, atirar marcial, armaduras leves'],
-                    skills: ['Atirar','Furtividade','Atletismo','Lutar','Enganar'],
+                    skills: ['Atirar','Furtividade','Roubo','Atletismo','Enganar'],
                     approach: ['Ágil'],
                     stunts: ['<strong>Disfarce:</strong> O ladino assassino pode ficar durante toda uma cena preparando um disfarce para se infiltrar em algum local ou organização. As pessoas não notarão o disfarce pelo visual, somente pelas atitudes ou até que o ladino se revele.','<strong>Golpe letal:</strong> Ao obter sucesso com estilo em um Ataque furtivo, você pode escolher marcar uma consequência no alvo, ao invés de caixas de estresse.','<strong>Cobra venenosa:</strong> O ladino assassino é capaz de manipular todo tipo de veneno.']
                 },
@@ -63,7 +63,7 @@ function classes(type='') {
                 },
                 'Druida da Folha': {
                     proficiency: ['Lutar simples, armaduras leves e escudo'],
-                    skills: ['Empatia','Comunicação','Animais','Magia','Oculstimo'],
+                    skills: ['Empatia','Comunicação','Animais','Magia','Ocultismo'],
                     approach: ['Cuidadoso'],
                     stunts: ['<strong>Magia da natureza:</strong> O druida da folha é capaz de lançar magia divina e primal.','<strong>Empatia selvagem:</strong> O druida pode se comunicar com plantas e animais de maneira muito rudimentar.','<strong>Convocar animais:</strong> O druida convoca animais da redondeza para auxilia-lo durante uma cena. Os animais irão obedecê-lo e também combater ao lado dele.']
                 }

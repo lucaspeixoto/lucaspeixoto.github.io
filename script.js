@@ -58,8 +58,8 @@ $( document ).ready(function() {
       '&nbsp;&nbsp;&nbsp;'+random(classe.stunts)+'<br>'+
       '&nbsp;&nbsp;&nbsp;'+random(classe[classeEspecifica].stunts)+'</p>'+
       '<p><strong>ESTRESSE</strong><br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;Físico: </strong>'+stress(2,3)+'<br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;Mental: </strong>'+stress(2,3)+'</p>'+
+      '<strong>&nbsp;&nbsp;&nbsp;Físico: </strong>'+characterStress('Vigor',pericias)+'<br>'+
+      '<strong>&nbsp;&nbsp;&nbsp;Mental: </strong>'+characterStress('Vontade',pericias)+'</p>'+
       '<p><strong>CONSEQUÊNCIAS</strong><br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Suave: </strong><br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Moderada: </strong><br>'+

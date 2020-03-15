@@ -48,3 +48,12 @@ function characterSkills(classSkills,raceSkill,allSkills) {
   }
   return skills;
 }
+
+function characterStress(type,skills) {
+  var stress = 'OO';
+  if(skills.indexOf(type) >= 0)
+    stress = stress + 'O';
+  if(skills.indexOf(type) <= 2)
+    stress = stress + 'O';
+  return stress;
+}
