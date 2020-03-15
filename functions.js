@@ -1,26 +1,26 @@
 // Script to open and close sidebar
 function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
 }
  
 function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
 }
 
 function random(array) {
-    return array[Math.floor(Math.random() * array.length)]
+  return array[Math.floor(Math.random() * array.length)]
 };
 
 function exclusiveRandom(array,quantity) {
-    var pos, result = [], element;
-    for (i=0;i<quantity;i++){
-      pos = Math.floor(Math.random() * array.length);
-      element = array.splice(pos,1)
-      result.push(element[0]);
-    }
-    return result;
+  var pos, result = [], element;
+  for (i=0;i<quantity;i++){
+    pos = Math.floor(Math.random() * array.length);
+    element = array.splice(pos,1)
+    result.push(element[0]);
+  }
+  return result;
 };
 
 function stress(min, max) {
@@ -31,4 +31,20 @@ function stress(min, max) {
   for (i=0;i<number;i++)
   	total = total + 'O';
   return total;
-}; 
+};
+
+function characterSkills(classSkills,raceSkill) {
+  var skills = exclusiveRandom(classSkills,5);
+  if(skills.indexOf(raceSkill[0]) === -1) 
+    skills.push(raceSkill[0]);
+
+  var i = 0;
+  while(i<=5){
+    var skill = random(skills('core'));
+    if(skills.indexOf(skill) === -1){
+      skills.push(skill);
+      i++;
+    }
+  }
+  return skills;
+}
