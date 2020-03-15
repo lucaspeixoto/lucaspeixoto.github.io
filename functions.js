@@ -61,7 +61,15 @@ function characterStress(type,skills) {
 
 function npcStunts(npcSkills){
   var npcStunts = []; 
-  for(i=0;i<3;i++)
+  for(i=0;i<3;i++){
     npcStunts.push(stunts(npcSkills[i]));
-  return random(npcStunts);
+  }
+
+  if (npcStunts != undefined){
+    specificStunt = random(npcStunts);
+    return '<p>'+random(specificStunt)+'</p>';
+  } else {
+    return '';
+  }
+  
 }
