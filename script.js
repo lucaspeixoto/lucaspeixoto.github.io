@@ -16,6 +16,7 @@ $( document ).ready(function() {
 
     var npcSkills = exclusiveRandom(skills('skilled'),5);
     var stunts = npcStunts(npcSkills);
+    var facanha = (stunts != undefined) ? '<p>'+random(stunts)+'</p>' : '';
     
     $('.boxNPCs').html(
     '<div class="boxNPC">'+
@@ -23,12 +24,13 @@ $( document ).ready(function() {
       '<p><b><i>'+random(aspects('good'))+', '+random(aspects('problem'))+'</i></b></p></center>'+
       '<p><strong>Perito (+2) em:</strong> '+npcSkills[0]+', '+npcSkills[1]+', '+npcSkills[2]+'</p>'+
       '<p><strong>Ruim (-2) em:</strong> '+npcSkills[3]+', '+npcSkills[4]+'</p>'+
-      (stunts != undefined) ? '<p>'+random(stunts)+'</p>' : '' +
+      facanha +
       '<p><strong>Estresse: </strong>'+stress(0,2)+'</p>'+
     '</div>');
 
     var npcSkills = exclusiveRandom(skills('skilled'),5);
     var stunts = npcStunts(npcSkills);
+    var facanha = (stunts != undefined) ? '<p>'+random(stunts)+'</p>' : '';
 
     $('.boxNPCs').append(
     '<div class="boxNPC">'+
@@ -36,7 +38,7 @@ $( document ).ready(function() {
       '<p><b><i>'+random(aspects('good'))+', '+random(aspects('problem'))+'</i></b></p></center>'+
       '<p><strong>Perito (+2) em:</strong> '+npcSkills[0]+', '+npcSkills[1]+', '+npcSkills[2]+'</p>'+
       '<p><strong>Ruim (-2) em:</strong> '+npcSkills[3]+', '+npcSkills[4]+'</p>'+
-      (stunts != undefined) ? '<p>'+random(stunts)+'</p>' : '' +
+      facanha +
       '<p><strong>Estresse: </strong>'+stress(0,2)+'</p>'+
     '</div>');
 
