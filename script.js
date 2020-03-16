@@ -35,9 +35,9 @@ $( document ).ready(function() {
 
   $('#btnGerarFate').click(function(){
 
-    var classe = classes();
+    var classe = classes($('#selectClass').val());
     var classeEspecifica = random(classe.aspects);
-    var raca = races();
+    var raca = races($('#selectRace').val());
     var racaEspecifica = random(raca.aspects);
     var pericias = characterSkills(classe[classeEspecifica].skills,raca[racaEspecifica].skills,skills('core'));
     var facanhasRaca = raca.stunts;
