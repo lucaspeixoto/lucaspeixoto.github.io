@@ -15,7 +15,7 @@ function aspects(type) {
     		break;
 
         case "ancestry":
-            return ['Acólito','Artesão de Guilda','Mercador de Guilda','Artista','Gladiador','Charlatão','Criminoso','Espião','Eremita','Forasteiro','Herói do Povo','Marinheiro','Pirata','Nobre','Cavaleiro','Órfão','Sábio','Soldado'];
+            return ['Acólito','Acrobata','Advogado','Apostador','Apresentador','Artesão','Artista','Batedor','Caçador','Gladiador','Charlatão','Criminoso','Detetive','Discípulo','Emissário','Espião','Eremita','Estudioso','Funileiro','Forasteiro','Herói do Povo','Guarda','Herbalista','Lavrador','Médico','Marinheiro','Mercador','Mineiro','Pirata','Nômade','Nobre','Operário','Cavaleiro','Órfão','Sábio','Soldado','Prisioneiro','Taverneiro','Vidente'];
             break;
 
     }
