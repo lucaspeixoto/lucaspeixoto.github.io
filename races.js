@@ -1,7 +1,7 @@
 function races(type='') {
 
 	if (type == '') 
-        type = random(['halfling','elf','dwarf','human','dragonborn']);
+        type = random(['halfling','elf','dwarf','human','dragonborn','gnome','touched']);
   
     switch(type){
     	case "halfling":
@@ -68,7 +68,7 @@ function races(type='') {
 			    'Anão Duergar': {
 			        skills: ['Furtividade'],
 			        approach: ['Sorrateiro'],
-			        stunts: ['<strong>Resistência mágica:</strong> O anão duergar é mais resistentes contra efeitos mágicos, recebendo +2 em testes de Superar contra magias que tenham o anão como alvo.','<strong>Piscar:</strong> O anão duergar é capaz de lançar a magia Invisibilidade em si mesmo ao custo de 1 PD, o efeito dura uma cena.']
+			        stunts: ['<strong>Resistência mágica:</strong> O anão duergar é mais resistente contra efeitos mágicos, recebendo +2 em testes de Superar contra magias que tenham o anão como alvo.','<strong>Piscar:</strong> O anão duergar é capaz de lançar a magia Invisibilidade em si mesmo ao custo de 1 PD, o efeito dura uma cena.']
 			    }
 			}
     		break;
@@ -81,12 +81,12 @@ function races(type='') {
 			    'Humano': {
 			        skills: [],
 			        approach: [],
-			        stunts: ['<strong>Natureza cooperativa:</strong> O humano recebe +2 em Contatos para Criar Vantagem se estiver em uma cidade humana.','<strong>Língua solta:</strong> O humano recebe +2 em Enganar para Criar Vantagem quando está negociando a compra ou a venda de algo.']
+			        stunts: ['<strong>Natureza cooperativa:</strong> O humano recebe +2 em Contatos para Criar Vantagem se estiver em uma cidade humana.','<strong>Curiosidade:</strong>O humano recebe +2 em Investigar para descobrir aspectos de cenário ao Criar Vantagem.']
 			    },
 			    'Meio-Elfo': {
 			        skills: ['Provocar'],
 			        approach: ['Estiloso'],
-			        stunts: ['<strong>Charme natural:</strong> O meio-elfo recebe +2 em testes de Comunicação para Criar Vantagem em um diálogo ou discurso a uma plateia atenta.','<strong>Curiosidade:</strong> O meio-elfo recebe +2 em Investigar para descobrir aspectos de cenário ao Criar Vantagem.']
+			        stunts: ['<strong>Visão na penumbra:</strong> O meio-elfo enxerga normalmente somente com um pequeno foco de luz.','<strong>Resistência mágica:</strong> O meio-elfo é mais resistente contra efeitos mágicos, recebendo +2 em testes de Superar contra magias que o tenham como alvo.']
 			    },
 			    'Meio-Orc': {
 			        skills: ['Lutar'],
@@ -153,7 +153,69 @@ function races(type='') {
 			    }
 			}
 			break;
-    		
+ 
+    	case "gnome":
+    		return {
+
+    			aspects: ['Gnomo da Floresta','Gnomo das Rochas','Gnomo das Profundezas'],
+			    stunts: ['<strong>Visão no escuro:</strong> O gnomo enxerga normalmente na mais completa escuridão.','<strong>Esperteza gnômica:</strong> O gnomo é mais resistente contra efeitos mágicos, recebendo +2 em testes de Superar contra magias que tenham o gnomo como alvo.'],
+			    'Gnomo da Floresta': {
+			        skills: ['Magia'],
+			        approach: ['Estiloso'],
+			        stunts: ['<strong>Ilusionista nato:</strong> O gnomo da floresta conhece alguma magia simples de ilusão e pode conjurá-la gratuitamente.','<strong>Falar com animais:</strong> O gnomo da floresta pode se comunicar com animais pequenos de maneira muito rudimentar.']
+			    },
+			    'Gnomo das Rochas': {
+			        skills: ['Conhecimentos'],
+			        approach: ['Esperto'],
+			        stunts: ['<strong>Conhecimento de artífice:</strong> O gnomo das rochas recebe +2 em Conhecimentos para Criar Vantagem em relação a itens mágicos, objetos alquímicos ou mecanismos tecnológicos.','<strong>Engenhoqueiro:</strong> o gnomo das rochas é capaz de construir mecanismos simples que funcionam durante uma cena, como brinquedos mecânicos, isqueiro mecânico ou caixa de música.']
+			    },
+			    'Gnomo das Profundezas': {
+			        skills: ['Furtividade'],
+			        approach: ['Sorrateiro'],
+			        stunts: ['<strong>Mineiro artífice:</strong> O gnomo das profundezas recebe +2 em Ofícios ao Criar Vantagem quando trabalha com rochas e minerais.','<strong>Cauteloso:</strong> O gnomo das profundezas recebe +2 em Furtividade ao Criar Vantagem para evitar qualquer tipo de perigo.']
+			    },
+    		}
+    		break;
+
+		case "touched":
+    		return {
+
+    			aspects: ['Tiefling','Aasimar','Genasi do Ar','Genasi da Terra','Genasi do Fogo','Genasi da Água'],
+			    stunts: ['<strong>Visão no escuro:</strong> O tiefling enxerga normalmente na mais completa escuridão.'],
+			    'Tiefling': {
+			        skills: ['Provocar'],
+			        approach: ['Estiloso'],
+			        stunts: ['<strong>Legado infernal:</strong> Uma vez por sessão, o tiefling pode lançar a magia Repreensão Infernal.','<strong>Resistência infernal:</strong> O tiefling recebe +2 ao se Defender de ataques ou magias de fogo.']
+			    },
+			    'Aasimar': {
+			        skills: ['Empatia'],
+			        approach: ['Estiloso'],
+			        stunts: ['<strong>Cura pelas mãos:</strong> Uma vez por cena, você pode tocar uma criatura e limpar até três caixas de estresse físico que ela possua.','<strong>Portador da luz:</strong> Você pode lançar a magia Luz gratuitamente.']
+			    },
+			    'Genasi do Ar': {
+			        skills: ['Percepção'],
+			        approach: ['Esperto'],
+			        stunts: ['<strong>Fôlego infinito:</strong> O genasi do ar pode prender a respiração indefinidamente.','<strong>Leve como o vento:</strong> Uma vez por sessão, o genasi do ar pode lançar a magia Levitar em si mesmo, o efeito dura uma cena.']
+			    },
+			    'Genasi da Terra': {
+			        skills: ['Vigor'],
+			        approach: ['Poderoso'],
+			        stunts: ['<strong>Passo elemental:</strong> O genasi da terra pode se locomover por até duas zonas gratuitamente, desde que possa tocar o chão natural.','<strong>Sem rastros:</strong> Uma vez por sessão, o genasi da terra pode lançar a magia Passos sem Pegadas, o efeito dura uma cena.']
+			    },
+			    'Genasi do Fogo': {
+			        skills: ['Provocar'],
+			        approach: ['Estiloso'],
+			        stunts: ['<strong>Resistência ígnea:</strong> O genasi do fogo recebe +2 ao se Defender de ataques ou magias de fogo.','<strong>Mãos flamejantes:</strong> Uma vez por sessão, o genasi do fogo pode lançar a magia Mãos Flamejantes.']
+			    },
+			    'Genasi da Água': {
+			        skills: ['Vontade'],
+			        approach: ['Esperto'],
+			        stunts: ['<strong>Anfíbio:</strong> O genasi da água pode respirar tanto na água quanto no ar.','<strong>Chamar as ondas:</strong> Uma vez por sessão, o genasi da água pode lançar a magia Criar ou Destruir Água.']
+			    },
+			    
+    		}
+    		break;
+   		
     }
 
 }
