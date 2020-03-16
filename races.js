@@ -94,62 +94,65 @@ function races(type='') {
 			        stunts: ['<strong>Marginalizado:</strong> O meio-orc recebe +2 em Empatia para Superar alguma situação em que raças humanoides estejam sofrendo algum tipo de preconceito.','<strong>Ferocidade orc:</strong> Uma vez por sessão, ao receber um dano e não ter mais caixas de estresse para serem marcadas, o meio-orc pode gastar 1 PD para ignorar o dano recebido.']
 			    },
     		}
+    		break;
 
     	case "dragonborn":
     		return {
 
-    			aspects: ['Draconato','Meio-Elfo','Meio-Orc'],
-			    stunts: ['<strong>Versátil:</strong> Um humano, ou meio-humano, se adapta rapidamente a qualquer situação. Uma vez por sessão ele recebe gratuitamente um impulso de performance.','<strong>Ambição natural:</strong> Um humano, ou meio-humano, recebe +2 em testes de Vontade para Superar alguma barreira mental ou social que esteja impedindo o seu progresso.'],
-			    'Draconato ': {
-			        skills: [],
-			        approach: [],
-			        stunts: ['']
+    			aspects: ['Draconato Azul','Draconato Branco','Draconato Bronze','Draconato Cobre','Draconato Latão','Draconato Negro','Draconato Dourado','Draconato Prateado','Draconato Verde','Draconato Vermelho'],
+			    stunts: [],
+			    'Draconato Azul': {
+			        skills: ['Provocar'],
+			        approach: ['Estiloso'],
+			        stunts: ['<strong>Sopro elétrico:</strong> Pode soltar um jato elétrico uma vez por sessão. Faça um ataque com Atirar que atinge todos dentro de uma zona. Se a zona conter água o ataque recebe +1.']
 			    },
-			    'Draconato ': {
-			        skills: [],
-			        approach: [],
-			        stunts: ['']
+			    'Draconato Branco': {
+			        skills: ['Conhecimentos'],
+			        approach: ['Esperto'],
+			        stunts: ['<strong>Sopro congelante:</strong> Pode soltar um cone de frio uma vez por sessão, que diminui a temperatura do local e extingue pequenas chamas. Faça um ataque com Atirar que atinge todos dentro de uma zona.']
 			    },
-			    'Draconato ': {
-			        skills: [],
-			        approach: [],
-			        stunts: ['']
+			    'Draconato Bronze': {
+			        skills: ['Enganar'],
+			        approach: ['Esperto'],
+			        stunts: ['<strong>Sopro elétrico:</strong> Pode soltar um jato elétrico uma vez por sessão. Faça um ataque com Atirar que atinge todos dentro de uma zona. Se a zona conter água o ataque recebe +1.']
 			    },
-			    'Draconato ': {
-			        skills: [],
-			        approach: [],
-			        stunts: ['']
+			    'Draconato Cobre': {
+			        skills: ['Vontade'],
+			        approach: ['Cuidadoso'],
+			        stunts: ['<strong>Sopro ácido:</strong> Pode soltar um jato ácido uma vez por sessão, que derrete pequenos objetos e danifica objetos maiores. Faça um ataque com Atirar que atinge todos dentro de uma zona.']
 			    },
-			    'Draconato ': {
-			        skills: [],
-			        approach: [],
-			        stunts: ['']
+			    'Draconato Latão': {
+			        skills: ['Furtividade'],
+			        approach: ['Sorrateiro'],
+			        stunts: ['<strong>Sopro incendiário:</strong> Pode soltar um jato de fogo uma vez por sessão, que queima pequenos objetos e coloca o aspecto “pegando fogo” em objetos maiores. Faça um ataque com Atirar que atinge todos dentro de uma zona.']
 			    },
-			    'Draconato ': {
-			        skills: [],
-			        approach: [],
-			        stunts: ['']
+			    'Draconato Negro': {
+			        skills: ['Ocultismo'],
+			        approach: ['Cuidadoso'],
+			        stunts: ['<strong>Sopro ácido:</strong> Pode soltar um jato ácido uma vez por sessão, que derrete pequenos objetos e danifica objetos maiores. Faça um ataque com Atirar que atinge todos dentro de uma zona.']
 			    },
-			    'Draconato ': {
-			        skills: [],
-			        approach: [],
-			        stunts: ['']
+			    'Draconato Dourado': {
+			        skills: ['Empatia'],
+			        approach: ['Estiloso'],
+			        stunts: ['<strong>Sopro incendiário:</strong> Pode soltar um jato de fogo uma vez por sessão, que queima pequenos objetos e coloca o aspecto “pegando fogo” em objetos maiores. Faça um ataque com Atirar que atinge todos dentro de uma zona.']
 			    },
-			    'Draconato ': {
-			        skills: [],
-			        approach: [],
-			        stunts: ['']
+			    'Draconato Prateado': {
+			        skills: ['Comunicação'],
+			        approach: ['Estiloso'],
+			        stunts: ['<strong>Sopro congelante:</strong> Pode soltar um cone de frio uma vez por sessão, que diminui a temperatura do local e extingue pequenas chamas. Faça um ataque com Atirar que atinge todos dentro de uma zona.']
 			    },
-			    'Draconato ': {
-			        skills: [],
-			        approach: [],
-			        stunts: ['']
+			    'Draconato Verde': {
+			        skills: ['Lutar'],
+			        approach: ['Poderoso'],
+			        stunts: ['<strong>Sopro venenoso:</strong> Pode soltar um cone de veneno uma vez por sessão, que coloca o aspecto “envenenado” nos alvos. Faça um ataque com Atirar que atinge todos dentro de uma zona.']
 			    },
-			    'Draconato ': {
-			        skills: [],
-			        approach: [],
-			        stunts: ['']
-			    },
+			    'Draconato Vermelho': {
+			        skills: ['Atletismo'],
+			        approach: ['Ágil'],
+			        stunts: ['<strong>Sopro incendiário:</strong> Pode soltar um jato de fogo uma vez por sessão, que queima pequenos objetos e coloca o aspecto “pegando fogo” em objetos maiores. Faça um ataque com Atirar que atinge todos dentro de uma zona.']
+			    }
+			}
+			break;
     		
     }
 
