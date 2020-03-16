@@ -1,7 +1,7 @@
 function races(type='') {
 
 	if (type == '') 
-        type = random(['halfling','elf','dwarf','human']);
+        type = random(['halfling','elf','dwarf','human','dragonborn']);
   
     switch(type){
     	case "halfling":
@@ -94,6 +94,62 @@ function races(type='') {
 			        stunts: ['<strong>Marginalizado:</strong> O meio-orc recebe +2 em Empatia para Superar alguma situação em que raças humanoides estejam sofrendo algum tipo de preconceito.','<strong>Ferocidade orc:</strong> Uma vez por sessão, ao receber um dano e não ter mais caixas de estresse para serem marcadas, o meio-orc pode gastar 1 PD para ignorar o dano recebido.']
 			    },
     		}
+
+    	case "dragonborn":
+    		return {
+
+    			aspects: ['Draconato','Meio-Elfo','Meio-Orc'],
+			    stunts: ['<strong>Versátil:</strong> Um humano, ou meio-humano, se adapta rapidamente a qualquer situação. Uma vez por sessão ele recebe gratuitamente um impulso de performance.','<strong>Ambição natural:</strong> Um humano, ou meio-humano, recebe +2 em testes de Vontade para Superar alguma barreira mental ou social que esteja impedindo o seu progresso.'],
+			    'Draconato ': {
+			        skills: [],
+			        approach: [],
+			        stunts: ['']
+			    },
+			    'Draconato ': {
+			        skills: [],
+			        approach: [],
+			        stunts: ['']
+			    },
+			    'Draconato ': {
+			        skills: [],
+			        approach: [],
+			        stunts: ['']
+			    },
+			    'Draconato ': {
+			        skills: [],
+			        approach: [],
+			        stunts: ['']
+			    },
+			    'Draconato ': {
+			        skills: [],
+			        approach: [],
+			        stunts: ['']
+			    },
+			    'Draconato ': {
+			        skills: [],
+			        approach: [],
+			        stunts: ['']
+			    },
+			    'Draconato ': {
+			        skills: [],
+			        approach: [],
+			        stunts: ['']
+			    },
+			    'Draconato ': {
+			        skills: [],
+			        approach: [],
+			        stunts: ['']
+			    },
+			    'Draconato ': {
+			        skills: [],
+			        approach: [],
+			        stunts: ['']
+			    },
+			    'Draconato ': {
+			        skills: [],
+			        approach: [],
+			        stunts: ['']
+			    },
     		
     }
 
