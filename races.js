@@ -1,7 +1,7 @@
 function races(type='') {
 
 	if (type == '') 
-        type = random(['halfling','elf','dwarf']);
+        type = random(['halfling','elf','dwarf','human']);
   
     switch(type){
     	case "halfling":
@@ -72,6 +72,28 @@ function races(type='') {
 			    }
 			}
     		break;
+
+    	case "human":
+    		return {
+
+    			aspects: ['Humano','Meio-Elfo','Meio-Orc'],
+			    stunts: ['<strong>Versátil:</strong> Um humano, ou meio-humano, se adapta rapidamente a qualquer situação. Uma vez por sessão ele recebe gratuitamente um impulso de performance.','<strong>Ambição natural:</strong> Um humano, ou meio-humano, recebe +2 em testes de Vontade para Superar alguma barreira mental ou social que esteja impedindo o seu progresso.'],
+			    'Humano': {
+			        skills: [],
+			        approach: [],
+			        stunts: ['<strong>Natureza cooperativa:</strong> O humano recebe +2 em Contatos para Criar Vantagem se estiver em uma cidade humana.','<strong>Língua solta:</strong> O humano recebe +2 em Enganar para Criar Vantagem quando está negociando a compra ou a venda de algo.']
+			    },
+			    'Meio-Elfo': {
+			        skills: ['Provocar'],
+			        approach: ['Estiloso'],
+			        stunts: ['<strong>Charme natural:</strong> O meio-elfo recebe +2 em testes de Comunicação para Criar Vantagem em um diálogo ou discurso a uma plateia atenta.','<strong>Curiosidade:</strong> O meio-elfo recebe +2 em Investigar para descobrir aspectos de cenário ao Criar Vantagem.']
+			    },
+			    'Meio-Orc': {
+			        skills: ['Lutar'],
+			        approach: ['Poderoso'],
+			        stunts: ['<strong>Marginalizado:</strong> O meio-orc recebe +2 em Empatia para Superar alguma situação em que raças humanoides estejam sofrendo algum tipo de preconceito.','<strong>Ferocidade orc:</strong> Uma vez por sessão, ao receber um dano e não ter mais caixas de estresse para serem marcadas, o meio-orc pode gastar 1 PD para ignorar o dano recebido.']
+			    },
+    		}
     		
     }
 
