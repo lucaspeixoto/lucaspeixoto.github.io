@@ -1,7 +1,7 @@
 function races(type='') {
 
 	if (type == '') 
-        type = random(['halfling','elf']);
+        type = random(['halfling','elf','dwarf']);
   
     switch(type){
     	case "halfling":
