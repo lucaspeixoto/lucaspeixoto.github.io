@@ -49,6 +49,30 @@ function races(type='') {
 			    }
 			}
     		break;
+
+    	case "dwarf":
+    		return {
+    			    
+    			aspects: ['Anão da Colina','Anão da Montanha','Anão Duergar'],
+			    stunts: ['<strong>Visão no escuro:</strong> O anão enxerga normalmente na mais completa escuridão.','<strong>Resiliência anã:</strong> O anão é mais resistente a venenos, recebe +2 em testes de Vigor para Superar o efeito de um veneno.'],
+			    'Anão da Colina': {
+			        skills: ['Percepção'],
+			        approach: ['Esperto'],
+			        stunts: ['<strong>Sentidos aguçados:</strong> O anão da colina recebe +2 em testes de Percepção para Criar Vantagem em uma situação em que os seus sentidos sejam exigidos ao máximo.','<strong>Tenacidade anã:</strong> Para contar as caixas de estresse físico, considere que o anão da colina possui o seu valor de Vigor aumentado em 2.']
+			    },
+			    'Anão da Montanha': {
+			        skills: ['Vigor'],
+			        approach: ['Poderoso'],
+			        stunts: ['<strong>Especialização em rochas:</strong> O anão da montanha recebe +2 em testes de Conhecimentos relacionados à origem de um trabalho em pedra.','<strong>Treinamentos com armaduras:</strong> O anão da montanha é treinado no uso de armaduras. Ele recebe Armadura:1 caso esteja utilizando uma.']
+			    },
+			    'Anão Duergar': {
+			        skills: ['Furtividade'],
+			        approach: ['Sorrateiro'],
+			        stunts: ['<strong>Resistência mágica:</strong> O anão duergar é mais resistentes contra efeitos mágicos, recebendo +2 em testes de Superar contra magias que tenham o anão como alvo.','<strong>Piscar:</strong> O anão duergar é capaz de lançar a magia Invisibilidade em si mesmo ao custo de 1 PD, o efeito dura uma cena.']
+			    }
+			}
+    		break;
+    		
     }
 
 }
