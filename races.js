@@ -206,7 +206,7 @@ function races(type='') {
     		return {
 
     			aspects: ['Tiefling','Aasimar','Genasi do Ar','Genasi da Terra','Genasi do Fogo','Genasi da Água'],
-			    stunts: ['<strong>Visão no escuro:</strong> O tiefling enxerga normalmente na mais completa escuridão.'],
+			    stunts: ['<strong>Visão no escuro:</strong> Você enxerga normalmente na mais completa escuridão.'],
 			    'Tiefling': {
 			    	names: ['Aranrai','Salrias','Garnon','Reus','Moremon','Zarxire','Akrus','Content','Master','Mastery','Mormus','Horrakas','Merut','Zarros','Zornon','Skaron','Ekthus','Uncommon','Confidence','Pure','Natbis','Naphi','Anicria','Iniwure','Nethtish','Pescyra','Velrissa','Piety','Trust','Life','Inyola','Rotish','Kallyvia','Grizes','Quhiri','Frivari','Crelyvia','Open','Interesting','Master'],
 			        skills: ['Provocar'],

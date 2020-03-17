@@ -38,13 +38,10 @@ function characterSkills(classSkills,raceSkill,allSkills) {
   if(skills.indexOf(raceSkill[0]) === -1 && typeof raceSkill !== 'undefined' && raceSkill.length > 0) 
     skills.push(raceSkill[0]);
 
-  var i = 0;
-  while(i<=5){
+  for(i=skills.length;i<10;i++){
     var skill = random(allSkills);
-    if(skills.indexOf(skill) === -1){
+    if(skills.indexOf(skill) === -1)
       skills.push(skill);
-      i++;
-    }
   }
   return skills;
 }
