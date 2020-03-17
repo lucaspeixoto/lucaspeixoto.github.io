@@ -1,0 +1,29 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+a:hover{color: #009688;}
+a{text-decoration: none;}
+
+@media print {
+  @page {
+    size: 8.5in 11in; 
+  }
+  #btnGerarFate {
+    display: none;
+  }
+  #btnPrint{
+  	display: none;
+  }
+  .boxPersonagemFate {
+    background-color: white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  .boxNPCs {
+    background-color: white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+}

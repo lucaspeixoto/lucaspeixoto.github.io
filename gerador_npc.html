@@ -11,7 +11,6 @@
       gtag('config', 'UA-160380893-1');
     </script>
 
-
     <title>Materiais Fate</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,21 +18,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-    a:hover{color: #009688;}
-    @media print {
-      .boxNPCs {
-        background-color: white;
-        width: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        margin: 35px;
-        padding: 35px;
-      }
-    }
-    </style>
+    <link rel="stylesheet" href="./style.css">
   </head>
 <body class="w3-white w3-content" style="max-width:1600px">
 
@@ -70,7 +55,7 @@ fetch("./nav.html")
     <button id="btnGerarNPC" class="w3-button w3-teal w3-padding-large w3-hover-black">Gerar NPCs</button>
 
     <div class="boxNPCs"></div>
-    <a href="javascript: window.print();" style="text-decoration: none;"><i class="fa fa-file-pdf-o w3-hover-opacity"></i> PDF</a>
+    <a href="javascript: window.print();" style="text-decoration: none;" id="btnPrint"><i class="fa fa-file-pdf-o w3-hover-opacity"></i> PDF</a>
 
   </div> 
 
