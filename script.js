@@ -44,7 +44,7 @@ $( document ).ready(function() {
     facanhasRaca = facanhasRaca.concat(raca[racaEspecifica].stunts);
 
     $('.boxPersonagemFate').html(
-      '<center><h5>'+random(raca[racaEspecifica].names)+'</h5>'+
+      '<center><h4>'+random(raca[racaEspecifica].names)+'</h4></center>'+
       '<p><strong>ASPECTOS</strong><br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Conceito:</strong> '+classeEspecifica+' '+random(aspects('ancestry'))+'<br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Raça:</strong> '+racaEspecifica+'<br>'+
