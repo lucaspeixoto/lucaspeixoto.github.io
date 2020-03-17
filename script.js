@@ -67,7 +67,7 @@ $( document ).ready(function() {
       '<strong>&nbsp;&nbsp;&nbsp;Severa: </strong></p>'
     );   
 
-     $('.boxPersonagemFate').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '5px', 'margin': '10px', 'max-width': '500px', 'box-shadow': '5px 5px 10px lightgrey'});
+     $('.boxPersonagemFate').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '5px', 'margin': '10px', 'max-width': '470px', 'box-shadow': '5px 5px 10px lightgrey'});
 
   });
 

@@ -1,6 +1,10 @@
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 a:hover{color: #009688;}
-a{text-decoration: none;}
+nav a{text-decoration: none;}
+
+#btnPrint{
+	text-decoration: none;
+}
 
 @media print {
   @page {
@@ -22,6 +26,7 @@ a{text-decoration: none;}
   .boxNPCs {
     background-color: white;
     width: 100%;
+    height: 100%;
     position: fixed;
     top: 0;
     left: 0;
