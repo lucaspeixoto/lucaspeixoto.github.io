@@ -19,13 +19,13 @@ function races(type='') {
 			        names: ['Caradas Silverstring','Andwise Hopesinger','Aega Whitbottom','Eberulf Puddlefoot','Dagaric Gardner','Cheldric Longbottom','Birinus Hornwood','Emmeran Dewfoot','Mansuetus Wanderfoot','Chararic Proudbottom','Leuthere Hornwood','Longo Brown','Erenfried Sackville-Baggins','Brutus Burrows','Fridolin Butcher','Cheldric Stoor','Nick Fallohide','Bertelis Hornblower','Deagol Mugwort','Pippin Gawkroger','Aregund Grubb','Bailey Twofoot','Nantechildis Lightfoot','Salvia Brandywood','Baldechildis Hopesinger','Leesha Noakesburrow','Selina Finnagund','Ingelburga Maggot','Kunegund Goldworthy','Alpaida Langham','Kayla Sackville-Baggins','Pandora Longriver','Sarai Greenhand','Adallinda Chubb-Baggins','Adda Burrows','Tasha Bolger-Baggins','Ginelle Brandybuck','Gundradis Hopesinger','Alia Boulderhill','Fastrada Gaukrogers'],
 			        skills: ['Vigor'],
 			        approach: ['Poderoso'],
-			        stunts: ['<strong>Resiliência dos robustos:</strong> O halfling robusto recebe +2 em Vigor para Superar efeitos de venenos.','<strong>Bravura:</strong> O halfling robusto recebe +2 em Provocar para se Defender de ataques mentais.']
+			        stunts: ['<strong>Resiliência dos robustos:</strong> O halfling robusto recebe +2 em Vigor para Superar efeitos de venenos.','<strong>Bravura:</strong> O halfling robusto recebe +2 em Vontade para se Defender de ataques mentais.']
 			    },
 			    'Halfling dos Vales': {
 			        names: ['Flodoard Burrows','Isengrim Bracegirdle','Athanaric Longbottom','Waldolanus Silentfoot','Wala Noakesburrow','Wulfram Rumble','Brice Sackville','Leuthard Bottomhill','Wandregisel Hayward','Poppo Galpsi','Dodinas Longbottom','Norbert Hopesinger','Cedivar Bracegirdle','Vulmar Puddifoot','Trahand Twofoot','Emmeran Pott','Meriadoc Littlefoot','Chlodwig Proudbody','Adalard Gaukrogers','Habaccuc Lothran','Hildegund Goold','Lauren Boulderhill','Erin Elvellon','Pamphila Proudmead','Rotrude Gardner','Sophie Whitbottom','Nicole Oakbottom','Caitlin Swiftfoot','Hildegund Gamgee','Lauren Hlothran','Alexis Bophin','Mary Underlake','Madelgarda Goodchild','Ruby Undertree','Anna Pott','Suri Gluttonbelly','Kymma Gaukrogers','Rosamund Sandyman','Mechtild Bolger','Leesha Hopesinger'],
 			        skills: ['Contatos'],
 			        approach: ['Estiloso'],
-			        stunts: ['<strong>Recuperação acelerada:</strong> O halfling dos vales se recupera muito mais rapidamente de seus ferimentos físicos. Ao tratar uma consequência, pode gastar 1 PD para considerá-la como um nível mais branda. (Severa como Moderada e Moderada como Suave).','<strong>Bem relacionado:</strong> O halfling dos vales recebe +2 em Percepção em testes de Superar para identificar efeitos mágicos de controle mental, encantamentos ou ilusões de disfarce.']
+			        stunts: ['<strong>Recuperação acelerada:</strong> O halfling dos vales se recupera muito mais rapidamente de seus ferimentos físicos. Ao tratar uma consequência, pode gastar 1 PD para considerá-la como um nível mais branda. (Severa como Moderada e Moderada como Suave).','<strong>Discernimento Apurado:</strong> O halfling dos vales recebe +2 em Percepção em testes de Superar para identificar efeitos mágicos de controle mental, encantamentos ou ilusões de disfarce.']
 			    }
 			}
     		break;
@@ -34,7 +34,7 @@ function races(type='') {
     		return {
 
 			    aspects: ['Alto Elfo','Elfo da Floresta','Elfo Drow'],
-			    stunts: ['<strong>Visão na penumbra:</strong> O elfo enxerga normalmente somente com um pequeno foco de luz.','<strong>Atencioso:</strong> O elfo possui sentidos aguçados, recebe +2 em rolagens de Investigar para detectar portas e mecanismos secretos.'],
+			    stunts: ['<strong>Visão na penumbra:</strong> O elfo enxerga normalmente somente com um pequeno foco de luz.','<strong>Atencioso:</strong> O elfo possui sentidos aguçados, recebe +2 em Superar com Perceção para notar tentativas de ocultação não-mágicas.'],
 			    'Alto Elfo': {
 			    	names: ['Elmenor','Crafir','Yelpeiros','Perhorn','Virmyar','Waeszumin','Ianlamin','Admyar','Wrankas','Cranorin','Sarjor','Zinwraek','Omafir','Kearo','Yellar','Elmyar','Aebalar','Uriro','Vakas','Dorsandoral','Caitris','Quibella','Brykalyn','Uriynore','Xyrkalyn','Faephine','Gilmoira','Eilna','Daewynn','Valdove','Miaphyra','Daegwyn','Brynala','Yllavaris','Phiphyra','Kristris','Qigella','Yeszana','Loraphine','Gilvaris'],
 			        skills: ['Conhecimentos'],
@@ -45,7 +45,7 @@ function races(type='') {
 			    	names: ['Dorfaren','Heiquinal','Aekas','Daesandoral','Kelpetor','Beixalim','Gensalor','Keajeon','Elaxidor','Virro','Petxidor','Yelyarus','Gensandoral','Tralamin','Sarlamin','Glynydark','Petmaris','Thekian','Oloquinal','Ianzeiros','Yeszana','Wynroris','Adthyra','Trisralei','Wysanala','Ravaralei','Liara','Olasys','Olahana','Wysarieth','Triswynn','Bikrana','Ulalana','Lorabella','Quistina','Adzana','Maglana','Darora','Chaethana','Nerilana'],
 			        skills: ['Furtividade'],
 			        approach: ['Sorrateiro'],
-			        stunts: ['<strong>Ocultação:</strong> O elfo da floresta recebe +2 em furtividade (Sorrateiro) ao criar vantagem para se ocultar em ambientes selvagens.','<strong>Afinidade com armas:</strong> Ao utilizar uma arma élfica, o elfo da floresta causa uma tensão a mais de dano em um ataque bem sucedido.']
+			        stunts: ['<strong>Ocultação:</strong> O elfo da floresta recebe +2 em furtividade (Sorrateiro) ao criar vantagem para se ocultar em ambientes selvagens.','<strong>Afinidade com armas:</strong> Ao utilizar uma arma élfica, o elfo da floresta tem Arma: 1, isto é, causa uma tensão a mais de dano em um ataque bem sucedido.']
 			    },
 			    'Elfo Drow': {
 			    	names: ['Quildyn Arablyl','Dinerd Orlyt-tar','Randaer Oussduis','Taragh Godear','Quenkoth Vrammune','Honemkoph Waeglistyn','Narlkoth Beltin','Xunvin Chaulssal','Orgoloth Olonrae','Ornaryn Elpragh','Ryldrin Oussduis','Nalraen Aleanghym','Mournryn Barriduis','Gelolvir Freafin','Tarrak Omrylan','Jhaambal A-Dararyd','Tathphyn Dinorel','Senszar Duskruan','Dresmorlin Gallaer','Quevven Omriwin','Nhilual Despar','Rilafay Noquiryn','Baeayne Do-ana','Umraestin Barriana','Anganel Quavyth','Jhanrina A-Darabar','Charifaere Philuin','Byrya Jhaliwin','Dilynrae Abbylan','Vhondryl Telenna','Hounwae Oussarn','Wuyonvyll Maerret','Felynaste Everhndar','Ardulynda Everhrae','Nitlara Rhomdiiryn','Urlva Xiltyr','Shulvallris Dalala','Ilivaryanna Rhomdiriy','Zelpassa Yril-Lysaen','Ulitree Olonrae'],
@@ -86,7 +86,7 @@ function races(type='') {
     		return {
 
     			aspects: ['Humano','Meio-Elfo','Meio-Orc'],
-			    stunts: ['<strong>Versátil:</strong> Um humano, ou meio-humano, se adapta rapidamente a qualquer situação. Uma vez por sessão ele recebe gratuitamente um impulso de performance.','<strong>Ambição natural:</strong> Um humano, ou meio-humano, recebe +2 em testes de Vontade para Superar alguma barreira mental ou social que esteja impedindo o seu progresso.'],
+			    stunts: ['<strong>Versátil:</strong> Um humano, ou meio-humano, se adapta rapidamente a qualquer situação. Uma vez por sessão ele recebe gratuitamente um pulso de performance.','<strong>Ambição natural:</strong> Um humano, ou meio-humano, recebe +2 em testes de Vontade para Superar alguma barreira mental ou social que esteja impedindo o seu progresso.'],
 			    'Humano': {
 			    	names: ['Nheimeir Hukhi','Narem Khule','Envin Rainbash','Toi Commondew','Brogrol Vez','Nif Divrag','Modvom Sunstone','Brorth Steelstride','Teh-Kirof Buelrohrim','Nuvah Vilild','Drelmirvaj Tatherkyavya','Vlethek Stadantu','Thi Cie','Jim Lue','Tolurnar Cabrebris','Verteas Furasu','Rheihlar Nennu','Ruser Bhehrod','Grursturn Paleblight','Hanvil Plaindrifter','Karvif Shon','Ril Numeg','Gemeth Battleshaper','Erth Orbbloom','Vid-Kijo Faltanskeld','Lim-Zif Hapvuft','Fijelmedj Troruvrovra','Shargek Charnilzi','Thih Duy','Fiow Im','Vimairduz Balbergi','Enrul Orgargel','Hasiteil Cohreil','Efuh Cashel','Riznoldri Deathweaver','Kalee Voidgrove','Chelma Kav','Cha Kukotsk','Kelega Farglory','Ceshi Phoenixshot','Korozrus Rucrenskid','Lofo Jultrehd','Imzulma Amidorkye','Herrel Erkedze','Chia Piam','Tua Wia','Dants Imergos','Viatt Marizer','Nismosmeh Nahil','Imol Khuku','Sheesrerrul Clanbluff','Redri Dawnvigor','Colna Duv','Le Chemotsk','Lethresha Wolfmaw','Astro Sacredblossom','Losafo Jiltizdim','Nosha Mizdub','Shefafra Chanivanye','Alra Mavalba','Nue Zao','Xao Ma','Qomv Povenu','Luinds Rimildas'],
 			        skills: [],
@@ -103,7 +103,7 @@ function races(type='') {
 			    	names: ['Renotir','Throbur','Mokerash','Sorinar','Garugash','Mugarall','Kruudim','Moronar','Camarsh','Zim','Thridim','Trakamash','Aganar','Agamir','Oguorim','Kelad','Arnoruk','Mukudark','Kraudar','Sarunars','Gryanur','Kotagu','Gimi','Noral','Puyagar','Grotir','Senodur','Gryimar','Shomi','Koda','Ootatur','Olugar','Kotaner','Giz','Siti','Kiraner','Rawatur','Temunar','Gajener','Miriz'],
 			        skills: ['Lutar'],
 			        approach: ['Poderoso'],
-			        stunts: ['<strong>Marginalizado:</strong> O meio-orc recebe +2 em Empatia para Superar alguma situação em que raças humanoides estejam sofrendo algum tipo de preconceito.','<strong>Ferocidade orc:</strong> Uma vez por sessão, ao receber um dano e não ter mais caixas de estresse para serem marcadas, o meio-orc pode gastar 1 PD para ignorar o dano recebido.']
+			        stunts: ['<strong>Marginalizado:</strong> O meio-orc recebe +2 em Empatia para Superar alguma situação em que bioformas humanoides estejam sofrendo algum tipo de preconceito.','<strong>Ferocidade orc:</strong> Uma vez por sessão, ao receber um dano e não ter mais caixas de estresse para serem marcadas, o meio-orc pode gastar 1 PD para ignorar o dano recebido.']
 			    },
     		}
     		break;
