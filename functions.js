@@ -38,7 +38,7 @@ function characterSkills(classSkills,raceSkill,allSkills) {
   if(skills.indexOf(raceSkill[0]) === -1 && typeof raceSkill !== 'undefined' && raceSkill.length > 0) 
     skills.push(raceSkill[0]);
 
-  for(i=skills.length;i<10;i++){
+  while(skills.length<10){
     var skill = random(allSkills);
     if(skills.indexOf(skill) === -1)
       skills.push(skill);
