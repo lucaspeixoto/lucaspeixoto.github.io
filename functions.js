@@ -35,7 +35,7 @@ function stress(min, max) {
 
 function characterSkills(classSkills,raceSkill,allSkills) {
   var skills = exclusiveRandom(classSkills,5);
-  if(skills.indexOf(raceSkill[0]) === -1) 
+  if(skills.indexOf(raceSkill[0]) === -1 && typeof raceSkill !== 'undefined' && raceSkill.length > 0) 
     skills.push(raceSkill[0]);
 
   var i = 0;
