@@ -40,12 +40,12 @@ $( document ).ready(function() {
     var raca = races($('#selectRace').val());
     var racaEspecifica = random(raca.aspects);
     var pericias = characterSkills(classe[classeEspecifica].skills,raca[racaEspecifica].skills,skills('core'));
-    var abordagens = characterSkills(classe[classeEspecifica].approach,raca[racaEspecifica].approach,skills('fae'));
+    var abordagens = characterApproaches(classe[classeEspecifica].approach,raca[racaEspecifica].approach,skills('fae'));
     var tradicoes = classe.tradition;
     var facanhasRaca = raca.stunts;
     facanhasRaca = facanhasRaca.concat(raca[racaEspecifica].stunts);
 
-    if($('#fcon').is(':checked')){
+    if($('#radio-fcon').is(':checked')){
       pericias = '<p><strong>PERÍCIAS</strong><br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Ótimo (+4):</strong> '+pericias[0]+'<br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Bom (+3):</strong> '+pericias[1]+', '+pericias[2]+'<br>'+

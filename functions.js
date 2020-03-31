@@ -47,14 +47,16 @@ function characterSkills(classSkills,raceSkill,allSkills) {
 }
                   
 function characterApproaches(classApproach,raceApproach,allApproaches) {
-  var approaches = exclusiveRandom(classApproach,1);
+  var approaches = [];
+  approaches.push(classApproach[0]);
+
   if(approaches.indexOf(raceApproach[0]) === -1 && typeof raceApproach !== 'undefined' && raceApproach.length > 0)
-    skills.push(raceApproach[0]);
+    approaches.push(raceApproach[0]);
 
   while(approaches.length<6){
-    var approaches = random(allApproaches);
-    if(approaches.indexOf(approaches) === -1)
-      approaches.push(approaches);
+    var approach = random(allApproaches);
+    if(approaches.indexOf(approach) === -1)
+      approaches.push(approach);
   }
   return approaches;
 }
