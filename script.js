@@ -55,27 +55,27 @@ $( document ).ready(function() {
       '<div class="textIndent"><strong>Regular (+1):</strong> '+pericias[6]+', '+pericias[7]+', '+pericias[8]+', '+pericias[9]+'</div></div>';
 
       estresse = '<p><strong>ESTRESSE</strong><br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;Físico: </strong>'+characterStress('Vigor',pericias)+'<br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;Mental: </strong>'+characterStress('Vontade',pericias)+'</p>';
+      '<strong>'+nbsp(3)+'Físico: </strong>'+characterStress('Vigor',pericias)+'<br>'+
+      '<strong>'+nbsp(3)+'Mental: </strong>'+characterStress('Vontade',pericias)+'</p>';
 
     } else {
 
       pericias = '<p><strong>ABORDAGENS</strong><br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ágil:</strong> '+abordagens['Ágil']+'<br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;&nbsp;Cuidadoso:</strong> '+abordagens['Cuidadoso']+'<br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Esperto:</strong> '+abordagens['Esperto']+'<br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Estiloso:</strong> '+abordagens['Estiloso']+'<br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Poderoso:</strong> '+abordagens['Poderoso']+'<br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sorrateiro:</strong> '+abordagens['Sorrateiro']+'</p>'
+      '<strong>'+nbsp(16)+'Ágil:</strong> '+abordagens['Ágil']+'<br>'+
+      '<strong>'+nbsp(4)+'Cuidadoso:</strong> '+abordagens['Cuidadoso']+'<br>'+
+      '<strong>'+nbsp(9)+'Esperto:</strong> '+abordagens['Esperto']+'<br>'+
+      '<strong>'+nbsp(9)+'Estiloso:</strong> '+abordagens['Estiloso']+'<br>'+
+      '<strong>'+nbsp(6)+'Poderoso:</strong> '+abordagens['Poderoso']+'<br>'+
+      '<strong>'+nbsp(6)+'Sorrateiro:</strong> '+abordagens['Sorrateiro']+'</p>'
 
       estresse = '<p><strong>ESTRESSE</strong><br>'+
-      '&nbsp;&nbsp;&nbsp;<i class="fa fa-square-o"></i> <i class="fa fa-square-o"></i><i class="fa fa-square-o"></i> '+
+      nbsp(3)+'<i class="fa fa-square-o"></i> <i class="fa fa-square-o"></i><i class="fa fa-square-o"></i> '+
       '<i class="fa fa-square-o"></i><i class="fa fa-square-o"></i><i class="fa fa-square-o"></i></p>';
 
     }
 
     if(tradicoes != '')
-      tradicoes = '<div><strong>TRADIÇÕES</strong><br>&nbsp;&nbsp;&nbsp;'+tradicoes+'</div>';
+      tradicoes = '<div><strong>TRADIÇÕES</strong><br>'+nbsp(3)+tradicoes+'</div><br>';
 
     $('.boxPersonagemFate').html(
       '<center><h4>'+random(raca[racaEspecifica].names)+'</h4></center>'+
@@ -86,19 +86,19 @@ $( document ).ready(function() {
       '<div class="textIndent"><strong>Aventura:</strong> '+random(aspects('adventure'))+'</div>'+
       '<div class="textIndent"><strong>Ambição:</strong> '+random(aspects('ambition'))+'</div></div><br>'+
       pericias+'<br>'+
-      tradicoes+'<br>'+
+      tradicoes+
       '<div><strong>FAÇANHAS</strong>'+
       '<div class="textIndent">'+random(facanhasRaca)+'</div>'+
       '<div class="textIndent">'+random(classe.stunts)+'</div>'+
       '<div class="textIndent">'+random(classe[classeEspecifica].stunts)+'</div></div>'+
       estresse+
       '<p><strong>CONSEQUÊNCIAS</strong><br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;Suave: </strong><br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;Moderada: </strong><br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;Severa: </strong></p>'+
+      '<strong>'+nbsp(3)+'Suave: </strong><br>'+
+      '<strong>'+nbsp(3)+'Moderada: </strong><br>'+
+      '<strong>'+nbsp(3)+'Severa: </strong></p>'+
       '<p><strong>CONDIÇÕES</strong><br>'+
-      '&nbsp;&nbsp;&nbsp;<i class="fa fa-square-o"></i> Atordoado&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-square-o"></i> Derrubado&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-square-o"></i> Fatigado&nbsp;&nbsp;&nbsp;&nbsp;<br>'+
-      '&nbsp;&nbsp;&nbsp;<i class="fa fa-square-o"></i> Amedrontado&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-square-o"></i> Confuso&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-square-o"></i> Fascinado&nbsp;&nbsp;&nbsp;&nbsp;<p>'
+      nbsp(3)+'<i class="fa fa-square-o"></i> Atordoado'+nbsp(10)+'<i class="fa fa-square-o"></i> Derrubado'+nbsp(4)+'<i class="fa fa-square-o"></i> Fatigado<br>'+
+      nbsp(3)+'<i class="fa fa-square-o"></i> Amedrontado'+nbsp(4)+'<i class="fa fa-square-o"></i> Confuso'+nbsp(8)+'<i class="fa fa-square-o"></i> Fascinado<p>'
     );   
 
     $('.boxPersonagemFate').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'max-width': '550px', 'box-shadow': '5px 5px 10px lightgrey'});
