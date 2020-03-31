@@ -87,10 +87,10 @@ $( document ).ready(function() {
       '<strong>&nbsp;&nbsp;&nbsp;Ambição:</strong> '+random(aspects('ambition'))+'</p>'+
       pericias+
       tradicoes+
-      '<p><strong>FAÇANHAS</strong><br>'+
-      '&nbsp;&nbsp;&nbsp;<span class="textIndent">'+random(facanhasRaca)+'</span><br>'+
-      '&nbsp;&nbsp;&nbsp;<span class="textIndent">'+random(classe.stunts)+'</span><br>'+
-      '&nbsp;&nbsp;&nbsp;<span class="textIndent">'+random(classe[classeEspecifica].stunts)+'</span></p>'+
+      '<p><strong>FAÇANHAS</strong>'+
+      '&nbsp;&nbsp;&nbsp;<div class="textIndent">'+random(facanhasRaca)+'</div>'+
+      '&nbsp;&nbsp;&nbsp;<div class="textIndent">'+random(classe.stunts)+'</div>'+
+      '&nbsp;&nbsp;&nbsp;<div class="textIndent">'+random(classe[classeEspecifica].stunts)+'</div></p>'+
       estresse+
       '<p><strong>CONSEQUÊNCIAS</strong><br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Suave: </strong><br>'+
