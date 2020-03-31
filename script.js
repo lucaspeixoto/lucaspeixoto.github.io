@@ -53,6 +53,8 @@ $( document ).ready(function() {
       '<strong>&nbsp;&nbsp;&nbsp;Conceito:</strong> '+classeEspecifica+' '+random(aspects('ancestry'))+'<br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Raça:</strong> '+racaEspecifica+'<br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Dificuldade:</strong> '+random(aspects('problem'))+'</p>'+
+      '<strong>&nbsp;&nbsp;&nbsp;Aventura:</strong> '+random(aspects('adventure'))+'</p>'+
+      '<strong>&nbsp;&nbsp;&nbsp;Ambição:</strong> '+random(aspects('ambition'))+'</p>'+
       '<p><strong>PERÍCIAS</strong><br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Ótimo (+4):</strong> '+pericias[0]+'<br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Bom (+3):</strong> '+pericias[1]+', '+pericias[2]+'<br>'+
