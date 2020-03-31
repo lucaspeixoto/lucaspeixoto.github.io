@@ -96,8 +96,8 @@ function npcStunts(npcSkills){
 }
 
 function nbsp(j){
-  var nbsp;
+  var nbsp = '';
   for(i=0;i<j;i++)
-    nbsp = '&nbsp;' + nbsp;
+    nbsp = nbsp + '&nbsp;';
   return nbsp;
 }
