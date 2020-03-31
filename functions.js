@@ -46,17 +46,17 @@ function characterSkills(classSkills,raceSkill,allSkills) {
   return skills;
 }
                   
-function characterApproaches(classApproaches,raceApproaches,allApproaches) {
-  var approaches = exclusiveRandom(classApproaches,1);
-  if(skills.indexOf(raceSkill[0]) === -1 && typeof raceSkill !== 'undefined' && raceSkill.length > 0)
-    skills.push(raceSkill[0]);
+function characterApproaches(classApproach,raceApproach,allApproaches) {
+  var approaches = exclusiveRandom(classApproach,1);
+  if(approaches.indexOf(raceApproach[0]) === -1 && typeof raceApproach !== 'undefined' && raceApproach.length > 0)
+    skills.push(raceApproach[0]);
 
-  while(skills.length<10){
-    var skill = random(allSkills);
-    if(skills.indexOf(skill) === -1)
-      skills.push(skill);
+  while(approaches.length<6){
+    var approaches = random(allApproaches);
+    if(approaches.indexOf(approaches) === -1)
+      approaches.push(approaches);
   }
-  return skills;
+  return approaches;
 }
 
 function characterStress(type,skills) {
