@@ -58,7 +58,17 @@ function characterApproaches(classApproach,raceApproach,allApproaches) {
     if(approaches.indexOf(approach) === -1)
       approaches.push(approach);
   }
-  return approaches;
+
+  var approachesValues = [];
+
+  approachesValues[approaches[0]] = '+3';
+  approachesValues[approaches[1]] = '+2';
+  approachesValues[approaches[2]] = '+2';
+  approachesValues[approaches[3]] = '+1';
+  approachesValues[approaches[4]] = '+1';
+  approachesValues[approaches[5]] = '0';
+
+  return approachesValues;
 }
 
 function characterStress(type,skills) {
