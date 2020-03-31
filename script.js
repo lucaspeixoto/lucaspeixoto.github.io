@@ -67,7 +67,7 @@ $( document ).ready(function() {
       '<strong>&nbsp;&nbsp;&nbsp;Medíocre (+0):</strong> '+abordagens[5]+'</p>';
 
       estresse = '<p><strong>ESTRESSE</strong><br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;<i class="fa fa-square-o"></i> <i class="fa fa-square-o"></i><i class="fa fa-square-o"></i>'+
+      '<strong>&nbsp;&nbsp;&nbsp;<i class="fa fa-square-o"></i> <i class="fa fa-square-o"></i><i class="fa fa-square-o"></i> '+
       '<i class="fa fa-square-o"></i><i class="fa fa-square-o"></i><i class="fa fa-square-o"></i><br>';
 
     }
