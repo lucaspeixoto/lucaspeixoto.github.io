@@ -56,7 +56,7 @@ $( document ).ready(function() {
 
       estresse = '<p><strong>ESTRESSE</strong><br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Físico: </strong>'+characterStress('Vigor',pericias)+'<br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;Mental: </strong>'+characterStress('Vontade',pericias)+'</p>'+
+      '<strong>&nbsp;&nbsp;&nbsp;Mental: </strong>'+characterStress('Vontade',pericias)+'</p>';
 
     } else {
 
@@ -67,7 +67,8 @@ $( document ).ready(function() {
       '<strong>&nbsp;&nbsp;&nbsp;Medíocre (+0):</strong> '+abordagens[5]+'</p>';
 
       estresse = '<p><strong>ESTRESSE</strong><br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;<i class="fa fa-square-o"></i> <i class="fa fa-square-o"></i><i class="fa fa-square-o"></i> <i class="fa fa-square-o"></i><i class="fa fa-square-o"></i><i class="fa fa-square-o"></i><br>'
+      '<strong>&nbsp;&nbsp;&nbsp;<i class="fa fa-square-o"></i> <i class="fa fa-square-o"></i><i class="fa fa-square-o"></i>'+
+      '<i class="fa fa-square-o"></i><i class="fa fa-square-o"></i><i class="fa fa-square-o"></i><br>';
 
     }
 
