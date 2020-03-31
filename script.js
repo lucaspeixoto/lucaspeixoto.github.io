@@ -29,7 +29,7 @@ $( document ).ready(function() {
       '<p><strong>Estresse: </strong>'+stress(0,2)+'</p>'+
     '</div>');
 
-    $('.boxNPC').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '5px', 'margin': '10px', 'max-width': '550px', 'box-shadow': '5px 5px 10px lightgrey'});
+    $('.boxNPC').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'max-width': '550px', 'box-shadow': '5px 5px 10px lightgrey'});
 
   });
 
@@ -75,7 +75,7 @@ $( document ).ready(function() {
     }
 
     if(tradicoes != '')
-      tradicoes = '<p><strong>TRADIÇÕES</strong><br>&nbsp;&nbsp;&nbsp;'+tradicoes+'</p>';
+      tradicoes = '<div><strong>TRADIÇÕES</strong><br>&nbsp;&nbsp;&nbsp;'+tradicoes+'</div>';
 
     $('.boxPersonagemFate').html(
       '<center><h4>'+random(raca[racaEspecifica].names)+'</h4></center>'+
@@ -84,9 +84,9 @@ $( document ).ready(function() {
       '<div class="textIndent"><strong>Biotipo:</strong> '+racaEspecifica+' '+random(aspects('ancestry'))+'</div>'+
       '<div class="textIndent"><strong>Dificuldade:</strong> '+random(aspects('problem'))+'</div>'+
       '<div class="textIndent"><strong>Aventura:</strong> '+random(aspects('adventure'))+'</div>'+
-      '<div class="textIndent"><strong>Ambição:</strong> '+random(aspects('ambition'))+'</div></div>'+
-      pericias+
-      tradicoes+
+      '<div class="textIndent"><strong>Ambição:</strong> '+random(aspects('ambition'))+'</div></div><br>'+
+      pericias+'<br>'+
+      tradicoes+'<br>'+
       '<div><strong>FAÇANHAS</strong>'+
       '<div class="textIndent">'+random(facanhasRaca)+'</div>'+
       '<div class="textIndent">'+random(classe.stunts)+'</div>'+
@@ -101,7 +101,7 @@ $( document ).ready(function() {
       '&nbsp;&nbsp;&nbsp;<i class="fa fa-square-o"></i> Amedrontado&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-square-o"></i> Confuso&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-square-o"></i> Fascinado&nbsp;&nbsp;&nbsp;&nbsp;<p>'
     );   
 
-    $('.boxPersonagemFate').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '5px', 'margin': '10px', 'max-width': '550px', 'box-shadow': '5px 5px 10px lightgrey'});
+    $('.boxPersonagemFate').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'max-width': '550px', 'box-shadow': '5px 5px 10px lightgrey'});
 
   });
 
