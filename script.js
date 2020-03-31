@@ -45,7 +45,7 @@ $( document ).ready(function() {
     var facanhasRaca = raca.stunts;
     facanhasRaca = facanhasRaca.concat(raca[racaEspecifica].stunts);
 
-    if($('#fcon').prop("checked", true)){
+    if($('#fcon').is(':checked')){
       pericias = '<p><strong>PERÍCIAS</strong><br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Ótimo (+4):</strong> '+pericias[0]+'<br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Bom (+3):</strong> '+pericias[1]+', '+pericias[2]+'<br>'+
