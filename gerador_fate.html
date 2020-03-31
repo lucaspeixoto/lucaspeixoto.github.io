@@ -51,14 +51,19 @@ fetch("./nav.html")
   
   <div class="w3-container w3-padding-large" style="margin-bottom:32px">
     <h4>Fichas aleatórias para cenários de fantasia medieval.</h4>
+
+    <input type="radio" id="fcon" value="fcon">
+    <label for="fcon">Fate Condensed</label>
+    <input type="radio" id="fae" value="fae">
+    <label for="fae">Fate Acelerado</label><br>
     
-    <select id="selectClass" class="w3-button w3-teal w3-padding-large">
+    <select id="selectClass" class="w3-button w3-teal">
       <option value="">Qualquer classe</option>
       <option value="druid">Druida</option>
       <option value="thief">Ladrão</option>
       <option value="monk">Monge</option>
     </select>
-    <select id="selectRace" class="w3-button w3-teal w3-padding-large">
+    <select id="selectRace" class="w3-button w3-teal">
       <option value="">Qualquer bioforma</option>
       <option value="dwarf">Anão</option>
       <option value="elf">Elfo</option>
@@ -68,11 +73,11 @@ fetch("./nav.html")
       <option value="gnome">Gnomo</option>
       <option value="touched">Tocado pelos planos</option>-->
     </select>
-    <button id="btnGerarFate" class="w3-button w3-teal w3-padding-large w3-hover-black">Gerar personagem</button>
-
-    <div class="boxPersonagemFate"></div>
+    <button id="btnGerarFate" class="w3-button w3-teal w3-hover-black">Gerar personagem</button>
     <a href="javascript: window.print();" id="btnPrint"><i class="fa fa-file-pdf-o w3-hover-opacity"></i> PDF</a>
 
+    <div class="boxPersonagemFate"></div>
+    
   </div> 
 
 <!-- End page content -->
