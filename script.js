@@ -48,11 +48,11 @@ $( document ).ready(function() {
 
     if($('#radio-fcon').is(':checked')){
 
-      pericias = '<p><strong>PERÍCIAS</strong><br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;Ótimo (+4):</strong> '+pericias[0]+'<br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;Bom (+3):</strong> '+pericias[1]+', '+pericias[2]+'<br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;Razoável (+2):</strong> '+pericias[3]+', '+pericias[4]+', '+pericias[5]+'<br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;Regular (+1):</strong> '+pericias[6]+', '+pericias[7]+', '+pericias[8]+', '+pericias[9]+'</p>';
+      pericias = '<div><strong>PERÍCIAS</strong>'+
+      '<div class="textIndent"><strong>Ótimo (+4):</strong> '+pericias[0]+'</div>'+
+      '<div class="textIndent"><strong>Bom (+3):</strong> '+pericias[1]+', '+pericias[2]+'</div>'+
+      '<div class="textIndent"><strong>Razoável (+2):</strong> '+pericias[3]+', '+pericias[4]+', '+pericias[5]+'</div>'+
+      '<div class="textIndent"><strong>Regular (+1):</strong> '+pericias[6]+', '+pericias[7]+', '+pericias[8]+', '+pericias[9]+'</div></div>';
 
       estresse = '<p><strong>ESTRESSE</strong><br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Físico: </strong>'+characterStress('Vigor',pericias)+'<br>'+
@@ -84,7 +84,7 @@ $( document ).ready(function() {
       '<div class="textIndent"><strong>Biotipo:</strong> '+racaEspecifica+' '+random(aspects('ancestry'))+'</div>'+
       '<div class="textIndent"><strong>Dificuldade:</strong> '+random(aspects('problem'))+'</div>'+
       '<div class="textIndent"><strong>Aventura:</strong> '+random(aspects('adventure'))+'</div>'+
-      '<div class="textIndent"><strong>Ambição:</strong> '+random(aspects('ambition'))+'</div>'+
+      '<div class="textIndent"><strong>Ambição:</strong> '+random(aspects('ambition'))+'</div></div>'+
       pericias+
       tradicoes+
       '<div><strong>FAÇANHAS</strong>'+

@@ -80,7 +80,6 @@ function characterStress(type,skills) {
   return stress;
 }
 
-
 function npcStunts(npcSkills){
   var npcStuntsList = [];
   var pericias = skills('core');
@@ -94,4 +93,11 @@ function npcStunts(npcSkills){
   else
     return '';
     
+}
+
+function nbsp(j){
+  var nbsp;
+  for(i=0;i<j;i++)
+    nbsp = '&nbsp;' + nbsp;
+  return nbsp;
 }
