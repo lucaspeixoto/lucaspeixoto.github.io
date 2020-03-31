@@ -43,20 +43,32 @@ $( document ).ready(function() {
     var abordagens = characterApproaches(classe[classeEspecifica].approach,raca[racaEspecifica].approach,skills('fae'));
     var tradicoes = classe.tradition;
     var facanhasRaca = raca.stunts;
-    facanhasRaca = facanhasRaca.concat(raca[racaEspecifica].stunts);
+        facanhasRaca = facanhasRaca.concat(raca[racaEspecifica].stunts);
+    var estresse = '';
 
     if($('#radio-fcon').is(':checked')){
+
       pericias = '<p><strong>PERÍCIAS</strong><br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Ótimo (+4):</strong> '+pericias[0]+'<br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Bom (+3):</strong> '+pericias[1]+', '+pericias[2]+'<br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Razoável (+2):</strong> '+pericias[3]+', '+pericias[4]+', '+pericias[5]+'<br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Regular (+1):</strong> '+pericias[6]+', '+pericias[7]+', '+pericias[8]+', '+pericias[9]+'</p>';
+
+      estresse = '<p><strong>ESTRESSE</strong><br>'+
+      '<strong>&nbsp;&nbsp;&nbsp;Físico: </strong>'+characterStress('Vigor',pericias)+'<br>'+
+      '<strong>&nbsp;&nbsp;&nbsp;Mental: </strong>'+characterStress('Vontade',pericias)+'</p>'+
+
     } else {
+
       pericias = '<p><strong>ABORDAGENS</strong><br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Bom (+3):</strong> '+abordagens[0]+'<br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Razoável (+2):</strong> '+abordagens[1]+', '+abordagens[2]+'<br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Regular (+1):</strong> '+abordagens[3]+', '+abordagens[4]+'<br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Medíocre (+0):</strong> '+abordagens[5]+'</p>';
+
+      estresse = '<p><strong>ESTRESSE</strong><br>'+
+      '<strong>&nbsp;&nbsp;&nbsp;<i class="fa fa-square-o"></i> <i class="fa fa-square-o"></i><i class="fa fa-square-o"></i> <i class="fa fa-square-o"></i><i class="fa fa-square-o"></i><i class="fa fa-square-o"></i><br>'
+
     }
 
     if(tradicoes != '')
@@ -76,9 +88,7 @@ $( document ).ready(function() {
       '&nbsp;&nbsp;&nbsp;'+random(facanhasRaca)+'<br>'+
       '&nbsp;&nbsp;&nbsp;'+random(classe.stunts)+'<br>'+
       '&nbsp;&nbsp;&nbsp;'+random(classe[classeEspecifica].stunts)+'</p>'+
-      '<p><strong>ESTRESSE</strong><br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;Físico: </strong>'+characterStress('Vigor',pericias)+'<br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;Mental: </strong>'+characterStress('Vontade',pericias)+'</p>'+
+      estresse+
       '<p><strong>CONSEQUÊNCIAS</strong><br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Suave: </strong><br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Moderada: </strong><br>'+
