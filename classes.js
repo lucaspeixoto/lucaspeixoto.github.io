@@ -60,7 +60,7 @@ function classes(type='') {
                 },
                 'Druida Primal': {
                     proficiency: ['Lutar marcial, armaduras médias e escudo'],
-                    skills: ['Animais','Lutar','Atletismo','Vigor','Ocultismo'],
+                    skills: ['Animais','Lutar','Atletismo','Vigor','Magia'],
                     approach: ['Ágil'],
                     stunts: ['<strong>Forma selvagem:</strong> O druida primal é capaz de se transformar em animais, o tamanho pode variar até dois na escala, ou três ao custo de 1 PD extra (como em Secret of the Cats). Ele adquire as características físicas da criatura escolhida, com uma ficha de capangas como em FAE, bem como as suas armas, armadura e façanhas, se houver. O efeito dura uma cena e requer 1 PD para ser ativado.','<strong>Traços selvagens:</strong> O druida recebe algum traço específico de animais, como guelras, garras, sentidos aguçados ou pequenos aspectos semelhantes. No caso de garras ou presas, seus ataques são considerados como Arma: 1. O efeito dura uma cena e requer 1 PD para ser ativado.','<strong>Transformação da cura:</strong> Ao mudar de forma o druida limpa todas as suas caixas de estresse.']
                 },
