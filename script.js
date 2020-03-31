@@ -50,8 +50,8 @@ $( document ).ready(function() {
     $('.boxPersonagemFate').html(
       '<center><h4>'+random(raca[racaEspecifica].names)+'</h4></center>'+
       '<p><strong>ASPECTOS</strong><br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;Conceito:</strong> '+classeEspecifica+' '+random(aspects('ancestry'))+'<br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;Raça:</strong> '+racaEspecifica+'<br>'+
+      '<strong>&nbsp;&nbsp;&nbsp;Conceito:</strong> '+classeEspecifica+'<br>'+
+      '<strong>&nbsp;&nbsp;&nbsp;Biotipo:</strong> '+racaEspecifica+' '+random(aspects('ancestry'))+'<br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Dificuldade:</strong> '+random(aspects('problem'))+'<br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Aventura:</strong> '+random(aspects('adventure'))+'<br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Ambição:</strong> '+random(aspects('ambition'))+'</p>'+
