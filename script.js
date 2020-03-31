@@ -88,9 +88,9 @@ $( document ).ready(function() {
       pericias+
       tradicoes+
       '<p><strong>FAÇANHAS</strong><br>'+
-      '&nbsp;&nbsp;&nbsp;'+random(facanhasRaca)+'<br>'+
-      '&nbsp;&nbsp;&nbsp;'+random(classe.stunts)+'<br>'+
-      '&nbsp;&nbsp;&nbsp;'+random(classe[classeEspecifica].stunts)+'</p>'+
+      '&nbsp;&nbsp;&nbsp;<span class="textIndent">'+random(facanhasRaca)+'</span><br>'+
+      '&nbsp;&nbsp;&nbsp;<span class="textIndent">'+random(classe.stunts)+'</span><br>'+
+      '&nbsp;&nbsp;&nbsp;<span class="textIndent">'+random(classe[classeEspecifica].stunts)+'</span></p>'+
       estresse+
       '<p><strong>CONSEQUÊNCIAS</strong><br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Suave: </strong><br>'+

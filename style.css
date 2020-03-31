@@ -4,6 +4,11 @@ nav a{text-decoration: none;}
 label {cursor: pointer;}
 label:hover {color: #009688;}
 
+.textIndent{
+  padding-left: 1.5em;
+  text-indent:-1.5em;
+}
+
 #btnPrint{
 	text-decoration: none;
   margin-left: 15px;
