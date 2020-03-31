@@ -79,18 +79,18 @@ $( document ).ready(function() {
 
     $('.boxPersonagemFate').html(
       '<center><h4>'+random(raca[racaEspecifica].names)+'</h4></center>'+
-      '<p><strong>ASPECTOS</strong><br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;Conceito:</strong> '+classeEspecifica+'<br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;Biotipo:</strong> '+racaEspecifica+' '+random(aspects('ancestry'))+'<br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;Dificuldade:</strong> '+random(aspects('problem'))+'<br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;Aventura:</strong> '+random(aspects('adventure'))+'<br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;Ambição:</strong> '+random(aspects('ambition'))+'</p>'+
+      '<div><strong>ASPECTOS</strong>'+
+      '<div class="textIndent"><strong>Conceito:</strong> '+classeEspecifica+'</div>'+
+      '<div class="textIndent"><strong>Biotipo:</strong> '+racaEspecifica+' '+random(aspects('ancestry'))+'</div>'+
+      '<div class="textIndent"><strong>Dificuldade:</strong> '+random(aspects('problem'))+'</div>'+
+      '<div class="textIndent"><strong>Aventura:</strong> '+random(aspects('adventure'))+'</div>'+
+      '<div class="textIndent"><strong>Ambição:</strong> '+random(aspects('ambition'))+'</div>'+
       pericias+
       tradicoes+
-      '<p><strong>FAÇANHAS</strong>'+
+      '<div><strong>FAÇANHAS</strong>'+
       '<div class="textIndent">'+random(facanhasRaca)+'</div>'+
       '<div class="textIndent">'+random(classe.stunts)+'</div>'+
-      '<div class="textIndent">'+random(classe[classeEspecifica].stunts)+'</div></p>'+
+      '<div class="textIndent">'+random(classe[classeEspecifica].stunts)+'</div></div>'+
       estresse+
       '<p><strong>CONSEQUÊNCIAS</strong><br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Suave: </strong><br>'+
