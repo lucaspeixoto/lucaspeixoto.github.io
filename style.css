@@ -2,7 +2,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 a:hover{color: #009688;}
 nav a{text-decoration: none;}
 label {cursor: pointer;}
-label:hover {text-decoration: underline;}
+label:hover {color: #009688;}
 
 #btnPrint{
 	text-decoration: none;
