@@ -1,7 +1,8 @@
 function races(type='') {
 
 	if (type == '') 
-        type = random(['halfling','elf','dwarf','human','dragonborn','gnome','touched']);
+        type = random(['halfling','elf','dwarf','human']);
+    	//type = random(['halfling','elf','dwarf','human','dragonborn','gnome','touched']);
   
     switch(type){
     	case "halfling":
@@ -89,8 +90,8 @@ function races(type='') {
 			    stunts: ['<strong>Versátil:</strong> Um humano, ou meio-humano, se adapta rapidamente a qualquer situação. Uma vez por sessão ele recebe gratuitamente um pulso de performance.','<strong>Ambição natural:</strong> Um humano, ou meio-humano, recebe +2 em testes de Vontade para Superar alguma barreira mental ou social que esteja impedindo o seu progresso.'],
 			    'Humano': {
 			    	names: ['Nheimeir Hukhi','Narem Khule','Envin Rainbash','Toi Commondew','Brogrol Vez','Nif Divrag','Modvom Sunstone','Brorth Steelstride','Teh-Kirof Buelrohrim','Nuvah Vilild','Drelmirvaj Tatherkyavya','Vlethek Stadantu','Thi Cie','Jim Lue','Tolurnar Cabrebris','Verteas Furasu','Rheihlar Nennu','Ruser Bhehrod','Grursturn Paleblight','Hanvil Plaindrifter','Karvif Shon','Ril Numeg','Gemeth Battleshaper','Erth Orbbloom','Vid-Kijo Faltanskeld','Lim-Zif Hapvuft','Fijelmedj Troruvrovra','Shargek Charnilzi','Thih Duy','Fiow Im','Vimairduz Balbergi','Enrul Orgargel','Hasiteil Cohreil','Efuh Cashel','Riznoldri Deathweaver','Kalee Voidgrove','Chelma Kav','Cha Kukotsk','Kelega Farglory','Ceshi Phoenixshot','Korozrus Rucrenskid','Lofo Jultrehd','Imzulma Amidorkye','Herrel Erkedze','Chia Piam','Tua Wia','Dants Imergos','Viatt Marizer','Nismosmeh Nahil','Imol Khuku','Sheesrerrul Clanbluff','Redri Dawnvigor','Colna Duv','Le Chemotsk','Lethresha Wolfmaw','Astro Sacredblossom','Losafo Jiltizdim','Nosha Mizdub','Shefafra Chanivanye','Alra Mavalba','Nue Zao','Xao Ma','Qomv Povenu','Luinds Rimildas'],
-			        skills: [],
-			        approach: [],
+			        skills: [''],
+			        approach: [''],
 			        stunts: ['<strong>Natureza cooperativa:</strong> O humano recebe +2 em Contatos para Criar Vantagem se estiver em uma cidade humana.','<strong>Curiosidade:</strong>O humano recebe +2 em Investigar para descobrir aspectos de cenário ao Criar Vantagem.']
 			    },
 			    'Meio-Elfo': {

@@ -8,7 +8,6 @@ nav a{text-decoration: none;}
 
 @media print {
   @page {
-    size: 8.5in 11in;
   	margin: 10%;
   }
   #btnGerarFate {

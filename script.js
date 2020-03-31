@@ -40,20 +40,25 @@ $( document ).ready(function() {
     var raca = races($('#selectRace').val());
     var racaEspecifica = random(raca.aspects);
     var pericias = characterSkills(classe[classeEspecifica].skills,raca[racaEspecifica].skills,skills('core'));
+    var tradicoes = classe.tradition;
     var facanhasRaca = raca.stunts;
     facanhasRaca = facanhasRaca.concat(raca[racaEspecifica].stunts);
+
+    if(tradicoes != '')
+      tradicoes = '<p><strong>TRADIÇÕES</strong><br>&nbsp;&nbsp;&nbsp;'+tradicoes+'</p>';
 
     $('.boxPersonagemFate').html(
       '<center><h4>'+random(raca[racaEspecifica].names)+'</h4></center>'+
       '<p><strong>ASPECTOS</strong><br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Conceito:</strong> '+classeEspecifica+' '+random(aspects('ancestry'))+'<br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Raça:</strong> '+racaEspecifica+'<br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;Problema:</strong> '+random(aspects('problem'))+'</p>'+
+      '<strong>&nbsp;&nbsp;&nbsp;Dificuldade:</strong> '+random(aspects('problem'))+'</p>'+
       '<p><strong>PERÍCIAS</strong><br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Ótimo (+4):</strong> '+pericias[0]+'<br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Bom (+3):</strong> '+pericias[1]+', '+pericias[2]+'<br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Razoável (+2):</strong> '+pericias[3]+', '+pericias[4]+', '+pericias[5]+'<br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Regular (+1):</strong> '+pericias[6]+', '+pericias[7]+', '+pericias[8]+', '+pericias[9]+'</p>'+
+      tradicoes+
       '<p><strong>FAÇANHAS</strong><br>'+
       '&nbsp;&nbsp;&nbsp;'+random(facanhasRaca)+'<br>'+
       '&nbsp;&nbsp;&nbsp;'+random(classe.stunts)+'<br>'+
@@ -64,10 +69,13 @@ $( document ).ready(function() {
       '<p><strong>CONSEQUÊNCIAS</strong><br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Suave: </strong><br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Moderada: </strong><br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;Severa: </strong></p>'
+      '<strong>&nbsp;&nbsp;&nbsp;Severa: </strong></p>'+
+      '<p><strong>CONDIÇÕES</strong><br>'+
+      '&nbsp;&nbsp;&nbsp;<i class="fa fa-square-o"></i> Atordoado&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-square-o"></i> Derrubado&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-square-o"></i> Fatigado&nbsp;&nbsp;&nbsp;&nbsp;<br>'+
+      '&nbsp;&nbsp;&nbsp;<i class="fa fa-square-o"></i> Amedrontado&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-square-o"></i> Consufo&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-square-o"></i> Fascinado&nbsp;&nbsp;&nbsp;&nbsp;<p>'
     );   
 
-     $('.boxPersonagemFate').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '5px', 'margin': '10px', 'max-width': '500px', 'box-shadow': '5px 5px 10px lightgrey'});
+    $('.boxPersonagemFate').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '5px', 'margin': '10px', 'max-width': '500px', 'box-shadow': '5px 5px 10px lightgrey'});
 
   });
 
