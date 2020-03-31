@@ -10,6 +10,9 @@ function skills(type) {
     	    return ['Acadêmico','Animais','Atletismo','Atirar','Comunicação','Condução','Contatos','Empatia','Enganar','Furtividade','Investigar','Lutar','Magia','Ocultismo','Ofícios','Percepção','Provocar','Recursos','Roubo','Vigor','Vontade'];
     		break;
 
+    	case "fae":
+    		return ['Ágil','Cuidadoso','Esperto','Estiloso','Poderoso','Sorrateiro'];
+    		break;
     	}
 
 };

@@ -45,6 +45,19 @@ function characterSkills(classSkills,raceSkill,allSkills) {
   }
   return skills;
 }
+                  
+function characterApproaches(classApproaches,raceApproaches,allApproaches) {
+  var approaches = exclusiveRandom(classApproaches,1);
+  if(skills.indexOf(raceSkill[0]) === -1 && typeof raceSkill !== 'undefined' && raceSkill.length > 0)
+    skills.push(raceSkill[0]);
+
+  while(skills.length<10){
+    var skill = random(allSkills);
+    if(skills.indexOf(skill) === -1)
+      skills.push(skill);
+  }
+  return skills;
+}
 
 function characterStress(type,skills) {
   var stress = '<i class="fa fa-square-o"></i><i class="fa fa-square-o"></i><i class="fa fa-square-o"></i>';

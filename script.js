@@ -40,9 +40,24 @@ $( document ).ready(function() {
     var raca = races($('#selectRace').val());
     var racaEspecifica = random(raca.aspects);
     var pericias = characterSkills(classe[classeEspecifica].skills,raca[racaEspecifica].skills,skills('core'));
+    var abordagens = characterSkills(classe[classeEspecifica].approach,raca[racaEspecifica].approach,skills('fae'));
     var tradicoes = classe.tradition;
     var facanhasRaca = raca.stunts;
     facanhasRaca = facanhasRaca.concat(raca[racaEspecifica].stunts);
+
+    if($('#fcon').prop("checked", true)){
+      pericias = '<p><strong>PERÍCIAS</strong><br>'+
+      '<strong>&nbsp;&nbsp;&nbsp;Ótimo (+4):</strong> '+pericias[0]+'<br>'+
+      '<strong>&nbsp;&nbsp;&nbsp;Bom (+3):</strong> '+pericias[1]+', '+pericias[2]+'<br>'+
+      '<strong>&nbsp;&nbsp;&nbsp;Razoável (+2):</strong> '+pericias[3]+', '+pericias[4]+', '+pericias[5]+'<br>'+
+      '<strong>&nbsp;&nbsp;&nbsp;Regular (+1):</strong> '+pericias[6]+', '+pericias[7]+', '+pericias[8]+', '+pericias[9]+'</p>';
+    } else {
+      pericias = '<p><strong>ABORDAGENS</strong><br>'+
+      '<strong>&nbsp;&nbsp;&nbsp;Bom (+3):</strong> '+abordagens[0]+'<br>'+
+      '<strong>&nbsp;&nbsp;&nbsp;Razoável (+2):</strong> '+abordagens[1]+', '+abordagens[2]+'<br>'+
+      '<strong>&nbsp;&nbsp;&nbsp;Regular (+1):</strong> '+abordagens[3]+', '+abordagens[4]+'<br>'+
+      '<strong>&nbsp;&nbsp;&nbsp;Medíocre (+0):</strong> '+abordagens[5]+'</p>';
+    }
 
     if(tradicoes != '')
       tradicoes = '<p><strong>TRADIÇÕES</strong><br>&nbsp;&nbsp;&nbsp;'+tradicoes+'</p>';
@@ -55,11 +70,7 @@ $( document ).ready(function() {
       '<strong>&nbsp;&nbsp;&nbsp;Dificuldade:</strong> '+random(aspects('problem'))+'<br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Aventura:</strong> '+random(aspects('adventure'))+'<br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Ambição:</strong> '+random(aspects('ambition'))+'</p>'+
-      '<p><strong>PERÍCIAS</strong><br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;Ótimo (+4):</strong> '+pericias[0]+'<br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;Bom (+3):</strong> '+pericias[1]+', '+pericias[2]+'<br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;Razoável (+2):</strong> '+pericias[3]+', '+pericias[4]+', '+pericias[5]+'<br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;Regular (+1):</strong> '+pericias[6]+', '+pericias[7]+', '+pericias[8]+', '+pericias[9]+'</p>'+
+      pericias+
       tradicoes+
       '<p><strong>FAÇANHAS</strong><br>'+
       '&nbsp;&nbsp;&nbsp;'+random(facanhasRaca)+'<br>'+
