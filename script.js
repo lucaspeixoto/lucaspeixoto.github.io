@@ -73,8 +73,8 @@ $( document ).ready(function() {
       '<strong>&nbsp;&nbsp;&nbsp;Moderada: </strong><br>'+
       '<strong>&nbsp;&nbsp;&nbsp;Severa: </strong></p>'+
       '<p><strong>CONDIÇÕES</strong><br>'+
-      '&nbsp;&nbsp;&nbsp;<i class="fa fa-square-o"></i> Atordoado&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-square-o"></i> Derrubado&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-square-o"></i> Fatigado&nbsp;&nbsp;&nbsp;&nbsp;<br>'+
-      '&nbsp;&nbsp;&nbsp;<i class="fa fa-square-o"></i> Amedrontado&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-square-o"></i> Consufo&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-square-o"></i> Fascinado&nbsp;&nbsp;&nbsp;&nbsp;<p>'
+      '&nbsp;&nbsp;&nbsp;<i class="fa fa-square-o"></i> Atordoado&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-square-o"></i> Derrubado&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-square-o"></i> Fatigado&nbsp;&nbsp;&nbsp;&nbsp;<br>'+
+      '&nbsp;&nbsp;&nbsp;<i class="fa fa-square-o"></i> Amedrontado&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-square-o"></i> Confuso&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-square-o"></i> Fascinado&nbsp;&nbsp;&nbsp;&nbsp;<p>'
     );   
 
     $('.boxPersonagemFate').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '5px', 'margin': '10px', 'max-width': '500px', 'box-shadow': '5px 5px 10px lightgrey'});
