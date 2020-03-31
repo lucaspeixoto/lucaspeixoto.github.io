@@ -9,24 +9,24 @@ function races(type='') {
     		return {
 
 			    aspects: ['Halfling Pés Leves','Halfling Robusto','Halfling dos Vales'],
-			    stunts: ['<strong>Visão na penumbra:</strong> O halfling enxerga normalmente somente com um pequeno foco de luz.','<strong>Sortudo:</strong> O halfling pode, uma vez por sessão, re-rolar gratuimente uma jogada de dados.'],
+			    stunts: ['<strong>Visão no escuro:</strong> O halfling enxerga na mais completa escuridão, mas não pode discernir cores no escuro, apenas tons de cinza.','<strong>Sortudo:</strong> O halfling pode, uma vez por sessão, re-rolar gratuimente uma jogada de dados.'],
 			    'Halfling Pés Leves': {
 				names: ['Gorbulas Cotton','Wilimar Bolger','Flambard Zaragamba','Willehad Diggle','Wilimar Brown','Leuthard Tunnelly','Isumbras Fallohide','Nordbert Gluttonbelly','Lanfranc Burrows','Audramnus Tinyfoot','Boso Underlake','Otton Boulderhill','Rollo Farfoot','Scudamor Gardner','Ebregisel Elvellon','Rorimac Longbottom','Matta Galpsi','Bertram Gammidge','Milo Noakes','Hartmut Longhole','Moschia Boffin','Cunegundis Bramblethorn','Fredegunde Greenhand','Lanthechilde Gawkroger','Tatiana Grubb','Taryn Goodbody','Gudule Grubb','Duenna Fairbairn','Ermengard Took-Took','Fredegunde Puddlefoot','Theoderada Labingi','Bertrada Burrows','Andrea Gaukrogers','Alpais Dewfoot','Chunsina Headstrong','Hildeburg Gawkroger','Audofleda Clayhanger','Cunegund Bunce','Keena Gluttonbelly','Blesinde Clayhanger'],
 			        skills: ['Furtividade'],
 			        approach: ['Sorrateiro'],
-			        stunts: ['<strong>Simpático:</strong> O halfling pés-leves recebe +2 em Empatia para Criar Vantagem quando está dialogando com humanos, elfos ou anões.','<strong>Furtividade natural:</strong> O halfling pés-leves recebe +2 em Furtividade para Criar Vantagem quando está em uma multidão.']
+			        stunts: ['<strong>Simpático:</strong> O halfling pés-leves recebe +2 em Empatia (Estiloso) para Criar Vantagem quando está dialogando com humanos, elfos ou anões.','<strong>Furtividade natural:</strong> O halfling pés-leves recebe +2 em Furtividade (Sorrateiro) para Criar Vantagem quando está em uma multidão.']
 			    },
 			    'Halfling Robusto': {
 			        names: ['Caradas Silverstring','Andwise Hopesinger','Aega Whitbottom','Eberulf Puddlefoot','Dagaric Gardner','Cheldric Longbottom','Birinus Hornwood','Emmeran Dewfoot','Mansuetus Wanderfoot','Chararic Proudbottom','Leuthere Hornwood','Longo Brown','Erenfried Sackville-Baggins','Brutus Burrows','Fridolin Butcher','Cheldric Stoor','Nick Fallohide','Bertelis Hornblower','Deagol Mugwort','Pippin Gawkroger','Aregund Grubb','Bailey Twofoot','Nantechildis Lightfoot','Salvia Brandywood','Baldechildis Hopesinger','Leesha Noakesburrow','Selina Finnagund','Ingelburga Maggot','Kunegund Goldworthy','Alpaida Langham','Kayla Sackville-Baggins','Pandora Longriver','Sarai Greenhand','Adallinda Chubb-Baggins','Adda Burrows','Tasha Bolger-Baggins','Ginelle Brandybuck','Gundradis Hopesinger','Alia Boulderhill','Fastrada Gaukrogers'],
 			        skills: ['Vigor'],
 			        approach: ['Poderoso'],
-			        stunts: ['<strong>Resiliência dos robustos:</strong> O halfling robusto recebe +2 em Vigor para Superar efeitos de venenos.','<strong>Bravura:</strong> O halfling robusto recebe +2 em Vontade para se Defender de ataques mentais.']
+			        stunts: ['<strong>Resiliência dos robustos:</strong> O halfling robusto recebe +2 em Vigor (Poderoso) ao se Defender para evitar ser envenenado.','<strong>Bravura:</strong> O halfling robusto recebe +2 em Vontade (Esperto) para se Defender de ataques mentais.']
 			    },
 			    'Halfling dos Vales': {
 			        names: ['Flodoard Burrows','Isengrim Bracegirdle','Athanaric Longbottom','Waldolanus Silentfoot','Wala Noakesburrow','Wulfram Rumble','Brice Sackville','Leuthard Bottomhill','Wandregisel Hayward','Poppo Galpsi','Dodinas Longbottom','Norbert Hopesinger','Cedivar Bracegirdle','Vulmar Puddifoot','Trahand Twofoot','Emmeran Pott','Meriadoc Littlefoot','Chlodwig Proudbody','Adalard Gaukrogers','Habaccuc Lothran','Hildegund Goold','Lauren Boulderhill','Erin Elvellon','Pamphila Proudmead','Rotrude Gardner','Sophie Whitbottom','Nicole Oakbottom','Caitlin Swiftfoot','Hildegund Gamgee','Lauren Hlothran','Alexis Bophin','Mary Underlake','Madelgarda Goodchild','Ruby Undertree','Anna Pott','Suri Gluttonbelly','Kymma Gaukrogers','Rosamund Sandyman','Mechtild Bolger','Leesha Hopesinger'],
 			        skills: ['Contatos'],
 			        approach: ['Estiloso'],
-			        stunts: ['<strong>Recuperação acelerada:</strong> O halfling dos vales se recupera muito mais rapidamente de seus ferimentos físicos. Ao tratar uma consequência, pode gastar 1 PD para considerá-la como um nível mais branda. (Severa como Moderada e Moderada como Suave).','<strong>Discernimento Apurado:</strong> O halfling dos vales recebe +2 em Percepção em testes de Superar para identificar efeitos mágicos de controle mental, encantamentos ou ilusões de disfarce.']
+			        stunts: ['<strong>Recuperação acelerada:</strong> O halfling dos vales se recupera muito mais rapidamente de seus ferimentos físicos. Ao tratar uma consequência, pode gastar 1 PD para considerá-la como um nível mais branda. (Severa como Moderada e Moderada como Suave).','<strong>Discernimento Apurado:</strong> O halfling dos vales recebe +2 em Percepção (Esperto) em testes de Superar para identificar efeitos mágicos de controle mental, encantamentos e ilusões de disfarce.']
 			    }
 			}
     		break;
@@ -35,24 +35,24 @@ function races(type='') {
     		return {
 
 			    aspects: ['Alto Elfo','Elfo da Floresta','Elfo Drow'],
-			    stunts: ['<strong>Visão na penumbra:</strong> O elfo enxerga normalmente somente com um pequeno foco de luz.','<strong>Atencioso:</strong> O elfo possui sentidos aguçados, recebe +2 em Superar com Perceção para notar tentativas de ocultação não-mágicas.'],
+			    stunts: ['<strong>Visão no escuro:</strong> O elfo enxerga na mais completa escuridão, mas não pode discernir cores no escuro, apenas tons de cinza.','<strong>Atencioso:</strong> O elfo possui sentidos aguçados, recebe +2 em Superar com Percepção (Sorrateiro) para notar tentativas de ocultação não-mágicas.'],
 			    'Alto Elfo': {
 			    	names: ['Elmenor','Crafir','Yelpeiros','Perhorn','Virmyar','Waeszumin','Ianlamin','Admyar','Wrankas','Cranorin','Sarjor','Zinwraek','Omafir','Kearo','Yellar','Elmyar','Aebalar','Uriro','Vakas','Dorsandoral','Caitris','Quibella','Brykalyn','Uriynore','Xyrkalyn','Faephine','Gilmoira','Eilna','Daewynn','Valdove','Miaphyra','Daegwyn','Brynala','Yllavaris','Phiphyra','Kristris','Qigella','Yeszana','Loraphine','Gilvaris'],
-			        skills: ['Conhecimentos'],
+			        skills: ['Acadêmico'],
 			        approach: ['Esperto'],
-			        stunts: ['<strong>Sensibilidade mágica:</strong> O alto elfo recebe +1 em uma subperícia de magia à sua escolha, desde que sua classe possa lançar magias.','<strong>Alta estirpe:</strong> O alto elfo recebe +2 em superar nas rolagens de comunicação (Estiloso) quando está tentando impressionar em um diálogo ou discurso.']
+			        stunts: ['<strong>Sensibilidade mágica:</strong> O alto elfo recebe +1 em uma tradição de magia à sua escolha, desde que sua classe possa lançar magias.','<strong>Alta estirpe:</strong> O alto elfo recebe +2 ao Criar Vantagem em testes de Comunicação (Estiloso) quando está tentando impressionar em um diálogo ou discurso.']
 			    },
 			    'Elfo da Floresta': {
 			    	names: ['Dorfaren','Heiquinal','Aekas','Daesandoral','Kelpetor','Beixalim','Gensalor','Keajeon','Elaxidor','Virro','Petxidor','Yelyarus','Gensandoral','Tralamin','Sarlamin','Glynydark','Petmaris','Thekian','Oloquinal','Ianzeiros','Yeszana','Wynroris','Adthyra','Trisralei','Wysanala','Ravaralei','Liara','Olasys','Olahana','Wysarieth','Triswynn','Bikrana','Ulalana','Lorabella','Quistina','Adzana','Maglana','Darora','Chaethana','Nerilana'],
 			        skills: ['Furtividade'],
 			        approach: ['Sorrateiro'],
-			        stunts: ['<strong>Ocultação:</strong> O elfo da floresta recebe +2 em furtividade (Sorrateiro) ao criar vantagem para se ocultar em ambientes selvagens.','<strong>Afinidade com armas:</strong> Ao utilizar uma arma élfica, o elfo da floresta tem Arma: 1, isto é, causa uma tensão a mais de dano em um ataque bem sucedido.']
+			        stunts: ['<strong>Ocultação:</strong> O elfo da floresta recebe +2 ao Criar Vantagem com Furtividade (Sorrateiro) para se ocultar em ambientes selvagens.','<strong>Afinidade com armas:</strong> Ao utilizar uma arma élfica, o elfo da floresta tem Arma: 1, isto é, causa uma tensão a mais de dano em um ataque bem sucedido.']
 			    },
 			    'Elfo Drow': {
 			    	names: ['Quildyn Arablyl','Dinerd Orlyt-tar','Randaer Oussduis','Taragh Godear','Quenkoth Vrammune','Honemkoph Waeglistyn','Narlkoth Beltin','Xunvin Chaulssal','Orgoloth Olonrae','Ornaryn Elpragh','Ryldrin Oussduis','Nalraen Aleanghym','Mournryn Barriduis','Gelolvir Freafin','Tarrak Omrylan','Jhaambal A-Dararyd','Tathphyn Dinorel','Senszar Duskruan','Dresmorlin Gallaer','Quevven Omriwin','Nhilual Despar','Rilafay Noquiryn','Baeayne Do-ana','Umraestin Barriana','Anganel Quavyth','Jhanrina A-Darabar','Charifaere Philuin','Byrya Jhaliwin','Dilynrae Abbylan','Vhondryl Telenna','Hounwae Oussarn','Wuyonvyll Maerret','Felynaste Everhndar','Ardulynda Everhrae','Nitlara Rhomdiiryn','Urlva Xiltyr','Shulvallris Dalala','Ilivaryanna Rhomdiriy','Zelpassa Yril-Lysaen','Ulitree Olonrae'],
 			        skills: ['Magia'],
 			        approach: ['Estiloso'],
-			        stunts: ['<strong>Visão no escuro:</strong> O elfo drow enxerga normalmente na mais completa escuridão.','<strong>Magia inata:</strong> O elfo drow por conjurar a magia “detectar magia” uma vez por cena, gratuitamente.']
+			        stunts: ['<strong>Visão no escuro:</strong> O elfo drow enxerga na mais completa escuridão, mas não pode discernir cores no escuro, apenas tons de cinza.','<strong>Magia inata:</strong> O elfo drow por conjurar “detectar magia” uma vez por cena, gratuitamente. Ele sente a presença de magia dentro de sua zona, bem como a qual tradição ela pertence.']
 			    }
 			}
     		break;
@@ -61,24 +61,24 @@ function races(type='') {
     		return {
     			    
     			aspects: ['Anão da Colina','Anão da Montanha','Anão Duergar'],
-			    stunts: ['<strong>Visão no escuro:</strong> O anão enxerga normalmente na mais completa escuridão.','<strong>Resiliência anã:</strong> O anão é mais resistente a venenos, recebe +2 em testes de Vigor para Superar o efeito de um veneno.'],
+			    stunts: ['<strong>Visão no escuro:</strong> O anão enxerga na mais completa escuridão, mas não pode discernir cores no escuro, apenas tons de cinza.','<strong>Resiliência anã:</strong> O anão é mais resistente a venenos, recebe +2 em testes de Vigor (Poderoso) ao se Defender para evitar ser envenenado.'],
 			    'Anão da Colina': {
 			    	names: ['Branrigg','Admus','Vonkohm','Murdur','Raniggs','Granrigg','Ebgrim','Bromrik','Dardor','Tharmun','Muirgron','Grankuhm','Gimron','Hjaldek','Adnir','Bromdal','Thulmor','Krammur','Umdal','Thurkohm','Daerwaen','Einlynn','Jennnia','Jyndora','Redleil','Mistres','Ketnan','Belletyn','Rundora','Daerlyl','Mysvia','Sardish','Arlen','Lysslin','Brytleil','Ingvan','Solras','Tyshnyss','Barbera','Brilleres'],
 			        skills: ['Percepção'],
 			        approach: ['Esperto'],
-			        stunts: ['<strong>Sentidos aguçados:</strong> O anão da colina recebe +2 em testes de Percepção para Criar Vantagem em uma situação em que os seus sentidos sejam exigidos ao máximo.','<strong>Tenacidade anã:</strong> Para contar as caixas de estresse físico, considere que o anão da colina possui o seu valor de Vigor aumentado em 2.']
+			        stunts: ['<strong>Sentidos aguçados:</strong> O anão da colina recebe +2 em testes de Percepção (Esperto) para Criar Vantagem em uma situação em que os seus sentidos sejam exigidos ao máximo.','<strong>Tenacidade anã:</strong> Para contar as caixas de estresse físico, considere que o anão da colina possui o seu valor de Vigor aumentado em 2.']
 			    },
 			    'Anão da Montanha': {
 			    	names: ['Thurgron','Rotron','Ragmund','Gralrig','Mordur','Darthrun','Thurnar','Dolthrun','Darkohm','Grygron','Bromkam','Therkyl','Ebnom','Hjolthrum','Dalrik','Grennam','Gergarn','Tynyl','Balnam','Torram','Mystnyl','Nesniss','Gwinnyss','Brillelinn','Brenwynn','Kaitria','Braldielle','Naernas','Solris','Brylsael','Arrin','Germa','Nalva','Bellevian','Gwendryn','Runvan','Baerwynn','Rynmera','Branlyl','Brilma'],
 			        skills: ['Vigor'],
 			        approach: ['Poderoso'],
-			        stunts: ['<strong>Especialização em rochas:</strong> O anão da montanha recebe +2 em testes de Conhecimentos relacionados à origem de um trabalho em pedra.','<strong>Treinamentos com armaduras:</strong> O anão da montanha é treinado no uso de armaduras. Ele recebe Armadura:1 caso esteja utilizando uma.']
+			        stunts: ['<strong>Especialização em rochas:</strong> O anão da montanha recebe +2 em testes de Acadêmico (Esperto) relacionados à origem de um trabalho em pedra.','<strong>Treinamento com armaduras:</strong> O anão da montanha é treinado no uso de armaduras. Ele recebe Armadura:1 caso esteja utilizando uma.']
 			    },
 			    'Anão Duergar': {
 			    	names: ['Bankohm','Baerrum','Dulbrek','Emkahm','Hurdek','Dulmus','Baerbek','Tyrim','Amdrus','Urmdrom','Graldor','Ebthran','Gralrik','Balkum','Amrum','Adrim','Melrom','Murthran','Daerdir','Thertharn','Byllethiel','Tyshres','Einvian','Laswaen','Bryllelin','Lessgiel','Brondish','Tyshniss','Sarra','Gemlinn','Gemria','Nesnora','Brytdeth','Belnyl','Bylri','Torma','Maevselle','Lessryn','Jindeth','Tasryl'],
 			        skills: ['Furtividade'],
 			        approach: ['Sorrateiro'],
-			        stunts: ['<strong>Resistência mágica:</strong> O anão duergar é mais resistente contra efeitos mágicos, recebendo +2 em testes de Superar contra magias que tenham o anão como alvo.','<strong>Piscar:</strong> O anão duergar é capaz de lançar a magia Invisibilidade em si mesmo ao custo de 1 PD, o efeito dura uma cena.']
+			        stunts: ['<strong>Resistência mágica:</strong> O anão duergar é mais resistente contra efeitos mágicos, recebendo +2 em testes de Defender contra magias que tenham exclusivamente o anão como alvo.','<strong>Piscar:</strong> Ao custo de 1 PD, o anão duergar é capaz de ficar invisível, qualquer coisa que ele esteja vestindo ou carregando também fica invisível. O efeito dura uma cena ou até que ele ataque ou conjure uma magia.']
 			    }
 			}
     		break;
@@ -87,24 +87,24 @@ function races(type='') {
     		return {
 
     			aspects: ['Humano','Meio-Elfo','Meio-Orc'],
-			    stunts: ['<strong>Versátil:</strong> Um humano, ou meio-humano, se adapta rapidamente a qualquer situação. Uma vez por sessão ele recebe gratuitamente um pulso de performance.','<strong>Ambição natural:</strong> Um humano, ou meio-humano, recebe +2 em testes de Vontade para Superar alguma barreira mental ou social que esteja impedindo o seu progresso.'],
+			    stunts: ['<strong>Versátil:</strong> Um humano, ou meio-humano, se adapta rapidamente a qualquer situação. Uma vez por sessão ele recebe gratuitamente um pulso de performance.','<strong>Ambição natural:</strong> Um humano, ou meio-humano, recebe +2 em testes de Vontade (Cuidadoso) para Superar alguma barreira mental ou social que esteja impedindo o seu progresso.'],
 			    'Humano': {
 			    	names: ['Nheimeir Hukhi','Narem Khule','Envin Rainbash','Toi Commondew','Brogrol Vez','Nif Divrag','Modvom Sunstone','Brorth Steelstride','Teh-Kirof Buelrohrim','Nuvah Vilild','Drelmirvaj Tatherkyavya','Vlethek Stadantu','Thi Cie','Jim Lue','Tolurnar Cabrebris','Verteas Furasu','Rheihlar Nennu','Ruser Bhehrod','Grursturn Paleblight','Hanvil Plaindrifter','Karvif Shon','Ril Numeg','Gemeth Battleshaper','Erth Orbbloom','Vid-Kijo Faltanskeld','Lim-Zif Hapvuft','Fijelmedj Troruvrovra','Shargek Charnilzi','Thih Duy','Fiow Im','Vimairduz Balbergi','Enrul Orgargel','Hasiteil Cohreil','Efuh Cashel','Riznoldri Deathweaver','Kalee Voidgrove','Chelma Kav','Cha Kukotsk','Kelega Farglory','Ceshi Phoenixshot','Korozrus Rucrenskid','Lofo Jultrehd','Imzulma Amidorkye','Herrel Erkedze','Chia Piam','Tua Wia','Dants Imergos','Viatt Marizer','Nismosmeh Nahil','Imol Khuku','Sheesrerrul Clanbluff','Redri Dawnvigor','Colna Duv','Le Chemotsk','Lethresha Wolfmaw','Astro Sacredblossom','Losafo Jiltizdim','Nosha Mizdub','Shefafra Chanivanye','Alra Mavalba','Nue Zao','Xao Ma','Qomv Povenu','Luinds Rimildas'],
 			        skills: [''],
 			        approach: [''],
-			        stunts: ['<strong>Natureza cooperativa:</strong> O humano recebe +2 em Contatos para Criar Vantagem se estiver em uma cidade humana.','<strong>Curiosidade:</strong>O humano recebe +2 em Investigar para descobrir aspectos de cenário ao Criar Vantagem.']
+			        stunts: ['<strong>Natureza cooperativa:</strong> O humano recebe +2 em Contatos (Estiloso) para Criar Vantagem se estiver em uma cidade humana.','<strong>Curiosidade:</strong> O humano recebe +2 em Investigar (Esperto) para descobrir aspectos de cenário ao Criar Vantagem.']
 			    },
 			    'Meio-Elfo': {
 			    	names: ['Sarqarim','Marminar','Kriminar','Jamneiros','Xanavor','Elfaerd','Aroovar','Xavlanann','Zanneiros','Zanyeras','Eirben','Zancoril','Osenas','Ultorin','Horben','Ianword','Normorn','Falreak','Marfyr','Xanzaphir','Faestine','Maretihne','Bynelor','Lorayra','Prigalyn','Vylyra','Theryra','Qiviel','Delcerys','Unaanys','Urigalyn','Yeselor','Jilona','Qienyphe','Thermae','Yesdove','Yesyra','Saelwalyn','Galmythe','Jentheris'],
 			        skills: ['Provocar'],
 			        approach: ['Estiloso'],
-			        stunts: ['<strong>Visão na penumbra:</strong> O meio-elfo enxerga normalmente somente com um pequeno foco de luz.','<strong>Resistência mágica:</strong> O meio-elfo é mais resistente contra efeitos mágicos, recebendo +2 em testes de Superar contra magias que o tenham como alvo.']
+			        stunts: ['<strong>Visão no escuro:</strong> O meio-elfo enxerga na mais completa escuridão, mas não pode discernir cores no escuro, apenas tons de cinza.','<strong>Resistência mágica:</strong> O meio-elfo é mais resistente contra efeitos mágicos, recebendo +2 para se Defender de magias que tenham exclusivamente o meio-elfo como alvo.']
 			    },
 			    'Meio-Orc': {
 			    	names: ['Renotir','Throbur','Mokerash','Sorinar','Garugash','Mugarall','Kruudim','Moronar','Camarsh','Zim','Thridim','Trakamash','Aganar','Agamir','Oguorim','Kelad','Arnoruk','Mukudark','Kraudar','Sarunars','Gryanur','Kotagu','Gimi','Noral','Puyagar','Grotir','Senodur','Gryimar','Shomi','Koda','Ootatur','Olugar','Kotaner','Giz','Siti','Kiraner','Rawatur','Temunar','Gajener','Miriz'],
 			        skills: ['Lutar'],
 			        approach: ['Poderoso'],
-			        stunts: ['<strong>Marginalizado:</strong> O meio-orc recebe +2 em Empatia para Superar alguma situação em que bioformas humanoides estejam sofrendo algum tipo de preconceito.','<strong>Ferocidade orc:</strong> Uma vez por sessão, ao receber um dano e não ter mais caixas de estresse para serem marcadas, o meio-orc pode gastar 1 PD para ignorar o dano recebido.']
+			        stunts: ['<strong>Marginalizado:</strong> O meio-orc recebe +2 em testes de Empatia (Estiloso) com bioformas humanóides que geralmente são marginalizadas em sociedades humanas, como goblins, kobolds, orcs e gigantes.','<strong>Ferocidade orc:</strong> Uma vez por sessão, ao receber um dano e não ter mais caixas de estresse para serem marcadas, o meio-orc pode gastar 1 PD para ignorar o dano recebido.']
 			    },
     		}
     		break;
