@@ -13,13 +13,11 @@ label:hover {color: #009688;}
   @page {
   	margin: 10%;
   }
-  #btnGerarFate {
+  body {
     display: none;
   }
-  #btnPrint{
-  	display: none;
-  }
   .boxPersonagemFate {
+    display: block;
     background-color: white;
     width: 100%;
     position: fixed;
@@ -27,6 +25,7 @@ label:hover {color: #009688;}
     left: 0;
   }
   .boxNPCs {
+    display: block;
     background-color: white;
     width: 100%;
     height: 100%;
