@@ -50,10 +50,13 @@ fetch("./nav.html")
   </header>
   
   <div class="w3-container w3-padding-large" style="margin-bottom:32px">
-    <h4>Clique no botão abaixo para gerá-los novamente.</h4>
-    
-    <button id="btnGerarNPC" class="w3-button w3-teal w3-hover-black">Gerar PDNs</button>
-    <a href="javascript: window.print();" id="btnPrint"><i class="fa fa-file-pdf-o w3-hover-opacity"></i> PDF</a>
+
+    <span class="hidePrint">
+      <h4>Clique no botão abaixo para gerá-los novamente.</h4>
+      
+      <button id="btnGerarNPC" class="w3-button w3-teal w3-hover-black">Gerar PDNs</button>
+      <a href="javascript: window.print();" id="btnPrint"><i class="fa fa-file-pdf-o w3-hover-opacity"></i> PDF</a>
+    </span>
 
     <div class="boxNPCs"></div>
     

@@ -13,7 +13,7 @@ label:hover {color: #009688;}
   @page {
   	margin: 10%;
   }
-  body {
+  .hidePrint {
     display: none;
   }
   .boxPersonagemFate {

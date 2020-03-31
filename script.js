@@ -61,15 +61,15 @@ $( document ).ready(function() {
     } else {
 
       pericias = '<p><strong>ABORDAGENS</strong><br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ágil:</strong> '+abordagens['Ágil']+'<br>'+
+      '<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ágil:</strong> '+abordagens['Ágil']+'<br>'+
       '<strong>&nbsp;&nbsp;&nbsp;&nbsp;Cuidadoso:</strong> '+abordagens['Cuidadoso']+'<br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Esperto:</strong> '+abordagens['Esperto']+'<br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Estiloso:</strong> '+abordagens['Estiloso']+'<br>'+
+      '<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Esperto:</strong> '+abordagens['Esperto']+'<br>'+
+      '<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Estiloso:</strong> '+abordagens['Estiloso']+'<br>'+
       '<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Poderoso:</strong> '+abordagens['Poderoso']+'<br>'+
       '<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sorrateiro:</strong> '+abordagens['Sorrateiro']+'</p>'
 
       estresse = '<p><strong>ESTRESSE</strong><br>'+
-      '<strong>&nbsp;&nbsp;&nbsp;<i class="fa fa-square-o"></i> <i class="fa fa-square-o"></i><i class="fa fa-square-o"></i> '+
+      '&nbsp;&nbsp;&nbsp;<i class="fa fa-square-o"></i> <i class="fa fa-square-o"></i><i class="fa fa-square-o"></i> '+
       '<i class="fa fa-square-o"></i><i class="fa fa-square-o"></i><i class="fa fa-square-o"></i></p>';
 
     }
