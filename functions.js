@@ -133,7 +133,7 @@ function characterTraditions(classTradition,subclassTradition,skills,system){
     if(classTradition != '' && subtradition != ''){
 
       var number = Math.floor(Math.random() * (tradValue)) + 1;
-      tradition = classTradition+' (+'+number+') e '+subtradition+' (+'+tradValue-number+')';
+      tradition = classTradition+' (+'+number+') e '+subtradition+' (+'+(tradValue-number)+')';
 
     } else if(classTradition != '' && subtradition == ''){
       tradition = classTradition+' (+'+tradValue+')';
