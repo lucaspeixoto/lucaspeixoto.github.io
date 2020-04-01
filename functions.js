@@ -72,11 +72,14 @@ function characterApproaches(classApproach,raceApproach,allApproaches) {
 }
 
 function characterStress(type,skills) {
-  var stress = '<i class="fa fa-square-o"></i><i class="fa fa-square-o"></i><i class="fa fa-square-o"></i>';
+  var stress = '<input type="checkbox"><span class="checkmark"></span><input type="checkbox"><span class="checkmark"></span><input type="checkbox"><span class="checkmark"></span>';
+  //var stress = '<i class="fa fa-square-o"></i><i class="fa fa-square-o"></i><i class="fa fa-square-o"></i>';
   if(skills.indexOf(type) >= 0)
-    stress = stress + ' <i class="fa fa-square-o"></i>';
+    stress = stress + ' <input type="checkbox"><span class="checkmark"></span>';
+    //stress = stress + ' <i class="fa fa-square-o"></i>';
   if(skills.indexOf(type) <= 2 && skills.indexOf(type) >= 0)
-    stress = stress + '<i class="fa fa-square-o"></i><i class="fa fa-square-o"></i>';
+      stress = stress + '<input type="checkbox"><span class="checkmark"></span><input type="checkbox"><span class="checkmark"></span>';
+    //stress = stress + '<i class="fa fa-square-o"></i><i class="fa fa-square-o"></i>';
   return stress;
 }
 
