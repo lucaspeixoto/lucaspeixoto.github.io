@@ -1,5 +1,15 @@
 $( document ).ready(function() {
 
+  $('.fa-square-o').click(function(){
+    $(this).removeClass('fa-square-o');
+    $(this).addClass('fa-square');
+  });
+
+  $('.fa-square').click(function(){
+    $(this).removeClass('fa-square');
+    $(this).addClass('fa-square-o');
+  });
+
   setTimeout(function() {
       $("#btnGerarNPC").trigger('click');
       $("#btnGerarFate").trigger('click');

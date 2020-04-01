@@ -21,6 +21,14 @@ label:hover {color: #009688;}
   font-size: 11px;
 }
 
+.fa-square-o, .fa-square{
+  cursor: pointer;
+}
+
+.fa-square-o:hover, .fa-square:hover{
+  color: #009688;
+}
+
 @media print {
   @page {
   	margin: 10%;
