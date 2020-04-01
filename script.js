@@ -29,7 +29,7 @@ $( document ).ready(function() {
       '<p><strong>Estresse: </strong>'+stress(0,2)+'</p>'+
     '</div>');
 
-    $('.boxNPC').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'max-width': '550px', 'box-shadow': '5px 5px 10px lightgrey'});
+    $('.boxNPC').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px 10px 10px 0px;', 'max-width': '550px', 'box-shadow': '5px 5px 10px lightgrey'});
 
   });
 
@@ -101,7 +101,7 @@ $( document ).ready(function() {
       nbsp(3)+'<i class="fa fa-square-o"></i> Amedrontado'+nbsp(4)+'<i class="fa fa-square-o"></i> Confuso'+nbsp(8)+'<i class="fa fa-square-o"></i> Fascinado<p>'
     );   
 
-    $('.boxPersonagemFate').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'max-width': '550px', 'box-shadow': '5px 5px 10px lightgrey'});
+    $('.boxPersonagemFate').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px 10px 10px 0px;', 'max-width': '550px', 'box-shadow': '5px 5px 10px lightgrey'});
 
   });
 
