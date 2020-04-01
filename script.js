@@ -31,12 +31,12 @@ $( document ).ready(function() {
 
     $('.boxNPC').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '550px', 'box-shadow': '5px 5px 10px lightgrey'});
 
-    $('.fa-square-o').on( "click", function(){
+    $('.fa-square-o').click(function(){
       $(this).removeClass('fa-square-o');
       $(this).addClass('fa-square');
     });
 
-    $('.fa-square').on( "click", function(){
+    $('.fa-square').click(function(){
       $(this).removeClass('fa-square');
       $(this).addClass('fa-square-o');
     });
@@ -122,12 +122,12 @@ $( document ).ready(function() {
 
     $('.boxPersonagemFate').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '550px', 'box-shadow': '5px 5px 10px lightgrey'});
 
-    $('.fa-square-o').on( "click", function(){
+    $('.fa-square-o').click(function(){
       $(this).removeClass('fa-square-o');
       $(this).addClass('fa-square');
     });
 
-    $('.fa-square').on( "click", function(){
+    $('.fa-square').click(function(){
       $(this).removeClass('fa-square');
       $(this).addClass('fa-square-o');
     });
