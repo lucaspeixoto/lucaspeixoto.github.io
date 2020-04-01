@@ -128,7 +128,7 @@ function characterTraditions(classTradition,subclassTradition,skills,system){
       tradValue = 1;
 
     if(subtradition != '')
-      tradValue = tradValue++;
+      tradValue = tradValue+1;
 
     if(classTradition != '' && subtradition != ''){
 
