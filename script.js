@@ -99,8 +99,8 @@ $( document ).ready(function() {
       '<p><strong>CONDIÇÕES</strong><br>'+
       nbsp(3)+'<i class="fa fa-square-o"></i> Atordoado'+nbsp(6)+'<i class="fa fa-square-o"></i> Amedrontado'+
       nbsp(3)+'<i class="fa fa-square-o"></i> Derrubado'+nbsp(6)+'<i class="fa fa-square-o"></i> Confuso'+
-      nbsp(3)+'<i class="fa fa-square-o"></i> Fatigado'+nbsp(8)+'<i class="fa fa-square-o"></i> Fascinado'+
-    );   
+      nbsp(3)+'<i class="fa fa-square-o"></i> Fatigado'+nbsp(8)+'<i class="fa fa-square-o"></i> Fascinado'
+    );
 
     $('.boxPersonagemFate').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '550px', 'box-shadow': '5px 5px 10px lightgrey'});
 
