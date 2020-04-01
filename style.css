@@ -14,6 +14,15 @@ label:hover {color: #009688;}
   margin-left: 15px;
 }
 
+.watermark {
+  display: none;
+  transform-origin: 0 0;
+  transform: rotate(90deg);
+  position: relative;
+  top: 45px;
+  left: 5px;
+}
+
 @media print {
   @page {
   	margin: 10%;
@@ -21,8 +30,10 @@ label:hover {color: #009688;}
   header, #btnPrint, .hidePrint {
     display: none;
   }
-  .boxPersonagemFate {
+  .watermark{
     display: block;
+  }
+  .boxPersonagemFate {
     background-color: white;
     width: 100%;
     position: fixed;
@@ -30,7 +41,6 @@ label:hover {color: #009688;}
     left: 0;
   }
   .boxNPCs {
-    display: block;
     background-color: white;
     width: 100%;
     height: 100%;
