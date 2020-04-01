@@ -23,11 +23,12 @@ label:hover {color: #009688;}
 
 .fa-square-o{
   cursor: pointer;
+  font-size: 18px;
 }
 
 .fa-square{
   cursor: pointer;
-  font-size: 14px;
+  font-size: 17px;
   position: relative;
   top: -1px;
 }
