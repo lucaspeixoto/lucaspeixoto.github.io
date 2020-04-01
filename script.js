@@ -97,8 +97,8 @@ $( document ).ready(function() {
       '<strong>'+nbsp(3)+'Moderada (4): </strong><br>'+
       '<strong>'+nbsp(3)+'Severa (6): </strong></p>'+
       '<p><strong>CONDIÇÕES</strong><br>'+
-      nbsp(3)+'<i class="fa fa-square-o"></i> Atordoado'+nbsp(6)+'<i class="fa fa-square-o"></i> Amedrontado'+
-      nbsp(3)+'<i class="fa fa-square-o"></i> Derrubado'+nbsp(6)+'<i class="fa fa-square-o"></i> Confuso'+
+      nbsp(3)+'<i class="fa fa-square-o"></i> Atordoado'+nbsp(6)+'<i class="fa fa-square-o"></i> Amedrontado<br>'+
+      nbsp(3)+'<i class="fa fa-square-o"></i> Derrubado'+nbsp(6)+'<i class="fa fa-square-o"></i> Confuso<br>'+
       nbsp(3)+'<i class="fa fa-square-o"></i> Fatigado'+nbsp(8)+'<i class="fa fa-square-o"></i> Fascinado'
     );
 
