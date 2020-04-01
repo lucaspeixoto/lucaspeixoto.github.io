@@ -46,11 +46,11 @@ $( document ).ready(function() {
     var facanhas = [];
     var estresse = '';
 
-    facanha.push(random(facanhasRaca));
-    facanha.push(random(classe.stunts));
-    facanha.push(random(classe[classeEspecifica].stunts));
+    facanhas.push(random(facanhasRaca));
+    facanhas.push(random(classe.stunts));
+    facanhas.push(random(classe[classeEspecifica].stunts));
 
-    var tradicoes = characterTraditions(classe.tradition,facanha[2]);
+    var tradicoes = characterTraditions(classe.tradition,facanhas[2]);
 
     if($('#radio-fcon').is(':checked')){
 
@@ -94,9 +94,9 @@ $( document ).ready(function() {
       attributes+'<br>'+
       tradicoes+
       '<div><strong>FAÇANHAS</strong>'+
-      '<div class="textIndent">'+facanha[0]+'</div>'+
-      '<div class="textIndent">'+facanha[1]+'</div>'+
-      '<div class="textIndent">'+facanha[2]+'</div></div>'+
+      '<div class="textIndent">'+facanhas[0]+'</div>'+
+      '<div class="textIndent">'+facanhas[1]+'</div>'+
+      '<div class="textIndent">'+facanhas[2]+'</div></div>'+
       estresse+
       '<p><strong>CONSEQUÊNCIAS</strong><br>'+
       '<strong>'+nbsp(3)+'Suave (2): </strong><br>'+
