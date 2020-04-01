@@ -1,11 +1,11 @@
 $( document ).ready(function() {
 
-  $('.fa-square-o').click(function(){
+  $('.fa-square-o').on( "click", function(){
     $(this).removeClass('fa-square-o');
     $(this).addClass('fa-square');
   });
 
-  $('.fa-square').click(function(){
+  $('.fa-square').on( "click", function(){
     $(this).removeClass('fa-square');
     $(this).addClass('fa-square-o');
   });
