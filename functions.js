@@ -99,11 +99,11 @@ function characterTraditions(classTradition,subclassTradition){
   var tradition = '';
   var subtradition = '';
 
-  if(subclassTradition.indexOf("Conjuração:") || subclassTradition.indexOf("Conhecimento arcano:")){
+  if((subclassTradition.indexOf("Conjuração:") >= 0) || (subclassTradition.indexOf("Conhecimento arcano:") >= 0)){
     subtradition = 'Arcana';
-  } else if(subclassTradition.indexOf("Adorador da natureza:")){
+  } else if(subclassTradition.indexOf("Adorador da natureza:") >= 0){
     subtradition = 'Divina';
-  } else if(subclassTradition.indexOf("Magia marcial:")){
+  } else if(subclassTradition.indexOf("Magia marcial:") >= 0){
     subtradition = 'Primal';
   }
 
