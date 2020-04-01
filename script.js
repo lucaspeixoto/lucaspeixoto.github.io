@@ -93,9 +93,9 @@ $( document ).ready(function() {
       '<div class="textIndent">'+random(classe[classeEspecifica].stunts)+'</div></div>'+
       estresse+
       '<p><strong>CONSEQUÊNCIAS</strong><br>'+
-      '<strong>'+nbsp(3)+'Suave: </strong><br>'+
-      '<strong>'+nbsp(3)+'Moderada: </strong><br>'+
-      '<strong>'+nbsp(3)+'Severa: </strong></p>'+
+      '<strong>'+nbsp(3)+'Suave (2): </strong><br>'+
+      '<strong>'+nbsp(3)+'Moderada (4): </strong><br>'+
+      '<strong>'+nbsp(3)+'Severa (6): </strong></p>'+
       '<p><strong>CONDIÇÕES</strong><br>'+
       nbsp(3)+'<i class="fa fa-square-o"></i> Atordoado'+nbsp(10)+'<i class="fa fa-square-o"></i> Derrubado'+nbsp(4)+'<i class="fa fa-square-o"></i> Fatigado<br>'+
       nbsp(3)+'<i class="fa fa-square-o"></i> Amedrontado'+nbsp(4)+'<i class="fa fa-square-o"></i> Confuso'+nbsp(8)+'<i class="fa fa-square-o"></i> Fascinado<p>'
