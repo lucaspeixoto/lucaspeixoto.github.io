@@ -48,7 +48,7 @@ $( document ).ready(function() {
 
     if($('#radio-fcon').is(':checked')){
 
-      pericias = '<div><strong>PERÍCIAS</strong>'+
+      attributes = '<div><strong>PERÍCIAS</strong>'+
       '<div class="textIndent"><strong>Ótimo (+4):</strong> '+pericias[0]+'</div>'+
       '<div class="textIndent"><strong>Bom (+3):</strong> '+pericias[1]+', '+pericias[2]+'</div>'+
       '<div class="textIndent"><strong>Razoável (+2):</strong> '+pericias[3]+', '+pericias[4]+', '+pericias[5]+'</div>'+
@@ -60,7 +60,7 @@ $( document ).ready(function() {
 
     } else {
 
-      pericias = '<div><strong>ABORDAGENS</strong>'+
+      attributes = '<div><strong>ABORDAGENS</strong>'+
       '<div><strong>'+nbsp(16)+'Ágil:</strong> '+abordagens['Ágil']+'</div>'+
       '<div><strong>'+nbsp(4)+'Cuidadoso:</strong> '+abordagens['Cuidadoso']+'</div>'+
       '<div><strong>'+nbsp(9)+'Esperto:</strong> '+abordagens['Esperto']+'</div>'+
@@ -85,7 +85,7 @@ $( document ).ready(function() {
       '<div class="textIndent"><strong>Dificuldade:</strong> '+random(aspects('problem'))+'</div>'+
       '<div class="textIndent"><strong>Aventura:</strong> '+random(aspects('adventure'))+'</div>'+
       '<div class="textIndent"><strong>Ambição:</strong> '+random(aspects('ambition'))+'</div></div><br>'+
-      pericias+'<br>'+
+      attributes+'<br>'+
       tradicoes+
       '<div><strong>FAÇANHAS</strong>'+
       '<div class="textIndent">'+random(facanhasRaca)+'</div>'+
@@ -97,8 +97,9 @@ $( document ).ready(function() {
       '<strong>'+nbsp(3)+'Moderada (4): </strong><br>'+
       '<strong>'+nbsp(3)+'Severa (6): </strong></p>'+
       '<p><strong>CONDIÇÕES</strong><br>'+
-      nbsp(3)+'<i class="fa fa-square-o"></i> Atordoado'+nbsp(10)+'<i class="fa fa-square-o"></i> Derrubado'+nbsp(4)+'<i class="fa fa-square-o"></i> Fatigado<br>'+
-      nbsp(3)+'<i class="fa fa-square-o"></i> Amedrontado'+nbsp(4)+'<i class="fa fa-square-o"></i> Confuso'+nbsp(8)+'<i class="fa fa-square-o"></i> Fascinado<p>'
+      nbsp(3)+'<i class="fa fa-square-o"></i> Atordoado'+nbsp(6)+'<i class="fa fa-square-o"></i> Amedrontado'+
+      nbsp(3)+'<i class="fa fa-square-o"></i> Derrubado'+nbsp(6)+'<i class="fa fa-square-o"></i> Confuso'+
+      nbsp(3)+'<i class="fa fa-square-o"></i> Fatigado'+nbsp(8)+'<i class="fa fa-square-o"></i> Fascinado'+
     );   
 
     $('.boxPersonagemFate').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '550px', 'box-shadow': '5px 5px 10px lightgrey'});
