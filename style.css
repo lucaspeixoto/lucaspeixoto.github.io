@@ -6,7 +6,7 @@ label:hover {color: #009688;}
 
 .inputText{
   border: none;
-  width: 165px;
+  width: 400px;
 }
 
 .inputText:hover{
@@ -72,5 +72,11 @@ label:hover {color: #009688;}
     position: fixed;
     top: 0;
     left: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .inputText{
+    width: 165px;
   }
 }
