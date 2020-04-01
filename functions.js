@@ -9,6 +9,15 @@ function w3_close() {
   document.getElementById("myOverlay").style.display = "none";
 }
 
+function activateStressBox(){
+  $('.fa-square-o').on('click',function(){
+    if($(this).hasClass('fa-square'))
+      $(this).removeClass('fa-square');
+    else
+      $(this).addClass('fa-square');
+  });
+}
+
 function random(array) {
   return array[Math.floor(Math.random() * array.length)]
 };

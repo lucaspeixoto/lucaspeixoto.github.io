@@ -31,6 +31,8 @@ $( document ).ready(function() {
 
     $('.boxNPC').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '550px', 'box-shadow': '5px 5px 10px lightgrey'});
 
+    activateStressBox();
+    
   });
 
   $('#btnGerarFate').click(function(){
@@ -112,13 +114,8 @@ $( document ).ready(function() {
 
     $('.boxPersonagemFate').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '550px', 'box-shadow': '5px 5px 10px lightgrey'});
 
-  });
+    activateStressBox();
 
-  $('.fa-square-o').on('click',function(){
-    if($(this).hasClass('fa-square'))
-      $(this).removeClass('fa-square');
-    else
-      $(this).addClass('fa-square');
   });
 
 });
