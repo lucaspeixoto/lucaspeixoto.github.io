@@ -114,7 +114,7 @@ $( document ).ready(function() {
 
   });
 
-  $('.fa-square-o').on('click',(function(){
+  $('.fa-square-o').on('click',function(){
     if($(this).hasClass('fa-square'))
       $(this).removeClass('fa-square');
     else
