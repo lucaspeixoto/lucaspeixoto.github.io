@@ -95,9 +95,10 @@ function npcStunts(npcSkills){
     
 }
 
-function characterTraditions(classTradition,subclassTradition){
+function characterTraditions(classTradition,subclassTradition,skills,system){
   var tradition = '';
   var subtradition = '';
+  var tradValue = 0;
 
   if((subclassTradition.indexOf("Conjuração:") >= 0) || (subclassTradition.indexOf("Conhecimento arcano:") >= 0)){
     subtradition = 'Arcana';
@@ -115,7 +116,35 @@ function characterTraditions(classTradition,subclassTradition){
     tradition = subtradition;
   }
 
+  if(system == 'fcon'){
+    
+    if(skills.indexOf('Magia') == 0)
+      tradValue = 4;
+    else if((skills.indexOf('Magia') == 1) || (skills.indexOf('Magia') == 2))
+      tradValue = 3;
+    else if((skills.indexOf('Magia') >= 3) && (skills.indexOf('Magia') <= 5))
+      tradValue = 2;
+    else if((skills.indexOf('Magia') >= 6) && (skills.indexOf('Magia') <= 9))
+      tradValue = 1;
+
+    if(subtradition != '')
+      tradValue = tradValue++;
+
+    if(classTradition != '' && subtradition != ''){
+
+      var number = Math.floor(Math.random() * (tradValue)) + 1;
+      tradition = classTradition+'(+'+number+') e '+subtradition+'(+'+tradValue-number+')';
+
+    } else if(classTradition != '' && subtradition == ''){
+      tradition = classTradition+'(+'+tradValue+')';
+    } else if(classTradition == '' && subtradition != ''){
+      tradition = subtradition+'(+'+tradValue+')';
+    }
+
+  }
+
   return tradition;
+
 }
 
 function nbsp(j){

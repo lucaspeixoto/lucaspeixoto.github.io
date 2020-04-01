@@ -50,9 +50,11 @@ $( document ).ready(function() {
     facanhas.push(random(classe.stunts));
     facanhas.push(random(classe[classeEspecifica].stunts));
 
-    var tradicoes = characterTraditions(classe.tradition,facanhas[2]);
+    var system = $('#radio-fcon').is(':checked') ? 'fcon' : 'fae';
 
-    if($('#radio-fcon').is(':checked')){
+    var tradicoes = characterTraditions(classe.tradition,facanhas[2],pericias,system);
+
+    if(system == 'fcon'){
 
       attributes = '<div><strong>PERÍCIAS</strong>'+
       '<div class="textIndent"><strong>Ótimo (+4):</strong> '+pericias[0]+'</div>'+
@@ -61,8 +63,8 @@ $( document ).ready(function() {
       '<div class="textIndent"><strong>Regular (+1):</strong> '+pericias[6]+', '+pericias[7]+', '+pericias[8]+', '+pericias[9]+'</div></div>';
 
       estresse = '<p><strong>ESTRESSE</strong><br>'+
-      '<strong>'+nbsp(3)+'Físico: </strong>'+characterStress('Vigor',pericias)+'<br>'+
-      '<strong>'+nbsp(3)+'Mental: </strong>'+characterStress('Vontade',pericias)+'</p>';
+      '<strong>'+nbsp(4)+'Físico: </strong>'+characterStress('Vigor',pericias)+'<br>'+
+      '<strong>'+nbsp(4)+'Mental: </strong>'+characterStress('Vontade',pericias)+'</p>';
 
     } else {
 
@@ -75,13 +77,13 @@ $( document ).ready(function() {
       '<div><strong>'+nbsp(6)+'Sorrateiro:</strong> '+abordagens['Sorrateiro']+'</div></div>'
 
       estresse = '<p><strong>ESTRESSE</strong><br>'+
-      nbsp(3)+'<i class="fa fa-square-o"></i> <i class="fa fa-square-o"></i><i class="fa fa-square-o"></i> '+
+      nbsp(4)+'<i class="fa fa-square-o"></i> <i class="fa fa-square-o"></i><i class="fa fa-square-o"></i> '+
       '<i class="fa fa-square-o"></i><i class="fa fa-square-o"></i><i class="fa fa-square-o"></i></p>';
 
     }
 
     if(tradicoes != '')
-      tradicoes = '<div><strong>TRADIÇÕES MÁGICAS</strong><br>'+nbsp(3)+tradicoes+'</div><br>';
+      tradicoes = '<div><strong>TRADIÇÕES MÁGICAS</strong><br>'+nbsp(4)+tradicoes+'</div><br>';
 
     $('.boxPersonagemFate').html(
       '<center><h4>'+random(raca[racaEspecifica].names)+'</h4></center>'+
@@ -99,13 +101,13 @@ $( document ).ready(function() {
       '<div class="textIndent">'+facanhas[2]+'</div></div>'+
       estresse+
       '<p><strong>CONSEQUÊNCIAS</strong><br>'+
-      '<strong>'+nbsp(3)+'Suave (2): </strong><br>'+
-      '<strong>'+nbsp(3)+'Moderada (4): </strong><br>'+
-      '<strong>'+nbsp(3)+'Severa (6): </strong></p>'+
+      '<strong>'+nbsp(4)+'Suave (2): </strong><br>'+
+      '<strong>'+nbsp(4)+'Moderada (4): </strong><br>'+
+      '<strong>'+nbsp(4)+'Severa (6): </strong></p>'+
       '<p><strong>CONDIÇÕES</strong><br>'+
-      nbsp(3)+'<i class="fa fa-square-o"></i> Atordoado'+nbsp(7)+'<i class="fa fa-square-o"></i> Amedrontado<br>'+
-      nbsp(3)+'<i class="fa fa-square-o"></i> Derrubado'+nbsp(6)+'<i class="fa fa-square-o"></i> Confuso<br>'+
-      nbsp(3)+'<i class="fa fa-square-o"></i> Fatigado'+nbsp(10)+'<i class="fa fa-square-o"></i> Fascinado'
+      nbsp(4)+'<i class="fa fa-square-o"></i> Atordoado'+nbsp(7)+'<i class="fa fa-square-o"></i> Amedrontado<br>'+
+      nbsp(4)+'<i class="fa fa-square-o"></i> Derrubado'+nbsp(6)+'<i class="fa fa-square-o"></i> Confuso<br>'+
+      nbsp(4)+'<i class="fa fa-square-o"></i> Fatigado'+nbsp(10)+'<i class="fa fa-square-o"></i> Fascinado'
     );
 
     $('.boxPersonagemFate').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '550px', 'box-shadow': '5px 5px 10px lightgrey'});
