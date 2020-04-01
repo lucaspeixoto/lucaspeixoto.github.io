@@ -4,6 +4,15 @@ nav a{text-decoration: none;}
 label {cursor: pointer;}
 label:hover {color: #009688;}
 
+.inputText{
+  border: none;
+  width: 400px;
+}
+
+.inputText:hover{
+  background-color: #eee;
+}
+
 .textIndent{
   padding-left: 2.5em;
   text-indent:-1.5em;

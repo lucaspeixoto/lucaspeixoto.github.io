@@ -32,7 +32,7 @@ $( document ).ready(function() {
     $('.boxNPC').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '550px', 'box-shadow': '5px 5px 10px lightgrey'});
 
     activateStressBox();
-    
+
   });
 
   $('#btnGerarFate').click(function(){
@@ -103,9 +103,9 @@ $( document ).ready(function() {
       '<div class="textIndent">'+facanhas[2]+'</div></div>'+
       estresse+
       '<p><strong>CONSEQUÊNCIAS</strong><br>'+
-      '<strong>'+nbsp(4)+'Suave (2): </strong><br>'+
-      '<strong>'+nbsp(4)+'Moderada (4): </strong><br>'+
-      '<strong>'+nbsp(4)+'Severa (6): </strong></p>'+
+      '<strong>'+nbsp(4)+'Suave (2): </strong><input type="text" class="inputText"><br>'+
+      '<strong>'+nbsp(4)+'Moderada (4): </strong><input type="text" class="inputText"><br>'+
+      '<strong>'+nbsp(4)+'Severa (6): </strong><input type="text" class="inputText"></p>'+
       '<p><strong>CONDIÇÕES</strong><br>'+
       nbsp(4)+'<i class="fa fa-square-o"></i> Atordoado'+nbsp(7)+'<i class="fa fa-square-o"></i> Amedrontado<br>'+
       nbsp(4)+'<i class="fa fa-square-o"></i> Derrubado'+nbsp(6)+'<i class="fa fa-square-o"></i> Confuso<br>'+
