@@ -95,6 +95,29 @@ function npcStunts(npcSkills){
     
 }
 
+function characterTraditions(classTradition,subclassTradition){
+  var tradition = '';
+  var subtradition = '';
+
+  if(subclassTradition.indexOf("Conjuração:") || subclassTradition.indexOf("Conhecimento arcano:")){
+    subtradition = 'Arcana';
+  } else if(subclassTradition.indexOf("Adorador da natureza:")){
+    subtradition = 'Divina';
+  } else if(subclassTradition.indexOf("Magia marcial:")){
+    subtradition = 'Primal';
+  }
+
+  if(classTradition != '' && subtradition != ''){
+    tradition = classTradition+' e '+subtradition;
+  } else if(classTradition != '' && subtradition == ''){
+    tradition = classTradition;
+  } else if(classTradition == '' && subtradition != ''){
+    tradition = subtradition;
+  }
+
+  return tradition;
+}
+
 function nbsp(j){
   var nbsp = '';
   for(i=0;i<j;i++)

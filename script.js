@@ -41,10 +41,16 @@ $( document ).ready(function() {
     var racaEspecifica = random(raca.aspects);
     var pericias = characterSkills(classe[classeEspecifica].skills,raca[racaEspecifica].skills,skills('core'));
     var abordagens = characterApproaches(classe[classeEspecifica].approach,raca[racaEspecifica].approach,skills('fae'));
-    var tradicoes = classe.tradition;
     var facanhasRaca = raca.stunts;
         facanhasRaca = facanhasRaca.concat(raca[racaEspecifica].stunts);
+    var facanhas = [];
     var estresse = '';
+
+    facanha.push(random(facanhasRaca));
+    facanha.push(random(classe.stunts));
+    facanha.push(random(classe[classeEspecifica].stunts));
+
+    var tradicoes = characterTraditions(classe.tradition,facanha[2]);
 
     if($('#radio-fcon').is(':checked')){
 
@@ -75,7 +81,7 @@ $( document ).ready(function() {
     }
 
     if(tradicoes != '')
-      tradicoes = '<div><strong>TRADIÇÕES</strong><br>'+nbsp(3)+tradicoes+'</div><br>';
+      tradicoes = '<div><strong>TRADIÇÕES MÁGICAS</strong><br>'+nbsp(3)+tradicoes+'</div><br>';
 
     $('.boxPersonagemFate').html(
       '<center><h4>'+random(raca[racaEspecifica].names)+'</h4></center>'+
@@ -88,9 +94,9 @@ $( document ).ready(function() {
       attributes+'<br>'+
       tradicoes+
       '<div><strong>FAÇANHAS</strong>'+
-      '<div class="textIndent">'+random(facanhasRaca)+'</div>'+
-      '<div class="textIndent">'+random(classe.stunts)+'</div>'+
-      '<div class="textIndent">'+random(classe[classeEspecifica].stunts)+'</div></div>'+
+      '<div class="textIndent">'+facanha[0]+'</div>'+
+      '<div class="textIndent">'+facanha[1]+'</div>'+
+      '<div class="textIndent">'+facanha[2]+'</div></div>'+
       estresse+
       '<p><strong>CONSEQUÊNCIAS</strong><br>'+
       '<strong>'+nbsp(3)+'Suave (2): </strong><br>'+
