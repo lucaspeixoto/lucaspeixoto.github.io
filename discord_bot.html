@@ -50,31 +50,30 @@ fetch("./nav.html")
   </header>
   
   <div class="w3-container w3-padding-large" style="margin-bottom:32px">
-    <p>Um bot de utilidades para Fate RPG</p>
-    <h4>Adicionar ao seu servidor</h4>
+    <h4><strong>Um bot de utilidades para Fate RPG</strong></h4>
+    <h3><strong>Adicionar ao seu servidor</strong></h3>
     <p>Para adicionar o <i>FateUtils</i> ao seu servidor, clique no link ou copie e cole no seu navegador:</p>
-    <p><a href="https://discordapp.com/api/oauth2/authorize?client_id=695613875168608336&permissions=0&scope=bot">https://discordapp.com/api/oauth2/authorize?client_id=695613875168608336&permissions=0&scope=bot</a></p>
-    <h4>Como usar</h4>
+    <br><a href="https://discordapp.com/api/oauth2/authorize?client_id=695613875168608336&permissions=0&scope=bot">https://discordapp.com/api/oauth2/authorize?client_id=695613875168608336&permissions=0&scope=bot</a>
+    <h3><strong>Como usar</strong></h3>
     <p>O <i>FateUtils</i> é um bot criado para auxiliar em jogos Fate via Discord, rolando dados ou gerando estatísticas aleatórias diversas. Para listar todos os comandos do bot utilize o comando <strong>!help</strong></p>
     <p>Em todos os comandos os parâmetros são opcionais, utilize-os sem os parênteses.</p>
-    <p>Para rolar os dados faça o seguinte:</p>
-    <p><strong>!r</strong>: (o seu bônus) (o número alvo) (a ação desejada)</p><br>
+    <h2>Rolagens de dados</h2>
+    <p><strong>!r</strong>: (o seu bônus) (o número alvo) (a ação desejada)</p>
     <ul>
-      <li><strong>!r</strong>: (rola 4 dados fate)</li>
-      <li><strong>!r +3</strong>:  (rola 4 dados fate +bonus)</li>
-      <li><strong>!r +3 5</strong>: (rola 4 dados fate + bonus e o número alvo, indicando o resultado)</li>
-      <li><strong>!r +3 5 A</strong>: (faz a rolagem para a ação especificada e já dá o resultado completo)</li>
+      <li><strong>!r</strong> = rola 4 dados fate</li>
+      <li><strong>!r +3</strong> = rola 4 dados fate +bonus</li>
+      <li><strong>!r +3 5</strong> = rola 4 dados fate + bonus e o número alvo, indicando o resultado</li>
+      <li><strong>!r +3 5 A</strong> = faz a rolagem para a ação especificada e já dá o resultado completo</li>
       <li>As ações: (A)taque | (D)efesa | (S)uperar | (CA) Criar vantagem para Criar Aspecto | (CE) Criar vantagem em Aspecto Existente</li>
     </ul>
-    <br>
-    <p><strong>!edge</strong>: rola 3 dados fates +1d6, aceita os mesmo parâmetros de !r</p>
-    <p><strong>!tachyon</strong> (tipo) (o seu bônus) (o número alvo) (a ação desejada): rola 6 dados fates e seleciona 4.</p>
+    <p><strong>!edge</strong> = rola 3 dados fates +1d6, aceita os mesmo parâmetros de !r</p>
+    <p><strong>!tachyon</strong> (tipo) rola 6 dados fates e seleciona 4, aceita os mesmo parâmetros subsequentes de !r</p>
     <p>O parâmetro tipo indica se serão escolhidos os 4 melhores (V) ou 4 piores (D). (ex.: !tachyon V +3)</p>
-    <br>
+    <h2>Estatísticas aleatórias</h2>
     <p><strong>!pdn </strong> (nome) = gera um personagem da narradora aleatório, o primeiro parâmetro será o seu nome (ex.: !pdn José)</p>
     <p><strong>!abordagens</strong> = gera valores aleatórios para as abordagens FAE</p>
     <p><strong>!pericias </strong> (topo) = gera valores aleatórios para as perícas FCon, o primeiro parâmetro é o topo da pirâmide (ex.: !pericias 4)</p>
-    <br>
+    <h2>Específicos de cenários</h2>
     <p><strong>!umdaar</strong>: bioformas de Mestres de Umdaar, coloque um número na frente para rolar várias vezes (ex.: !umdaar 5)</p>
     <p><strong>!uranium</strong>: gera um personagem de Uranium Chef, com bioforma e abordagens</p>
   </div>  
