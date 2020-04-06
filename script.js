@@ -91,7 +91,7 @@ $( document ).ready(function() {
       '<center><h4>'+random(raca[racaEspecifica].names)+'</h4></center>'+
       '<div><strong>ASPECTOS</strong>'+
       '<div class="textIndent"><strong>Conceito:</strong> '+classeEspecifica+'</div>'+
-      '<div class="textIndent"><strong>Biotipo:</strong> '+racaEspecifica+' '+random(aspects('ancestry'))+'</div>'+
+      '<div class="textIndent"><strong>Bioforma:</strong> '+racaEspecifica+' '+random(aspects('ancestry'))+'</div>'+
       '<div class="textIndent"><strong>Dificuldade:</strong> '+random(aspects('problem'))+'</div>'+
       '<div class="textIndent"><strong>Aventura:</strong> '+random(aspects('adventure'))+'</div>'+
       '<div class="textIndent"><strong>Ambição:</strong> '+random(aspects('ambition'))+'</div></div><br>'+
