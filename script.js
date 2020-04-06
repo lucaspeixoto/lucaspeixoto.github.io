@@ -118,4 +118,59 @@ $( document ).ready(function() {
 
   });
 
+  $('#btnGerarWoa').click(function(){
+
+    if($('selectWorld').val() == 'umdaar'){
+
+      var bioforma = random(races('bioforma').bioforma);
+
+      switch(bioforma){
+        case "Homem-besta":
+          bioforma = "Homem-"+random(bioforma.tipo);
+          break;
+        case "Quimera":
+          bioforma = "Quimera ("+random(bioforma.tipo)+' e '+random(bioforma.tipo)+')';
+          break;
+        default:
+          bioforma = random(bioforma.tipo)+' '+bioforma;
+      }
+
+      var umdaarName = random(races('bioforma').prefix)+random(races('bioforma').suffix)+', da tribo '+random(races('bioforma').prefix)+random(races('bioforma').bioform);
+      var abordagens = randomApproaches(skills('fae'));
+
+      $('.boxPersonagemFate').html(
+        '<center><h4>'+umdaarName+'</h4></center>'+
+        '<div><strong>ASPECTOS</strong>'+
+        '<div class="textIndent"><strong>Conceito:</strong> '+bioforma+' '+random(aspects('concept'))+'</div>'+
+        '<div class="textIndent"><strong>Dificuldade:</strong> '+random(aspects('problem'))+'</div>'+
+        '<div class="textIndent"><strong>Motivação:</strong> '+random(aspects('ambition'))+'</div>'+
+        '<div class="textIndent"><strong>Aventura:</strong> '+random(aspects('adventure'))+'</div></div><br>'+
+        '<div><strong>ABORDAGENS</strong>'+
+        '<div><strong>'+nbsp(16)+'Ágil:</strong> '+abordagens['Ágil']+'</div>'+
+        '<div><strong>'+nbsp(4)+'Cuidadoso:</strong> '+abordagens['Cuidadoso']+'</div>'+
+        '<div><strong>'+nbsp(9)+'Esperto:</strong> '+abordagens['Esperto']+'</div>'+
+        '<div><strong>'+nbsp(9)+'Estiloso:</strong> '+abordagens['Estiloso']+'</div>'+
+        '<div><strong>'+nbsp(6)+'Poderoso:</strong> '+abordagens['Poderoso']+'</div>'+
+        '<div><strong>'+nbsp(6)+'Sorrateiro:</strong> '+abordagens['Sorrateiro']+'</div></div><br>'+
+        '<div><strong>FAÇANHAS</strong>'+
+        '<div class="textIndent">'+random(stunts('Umdaar '+abordagens[0]))+'</div>'+
+        '<div class="textIndent">'+random(stunts(+abordagens[1]))+'</div>'+
+        '<div class="textIndent">'+random(stunts(+abordagens[2]))+'</div></div>'+
+        '<p><strong>ESTRESSE</strong><br>'+
+        nbsp(4)+'<i class="fa fa-square-o"></i> <i class="fa fa-square-o"></i><i class="fa fa-square-o"></i> '+
+        '<i class="fa fa-square-o"></i><i class="fa fa-square-o"></i><i class="fa fa-square-o"></i></p>'+
+        '<p><strong>CONSEQUÊNCIAS</strong><br>'+
+        '<strong>'+nbsp(4)+'Suave (2): </strong><input type="text" class="inputText"><br>'+
+        '<strong>'+nbsp(4)+'Moderada (4): </strong><input type="text" class="inputText"><br>'+
+        '<strong>'+nbsp(4)+'Severa (6): </strong><input type="text" class="inputText"></p>'
+      );
+
+    };
+
+    $('.boxPersonagemFate').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '550px', 'box-shadow': '5px 5px 10px lightgrey'});
+
+    activateStressBox();
+
+  });
+
 });

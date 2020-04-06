@@ -5,6 +5,17 @@ function races(type='') {
     	//type = random(['halfling','elf','dwarf','human','dragonborn','gnome','touched']);
   
     switch(type){
+
+    	case "bioforma":
+    		return {
+    			bioforma: ['Ser de Energia','Quimera','Ciborgue','Cítiro','Morto-vivo','Centauro','Humanóide','Homem-besta','Robô','Mutante','Amazona','Quimera','Guerreiro Mutante','Fungo','Planta'],
+    			tipo: ['Centopeia','Enguia','Piranha','Lesma','Caramujo','Verme','Lophiiforme','Polvo','Lula','Louva-Deus','Grilo','Formiga','Caranguejo','Lagosta','Arraia','Abelha','Vespa','Tubarão','Besouro','Barata','Escaravelho','Aranha','Escorpião','Mosca','Pernilongo','Caravela','Água-viva','Salamandra','Lagarto','Iguana','Dragão de Komodo','Camaleão','Sapo','Tartaruga','Cágado','Tricerátops','Estegossauro','Anquilossauro','Tiranossauro','Alossauro','Dimetrodonte','Serpente','Cobra','Víbora','Píton','Crocodilo','Jacaré','Pterodátilo','Pterossauro','Arqueopterix','Rã-Touro','Deinonico','Velociraptor','Oviraptor','Paquicefalossauro','Iguanodonte','Hadrossauro','Tritão','Pliossauro','Plesiossauro','Ictiossauro','Morcego','Aves do Terror','Urso','Urso Polar','Panda','Elefante','Rinoceronte','Hipopótamo','Mamute','Gaivota','Albatroz','Rato','Camundongo','Toupeira','Coelho','Gorila','Chimpanzé','Orangotango','Lêmure','Falcão','Águia','Condor','Javali','Cabra','Cervo','Alce','Abutre','Corvo','Urubu','Cachorro','Lobo','Coiote','Raposa','Chacal','Leão','Tigre','Onça','Hiena','Ema','Avestruz','Texugo','Furão','Carcaju','Doninha','Zebra','Antílope','Gnu','Cavalo'],
+    			prefix: ['Naga','Shiro','Vir','Exa','Kan','Wego','Moor','Zy','Thal','Kaji','Slee','Myr','Arco','Or','P’Taq'],
+	            suffix: ['da','ra','thar','daar','ak','seez','gon','star','caya','tron','lock','uu','t’zo','kor','graz'],
+    	        bioform: ['ocks','iards','en','ols','ri','ors','ons','als','dja','ani','ians','ites','ans','icans','um']
+    		}
+    		break;
+
     	case "halfling":
     		return {
 

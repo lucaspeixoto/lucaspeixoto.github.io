@@ -45,22 +45,27 @@ fetch("./nav.html")
   <header id="portfolio">
     <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
     <div class="w3-container">
-    	<h1><b>Gerador de Personagens da Narradora</b></h1>
+    	<h1><b>Gerador de Personagem para Mundos de Aventuras</b></h1>
     </div>
   </header>
   
   <div class="w3-container w3-padding-large" style="margin-bottom:32px">
 
     <span class="hidePrint">
-      <h4>Clique no botão abaixo para gerá-los novamente.</h4>
+      <h4>Fichas aleatórias para diversos Mundos de Aventura</h4>
       
-      <button id="btnGerarNPC" class="w3-button w3-teal w3-hover-black">Gerar PDNs</button>
+      <select id="selectWorld" class="w3-button w3-teal">
+        <option value="">Qualquer mundo</option>
+        <option value="umdaar">Mestres de Umdaar</option>
+        <option value="uranium">Uranium Chef</option>
+      </select>
+      <button id="btnGerarWoa" class="w3-button w3-teal w3-hover-black">Gerar personagem</button>
     </span>
+    
+    <div class="watermark">Ficha criada em https://lucaspeixoto.github.io</div>
 
-    <div class="watermark">Fichas criadas em https://lucaspeixoto.github.io</div>
-
-    <div class="boxNPCs"></div>
-
+    <div class="boxPersonagemFate"></div>
+    
     <a href="javascript: window.print();" id="btnPrint"><i class="fa fa-file-pdf-o w3-hover-opacity" style="color: red;"></i> PDF</a>
     
   </div> 
