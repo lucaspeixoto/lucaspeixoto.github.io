@@ -121,7 +121,9 @@ $( document ).ready(function() {
 
   $('#btnGerarWoa').click(function(){
 
-    worldAdventure = ($('selectWorld').val() == '') ? random(['umdaar','uranium']) : $('selectWorld').val();
+    var worlds = ['umdaar','uranium'];
+
+    worldAdventure = ($('#selectWorld').val() == '') ? random(worlds) : $('#selectWorld').val();
 
     if(worldAdventure == 'umdaar'){
 
