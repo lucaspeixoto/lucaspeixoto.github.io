@@ -131,13 +131,13 @@ $( document ).ready(function() {
 
       switch(bioforma){
         case "Homem-besta":
-          bioforma = "Homem-"+random(bioforma.tipo);
+          bioforma = "Homem-"+random(races('bioforma').tipo);
           break;
         case "Quimera":
-          bioforma = "Quimera ("+random(bioforma.tipo)+' e '+random(bioforma.tipo)+')';
+          bioforma = "Quimera ("+random(races('bioforma').tipo)+' e '+random(races('bioforma').tipo)+')';
           break;
         default:
-          bioforma = random(bioforma.tipo)+' '+bioforma;
+          bioforma = random(races('bioforma').tipo)+' '+bioforma;
       }
 
       var umdaarName = random(races('bioforma').prefix)+random(races('bioforma').suffix)+', da tribo '+random(races('bioforma').prefix)+random(races('bioforma').bioform);
