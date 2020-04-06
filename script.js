@@ -3,6 +3,7 @@ $( document ).ready(function() {
   setTimeout(function() {
       $("#btnGerarNPC").trigger('click');
       $("#btnGerarFate").trigger('click');
+      $("#btnGerarWoa").trigger('click');
   },10);
 
   $('#btnGerarNPC').click(function(){
@@ -120,7 +121,9 @@ $( document ).ready(function() {
 
   $('#btnGerarWoa').click(function(){
 
-    if($('selectWorld').val() == 'umdaar'){
+    worldAdventure = ($('selectWorld').val() == '') ? random(['umdaar','uranium']) : $('selectWorld').val();
+
+    if(worldAdventure == 'umdaar'){
 
       var bioforma = random(races('bioforma').bioforma);
 
