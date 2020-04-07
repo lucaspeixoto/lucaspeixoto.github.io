@@ -208,7 +208,7 @@ $( document ).ready(function() {
         '<div><strong>ABORDAGENS CULINÁRIAS</strong>'+
         '<div><strong>'+nbsp(8)+'Ácido:</strong> '+abordagensCulinarias['Ácido']+'</div>'+
         '<div><strong>'+nbsp(4)+'Amargo:</strong> '+abordagensCulinarias['Amargo']+'</div>'+
-        '<div><strong>'+nbsp(8)+'Doce:</strong> '+abordagensCulinarias['Doce']+'</div>'+
+        '<div><strong>'+nbsp(9)+'Doce:</strong> '+abordagensCulinarias['Doce']+'</div>'+
         '<div><strong>'+nbsp(12)+'Frio:</strong> '+abordagensCulinarias['Frio']+'</div>'+
         '<div><strong>'+nbsp(5)+'Picante:</strong> '+abordagensCulinarias['Picante']+'</div>'+
         '<div><strong>'+nbsp(4)+'Salgado:</strong> '+abordagensCulinarias['Salgado']+'</div></div><br>'+
