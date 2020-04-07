@@ -188,8 +188,8 @@ $( document ).ready(function() {
       }
 
       var umdaarName = random(races('bioforma').prefix)+random(races('bioforma').suffix)+', da tribo '+random(races('bioforma').prefix)+random(races('bioforma').bioform);
-      var abordagensReais = functions.randomApproaches(arrays.skills('fae'));
-      var abordagensCulinarias = functions.randomApproaches(arrays.skills('uranium'));
+      var abordagensReais = randomApproaches(skills('fae'));
+      var abordagensCulinarias = randomApproaches(skills('uranium'));
 
       $('.boxPersonagemFate').html(
         '<center><h4>'+umdaarName+'</h4></center>'+
@@ -219,7 +219,7 @@ $( document ).ready(function() {
         '<p><strong>CONDIÇÕES</strong><br>'+
         nbsp(4)+'<i class="fa fa-square-o"></i> Tenso'+nbsp(7)+'<i class="fa fa-square-o"></i> Esgotado'+nbsp(7)+'<i class="fa fa-square-o"></i><i class="fa fa-square-o"></i> Queimado<br>'+
         nbsp(4)+'<i class="fa fa-square-o"></i> Abalado'+nbsp(6)+'<i class="fa fa-square-o"></i> Machucado'+nbsp(7)+'<i class="fa fa-square-o"></i><i class="fa fa-square-o"></i> Cortado<br>'
-        );
+      );
     
     };
 
