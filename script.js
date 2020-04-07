@@ -218,7 +218,7 @@ $( document ).ready(function() {
         '<div class="textIndent">'+random(stunts(abordagensCulinarias[0]))+'</div></div>'+
         '<p><strong>CONDIÇÕES</strong><br>'+
         nbsp(4)+'<i class="fa fa-square-o"></i> Tenso'+nbsp(7)+'<i class="fa fa-square-o"></i> Esgotado'+nbsp(7)+'<i class="fa fa-square-o"></i><i class="fa fa-square-o"></i> Queimado<br>'+
-        nbsp(4)+'<i class="fa fa-square-o"></i> Abalado'+nbsp(6)+'<i class="fa fa-square-o"></i> Machucado'+nbsp(7)+'<i class="fa fa-square-o"></i><i class="fa fa-square-o"></i> Cortado<br>'+
+        nbsp(4)+'<i class="fa fa-square-o"></i> Abalado'+nbsp(6)+'<i class="fa fa-square-o"></i> Machucado'+nbsp(7)+'<i class="fa fa-square-o"></i><i class="fa fa-square-o"></i> Cortado<br>'
         );
     
     };
