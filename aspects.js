@@ -26,6 +26,14 @@ function aspects(type) {
             return ['Estabelecer meu próprio feudo','Encontrar o santo graal','Ter minhas aventuras contadas nas canções','Descobrir o segredo arcano de Fausten','Chegar às terras livres','Comandar meu próprio exército','Libertar o povo da opressão','Acabar com a escravidão','Conquistar grandes tesouros','Dar exemplo aos meus amigos','Derrotar meu arqui-inimigo','Ser o maior aventureiro de todos','Ser lembrado para todo o sempre','Realizar grandes feitos','Ser o mais famoso de todos','Possuir muitos itens mágicos','Ser conhecido por todo o mundo','Comandar reinos'];
             break;
 
+        case "carrot":
+            return ['Quero ser o Mais Temido','Eu quero Aceitação','Eu quero ser visto como Original','Eu quero ser famosa','Eu só quero o dinheiro','Quero provar que esses tolos estão errados','Quero os melhores cozinheiros para o meu restaurante','Só quero mostrar como se faz comida de verdade','Só quero voltar para casa'];
+            break;
+        
+        case "persona":
+            return ['Eu jogo como o Babaca Agressivo','Eu jogo como a irmã mais nova adorável','Eu jogo como o Competidor','Eu jogo como a comediante','Eu jogo como o Fofoqueiro','Eu jogo como alguém com problemas financeiros','Eu jogo como Líder','Eu jogo como o Encrenqueiro','Eu jogo como a Misteriosa','Eu jogo como o Galanteador'];
+            break;
+
     }
 
 };

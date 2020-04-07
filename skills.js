@@ -13,6 +13,11 @@ function skills(type) {
     	case "fae":
     		return ['Ágil','Cuidadoso','Esperto','Estiloso','Poderoso','Sorrateiro'];
     		break;
-    	}
+
+        case "uranium":
+            return ['Amargo','Frio','Salgado','Picante','Doce','Ácido'];
+            break;
+
+    }
 
 };
