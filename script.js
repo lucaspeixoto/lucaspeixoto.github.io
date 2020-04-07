@@ -206,10 +206,10 @@ $( document ).ready(function() {
         '<div><strong>'+nbsp(6)+'Poderoso:</strong> '+abordagensReais['Poderoso']+'</div>'+
         '<div><strong>'+nbsp(6)+'Sorrateiro:</strong> '+abordagensReais['Sorrateiro']+'</div></div><br>'+
         '<div><strong>ABORDAGENS CULINÁRIAS</strong>'+
-        '<div><strong>'+nbsp(9)+'Ácido:</strong> '+abordagensCulinarias['Ácido']+'</div>'+
+        '<div><strong>'+nbsp(8)+'Ácido:</strong> '+abordagensCulinarias['Ácido']+'</div>'+
         '<div><strong>'+nbsp(4)+'Amargo:</strong> '+abordagensCulinarias['Amargo']+'</div>'+
         '<div><strong>'+nbsp(8)+'Doce:</strong> '+abordagensCulinarias['Doce']+'</div>'+
-        '<div><strong>'+nbsp(10)+'Frio:</strong> '+abordagensCulinarias['Frio']+'</div>'+
+        '<div><strong>'+nbsp(12)+'Frio:</strong> '+abordagensCulinarias['Frio']+'</div>'+
         '<div><strong>'+nbsp(5)+'Picante:</strong> '+abordagensCulinarias['Picante']+'</div>'+
         '<div><strong>'+nbsp(4)+'Salgado:</strong> '+abordagensCulinarias['Salgado']+'</div></div><br>'+
         '<div><strong>FAÇANHAS</strong>'+
