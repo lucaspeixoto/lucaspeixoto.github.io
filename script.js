@@ -159,8 +159,8 @@ $( document ).ready(function() {
         '<div><strong>'+nbsp(6)+'Sorrateiro:</strong> '+abordagens['Sorrateiro']+'</div></div><br>'+
         '<div><strong>FAÇANHAS</strong>'+
         '<div class="textIndent">'+random(stunts('Umdaar '+abordagens[0]))+'</div>'+
-        '<div class="textIndent">'+random(stunts(+abordagens[1]))+'</div>'+
-        '<div class="textIndent">'+random(stunts(+abordagens[2]))+'</div></div>'+
+        '<div class="textIndent">'+random(stunts(abordagens[1]))+'</div>'+
+        '<div class="textIndent">'+random(stunts(abordagens[2]))+'</div></div>'+
         '<p><strong>ESTRESSE</strong><br>'+
         nbsp(4)+'<i class="fa fa-square-o"></i> <i class="fa fa-square-o"></i><i class="fa fa-square-o"></i> '+
         '<i class="fa fa-square-o"></i><i class="fa fa-square-o"></i><i class="fa fa-square-o"></i></p>'+
