@@ -196,8 +196,8 @@ $( document ).ready(function() {
         '<div><strong>ASPECTOS</strong>'+
         '<div class="textIndent"><strong>Conceito:</strong> '+bioforma+' '+random(aspects('concept'))+'</div>'+
         '<div class="textIndent"><strong>Dificuldade:</strong> '+random(aspects('problem'))+'</div>'+
-        '<div class="textIndent"><strong>Motivação:</strong> '+random(aspects('ambition'))+'</div>'+
-        '<div class="textIndent"><strong>Aventura:</strong> '+random(aspects('adventure'))+'</div></div><br>'+
+        '<div class="textIndent"><strong>Cenoura:</strong> '+random(aspects('carrot'))+'</div>'+
+        '<div class="textIndent"><strong>Persona:</strong> '+random(aspects('persona'))+'</div></div><br>'+
         '<div><strong>ABORDAGENS</strong>'+
         '<div><strong>'+nbsp(16)+'Ágil:</strong> '+abordagensReais['Ágil']+'</div>'+
         '<div><strong>'+nbsp(4)+'Cuidadoso:</strong> '+abordagensReais['Cuidadoso']+'</div>'+
@@ -206,18 +206,18 @@ $( document ).ready(function() {
         '<div><strong>'+nbsp(6)+'Poderoso:</strong> '+abordagensReais['Poderoso']+'</div>'+
         '<div><strong>'+nbsp(6)+'Sorrateiro:</strong> '+abordagensReais['Sorrateiro']+'</div></div><br>'+
         '<div><strong>ABORDAGENS CULINÁRIAS</strong>'+
-        '<div><strong>'+nbsp(16)+'Ácido:</strong> '+abordagensCulinarias['Ácido']+'</div>'+
+        '<div><strong>'+nbsp(4)+'Ácido:</strong> '+abordagensCulinarias['Ácido']+'</div>'+
         '<div><strong>'+nbsp(4)+'Amargo:</strong> '+abordagensCulinarias['Amargo']+'</div>'+
-        '<div><strong>'+nbsp(9)+'Doce:</strong> '+abordagensCulinarias['Doce']+'</div>'+
-        '<div><strong>'+nbsp(9)+'Frio:</strong> '+abordagensCulinarias['Frio']+'</div>'+
-        '<div><strong>'+nbsp(6)+'Picante:</strong> '+abordagensCulinarias['Picante']+'</div>'+
-        '<div><strong>'+nbsp(6)+'Salgado:</strong> '+abordagensCulinarias['Salgado']+'</div></div><br>'+
+        '<div><strong>'+nbsp(4)+'Doce:</strong> '+abordagensCulinarias['Doce']+'</div>'+
+        '<div><strong>'+nbsp(4)+'Frio:</strong> '+abordagensCulinarias['Frio']+'</div>'+
+        '<div><strong>'+nbsp(4)+'Picante:</strong> '+abordagensCulinarias['Picante']+'</div>'+
+        '<div><strong>'+nbsp(4)+'Salgado:</strong> '+abordagensCulinarias['Salgado']+'</div></div><br>'+
         '<div><strong>FAÇANHAS</strong>'+
         '<div class="textIndent">'+random(stunts('Uranium'))+'</div>'+
         '<div class="textIndent">'+random(stunts(abordagensReais[0])).replace("Poderoso","Agressivo")+'</div>'+
         '<div class="textIndent">'+random(stunts(abordagensCulinarias[0]))+'</div></div>'+
         '<p><strong>CONDIÇÕES</strong><br>'+
-        nbsp(4)+'<i class="fa fa-square-o"></i> Tenso'+nbsp(7)+'<i class="fa fa-square-o"></i> Esgotado'+nbsp(7)+'<i class="fa fa-square-o"></i><i class="fa fa-square-o"></i> Queimado<br>'+
+        nbsp(4)+'<i class="fa fa-square-o"></i> Tenso'+nbsp(9)+'<i class="fa fa-square-o"></i> Esgotado'+nbsp(9)+'<i class="fa fa-square-o"></i><i class="fa fa-square-o"></i> Queimado<br>'+
         nbsp(4)+'<i class="fa fa-square-o"></i> Abalado'+nbsp(6)+'<i class="fa fa-square-o"></i> Machucado'+nbsp(7)+'<i class="fa fa-square-o"></i><i class="fa fa-square-o"></i> Cortado<br>'
       );
     
