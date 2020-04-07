@@ -206,12 +206,12 @@ $( document ).ready(function() {
         '<div><strong>'+nbsp(6)+'Poderoso:</strong> '+abordagensReais['Poderoso']+'</div>'+
         '<div><strong>'+nbsp(6)+'Sorrateiro:</strong> '+abordagensReais['Sorrateiro']+'</div></div><br>'+
         '<div><strong>ABORDAGENS CULINÁRIAS</strong>'+
-        '<div><strong>'+nbsp(12)+'Ácido:</strong> '+abordagensCulinarias['Ácido']+'</div>'+
-        '<div><strong>'+nbsp(8)+'Amargo:</strong> '+abordagensCulinarias['Amargo']+'</div>'+
-        '<div><strong>'+nbsp(13)+'Doce:</strong> '+abordagensCulinarias['Doce']+'</div>'+
-        '<div><strong>'+nbsp(16)+'Frio:</strong> '+abordagensCulinarias['Frio']+'</div>'+
-        '<div><strong>'+nbsp(9)+'Picante:</strong> '+abordagensCulinarias['Picante']+'</div>'+
-        '<div><strong>'+nbsp(8)+'Salgado:</strong> '+abordagensCulinarias['Salgado']+'</div></div><br>'+
+        '<div><strong>'+nbsp(13)+'Ácido:</strong> '+abordagensCulinarias['Ácido']+'</div>'+
+        '<div><strong>'+nbsp(9)+'Amargo:</strong> '+abordagensCulinarias['Amargo']+'</div>'+
+        '<div><strong>'+nbsp(14)+'Doce:</strong> '+abordagensCulinarias['Doce']+'</div>'+
+        '<div><strong>'+nbsp(17)+'Frio:</strong> '+abordagensCulinarias['Frio']+'</div>'+
+        '<div><strong>'+nbsp(10)+'Picante:</strong> '+abordagensCulinarias['Picante']+'</div>'+
+        '<div><strong>'+nbsp(9)+'Salgado:</strong> '+abordagensCulinarias['Salgado']+'</div></div><br>'+
         '<div><strong>FAÇANHAS</strong>'+
         '<div class="textIndent">'+random(stunts('Uranium'))+'</div>'+
         '<div class="textIndent">'+random(stunts(abordagensReais[0])).replace("Poderoso","Agressivo")+'</div>'+
