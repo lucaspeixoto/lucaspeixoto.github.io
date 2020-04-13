@@ -46,7 +46,7 @@ function umdaar(type) {
             break;
 
         case "adventure":
-            return ['resgatar','descobrir','impedir','escapar','defender','matar','conseguir'];
+            return ['resgatar','descobrir','impedir','escapar','defender','escoltar','matar','conseguir'];
             break;
 
         case "resgatar":
