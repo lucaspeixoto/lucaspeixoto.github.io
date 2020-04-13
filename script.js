@@ -284,14 +284,14 @@ $( document ).ready(function() {
 
       case "defender":
         aventura = '<strong>DEFENDER!</strong><br><br><i>Alguém ou algo precioso está em perigo – você deve mantê-lo seguro.</i><br><br>'+
-        'Você foi informado por um mensageiro de que, do outro lado d'+wildland+', passando pel'+midway.split('–')[0]+', está '+victim.split('–')[0]+' ou '+destination+', que você deve defender contra o ataque do '+master+' '+nome+', um '+bioforma+'.'+
-        '<br><br><i>Mais detalhes:</i><br><br>'+victim+'<br><br>'+midway+'<br><br>'+adventure_type;
+        'Você foi informado por um mensageiro de que, do outro lado d'+wildland+', passando pel'+midway.split('–')[0]+', está '+resgatar.split('–')[0]+' ou '+destination+', que você deve defender contra o ataque do '+master+' '+nome+', um '+bioforma+'.'+
+        '<br><br><i>Mais detalhes:</i><br><br>'+resgatar+'<br><br>'+midway+'<br><br>'+adventure_type;
         break;
 
       case "escoltar":
         aventura = '<strong>ESCOLTAR!</strong><br><br><i>Alguém ou algo precioso está em perigo – você deve mantê-lo seguro.</i><br><br>'+
-        'Você tem que levar '+victim.split('–')[0]+' com segurança pel'+wildland+', passando pel'+midway.split('–')[0]+', além d'+destination+', e fora do alcance do '+master+' '+nome+', um '+bioforma+'.'+
-        '<br><br><i>Mais detalhes:</i><br><br>'+victim+'<br><br>'+midway;
+        'Você tem que levar '+resgatar.split('–')[0]+' com segurança pel'+wildland+', passando pel'+midway.split('–')[0]+', além d'+destination+', e fora do alcance do '+master+' '+nome+', um '+bioforma+'.'+
+        '<br><br><i>Mais detalhes:</i><br><br>'+resgatar+'<br><br>'+midway;
         break;
 
       case "matar":
