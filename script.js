@@ -257,7 +257,7 @@ $( document ).ready(function() {
     switch(aventura){
       case "resgatar":
         aventura = '<strong>RESGATAR</strong><br><br><i>Alguém está em perigo e você precisa fazer o resgate.</i><br><br>'+
-        'Ao passar uma tarde agradável em '+landsoflight+', uma mensagem chega até você: Você deve salvar '+victim.split('–')[0]+' indefeso. Para alcançá-lo, você deve primeiro viajar pelas '+wildland+'. Então, você deve entrar na terra do Mestre '+master+' '+nome+', um '+bioforma+', e se infiltrar no '+destination+'!'+
+        'Ao passar uma tarde agradável em '+landsoflight+', uma mensagem chega até você: Você deve salvar '+victim.split('–')[0]+' indefeso. Para alcançá-lo, você deve primeiro viajar pelas '+wildland+'. Então, você deve entrar na terra do Mestre '+master+' '+nome+', um '+bioforma+', e se infiltrar n'+destination+'!'+
         '<br><br><i>Mais detalhes:</i><br><br>' + victim;
         break;
 
@@ -269,7 +269,7 @@ $( document ).ready(function() {
 
       case "impedir":
         aventura = '<strong>IMPEDIR</strong><br><br><i>Um plano maligno está em movimento. Somente você pode impedir que ele se realize.</i><br><br>'+
-        victim.split('–')[0]+' pede que você viaje pela '+wildland+' até o '+destination+', onde o vil '+master+' '+nome+', um '+bioforma+' está realizando sua trama. Você deve impedir '+adventure_type.split('–')[0]+
+        victim.split('–')[0]+' pede que você viaje pela '+wildland+' até '+destination+', onde o vil '+master+' '+nome+', um '+bioforma+' está realizando sua trama. Você deve impedir '+adventure_type.split('–')[0]+
         '<br><br><i>Mais detalhes:</i><br><br>'+victim+'<br><br>'+adventure_type;
         break;
 
@@ -287,19 +287,19 @@ $( document ).ready(function() {
 
       case "escoltar":
         aventura = '<strong>ESCOLTAR</strong><br><br><i>Alguém ou algo precioso está em perigo – você deve mantê-lo seguro.</i><br><br>'+
-        'Você tem que levar '+victim.split('–')[0]+' com segurança por '+wildland+', além do '+destination+', e fora do alcance do '+master+' '+nome+', um '+bioforma+'.'+
+        'Você tem que levar '+victim.split('–')[0]+' com segurança por '+wildland+', além d'+destination+', e fora do alcance do '+master+' '+nome+', um '+bioforma+'.'+
         '<br><br><i>Mais detalhes:</i><br><br>'+victim;
         break;
 
       case "matar":
-        aventura = '<strong>MATAR!</strong><br><br><i>Uma ameaça vem ameaçando os pacíficos aldeões e o causador precisa ser interrompido.</i><br><br>'+
-        victim.split('–')[0]+' informa sobre uma ameaça tão vil que você pode ser forçado a viajar por '+wildland+' até o '+destination+' para que seus guerreiros matem '+adventure_type.split('–')[0]+
+        aventura = '<strong>MATAR!</strong><br><br><i>Uma ameaça vem aterrorizando os pacíficos aldeões e o causador precisa ser interrompido.</i><br><br>'+
+        victim.split('–')[0]+' informa sobre uma ameaça tão vil que você pode ser forçado a viajar por '+wildland+' até '+destination+' para que seus guerreiros matem '+adventure_type.split('–')[0]+
         '<br><br><i>Mais detalhes:</i><br><br>'+victim+'<br><br>'+adventure_type;
         break;
 
       case "conseguir":
         aventura = '<strong>CONSEGUIR</strong><br><br><i>Um item-chave mantém o equilíbrio de poder na Terra Selvagem.</i><br><br>'+
-        victim.split('–')[0]+' informa sobre o item essencial – para alcançá-lo, você deve vencer a '+wildland+' com o '+destination+'. Sejam rápidos, pois o ganancioso '+master+' '+nome+', um '+bioforma+' tentará impedi-lo de obter '+adventure_type.split('–')[0]+
+        victim.split('–')[0]+' informa sobre o item essencial – para alcançá-lo, você deve desbravar '+wildland+' até chegar n'+destination+'. Sejam rápidos, pois o ganancioso '+master+' '+nome+', um '+bioforma+' tentará impedi-lo de obter '+adventure_type.split('–')[0]+'.'+
         '<br><br><i>Mais detalhes:</i><br><br>'+victim+'<br><br>'+adventure_type;
         break;
 
