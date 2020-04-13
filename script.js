@@ -251,7 +251,7 @@ $( document ).ready(function() {
     switch(aventura){
       case "resgatar":
         victim = random(umdaar('victim'));
-        aventura = 'Ao passar uma tarde agradável em '+random(umdaar('landsoflight').prefix)+' '+random(umdaar('landsoflight').suffix)+', uma mensagem chega até você: Você deve salvar o/a '+victim.split('–')[0];+' indefeso. Para alcançá-lo, você deve primeiro viajar pelas '+random(umdaar('wildland').prefix)+' '+random(umdaar('wildland').suffix)+'. Então, você deve entrar na terra do Mestre '+random(umdaar('master').prefix)+' '+random(umdaar('master').suffix)+' '+random(races('bioforma').prefix)+random(races('bioforma').suffix)+', um '+bioforma+', e se infiltrar no '+random(umdaar('destination').prefix)+' '+random(umdaar('destination').suffix)+'!';
+        aventura = 'Ao passar uma tarde agradável em '+random(umdaar('landsoflight').prefix)+' '+random(umdaar('landsoflight').suffix)+', uma mensagem chega até você: Você deve salvar o/a '+victim.split('–')[0]+' indefeso. Para alcançá-lo, você deve primeiro viajar pelas '+random(umdaar('wildland').prefix)+' '+random(umdaar('wildland').suffix)+'. Então, você deve entrar na terra do Mestre '+random(umdaar('master').prefix)+' '+random(umdaar('master').suffix)+' '+random(races('bioforma').prefix)+random(races('bioforma').suffix)+', um '+bioforma+', e se infiltrar no '+random(umdaar('destination').prefix)+' '+random(umdaar('destination').suffix)+'!';
         aventura = aventura + '<br><br>' + victim;
         break;
 
