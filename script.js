@@ -229,4 +229,63 @@ $( document ).ready(function() {
 
   });
 
+
+
+  $('#btnGerarUmdaar').click(function(){
+
+    var bioforma = random(races('bioforma').bioforma);
+
+    switch(bioforma){
+      case "Homem-besta":
+        bioforma = "Homem-"+random(races('bioforma').tipo);
+        break;
+      case "Quimera":
+        bioforma = "Quimera ("+random(races('bioforma').tipo)+' e '+random(races('bioforma').tipo)+')';
+        break;
+      default:
+        bioforma = random(races('bioforma').tipo)+' '+bioforma;
+    }
+
+    var aventura = ($('#selectAdventure').val() == '') ? random(umdaar('adventure')) : $('#selectAdventure').val();
+
+    switch(aventura){
+      case "resgatar":
+        aventura = 'Ao passar uma tarde agradável em '+random(umdaar('landsoflight').prefix)+random(races('landsoflight').suffix)+', uma mensagem chega até você: Você deve salvar o/a '+random(umdaar('victim'))+' indefeso. Para alcançá-lo, você deve primeiro viajar pelas '+random(umdaar('wildland').prefix)+random(races('wildland').suffix)+'. Então, você deve entrar na terra do Mestre '+random(races('master').prefix)+random(races('master').suffix)+' '+random(races('bioforma').prefix)+random(races('bioforma').suffix)+', um '+bioforma+', e se infiltrar no '+random(umdaar('destination').prefix)+random(races('destination').suffix)+'!';
+        break;
+
+      case "descobrir":
+        aventura = 'A __Vítima__ pede que você viaje pela __Terra Selvagem__, na esperança de que você possa descobrir...';
+        break;
+
+      case "impedir":
+        aventura = 'A __Vítima__ pede que você viaje pela __Terra Selvagem__ até o __Covil do Mal__, onde o vil __Mestre__ está realizando sua trama. Você deve impedir';
+        break;
+
+      case "escapar":
+        aventura = 'Você começa nas garras do malicioso __Mestre __, você deve romper as forças dele e através da indomável __Terra Selvagem__, se quiser escapar...';
+        break;
+
+      case "defender":
+        aventura = 'Você foi informado por um mensageiro de que, do outro lado de __Terra Selvagem___, está __Vítima__ ou __Covil do Mal__, que você deve defender contra o ataque do __Mestre__.';
+        break;
+
+      case "escoltar":
+        aventura = 'Você tem que levar o __Vítima__ com segurança por __Terra Selvagem__, além do __Covil do Mal__, e fora do alcance do __Mestre__.';
+        break;
+
+      case "matar":
+        aventura = 'A  __Vítima__ informa sobre uma ameaça tão vil que você pode ser forçado a viajar por __ Terras Selvagens __ até o __Covil do Mal__ para que seus guerreiros MATEM';
+        break;
+
+      case "conseguir":
+        aventura = 'A __Vítima__ informa sobre o item essencial – para alcançá-lo, você deve vencer a __Terra Selvagem__ com o __Covil do Mal__. Sejam rápidos, pois o ganancioso __Mestre__ tentará impedi-lo de obter...';
+        break;
+    }
+
+    $('.boxPersonagemFate').html(aventura);
+
+    $('.boxPersonagemFate').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '550px', 'box-shadow': '5px 5px 10px lightgrey'});
+
+  });
+
 });
