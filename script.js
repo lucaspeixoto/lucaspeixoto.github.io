@@ -252,7 +252,7 @@ $( document ).ready(function() {
     var nome = '<strong>'+random(races('bioforma').prefix)+random(races('bioforma').suffix)+'</strong>';
     var destination = '<strong>'+random(umdaar('destination').prefix)+' '+random(umdaar('destination').suffix)+'</strong>';
     var victim = random(umdaar('victim'));
-    var adventure_type = random(umdaar('aventura'));
+    var adventure_type = random(umdaar(aventura));
 
     switch(aventura){
       case "resgatar":
@@ -298,7 +298,7 @@ $( document ).ready(function() {
         aventura = aventura + '<br><br><i>Mais detalhes:</i><br><br>' + victim;
         aventura = aventura + '<br><br>' + adventure_type;
         break;
-        
+
     }
 
     $('.boxPersonagemFate').html(aventura);
