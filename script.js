@@ -259,7 +259,7 @@ $( document ).ready(function() {
       case "victim":
         aventura = '<strong>RESGATAR!</strong><br><br><i>Alguém está em perigo e você precisa fazer o resgate.</i><br><br>'+
         'Ao passar uma tarde agradável em '+landsoflight+', uma mensagem chega até você: Você deve salvar '+victim.split('–')[0]+' indefeso. Para alcançá-lo, você deve primeiro viajar pel'+wildland+', passando pel'+midway.split('–')[0]+'. Então, você deve entrar na terra do '+master+' '+nome+', um '+bioforma+', e se infiltrar n'+destination+'!'+
-        '<br><br><i>Mais detalhes:</i><br><br>'+victim+'<br><br>'+midway+;
+        '<br><br><i>Mais detalhes:</i><br><br>'+victim+'<br><br>'+midway;
         break;
 
       case "descobrir":
