@@ -252,6 +252,7 @@ $( document ).ready(function() {
     var master = '<strong>'+random(umdaar('master').prefix)+' '+random(umdaar('master').suffix)+'</strong>';
     var nome = '<strong>'+random(races('bioforma').prefix)+random(races('bioforma').suffix)+'</strong>';
     var destination = '<strong>'+random(umdaar('destination').prefix)+' '+random(umdaar('destination').suffix)+'</strong>';
+    var artifact = '<strong>'+random(umdaar('artifact').prefix)+' '+random(umdaar('artifact').suffix)+'</strong>';
     var victim = random(umdaar('victim'));
     var adventure_type = random(umdaar(aventura));
 
@@ -301,7 +302,7 @@ $( document ).ready(function() {
       case "conseguir":
         aventura = '<strong>CONSEGUIR!</strong><br><br><i>Um item-chave mantém o equilíbrio de poder na Terra Selvagem.</i><br><br>'+
         victim.split('–')[0]+' informa sobre o item essencial – para alcançá-lo, você deve desbravar '+wildland+', passando pel'+midway.split('–')[0]+' até chegar n'+destination+'. Sejam rápidos, pois o ganancioso '+master+' '+nome+', um '+bioforma+' tentará impedi-lo de obter '+adventure_type.split(' –')[0]+'.'+
-        '<br><br><i>Mais detalhes:</i><br><br>'+victim+'<br><br>'+midway+'<br><br>'+adventure_type;
+        '<br><br><i>Mais detalhes:</i><br><br>'+victim+'<br><br>'+midway+'<br><br>'+adventure_type+'<br><br>Artefato - '+artifact;
         break;
 
     }
