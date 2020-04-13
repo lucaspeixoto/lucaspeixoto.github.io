@@ -4,6 +4,7 @@ $( document ).ready(function() {
       $("#btnGerarNPC").trigger('click');
       $("#btnGerarFate").trigger('click');
       $("#btnGerarWoa").trigger('click');
+      $("#btnGerarUmdaar").trigger('click');
   },10);
 
   $('#btnGerarNPC').click(function(){
@@ -229,8 +230,6 @@ $( document ).ready(function() {
 
   });
 
-
-
   $('#btnGerarUmdaar').click(function(){
 
     var bioforma = random(races('bioforma').bioforma);
@@ -253,40 +252,53 @@ $( document ).ready(function() {
     var nome = '<strong>'+random(races('bioforma').prefix)+random(races('bioforma').suffix)+'</strong>';
     var destination = '<strong>'+random(umdaar('destination').prefix)+' '+random(umdaar('destination').suffix)+'</strong>';
     var victim = random(umdaar('victim'));
+    var adventure_type = random(umdaar('aventura'));
 
     switch(aventura){
       case "resgatar":
-        aventura = 'Ao passar uma tarde agradável em '+landsoflight+', uma mensagem chega até você: Você deve salvar o/a '+victim.split('–')[0]+' indefeso. Para alcançá-lo, você deve primeiro viajar pelas '+wildland+'. Então, você deve entrar na terra do Mestre '+master+' '+nome+', um '+bioforma+', e se infiltrar no '+destination+'!';
+        aventura = 'Ao passar uma tarde agradável em '+landsoflight+', uma mensagem chega até você: Você deve salvar '+victim.split('–')[0]+' indefeso. Para alcançá-lo, você deve primeiro viajar pelas '+wildland+'. Então, você deve entrar na terra do Mestre '+master+' '+nome+', um '+bioforma+', e se infiltrar no '+destination+'!';
         aventura = aventura + '<br><br><i>Mais detalhes:</i><br><br>' + victim;
         break;
 
       case "descobrir":
-        aventura = 'A __Vítima__ pede que você viaje pela __Terra Selvagem__, na esperança de que você possa descobrir...';
+        aventura = victim.split('–')[0]+' pede que você viaje pela '+wildland+', na esperança de que você possa descobrir '+adventure_type.split('–')[0];
+        aventura = aventura + '<br><br><i>Mais detalhes:</i><br><br>' + victim;
+        aventura = aventura + '<br><br>' + adventure_type;
         break;
 
       case "impedir":
-        aventura = 'A __Vítima__ pede que você viaje pela __Terra Selvagem__ até o __Covil do Mal__, onde o vil __Mestre__ está realizando sua trama. Você deve impedir';
+        aventura = victim.split('–')[0]+' pede que você viaje pela '+wildland+' até o '+destination+', onde o vil '+master+' '+nome+', um '+bioforma+' está realizando sua trama. Você deve impedir '+adventure_type.split('–')[0];
+        aventura = aventura + '<br><br><i>Mais detalhes:</i><br><br>' + victim;
+        aventura = aventura + '<br><br>' + adventure_type;
         break;
 
       case "escapar":
-        aventura = 'Você começa nas garras do malicioso __Mestre __, você deve romper as forças dele e através da indomável __Terra Selvagem__, se quiser escapar...';
+        aventura = 'Você começa nas garras do malicioso '+master+' '+nome+', um '+bioforma+', você deve romper as forças dele e através da indomável '+wildland+', se quiser escapar '+adventure_type.split('–')[0];
+        aventura = aventura + '<br><br><i>Mais detalhes:</i><br><br>' + adventure_type;
         break;
 
       case "defender":
-        aventura = 'Você foi informado por um mensageiro de que, do outro lado de __Terra Selvagem___, está __Vítima__ ou __Covil do Mal__, que você deve defender contra o ataque do __Mestre__.';
+        aventura = 'Você foi informado por um mensageiro de que, do outro lado de '+wildland+', está '+victim.split('–')[0]+' ou '+destination+', que você deve defender contra o ataque do '+master+' '+nome+', um '+bioforma+'.';
+        aventura = aventura + '<br><br><i>Mais detalhes:</i><br><br>' + victim;
         break;
 
       case "escoltar":
-        aventura = 'Você tem que levar o __Vítima__ com segurança por __Terra Selvagem__, além do __Covil do Mal__, e fora do alcance do __Mestre__.';
+        aventura = 'Você tem que levar '+victim.split('–')[0]+' com segurança por '+wildland+', além do '+destination+', e fora do alcance do '+master+' '+nome+', um '+bioforma+'.';
+        aventura = aventura + '<br><br><i>Mais detalhes:</i><br><br>' + victim;
         break;
 
       case "matar":
-        aventura = 'A  __Vítima__ informa sobre uma ameaça tão vil que você pode ser forçado a viajar por __ Terras Selvagens __ até o __Covil do Mal__ para que seus guerreiros MATEM';
+        aventura = victim.split('–')[0]+' informa sobre uma ameaça tão vil que você pode ser forçado a viajar por '+wildland+' até o '+destination+' para que seus guerreiros matem '+adventure_type.split('–')[0];
+        aventura = aventura + '<br><br><i>Mais detalhes:</i><br><br>' + victim;
+        aventura = aventura + '<br><br>' + adventure_type;
         break;
 
       case "conseguir":
-        aventura = 'A __Vítima__ informa sobre o item essencial – para alcançá-lo, você deve vencer a __Terra Selvagem__ com o __Covil do Mal__. Sejam rápidos, pois o ganancioso __Mestre__ tentará impedi-lo de obter...';
+        aventura = victim.split('–')[0]+' informa sobre o item essencial – para alcançá-lo, você deve vencer a '+wildland+' com o '+destination+'. Sejam rápidos, pois o ganancioso '+master+' '+nome+', um '+bioforma+' tentará impedi-lo de obter '+adventure_type.split('–')[0];
+        aventura = aventura + '<br><br><i>Mais detalhes:</i><br><br>' + victim;
+        aventura = aventura + '<br><br>' + adventure_type;
         break;
+        
     }
 
     $('.boxPersonagemFate').html(aventura);
