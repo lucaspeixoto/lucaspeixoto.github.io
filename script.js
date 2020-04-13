@@ -266,13 +266,13 @@ $( document ).ready(function() {
 
       case "descobrir":
         aventura = '<strong>DESCOBRIR!</strong><br><br><i>Alguma coisa está lá fora, espreitando à beira da civilização naquele rincão remoto. É hora de descobrir o que é.</i><br><br>'+
-        victim+' pede que você viaje pel'+wildland+', passando pel'+midway.split('–')[0]+', na esperança de que você possa descobrir '+adventure_type.split(' –')[0]+'.'+
+        victim+', de '+landsoflight+', pede que você viaje pel'+wildland+', passando pel'+midway.split('–')[0]+', na esperança de que você possa descobrir '+adventure_type.split(' –')[0]+'.'+
         '<br><br><i>Mais detalhes:</i><br><br>'+midway+'<br><br>'+adventure_type+'<br><br>Terra Selvagem - <strong>'+random(umdaar('wildland').prefix)+' '+random(umdaar('wildland').suffix)+'</strong><br>Covil do mal - '+destination;
         break;
 
       case "impedir":
         aventura = '<strong>IMPEDIR!</strong><br><br><i>Um plano maligno está em movimento. Somente você pode impedir que ele se realize.</i><br><br>'+
-        victim+' pede que você viaje pel'+wildland+' até '+destination+', onde o vil '+master+' '+nome+', um '+bioforma+' está realizando sua trama. Você deve atravessar '+midway.split('–')[0]+' e impedir '+adventure_type.split('–')[0]+'.'+
+        victim+', de '+landsoflight+', pede que você viaje pel'+wildland+' até '+destination+', onde o vil '+master+' '+nome+', um '+bioforma+' está realizando sua trama. Você deve atravessar '+midway.split('–')[0]+' e impedir '+adventure_type.split('–')[0]+'.'+
         '<br><br><i>Mais detalhes:</i><br><br>'+midway+'<br><br>'+adventure_type;
         break;
 
@@ -284,7 +284,7 @@ $( document ).ready(function() {
 
       case "defender":
         aventura = '<strong>DEFENDER!</strong><br><br><i>Alguém ou algo precioso está em perigo – você deve mantê-lo seguro.</i><br><br>'+
-        'Você foi informado por um mensageiro de que, do outro lado d'+wildland+', passando pel'+midway.split('–')[0]+', está '+resgatar.split('–')[0]+' ou '+destination+', que você deve defender contra o ataque do '+master+' '+nome+', um '+bioforma+'.'+
+        'Você foi informado por um mensageiro de '+landsoflight+' que, do outro lado d'+wildland+', passando pel'+midway.split('–')[0]+', está '+resgatar.split('–')[0]+' ou '+destination+', que você deve defender contra o ataque do '+master+' '+nome+', um '+bioforma+'.'+
         '<br><br><i>Mais detalhes:</i><br><br>'+resgatar+'<br><br>'+midway+'<br><br>'+adventure_type;
         break;
 
@@ -296,13 +296,13 @@ $( document ).ready(function() {
 
       case "matar":
         aventura = '<strong>MATAR!</strong><br><br><i>Uma ameaça vem aterrorizando os pacíficos aldeões e o causador precisa ser aniquilado.</i><br><br>'+
-        victim+' informa sobre uma ameaça tão vil que você pode ser forçado a viajar pel'+wildland+' até '+destination+', passando pel'+midway.split('–')[0]+', para que vocês matem '+adventure_type.split('–')[0]+
+        victim+', de '+landsoflight+', informa sobre uma ameaça tão vil que você pode ser forçado a viajar pel'+wildland+' até '+destination+', passando pel'+midway.split('–')[0]+', para que vocês matem '+adventure_type.split('–')[0]+
         '<br><br><i>Mais detalhes:</i><br><br>'+midway+'<br><br>'+adventure_type;
         break;
 
       case "conseguir":
         aventura = '<strong>CONSEGUIR!</strong><br><br><i>Um item-chave mantém o equilíbrio de poder na Terra Selvagem.</i><br><br>'+
-        victim+' informa sobre o item essencial – para alcançá-lo, você deve desbravar '+wildland+', passando pel'+midway.split('–')[0]+' até chegar n'+destination+'. Sejam rápidos, pois o ganancioso '+master+' '+nome+', um '+bioforma+' tentará impedi-lo de obter '+adventure_type.split(' –')[0]+'.'+
+        victim+', de '+landsoflight+', informa sobre o item essencial – para alcançá-lo, você deve desbravar '+wildland+', passando pel'+midway.split('–')[0]+' até chegar n'+destination+'. Sejam rápidos, pois o ganancioso '+master+' '+nome+', um '+bioforma+' tentará impedi-lo de obter '+adventure_type.split(' –')[0]+'.'+
         '<br><br><i>Mais detalhes:</i><br><br>'+midway+'<br><br>'+adventure_type+'<br><br>Artefato - '+artifact;
         break;
 
