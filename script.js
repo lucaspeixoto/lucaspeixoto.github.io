@@ -257,7 +257,7 @@ $( document ).ready(function() {
     switch(aventura){
       case "resgatar":
         aventura = 'Ao passar uma tarde agradável em '+landsoflight+', uma mensagem chega até você: Você deve salvar o/a '+victim.split('–')[0]+' indefeso. Para alcançá-lo, você deve primeiro viajar pelas '+wildland+'. Então, você deve entrar na terra do Mestre '+master+' '+nome+', um '+bioforma+', e se infiltrar no '+destination+'!';
-        aventura = aventura + '<br><br>' + victim;
+        aventura = aventura + '<br><br><i>Mais detalhes:</i><br><br>' + victim;
         break;
 
       case "descobrir":
