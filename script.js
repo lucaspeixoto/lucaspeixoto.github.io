@@ -267,7 +267,7 @@ $( document ).ready(function() {
       case "descobrir":
         aventura = '<strong>DESCOBRIR!</strong><br><br><i>Alguma coisa está lá fora, espreitando à beira da civilização naquele rincão remoto. É hora de descobrir o que é.</i><br><br>'+
         victim+', de '+landsoflight+', pede que você viaje pel'+wildland+', passando pel'+midway.split('–')[0]+', na esperança de que você possa descobrir '+adventure_type.split(' –')[0]+'.'+
-        '<br><br><i>Mais detalhes:</i><br><br>'+midway+'<br><br>'+adventure_type+'<br><br>Terra Selvagem - <strong>'+random(umdaar('wildland').prefix)+' '+random(umdaar('wildland').suffix)+'</strong><br>Covil do mal - '+destination;
+        '<br><br><i>Mais detalhes:</i><br><br>'+midway+'<br><br>'+adventure_type+'<br><br>Terra Selvagem - <strong>'+random(umdaar('wildland').prefix)+' '+random(umdaar('wildland').suffix)+'</strong><br>Domínio Sombrio - '+destination;
         break;
 
       case "impedir":
