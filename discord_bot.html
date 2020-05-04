@@ -65,16 +65,33 @@ fetch("./nav.html")
       <li><strong>!r +3 5 A</strong> = faz a rolagem para a ação especificada e já dá o resultado completo</li>
       <li>As ações: (A)taque | (D)efesa | (S)uperar | (CA) Criar vantagem para Criar Aspecto | (CE) Criar vantagem em Aspecto Existente</li>
     </ul>
+    <h5>Ao invés de <strong>!r</strong> você pode especificar uma ação de Fate:</h5>
+    <ul>
+      <li><strong>!atacar</strong> (o seu bônus) (o valor da defesa) =  para atacar</li>
+      <li><strong>!defender</strong> (o seu bônus) (o valor do ataque) = para se defender</li>
+      <li><strong>!superar</strong> (o seu bônus) (a dificuldade) = para superar</li>
+      <li><strong>!criar</strong> (o seu bônus) (a dificuldade) = para criar um aspecto</li>
+      <li><strong>!descobrir</strong> (o seu bônus) (a dificuldade) = para descobrir um aspecto existente</li>
+    </ul>
     <p><strong>!edge</strong> = rola 3 dados fates +1d6, aceita os mesmo parâmetros de !r</p>
-    <p><strong>!tachyon</strong> (tipo) = rola 6 dados fates e seleciona 4, aceita os mesmo parâmetros subsequentes de !r.<br>O parâmetro tipo indica se serão escolhidos os 4 melhores (V) ou 4 piores (D). (ex.: !tachyon V +3)</p>
+    <p><strong>!tachyon</strong> (tipo) = rola 6 dados fates e seleciona 4, aceita os mesmo parâmetros subsequentes de !r.
+      <br>O parâmetro tipo indica se serão escolhidos os 4 melhores (V) ou 4 piores (D). (ex.: !tachyon V +3)</p>
     <h4>Estatísticas aleatórias</h4>
     <p><strong>!pdn </strong> (nome) = gera um personagem da narradora aleatório, o primeiro parâmetro será o seu nome (ex.: !pdn José)</p>
     <p><strong>!abordagens</strong> = gera valores aleatórios para as abordagens FAE</p>
     <p><strong>!pericias </strong> (topo) = gera valores aleatórios para as perícas FCon, o primeiro parâmetro é o topo da pirâmide (ex.: !pericias 4)</p>
+    <p><strong>!aspecto </strong>(tipo) = aceita os tipos <i>conceito</i> e <i>problema</i>, se não especificado retorna um aspecto genérico</p>
+    <p><strong>!facanha </strong>(tipo) = como tipo aceita qualquer perícia ou abordagem</p>
     <h4>Específicos de cenários</h4>
     <p><strong>!uranium</strong> = gera um personagem aleatório completo de Uranium Chef</p>
     <p><strong>!umdaar</strong> = gera um personagem aleatório completo de Mestres de Umdaar</p>
     <p><strong>!umdaar aventura</strong> = gera uma aventura aleatória para Mestres de Umdaar</p>
+    <p><strong>!medieval</strong> = gera um personagem aleatório completo de fantasia medieval
+    <br>!medieval (sistema) (bioforma) (classe) = ex.: !medieval fcon halfling ladino</p>
+    <br>Os parâmetros possíveis são (para bioformas ou classes aleatórias coloque um x):
+    <br>sistema = fcon ou fae
+    <br>bioforma = elfo, anao, halfling ou humano
+    <br>classe = druida, ladino ou monge
   </div>  
 
 <!-- End page content -->
