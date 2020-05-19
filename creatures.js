@@ -1,0 +1,67 @@
+function creatures(type) {
+  
+    switch(type){
+
+        case "nature":
+            return ['Demônio da Agonia','Demônio da Catástrofe','Demônio da Conspiração','Demônio da Profanação','Demônio da Carnificina','Demônio da Fortuna','Joia Monstruosa','Baú Monstruoso','Espada Monstruosa','Orbe Monstruosa','Cristal Monstruoso','Ovo Monstruoso','Leão','Tigre','Puma','Chimpanzé','Babuíno','Rato','Toupeira','Castor','Cão','Lobo','Raposa','Urso','Panda','Urso Polar','Elefante','Rinoceronte','Ameba','Verme','Vísceras','Órgãos','Tentáculos','Limo','Gosma','Sólido geométrico','Armadura viva','Homúnculo','Boneco','Estátua viva','Autômato mecânico','Morcego','Águia','Falcão','Coruja','Abutre','Corvo','Urubu','Ave Canora','Colibri','Garça','Cegonha','Enxame','Emaranhado','Espantalho','Pterodátilo','Golem de Barro','Golem de Carne','Golem de Ferro','Golem de Pedra','Golem de Cinzas','Golem de Cristal','Troll','Ogro','Ciclope','Yeti','Basilisco','Gárgula','Sapo','Rã','Cobra','Serpente','Lagarto','Iguana','Tartaruga','Cágado','Crocodilo','Jacaré','Salamandra','Tritão','Bode Infernal','Porco Infernal','Cavalo Infernal','Cão Infernal','Touro Infernal','Gorila Infernal','Gigante do Fogo','Gigante do Gelo','Gigante de Pedra','Gigante das Nuvens','Gigante da Colina','Gigante da Tempestade','Polvo','Lula','Água-viva','Caravela','Enguia','Arraia','Tubarão','Piranha','Peixe Abissal','Baleia','Homem Cinza','Serpente marinha','Abelha','Mosca','Libélula','Insetoide','Vermiforme','Hidra','Besouro','Lacraia','Verme','Gelatinoso','Amorfo','Verme Gigante','Aranha','Escorpião','Besta Mutante','Titã','Lesma','Minhoca','Rochoso','Sintético','Dinossauro','Grilo','Louva-Deus','Ser de Energia','Kraken','Caranguejo','Lagosta','Abissal do caos','Vapor do espaço','Fungo hexápode','Colosso sangrento','Praga escamosa','Plasma de tentáculos','Dragão Azul','Dragão Branco','Dragão Negro','Dragão Verde','Dragão Vermelho','Dragão das Sombras','Musgo','Cogumelo','Cipós','Raízes','Flor','Fruto','Arbusto','Árvore','Samurai','Soldado de elite Robô','Gênio','Guerreiro','Assassino alado Robô','Anjo','Guardião','Robô Insetoide','Sereia','Tritão','Cavaleiro','Besta Metálica','Esfinge','Estrategista','Emaranhado de cabos','Súcubo','Íncubo','General','Nuvem de nanorrobôs','Divindade','Cultista','Incinerador','Elemental de Fogo','Monge','Triturador','Elemental de Água','Sacerdote','Metralhadora','Elemental de Terra','Paladino','Esmagador','Elemental de Ar','Ancião','Desintegrador','Elemental de Sombra','Profeta','Repulsor','Elemental de Energia','Feiticeiro','Quadrúpede blindado','Vampiro','Mago','Caminhhão de combate','Zumbi','Carniçal','Bruxo','Aeronave','Espaçonave','Esqueleto','Caveira','Ilusionista','Mechagolem','Lich','Banshee','Oráculo','Drone','Espectro','Fantasma','Psiônico','Tanque de Guerra','Múmia','Lobisomem','Computador','Olho','Homem-urso','Explosivo','Pirâmide','Cubo','Homem-rato','Laser','Névoa','Homem-tigre','Projetor','Cérebro','Homem-javali','Transmissor','Anéis de energia','Homem-lagarto','Campo de força','Brilhos e cores','Assassino','Holograma','Grifo','Espião','Vírus','Harpia','Gladiador','Realidade virtual','Minotauro','Centauro','Pirata','Nuvem de dados','Unicórnio','Cientista','Inteligência artificial','Cocatriz','Caçador','Ondas eletromagnéticas','Mantícora','Elfo','Androide','Fada','Anão','Ciborgue','Dríade','Gnomo','Híbrido','Fauno','Orc','Biossimulacro','Sátiro','Goblinoide','Neo-humano','Pixie','Halfling','Clone sintético','Brownie'];
+            break;
+
+        case "origin":
+            return ['floresta','montanha','deserto','mar','pântano','colinas','neve','lago','mar','selva','pradarias','campo','caverna','submundo','vale','abismo','além','profundezas','noite','crepúsculo','lua','tempestade','neblina','espaço','prisão','templo','torre','cemitério','ruínas','estrada','morte','destino','vazio','fronteira','futuro','cinzas'];
+            break;
+
+        case "function":
+            return ['agitador','atormentador','batedor','caçador','calculista','comandante','condutor','conjurador','construtor','controlador','corruptor','criador','defensor','destruidor','devorador','domador','dominador','enganador','escavador','explorador','guia','imitador','invasor','investigador','justiceiro','manipulador','matador','navegador','negociador','observador','opressor','perseguidor','perturbador','protetor','rastreador','vigia'];
+            break;
+
+        case "reputation":
+            return ['abissal','amaldiçoado','ambicioso','ancestral','andarilho','assombrado','bárbaro','brutal','chantagista','cruel','desertor','destemido','erudito','exilado','fanático','fiel','forasteiro','fugitivo','implacável','impostor','influente','malicioso','mercenário','meticuloso','profeta','psicótico','repulsivo','sábio','sagrado','sedutor','sombrio','sorrateiro','trapaceiro','vidente','vingativo','violento'];
+            break;
+
+        case "mutation":
+            return ['a vapor','alado','albino','alienígena','aquático','artificial','cibernético','cintilante','corrompido','das sombras','de aço','de cristal','de energia','de fogo','de guerra','de luz','de pedra','demoníaco','dourado','elétrico','encouraçado','escarlate','espectral','gelatinoso','gigante','ilusório','imaterial','licantropo','mágico','mecânico','minúsculo','morto-vivo','púrpura','pútrido','rastejante','translúcido'];
+            break;
+
+        case "action":
+            return ['destruir','manipular','matar','capturar','caçar','violar','vigiar','vingar','corromper','conquistar','defender','eliminar','expulsar','fortalecer','enfraquecer','perseguir','negociar','enganar'];
+            break;
+
+        case "target":
+            return ['mestre','comunidade','prole','objeto','local','organização','relação','recurso','tecnologia','informação','segredo','entidade','orgulho','honra','equilíbrio','poder','dívida','desejo'];
+            break;
+
+        case "matter":
+            return ['fogo','água','luz','trevas','sangue','madeira','eletricidade','música','calor','magnetismo','radiação','gás','ouro','prata','ferro frio','diamante','rocha','cristal','veneno','vidro','alho','sal','ácido','óleo','símbolo místico','cera de abelha','cinzas','sinos','espelho','água benta','arma mágica','arma lendária','arma roubada','arma abençoada','arma enferrujada','arma com nome próprio'];
+            break;
+
+        case "condition":
+            return ['decapitação','exorcismo','sacrifício','oferenda','suborno','bajulação','fazer um pacto','usar nome verdadeiro','destruir um item','olhar nos olhos','vencer um desafio','responder enigmas','beleza verdadeira','coração puro','nobreza','generosidade','sorriso','castidade','cabeça','coração','olhos','palma da mão','ferimento antigo','joia incrustada','luz da lua','som de corvos','caminhos tortos','água corrente','solstício','embaixo d`água','arrogância','honra','vício','insanidade','curiosidade','ambição'];
+            break;
+
+        case "ability":
+            return ['acrobacia','alto intelecto','ambidestria','anfíbio','aparência inofensiva','audição aguçada','conhecimento arcano','conhecimento oculto','corpo flexível','desmaterialização','esquiva aprimorada','faro','força anormal','furtividade aprimorada','hipnose','imunidade a venenos','invisibilidade','longevidade','magnetismo','memória infalível','metamorfose','prontidão','reflexos','regeneração','resistência à fadiga','resistência à magia','resistência ao fogo','resistência ao frio','telecinésia','telepatia','teleporte','velocidade','visão aguçada','visão de raio x','visão noturna','vôo'];
+            break;
+
+        case "feature":
+            return ['antenas','armadura','asas','blindagem','campo de força','camuflagem','cauda','chifres','cicatrizes','corpo divisível','elmo','escamas','espinhos','exoesqueleto','fedor','ferrão','garras','implantes','lâminas','limo','luz própria','membros telescópicos','olhos flamejantes','pelagem','penas','placas','presas','sem pêlos','tentáculos','tromba','várias armas','várias bocas','vários membros','vários olhos','ventosas','voz poderosa'];
+            break;
+
+        case "title":
+            return ['amargo','assombroso','brutal','caótico','colérico','corruptor','cruel','decadente','destemido','devastador','estranho','estrategista','faminto','fanático','impiedoso','implacável','impostor','louco','místico','mórbido','noturno','odioso','pesadelo','profano','psicótico','repugnante','sanguinário','sarcástico','sedento','selvagem','solitário','terrível','tirano','trapaceiro','vil','voraz'];
+            break;
+
+        case "prefix":
+            return ['Zur','Miz','Bror','Oz','Gig','Appol','Xol','Brar','Xar','Tir','Sug','Zorth','Can','Dar','Haz','Vag','Win','Krak','Saz','Trog','Zel','Brog','Mol','Gust','Boz','Kul','Garg','Theg','Jec','Yeq','Shusa','Raac','Suqi','Myk','Dorg','Nith'];
+            break;
+
+        case "fix":
+            return ['nol','rika','glal','than','glo','thak','ra','nor','rin','men','threk','gan','zeni','thal','goma','tren','zan','gok','zaa','gyua','chas','guk','qax','seg','nua','zu','she','qig','qhu','nos','gys','vun','akku','ad','vin','eld'];
+            break;
+
+        case "posfix":
+            return ['dar','nenn','lion','rath','mag','on','nas','din','mon','xas','nol','rad','mar','trad','mak','munc','nuk','zan','lis','nis','ugga','ceth','gou','jez','kaus','zesh','suqq','zuz','nou','zox','taya','bha','horn','iosk','zark','konn'];
+            break;
+
+    }
+
+};
