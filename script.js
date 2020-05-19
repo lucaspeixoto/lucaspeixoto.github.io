@@ -16,7 +16,7 @@ $( document ).ready(function() {
   $('#btnGerarCreature').click(function(){
 
     var name = random(creatures('prefix'))+random(creatures('fix'))+random(creatures('suffix'))+', o '+capitalize(random(creatures('title')));
-    var conceito = random(creatures('nature'))+' '+random(creatures(random(['function','reputation'])))+' '+random(creatures('origin'))+' '+random(creatures('mutation'));
+    var conceito = random(creatures('nature'))+' '+random(creatures(random(['function','reputation','mutation'])))+' '+random(creatures('origin'));
     var impeto = random(['Devo ','Tenho que ','Preciso ','Quero '])+random(creatures('action'))+' '+random(creatures('target'));
     var fraqueza = 'Vulnerável a '+random(creatures('matter'));
     var habilidade = capitalize(random(creatures('ability')));
