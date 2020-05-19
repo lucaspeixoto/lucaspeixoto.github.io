@@ -38,9 +38,9 @@ $( document ).ready(function() {
         '<div class="textIndent"><strong>Ágil:</strong> '+abordagens['Ágil']+'</div>'+
         '<div class="textIndent"><strong>Instintivo:</strong> '+abordagens['Instintivo']+'</div></div><br>'+
         '<div><strong>FAÇANHAS</strong>'+
-        /*'<div class="textIndent">'+random(stunts('Umdaar '+abordagens[0]))+'</div>'+
-        '<div class="textIndent">'+random(stunts(abordagens[1]))+'</div>'+
-        '<div class="textIndent">'+random(stunts(abordagens[2]))+'</div></div>'+*/
+        '<div class="textIndent">'+random(stunts('Ataque'))+'</div>'+
+        '<div class="textIndent">'+random(stunts('Proteção'))+'</div>'+
+        '<div class="textIndent">'+random(stunts(random(['Sociais','Ambientais','Alteração'])))+'</div></div>'+
         '<div><strong>RESISTÊNCIA</strong>'+
         '<div>'+nbsp(4)+resistencias+'<strong><i class="fa fa-square-o"></i> Abalado</strong></div>'+
         '<div>'+nbsp(4)+resistencias+'<i class="fa fa-square-o"></i><strong><i class="fa fa-square-o"></i> Machucado</strong></div>'+
