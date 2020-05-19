@@ -18,6 +18,10 @@ function skills(type) {
             return ['Amargo','Frio','Salgado','Picante','Doce','Ácido'];
             break;
 
+        case "creature":
+            return ['Horrível','Violento','Ágil','Instintivo'];
+            break;
+
     }
 
 };

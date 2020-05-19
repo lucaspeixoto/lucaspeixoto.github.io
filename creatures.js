@@ -7,7 +7,7 @@ function creatures(type) {
             break;
 
         case "origin":
-            return ['floresta','montanha','deserto','mar','pântano','colinas','neve','lago','mar','selva','pradarias','campo','caverna','submundo','vale','abismo','além','profundezas','noite','crepúsculo','lua','tempestade','neblina','espaço','prisão','templo','torre','cemitério','ruínas','estrada','morte','destino','vazio','fronteira','futuro','cinzas'];
+            return ['da Floresta','da Montanha','do Deserto','do Mar','do Pântano','das Colinas','da Neve','do Lago','da Selva','das Pradarias','do Campo','da Caverna','do Submundo','do Vale','do Abismo','do Além','das Profundezas','da Noite','do Crepúsculo','da Lua',' da Tempestade','da Neblina','do Espaço','da Prisão','do Templo','da Torre','do Cemitério','das Ruínas','da Estrada','da Morte','do Destino','do Vazio','da Fronteira','do Futuro','das Cinzas'];
             break;
 
         case "function":
@@ -27,7 +27,7 @@ function creatures(type) {
             break;
 
         case "target":
-            return ['mestre','comunidade','prole','objeto','local','organização','relação','recurso','tecnologia','informação','segredo','entidade','orgulho','honra','equilíbrio','poder','dívida','desejo'];
+            return ['o mestre','a comunidade','a prole','o objeto','o local','a organização','a relação','o recurso','a tecnologia','a informação','o segredo','a entidade','o orgulho','a honra','o equilíbrio','o poder','a dívida','o desejo'];
             break;
 
         case "matter":
@@ -44,6 +44,10 @@ function creatures(type) {
 
         case "feature":
             return ['antenas','armadura','asas','blindagem','campo de força','camuflagem','cauda','chifres','cicatrizes','corpo divisível','elmo','escamas','espinhos','exoesqueleto','fedor','ferrão','garras','implantes','lâminas','limo','luz própria','membros telescópicos','olhos flamejantes','pelagem','penas','placas','presas','sem pêlos','tentáculos','tromba','várias armas','várias bocas','vários membros','vários olhos','ventosas','voz poderosa'];
+            break;
+
+        case "quality":
+            return ['anulador','aprisionante','arcano','aterrorizante','brilhante','cegante','colérico','colossal','congelante','demoníaco','desorientador','devastador','enfraquecedor','enlouquecedor','ensurdecedor','extraplanar','flamejante','flutuante','grotesco','hipnótico','ilusório','incontrolável','invisível','místico','oculto','paralisante','penetrante','pestilento','repugnante','repulsor','sombrio','telepático','tóxico','venenoso','violento','voraz'];
             break;
 
         case "title":
