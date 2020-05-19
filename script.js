@@ -33,18 +33,18 @@ $( document ).ready(function() {
         '<div class="textIndent"><strong>Habilidade:</strong> '+habilidade+'</div>'+
         '<div class="textIndent"><strong>Característica:</strong> '+caracteristica+'</div></div><br>'+
         '<div><strong>ABORDAGENS</strong>'+
-        '<div><strong>Horrível:</strong> '+abordagens['Horrível']+'</div>'+
-        '<div><strong>Violento:</strong> '+abordagens['Violento']+'</div>'+
-        '<div><strong>Ágil:</strong> '+abordagens['Ágil']+'</div>'+
-        '<div><strong>Instintivo:</strong> '+abordagens['Instintivo']+'</div></div><br>'+
+        '<div class="textIndent"><strong>Horrível:</strong> '+abordagens['Horrível']+'</div>'+
+        '<div class="textIndent"><strong>Violento:</strong> '+abordagens['Violento']+'</div>'+
+        '<div class="textIndent"><strong>Ágil:</strong> '+abordagens['Ágil']+'</div>'+
+        '<div class="textIndent"><strong>Instintivo:</strong> '+abordagens['Instintivo']+'</div></div><br>'+
         '<div><strong>FAÇANHAS</strong>'+
         /*'<div class="textIndent">'+random(stunts('Umdaar '+abordagens[0]))+'</div>'+
         '<div class="textIndent">'+random(stunts(abordagens[1]))+'</div>'+
         '<div class="textIndent">'+random(stunts(abordagens[2]))+'</div></div>'+*/
         '<p><strong>RESISTÊNCIA</strong><br>'+
-        nbsp(4)+'<p>'+resistencias+'<strong><i class="fa fa-square-o"></i> Abalado</strong></p>'+
-        nbsp(4)+'<p>'+resistencias+'<i class="fa fa-square-o"></i><strong><i class="fa fa-square-o"></i> Machucado</strong></p>'+
-        nbsp(4)+'<p>'+resistencias+'<i class="fa fa-square-o"></i><i class="fa fa-square-o"></i><strong><i class="fa fa-square-o"></i> Cedendo</strong></p>'
+        '<div class="textIndent">'+resistencias+'<strong><i class="fa fa-square-o"></i> Abalado</strong></div>'+
+        '<div class="textIndent">'+resistencias+'<i class="fa fa-square-o"></i><strong><i class="fa fa-square-o"></i> Machucado</strong></div>'+
+        '<div class="textIndent">'+resistencias+'<i class="fa fa-square-o"></i><i class="fa fa-square-o"></i><strong><i class="fa fa-square-o"></i> Cedendo</strong></div>'
     );
 
     $('.boxCreature').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '550px', 'box-shadow': '5px 5px 10px lightgrey'});
