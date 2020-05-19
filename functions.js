@@ -38,7 +38,7 @@ function stress(min, max) {
   var number = Math.floor(Math.random() * (max - min + 1)) + min;
   var total = '';
   for (i=0;i<number;i++)
-  	total = total + '<i class="fa fa-square-o"></i> ';
+  	total = total + '<i class="fa fa-square-o"></i>';
   return total;
 };
 
