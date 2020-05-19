@@ -58,7 +58,7 @@ function creatures(type) {
             return ['nol','rika','glal','than','glo','thak','ra','nor','rin','men','threk','gan','zeni','thal','goma','tren','zan','gok','zaa','gyua','chas','guk','qax','seg','nua','zu','she','qig','qhu','nos','gys','vun','akku','ad','vin','eld'];
             break;
 
-        case "posfix":
+        case "suffix":
             return ['dar','nenn','lion','rath','mag','on','nas','din','mon','xas','nol','rad','mar','trad','mak','munc','nuk','zan','lis','nis','ugga','ceth','gou','jez','kaus','zesh','suqq','zuz','nou','zox','taya','bha','horn','iosk','zark','konn'];
             break;
 
