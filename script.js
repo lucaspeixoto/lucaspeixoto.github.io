@@ -40,7 +40,7 @@ $( document ).ready(function() {
         '<div><strong>FAÇANHAS</strong>'+
         '<div class="textIndent">'+random(stunts('Ataque'))+'</div>'+
         '<div class="textIndent">'+random(stunts('Proteção'))+'</div>'+
-        '<div class="textIndent">'+random(stunts(random(['Sociais','Ambientais','Alteração'])))+'</div></div>'+
+        '<div class="textIndent">'+random(stunts(random(['Sociais','Ambientais','Alteração'])))+'</div></div><br>'+
         '<div><strong>RESISTÊNCIA</strong>'+
         '<div>'+nbsp(4)+resistencias+'<strong><i class="fa fa-square-o"></i> Abalado</strong></div>'+
         '<div>'+nbsp(4)+resistencias+'<i class="fa fa-square-o"></i><strong><i class="fa fa-square-o"></i> Machucado</strong></div>'+
