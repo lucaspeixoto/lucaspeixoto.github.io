@@ -26,7 +26,7 @@ $( document ).ready(function() {
 
     $('.boxCreature').html(
         '<center><h4>'+name+'</h4></center>'+
-        '<div><strong>ASPECTOS</strong>'
+        '<div><strong>ASPECTOS</strong>'+
         '<div class="textIndent"><strong>Conceito:</strong> '+conceito+'</div>'+
         '<div class="textIndent"><strong>Ímpeto:</strong> '+impeto+'</div>'+
         '<div class="textIndent"><strong>Fraqueza:</strong> '+fraqueza+'</div>'+
@@ -44,7 +44,7 @@ $( document ).ready(function() {
         '<p><strong>RESISTÊNCIA</strong><br>'+
         nbsp(4)+'<p>'+resistencias+'<strong><i class="fa fa-square-o"></i> Abalado</strong></p>'+
         nbsp(4)+'<p>'+resistencias+'<i class="fa fa-square-o"></i><strong><i class="fa fa-square-o"></i> Machucado</strong></p>'+
-        nbsp(4)+'<p>'+resistencias+'<i class="fa fa-square-o"></i><i class="fa fa-square-o"></i><strong><i class="fa fa-square-o"></i> Cedendo</strong></p>'+
+        nbsp(4)+'<p>'+resistencias+'<i class="fa fa-square-o"></i><i class="fa fa-square-o"></i><strong><i class="fa fa-square-o"></i> Cedendo</strong></p>'
     );
 
     $('.boxCreature').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '550px', 'box-shadow': '5px 5px 10px lightgrey'});
