@@ -43,7 +43,7 @@ function creatures(type) {
             break;
 
         case "feature":
-            return ['antena','armadura','asa','blindagem','campo de força','camuflagem','cauda','chifre','cicatriz','corpo divisível','elmo','escama','espinho','exoesqueleto','fedor','ferrão','garra','implante','lâmina','limo','luz própria','membro telescópico','olho flamejante','pelagem','pena','placa','presa','tentáculo','tromba','arma','boca','membro','olho','ventos','voz'];
+            return ['antena','armadura','asa','blindagem','campo de força','camuflagem','cauda','chifre','cicatriz','corpo divisível','elmo','escama','espinho','exoesqueleto','fedor','ferrão','garra','implante','lâmina','limo','luz própria','membro telescópico','olho flamejante','pelagem','pena','placa','presa','tentáculo','tromba','arma','boca','membro','olho','ventosa','voz'];
             break;
 
         case "quality":
