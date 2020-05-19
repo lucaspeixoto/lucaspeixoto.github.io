@@ -16,6 +16,12 @@ function activateStressBox(){
     else
       $(this).addClass('fa-square');
   });
+  $('.fa-circle-o').on('click',function(){
+    if($(this).hasClass('fa-circle'))
+      $(this).removeClass('fa-circle');
+    else
+      $(this).addClass('fa-circle');
+  });
 }
 
 function random(array) {
