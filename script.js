@@ -5,6 +5,7 @@ $( document ).ready(function() {
       $("#btnGerarFate").trigger('click');
       $("#btnGerarWoa").trigger('click');
       $("#btnGerarUmdaar").trigger('click');
+      $("#btnGerarCreature").trigger('click');
   },10);
 
   $('#btnGerarCreature').click(function(){
@@ -13,7 +14,7 @@ $( document ).ready(function() {
 
     $('.boxCreature').html(
         '<center><h4>'+name+'</h4></center>'+
-        '<div><strong>ASPECTOS</strong>'+
+        '<div><strong>ASPECTOS</strong>'
 /*        '<div class="textIndent"><strong>Conceito:</strong> '+bioforma+' '+random(aspects('concept'))+'</div>'+
         '<div class="textIndent"><strong>Dificuldade:</strong> '+random(aspects('problem'))+'</div>'+
         '<div class="textIndent"><strong>Motivação:</strong> '+random(aspects('ambition'))+'</div>'+
