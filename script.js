@@ -15,7 +15,7 @@ $( document ).ready(function() {
 
   $('#btnGerarCreature').click(function(){
 
-    var name = random(creatures('prefix'))+random(creatures('fix'))+random(creatures('suffix'))+', o '+random(capitalize(creatures('title')));
+    var name = random(creatures('prefix'))+random(creatures('fix'))+random(creatures('suffix'))+', o '+capitalize(random(creatures('title')));
 
     $('.boxCreature').html(
         '<center><h4>'+name+'</h4></center>'+
