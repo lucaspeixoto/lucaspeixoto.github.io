@@ -31,32 +31,30 @@ $( document ).ready(function() {
     var genero = random(['o','a']);
     var titulo = capitalize(random(creatures('title')));
 
-    if(titulo.slice(-1) == 'o'){
-      if(genero == 'a')
-        titulo = titulo.substring(0,titulo.length-2)+'a';
-    }
+    if((titulo.slice(-1) == 'o') && (genero == 'a'))
+      titulo = titulo.substring(0,titulo.length-1)+'a';
     
     $('.boxCreature').html(
-        '<center><h4>'+random(nome)+', '+genero+' '+titulo+'</h4></center>'+
-        '<div><strong>ASPECTOS</strong>'+
-        '<div class="textIndent"><strong>Conceito:</strong> '+conceito+'</div>'+
-        '<div class="textIndent"><strong>Ímpeto:</strong> '+impeto+'</div>'+
-        '<div class="textIndent"><strong>Fraqueza:</strong> '+fraqueza+'</div>'+
-        '<div class="textIndent"><strong>Habilidade:</strong> '+habilidade+'</div>'+
-        '<div class="textIndent"><strong>Característica:</strong> '+caracteristica+'</div></div><br>'+
-        '<div><strong>ABORDAGENS</strong>'+
-        '<div class="textIndent"><strong>Horrível:</strong> '+abordagens['Horrível']+'</div>'+
-        '<div class="textIndent"><strong>Violento:</strong> '+abordagens['Violento']+'</div>'+
-        '<div class="textIndent"><strong>Ágil:</strong> '+abordagens['Ágil']+'</div>'+
-        '<div class="textIndent"><strong>Instintivo:</strong> '+abordagens['Instintivo']+'</div></div><br>'+
-        '<div><strong>FAÇANHAS</strong>'+
-        '<div class="textIndent">'+random(stunts('Ataque'))+'</div>'+
-        '<div class="textIndent">'+random(stunts('Proteção'))+'</div>'+
-        '<div class="textIndent">'+random(stunts(random(['Sociais','Ambientais','Alteração'])))+'</div></div><br>'+
-        '<div><strong>RESISTÊNCIA</strong>'+
-        '<div>'+nbsp(4)+resistencias+'<strong><i class="fa fa-square-o"></i> Abalado</strong></div>'+
-        '<div>'+nbsp(4)+resistencias+'<i class="fa fa-square-o"></i><strong><i class="fa fa-square-o"></i> Machucado</strong></div>'+
-        '<div>'+nbsp(4)+resistencias+'<i class="fa fa-square-o"></i><i class="fa fa-square-o"></i><strong><i class="fa fa-square-o"></i> Cedendo</strong></div></div>'
+      '<center><h4>'+random(nome)+', '+genero+' '+titulo+'</h4></center>'+
+      '<div><strong>ASPECTOS</strong>'+
+      '<div class="textIndent"><strong>Conceito:</strong> '+conceito+'</div>'+
+      '<div class="textIndent"><strong>Ímpeto:</strong> '+impeto+'</div>'+
+      '<div class="textIndent"><strong>Fraqueza:</strong> '+fraqueza+'</div>'+
+      '<div class="textIndent"><strong>Habilidade:</strong> '+habilidade+'</div>'+
+      '<div class="textIndent"><strong>Característica:</strong> '+caracteristica+'</div></div><br>'+
+      '<div><strong>ABORDAGENS</strong>'+
+      '<div class="textIndent"><strong>Horrível:</strong> '+abordagens['Horrível']+'</div>'+
+      '<div class="textIndent"><strong>Violento:</strong> '+abordagens['Violento']+'</div>'+
+      '<div class="textIndent"><strong>Ágil:</strong> '+abordagens['Ágil']+'</div>'+
+      '<div class="textIndent"><strong>Instintivo:</strong> '+abordagens['Instintivo']+'</div></div><br>'+
+      '<div><strong>FAÇANHAS</strong>'+
+      '<div class="textIndent">'+random(stunts('Ataque'))+'</div>'+
+      '<div class="textIndent">'+random(stunts('Proteção'))+'</div>'+
+      '<div class="textIndent">'+random(stunts(random(['Sociais','Ambientais','Alteração'])))+'</div></div><br>'+
+      '<div><strong>RESISTÊNCIA</strong>'+
+      '<div>'+nbsp(4)+resistencias+'<strong><i class="fa fa-square-o"></i> Abalado</strong></div>'+
+      '<div>'+nbsp(4)+resistencias+'<i class="fa fa-square-o"></i><strong><i class="fa fa-square-o"></i> Machucado</strong></div>'+
+      '<div>'+nbsp(4)+resistencias+'<i class="fa fa-square-o"></i><i class="fa fa-square-o"></i><strong><i class="fa fa-square-o"></i> Cedendo</strong></div></div>'
     );
 
     $('.boxCreature').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '550px', 'box-shadow': '5px 5px 10px lightgrey'});
