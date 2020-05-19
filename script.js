@@ -1,5 +1,10 @@
 $( document ).ready(function() {
 
+  const capitalize = (s) => {
+    if (typeof s !== 'string') return ''
+    return s.charAt(0).toUpperCase() + s.slice(1)
+  }
+
   setTimeout(function() {
       $("#btnGerarNPC").trigger('click');
       $("#btnGerarFate").trigger('click');
@@ -10,7 +15,7 @@ $( document ).ready(function() {
 
   $('#btnGerarCreature').click(function(){
 
-    var name = random(creatures('prefix'))+random(creatures('fix'))+random(creatures('suffix'))+', o '+random(creatures('title')).charAt(0).toUpperCase();
+    var name = random(creatures('prefix'))+random(creatures('fix'))+random(creatures('suffix'))+', o '+random(capitalize(creatures('title')));
 
     $('.boxCreature').html(
         '<center><h4>'+name+'</h4></center>'+
