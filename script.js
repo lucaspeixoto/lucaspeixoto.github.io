@@ -20,7 +20,7 @@ $( document ).ready(function() {
     var impeto = random(['Devo ','Tenho que ','Preciso ','Quero '])+random(creatures('action'))+' '+random(creatures('target'));
     var fraqueza = random(['Vulnerável a '+random(creatures('matter')), random(creatures('condition'))]);
     var habilidade = capitalize(random(creatures('ability')));
-    var caracteristica = capitalize(random(creatures('feature')))+' '+random(creatures('quality'));
+    var caracteristica = capitalize(random(creatures('feature')))+' e '+random(creatures('quality'));
     var abordagens = creatureApproaches(skills('creature'));
     var resistencias = stress(0,3);
 
@@ -31,7 +31,7 @@ $( document ).ready(function() {
         '<div class="textIndent"><strong>Ímpeto:</strong> '+impeto+'</div>'+
         '<div class="textIndent"><strong>Fraqueza:</strong> '+fraqueza+'</div>'+
         '<div class="textIndent"><strong>Habilidade:</strong> '+habilidade+'</div>'+
-        '<div class="textIndent"><strong>Característica:</strong> '+caracteristica+'</div></div><br>'+
+        '<div class="textIndent"><strong>Características:</strong> '+caracteristica+'</div></div><br>'+
         '<div><strong>ABORDAGENS</strong>'+
         '<div class="textIndent"><strong>Horrível:</strong> '+abordagens['Horrível']+'</div>'+
         '<div class="textIndent"><strong>Violento:</strong> '+abordagens['Violento']+'</div>'+
