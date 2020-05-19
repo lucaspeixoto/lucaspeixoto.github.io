@@ -21,7 +21,7 @@ $( document ).ready(function() {
     var fraqueza = 'Vulnerável a '+random(creatures('matter'));
     var habilidade = random(creatures('ability'));
     var caracteristica = random(creatures('feature'))+random(creatures('quality'));
-    var abordagens = creatureApproaches(skills('creatures'));
+    var abordagens = creatureApproaches(skills('creature'));
     var resistencias = stress(0,3);
 
     $('.boxCreature').html(
@@ -33,10 +33,10 @@ $( document ).ready(function() {
         '<div class="textIndent"><strong>Habilidade:</strong> '+habilidade+'</div>'+
         '<div class="textIndent"><strong>Característica:</strong> '+caracteristica+'</div></div><br>'+
         '<div><strong>ABORDAGENS</strong>'+
-        '<div><strong>'+nbsp(16)+'Horrível:</strong> '+abordagens['Horrível']+'</div>'+
-        '<div><strong>'+nbsp(4)+'Violento:</strong> '+abordagens['Violento']+'</div>'+
-        '<div><strong>'+nbsp(9)+'Ágil:</strong> '+abordagens['Ágil']+'</div>'+
-        '<div><strong>'+nbsp(6)+'Instintivo:</strong> '+abordagens['Instintivo']+'</div></div><br>'+
+        '<div><strong>Horrível:</strong> '+abordagens['Horrível']+'</div>'+
+        '<div><strong>Violento:</strong> '+abordagens['Violento']+'</div>'+
+        '<div><strong>Ágil:</strong> '+abordagens['Ágil']+'</div>'+
+        '<div><strong>Instintivo:</strong> '+abordagens['Instintivo']+'</div></div><br>'+
         '<div><strong>FAÇANHAS</strong>'+
         /*'<div class="textIndent">'+random(stunts('Umdaar '+abordagens[0]))+'</div>'+
         '<div class="textIndent">'+random(stunts(abordagens[1]))+'</div>'+

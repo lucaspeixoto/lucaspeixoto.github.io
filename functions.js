@@ -66,10 +66,10 @@ function creatureApproaches(allApproaches) {
 
   var approachesValues = [];
 
-  approachesValues[approaches[0]] = '+4';
-  approachesValues[approaches[1]] = '+3';
-  approachesValues[approaches[2]] = '+2';
-  approachesValues[approaches[3]] = '+1';
+  approachesValues[approaches[0]] = 'Ótimo (+4)';
+  approachesValues[approaches[1]] = 'Bom (+3)';
+  approachesValues[approaches[2]] = 'Razoável (+2)';
+  approachesValues[approaches[3]] = 'Regular (+1)';
 
   return approachesValues;
 }
