@@ -7,6 +7,23 @@ $( document ).ready(function() {
       $("#btnGerarUmdaar").trigger('click');
   },10);
 
+  $('#btnGerarCreature').click(function(){
+
+    $('.boxPersonagemFate').append(
+      '<center><h4>'+random(aspects('concept'))+'</h4>'+
+      '<p><b><i>'+random(aspects('good'))+'; '+random(aspects('problem'))+'</i></b></p></center>'+
+      '<p><strong>Perito (+2) em:</strong> '+npcSkills[0]+', '+npcSkills[1]+', '+npcSkills[2]+'</p>'+
+      '<p><strong>Ruim (-2) em:</strong> '+npcSkills[3]+', '+npcSkills[4]+'</p>'+
+      '<p><strong>Estresse: </strong>'+stress(0,2)+'</p>'
+    );
+
+    $('.boxNPC').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '550px', 'box-shadow': '5px 5px 10px lightgrey'});
+
+    activateStressBox();
+
+  });
+
+
   $('#btnGerarNPC').click(function(){
 
     var npcSkills = exclusiveRandom(skills('skilled'),5);
