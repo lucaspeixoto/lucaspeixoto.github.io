@@ -19,8 +19,8 @@ $( document ).ready(function() {
     var conceito = random(creatures('nature'))+' '+random(creatures(random(['function','reputation'])))+' '+random(creatures('origin'))+' '+random(creatures('mutation'));
     var impeto = random(['Devo ','Tenho que ','Preciso ','Quero '])+random(creatures('action'))+' '+random(creatures('target'));
     var fraqueza = 'Vulnerável a '+random(creatures('matter'));
-    var habilidade = random(creatures('ability'));
-    var caracteristica = random(creatures('feature'))+' '+random(creatures('quality'));
+    var habilidade = capitalize(random(creatures('ability')));
+    var caracteristica = capitalize(random(creatures('feature')))+' '+random(creatures('quality'));
     var abordagens = creatureApproaches(skills('creature'));
     var resistencias = stress(0,3);
 
