@@ -18,7 +18,7 @@ $( document ).ready(function() {
     var name = random(creatures('prefix'))+random(creatures('fix'))+random(creatures('suffix'))+', o '+capitalize(random(creatures('title')));
     var conceito = random(creatures('nature'))+' '+random(creatures(random(['function','reputation','mutation'])))+' '+random(creatures('origin'));
     var impeto = random(['Devo ','Tenho que ','Preciso ','Quero '])+random(creatures('action'))+' '+random(creatures('target'));
-    var fraqueza = 'Vulnerável a '+random(creatures('matter'));
+    var fraqueza = random(['Vulnerável a '+random(creatures('matter')), random(creatures('condition')]);
     var habilidade = capitalize(random(creatures('ability')));
     var caracteristica = capitalize(random(creatures('feature')))+' '+random(creatures('quality'));
     var abordagens = creatureApproaches(skills('creature'));

@@ -170,5 +170,359 @@ function stunts(type) {
 
 };
 
-
-
+Façanhas de proteção
+Aparência Inofensiva: Por conta de sua aparência inocente, o personagem precisa passar em um teste contra o Instintivo da criatura para ter coragem de atacá-la.
+Aparentemente Morto: Ao marcar a caixa de resistência Machucado, a criatura cai como morta — uma avaliação superficial confirmaria esse fato. Em um momento oportuno, a criatura salta em um ataque Ágil +5 contra o personagem mais próximo.
+Aura Terrível: A criatura emite [odor, calor, energia, mágica]. Personagens na mesma zona que a criatura sofrem 1 de dano por rodada.
+Autodestruição: ooo Se a criatura marcar sua caixa de resistência Machucado,
+ela ativa a sua autodestruição. Marque uma das caixas acima. A cada rodada completa,
+marque outra caixa. Se todas as marcas forem marcadas, a criatura causa uma explosão
+Violenta +5 contra todos na mesma zona, e +2 em todos em uma zona adjacente, se não
+houver obstáculos.
+Barreira: Ataques à distância atingem primeiro a [barreira, campo de força] da
+criatura. Essa barreira tem 4 caixas de resistência e +2 para defesas. Ao marcar todas as
+caixas de resistência, a barreira é desativada.
+209
+Casca Grossa: Qualquer dano causado à criatura menor ou igual a 2 é absorvido por
+[carapaça, escudo, exoesqueleto, campo de força] e não atinge a criatura.
+Deflexão: Pagando um ponto de destino, a criatura pode defletir todo o dano que
+sofreria de um único ataque para qualquer outro alvo a sua escolha.
+Desafiar a Morte: Se um dano fosse marcar a caixa de resistência Cedendo da
+criatura, ela pode gastar um ponto de destino para negar todo o dano recebido nesse
+ataque ao invés disso
+Desarmar: Se for bem-sucedida na defesa a um ataque armado corpo a corpo, a
+criatura pode gastar duas tensões para deixar o alvo Desarmado.
+Escorregadio: Sempre que um personagem tentar agarrar a criatura, ela recebe uma
+invocação grátis de seu aspecto Escorregadio para se defender.
+Esquiva Frustrante: Sempre que for bem-sucedida em esquivar um ataque corpo-a-
+corpo, a criatura causa 1 de dano mental no atacante desconcertado.
+Fuga Estratégica: A qualquer momento, a criatura pode tentar fugir rolando +X
+contra +Y, sendo X o número de suas caixas de resistência já marcadas, e Y o número de
+personagens de jogador na cena.
+Mestre da Camuflagem: Com um teste Instintivo bem-sucedido contra +2, a criatura
+se mescla com a paisagem. Descobrir sua posição requer um teste bem-sucedido contra o
+dobro de +X, sendo X o número de tensões que a criatura conseguiu em seu teste.
+Mestre da Estratégia: Antes do conflito começar, a criatura pode fazer um teste
+Instintivo contra +X, sendo X o número de personagens em cena. Em um sucesso, ela
+ganha o aspecto Previ seus movimentos, com Y invocações grátis, sendo Y o número de
+tensões conseguidas no teste.
+Meu Corpo é uma Arma: Se estiver sendo atacada por um personagem desarmado,
+e se o Violento da criatura for maior que o [Vigor, Poderoso] do atacante, este recebe
+uma quantidade de dano igual a diferença Violento-[Vigor, Poderoso], independente do
+resultado do ataque e da [abordagem, perícia] utilizada.
+Mímica: Se um personagem utilizar uma façanha contra uma criatura, ela pode
+replicar aquele efeito em seu turno como um sucesso automático, gastando um
+ponto de destino.
+Morra por Mim: Se um capanga da criatura estiver na mesma zona que ela, ela pode
+escolher redirecionar o dano para um de seus capangas, escondendo-se atrás dele.
+Movimentos Imprevisíveis: Um ataque à distância contra o Ágil da criatura precisa
+de no mínimo 3 tensões para conseguir acertá-la.
+Múltiplas Cópias: A criatura é capaz de criar cópias de si mesma em forma de
+[ilusões, hologramas]. Qualquer tentativa de acertar a criatura tem 1⁄3 de chance de acertar
+uma cópia falsa, que se desfaz ao ataque e surge em outro lugar. Se um personagem
+acertar a criatura real, as cópias desaparecem.
+Pedaços Mortais: Se um dos [membros, componentes, armas, dispositivos] da
+criatura for [arrancado, decepado], ele passa a agir como uma criatura independente,
+que ataca com +3 e tem 4 caixas de resistência.
+210
+Pegue de Volta: Uma vez por cena, ao receber um ataque [mágico, de armas de fogo,
+laser], a criatura pode escolher não rolar os dados e tomar todo o dano. Em seu turno, ela
+pode expelir esse dano recebido em forma de um ataque +X, onde X é a quantidade desse
+dano. Após o contra-ataque, apague todas caixas de resistência marcadas por aquele dano.
+Presença Aterradora: Se o Horrível da criatura for maior que [Vontade, Esperto]
+do atacante, a criatura pode fazer o atacante rolar os dados duas vezes e ficar com o
+pior resultado.
+Recuperando o Fôlego: ooo A cada turno em que a criatura não sofrer dano,
+marque uma caixa. Ao marcar as 3 caixas, ela recupera caixas de resistência.
+Reforços: oooo A cada rodada completa e a cada linha de resistência
+completamente marcada da criatura, marque uma das caixas. Ao marcar as 4 caixas,
+reforços chegam para auxiliar a criatura. Podem ser 2, 3 ou 4 capangas (decida
+aleatoriamente, e pague um ponto de destino se quiser o dobro de capangas) com 3
+caixas de resistência, o aspecto Defenderemos o mestre até morte e apenas um ponto de
+destino extra compartilhado.
+Resistência: A criatura possui resistência a [elemento, tipo de arma, tipo de ataque].
+Todo dano causado por essa fonte é reduzido pela metade (arredondado para baixo).
+Resistência do Medo: Em uma ameaça Horrível bem-sucedida contra um alvo,
+a criatura ganha X caixas de resistência extra, sendo X igual ao número de tensões
+conseguida no teste. Essas caixas de resistência só podem ser usadas para marcar dano
+sofrido pelo personagem afetado pela ameaça.
+Talismã: Nenhum dano é causado contra a criatura até que seu [talismã, núcleo de
+energia, grimório, computador central] seja destruído. Esse dispositivo tem 5 caixas de
+resistência e pode estar ou não no mesmo lugar que a criatura.
+Façanhas de ataque
+Ataque Localizado: A criatura pode optar por se impor uma penalidade de
+-2 em um ataque Horrível para acertar um ponto específico do alvo. Se for bem
+sucedida, ela causa 3 tensões extras e ganha o aspecto Achei seu ponto fraco! com
+uma invocação grátis.
+Ataque Rotatório: A criatura pode fazer um ataque Violento contra todos os
+oponentes na mesma zona, dividindo o dano da maneira que desejar.
+Arma Extra: Pagando um ponto de destino, a criatura pode declarar que tem
+uma arma reserva escondida. Ao revelar a arma, os personagens recebem 1 de dano
+mental por conta da surpresa desagradável.
+Arremesso Qualquer Coisa: A criatura é capaz de usar objetos e elementos do
+cenário até metade do seu peso para realizar ataques Violentos à distância.
+Avanço Medonho: Sempre que ataca com Horrível se aproximando da vítima
+vindo de uma zona adjacente, seu avanço causa 1 de dano mental no alvo, antes
+mesmo das rolagens de dados.
+211
+Bem Onde Eu Queria: Ao sofrer dano corpo-a-corpo em um combate, a
+criatura pode escolher sofrer 2 de dano adicional para se colocar na posição exata
+para um contra golpe. O próximo ataque da criatura contra o personagem causador
+do dano recebe +2 de bônus.
+Conjurar Relâmpago: Ao custo de um ponto de destino, a criatura pode conjurar
+um relâmpago que acerta o centro de uma zona a até duas de distância, se estiver em
+campo aberto. Um personagem aleatório daquela zona que esteja carregando armas
+ou objetos metálicos grandes e visíveis recebe um ataque Violento +5. Se nenhum
+personagem usar metal, o ataque é Violento +2 contra todos na zona.
+Conheço Seus Truques: Se a criatura evitou com sucesso o ataque de um
+personagem no turno anterior, ela pode rolar os dados duas vezes e ficar com o
+melhor resultado ao realizar um ataque Instintivo contra o mesmo alvo (apenas no
+turno seguinte).
+Cuspe Ácido: A criatura pode cuspir um jato de ácido em um ataque Horrível.
+O alvo atingido sofre dano e recebe o aspecto Pele queimando oooo. Em cada
+rodada subsequente, marque uma caixa. Cada caixa marcada garante +1 adicional à
+criatura quando ela forçar esse aspecto contra a vítima.
+Deglutir: A Criatura pode fazer um ataque Violento para morder um alvo a até
+uma zona de distância. Se conseguir 4 ou mais tensões no ataque, ela pode abrir
+mão do dano causado para engolir a vítima inteira. Ele agora está Sendo digerido +2
+ooՕՕՕ — isso significa que escapar da barriga da criatura requer dois sucessos
+contra +2. A cada falha, marque um círculo. Se os três círculos forem marcados, o
+personagem foi digerido. A cada sucesso, marque uma caixa. Se ele marcar as duas
+caixas, ele escapa e sofre dano igual ao número de caixas e círculos marcados, somados.
+Disparos para Todo Lado: Ao disparar [armas, magias, flechas, raios] com
+Violento, a criatura pode optar por não mirar em um alvo específico e criar Chuva
+de Tiros +3 — agir fora de cobertura nessa rodada requer um sucesso contra +3 para
+desviar dos tiros. Uma falha causa 2 de dano.
+Empurrão Agressivo: Em um teste Violento bem-sucedido, a criatura consegue
+deixar um alvo na mesma zona Jogado ao chão. Se um outro personagem na mesma
+zona tiver Vigor/Poderoso menor que o Violento da criatura, ele também pode ser
+derrubado com o mesmo teste (ele tem direito a um teste para se defender).
+Estratégia de Btalha: Antes de começar o conflito, a criatura pode estudar o
+ambiente com um teste Instintivo contra +2. Se bem-sucedida, ela pode usar as
+tensões conseguidas 1 para 1 para declarar aspectos da cena a qualquer momento
+durante o combate, ou para ganhar invocações grátis desses aspectos.
+Fúria: Ao marcar a caixa de resistência Machucado, a criatura ganha duas
+invocações grátis desse aspecto, que podem ser usadas para bônus em ataques Violentos.
+Golpe Carregado: ooo Ao receber dano, a criatura pode marcar uma dessas
+caixas para reduzir o dano em 1. Quando as 3 caixas estiverem marcadas, ela dispara
+[um raio de energia, uma investida, um golpe fulminante] com Violento e um
+bônus adicional de +3. Apague essas 3 caixas e marque 3 caixas de resistência da
+criatura após o golpe.
+212
+Golpe Desorientador: Ao acertar um ataque Violento, a criatura pode gastar
+um ponto de destino para que a vítima seja incapaz de usar sua [abordagem, perícia]
+[Poderoso, Ágil, Lutar, Atirar] por três rodadas.
+Inimigo Marcado: A criatura pode apontar para um personagem e fazer um
+teste Horrível. Em um sucesso, ela recebe +2 em ataques contra aquele personagem
+por X rodadas, sendo X o número de tensões conseguidas no teste.
+Insanidade: A criatura possui o aspecto/abordagem Insano ooooo. Ela pode
+optar por atacar com essa abordagem, somando aos dados o valor de caixas marcadas
+(começando com +0, portanto). A cada sucesso, marque uma caixa (ou duas, se
+conseguir 3 ou mais tensões). Ela não pode usar essa abordagem para se defender. Ao
+marcar todas as cinco caixas, a criatura passa a fazer dois ataques por turno, mas todas
+as suas outras abordagens são reduzidas para +1 (se já forem menores).
+Lamento da Desolação: Com um teste Horrível bem-sucedido, a criatura chora
+um lamento agonizante. Ela pode gastar 1 tensão para causar 1 ponto de dano, 2
+tensões para impor o aspecto Desolado em um alvo, ou 4 tensões para que um alvo
+desmaie (ele acorda depois de duas rodadas ou cinco minutos).
+Melhor Contra os Mais Fortes: A criatura recebe +2 para atacar personagens
+que tenham Poderoso/Lutar maior do que +2.
+Morte no Escuro: Se estiver um ambiente completamente escuro, a Criatura
+recebe +2 em seu Horrível e pode usá-lo para causar medo (e dano mental) com
+sussurros, gemidos e risadas macabras.
+Não Aceito Erros: Se falhar em um ataque, a criatura pode gastar um ponto de
+destino para rolar novamente os dados, agora com um bônus extra de +2.
+Não Me Cerque: A criatura recebe +1 em seus ataques Violentos para cada
+personagem além do primeiro que esteja engajado em combate com ela.
+Projéteis Errantes: Se falhar em um ataque à distância com [bolas de fogo,
+bumerangue, boleadeiras], há 1⁄3 de chance do ataque acertar um outro alvo na
+mesma zona (o novo alvo pode se defender normalmente contra a mesma rolagem).
+Reflexos Rápidos: Ao custo de um ponto de destino, a criatura pode furar a
+ordem de ação e fazer um ataque Ágil fora de turno com um bônus de +2.
+Sede de Sangue: Se um personagem tiver um aspecto, condição ou consequência
+que reflita dano físico sofrido pela criatura, ela recebe duas invocações grátis
+adicionais desse aspecto.
+Sofremos Juntos: Ao acertar o alvo com seu [raio necrótico, laser, lança maldita]
+em um ataque Horrível, a criatura pode marcar suas próprias caixas de resistência
+para causar dano adicional à vítima, na proporção de 1 para 1.
+Teleguiado: A criatura ignora aspectos relativos a cobertura ao realizar ataques
+Instintivos com [sua arma teleguiada, seus projéteis mágicos, shurikens].
+Velocidade Alucinante: A criatura pode realizar um ataque Ágil e dividir as
+tensões conseguidas entre dano físico a um alvo e o número de zonas que ela é capaz
+de percorrer (antes ou depois do golpe).
+213
+Façanhas sociais
+Ameaçador: Personagens com Vontade/Cuidadoso menor do que +3
+simplesmente não são capazes de [atacá-lo, ofendê-lo, responder seus argumentos].
+Argumentos Pavorosos: Se for bem-sucedida em uma tentativa de amedrontar por
+palavras ameaçadoras com Horrível, a criatura pode fazer um segundo teste Instintivo
+para completar sua ameaça oferecendo termos de rendição ou uma barganha custosa.
+Todos os sucessos dos dois testes contam como dano mental ao alvo.
+Barganhador Nato: Negociar contra a criatura requer evitar suas Ofertas
+irrecusáveis +3 ooՕՕՕ — para conseguir o que se quer, os personagens precisam
+resistir 2 vezes às suas ofertas (teste contra +3). Se falharem 3 vezes, não conseguem
+o que queriam e podem acabar saindo de lá com algo que não desejavam.
+Conheço a Dor que Carregas: A criatura descobre imediatamente o aspecto
+de dificuldade do personagem com o menor valor de Vontade/Cuidadoso do grupo
+logo ao encontrá-lo, e ganha uma invocação grátis dele.
+Conheço Seu Passado: Se um personagem falhar em uma tentativa de persuasão,
+blefe ou intimidação contra a criatura, ela responde com algum insulto, ofensa ou
+revelação embaraçosa sobre o personagem, que causa imediatamente 2 de dano mental.
+Detector de Mentiras: Qualquer tentativa de mentir contra a criatura é
+considerada uma falha automática.
+Enfurecedor: A criatura sabe como deixar os personagens com raiva. Em um
+sucesso ao provocar um personagem com Instintivo, a criatura impõe o aspecto
+Enfurecido no alvo, com uma invocação grátis.
+Jargão da Sedução: A criatura fala com tanta propriedade sobre [determinado
+assunto] que é difícil de não concordar com ela. Em um teste Instintivo bem-
+sucedido, todos que ouviram a explicação da criatura acreditam que ela deve estar
+falando a verdade.
+Leitura de Intenções: Apenas com uma troca de olhar, a criatura pode ler as
+intenções verdadeiras de um personagem com um teste Instintivo bem-sucedido. A
+cada duas tensões conseguidas, a criatura descobre um dos aspectos do alvo.
+Minha Reputação Me Precede: Se os personagens já ouviram falar da criatura, ela
+recebe +2 para intimidar ou provocar os personagens durante seu primeiro encontro.
+Parede de Gelo: Todo dano mental causado à criatura por meio de provocação
+e intimidação é reduzido em 2 (mínimo 0).
+Pavio Curto: ooo Marque uma caixa para cada provocação, mentira ou tentativa
+de intimidação ou persuasão de um personagem contra a criatura. Ao marcar a terceira
+caixa, a criatura interrompe a frase do personagem com um ataque Violento +5.
+Uns Contra os Outros: A criatura pode fazer um ataque verbal contra dois alvos
+ao mesmo tempo com Horrível (contra o melhor valor de Vontade/Esperto entre
+os dois), jogando um contra o outro em argumentos envenenados. Em um sucesso,
+214
+ambos os personagens ganham o aspecto Não sei se confio em [nome do outro
+personagem]. A criatura tem uma invocação grátis contra cada um deles.
+Zombaria: Se a criatura for bem-sucedida em um teste Instintivo para zombar do
+personagem, os aliados do personagem que ouviram a sátira devem ser bem-sucedidos
+em um teste de Vontade/Cuidadoso contra +3 ou então cairão na risada. Para cada
+personagem que rir de seu colega, a criatura recupera uma caixa de resistência.
+Façanhas ambientais
+Ao Meu Redor: Quando a criatura aparece na cena, junto dela aparecem 3
+Aparatos de Destruição [mágicos, mecânicos, virtuais] em 3 zonas adjacentes a ela.
+Cada um deles ataca um personagem em sua zona por turno com Violento +2. Eles
+têm 4 caixas de resistência cada e defendem com Violento.
+Brilho Ofuscante: Uma vez por cena, a criatura pode emitir um brilho de
+grande intensidade, que emana de todo seu corpo. Quem não conseguir cobrir os
+olhos em tempo (Ágil/Atletismo contra +5) está Cego por 3 rodadas. A criatura
+pode pagar um ponto de destino para repetir esse efeito uma única vez.
+Como a Palma de Minha Mão: Quando está em seu ambiente nativo, a criatura
+ganha duas invocações grátis extras quando realiza um teste Instintivo para se esconder.
+Controle do Clima: Com um sacrifício de energia vital, a criatura pode conjurar
+[Tempestade, Nevasca, Escuridão, Luz do sol, Ventania]. Ela tem X invocações
+grátis desse aspecto, sendo X o número de caixas de resistência que escolher marcar.
+Demolição: A criatura pode optar por fazer um ataque Violento contra o
+cenário. Se bem-sucedida, ela pode usar as tensões conseguidas 1 para 1 para criar
+aspectos como Barreira de entulhos ou Esse pilar é minha espada, ou para ganhar
+invocações grátis desses aspectos.
+Obstáculos na Cena: Em um teste Violento bem-sucedido, a criatura consegue
+arrancar partes do ambiente para impor obstáculos (+2 para se proteger) ou conseguir
+uma posição vantajosa (+2 para atacar com Ágil). Ela pode usar esse bônus X vezes,
+sendo X o número de tensões conseguidas no teste.
+Ouvidos em Todo Lugar: O próprio ambiente é o sensor da criatura. Qualquer
+personagem com Sorrateiro/Furtividade menor que +2 é percebido pela criatura,
+mesmo a até 3 zonas de distância.
+Pequenos Elementais: Pagando um ponto de destino, a criatura é capaz de
+invocar pequenos [elementais, jatos de fogo, gêiseres] que sobem de [rachaduras
+no chão, crateras, dispositivos] em quaisquer duas zonas adjacentes a ela. Quando
+surgem, há 1⁄3 de chance de atingirem um personagem aleatório naquela zona com
+um ataque Violento +4.
+Realidade Alternativa: Ao custo de um ponto de destino, a criatura é capaz de
+criar uma pequena área envolvendo a si e aos personagens em que as leis da física
+funcionam de maneira diferente. Decida aleatoriamente:
+215
+•
+ Todos podem flutuar
+•
+ É possível caminhar em paredes
+•
+ Chove [pedras, gelo, lesmas]
+•
+ Tudo é visto como [espelhado, distorcido, translúcido]
+•
+ Tudo se move em câmera lenta
+•
+ Tudo que é sólido se desmancha no ar
+Ritual/Experimento: No início da cena, a criatura está realizando um [Ritual,
+Experimento] + 3 ooooՕՕՕ — os personagens precisam de 4 sucessos contra
++3 antes de 3 falhas para interrompê-lo. Se não conseguirem, a criatura consegue
+[invocar um Demônio, concluir sua Arma Apocalíptica], que tem 6 caixas de
+resistência e ataca e defende com +4.
+Terraformar: Pagando um ponto de destino, a criatura toca o chão para
+transformar a zona onde está em Terreno [Pantanoso, Escaldante, Ácido,
+Alagado], com duas invocações grátis. Superar esse terreno requer um teste bem-
+sucedido contra +[2,3,4].
+Terreno Pegajoso: A criatura secreta uma substância pegajosa que se espalha no
+chão ao seu redor. O personagem que entrar na mesma zona que ela está preso na
+Secreção pegajosa +3 oo — escapar dela requer dois sucessos contra +3.
+Façanhas de alteração
+A dor me impulsiona: Ao custo de um ponto de destino, a criatura pode trocar
+os aspectos de suas linhas de resistência Abalado, Machucado e Cedendo por
+Animado, Revigorado e Triunfando. Ela tem uma invocação grátis para cada um
+deles assim que marcar as suas respectivas caixas. Ao usar duas delas, as linhas de
+resistência retornam para os seus aspectos originais.
+Abraço sombrio: Se a criatura conseguir agarrar um personagem em um teste
+Horrível bem-sucedido, o alvo ganha a abordagem Horrível +2. A partir de agora,
+o personagem pode optar por usar essa abordagem no lugar de qualquer outra
+abordagem/perícia. Se o fizer e falhar, ele pode optar por ter um sucesso de 2 tensões
+ao invés disso, e aumentar sua abordagem Horrível em +1 permanentemente. Se o
+valor de Horrível se tornar a maior perícia/abordagem do personagem, ele sucumbe
+à sombra e se torna um PdN.
+Aprimorar arma: oooo Marque uma caixa a cada rodada que a criatura
+conseguir evitar um ataque com Ágil e gastar seu turno aprimorando sua arma
+com um teste Instintivo bem-sucedido (as duas condições são necessárias para
+marcar a caixa). Ao marcar as 3 caixas, a arma da criatura passa a causar +2 tensões
+em ataques bem-sucedidos.
+216
+Bipartição: Ao custo de dois pontos de destino, a criatura se divide em duas
+iguais, ambas com as mesmas estatísticas e caixas de resistência (inclusive as que já
+tiverem sido marcadas).
+Canalizador de energia: Sempre que um personagem gastar um ponto de
+destino, a criatura pode fazer um teste Horrível contra +2. Se conseguir pelo menos
+3 tensões, a criatura recebe aquele ponto de destino. Isso não afeta o efeito original
+do ponto de destino para o personagem.
+Desmaterializar: ooo Marque uma caixa para que a criatura ignore obstáculos
+ao se mover, ficando temporariamente imaterial.
+Extensão antinatural: A criatura é capaz de estender seus membros e fazer um
+ataque Ágil em outra zona adjacente como se estivesse lado a lado com o alvo.
+Imunidade aprendida: Ao receber um ataque armado (corpo-a-corpo ou à
+distância), a criatura pode optar por não rolar a defesa e receber todo o dano. Se o
+fizer, ela estuda a dor sofrida e ganha Imunidade a [tipo de material que causou
+dano]. A criatura não sofre dano por fontes similares por X turnos, sendo X a
+quantidade sofrida de dano no ataque original, perdendo a imunidade após isso.
+Mímico: Se a criatura estiver engajada em combate corpo-a-corpo contra um
+personagem, ela pode gastar um ponto de destino para assumir uma forma física
+idêntica a do personagem. Ele se torna uma Cópia fiel +2 ooo — distinguir a
+cópia do original requer três sucessos contra +2.
+Minha verdadeira forma: Ao marcar a caixa de Resistência Cedendo, a
+criatura passa por uma [transformação/mutação] e revela sua verdadeira forma
+final. A nova criatura tem [no mínimo] a mesma quantidade de caixas de
+resistência que a sua forma inicial (todas não marcadas), e ganha +1 em Horrível
+e +1 em outra abordagem a sua escolha. Além disso, escolha duas novas façanhas
+para a criatura desta lista.
+Mutação: Pagando um ponto de destino, a criatura passa por uma mutação.
+Alterne quaisquer valores de suas abordagens para refletir sua nova forma.
+O peso da dúvida: A criatura impõe uma dificuldade extra de +2 para qualquer
+personagem que tentar uma ação que não tenha tentado antes nesta cena.
+Sentimentos alterados: Em um teste Instintivo bem-sucedido, a criatura é capaz
+de perceber um sentimento de um personagem em relação a outro personagem (de
+jogador ou não) e invertê-lo (amor vira ódio, respeito vira escárnio etc.). Sustentar o
+efeito custa 1 caixa de resistência por rodada (ou por cinco minutos).
+Teleporte: Ao receber um ataque, a criatura pode pagar um ponto de destino
+para desaparecer antes de sofrer o dano e reaparecer em outro lugar. Receba +2 para
+contra-atacar o atacante surpreendido nesse turno.
+Toque de corrupção: Se a criatura conseguir tocar a mão espalmada contra a
+testa de um personagem, este ganha uma nova trilha: Corrupção ýoooo. A
+partir de agora, toda vez que o personagem [mentir, usar magia, manipular, agir
+217
+com agressividade], marque uma caixa de Corrupção. Se marcar todas as caixas, ele
+tem um acesso de [loucura, violência, egoísmo] e apaga todas as caixas. A trilha se
+mantém e pode ser marcada novamente. Aumente a gravidade da reação a cada vez
+que todas as cinco caixas forem marcadas.
+Transparência: oooo Sempre que a criatura sofrer dano físico, marque
+o dano normalmente e uma das caixas de Transparência. Cada caixa marcada
+aumenta a dificuldade em acertar a criatura em +1, conforme seu corpo vai ficando
+cada vez mais transparente.
+Violência horripilante: Ao custo de um ponto de destino, a criatura pode combinar
+seus valores das abordagens Violento e Horrível em uma única abordagem Violência
+horripilante, por até duas rodadas. Ela não pode se defender usando essa abordagem.
