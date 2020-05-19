@@ -34,6 +34,9 @@ $( document ).ready(function() {
     if((titulo.slice(-1) == 'o') && (genero == 'a'))
       titulo = titulo.substring(0,titulo.length-1)+'a';
     
+    if((titulo.slice(-1) == 'r') && (genero == 'a'))
+      titulo = titulo+'a';
+
     $('.boxCreature').html(
       '<center><h4>'+random(nome)+', '+genero+' '+titulo+'</h4></center>'+
       '<div><strong>ASPECTOS</strong>'+
