@@ -55,9 +55,9 @@ $( document ).ready(function() {
       '<div class="textIndent">'+random(stunts('Proteção'))+'</div>'+
       '<div class="textIndent">'+random(stunts(random(['Sociais','Ambientais','Alteração'])))+'</div></div><br>'+
       '<div><strong>RESISTÊNCIA</strong>'+
-      '<div>'+nbsp(4)+resistencias+'<strong><i class="fa fa-square-o"></i> Abalado</strong></div>'+
-      '<div>'+nbsp(4)+resistencias+'<i class="fa fa-square-o"></i><strong><i class="fa fa-square-o"></i> Machucado</strong></div>'+
-      '<div>'+nbsp(4)+resistencias+'<i class="fa fa-square-o"></i><i class="fa fa-square-o"></i><strong><i class="fa fa-square-o"></i> Cedendo</strong></div></div>'
+      '<div>'+nbsp(4)+resistencias+'<strong><i class="fa fa-square-o" style="font-weight: bolder;"></i> Abalado</strong></div>'+
+      '<div>'+nbsp(4)+resistencias+'<i class="fa fa-square-o"></i><strong><i class="fa fa-square-o" style="font-weight: bolder;"></i> Machucado</strong></div>'+
+      '<div>'+nbsp(4)+resistencias+'<i class="fa fa-square-o"></i><i class="fa fa-square-o"></i><strong><i class="fa fa-square-o" style="font-weight: bolder;"></i> Cedendo</strong></div></div>'
     );
 
     $('.boxCreature').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '550px', 'box-shadow': '5px 5px 10px lightgrey'});
