@@ -15,8 +15,8 @@ $( document ).ready(function() {
 
   $('#btnGerarCreature').click(function(){
 
-    var name = random(creatures('prefix'))+random(creatures('fix'))+random(creatures('suffix'))+', o '+capitalize(random(creatures('title')));
-    var conceito = random(creatures('nature'))+' '+random(creatures(random(['function','reputation','mutation'])))+' '+random(creatures('origin'));
+    var nomes = [];
+    var conceito = random(creatures('nature'))+' '+random(creatures(random(['function','reputation'])))+' 'random(creatures(random(['origin','mutation'])))
     var impeto = random(['Devo ','Tenho que ','Preciso ','Quero '])+random(creatures('action'))+' '+random(creatures('target'));
     var fraqueza = random(['Vulnerável a '+random(creatures('matter')), random(creatures('condition'))]);
     var habilidade = capitalize(random(creatures('ability')));
@@ -24,8 +24,20 @@ $( document ).ready(function() {
     var abordagens = creatureApproaches(skills('creature'));
     var resistencias = stress(0,3);
 
+    nome.push(random(creatures('prefix'))+random(creatures('fix'))+random(creatures('suffix')));
+    nome.push(random(creatures('prefix'))+random(creatures('fix')));
+    nome.push(random(creatures('prefix'))+random(creatures('suffix')));
+
+    var genero = random(['o','a']);
+    var titulo = capitalize(random(creatures('title')));
+
+    if(titulo.slice(-1) == 'o'){
+      if(genero == 'a')
+        titulo = titulo.substring(0,titulo.length-2)+'a';
+    }
+    
     $('.boxCreature').html(
-        '<center><h4>'+name+'</h4></center>'+
+        '<center><h4>'+random(nome)+', '+genero+' '+titulo+'</h4></center>'+
         '<div><strong>ASPECTOS</strong>'+
         '<div class="textIndent"><strong>Conceito:</strong> '+conceito+'</div>'+
         '<div class="textIndent"><strong>Ímpeto:</strong> '+impeto+'</div>'+
