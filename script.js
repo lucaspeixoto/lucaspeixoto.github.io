@@ -144,8 +144,7 @@ $( document ).ready(function() {
       estresse = '<p><strong>ESTRESSE</strong><br>'+
       nbsp(4)+'<i class="fa fa-square-o"></i> <i class="fa fa-square-o"></i><i class="fa fa-square-o"></i> '+
       '<i class="fa fa-square-o"></i><i class="fa fa-square-o"></i><i class="fa fa-square-o"></i></p>'+
-      nbsp(4)+'<strong>Equipamentos</strong> <i class="fa fa-square-o"></i> <i class="fa fa-square-o"></i><i class="fa fa-square-o"></i> '+
-      '<i class="fa fa-square-o"></i><i class="fa fa-square-o"></i><i class="fa fa-square-o"></i></p>';
+      nbsp(4)+'<strong>Equipamentos</strong> <i class="fa fa-square-o"></i><i class="fa fa-square-o"></i><i class="fa fa-square-o"></i></p>';
 
     }
 
