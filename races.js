@@ -1,8 +1,8 @@
 function races(type='') {
 
 	if (type == '') 
-        type = random(['halfling','elf','dwarf','human']);
-    	//type = random(['halfling','elf','dwarf','human','dragonborn','gnome','touched']);
+        type = random(['halfling','elf','dwarf','human','dragonborn']);
+    	//type = random(['halfling','elf','dwarf','human','','gnome','touched']);
   
     switch(type){
 
