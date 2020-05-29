@@ -124,66 +124,66 @@ function races(type='') {
     		return {
 
     			aspects: ['Draconato Azul','Draconato Branco','Draconato Bronze','Draconato Cobre','Draconato Latão','Draconato Negro','Draconato Dourado','Draconato Prateado','Draconato Verde','Draconato Vermelho'],
-			    stunts: [],
+			    stunts: ['<strong>Asas dracônicas:</strong> Você faz parte de um grupo muito seleto de draconatos que possuem asas. Você pode voar e se deslocar livremente entre zonas verticais.','<strong>Aura dracônica:</strong> O draconato possui uma aura herdada pelo seu sangue de dragão. Uma vez por sessão ele pode Criar Vantagem com Provocar (Estiloso) para impôr condições em seus inimigos dentro de uma zona. Um teste de Defesa com Vontade (Estiloso) deve ser feito. Em caso de falha o inimigo fica Amedrontado, em caso de Empate o draconato recebe um impulso contra ele.'],
 			    'Draconato Azul': {
 			    	names: ['Krivmorn Clucinduk','Sawarum Membinak','Frowunax Clistenthurred','Calurash Clinxociajuash','Alivull Croldricmeallish','Qelbor Firjun','Wrabarum Vuacak','Wrazire Kelmenkak','Pabroth Prinxacnad','Vyukris Onxeshkmuuduul','Kelhime Krearnishtash','Ushibith Apen','Naxiris Clempinillek','Kovys Estindin','Kelpatys Celxeashkmuraan','Phirith Ulmuuk','Hingwen Eastelijak','Fenqorel Yathtuk','Yrsira Merjenaarrish','Hinrish Limraal'],
 			        skills: ['Provocar'],
 			        approach: ['Estiloso'],
-			        stunts: ['<strong>Sopro elétrico:</strong> Pode soltar um jato elétrico uma vez por sessão. Faça um ataque com Atirar que atinge todos dentro de uma zona. Se a zona conter água o ataque recebe +1.']
+			        stunts: ['<strong>Resistência elétrica:</strong> O draconato azul recebe +2 ao se Defender de ataques ou magias de eletricidade.','<strong>Sopro elétrico:</strong> O draconato azul pode soltar um jato elétrico uma vez por sessão. Faça um ataque com Atirar que atinge todos dentro de uma zona. Em um sucesso com estilo, você pode reduzir as tensões de dano em 1 para colocar no(s) alvo(s) o aspecto “Paralisado”, com uma invocação gratuita.']
 			    },
 			    'Draconato Branco': {
 			    	names: ['Krivmorn Clucinduk','Sawarum Membinak','Frowunax Clistenthurred','Calurash Clinxociajuash','Alivull Croldricmeallish','Qelbor Firjun','Wrabarum Vuacak','Wrazire Kelmenkak','Pabroth Prinxacnad','Vyukris Onxeshkmuuduul','Kelhime Krearnishtash','Ushibith Apen','Naxiris Clempinillek','Kovys Estindin','Kelpatys Celxeashkmuraan','Phirith Ulmuuk','Hingwen Eastelijak','Fenqorel Yathtuk','Yrsira Merjenaarrish','Hinrish Limraal'],
 			        skills: ['Conhecimentos'],
 			        approach: ['Esperto'],
-			        stunts: ['<strong>Sopro congelante:</strong> Pode soltar um cone de frio uma vez por sessão, que diminui a temperatura do local e extingue pequenas chamas. Faça um ataque com Atirar que atinge todos dentro de uma zona.']
+			        stunts: ['<strong>Resistência gélida:</strong> O draconato branco recebe +2 ao se Defender de ataques ou magias de frio e gelo.','<strong>Sopro congelante:</strong> O draconato branco pode soltar um cone de frio uma vez por sessão. Faça um ataque com Atirar que atinge todos dentro de uma zona. Em um sucesso com estilo, você pode reduzir as tensões de dano em 1 para colocar no(s) alvo(s) o aspecto “Congelado”, com uma invocação gratuita.']
 			    },
 			    'Draconato Bronze': {
 			    	names: ['Paxiros Gathtak','Xarcrath Luathtokmik','Uroghull Dimtojerris','Vraklasar Ardankurgir','Troucrath Clanxocmic','Udojhan Femphacmanesh','Iorzire Pramranshteth','Saroth Arnath','Narwarum Myulkaal','Orlakris Coldruac','Drysnorae Nurthusergaak','Solyassa Liranshtac','Faerinn Arded','Jofyire Cliastakmiargir','Wraxora Klumphetash','Lorawophyl Kraankastarash','Tharith Klarjinthirish','Hinsira Linkud','Drysvys Myunketun','Irlylyassa Lorjir'],
 			        skills: ['Enganar'],
 			        approach: ['Esperto'],
-			        stunts: ['<strong>Sopro elétrico:</strong> Pode soltar um jato elétrico uma vez por sessão. Faça um ataque com Atirar que atinge todos dentro de uma zona. Se a zona conter água o ataque recebe +1.']
+			        stunts: ['<strong>Resistência elétrica:</strong> O draconato de bronze recebe +2 ao se Defender de ataques ou magias de eletricidade.','<strong>Sopro elétrico:</strong> O draconato de bronze pode soltar um jato elétrico uma vez por sessão. Faça um ataque com Atirar que atinge todos dentro de uma zona. Em um sucesso com estilo, você pode reduzir as tensões de dano em 1 para colocar no(s) alvo(s) o aspecto “Paralisado”, com uma invocação gratuita.']
 			    },
 			    'Draconato Cobre': {
 			    	names: ['Paxiros Gathtak','Xarcrath Luathtokmik','Uroghull Dimtojerris','Vraklasar Ardankurgir','Troucrath Clanxocmic','Udojhan Femphacmanesh','Iorzire Pramranshteth','Saroth Arnath','Narwarum Myulkaal','Orlakris Coldruac','Drysnorae Nurthusergaak','Solyassa Liranshtac','Faerinn Arded','Jofyire Cliastakmiargir','Wraxora Klumphetash','Lorawophyl Kraankastarash','Tharith Klarjinthirish','Hinsira Linkud','Drysvys Myunketun','Irlylyassa Lorjir'],
 			        skills: ['Vontade'],
 			        approach: ['Cuidadoso'],
-			        stunts: ['<strong>Sopro ácido:</strong> Pode soltar um jato ácido uma vez por sessão, que derrete pequenos objetos e danifica objetos maiores. Faça um ataque com Atirar que atinge todos dentro de uma zona.']
+			        stunts: ['<strong>Resistência ácida:</strong> O draconato de cobre recebe +2 ao se Defender de ataques ou magias de ácido.','<strong>Sopro ácido:</strong> O draconato de cobre pode soltar um jato ácido uma vez por sessão. Faça um ataque com Atirar que atinge todos dentro de uma zona. Em um sucesso com estilo, você pode reduzir as tensões de dano em 1 para colocar no(s) alvo(s) o aspecto “Derretendo”, com uma invocação gratuita.']
 			    },
 			    'Draconato Latão': {
 			    	names: ['Bamorn Arninshterred','Wraqiroth Prirjac','Prifarn Premruuth','Narythas Kiltikac','Ravojurn Shistas','Ghekul Uuxendarger','Pribor Taltetharguul','Ghenaar Cruulxes','Narjhan Nampinshtandith','Lormash Prapojish','Qibirith Draphakendar','Gurgwen Kerrhith','Erlicys Klulric','Orirish Aambenic','Ushinorae Thirdaandruul','Welsipora Krerath','Thagil Clophaciarrel','Urinorae Cruucharaash','Soxora Drimric','Oripora Kruphitoled'],
 			        skills: ['Furtividade'],
 			        approach: ['Sorrateiro'],
-			        stunts: ['<strong>Sopro incendiário:</strong> Pode soltar um jato de fogo uma vez por sessão, que queima pequenos objetos e coloca o aspecto “pegando fogo” em objetos maiores. Faça um ataque com Atirar que atinge todos dentro de uma zona.']
+			        stunts: ['<strong>Resistência ígnea:</strong> O draconato de latão recebe +2 ao se Defender de ataques ou magias de fogo.','<strong>Sopro incendiário:</strong> O draconato de latão pode soltar um cone de fogo uma vez por sessão. Faça um ataque com Atirar que atinge todos dentro de uma zona. Em um sucesso com estilo, você pode reduzir as tensões de dano em 1 para colocar no(s) alvo(s) o aspecto “Em chamas”, com uma invocação gratuita.']
 			    },
 			    'Draconato Negro': {
 			    	names: ['Bamorn Arninshterred','Wraqiroth Prirjac','Prifarn Premruuth','Narythas Kiltikac','Ravojurn Shistas','Ghekul Uuxendarger','Pribor Taltetharguul','Ghenaar Cruulxes','Narjhan Nampinshtandith','Lormash Prapojish','Qibirith Draphakendar','Gurgwen Kerrhith','Erlicys Klulric','Orirish Aambenic','Ushinorae Thirdaandruul','Welsipora Krerath','Thagil Clophaciarrel','Urinorae Cruucharaash','Soxora Drimric','Oripora Kruphitoled'],
 			        skills: ['Ocultismo'],
 			        approach: ['Cuidadoso'],
-			        stunts: ['<strong>Sopro ácido:</strong> Pode soltar um jato ácido uma vez por sessão, que derrete pequenos objetos e danifica objetos maiores. Faça um ataque com Atirar que atinge todos dentro de uma zona.']
+			        stunts: ['<strong>Resistência ácida:</strong> O draconato negro recebe +2 ao se Defender de ataques ou magias de ácido.','<strong>Sopro ácido:</strong> O draconato negro pode soltar um jato ácido uma vez por sessão. Faça um ataque com Atirar que atinge todos dentro de uma zona. Em um sucesso com estilo, você pode reduzir as tensões de dano em 1 para colocar no(s) alvo(s) o aspecto “Derretendo”, com uma invocação gratuita.']
 			    },
 			    'Draconato Dourado': {
 			    	names: ['Grejhan Drarthotirduul','Krivhazar Cremtuucneas','Lordorim Malxejal','Calutrin Fuchesarden','Greciar Crimpac','Vrakfarn Ancelean','Zorkris Myuuccad','Babarum Ephikmol','Balzavur Olkalac','Loryax Nyenkul','Belhymm Nyomphejimel','Cagwen Earrhenul','Orilyassa Myarnaacnajith','Kapora Verthenkec','Drysqorel Nyuacceshtid','Yalyassa Kalkinesh','Wrarith Ambik','Sudalynn Vualmaajud','Josira Droxad','Mihime Tirthuash'],
 			        skills: ['Empatia'],
 			        approach: ['Estiloso'],
-			        stunts: ['<strong>Sopro incendiário:</strong> Pode soltar um jato de fogo uma vez por sessão, que queima pequenos objetos e coloca o aspecto “pegando fogo” em objetos maiores. Faça um ataque com Atirar que atinge todos dentro de uma zona.']
+			        stunts: ['<strong>Resistência ígnea:</strong> O draconato dourado recebe +2 ao se Defender de ataques ou magias de fogo.','<strong>Sopro incendiário:</strong> O draconato dourado pode soltar um cone de fogo uma vez por sessão. Faça um ataque com Atirar que atinge todos dentro de uma zona. Em um sucesso com estilo, você pode reduzir as tensões de dano em 1 para colocar no(s) alvo(s) o aspecto “Em chamas”, com uma invocação gratuita.']
 			    },
 			    'Draconato Prateado': {
 			    	names: ['Grejhan Drarthotirduul','Krivhazar Cremtuucneas','Lordorim Malxejal','Calutrin Fuchesarden','Greciar Crimpac','Vrakfarn Ancelean','Zorkris Myuuccad','Babarum Ephikmol','Balzavur Olkalac','Loryax Nyenkul','Belhymm Nyomphejimel','Cagwen Earrhenul','Orilyassa Myarnaacnajith','Kapora Verthenkec','Drysqorel Nyuacceshtid','Yalyassa Kalkinesh','Wrarith Ambik','Sudalynn Vualmaajud','Josira Droxad','Mihime Tirthuash'],
 			        skills: ['Comunicação'],
 			        approach: ['Estiloso'],
-			        stunts: ['<strong>Sopro congelante:</strong> Pode soltar um cone de frio uma vez por sessão, que diminui a temperatura do local e extingue pequenas chamas. Faça um ataque com Atirar que atinge todos dentro de uma zona.']
+			        stunts: ['<strong>Resistência gélida:</strong> O draconato prateado recebe +2 ao se Defender de ataques ou magias de frio e gelo.','<strong>Sopro congelante:</strong> O draconato prateado pode soltar um cone de frio uma vez por sessão. Faça um ataque com Atirar que atinge todos dentro de uma zona. Em um sucesso com estilo, você pode reduzir as tensões de dano em 1 para colocar no(s) alvo(s) o aspecto “Congelado”, com uma invocação gratuita.']
 			    },
 			    'Draconato Verde': {
 			    	names: ['Wufarn Thelkundren','Nesxan Folkosh','Wulrash Distin','Worhadur Thaphic','Bhahadur Camritunod','Tazrakas Apendes','Jarcrath Deroshtadoc','Vraknaar Klolthenshtac','Beldhall Preacar','Vyusashi Drialdeajeac','Eshyries Nyulthish','Valkira Cruathtuc','Zenliann Celtos','Erliwyn Ancokmenash','Ophizita Drunkethuurdean','Neskira Myelthel','Irlypora Crerrhodillak','Xyrina Myampatharguus','Nesshann Kimphajellod','Johime Shalxeth'],
 			        skills: ['Lutar'],
 			        approach: ['Poderoso'],
-			        stunts: ['<strong>Sopro venenoso:</strong> Pode soltar um cone de veneno uma vez por sessão, que coloca o aspecto “envenenado” nos alvos. Faça um ataque com Atirar que atinge todos dentro de uma zona.']
+			        stunts: ['<strong>Resistência à venenos:</strong> O draconato verde recebe +2 ao se Defender de ataques ou magias de veneno.','<strong>Sopro venenoso:</strong> O draconato verde pode soltar um cone de veneno uma vez por sessão. Faça um ataque com Atirar que atinge todos dentro de uma zona. Em um sucesso com estilo, você pode reduzir as tensões de dano em 1 para colocar no(s) alvo(s) o aspecto “Envenenado”, com uma invocação gratuita.']
 			    },
 			    'Draconato Vermelho': {
 			    	names: ['Wufarn Thelkundren','Nesxan Folkosh','Wulrash Distin','Worhadur Thaphic','Bhahadur Camritunod','Tazrakas Apendes','Jarcrath Deroshtadoc','Vraknaar Klolthenshtac','Beldhall Preacar','Vyusashi Drialdeajeac','Eshyries Nyulthish','Valkira Cruathtuc','Zenliann Celtos','Erliwyn Ancokmenash','Ophizita Drunkethuurdean','Neskira Myelthel','Irlypora Crerrhodillak','Xyrina Myampatharguus','Nesshann Kimphajellod','Johime Shalxeth'],
 			        skills: ['Atletismo'],
 			        approach: ['Ágil'],
-			        stunts: ['<strong>Sopro incendiário:</strong> Pode soltar um jato de fogo uma vez por sessão, que queima pequenos objetos e coloca o aspecto “pegando fogo” em objetos maiores. Faça um ataque com Atirar que atinge todos dentro de uma zona.']
+			        stunts: ['<strong>Resistência ígnea:</strong> O draconato vermelho recebe +2 ao se Defender de ataques ou magias de fogo.','<strong>Sopro incendiário:</strong> Pode soltar um cone de fogo uma vez por sessão. Faça um ataque com Atirar que atinge todos dentro de uma zona. Em um sucesso com estilo, você pode reduzir as tensões de dano em 1 para colocar no(s) alvo(s) o aspecto “Em chamas”, com uma invocação gratuita.']
 			    }
 			}
 			break;
