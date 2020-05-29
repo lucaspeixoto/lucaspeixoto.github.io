@@ -127,6 +127,7 @@ $( document ).ready(function() {
       '<div class="textIndent"><strong>Regular (+1):</strong> '+pericias[6]+', '+pericias[7]+', '+pericias[8]+', '+pericias[9]+'</div></div>';
 
       estresse = '<p><strong>ESTRESSE</strong><br>'+
+      '<strong>'+nbsp(4)+'Equipamento: </strong>'+characterStress('Recursos',pericias)+'<br>'+
       '<strong>'+nbsp(4)+'Físico: </strong>'+characterStress('Vigor',pericias)+'<br>'+
       '<strong>'+nbsp(4)+'Mental: </strong>'+characterStress('Vontade',pericias)+'</p>';
 
@@ -142,6 +143,8 @@ $( document ).ready(function() {
 
       estresse = '<p><strong>ESTRESSE</strong><br>'+
       nbsp(4)+'<i class="fa fa-square-o"></i> <i class="fa fa-square-o"></i><i class="fa fa-square-o"></i> '+
+      '<i class="fa fa-square-o"></i><i class="fa fa-square-o"></i><i class="fa fa-square-o"></i></p>'+
+      nbsp(4)+'<strong>Equipamentos</strong> <i class="fa fa-square-o"></i> <i class="fa fa-square-o"></i><i class="fa fa-square-o"></i> '+
       '<i class="fa fa-square-o"></i><i class="fa fa-square-o"></i><i class="fa fa-square-o"></i></p>';
 
     }
