@@ -475,6 +475,20 @@ $( document ).ready(function() {
 
     });
 
+    $('#btnRolarDado').click(function(){
+
+        var dado = contAtributo(1,20);
+
+        if(dado == '1')
+            dado = dado + ' - ACERTO CRÍTICO!'
+
+        $('.boxPokemon').prepend(
+        '<div class="boxNPC">'+
+          '<strong>Rolagem:</strong> '+dado+
+        '</div>');
+
+    });
+
     $('#btnGerarPokemon').click(function(){
 
         var ranking = Number($('#selectRanking').val());
