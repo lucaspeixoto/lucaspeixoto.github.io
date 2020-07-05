@@ -159,14 +159,16 @@ $( document ).ready(function() {
 
         if(trainer.ranking == 'atual'){
             for(i=0;i<trainer.qtdd;i++)
-                pokemons = pokemons + '<center>'+random(pokemon(ranking))+' '+random(nivel(ranking))+' / Tipo / '+atributo()+'</center>';
+                pokemons = pokemons + '<center>'+random(pokemon(ranking))+' '+random(nivel(ranking))+' / Tipo / '+atributo()+' - '+stress(3,3)+'</center>';
         } else {
-            pokemons = pokemons + '<center>'+random(pokemon(ranking))+' '+random(nivel(ranking))+' / Tipo / '+atributo()+'</center>';
-            pokemons = pokemons + '<center>'+random(pokemon(ranking))+' '+random(nivel(ranking))+' / Tipo / '+atributo()+'</center>';
-            pokemons = pokemons + '<center>'+random(pokemon(ranking+1))+' '+random(nivel(ranking+1))+' / Tipo / '+atributo()+'</center>';
+            pokemons = pokemons + '<center>'+random(pokemon(ranking))+' '+random(nivel(ranking))+' / Tipo / '+atributo()+' - '+stress(3,3)+'</center>';
+            pokemons = pokemons + '<center>'+random(pokemon(ranking))+' '+random(nivel(ranking))+' / Tipo / '+atributo()+' - '+stress(3,3)+'</center>';
+            pokemons = pokemons + '<center>'+random(pokemon(ranking+1))+' '+random(nivel(ranking+1))+' / Tipo / '+atributo()+' - '+stress(3,3)+'</center>';
         }
 
         $('.boxPokemon').html('<div class="boxNPC">'+pokemons+'</div>');
+
+        activateStressBox();
 
     });
 
@@ -178,14 +180,16 @@ $( document ).ready(function() {
 
         if(trainer.ranking == 'atual'){
             for(i=0;i<trainer.qtdd;i++)
-                pokemons = pokemons + '<center>'+random(pokemon(ranking))+' '+random(nivel(ranking))+' / Tipo / '+atributo()+'</center>';
+                pokemons = pokemons + '<center>'+random(pokemon(ranking))+' '+random(nivel(ranking))+' / Tipo / '+atributo()+' - '+stress(3,3)+'</center>';
         } else {
-            pokemons = pokemons + '<center>'+random(pokemon(ranking))+' '+random(nivel(ranking))+' / Tipo / '+atributo()+'</center>';
-            pokemons = pokemons + '<center>'+random(pokemon(ranking))+' '+random(nivel(ranking))+' / Tipo / '+atributo()+'</center>';
-            pokemons = pokemons + '<center>'+random(pokemon(ranking+1))+' '+random(nivel(ranking+1))+' / Tipo / '+atributo()+'</center>';
+            pokemons = pokemons + '<center>'+random(pokemon(ranking))+' '+random(nivel(ranking))+' / Tipo / '+atributo()+' - '+stress(3,3)+'</center>';
+            pokemons = pokemons + '<center>'+random(pokemon(ranking))+' '+random(nivel(ranking))+' / Tipo / '+atributo()+' - '+stress(3,3)+'</center>';
+            pokemons = pokemons + '<center>'+random(pokemon(ranking+1))+' '+random(nivel(ranking+1))+' / Tipo / '+atributo()+' - '+stress(3,3)+'</center>';
         }
 
         $('.boxPokemon').html('<div class="boxNPC">'+pokemons+'</div>');
+
+        activateStressBox();
 
     });
 
@@ -225,8 +229,10 @@ $( document ).ready(function() {
     
         $('.boxPokemon').html(
         '<div class="boxNPC">'+
-          '<center>'+random(pokemon(ranking))+' '+random(nivel(ranking))+' / Tipo / '+atributo()+'</center>'+
+          '<center>'+random(pokemon(ranking))+' '+random(nivel(ranking))+' / Tipo / '+atributo()+' - '+stress(3,3)+'</center>'+
         '</div>');
+
+        activateStressBox();
 
     });
 
