@@ -1,25 +1,202 @@
 $( document ).ready(function() {
 
     function encontro() {
-        return ['Você encontra um Membro da Equipe Rocket','Aparece 1 Pokémon selvagem do Ranking atual','Aparece 1 Pokémon selvagem do Ranking atual','Aparece 1 Pokémon selvagem do Ranking atual','Aparece 1 Pokémon selvagem do Ranking anterior','Você encontra um Treinador Aleatório','Aparece 1 Pokémon selvagem do Ranking atual','Aparece 1 Pokémon selvagem do Ranking atual','Aparecem 2 Pokémon selvagens do Ranking atual (Lute contra eles individualmente)','Você chegou a uma Cidade','Aparece 1 Pokémon selvagem do Ranking atual','Você encontra um Treinador Aleatório','Aparece 1 Pokémon selvagem do Ranking atual','Aparece 1 Pokémon selvagem do Ranking atual','Aparece 1 Pokémon selvagem do Ranking seguinte','Aparece 1 Pokémon selvagem do Ranking atual','Você chegou a um Centro Pokémon aleatório','Você encontra um Treinador Aleatório','Aparece 1 Pokémon selvagem do Ranking atual','Você chegou a uma Cidade',];
+        return [
+            {evento:'Você encontra um Membro da Equipe Rocket',tipo:'rocket'},
+            {evento:'Aparece 1 Pokémon selvagem do Ranking atual',tipo:'selvagem'},
+            {evento:'Aparece 1 Pokémon selvagem do Ranking atual',tipo:'selvagem'},
+            {evento:'Aparece 1 Pokémon selvagem do Ranking atual',tipo:'selvagem'},
+            {evento:'Aparece 1 Pokémon selvagem do Ranking anterior',tipo:'selvagem'},
+            {evento:'Você encontra um Treinador Aleatório',tipo:'treinador'},
+            {evento:'Aparece 1 Pokémon selvagem do Ranking atual',tipo:'selvagem'},
+            {evento:'Aparece 1 Pokémon selvagem do Ranking atual',tipo:'selvagem'},
+            {evento:'Aparecem 2 Pokémon selvagens do Ranking atual (Lute contra eles individualmente)',tipo:'selvagem'},
+            {evento:'Você chegou a uma Cidade',tipo:'cidade'},
+            {evento:'Aparece 1 Pokémon selvagem do Ranking atual',tipo:'selvagem'},
+            {evento:'Você encontra um Treinador Aleatório',tipo:'treinador'},
+            {evento:'Aparece 1 Pokémon selvagem do Ranking atual',tipo:'selvagem'},
+            {evento:'Aparece 1 Pokémon selvagem do Ranking atual',tipo:'selvagem'},
+            {evento:'Aparece 1 Pokémon selvagem do Ranking seguinte',tipo:'selvagem'},
+            {evento:'Aparece 1 Pokémon selvagem do Ranking atual',tipo:'selvagem'},
+            {evento:'Você chegou a um Centro Pokémon aleatório',tipo:'cidade'},
+            {evento:'Você encontra um Treinador Aleatório',tipo:'treinador'},
+            {evento:'Aparece 1 Pokémon selvagem do Ranking atual',tipo:'selvagem'},
+            {evento:'Você chegou a uma Cidade',tipo:'cidade'}
+        ];
     };
 
     function pokemon(ranking) {
         switch(ranking){
             case 1:
-                return ['Caterpie','Weedle','Magikarp','Metapod','Kakuna','Zubat','Pidgey','Rattata','Spearow','Diglett','Jigglypuff','Nidoran♂','Nidoran♀','Paras','Ekans','Ditto','Meowth','Horsea','Vulpix','Sandshrew','Poliwag','Bellsprout','Geodude','Dratini','Venonat','Mankey','Machop','Shellder','Charmander','Abra','Doduo','Gastly','Squirtle','Slowpoke','Bulbasaur','Pikachu'];
+                return [
+                    {nome:'Caterpie',tipo:'Inseto',fraqueza:'Fogo, Voador e Pedra',num:'010'},
+                    {nome:'Weedle',tipo:'Inseto Venenoso',fraqueza:'Fogo, Psíquico, Voador e Pedra',num:'013'},
+                    {nome:'Magikarp',tipo:'Água',fraqueza:'Grama e Elétrico',num:'129'},
+                    {nome:'Metapod',tipo:'Inseto',fraqueza:'Fogo, Voador e Pedra',num:'011'},
+                    {nome:'Kakuna',tipo:'Inseto Venenoso',fraqueza:'Fogo, Psíquico, Voador e Pedra',num:'014'},
+                    {nome:'Zubat',tipo:'Voador Venenoso',fraqueza:'Psíquico, Elétrico, Gelo e Pedra',num:'041'},
+                    {nome:'Pidgey',tipo:'Voador Normal',fraqueza:'Elétrico, Gelo e Pedra',num:'016'},
+                    {nome:'Rattata',tipo:'Normal',fraqueza:'Lutador',num:'019'},
+                    {nome:'Spearow',tipo:'Voador Normal',fraqueza:'Elétrico, Gelo e Pedra',num:'021'},
+                    {nome:'Diglett',tipo:'Terrestre',fraqueza:'Água, Grama e Gelo',num:'050'},
+                    {nome:'Jigglypuff',tipo:'Fada Normal',fraqueza:'Metálico e Venenoso',num:'039'},
+                    {nome:'Nidoran♂',tipo:'Venenoso',fraqueza:'Psíquico e Terrestre',num:'032'},
+                    {nome:'Nidoran♀',tipo:'Venenoso',fraqueza:'Psíquico e Terrestre',num:'029'},
+                    {nome:'Paras',tipo:'Inseto Grama',fraqueza:'Fogo, Voador, Gelo, Venenoso, Pedra e Inseto',num:'046'},
+                    {nome:'Ekans',tipo:'Venenoso',fraqueza:'Psíquico e Terrestre',num:'023'},
+                    {nome:'Ditto',tipo:'Normal',fraqueza:'Lutador',num:'132'},
+                    {nome:'Meowth',tipo:'Normal',fraqueza:'Lutador',num:'052'},
+                    {nome:'Horsea',tipo:'Água',fraqueza:'Grama e Elétrico',num:'116'},
+                    {nome:'Vulpix',tipo:'Fogo',fraqueza:'Água, Terrestre e Pedra',num:'037'},
+                    {nome:'Sandshrew',tipo:'Terrestre',fraqueza:'Água, Grama e Gelo',num:'027'},
+                    {nome:'Poliwag',tipo:'Água',fraqueza:'Grama e Elétrico',num:'060'},
+                    {nome:'Bellsprout',tipo:'Grama Venenoso',fraqueza:'Fogo, Psíquico, Voador e Gelo',num:'069'},
+                    {nome:'Geodude',tipo:'Pedra Terrestre',fraqueza:'Metálico, Lutador, Água, Gelo, Grama e Terrestre',num:'074'},
+                    {nome:'Dratini',tipo:'Dragão',fraqueza:'Fada, Gelo e Dragão',num:'147'},
+                    {nome:'Venonat',tipo:'Inseto Venenoso',fraqueza:'Fogo, Psíquico, Voador e Pedra',num:'048'},
+                    {nome:'Mankey',tipo:'Lutador',fraqueza:'Psíquico, Voador e Fada',num:'056'},
+                    {nome:'Machop',tipo:'Lutador',fraqueza:'Psíquico, Voador e Fada',num:'066'},
+                    {nome:'Shellder',tipo:'Água',fraqueza:'Grama e Elétrico',num:'090'},
+                    {nome:'Charmander',tipo:'Fogo',fraqueza:'Água, Terrestre e Pedra',num:'004'},
+                    {nome:'Abra',tipo:'Psíquico',fraqueza:'Fantasma, Noturno e Inseto',num:'063'},
+                    {nome:'Doduo',tipo:'Normal',fraqueza:'Elétrico, Gelo e Pedra',num:'084'},
+                    {nome:'Gastly',tipo:'Fantasma Venenoso',fraqueza:'Fantasma, Noturno, Psíquico e Terrestre',num:'092'},
+                    {nome:'Squirtle',tipo:'Água',fraqueza:'Grama e Elétrico',num:'007'},
+                    {nome:'Slowpoke',tipo:'Água Psíquico',fraqueza:'Fantasma, Noturno, Grama, Elétrico e Inseto',num:'079'},
+                    {nome:'Bulbasaur',tipo:'Grama Venenoso',fraqueza:'Fogo, Psíquico, Voador e Gelo',num:'001'},
+                    {nome:'Pikachu',tipo:'Elétrico',fraqueza:'Terreste',num:'025'}
+                ];
                 break;
             case 2:
-                return ['Oddish','Psyduck','Cubone','Goldeen','Clefairy','Magnemite','Seel','Grimer','Krabby','Exeggcute','Eevee','Drowzee','Voltorb','Tentacool','Koffing','Staryu','Rhyhorn','Pidgeotto','Growlithe','Omanyte','Kabuto','Nidorina','Nidorino','Farfetch`d','Poliwhirl','Onix','Lickitung','Weepinbell','Graveler','Butterfree','Beedrill','Gloom','Porygon','Kadabra','Ivysaur','Charmeleon'];
+                return [
+                    {nome:'Oddish',tipo:'',fraqueza:'',num:''},
+                    {nome:'Psyduck',tipo:'',fraqueza:'',num:''},
+                    {nome:'Cubone',tipo:'',fraqueza:'',num:''},
+                    {nome:'Goldeen',tipo:'',fraqueza:'',num:''},
+                    {nome:'Clefairy',tipo:'',fraqueza:'',num:''},
+                    {nome:'Magnemite',tipo:'',fraqueza:'',num:''},
+                    {nome:'Seel',tipo:'',fraqueza:'',num:''},
+                    {nome:'Grimer',tipo:'',fraqueza:'',num:''},
+                    {nome:'Krabby',tipo:'',fraqueza:'',num:''},
+                    {nome:'Exeggcute',tipo:'',fraqueza:'',num:''},
+                    {nome:'Eevee',tipo:'',fraqueza:'',num:''},
+                    {nome:'Drowzee',tipo:'',fraqueza:'',num:''},
+                    {nome:'Voltorb',tipo:'',fraqueza:'',num:''},
+                    {nome:'Tentacool',tipo:'',fraqueza:'',num:''},
+                    {nome:'Koffing',tipo:'',fraqueza:'',num:''},
+                    {nome:'Staryu',tipo:'',fraqueza:'',num:''},
+                    {nome:'Rhyhorn',tipo:'',fraqueza:'',num:''},
+                    {nome:'Pidgeotto',tipo:'',fraqueza:'',num:''},
+                    {nome:'Growlithe',tipo:'',fraqueza:'',num:''},
+                    {nome:'Omanyte',tipo:'',fraqueza:'',num:''},
+                    {nome:'Kabuto',tipo:'',fraqueza:'',num:''},
+                    {nome:'Nidorina',tipo:'',fraqueza:'',num:''},
+                    {nome:'Nidorino',tipo:'',fraqueza:'',num:''},
+                    {nome:'Farfetch`d',tipo:'',fraqueza:'',num:''},
+                    {nome:'Poliwhirl',tipo:'',fraqueza:'',num:''},
+                    {nome:'Onix',tipo:'',fraqueza:'',num:''},
+                    {nome:'Lickitung',tipo:'',fraqueza:'',num:''},
+                    {nome:'Weepinbell',tipo:'',fraqueza:'',num:''},
+                    {nome:'Graveler',tipo:'',fraqueza:'',num:''},
+                    {nome:'Butterfree',tipo:'',fraqueza:'',num:''},
+                    {nome:'Beedrill',tipo:'',fraqueza:'',num:''},
+                    {nome:'Gloom',tipo:'',fraqueza:'',num:''},
+                    {nome:'Porygon',tipo:'',fraqueza:'',num:''},
+                    {nome:'Kadabra',tipo:'',fraqueza:'',num:''},
+                    {nome:'Ivysaur',tipo:'',fraqueza:'',num:''},
+                    {nome:'Charmeleon',tipo:'',fraqueza:'',num:''}
+                ];
                 break;
             case 3:
-                return ['Wartortle','Parasect','Machoke','Haunter','Ponyta','Raticate','Dragonair','Dugtrio','Marowak','Wigglytuff','Tangela','Persian','Seadra','Fearow','Arbok','Sandslash','Venomoth','Chansey','Seaking','Golbat','Primeape','Hitmonlee','Hitmonchan','Jynx','Mr. Mime','Magneton','Dodrio','Dewgong','Kingler','Pidgeot','Clefable','Hypno','Raichu','Rhydon','Vileplume','Victreebel'];
+                return [
+                    {nome:'Wartortle',tipo:'',fraqueza:'',num:''},
+                    {nome:'Parasect',tipo:'',fraqueza:'',num:''},
+                    {nome:'Machoke',tipo:'',fraqueza:'',num:''},
+                    {nome:'Haunter',tipo:'',fraqueza:'',num:''},
+                    {nome:'Ponyta',tipo:'',fraqueza:'',num:''},
+                    {nome:'Raticate',tipo:'',fraqueza:'',num:''},
+                    {nome:'Dragonair',tipo:'',fraqueza:'',num:''},
+                    {nome:'Dugtrio',tipo:'',fraqueza:'',num:''},
+                    {nome:'Marowak',tipo:'',fraqueza:'',num:''},
+                    {nome:'Wigglytuff',tipo:'',fraqueza:'',num:''},
+                    {nome:'Tangela',tipo:'',fraqueza:'',num:''},
+                    {nome:'Persian',tipo:'',fraqueza:'',num:''},
+                    {nome:'Seadra',tipo:'',fraqueza:'',num:''},
+                    {nome:'Fearow',tipo:'',fraqueza:'',num:''},
+                    {nome:'Arbok',tipo:'',fraqueza:'',num:''},
+                    {nome:'Sandslash',tipo:'',fraqueza:'',num:''},
+                    {nome:'Venomoth',tipo:'',fraqueza:'',num:''},
+                    {nome:'Chansey',tipo:'',fraqueza:'',num:''},
+                    {nome:'Seaking',tipo:'',fraqueza:'',num:''},
+                    {nome:'Golbat',tipo:'',fraqueza:'',num:''},
+                    {nome:'Primeape',tipo:'',fraqueza:'',num:''},
+                    {nome:'Hitmonlee',tipo:'',fraqueza:'',num:''},
+                    {nome:'Hitmonchan',tipo:'',fraqueza:'',num:''},
+                    {nome:'Jynx',tipo:'',fraqueza:'',num:''},
+                    {nome:'Mr. Mime',tipo:'',fraqueza:'',num:''},
+                    {nome:'Magneton',tipo:'',fraqueza:'',num:''},
+                    {nome:'Dodrio',tipo:'',fraqueza:'',num:''},
+                    {nome:'Dewgong',tipo:'',fraqueza:'',num:''},
+                    {nome:'Kingler',tipo:'',fraqueza:'',num:''},
+                    {nome:'Pidgeot',tipo:'',fraqueza:'',num:''},
+                    {nome:'Clefable',tipo:'',fraqueza:'',num:''},
+                    {nome:'Hypno',tipo:'',fraqueza:'',num:''},
+                    {nome:'Raichu',tipo:'',fraqueza:'',num:''},
+                    {nome:'Rhydon',tipo:'',fraqueza:'',num:''},
+                    {nome:'Vileplume',tipo:'',fraqueza:'',num:''},
+                    {nome:'Victreebel',tipo:'',fraqueza:'',num:''}
+                ];
                 break;
             case 4:
-                return ['Slowbro','Electrode','Weezing','Kangaskhan','Electabuzz','Tauros','Golem','Magmar','Omastar','Kabutops','Golduck','Alakazam','Rapidash','Muk','Gengar','Scyther','Pinsir','Nidoqueen','Nidoking','Ninetales','Machamp','Poliwrath','Tentacruel','Aerodactyl','Starmie','Venusaur','Cloyster','Vaporeon','Jolteon','Flareon','Blastoise','Exeggutor','Charizard','Lapras','Gyarados','Snorlax','Arcanine'];
+                return [
+                    {nome:'Slowbro',tipo:'',fraqueza:'',num:''},
+                    {nome:'Electrode',tipo:'',fraqueza:'',num:''},
+                    {nome:'Weezing',tipo:'',fraqueza:'',num:''},
+                    {nome:'Kangaskhan',tipo:'',fraqueza:'',num:''},
+                    {nome:'Electabuzz',tipo:'',fraqueza:'',num:''},
+                    {nome:'Tauros',tipo:'',fraqueza:'',num:''},
+                    {nome:'Golem',tipo:'',fraqueza:'',num:''},
+                    {nome:'Magmar',tipo:'',fraqueza:'',num:''},
+                    {nome:'Omastar',tipo:'',fraqueza:'',num:''},
+                    {nome:'Kabutops',tipo:'',fraqueza:'',num:''},
+                    {nome:'Golduck',tipo:'',fraqueza:'',num:''},
+                    {nome:'Alakazam',tipo:'',fraqueza:'',num:''},
+                    {nome:'Rapidash',tipo:'',fraqueza:'',num:''},
+                    {nome:'Muk',tipo:'',fraqueza:'',num:''},
+                    {nome:'Gengar',tipo:'',fraqueza:'',num:''},
+                    {nome:'Scyther',tipo:'',fraqueza:'',num:''},
+                    {nome:'Pinsir',tipo:'',fraqueza:'',num:''},
+                    {nome:'Nidoqueen',tipo:'',fraqueza:'',num:''},
+                    {nome:'Nidoking',tipo:'',fraqueza:'',num:''},
+                    {nome:'Ninetales',tipo:'',fraqueza:'',num:''},
+                    {nome:'Machamp',tipo:'',fraqueza:'',num:''},
+                    {nome:'Poliwrath',tipo:'',fraqueza:'',num:''},
+                    {nome:'Tentacruel',tipo:'',fraqueza:'',num:''},
+                    {nome:'Aerodactyl',tipo:'',fraqueza:'',num:''},
+                    {nome:'Starmie',tipo:'',fraqueza:'',num:''},
+                    {nome:'Venusaur',tipo:'',fraqueza:'',num:''},
+                    {nome:'Cloyster',tipo:'',fraqueza:'',num:''},
+                    {nome:'Vaporeon',tipo:'',fraqueza:'',num:''},
+                    {nome:'Jolteon',tipo:'',fraqueza:'',num:''},
+                    {nome:'Flareon',tipo:'',fraqueza:'',num:''},
+                    {nome:'Blastoise',tipo:'',fraqueza:'',num:''},
+                    {nome:'Exeggutor',tipo:'',fraqueza:'',num:''},
+                    {nome:'Charizard',tipo:'',fraqueza:'',num:''},
+                    {nome:'Lapras',tipo:'',fraqueza:'',num:''},
+                    {nome:'Gyarados',tipo:'',fraqueza:'',num:''},
+                    {nome:'Snorlax',tipo:'',fraqueza:'',num:''},
+                    {nome:'Arcanine',tipo:'',fraqueza:'',num:''}
+                ];
                 break;
             case 5:
-                return ['Articuno','Zapdos','Moltres','Dragonite','Mew','Mewtwo'];
+                return [
+                    {nome:'Articuno',tipo:'',fraqueza:'',num:''},
+                    {nome:'Zapdos',tipo:'',fraqueza:'',num:''},
+                    {nome:'Moltres',tipo:'',fraqueza:'',num:''},
+                    {nome:'Dragonite',tipo:'',fraqueza:'',num:''},
+                    {nome:'Mew',tipo:'',fraqueza:'',num:''},
+                    {nome:'Mewtwo',tipo:'',fraqueza:'',num:''}
+                ];
                 break;
             case 6:
                 return ['Articuno','Zapdos','Moltres','Dragonite','Mew','Mewtwo'];
@@ -59,13 +236,11 @@ $( document ).ready(function() {
     function atributo() {
         atrib = random(['Role 3d6 e descarte o maior valor','Role 3d6, descarte o maior valor e some +1','Role 2d6','Role 2d6 e some +1','Role 3d6 e descarte o menor valor','Role 3d6, descarte o menor valor e some +1']);
         arrayDados = [];
-        console.log(atrib);
         switch(atrib){
             case 'Role 3d6 e descarte o maior valor':
                 arrayDados.push(contAtributo(1,6));
                 arrayDados.push(contAtributo(1,6));
                 arrayDados.push(contAtributo(1,6));
-                console.log(arrayDados);
                 arrayDados.sort();
                 arrayDados.pop();
                 return arrayDados[0]+arrayDados[1];
@@ -74,7 +249,6 @@ $( document ).ready(function() {
                 arrayDados.push(contAtributo(1,6));
                 arrayDados.push(contAtributo(1,6));
                 arrayDados.push(contAtributo(1,6));
-                console.log(arrayDados);
                 arrayDados.sort();
                 arrayDados.pop();
                 return arrayDados[0]+arrayDados[1]+1;
@@ -82,20 +256,17 @@ $( document ).ready(function() {
             case 'Role 2d6':
                 arrayDados.push(contAtributo(1,6));
                 arrayDados.push(contAtributo(1,6));
-                console.log(arrayDados);
                 return arrayDados[0]+arrayDados[1];
                 break;
             case 'Role 2d6 e some +1':
                 arrayDados.push(contAtributo(1,6));
                 arrayDados.push(contAtributo(1,6));
-                console.log(arrayDados);
                 return arrayDados[0]+arrayDados[1]+1;
                 break;
             case 'Role 3d6 e descarte o menor valor':
                 arrayDados.push(contAtributo(1,6));
                 arrayDados.push(contAtributo(1,6));
                 arrayDados.push(contAtributo(1,6));
-                console.log(arrayDados);
                 arrayDados.sort();
                 arrayDados.shift();
                 return arrayDados[0]+arrayDados[1];
@@ -104,7 +275,6 @@ $( document ).ready(function() {
                 arrayDados.push(contAtributo(1,6));
                 arrayDados.push(contAtributo(1,6));
                 arrayDados.push(contAtributo(1,6));
-                console.log(arrayDados);
                 arrayDados.sort();
                 arrayDados.shift();
                 return arrayDados[0]+arrayDados[1]+1;
@@ -175,19 +345,34 @@ $( document ).ready(function() {
     $('#btnGerarRocket').click(function(){
 
         var trainer = random(rocket());
+        var imagens = '';
         var pokemons = '';
         var ranking = Number($('#selectRanking').val());
+        var arrayPokemons = [];
 
-        if(trainer.ranking == 'atual'){
-            for(i=0;i<trainer.qtdd;i++)
-                pokemons = pokemons + random(pokemon(ranking))+' '+random(nivel(ranking))+' / Tipo / '+atributo()+' - '+stress(3,3)+'<br>';
-        } else {
-            pokemons = pokemons + random(pokemon(ranking))+' '+random(nivel(ranking))+' / Tipo / '+atributo()+' - '+stress(3,3)+'<br>';
-            pokemons = pokemons + random(pokemon(ranking))+' '+random(nivel(ranking))+' / Tipo / '+atributo()+' - '+stress(3,3)+'<br>';
-            pokemons = pokemons + random(pokemon(ranking+1))+' '+random(nivel(ranking+1))+' / Tipo / '+atributo()+' - '+stress(3,3)+'<br>';
+        arrayPokemons.push(random(pokemon(ranking)));
+        arrayPokemons.push(random(pokemon(ranking)));
+        arrayPokemons.push(random(pokemon(ranking)));
+        arrayPokemons.push(random(pokemon(ranking+1)));
+
+        imagens = imagens + '<img width=100 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+arrayPokemons[0].num+'.png>';
+        pokemons = pokemons + '<br><strong>Pokémon:</strong> '+arrayPokemons[0].nome+' '+random(nivel(ranking))+' / '+arrayPokemons[0].tipo+' / Fraquezas: '+arrayPokemons[0].fraqueza+' / Atributo '+atributo()+' - '+stress(3,3);
+
+        if(trainer.qtdd >= 2){
+            imagens = imagens + '<img width=100 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+arrayPokemons[1].num+'.png>';
+            pokemons = pokemons + '<br><strong>Pokémon:</strong> '+arrayPokemons[1].nome+' '+random(nivel(ranking))+' / '+arrayPokemons[1].tipo+' / Fraquezas: '+arrayPokemons[1].fraqueza+' / Atributo '+atributo()+' - '+stress(3,3);
+            
+            if(trainer.ranking == 'proximo'){
+                imagens = imagens + '<img width=100 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+arrayPokemons[3].num+'.png>';
+                pokemons = pokemons + '<br><strong>Pokémon:</strong> '+arrayPokemons[3].nome+' '+random(nivel(ranking))+' / '+arrayPokemons[3].tipo+' / Fraquezas: '+arrayPokemons[3].fraqueza+' / Atributo '+atributo()+' - '+stress(3,3);
+            } else if(trainer.qtdd >= 3){
+                imagens = imagens + '<img width=100 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+arrayPokemons[2].num+'.png>';
+                pokemons = pokemons + '<br><strong>Pokémon:</strong> '+arrayPokemons[2].nome+' '+random(nivel(ranking))+' / '+arrayPokemons[2].tipo+' / Fraquezas: '+arrayPokemons[2].fraqueza+' / Atributo '+atributo()+' - '+stress(3,3);
+            }
+
         }
 
-        $('.boxPokemon').prepend('<div class="boxNPC"><strong>Equipe Rocket:</strong><br>'+pokemons+'</div>');
+        $('.boxPokemon').prepend('<div class="boxNPC"><strong>Equipe Rocket:</strong><br><center>'+imagens+'</center>'+pokemons+'</div>');
 
         activateStressBox();
 
@@ -210,9 +395,19 @@ $( document ).ready(function() {
 
     $('#btnGerarEncontro').click(function(){
 
+        var evento = random(encontro());
+        var corbg = '';
+
+        switch(evento.tipo){
+            case 'rocket': corbg = '#cac'; break;
+            case 'selvagem': corbg = '#cec'; break;
+            case 'treinador': corbg = '#ace'; break;
+            case 'cidade': corbg = '#faa'; break;
+        }
+
         $('.boxPokemon').prepend(
         '<div class="boxNPC">'+
-          '<h5>'+random(encontro())+'</h5>'+
+          '<h5 style="background-color: '+corbg+'; border-radius: 5px; padding: 5px;">'+evento.evento+'</h5>'+
         '</div>');
 
     });
@@ -229,10 +424,12 @@ $( document ).ready(function() {
     $('#btnGerarPokemon').click(function(){
 
         var ranking = Number($('#selectRanking').val());
+        var pkmn = random(pokemon(ranking));
     
         $('.boxPokemon').prepend(
         '<div class="boxNPC">'+
-          '<strong>Pokémon:</strong> '+random(pokemon(ranking))+' '+random(nivel(ranking))+' / Tipo / '+atributo()+' - '+stress(3,3)+
+          '<center><img width=200 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png></center>'+
+          '<br><strong>Pokémon:</strong> '+pkmn.nome+' '+random(nivel(ranking))+' / '+pkmn.tipo+' / Atributo '+atributo()+'<br>Fraquezas: '+pkmn.fraqueza+' <br>Dano '+stress(3,3)+
         '</div>');
 
         activateStressBox();
