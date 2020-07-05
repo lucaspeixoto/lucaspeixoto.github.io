@@ -159,14 +159,14 @@ $( document ).ready(function() {
 
         if(trainer.ranking == 'atual'){
             for(i=0;i<trainer.qtdd;i++)
-                pokemons = pokemons + '<center>'+random(pokemon(ranking))+' '+random(nivel(ranking))+' / Tipo / '+atributo()+' - '+stress(3,3)+'</center>';
+                pokemons = pokemons + random(pokemon(ranking))+' '+random(nivel(ranking))+' / Tipo / '+atributo()+' - '+stress(3,3)+'<br>';
         } else {
-            pokemons = pokemons + '<center>'+random(pokemon(ranking))+' '+random(nivel(ranking))+' / Tipo / '+atributo()+' - '+stress(3,3)+'</center>';
-            pokemons = pokemons + '<center>'+random(pokemon(ranking))+' '+random(nivel(ranking))+' / Tipo / '+atributo()+' - '+stress(3,3)+'</center>';
-            pokemons = pokemons + '<center>'+random(pokemon(ranking+1))+' '+random(nivel(ranking+1))+' / Tipo / '+atributo()+' - '+stress(3,3)+'</center>';
+            pokemons = pokemons + random(pokemon(ranking))+' '+random(nivel(ranking))+' / Tipo / '+atributo()+' - '+stress(3,3)+'<br>';
+            pokemons = pokemons + random(pokemon(ranking))+' '+random(nivel(ranking))+' / Tipo / '+atributo()+' - '+stress(3,3)+'<br>';
+            pokemons = pokemons + random(pokemon(ranking+1))+' '+random(nivel(ranking+1))+' / Tipo / '+atributo()+' - '+stress(3,3)+'<br>';
         }
 
-        $('.boxPokemon').html('<div class="boxNPC">'+pokemons+'</div>');
+        $('.boxPokemon').prepend('<div class="boxNPC"><strong>Treinador:</strong><br>'+pokemons+'</div>');
 
         activateStressBox();
 
@@ -180,45 +180,48 @@ $( document ).ready(function() {
 
         if(trainer.ranking == 'atual'){
             for(i=0;i<trainer.qtdd;i++)
-                pokemons = pokemons + '<center>'+random(pokemon(ranking))+' '+random(nivel(ranking))+' / Tipo / '+atributo()+' - '+stress(3,3)+'</center>';
+                pokemons = pokemons + random(pokemon(ranking))+' '+random(nivel(ranking))+' / Tipo / '+atributo()+' - '+stress(3,3)+'<br>';
         } else {
-            pokemons = pokemons + '<center>'+random(pokemon(ranking))+' '+random(nivel(ranking))+' / Tipo / '+atributo()+' - '+stress(3,3)+'</center>';
-            pokemons = pokemons + '<center>'+random(pokemon(ranking))+' '+random(nivel(ranking))+' / Tipo / '+atributo()+' - '+stress(3,3)+'</center>';
-            pokemons = pokemons + '<center>'+random(pokemon(ranking+1))+' '+random(nivel(ranking+1))+' / Tipo / '+atributo()+' - '+stress(3,3)+'</center>';
+            pokemons = pokemons + random(pokemon(ranking))+' '+random(nivel(ranking))+' / Tipo / '+atributo()+' - '+stress(3,3)+'<br>';
+            pokemons = pokemons + random(pokemon(ranking))+' '+random(nivel(ranking))+' / Tipo / '+atributo()+' - '+stress(3,3)+'<br>';
+            pokemons = pokemons + random(pokemon(ranking+1))+' '+random(nivel(ranking+1))+' / Tipo / '+atributo()+' - '+stress(3,3)+'<br>';
         }
 
-        $('.boxPokemon').html('<div class="boxNPC">'+pokemons+'</div>');
+        $('.boxPokemon').prepend('<div class="boxNPC"><strong>Equipe Rocket:</strong><br>'+pokemons+'</div>');
 
         activateStressBox();
 
+    });
+
+    $('#btnUndo').click(function(){
+        $('.boxPokemon .boxNPC:first-child').remove();
     });
 
     $('#btnGerarCidade').click(function(){
 
         var city = random(cidade());
 
-        $('.boxPokemon').html(
+        $('.boxPokemon').prepend(
         '<div class="boxNPC">'+
-          '<center><h4>'+city.cidade+'</h4></center>'+
-          '<p>'+city.descricao+'</p>'+
+          '<strong>'+city.cidade+'</strong>: '+city.descricao+
         '</div>');
 
     });
 
     $('#btnGerarEncontro').click(function(){
 
-        $('.boxPokemon').html(
+        $('.boxPokemon').prepend(
         '<div class="boxNPC">'+
-          '<center>'+random(encontro())+'</center>'+
+          '<h5>'+random(encontro())+'</h5>'+
         '</div>');
 
     });
 
     $('#btnGerarRecompensa').click(function(){
 
-        $('.boxPokemon').html(
+        $('.boxPokemon').prepend(
         '<div class="boxNPC">'+
-          '<center>'+random(recompensa())+'</center>'+
+          '<strong>Recompensa:</strong> '+random(recompensa())+
         '</div>');
 
     });
@@ -227,9 +230,9 @@ $( document ).ready(function() {
 
         var ranking = Number($('#selectRanking').val());
     
-        $('.boxPokemon').html(
+        $('.boxPokemon').prepend(
         '<div class="boxNPC">'+
-          '<center>'+random(pokemon(ranking))+' '+random(nivel(ranking))+' / Tipo / '+atributo()+' - '+stress(3,3)+'</center>'+
+          '<strong>Pokémon:</strong> '+random(pokemon(ranking))+' '+random(nivel(ranking))+' / Tipo / '+atributo()+' - '+stress(3,3)+
         '</div>');
 
         activateStressBox();

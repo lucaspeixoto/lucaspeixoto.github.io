@@ -52,8 +52,13 @@ fetch("./nav.html")
   <div class="w3-container w3-padding-large" style="margin-bottom:32px">
 
     <span class="hidePrint">
-      <h4>Gerar Pokémon, Treinador e Equipe Rocket leva em consideração o Ranking.</h4>
-      <p><i>Caixas de dano são interativas!</i></p>
+      <p>Gerar Pokémon, Treinador e Equipe Rocket leva em consideração o Ranking.
+        <br>As informações são adicionadas sempre no topo da caixa. 
+        <br><strong>Ao atualizar a página a caixa será limpa.</strong>
+        <br><i>Caixas de dano são interativas!</i></p>
+      <p><i>Conteúdo gerado com base no jogo criado por Robson F. Vilela</i>
+      </p>
+
 
       <select id="selectRanking" class="w3-button w3-teal">
         <option value="1">Ranking E</option>
@@ -69,10 +74,11 @@ fetch("./nav.html")
       <button id="btnGerarEncontro" class="w3-button w3-teal w3-hover-black">Encontro</button>
       <button id="btnGerarRecompensa" class="w3-button w3-teal w3-hover-black">Recompensa</button>
       <button id="btnGerarCidade" class="w3-button w3-teal w3-hover-black">Cidade</button>
+      <button id="btnUndo" style="color: red;" class="w3-button w3-hover-red">Undo</button>
       
     </span>
     
-    <div class="watermark">Ficha criada em https://lucaspeixoto.github.io</div>
+    <div class="watermark">Jogo criado em https://lucaspeixoto.github.io</div>
 
     <div class="boxPokemon"></div>
     
