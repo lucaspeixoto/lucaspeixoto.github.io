@@ -13,7 +13,7 @@ $( document ).ready(function() {
             {evento:'Aparecem 2 Pokémon selvagens do Ranking atual (Lute contra eles individualmente)',tipo:'selvagem'},
             {evento:'Você chegou a uma Cidade',tipo:'cidade'},
             {evento:'Aparece 1 Pokémon selvagem do Ranking atual',tipo:'selvagem'},
-            {evento:'Você encontra um Treinador Aleatório',tipo:'treinador'},
+            {evento:'Você encontra uma Treinadora Aleatória',tipo:'treinadora'},
             {evento:'Aparece 1 Pokémon selvagem do Ranking atual',tipo:'selvagem'},
             {evento:'Aparece 1 Pokémon selvagem do Ranking atual',tipo:'selvagem'},
             {evento:'Aparece 1 Pokémon selvagem do Ranking seguinte',tipo:'selvagem'},
@@ -27,6 +27,28 @@ $( document ).ready(function() {
 
     function pokemon(ranking) {
         switch(ranking){
+            case "safari":
+                return [
+                    {nome:'Nidoran♂',tipo:'Venenoso',fraqueza:'Psíquico e Terrestre',num:'032'},
+                    {nome:'Nidoran♀',tipo:'Venenoso',fraqueza:'Psíquico e Terrestre',num:'029'},
+                    {nome:'Nidorina',tipo:'Venenoso',fraqueza:'Psíquico e Terrestre',num:'030'},
+                    {nome:'Nidorino',tipo:'Venenoso',fraqueza:'Psíquico e Terrestre',num:'033'},
+                    {nome:'Paras',tipo:'Inseto Grama',fraqueza:'Fogo, Voador, Gelo, Venenoso, Pedra e Inseto',num:'046'},
+                    {nome:'Venonat',tipo:'Inseto Venenoso',fraqueza:'Fogo, Psíquico, Voador e Pedra',num:'048'},
+                    {nome:'Exeggcute',tipo:'Grama Psíquico',fraqueza:'Fantasma, Fogo, Voador, Gelo, Noturno, Venenoso e Inseto',num:'102'},
+                    {nome:'Rhyhorn',tipo:'Pedra Terrestre',fraqueza:'Metálico, Gelo, Água, Lutador, Grama e Terrestre',num:'111'},
+                    {nome:'Doduo',tipo:'Normal',fraqueza:'Elétrico, Gelo e Pedra',num:'084'},
+                    {nome:'Parasect',tipo:'Inseto Grama',fraqueza:'Fogo, Voador, Gelo, Venenoso, Pedra e Inseto',num:'047'},
+                    {nome:'Venomoth',tipo:'Inseto Venenoso',fraqueza:'Fogo, Psíquico, Voador e Pedra',num:'049'},
+                    {nome:'Chansey',tipo:'Normal',fraqueza:'Lutador',num:'113'},
+                    {nome:'Kangaskhan',tipo:'Normal',fraqueza:'Lutador',num:'115'},
+                    {nome:'Tauros',tipo:'Normal',fraqueza:'Lutador',num:'128'},
+                    {nome:'Scyther',tipo:'Inseto Voador',fraqueza:'Fogo, Voador, Elétrico, Gelo e Pedra',num:'123'},
+                    {nome:'Goldeen',tipo:'Água',fraqueza:'Grama e Elétrico',num:'118'},
+                    {nome:'Seaking',tipo:'Água',fraqueza:'Grama e Elétrico',num:'119'},
+                    {nome:'Dratini',tipo:'Dragão',fraqueza:'Fada, Gelo e Dragão',num:'147'}
+                ];
+                break;
             case 1:
                 return [
                     {nome:'Caterpie',tipo:'Inseto',fraqueza:'Fogo, Voador e Pedra',num:'010'},
@@ -69,133 +91,133 @@ $( document ).ready(function() {
                 break;
             case 2:
                 return [
-                    {nome:'Oddish',tipo:'',fraqueza:'',num:''},
-                    {nome:'Psyduck',tipo:'',fraqueza:'',num:''},
-                    {nome:'Cubone',tipo:'',fraqueza:'',num:''},
-                    {nome:'Goldeen',tipo:'',fraqueza:'',num:''},
-                    {nome:'Clefairy',tipo:'',fraqueza:'',num:''},
-                    {nome:'Magnemite',tipo:'',fraqueza:'',num:''},
-                    {nome:'Seel',tipo:'',fraqueza:'',num:''},
-                    {nome:'Grimer',tipo:'',fraqueza:'',num:''},
-                    {nome:'Krabby',tipo:'',fraqueza:'',num:''},
-                    {nome:'Exeggcute',tipo:'',fraqueza:'',num:''},
-                    {nome:'Eevee',tipo:'',fraqueza:'',num:''},
-                    {nome:'Drowzee',tipo:'',fraqueza:'',num:''},
-                    {nome:'Voltorb',tipo:'',fraqueza:'',num:''},
-                    {nome:'Tentacool',tipo:'',fraqueza:'',num:''},
-                    {nome:'Koffing',tipo:'',fraqueza:'',num:''},
-                    {nome:'Staryu',tipo:'',fraqueza:'',num:''},
-                    {nome:'Rhyhorn',tipo:'',fraqueza:'',num:''},
-                    {nome:'Pidgeotto',tipo:'',fraqueza:'',num:''},
-                    {nome:'Growlithe',tipo:'',fraqueza:'',num:''},
-                    {nome:'Omanyte',tipo:'',fraqueza:'',num:''},
-                    {nome:'Kabuto',tipo:'',fraqueza:'',num:''},
-                    {nome:'Nidorina',tipo:'',fraqueza:'',num:''},
-                    {nome:'Nidorino',tipo:'',fraqueza:'',num:''},
-                    {nome:'Farfetch`d',tipo:'',fraqueza:'',num:''},
-                    {nome:'Poliwhirl',tipo:'',fraqueza:'',num:''},
-                    {nome:'Onix',tipo:'',fraqueza:'',num:''},
-                    {nome:'Lickitung',tipo:'',fraqueza:'',num:''},
-                    {nome:'Weepinbell',tipo:'',fraqueza:'',num:''},
-                    {nome:'Graveler',tipo:'',fraqueza:'',num:''},
-                    {nome:'Butterfree',tipo:'',fraqueza:'',num:''},
-                    {nome:'Beedrill',tipo:'',fraqueza:'',num:''},
-                    {nome:'Gloom',tipo:'',fraqueza:'',num:''},
-                    {nome:'Porygon',tipo:'',fraqueza:'',num:''},
-                    {nome:'Kadabra',tipo:'',fraqueza:'',num:''},
-                    {nome:'Ivysaur',tipo:'',fraqueza:'',num:''},
-                    {nome:'Charmeleon',tipo:'',fraqueza:'',num:''}
+                    {nome:'Oddish',tipo:'Grama Venenoso',fraqueza:'Fogo, Psíquico, Voador e Gelo',num:'043'},
+                    {nome:'Psyduck',tipo:'Água',fraqueza:'Grama e Elétrico',num:'054'},
+                    {nome:'Cubone',tipo:'Terrestre',fraqueza:'Água, Grama e Gelo',num:'104'},
+                    {nome:'Goldeen',tipo:'Água',fraqueza:'Grama e Elétrico',num:'118'},
+                    {nome:'Clefairy',tipo:'Fada',fraqueza:'Metálico e Venenoso',num:'035'},
+                    {nome:'Magnemite',tipo:'Elétrico Metálico',fraqueza:'Fogo, Lutador e Terrestre',num:'081'},
+                    {nome:'Seel',tipo:'Água',fraqueza:'Grama e Elétrico',num:'086'},
+                    {nome:'Grimer',tipo:'Venenoso',fraqueza:'Psíquico e Terrestre',num:'088'},
+                    {nome:'Krabby',tipo:'Água',fraqueza:'Grama e Elétrico',num:'098'},
+                    {nome:'Exeggcute',tipo:'Grama Psíquico',fraqueza:'Fantasma, Fogo, Voador, Gelo, Noturno, Venenoso e Inseto',num:'102'},
+                    {nome:'Eevee',tipo:'Normal',fraqueza:'Lutador',num:'133'},
+                    {nome:'Drowzee',tipo:'Psíquico',fraqueza:'Fantasma, Noturno e Inseto',num:'096'},
+                    {nome:'Voltorb',tipo:'Elétrico',fraqueza:'Terrestre',num:'100'},
+                    {nome:'Tentacool',tipo:'Água Venenoso',fraqueza:'Psíquico, Elétrico e Terrestre',num:'072'},
+                    {nome:'Koffing',tipo:'Venenoso',fraqueza:'Psíquico e Terrestre',num:'109'},
+                    {nome:'Staryu',tipo:'Água',fraqueza:'Grama e Elétrico',num:'121'},
+                    {nome:'Rhyhorn',tipo:'Pedra Terrestre',fraqueza:'Metálico, Gelo, Água, Lutador, Grama e Terrestre',num:'111'},
+                    {nome:'Pidgeotto',tipo:'Voador Normal',fraqueza:'Elétrico, Gelo e Pedra',num:'017'},
+                    {nome:'Growlithe',tipo:'Fogo',fraqueza:'Água, Terrestre e Pedra',num:'058'},
+                    {nome:'Omanyte',tipo:'Pedra Água',fraqueza:'Grama, Elétrico, Lutador e Terrestre',num:'138'},
+                    {nome:'Kabuto',tipo:'Pedra Água',fraqueza:'Grama, Elétrico, Lutador e Terrestre',num:'140'},
+                    {nome:'Nidorina',tipo:'Venenoso',fraqueza:'Psíquico e Terrestre',num:'030'},
+                    {nome:'Nidorino',tipo:'Venenoso',fraqueza:'Psíquico e Terrestre',num:'033'},
+                    {nome:'Farfetch`d',tipo:'Voador Normal',fraqueza:'Elétrico, Gelo e Pedra',num:'083'},
+                    {nome:'Poliwhirl',tipo:'Água',fraqueza:'Grama e Elétrico',num:'061'},
+                    {nome:'Onix',tipo:'Pedra Terrestre',fraqueza:'Metálico, Lutador, Água, Gelo, Grama e Terrestre',num:'095'},
+                    {nome:'Lickitung',tipo:'Normal',fraqueza:'Lutador',num:'108'},
+                    {nome:'Weepinbell',tipo:'Grama Venenoso',fraqueza:'Fogo, Psíquico, Voador e Gelo',num:'070'},
+                    {nome:'Graveler',tipo:'Pedra Terrestre',fraqueza:'Metálico, Lutador, Água, Gelo, Grama e Terrestre',num:'075'},
+                    {nome:'Butterfree',tipo:'Inseto Voador',fraqueza:'Fogo, Voador, Elétrico, Gelo e Pedra',num:'012'},
+                    {nome:'Beedrill',tipo:'Inseto Voador',fraqueza:'Fogo, Psíquico, Voador e Pedra',num:'015'},
+                    {nome:'Gloom',tipo:'Grama Venenoso',fraqueza:'Fogo, Psíquico, Voador e Gelo',num:'044'},
+                    {nome:'Porygon',tipo:'Normal',fraqueza:'Lutador',num:'137'},
+                    {nome:'Kadabra',tipo:'Psíquico',fraqueza:'Fantasma, Noturno e Inseto',num:'064'},
+                    {nome:'Ivysaur',tipo:'Grama Venenoso',fraqueza:'Fogo, Psíquico, Voador e Gelo',num:'002'},
+                    {nome:'Charmeleon',tipo:'Fogo',fraqueza:'Água, Terrestre e Pedra',num:'005'},
                 ];
                 break;
             case 3:
                 return [
-                    {nome:'Wartortle',tipo:'',fraqueza:'',num:''},
-                    {nome:'Parasect',tipo:'',fraqueza:'',num:''},
-                    {nome:'Machoke',tipo:'',fraqueza:'',num:''},
-                    {nome:'Haunter',tipo:'',fraqueza:'',num:''},
-                    {nome:'Ponyta',tipo:'',fraqueza:'',num:''},
-                    {nome:'Raticate',tipo:'',fraqueza:'',num:''},
-                    {nome:'Dragonair',tipo:'',fraqueza:'',num:''},
-                    {nome:'Dugtrio',tipo:'',fraqueza:'',num:''},
-                    {nome:'Marowak',tipo:'',fraqueza:'',num:''},
-                    {nome:'Wigglytuff',tipo:'',fraqueza:'',num:''},
-                    {nome:'Tangela',tipo:'',fraqueza:'',num:''},
-                    {nome:'Persian',tipo:'',fraqueza:'',num:''},
-                    {nome:'Seadra',tipo:'',fraqueza:'',num:''},
-                    {nome:'Fearow',tipo:'',fraqueza:'',num:''},
-                    {nome:'Arbok',tipo:'',fraqueza:'',num:''},
-                    {nome:'Sandslash',tipo:'',fraqueza:'',num:''},
-                    {nome:'Venomoth',tipo:'',fraqueza:'',num:''},
-                    {nome:'Chansey',tipo:'',fraqueza:'',num:''},
-                    {nome:'Seaking',tipo:'',fraqueza:'',num:''},
-                    {nome:'Golbat',tipo:'',fraqueza:'',num:''},
-                    {nome:'Primeape',tipo:'',fraqueza:'',num:''},
-                    {nome:'Hitmonlee',tipo:'',fraqueza:'',num:''},
-                    {nome:'Hitmonchan',tipo:'',fraqueza:'',num:''},
-                    {nome:'Jynx',tipo:'',fraqueza:'',num:''},
-                    {nome:'Mr. Mime',tipo:'',fraqueza:'',num:''},
-                    {nome:'Magneton',tipo:'',fraqueza:'',num:''},
-                    {nome:'Dodrio',tipo:'',fraqueza:'',num:''},
-                    {nome:'Dewgong',tipo:'',fraqueza:'',num:''},
-                    {nome:'Kingler',tipo:'',fraqueza:'',num:''},
-                    {nome:'Pidgeot',tipo:'',fraqueza:'',num:''},
-                    {nome:'Clefable',tipo:'',fraqueza:'',num:''},
-                    {nome:'Hypno',tipo:'',fraqueza:'',num:''},
-                    {nome:'Raichu',tipo:'',fraqueza:'',num:''},
-                    {nome:'Rhydon',tipo:'',fraqueza:'',num:''},
-                    {nome:'Vileplume',tipo:'',fraqueza:'',num:''},
-                    {nome:'Victreebel',tipo:'',fraqueza:'',num:''}
+                    {nome:'Wartortle',tipo:'Água',fraqueza:'Grama e Elétrico',num:'008'},
+                    {nome:'Parasect',tipo:'Inseto Grama',fraqueza:'Fogo, Voador, Gelo, Venenoso, Pedra e Inseto',num:'047'},
+                    {nome:'Machoke',tipo:'Lutador',fraqueza:'Psíquico, Voador e Fada',num:'067'},
+                    {nome:'Haunter',tipo:'Fantasma Venenoso',fraqueza:'Fantasma, Noturno, Psíquico e Terrestre',num:'093'},
+                    {nome:'Ponyta',tipo:'Fogo',fraqueza:'Água, Terrestre e Pedra',num:'077'},
+                    {nome:'Raticate',tipo:'Normal',fraqueza:'Lutador',num:'020'},
+                    {nome:'Dragonair',tipo:'Dragão',fraqueza:'Fada, Gelo e Dragão',num:'148'},
+                    {nome:'Dugtrio',tipo:'Terrestre',fraqueza:'Água, Grama e Gelo',num:'051'},
+                    {nome:'Marowak',tipo:'Terrestre',fraqueza:'Água, Grama e Gelo',num:'105'},
+                    {nome:'Wigglytuff',tipo:'Fada Normal',fraqueza:'Metálico e Venenoso',num:'040'},
+                    {nome:'Tangela',tipo:'Grama',fraqueza:'Fogo, Voador, Gelo, Venenoso e Inseto',num:'114'},
+                    {nome:'Persian',tipo:'Normal',fraqueza:'Lutador',num:'054'},
+                    {nome:'Seadra',tipo:'Água',fraqueza:'Grama e Elétrico',num:'117'},
+                    {nome:'Fearow',tipo:'Voador Normal',fraqueza:'Elétrico, Gelo e Pedra',num:'022'},
+                    {nome:'Arbok',tipo:'Venenoso',fraqueza:'Psíquico e Terrestre',num:'024'},
+                    {nome:'Sandslash',tipo:'Terrestre',fraqueza:'Água, Grama e Gelo',num:'028'},
+                    {nome:'Venomoth',tipo:'Inseto Venenoso',fraqueza:'Fogo, Psíquico, Voador e Pedra',num:'049'},
+                    {nome:'Chansey',tipo:'Normal',fraqueza:'Lutador',num:'113'},
+                    {nome:'Seaking',tipo:'Água',fraqueza:'Grama e Elétrico',num:'119'},
+                    {nome:'Golbat',tipo:'Voador Venenoso',fraqueza:'Psíquico, Elétrico, Gelo e Pedra',num:'042'},
+                    {nome:'Primeape',tipo:'Lutador',fraqueza:'Psíquico, Voador e Fada',num:'057'},
+                    {nome:'Hitmonlee',tipo:'Lutador',fraqueza:'Psíquico, Voador e Fada',num:'106'},
+                    {nome:'Hitmonchan',tipo:'Lutador',fraqueza:'Psíquico, Voador e Fada',num:'107'},
+                    {nome:'Jynx',tipo:'Gelo Psíquico',fraqueza:'Metálico, Fantasma, Fogo, Noturno, Pedra e Inseto',num:'124'},
+                    {nome:'Mr. Mime',tipo:'Fada Psíquico',fraqueza:'Fantasma, Metálico e Venenoso',num:'122'},
+                    {nome:'Magneton',tipo:'Elétrico Metálico',fraqueza:'Fogo, Lutador e Terrestre',num:'082'},
+                    {nome:'Dodrio',tipo:'Normal Voador',fraqueza:'Elétrico, Gelo e Pedra',num:'085'},
+                    {nome:'Dewgong',tipo:'Água Gelo',fraqueza:'Grama, Elétrico, Lutador e Pedra',num:'087'},
+                    {nome:'Kingler',tipo:'Água',fraqueza:'Grama e Elétrico',num:'099'},
+                    {nome:'Pidgeot',tipo:'Voador Normal',fraqueza:'Elétrico, Gelo e Pedra',num:'018'},
+                    {nome:'Clefable',tipo:'Fada',fraqueza:'Metálico e Venenoso',num:'036'},
+                    {nome:'Hypno',tipo:'Psíquico',fraqueza:'Fantasma, Noturno e Inseto',num:'097'},
+                    {nome:'Raichu',tipo:'Elétrico',fraqueza:'Terreste',num:'026'},
+                    {nome:'Rhydon',tipo:'Pedra Terrestre',fraqueza:'Metálico, Gelo, Água, Lutador, Grama e Terrestre',num:'112'},
+                    {nome:'Vileplume',tipo:'Grama Venenoso',fraqueza:'Fogo, Psíquico, Voador e Gelo',num:'045'},
+                    {nome:'Victreebel',tipo:'Grama Venenoso',fraqueza:'Fogo, Psíquico, Voador e Gelo',num:'071'},
                 ];
                 break;
             case 4:
                 return [
-                    {nome:'Slowbro',tipo:'',fraqueza:'',num:''},
-                    {nome:'Electrode',tipo:'',fraqueza:'',num:''},
-                    {nome:'Weezing',tipo:'',fraqueza:'',num:''},
-                    {nome:'Kangaskhan',tipo:'',fraqueza:'',num:''},
-                    {nome:'Electabuzz',tipo:'',fraqueza:'',num:''},
-                    {nome:'Tauros',tipo:'',fraqueza:'',num:''},
-                    {nome:'Golem',tipo:'',fraqueza:'',num:''},
-                    {nome:'Magmar',tipo:'',fraqueza:'',num:''},
-                    {nome:'Omastar',tipo:'',fraqueza:'',num:''},
-                    {nome:'Kabutops',tipo:'',fraqueza:'',num:''},
-                    {nome:'Golduck',tipo:'',fraqueza:'',num:''},
-                    {nome:'Alakazam',tipo:'',fraqueza:'',num:''},
-                    {nome:'Rapidash',tipo:'',fraqueza:'',num:''},
-                    {nome:'Muk',tipo:'',fraqueza:'',num:''},
-                    {nome:'Gengar',tipo:'',fraqueza:'',num:''},
-                    {nome:'Scyther',tipo:'',fraqueza:'',num:''},
-                    {nome:'Pinsir',tipo:'',fraqueza:'',num:''},
-                    {nome:'Nidoqueen',tipo:'',fraqueza:'',num:''},
-                    {nome:'Nidoking',tipo:'',fraqueza:'',num:''},
-                    {nome:'Ninetales',tipo:'',fraqueza:'',num:''},
-                    {nome:'Machamp',tipo:'',fraqueza:'',num:''},
-                    {nome:'Poliwrath',tipo:'',fraqueza:'',num:''},
-                    {nome:'Tentacruel',tipo:'',fraqueza:'',num:''},
-                    {nome:'Aerodactyl',tipo:'',fraqueza:'',num:''},
-                    {nome:'Starmie',tipo:'',fraqueza:'',num:''},
-                    {nome:'Venusaur',tipo:'',fraqueza:'',num:''},
-                    {nome:'Cloyster',tipo:'',fraqueza:'',num:''},
-                    {nome:'Vaporeon',tipo:'',fraqueza:'',num:''},
-                    {nome:'Jolteon',tipo:'',fraqueza:'',num:''},
-                    {nome:'Flareon',tipo:'',fraqueza:'',num:''},
-                    {nome:'Blastoise',tipo:'',fraqueza:'',num:''},
-                    {nome:'Exeggutor',tipo:'',fraqueza:'',num:''},
-                    {nome:'Charizard',tipo:'',fraqueza:'',num:''},
-                    {nome:'Lapras',tipo:'',fraqueza:'',num:''},
-                    {nome:'Gyarados',tipo:'',fraqueza:'',num:''},
-                    {nome:'Snorlax',tipo:'',fraqueza:'',num:''},
-                    {nome:'Arcanine',tipo:'',fraqueza:'',num:''}
+                    {nome:'Slowbro',tipo:'Água Psíquico',fraqueza:'Fantasma, Noturno, Grama, Elétrico e Inseto',num:'080'},
+                    {nome:'Electrode',tipo:'Elétrico',fraqueza:'Terrestre',num:'101'},
+                    {nome:'Weezing',tipo:'Venenoso',fraqueza:'Psíquico e Terrestre',num:'110'},
+                    {nome:'Kangaskhan',tipo:'Normal',fraqueza:'Lutador',num:'115'},
+                    {nome:'Electabuzz',tipo:'Elétrico',fraqueza:'Terrestre',num:'125'},
+                    {nome:'Tauros',tipo:'Normal',fraqueza:'Lutador',num:'128'},
+                    {nome:'Golem',tipo:'Pedra Terrestre',fraqueza:'Metálico, Lutador, Água, Gelo, Grama e Terrestre',num:'076'},
+                    {nome:'Magmar',tipo:'Fogo',fraqueza:'Água, Terrestre e Pedra',num:'126'},
+                    {nome:'Omastar',tipo:'Pedra Água',fraqueza:'Grama, Elétrico, Lutador e Terrestre',num:'139'},
+                    {nome:'Kabutops',tipo:'Pedra Água',fraqueza:'Grama, Elétrico, Lutador e Terrestre',num:'141'},
+                    {nome:'Golduck',tipo:'Água',fraqueza:'Grama e Elétrico',num:'055'},
+                    {nome:'Alakazam',tipo:'Psíquico',fraqueza:'Fantasma, Noturno e Inseto',num:'065'},
+                    {nome:'Rapidash',tipo:'Fogo',fraqueza:'Água, Terrestre e Pedra',num:'078'},
+                    {nome:'Muk',tipo:'Venenoso',fraqueza:'Psíquico e Terrestre',num:'089'},
+                    {nome:'Gengar',tipo:'Fantasma Venenoso',fraqueza:'Fantasma, Noturno, Psíquico e Terrestre',num:'094'},
+                    {nome:'Scyther',tipo:'Inseto Voador',fraqueza:'Fogo, Voador, Elétrico, Gelo e Pedra',num:'123'},
+                    {nome:'Pinsir',tipo:'Inseto',fraqueza:'Fogo, Voador e Pedra',num:'127'},
+                    {nome:'Nidoqueen',tipo:'Venenoso Terrestre',fraqueza:'Água, Psíquico, Gelo e Terrestre',num:'031'},
+                    {nome:'Nidoking',tipo:'Venenoso Terrestre',fraqueza:'Água, Psíquico, Gelo e Terrestre',num:'034'},
+                    {nome:'Ninetales',tipo:'Fogo',fraqueza:'Água, Terrestre e Pedra',num:'038'},
+                    {nome:'Machamp',tipo:'Lutador',fraqueza:'Psíquico, Voador e Fada',num:'068'},
+                    {nome:'Poliwrath',tipo:'Água Lutador',fraqueza:'Fada, Grama, Voador, Psíquico e Elétrico',num:'062'},
+                    {nome:'Tentacruel',tipo:'Água Venenoso',fraqueza:'Psíquico, Elétrico e Terrestre',num:'073'},
+                    {nome:'Aerodactyl',tipo:'Pedra Voador',fraqueza:'Metálico, Água, Elétrico, Gelo e Pedra',num:'142'},
+                    {nome:'Starmie',tipo:'Água Psíquico',fraqueza:'Fantasma, Noturno, Grama, Elétrico e Inseto',num:'121'},
+                    {nome:'Venusaur',tipo:'Grama Venenoso',fraqueza:'Fogo, Psíquico, Voador e Gelo',num:'003'},
+                    {nome:'Cloyster',tipo:'Água Gelo',fraqueza:'Grama, Elétrico, Lutador e Pedra',num:'091'},
+                    {nome:'Vaporeon',tipo:'Água',fraqueza:'Grama e Elétrico',num:'134'},
+                    {nome:'Jolteon',tipo:'Elétrico',fraqueza:'Terrestre',num:'135'},
+                    {nome:'Flareon',tipo:'Fogo',fraqueza:'Água, Terrestre e Pedra',num:'136'},
+                    {nome:'Blastoise',tipo:'Água',fraqueza:'Grama e Elétrico',num:'009'},
+                    {nome:'Exeggutor',tipo:'Grama Psíquico',fraqueza:'Fantasma, Fogo, Voador, Gelo, Noturno, Venenoso e Inseto',num:'103'},
+                    {nome:'Charizard',tipo:'Fogo Voador',fraqueza:'Água, Elétrico e Pedra',num:'006'},
+                    {nome:'Lapras',tipo:'Água Gelo',fraqueza:'Grama, Elétrico, Lutador e Pedra',num:'131'},
+                    {nome:'Gyarados',tipo:'Água Voador',fraqueza:'Elétrico e Pedra',num:'130'},
+                    {nome:'Snorlax',tipo:'Normal',fraqueza:'Lutador',num:'143'},
+                    {nome:'Arcanine',tipo:'Fogo',fraqueza:'Água, Terrestre e Pedra',num:'059'}
                 ];
                 break;
             case 5:
                 return [
-                    {nome:'Articuno',tipo:'',fraqueza:'',num:''},
-                    {nome:'Zapdos',tipo:'',fraqueza:'',num:''},
-                    {nome:'Moltres',tipo:'',fraqueza:'',num:''},
-                    {nome:'Dragonite',tipo:'',fraqueza:'',num:''},
-                    {nome:'Mew',tipo:'',fraqueza:'',num:''},
-                    {nome:'Mewtwo',tipo:'',fraqueza:'',num:''}
+                    {nome:'Articuno',tipo:'Gelo Voador',fraqueza:'Metálico, Fogo, Elétrico e Pedra',num:'144'},
+                    {nome:'Zapdos',tipo:'Elétrico Voador',fraqueza:'Gelo e Pedra',num:'145'},
+                    {nome:'Moltres',tipo:'Fogo Voador',fraqueza:'Água, Elétrico e Pedra',num:'146'},
+                    {nome:'Dragonite',tipo:'Dragão Voador',fraqueza:'Fada, Dragão, Gelo e Pedra',num:'149'},
+                    {nome:'Mew',tipo:'Psíquico',fraqueza:'Fantasma, Noturno e Inseto',num:'151'},
+                    {nome:'Mewtwo',tipo:'Psíquico',fraqueza:'Fantasma, Noturno e Inseto',num:'150'}
                 ];
                 break;
             case 6:
@@ -351,7 +373,7 @@ $( document ).ready(function() {
 
         }
 
-        $('.boxPokemon').prepend('<div class="boxNPC"><strong>Equipe Rocket:</strong><br><center>'+imagens+'</center>'+pokemons+'</div>');
+        $('.boxPokemon').prepend('<div class="boxNPC"><strong>Treinador:</strong><br><center>'+imagens+'</center>'+pokemons+'</div>');
 
         activateStressBox();
 
@@ -412,17 +434,34 @@ $( document ).ready(function() {
 
         var evento = random(encontro());
         var corbg = '';
+        var faicon = '';
 
         switch(evento.tipo){
-            case 'rocket': corbg = '#cac'; break;
-            case 'selvagem': corbg = '#cec'; break;
-            case 'treinador': corbg = '#ace'; break;
-            case 'cidade': corbg = '#faa'; break;
+            case 'rocket': 
+                corbg = '#cac'; 
+                faicon = 'fa-rocket';
+                break;
+            case 'selvagem': 
+                corbg = '#cec';
+                faicon = 'fa-bug'; 
+                break;
+            case 'treinador': 
+                corbg = '#ace';
+                faicon = 'fa-male';
+                break;
+            case 'treinadora': 
+                corbg = '#ace';
+                faicon = 'fa-female';
+                break;
+            case 'cidade': 
+                corbg = '#faa'; 
+                faicon = 'fa-home';
+                break;
         }
 
         $('.boxPokemon').prepend(
         '<div class="boxNPC">'+
-          '<h5 style="background-color: '+corbg+'; border-radius: 5px; padding: 5px;">'+evento.evento+'</h5>'+
+          '<h5 style="background-color: '+corbg+'; border-radius: 5px; padding: 5px;"> <i class="fa '+faicon+'"></i> '+evento.evento+'</h5>'+
         '</div>');
 
     });
@@ -450,6 +489,22 @@ $( document ).ready(function() {
         activateStressBox();
 
     });
+
+    $('#btnGerarSafari').click(function(){
+
+        var ranking = Number($('#selectRanking').val());
+        var pkmn = random(pokemon('safari'));
+    
+        $('.boxPokemon').prepend(
+        '<div class="boxNPC">'+
+          '<center><img width=200 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png></center>'+
+          '<br><strong>Pokémon:</strong> '+pkmn.nome+' '+random(nivel(ranking))+' / '+pkmn.tipo+' / Atributo '+atributo()+'<br>Fraquezas: '+pkmn.fraqueza+' <br>Dano '+stress(3,3)+
+        '</div>');
+
+        activateStressBox();
+
+    });
+
 
     $('.boxPokemon').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '550px', 'box-shadow': '5px 5px 10px lightgrey'});
 
