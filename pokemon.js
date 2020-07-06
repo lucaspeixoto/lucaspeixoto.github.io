@@ -221,7 +221,14 @@ $( document ).ready(function() {
                 ];
                 break;
             case 6:
-                return ['Articuno','Zapdos','Moltres','Dragonite','Mew','Mewtwo'];
+                return [
+                    {nome:'Articuno',tipo:'Gelo Voador',fraqueza:'Metálico, Fogo, Elétrico e Pedra',num:'144'},
+                    {nome:'Zapdos',tipo:'Elétrico Voador',fraqueza:'Gelo e Pedra',num:'145'},
+                    {nome:'Moltres',tipo:'Fogo Voador',fraqueza:'Água, Elétrico e Pedra',num:'146'},
+                    {nome:'Dragonite',tipo:'Dragão Voador',fraqueza:'Fada, Dragão, Gelo e Pedra',num:'149'},
+                    {nome:'Mew',tipo:'Psíquico',fraqueza:'Fantasma, Noturno e Inseto',num:'151'},
+                    {nome:'Mewtwo',tipo:'Psíquico',fraqueza:'Fantasma, Noturno e Inseto',num:'150'}
+                ];
                 break;
         }
     };
