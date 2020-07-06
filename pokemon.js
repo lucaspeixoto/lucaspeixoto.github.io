@@ -552,7 +552,7 @@ $( document ).ready(function() {
 
         $('.boxPokemon').prepend(
         '<div class="boxNPC">'+
-          '<center><img style="vertical-align: bottom;" width=50 src='+ginasio.imginsignia+'> <img height=284 src='+ginasio.imglider+'></center>'+
+          '<center><img style="vertical-align: bottom;" width=60 src='+ginasio.imginsignia+'> <img height=284 src='+ginasio.imglider+'></center>'+
           '<br><strong>Líder: </strong>'+ginasio.lider+
           '<br><strong>Insígnia: </strong>'+ginasio.insignia+
           '<br><strong>Recompensa: </strong>'+ginasio.recompensa+
