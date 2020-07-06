@@ -569,7 +569,7 @@ $( document ).ready(function() {
           '<br><br><strong>Pokémon:</strong> '+pokemons[3].nome+' '+pokemons[3].nivel+' / '+pokemons[3].tipo+' / Atributo '+pokemons[3].atributo+'<br>Fraquezas: '+pokemons[3].fraqueza+' <br>Dano '+stress(3,3)+
           '<br><br><strong>Pokémon:</strong> '+pokemons[4].nome+' '+pokemons[4].nivel+' / '+pokemons[4].tipo+' / Atributo '+pokemons[4].atributo+'<br>Fraquezas: '+pokemons[4].fraqueza+' <br>Dano '+stress(3,3)+
           '<br><br><strong>Pokémon:</strong> '+pokemons[5].nome+' '+pokemons[5].nivel+' / '+pokemons[5].tipo+' / Atributo '+pokemons[5].atributo+'<br>Fraquezas: '+pokemons[5].fraqueza+' <br>Dano '+stress(3,3)+
-        '</div>');
+        '</div><br>');
 
         activateStressBox();
 
@@ -605,7 +605,7 @@ $( document ).ready(function() {
 
         }
 
-        $('.boxPokemon').prepend('<div class="boxNPC"><strong>Treinador:</strong><br><center>'+imagens+'</center>'+pokemons+'</div>');
+        $('.boxPokemon').prepend('<div class="boxNPC"><strong>Treinador:</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
 
         activateStressBox();
 
@@ -641,7 +641,7 @@ $( document ).ready(function() {
 
         }
 
-        $('.boxPokemon').prepend('<div class="boxNPC"><strong>Equipe Rocket:</strong><br><center>'+imagens+'</center>'+pokemons+'</div>');
+        $('.boxPokemon').prepend('<div class="boxNPC"><strong>Equipe Rocket:</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
 
         activateStressBox();
 
@@ -730,7 +730,7 @@ $( document ).ready(function() {
         '<div class="boxNPC">'+
           '<center><img width=200 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png></center>'+
           '<br><strong>Pokémon:</strong> '+pkmn.nome+' '+random(nivel(ranking))+' / '+pkmn.tipo+' / Atributo '+atributo()+'<br>Fraquezas: '+pkmn.fraqueza+' <br>Dano '+stress(3,3)+
-        '</div>');
+        '</div><br>');
 
         activateStressBox();
 
@@ -745,7 +745,7 @@ $( document ).ready(function() {
         '<div class="boxNPC">'+
           '<center><img width=200 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png></center>'+
           '<br><strong>Pokémon:</strong> '+pkmn.nome+' '+random(nivel(ranking))+' / '+pkmn.tipo+' / Atributo '+atributo()+'<br>Fraquezas: '+pkmn.fraqueza+' <br>Dano '+stress(3,3)+
-        '</div>');
+        '</div><br>');
 
         activateStressBox();
 
@@ -760,7 +760,7 @@ $( document ).ready(function() {
         '<div class="boxNPC">'+
           '<center><img width=200 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png></center>'+
           '<br><strong>Pokémon:</strong> '+pkmn.nome+' '+random(nivel(ranking))+' / '+pkmn.tipo+' / Atributo '+atributo()+'<br>Fraquezas: '+pkmn.fraqueza+' <br>Dano '+stress(3,3)+
-        '</div>');
+        '</div><br>');
 
         activateStressBox();
 
