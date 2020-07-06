@@ -27,6 +27,51 @@ $( document ).ready(function() {
 
     function pokemon(ranking) {
         switch(ranking){
+            case "pescar":
+                return[
+                    {nome:'Magikarp',tipo:'Água',fraqueza:'Grama e Elétrico',num:'129'},
+                    {nome:'Magikarp',tipo:'Água',fraqueza:'Grama e Elétrico',num:'129'},
+                    {nome:'Magikarp',tipo:'Água',fraqueza:'Grama e Elétrico',num:'129'},
+                    {nome:'Magikarp',tipo:'Água',fraqueza:'Grama e Elétrico',num:'129'},
+                    {nome:'Magikarp',tipo:'Água',fraqueza:'Grama e Elétrico',num:'129'},
+                    {nome:'Magikarp',tipo:'Água',fraqueza:'Grama e Elétrico',num:'129'},
+                    {nome:'Magikarp',tipo:'Água',fraqueza:'Grama e Elétrico',num:'129'},
+                    {nome:'Magikarp',tipo:'Água',fraqueza:'Grama e Elétrico',num:'129'},
+                    {nome:'Magikarp',tipo:'Água',fraqueza:'Grama e Elétrico',num:'129'},
+                    {nome:'Magikarp',tipo:'Água',fraqueza:'Grama e Elétrico',num:'129'},
+                    {nome:'Magikarp',tipo:'Água',fraqueza:'Grama e Elétrico',num:'129'},
+                    {nome:'Magikarp',tipo:'Água',fraqueza:'Grama e Elétrico',num:'129'},
+                    {nome:'Magikarp',tipo:'Água',fraqueza:'Grama e Elétrico',num:'129'},
+                    {nome:'Magikarp',tipo:'Água',fraqueza:'Grama e Elétrico',num:'129'},
+                    {nome:'Magikarp',tipo:'Água',fraqueza:'Grama e Elétrico',num:'129'},
+                    {nome:'Magikarp',tipo:'Água',fraqueza:'Grama e Elétrico',num:'129'},
+                    {nome:'Horsea',tipo:'Água',fraqueza:'Grama e Elétrico',num:'116'},
+                    {nome:'Poliwag',tipo:'Água',fraqueza:'Grama e Elétrico',num:'060'},
+                    {nome:'Shellder',tipo:'Água',fraqueza:'Grama e Elétrico',num:'090'},
+                    {nome:'Slowpoke',tipo:'Água Psíquico',fraqueza:'Fantasma, Noturno, Grama, Elétrico e Inseto',num:'079'},
+                    {nome:'Psyduck',tipo:'Água',fraqueza:'Grama e Elétrico',num:'054'},
+                    {nome:'Goldeen',tipo:'Água',fraqueza:'Grama e Elétrico',num:'118'},
+                    {nome:'Seel',tipo:'Água',fraqueza:'Grama e Elétrico',num:'086'},
+                    {nome:'Krabby',tipo:'Água',fraqueza:'Grama e Elétrico',num:'098'},
+                    {nome:'Tentacool',tipo:'Água Venenoso',fraqueza:'Psíquico, Elétrico e Terrestre',num:'072'},
+                    {nome:'Staryu',tipo:'Água',fraqueza:'Grama e Elétrico',num:'120'},
+                    {nome:'Horsea',tipo:'Água',fraqueza:'Grama e Elétrico',num:'116'},
+                    {nome:'Poliwag',tipo:'Água',fraqueza:'Grama e Elétrico',num:'060'},
+                    {nome:'Shellder',tipo:'Água',fraqueza:'Grama e Elétrico',num:'090'},
+                    {nome:'Slowpoke',tipo:'Água Psíquico',fraqueza:'Fantasma, Noturno, Grama, Elétrico e Inseto',num:'079'},
+                    {nome:'Psyduck',tipo:'Água',fraqueza:'Grama e Elétrico',num:'054'},
+                    {nome:'Goldeen',tipo:'Água',fraqueza:'Grama e Elétrico',num:'118'},
+                    {nome:'Seel',tipo:'Água',fraqueza:'Grama e Elétrico',num:'086'},
+                    {nome:'Krabby',tipo:'Água',fraqueza:'Grama e Elétrico',num:'098'},
+                    {nome:'Tentacool',tipo:'Água Venenoso',fraqueza:'Psíquico, Elétrico e Terrestre',num:'072'},
+                    {nome:'Staryu',tipo:'Água',fraqueza:'Grama e Elétrico',num:'120'},
+                    {nome:'Poliwhirl',tipo:'Água',fraqueza:'Grama e Elétrico',num:'061'},
+                    {nome:'Seadra',tipo:'Água',fraqueza:'Grama e Elétrico',num:'117'},    
+                    {nome:'Seaking',tipo:'Água',fraqueza:'Grama e Elétrico',num:'119'}, 
+                    {nome:'Dewgong',tipo:'Água Gelo',fraqueza:'Grama, Elétrico, Lutador e Pedra',num:'087'},
+                    {nome:'Kingler',tipo:'Água',fraqueza:'Grama e Elétrico',num:'099'},    
+                ];
+                break;
             case "safari":
                 return [
                     {nome:'Nidoran♂',tipo:'Venenoso',fraqueza:'Psíquico e Terrestre',num:'032'},
@@ -106,7 +151,7 @@ $( document ).ready(function() {
                     {nome:'Voltorb',tipo:'Elétrico',fraqueza:'Terrestre',num:'100'},
                     {nome:'Tentacool',tipo:'Água Venenoso',fraqueza:'Psíquico, Elétrico e Terrestre',num:'072'},
                     {nome:'Koffing',tipo:'Venenoso',fraqueza:'Psíquico e Terrestre',num:'109'},
-                    {nome:'Staryu',tipo:'Água',fraqueza:'Grama e Elétrico',num:'121'},
+                    {nome:'Staryu',tipo:'Água',fraqueza:'Grama e Elétrico',num:'120'},
                     {nome:'Rhyhorn',tipo:'Pedra Terrestre',fraqueza:'Metálico, Gelo, Água, Lutador, Grama e Terrestre',num:'111'},
                     {nome:'Pidgeotto',tipo:'Voador Normal',fraqueza:'Elétrico, Gelo e Pedra',num:'017'},
                     {nome:'Growlithe',tipo:'Fogo',fraqueza:'Água, Terrestre e Pedra',num:'058'},
@@ -318,12 +363,12 @@ $( document ).ready(function() {
     function cidade(){
         return [
             {cidade:'Cidade de Pewter',descricao:'Você pode comprar uma Pedra de Evolução por 50 Pokemoedas. Com ela, você evolui seu Pokémon imediatamente, fazendo com que ele ganhe +1 ponto de atributo'},
-            {cidade:'Cidade de Cerulean',descricao:'Em Cerulean você pode visitar a Caverna de Cerulean pagando 50 Pokemoedas. Cada vez que entrar, jogue 1d6. Se cair 6, aparece um Mewtwo selvagem para você enfrentar. Caso caia qualquer outro resultado, gere o Pokemon seguindo as regras normais'},
-            {cidade:'Cidade de Vermillion',descricao:'Você pode comprar um Bilhete de Trem por 100 Pokemoedas. Quando utilizá-lo, você vai imediatamente para uma cidade em que já esteve anteriormente'},
+            {cidade:'Cidade de Cerulean',descricao:'Em Cerulean você pode visitar a Caverna de Cerulean pagando 50 Pokemoedas. Cada vez que entrar, jogue 1d6. Se cair 6, aparece um Mewtwo selvagem para você enfrentar. Caso caia qualquer outro resultado, encontre um Pokémon aleatório do ranking atual'},
+            {cidade:'Cidade de Vermilion',descricao:'Você pode comprar um Bilhete do Navio S.S. Anne por 100 Pokemoedas. Quando utilizá-lo, você vai imediatamente para uma cidade em que já esteve anteriormente, à sua escolha'},
             {cidade:'Cidade de Celadon',descricao:'Você pode comprar uma Flauta por 20 Pokemoedas. Com ela você pode evitar um encontro com um Pokémon selvagem'},
-            {cidade:'Cidade de Fuschia',descricao:'Em Fuschia você pode pagar 50 Pokemoedas para entrar no Safari Pokemon. No Safari Pokémon, você pode enfrentar 5 Pokémons selvagens cada vez que entrar. Role na Tabela 13 para saber qual Pokémon selvagem aparece'},
-            {cidade:'Cidade de Saffron',descricao:'Você pode comprar um Bilhete de Trem por 50 Pokemoedas. Quando utilizá-lo, você vai imediatamente para uma cidade em que já esteve anteriormente'},
-            {cidade:'Cidade de Cinnabar',descricao:'Você pode comprar uma Vara de Pesca por 20 Pokemoedas. Quando utilizá-la, você vai enfrentar um Pokémon do tipo água'},
+            {cidade:'Cidade de Fuschia',descricao:'Em Fuschia você pode pagar 50 Pokemoedas para entrar no Safari Pokemon. No Safari Pokémon, você pode enfrentar 5 Pokémons selvagens cada vez que entrar. Utilize o botão Safari para encontrá-los'},
+            {cidade:'Cidade de Saffron',descricao:'Você pode comprar um Bilhete de Trem por 50 Pokemoedas. Quando utilizá-lo, você vai imediatamente para uma cidade em que já esteve anteriormente, à sua escolha'},
+            {cidade:'Cidade de Cinnabar',descricao:'Você pode comprar uma Vara de Pesca por 20 Pokemoedas. Quando utilizá-la, você vai enfrentar um Pokémon do tipo água. Utilize o botão Pescar para encontrá-los'},
             {cidade:'Cidade de Viridian',descricao:'Na primeira vez que você chegar a Viridian, você recebe 1 Pokeball infalível! Com ela, você captura um Pokémon sem qualquer teste. Você só recebe este item uma vez'},
         ];
     }
@@ -349,6 +394,186 @@ $( document ).ready(function() {
             {qtdd:3,ranking:'proximo'},
         ];
     }
+
+    function lideres(ginasio){
+
+        switch(ginasio){
+            case "Pewter":
+                return {
+                    imglider: "https://cdn.bulbagarden.net/upload/a/a6/Lets_Go_Pikachu_Eevee_Brock.png",
+                    imginsignia: "https://cdn.bulbagarden.net/upload/d/dd/Boulder_Badge.png",
+                    lider: "Brock",
+                    insignia: "Rocha",
+                    recompensa: "5 Pokeball e 10 Pokemoedas",
+                    objetivo: "Derrotar 2 Pokémons para vencer, na seguinte ordem:",
+                    pokemons: [
+                        {nivel:"1",atributo:"5",nome:'Geodude',tipo:'Pedra Terrestre',fraqueza:'Metálico, Lutador, Água, Gelo, Grama e Terrestre',num:'074'},
+                        {nivel:"2",atributo:"5",nome:'Geodude',tipo:'Pedra Terrestre',fraqueza:'Metálico, Lutador, Água, Gelo, Grama e Terrestre',num:'074'},
+                        {nivel:"3",atributo:"6",nome:'Onix',tipo:'Pedra Terrestre',fraqueza:'Metálico, Lutador, Água, Gelo, Grama e Terrestre',num:'095'},
+                        {nivel:"3",atributo:"7",nome:'Onix',tipo:'Pedra Terrestre',fraqueza:'Metálico, Lutador, Água, Gelo, Grama e Terrestre',num:'095'},
+                        {nivel:"4",atributo:"6",nome:'Graveler',tipo:'Pedra Terrestre',fraqueza:'Metálico, Lutador, Água, Gelo, Grama e Terrestre',num:'075'},
+                        {nivel:"3",atributo:"7",nome:'Graveler',tipo:'Pedra Terrestre',fraqueza:'Metálico, Lutador, Água, Gelo, Grama e Terrestre',num:'075'}
+                    ]
+                };
+                break;
+            case "Cerulean":
+                return {
+                    imglider: "https://cdn.bulbagarden.net/upload/f/f6/Lets_Go_Pikachu_Eevee_Misty.png",
+                    imginsignia: "https://cdn.bulbagarden.net/upload/9/9c/Cascade_Badge.png",
+                    lider: "Misty",
+                    insignia: "Cascata",
+                    recompensa: "10 Pokeball e 20 Pokemoedas",
+                    objetivo: "Derrotar 2 Pokémons para vencer, na seguinte ordem:",
+                    pokemons: [
+                        {nivel:"2",atributo:"6",nome:'Staryu',tipo:'Água',fraqueza:'Grama e Elétrico',num:'120'},
+                        {nivel:"3",atributo:"6",nome:'Staryu',tipo:'Água',fraqueza:'Grama e Elétrico',num:'120'},
+                        {nivel:"4",atributo:"7",nome:'Starmie',tipo:'Água Psíquico',fraqueza:'Fantasma, Noturno, Grama, Elétrico e Inseto',num:'121'},
+                        {nivel:"4",atributo:"8",nome:'Starmie',tipo:'Água Psíquico',fraqueza:'Fantasma, Noturno, Grama, Elétrico e Inseto',num:'121'},
+                        {nivel:"3",atributo:"6",nome:'Goldeen',tipo:'Água',fraqueza:'Grama e Elétrico',num:'118'},
+                        {nivel:"4",atributo:"7",nome:'Horsea',tipo:'Água',fraqueza:'Grama e Elétrico',num:'116'},  
+                    ]
+                };
+                break;
+            case "Vermilion":
+                return {
+                    imglider: "https://cdn.bulbagarden.net/upload/b/bc/Lets_Go_Pikachu_Eevee_Lt_Surge.png",
+                    imginsignia: "https://cdn.bulbagarden.net/upload/a/a6/Thunder_Badge.png",
+                    lider: "Tenente Surge",
+                    insignia: "Trovão",
+                    recompensa: "10 Great Ball e 30 Pokemoedas",
+                    objetivo: "Derrotar 2 Pokémons para vencer, na seguinte ordem:",
+                    pokemons: [
+                        {nivel:"5",atributo:"7",nome:'Voltorb',tipo:'Elétrico',fraqueza:'Terrestre',num:'100'},
+                        {nivel:"5",atributo:"6",nome:'Pikachu',tipo:'Elétrico',fraqueza:'Terreste',num:'025'},
+                        {nivel:"6",atributo:"7",nome:'Pikachu',tipo:'Elétrico',fraqueza:'Terreste',num:'025'},
+                        {nivel:"7",atributo:"7",nome:'Raichu',tipo:'Elétrico',fraqueza:'Terreste',num:'026'},
+                        {nivel:"7",atributo:"8",nome:'Raichu',tipo:'Elétrico',fraqueza:'Terreste',num:'026'},
+                        {nivel:"6",atributo:"6",nome:'Electrode',tipo:'Elétrico',fraqueza:'Terrestre',num:'101'},
+                    ]
+                };
+                break;
+            case "Celadon":
+                return {
+                    imglider: "https://cdn.bulbagarden.net/upload/4/47/Lets_Go_Pikachu_Eevee_Erika.png",
+                    imginsignia: "https://cdn.bulbagarden.net/upload/b/b5/Rainbow_Badge.png",
+                    lider: "Erika",
+                    insignia: "Arco-íris",
+                    recompensa: "10 Great Ball e 50 Pokemoedas",
+                    objetivo: "Derrotar 3 Pokémons para vencer, na seguinte ordem:",
+                    pokemons: [
+                        {nivel:"6",atributo:"8",nome:'Weepinbell',tipo:'Grama Venenoso',fraqueza:'Fogo, Psíquico, Voador e Gelo',num:'070'},
+                        {nivel:"6",atributo:"9",nome:'Victreebel',tipo:'Grama Venenoso',fraqueza:'Fogo, Psíquico, Voador e Gelo',num:'071'},
+                        {nivel:"7",atributo:"9",nome:'Victreebel',tipo:'Grama Venenoso',fraqueza:'Fogo, Psíquico, Voador e Gelo',num:'071'},
+                        {nivel:"8",atributo:"9",nome:'Vileplume',tipo:'Grama Venenoso',fraqueza:'Fogo, Psíquico, Voador e Gelo',num:'045'},
+                        {nivel:"8",atributo:"10",nome:'Vileplume',tipo:'Grama Venenoso',fraqueza:'Fogo, Psíquico, Voador e Gelo',num:'045'},
+                        {nivel:"7",atributo:"10",nome:'Tangela',tipo:'Grama',fraqueza:'Fogo, Voador, Gelo, Venenoso e Inseto',num:'114'},
+                    ]
+                };
+                break;
+            case "Fuschia":
+                return {
+                    imglider: "https://cdn.bulbagarden.net/upload/f/f4/Lets_Go_Pikachu_Eevee_Koga.png",
+                    imginsignia: "https://cdn.bulbagarden.net/upload/7/7d/Soul_Badge.png",
+                    lider: "Koga",
+                    insignia: "Alma",
+                    recompensa: "10 Ultra Ball e 50 Pokemoedas",
+                    objetivo: "Derrotar 3 Pokémons para vencer, na seguinte ordem:",
+                    pokemons: [
+                        {nivel:"9",atributo:"9",nome:'Koffing',tipo:'Venenoso',fraqueza:'Psíquico e Terrestre',num:'109'},
+                        {nivel:"9",atributo:"11",nome:'Koffing',tipo:'Venenoso',fraqueza:'Psíquico e Terrestre',num:'109'},
+                        {nivel:"10",atributo:"10",nome:'Weezing',tipo:'Venenoso',fraqueza:'Psíquico e Terrestre',num:'110'},
+                        {nivel:"11",atributo:"11",nome:'Weezing',tipo:'Venenoso',fraqueza:'Psíquico e Terrestre',num:'110'},
+                        {nivel:"10",atributo:"10",nome:'Grimer',tipo:'Venenoso',fraqueza:'Psíquico e Terrestre',num:'088'},
+                        {nivel:"11",atributo:"12",nome:'Muk',tipo:'Venenoso',fraqueza:'Psíquico e Terrestre',num:'089'},
+                    ]
+                };
+                break;
+            case "Saffron":
+                return {
+                    imglider: "https://cdn.bulbagarden.net/upload/7/78/Lets_Go_Pikachu_Eevee_Sabrina.png",
+                    imginsignia: "https://cdn.bulbagarden.net/upload/6/6b/Marsh_Badge.png",
+                    lider: "Sabrina",
+                    insignia: "Lama",
+                    recompensa: "15 Ultra Ball e 50 Pokemoedas",
+                    objetivo: "Derrotar 3 Pokémons para vencer, na seguinte ordem:",
+                    pokemons: [
+                        {nivel:"10",atributo:"12",nome:'Abra',tipo:'Psíquico',fraqueza:'Fantasma, Noturno e Inseto',num:'063'},
+                        {nivel:"11",atributo:"13",nome:'Kadabra',tipo:'Psíquico',fraqueza:'Fantasma, Noturno e Inseto',num:'064'},
+                        {nivel:"12",atributo:"14",nome:'Alakazam',tipo:'Psíquico',fraqueza:'Fantasma, Noturno e Inseto',num:'065'},
+                        {nivel:"12",atributo:"13",nome:'Alakazam',tipo:'Psíquico',fraqueza:'Fantasma, Noturno e Inseto',num:'065'},
+                        {nivel:"12",atributo:"13",nome:'Mr. Mime',tipo:'Fada Psíquico',fraqueza:'Fantasma, Metálico e Venenoso',num:'122'},
+                        {nivel:"11",atributo:"14",nome:'Venomoth',tipo:'Inseto Venenoso',fraqueza:'Fogo, Psíquico, Voador e Pedra',num:'049'},
+                    ]
+                };
+                break;
+            case "Cinnabar":
+                return {
+                    imglider: "https://cdn.bulbagarden.net/upload/c/c8/Lets_Go_Pikachu_Eevee_Blaine.png",
+                    imginsignia: "https://cdn.bulbagarden.net/upload/1/12/Volcano_Badge.png",
+                    lider: "Blaine",
+                    insignia: "Vulcão",
+                    recompensa: "10 Master Ball e 100 Pokemoedas",
+                    objetivo: "Derrotar 4 Pokémons para vencer, na seguinte ordem:",
+                    pokemons: [
+                        {nivel:"13",atributo:"13",nome:'Growlithe',tipo:'Fogo',fraqueza:'Água, Terrestre e Pedra',num:'058'},
+                        {nivel:"12",atributo:"14",nome:'Growlithe',tipo:'Fogo',fraqueza:'Água, Terrestre e Pedra',num:'058'},
+                        {nivel:"13",atributo:"14",nome:'Arcanine',tipo:'Fogo',fraqueza:'Água, Terrestre e Pedra',num:'059'},
+                        {nivel:"15",atributo:"15",nome:'Arcanine',tipo:'Fogo',fraqueza:'Água, Terrestre e Pedra',num:'059'},
+                        {nivel:"13",atributo:"14",nome:'Ponyta',tipo:'Fogo',fraqueza:'Água, Terrestre e Pedra',num:'077'},
+                        {nivel:"14",atributo:"15",nome:'Rapidash',tipo:'Fogo',fraqueza:'Água, Terrestre e Pedra',num:'078'},
+                    ]
+                };
+                break;
+            case "Viridian":
+                return {
+                    imglider: "https://cdn.bulbagarden.net/upload/a/a7/Lets_Go_Pikachu_Eevee_Giovanni.png",
+                    imginsignia: "https://cdn.bulbagarden.net/upload/7/78/Earth_Badge.png",
+                    lider: "Giovanni",
+                    insignia: "Terra",
+                    recompensa: "20 Master Ball e 100 Pokemoedas",
+                    objetivo: "Derrotar 4 Pokémons para vencer, na seguinte ordem:",
+                    pokemons: [
+                        {nivel:"16",atributo:"16",nome:'Rhydon',tipo:'Pedra Terrestre',fraqueza:'Metálico, Gelo, Água, Lutador, Grama e Terrestre',num:'112'},
+                        {nivel:"16",atributo:"17",nome:'Rhydon',tipo:'Pedra Terrestre',fraqueza:'Metálico, Gelo, Água, Lutador, Grama e Terrestre',num:'112'},
+                        {nivel:"15",atributo:"15",nome:'Rhyhorn',tipo:'Pedra Terrestre',fraqueza:'Metálico, Gelo, Água, Lutador, Grama e Terrestre',num:'111'},
+                        {nivel:"14",atributo:"15",nome:'Dugtrio',tipo:'Terrestre',fraqueza:'Água, Grama e Gelo',num:'051'},
+                        {nivel:"16",atributo:"16",nome:'Nidoqueen',tipo:'Venenoso Terrestre',fraqueza:'Água, Psíquico, Gelo e Terrestre',num:'031'},
+                        {nivel:"15",atributo:"15",nome:'Nidoking',tipo:'Venenoso Terrestre',fraqueza:'Água, Psíquico, Gelo e Terrestre',num:'034'},
+                    ]
+                };
+                break;
+        }
+    }
+
+    $('#btnGerarGinasio').click(function(){
+
+        var ginasio = lideres($('#selectGinasio').val());
+        var pokemons = exclusiveRandom(ginasio.pokemons,6);
+
+        $('.boxPokemon').prepend(
+        '<div class="boxNPC">'+
+          '<center><img style="vertical-align: bottom;" width=50 src='+ginasio.imginsignia+'> <img height=200 src='+ginasio.imglider+'></center>'+
+          '<br><strong>Líder: </strong>'+ginasio.lider+
+          '<br><strong>Insígnia: </strong>'+ginasio.insignia+
+          '<br><strong>Recompensa: </strong>'+ginasio.recompensa+
+          '<br><strong>Objetivo: </strong>'+ginasio.objetivo+
+          '<p><center><img width=100 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pokemons[0].num+'.png>'+
+          '<img width=100 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pokemons[1].num+'.png>'+
+          '<img width=100 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pokemons[2].num+'.png></center>'+
+          '<center><img width=100 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pokemons[3].num+'.png>'+
+          '<img width=100 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pokemons[4].num+'.png>'+
+          '<img width=100 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pokemons[5].num+'.png></center></p>'+
+          '<strong>Pokémon:</strong> '+pokemons[0].nome+' '+pokemons[0].nivel+' / '+pokemons[0].tipo+' / Atributo '+pokemons[0].atributo+'<br>Fraquezas: '+pokemons[0].fraqueza+' <br>Dano '+stress(3,3)+
+          '<br><br><strong>Pokémon:</strong> '+pokemons[1].nome+' '+pokemons[1].nivel+' / '+pokemons[1].tipo+' / Atributo '+pokemons[1].atributo+'<br>Fraquezas: '+pokemons[1].fraqueza+' <br>Dano '+stress(3,3)+
+          '<br><br><strong>Pokémon:</strong> '+pokemons[2].nome+' '+pokemons[2].nivel+' / '+pokemons[2].tipo+' / Atributo '+pokemons[2].atributo+'<br>Fraquezas: '+pokemons[2].fraqueza+' <br>Dano '+stress(3,3)+
+          '<br><br><strong>Pokémon:</strong> '+pokemons[3].nome+' '+pokemons[3].nivel+' / '+pokemons[3].tipo+' / Atributo '+pokemons[3].atributo+'<br>Fraquezas: '+pokemons[3].fraqueza+' <br>Dano '+stress(3,3)+
+          '<br><br><strong>Pokémon:</strong> '+pokemons[4].nome+' '+pokemons[4].nivel+' / '+pokemons[4].tipo+' / Atributo '+pokemons[4].atributo+'<br>Fraquezas: '+pokemons[4].fraqueza+' <br>Dano '+stress(3,3)+
+          '<br><br><strong>Pokémon:</strong> '+pokemons[5].nome+' '+pokemons[5].nivel+' / '+pokemons[5].tipo+' / Atributo '+pokemons[5].atributo+'<br>Fraquezas: '+pokemons[5].fraqueza+' <br>Dano '+stress(3,3)+
+        '</div>');
+
+        activateStressBox();
+
+    });
 
     $('#btnGerarTreinador').click(function(){
 
@@ -526,6 +751,20 @@ $( document ).ready(function() {
 
     });
 
+    $('#btnGerarPescar').click(function(){
+
+        var ranking = Number($('#selectRanking').val());
+        var pkmn = random(pokemon('pescar'));
+    
+        $('.boxPokemon').prepend(
+        '<div class="boxNPC">'+
+          '<center><img width=200 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png></center>'+
+          '<br><strong>Pokémon:</strong> '+pkmn.nome+' '+random(nivel(ranking))+' / '+pkmn.tipo+' / Atributo '+atributo()+'<br>Fraquezas: '+pkmn.fraqueza+' <br>Dano '+stress(3,3)+
+        '</div>');
+
+        activateStressBox();
+
+    });
 
     $('.boxPokemon').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '550px', 'box-shadow': '5px 5px 10px lightgrey'});
 
