@@ -552,17 +552,17 @@ $( document ).ready(function() {
 
         $('.boxPokemon').prepend(
         '<div class="boxNPC">'+
-          '<center><img style="vertical-align: bottom;" width=50 src='+ginasio.imginsignia+'> <img height=200 src='+ginasio.imglider+'></center>'+
+          '<center><img style="vertical-align: bottom;" width=50 src='+ginasio.imginsignia+'> <img height=284 src='+ginasio.imglider+'></center>'+
           '<br><strong>Líder: </strong>'+ginasio.lider+
           '<br><strong>Insígnia: </strong>'+ginasio.insignia+
           '<br><strong>Recompensa: </strong>'+ginasio.recompensa+
           '<br><strong>Objetivo: </strong>'+ginasio.objetivo+
-          '<p><center><img width=100 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pokemons[0].num+'.png>'+
-          '<img width=100 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pokemons[1].num+'.png>'+
-          '<img width=100 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pokemons[2].num+'.png></center>'+
-          '<center><img width=100 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pokemons[3].num+'.png>'+
-          '<img width=100 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pokemons[4].num+'.png>'+
-          '<img width=100 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pokemons[5].num+'.png></center></p>'+
+          '<p><center><img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pokemons[0].num+'.png>'+
+          '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pokemons[1].num+'.png>'+
+          '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pokemons[2].num+'.png></center>'+
+          '<center><img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pokemons[3].num+'.png>'+
+          '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pokemons[4].num+'.png>'+
+          '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pokemons[5].num+'.png></center></p>'+
           '<strong>Pokémon:</strong> '+pokemons[0].nome+' '+pokemons[0].nivel+' / '+pokemons[0].tipo+' / Atributo '+pokemons[0].atributo+'<br>Fraquezas: '+pokemons[0].fraqueza+' <br>Dano '+stress(3,3)+
           '<br><br><strong>Pokémon:</strong> '+pokemons[1].nome+' '+pokemons[1].nivel+' / '+pokemons[1].tipo+' / Atributo '+pokemons[1].atributo+'<br>Fraquezas: '+pokemons[1].fraqueza+' <br>Dano '+stress(3,3)+
           '<br><br><strong>Pokémon:</strong> '+pokemons[2].nome+' '+pokemons[2].nivel+' / '+pokemons[2].tipo+' / Atributo '+pokemons[2].atributo+'<br>Fraquezas: '+pokemons[2].fraqueza+' <br>Dano '+stress(3,3)+
@@ -588,18 +588,18 @@ $( document ).ready(function() {
         arrayPokemons.push(random(pokemon(ranking)));
         arrayPokemons.push(random(pokemon(ranking+1)));
 
-        imagens = imagens + '<img width=100 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+arrayPokemons[0].num+'.png>';
+        imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+arrayPokemons[0].num+'.png>';
         pokemons = pokemons + '<br><strong>Pokémon:</strong> '+arrayPokemons[0].nome+' '+random(nivel(ranking))+' / '+arrayPokemons[0].tipo+' / Atributo '+atributo()+'<br>Fraquezas: '+arrayPokemons[0].fraqueza+' <br>Dano '+stress(3,3);
 
         if(trainer.qtdd >= 2){
-            imagens = imagens + '<img width=100 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+arrayPokemons[1].num+'.png>';
+            imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+arrayPokemons[1].num+'.png>';
             pokemons = pokemons + '<br><br><strong>Pokémon:</strong> '+arrayPokemons[1].nome+' '+random(nivel(ranking))+' / '+arrayPokemons[1].tipo+' / Atributo '+atributo()+'<br>Fraquezas: '+arrayPokemons[1].fraqueza+' <br>Dano '+stress(3,3);
             
             if(trainer.ranking == 'proximo'){
-                imagens = imagens + '<img width=100 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+arrayPokemons[3].num+'.png>';
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+arrayPokemons[3].num+'.png>';
                 pokemons = pokemons + '<br><br><strong>Pokémon:</strong> '+arrayPokemons[3].nome+' '+random(nivel(ranking))+' / '+arrayPokemons[3].tipo+' / Atributo '+atributo()+'<br>Fraquezas: '+arrayPokemons[3].fraqueza+' <br>Dano '+stress(3,3);
             } else if(trainer.qtdd >= 3){
-                imagens = imagens + '<img width=100 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+arrayPokemons[2].num+'.png>';
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+arrayPokemons[2].num+'.png>';
                 pokemons = pokemons + '<br><br><strong>Pokémon:</strong> '+arrayPokemons[2].nome+' '+random(nivel(ranking))+' / '+arrayPokemons[2].tipo+' / Atributo '+atributo()+'<br>Fraquezas: '+arrayPokemons[2].fraqueza+' <br>Dano '+stress(3,3);
             }
 
@@ -624,18 +624,18 @@ $( document ).ready(function() {
         arrayPokemons.push(random(pokemon(ranking)));
         arrayPokemons.push(random(pokemon(ranking+1)));
 
-        imagens = imagens + '<img width=100 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+arrayPokemons[0].num+'.png>';
+        imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+arrayPokemons[0].num+'.png>';
         pokemons = pokemons + '<br><strong>Pokémon:</strong> '+arrayPokemons[0].nome+' '+random(nivel(ranking))+' / '+arrayPokemons[0].tipo+' / Atributo '+atributo()+'<br>Fraquezas: '+arrayPokemons[0].fraqueza+' <br>Dano '+stress(3,3);
 
         if(trainer.qtdd >= 2){
-            imagens = imagens + '<img width=100 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+arrayPokemons[1].num+'.png>';
+            imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+arrayPokemons[1].num+'.png>';
             pokemons = pokemons + '<br><br><strong>Pokémon:</strong> '+arrayPokemons[1].nome+' '+random(nivel(ranking))+' / '+arrayPokemons[1].tipo+' / Atributo '+atributo()+'<br>Fraquezas: '+arrayPokemons[1].fraqueza+' <br>Dano '+stress(3,3);
             
             if(trainer.ranking == 'proximo'){
-                imagens = imagens + '<img width=100 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+arrayPokemons[3].num+'.png>';
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+arrayPokemons[3].num+'.png>';
                 pokemons = pokemons + '<br><br><strong>Pokémon:</strong> '+arrayPokemons[3].nome+' '+random(nivel(ranking))+' / '+arrayPokemons[3].tipo+' / Atributo '+atributo()+'<br>Fraquezas: '+arrayPokemons[3].fraqueza+' <br>Dano '+stress(3,3);
             } else if(trainer.qtdd >= 3){
-                imagens = imagens + '<img width=100 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+arrayPokemons[2].num+'.png>';
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+arrayPokemons[2].num+'.png>';
                 pokemons = pokemons + '<br><br><strong>Pokémon:</strong> '+arrayPokemons[2].nome+' '+random(nivel(ranking))+' / '+arrayPokemons[2].tipo+' / Atributo '+atributo()+'<br>Fraquezas: '+arrayPokemons[2].fraqueza+' <br>Dano '+stress(3,3);
             }
 
