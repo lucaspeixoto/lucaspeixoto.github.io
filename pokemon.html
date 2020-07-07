@@ -35,10 +35,12 @@
   <div class="w3-container w3-padding-large" style="margin-bottom:32px">
 
     <span class="hidePrint">
+      Clique em <i class="fa fa-music"></i> para ativar/desativar o som.
       <p>Gerar Pokémon, Treinador, Equipe Rocket, Safari, Pescar e Fantasma leva em consideração o Ranking.
-        <br><strong>Ao atualizar a página a caixa será limpa.</strong> <i>Caixas de dano são interativas!</i>
-      <br><i>Conteúdo gerado com base no jogo criado por Robson F. Vilela 
-        (<a href="https://www.facebook.com/download/preview/329553871388964/" target="_blank">pdf</a>)
+        <br><strong>Ao atualizar a página a caixa será limpa.</strong> <i>Caixas de dano são interativas!</i> 
+      <br><i>Conteúdo gerado com base no jogo criado por Robson F. Vilela.         
+        (<a href="https://www.facebook.com/download/preview/329553871388964/" target="_blank">pdf</a>) 
+         
       </i>
       </p>
       <p>
@@ -72,12 +74,14 @@
         <option value="Viridian">Viridian</option>
       </select>
       <button id="btnUndo" style="color: red;" class="w3-button w3-hover-red">Undo</button>
+      <button id="btnSom" style="color: teal;" class="w3-button w3-hover-red" value="unmute"><i class="fa fa-music"></i></button>
       </p>
       
       
     </span>
     
     <div class="watermark">Jogo criado em https://lucaspeixoto.github.io</div>
+    <input type="hidden" id="musicaTocando" value="">
 
     <div class="boxPokemon"></div>
     
@@ -89,6 +93,7 @@
 </div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="howler.min.js"></script>
 <script src="pokemon.js" type="text/javascript"></script>
 <script src="functions.js" type="text/javascript"></script>
 <script src="script.js" type="text/javascript"></script>

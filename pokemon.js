@@ -2,26 +2,26 @@ $( document ).ready(function() {
 
     function encontro() {
         return [
-            {evento:'Você encontra um Membro da Equipe Rocket',tipo:'rocket'},
-            {evento:'Aparece 1 Pokémon selvagem do Ranking atual',tipo:'selvagem'},
-            {evento:'Aparece 1 Pokémon selvagem do Ranking atual',tipo:'selvagem'},
-            {evento:'Aparece 1 Pokémon selvagem do Ranking atual',tipo:'selvagem'},
-            {evento:'Aparece 1 Pokémon selvagem do Ranking anterior',tipo:'selvagem'},
-            {evento:'Você encontra um Treinador Aleatório',tipo:'treinador'},
-            {evento:'Aparece 1 Pokémon selvagem do Ranking atual',tipo:'selvagem'},
-            {evento:'Aparece 1 Pokémon selvagem do Ranking atual',tipo:'selvagem'},
-            {evento:'Aparecem 2 Pokémon selvagens do Ranking atual (Lute contra eles individualmente)',tipo:'selvagem'},
-            {evento:'Você chegou a uma Cidade',tipo:'cidade'},
-            {evento:'Aparece 1 Pokémon selvagem do Ranking atual',tipo:'selvagem'},
-            {evento:'Você encontra uma Treinadora Aleatória',tipo:'treinadora'},
-            {evento:'Aparece 1 Pokémon selvagem do Ranking atual',tipo:'selvagem'},
-            {evento:'Aparece 1 Pokémon selvagem do Ranking atual',tipo:'selvagem'},
-            {evento:'Aparece 1 Pokémon selvagem do Ranking seguinte',tipo:'selvagem'},
-            {evento:'Aparece 1 Pokémon selvagem do Ranking atual',tipo:'selvagem'},
-            {evento:'Você chegou a um Centro Pokémon aleatório',tipo:'cidade'},
-            {evento:'Você encontra um Treinador Aleatório',tipo:'treinador'},
-            {evento:'Aparece 1 Pokémon selvagem do Ranking atual',tipo:'selvagem'},
-            {evento:'Você chegou a uma Cidade',tipo:'cidade'}
+            {mp3:'35 A Trainer Appears (Rocket Duo Version)',evento:'Você encontra um Membro da Equipe Rocket',tipo:'rocket'},
+            {mp3:'14 Battle! (Wild Poke’mon)',evento:'Aparece 1 Pokémon selvagem do Ranking atual',tipo:'selvagem'},
+            {mp3:'14 Battle! (Wild Poke’mon)',evento:'Aparece 1 Pokémon selvagem do Ranking atual',tipo:'selvagem'},
+            {mp3:'14 Battle! (Wild Poke’mon)',evento:'Aparece 1 Pokémon selvagem do Ranking atual',tipo:'selvagem'},
+            {mp3:'14 Battle! (Wild Poke’mon)',evento:'Aparece 1 Pokémon selvagem do Ranking anterior',tipo:'selvagem'},
+            {mp3:'34 A Trainer Appears (Bad Guy Version)',evento:'Você encontra um Treinador Aleatório',tipo:'treinador'},
+            {mp3:'14 Battle! (Wild Poke’mon)',evento:'Aparece 1 Pokémon selvagem do Ranking atual',tipo:'selvagem'},
+            {mp3:'14 Battle! (Wild Poke’mon)',evento:'Aparece 1 Pokémon selvagem do Ranking atual',tipo:'selvagem'},
+            {mp3:'14 Battle! (Wild Poke’mon)',evento:'Aparecem 2 Pokémon selvagens do Ranking atual (Lute contra eles individualmente)',tipo:'selvagem'},
+            {mp3:'37 Route 24 - Welcome to the World of Poke’mon!',evento:'Você chegou a uma Cidade',tipo:'cidade'},
+            {mp3:'14 Battle! (Wild Poke’mon)',evento:'Aparece 1 Pokémon selvagem do Ranking atual',tipo:'selvagem'},
+            {mp3:'32 A Trainer Appears (Girl Version)',evento:'Você encontra uma Treinadora Aleatória',tipo:'treinadora'},
+            {mp3:'14 Battle! (Wild Poke’mon)',evento:'Aparece 1 Pokémon selvagem do Ranking atual',tipo:'selvagem'},
+            {mp3:'14 Battle! (Wild Poke’mon)',evento:'Aparece 1 Pokémon selvagem do Ranking atual',tipo:'selvagem'},
+            {mp3:'14 Battle! (Wild Poke’mon)',evento:'Aparece 1 Pokémon selvagem do Ranking seguinte',tipo:'selvagem'},
+            {mp3:'14 Battle! (Wild Poke’mon)',evento:'Aparece 1 Pokémon selvagem do Ranking atual',tipo:'selvagem'},
+            {mp3:'18 Poke’mon Center',evento:'Você chegou a um Centro Pokémon aleatório',tipo:'cidade'},
+            {mp3:'24 A Trainer Appears (Boy Version)',evento:'Você encontra um Treinador Aleatório',tipo:'treinador'},
+            {mp3:'14 Battle! (Wild Poke’mon)',evento:'Aparece 1 Pokémon selvagem do Ranking atual',tipo:'selvagem'},
+            {mp3:'40 Cycling',evento:'Você chegou a uma Cidade',tipo:'cidade'}
         ];
     };
 
@@ -394,16 +394,16 @@ $( document ).ready(function() {
 
     function cidade(){
         return [
-            {cidade:'Cidade de Lavender',descricao:'Em lavender você pode pagar 50 Pokemoedas para visitar a Pokémon Tower e enfrentar pokémons do tipo fantasma. Utilize o botão Fantasma para encontrá-los'},
-            {cidade:'Cidade de Pallet',descricao:'Pallet é a Cidade em que você inicia o jogo. Em Pallet, você pode visitar sua mãe (que te dará uma mesada de 25 Pokemoedas) e o Prof. Carvalho (ele te dará 5 Pokeballs)'},
-            {cidade:'Cidade de Pewter',descricao:'Você pode comprar uma Pedra de Evolução por 50 Pokemoedas. Com ela, você evolui seu Pokémon imediatamente, fazendo com que ele ganhe +1 ponto de atributo'},
-            {cidade:'Cidade de Cerulean',descricao:'Em Cerulean você pode visitar a Caverna de Cerulean pagando 50 Pokemoedas. Cada vez que entrar, jogue 1d6. Se cair 6, aparece um Mewtwo selvagem para você enfrentar. Caso caia qualquer outro resultado, encontre um Pokémon aleatório do ranking atual'},
-            {cidade:'Cidade de Vermilion',descricao:'Você pode comprar um Bilhete do Navio S.S. Anne por 100 Pokemoedas. Quando utilizá-lo, você vai imediatamente para uma cidade em que já esteve anteriormente, à sua escolha'},
-            {cidade:'Cidade de Celadon',descricao:'Você pode comprar uma Flauta por 20 Pokemoedas. Com ela você pode evitar um encontro com um Pokémon selvagem'},
-            {cidade:'Cidade de Fuschia',descricao:'Em Fuschia você pode pagar 50 Pokemoedas para entrar no Safari Pokemon. No Safari Pokémon, você pode enfrentar 5 Pokémons selvagens cada vez que entrar. Utilize o botão Safari para encontrá-los'},
-            {cidade:'Cidade de Saffron',descricao:'Você pode comprar um Bilhete de Trem por 50 Pokemoedas. Quando utilizá-lo, você vai imediatamente para uma cidade em que já esteve anteriormente, à sua escolha'},
-            {cidade:'Cidade de Cinnabar',descricao:'Você pode comprar uma Vara de Pesca por 20 Pokemoedas. Quando utilizá-la, você vai enfrentar um Pokémon do tipo água. Utilize o botão Pescar para encontrá-los'},
-            {cidade:'Cidade de Viridian',descricao:'Na primeira vez que você chegar a Viridian, você recebe 1 Pokeball infalível! Com ela, você captura um Pokémon sem qualquer teste. Você só recebe este item uma vez'},
+            {mp3:'42 Lavender Town',cidade:'Cidade de Lavender',descricao:'Em lavender você pode pagar 50 Pokemoedas para visitar a Pokémon Tower e enfrentar pokémons do tipo fantasma. Utilize o botão Fantasma para encontrá-los'},
+            {mp3:'04 Pallet Town',cidade:'Cidade de Pallet',descricao:'Pallet é a Cidade em que você inicia o jogo. Em Pallet, você pode visitar sua mãe (que te dará uma mesada de 25 Pokemoedas) e o Prof. Carvalho (ele te dará 5 Pokeballs)'},
+            {mp3:'07 Pewter City Theme',cidade:'Cidade de Pewter',descricao:'Você pode comprar uma Pedra de Evolução por 50 Pokemoedas. Com ela, você evolui seu Pokémon imediatamente, fazendo com que ele ganhe +1 ponto de atributo'},
+            {mp3:'36 Cerulean City',cidade:'Cidade de Cerulean',descricao:'Em Cerulean você pode visitar a Caverna de Cerulean pagando 50 Pokemoedas. Cada vez que entrar, jogue 1d6. Se cair 6, aparece um Mewtwo selvagem para você enfrentar. Caso caia qualquer outro resultado, encontre um Pokémon aleatório do ranking atual'},
+            {mp3:'38 Vermilion City',cidade:'Cidade de Vermilion',descricao:'Você pode comprar um Bilhete do Navio S.S. Anne por 100 Pokemoedas. Quando utilizá-lo, você vai imediatamente para uma cidade em que já esteve anteriormente, à sua escolha'},
+            {mp3:'43 Celadon City',cidade:'Cidade de Celadon',descricao:'Você pode comprar uma Flauta por 20 Pokemoedas. Com ela você pode evitar um encontro com um Pokémon selvagem'},
+            {mp3:'31 Route 3',cidade:'Cidade de Fuschia',descricao:'Em Fuschia você pode pagar 50 Pokemoedas para entrar no Safari Pokemon. No Safari Pokémon, você pode enfrentar 5 Pokémons selvagens cada vez que entrar. Utilize o botão Safari para encontrá-los'},
+            {mp3:'41 Route 11',cidade:'Cidade de Saffron',descricao:'Você pode comprar um Bilhete de Trem por 50 Pokemoedas. Quando utilizá-lo, você vai imediatamente para uma cidade em que já esteve anteriormente, à sua escolha'},
+            {mp3:'51 Cinnabar Island',cidade:'Cidade de Cinnabar',descricao:'Você pode comprar uma Vara de Pesca por 20 Pokemoedas. Quando utilizá-la, você vai enfrentar um Pokémon do tipo água. Utilize o botão Pescar para encontrá-los'},
+            {mp3:'17 Viridian City',cidade:'Cidade de Viridian',descricao:'Na primeira vez que você chegar a Viridian, você recebe 1 Pokeball infalível! Com ela, você captura um Pokémon sem qualquer teste. Você só recebe este item uma vez'},
         ];
     }
 
@@ -579,6 +579,30 @@ $( document ).ready(function() {
         }
     }
 
+    som = play('02 Title Screen.mp3');
+    som.play();
+
+    function play(file) {
+        var sound = new Howl({
+            src: ['./mp3/'+file],
+            volume: 0.7,
+            loop: true,
+        });
+        return sound;
+    }
+
+    $('#btnSom').click(function(){
+        if($('#btnSom').val() == 'unmute'){
+            $('#btnSom').val('mute');
+            $('#btnSom').css('color','red');
+        }
+        else{
+            $('#btnSom').val('unmute');
+            $('#btnSom').css('color','teal');
+        }
+        som.pause();
+    });
+
     $('#btnGerarGinasio').click(function(){
 
         var ginasio = lideres($('#selectGinasio').val());
@@ -606,6 +630,12 @@ $( document ).ready(function() {
         '</div><br>');
 
         activateStressBox();
+
+        $('#musicaTocando').val('');
+        som.unload();
+        som = play('29 Battle! (Gym Leader Battle).mp3');
+        if($('#btnSom').val() == 'unmute') 
+            som.play();
 
     });
 
@@ -643,6 +673,12 @@ $( document ).ready(function() {
 
         activateStressBox();
 
+        $('#musicaTocando').val('');
+        som.unload();
+        som = play('10 Battle! (Trainer Battle).mp3');
+        if($('#btnSom').val() == 'unmute') 
+            som.play();
+
     });
 
     $('#btnGerarRocket').click(function(){
@@ -679,6 +715,12 @@ $( document ).ready(function() {
 
         activateStressBox();
 
+        $('#musicaTocando').val('');
+        som.unload();
+        som = play('10 Battle! (Trainer Battle).mp3');
+        if($('#btnSom').val() == 'unmute') 
+            som.play();
+
     });
 
     $('#btnUndo').click(function(){
@@ -693,6 +735,12 @@ $( document ).ready(function() {
         '<div class="boxNPC">'+
           '<strong>'+city.cidade+'</strong>: '+city.descricao+
         '</div>');
+
+        $('#musicaTocando').val('');
+        som.unload();
+        som = play(city.mp3+'.mp3');
+        if($('#btnSom').val() == 'unmute') 
+            som.play();
 
     });
 
@@ -730,6 +778,12 @@ $( document ).ready(function() {
           '<h5 style="background-color: '+corbg+'; border-radius: 5px; padding: 5px;"> <i class="fa '+faicon+'"></i> '+evento.evento+'</h5>'+
         '</div>');
 
+        $('#musicaTocando').val('');
+        som.unload();
+        som = play(evento.mp3+'.mp3');
+        if($('#btnSom').val() == 'unmute') 
+            som.play();
+
     });
 
     $('#btnGerarRecompensa').click(function(){
@@ -739,19 +793,11 @@ $( document ).ready(function() {
           '<strong>Recompensa:</strong> '+random(recompensa())+
         '</div>');
 
-    });
-
-    $('#btnRolarDado').click(function(){
-
-        var dado = contAtributo(1,20);
-
-        if(dado == '1')
-            dado = dado + ' - ACERTO CRÍTICO!'
-
-        $('.boxPokemon').prepend(
-        '<div class="boxNPC">'+
-          '<strong>Rolagem:</strong> '+dado+
-        '</div>');
+        $('#musicaTocando').val('');
+        som.unload();
+        som = play(random(['15 Victory! (Wild Poke’mon).mp3','12 Victory! (Trainer Battle).mp3']));
+        if($('#btnSom').val() == 'unmute') 
+            som.play();
 
     });
 
@@ -768,6 +814,14 @@ $( document ).ready(function() {
 
         activateStressBox();
 
+        if($('#btnSom').val() == 'unmute') {
+            var cry = new Howl({
+                src: ['./mp3/cries/'+pkmn.num+'.ogg'],
+                volume: 0.3,
+            });
+            cry.play();
+        }
+
     });
 
     $('#btnGerarSafari').click(function(){
@@ -782,6 +836,13 @@ $( document ).ready(function() {
         '</div><br>');
 
         activateStressBox();
+
+        if(($('#btnSom').val() == 'unmute') && ($('#musicaTocando').val() != 'safari')){
+            $('#musicaTocando').val('safari');
+            som.unload();
+            som = play('23 Viridian Forest.mp3');
+            som.play();
+        }
 
     });
 
@@ -798,6 +859,13 @@ $( document ).ready(function() {
 
         activateStressBox();
 
+        if(($('#btnSom').val() == 'unmute') && ($('#musicaTocando').val() != 'pescar')){
+            $('#musicaTocando').val('pescar');
+            som.unload();
+            som = play('50 Surf.mp3');
+            som.play();
+        }
+
     });
 
     $('#btnGerarFantasma').click(function(){
@@ -812,6 +880,13 @@ $( document ).ready(function() {
         '</div><br>');
 
         activateStressBox();
+
+        if(($('#btnSom').val() == 'unmute') && ($('#musicaTocando').val() != 'fantasma')){
+            $('#musicaTocando').val('fantasma');
+            som.unload();
+            som = play('47 Poke’mon Tower.mp3');
+            som.play();
+        }
 
     });
 
