@@ -284,12 +284,17 @@ $( document ).ready(function() {
                 corfont = 'white';
                 icon = 'star-o';
                 title = 'Vilão Final';
-                break;   
+                break;
+            default:
+                corbg = '#000';
+                corfont = 'white';
+                icon = '';
+                title = '';
         }
 
         $('.boxRonin').prepend(
         '<div class="boxNPC">'+
-          '<h5 style="color: '+corfont+'; background-color: '+corbg+'; border-radius: 5px; padding: 5px;">&nbsp;&nbsp;<i class="fa fa-'+icon+'" aria-hidden="true"></i> '+title+'</h5>'+
+          '<h5 style="color: '+corfont+'; background-color: '+corbg+'; border-radius: 5px; padding: 5px;"><i class="fa fa-'+icon+'" aria-hidden="true"></i> '+title+'</h5>'+
         '</div>');
     };
 
@@ -367,6 +372,9 @@ $( document ).ready(function() {
 
     $('#btnGerarCla').click(function(){
 
+        $('.boxRonin').prepend('<br>');
+        titulo('');
+
         $('.boxRonin').prepend(
         '<div class="boxNPC">'+
           '<p><center><img width=78 src="./img/cla'+Number(Math.floor(Math.random() * (36)) + 1)+'.jpg"></center></p>'+
@@ -379,6 +387,9 @@ $( document ).ready(function() {
     });
 
     $('#btnGerarVilaoFinal').click(function(){
+
+        $('.boxRonin').prepend('<br>');
+        titulo('');
 
         $('.boxRonin').prepend(
         '<div class="boxNPC">'+
@@ -397,6 +408,9 @@ $( document ).ready(function() {
 
     $('#btnGerarVilao').click(function(){
 
+        $('.boxRonin').prepend('<br>');
+        titulo('');
+
         $('.boxRonin').prepend(
         '<div class="boxNPC">'+
           '<p><i><center>'+random(localExotico('local'))+' '+random(localExotico('clima'))+'</center></i></p>'+
@@ -412,6 +426,9 @@ $( document ).ready(function() {
     });
 
     $('#btnGerarAliado').click(function(){
+
+        $('.boxRonin').prepend('<br>');
+        titulo('');
 
         var ocupacaoAliado = random(ocupacao());
         var tecnicaAliado = '';
@@ -433,6 +450,9 @@ $( document ).ready(function() {
     });
 
     $('#btnGerarPersonagem').click(function(){
+
+        $('.boxRonin').prepend('<br>');
+        titulo('');
 
         $('.boxRonin').prepend(
         '<div class="boxNPC">'+
