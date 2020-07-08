@@ -810,7 +810,7 @@ $( document ).ready(function() {
         '<div class="boxNPC">'+
           '<center><img width=200 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png></center>'+
           '<br><strong>Pokémon:</strong> '+pkmn.nome+' '+random(nivel(ranking))+' / '+pkmn.tipo+' / Atributo '+atributo()+' / Dano '+stress(3,3)+'<br>Fraquezas: '+pkmn.fraqueza+
-        '</div><br>');
+        '<br></div>');
 
         activateStressBox();
 
@@ -833,7 +833,7 @@ $( document ).ready(function() {
         '<div class="boxNPC">'+
           '<center><img width=200 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png></center>'+
           '<br><strong>Pokémon:</strong> '+pkmn.nome+' '+random(nivel(ranking))+' / '+pkmn.tipo+' / Atributo '+atributo()+' / Dano '+stress(3,3)+'<br>Fraquezas: '+pkmn.fraqueza+
-        '</div><br>');
+        '<br></div>');
 
         activateStressBox();
 
@@ -855,7 +855,7 @@ $( document ).ready(function() {
         '<div class="boxNPC">'+
           '<center><img width=200 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png></center>'+
           '<br><strong>Pokémon:</strong> '+pkmn.nome+' '+random(nivel(ranking))+' / '+pkmn.tipo+' / Atributo '+atributo()+' / Dano '+stress(3,3)+'<br>Fraquezas: '+pkmn.fraqueza+
-        '</div><br>');
+        '<br></div>');
 
         activateStressBox();
 
@@ -877,7 +877,7 @@ $( document ).ready(function() {
         '<div class="boxNPC">'+
           '<center><img width=200 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png></center>'+
           '<br><strong>Pokémon:</strong> '+pkmn.nome+' '+random(nivel(ranking))+' / '+pkmn.tipo+' / Atributo '+atributo()+' / Dano '+stress(3,3)+'<br>Fraquezas: '+pkmn.fraqueza+
-        '</div><br>');
+        '<br></div>');
 
         activateStressBox();
 
