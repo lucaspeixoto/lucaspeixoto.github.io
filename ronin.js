@@ -105,20 +105,20 @@ $( document ).ready(function() {
         return [
             'Nada aconteceu.',
             'Se tiver Reputação 4 ou mais, um Vilão [<i class="fa fa-star" aria-hidden="true"></i>] te encontrou. Senão, nada aconteceu.',
-            'Se tiver Reputação 5 ou mais, um Vilão [<i class="fa fa-star" aria-hidden="true"></i>] te encontrou. Senão, terá um <u>Encontro na Estrada</u>.',
-            'Se tiver Reputação 6, um Vilão [<i class="fa fa-star" aria-hidden="true"></i>] te encontrou. Senão, terá um <u>Encontro na Estrada</u>.',
-            'Você teve um <u>Encontro na Estrada</u>.',
-            'Você teve um <u>Encontro na Estrada</u>.',
+            'Se tiver Reputação 5 ou mais, um Vilão [<i class="fa fa-star" aria-hidden="true"></i>] te encontrou. Senão, terá um Encontro na Estrada [<i class="fa fa-road"></i>].',
+            'Se tiver Reputação 6, um Vilão [<i class="fa fa-star" aria-hidden="true"></i>] te encontrou. Senão, terá um Encontro na Estrada [<i class="fa fa-road"></i>].',
+            'Você teve um Encontro na Estrada [<i class="fa fa-road"></i>].',
+            'Você teve um Encontro na Estrada [<i class="fa fa-road"></i>].',
         ];
     };
 
 
     function localidade() {
         return [
-            'Você chegou a uma grande cidade comandada por um Clã Nobre [<i class="fa fa-flag" aria-hidden="true"></i>].<br>Se você tiver Reputação 4 ou mais, será abordado por 2 Soldados (Combate +1; Bloq 0).<br>Aqui você ganha 1 de Reputação e terá um <u>Encontro Urbano</u>.',
-            'Você chegou a uma cidade.<br>Se você tiver Reputação 5 ou mais, será abordado por 2 Soldados (Combate +1; Bloq 0).<br>Aqui você ganha 1 de Reputação e terá um <u>Encontro Urbano</u>.',
-            'Você chegou a uma pequena cidade.<br>Se você tiver Reputação 6, será abordado por um Soldado (Combate +1; Bloq 0).<br>Aqui você terá um <u>Encontro Urbano</u>.',
-            'Você chegou a um porto.<br>Aqui você pode escolher entre ter um <u>Encontro Urbano</u> ou abrigar-se para ganhar 1 de Determinação.',
+            'Você chegou a uma grande cidade comandada por um Clã Nobre [<i class="fa fa-flag" aria-hidden="true"></i>].<br>Se você tiver Reputação 4 ou mais, será abordado por 2 Soldados (Combate +1; Bloq 0).<br>Aqui você ganha 1 de Reputação e terá um Encontro Urbano [<i class="fa fa-home"></i>].',
+            'Você chegou a uma cidade.<br>Se você tiver Reputação 5 ou mais, será abordado por 2 Soldados (Combate +1; Bloq 0).<br>Aqui você ganha 1 de Reputação e terá um Encontro Urbano [<i class="fa fa-home"></i>].',
+            'Você chegou a uma pequena cidade.<br>Se você tiver Reputação 6, será abordado por um Soldado (Combate +1; Bloq 0).<br>Aqui você terá um Encontro Urbano [<i class="fa fa-home"></i>].',
+            'Você chegou a um porto.<br>Aqui você pode escolher entre ter um Encontro Urbano [<i class="fa fa-home"></i>] ou abrigar-se para ganhar 1 de Determinação.',
             'Você chegou a um vilarejo.<br>Aqui você pode ajudar a população para ganhar 1 de Compaixão ou apenas se abrigar para ganhar 1 de Determinação.',
             'Você chegou a um pequeno vilarejo.<br>Aqui você pode ajudar a população para ganhar 1 de Compaixão ou apenas se abrigar para ganhar 1 de Determinação.',
         ];
