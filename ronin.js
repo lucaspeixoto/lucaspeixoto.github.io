@@ -307,7 +307,7 @@ $( document ).ready(function() {
         $('.boxRonin').prepend(
         '<div class="boxNPC">'+
           '<strong>Procurando por Algo: </strong>'+random(procurando())+
-        '<br></div>');
+        '</div><br>');
 
     });
 
@@ -316,7 +316,7 @@ $( document ).ready(function() {
         $('.boxRonin').prepend(
         '<div class="boxNPC">'+
           '<strong>Informações do Passado: </strong>'+random(passado())+
-        '<br></div>');
+        '</div><br>');
 
     });
 
@@ -325,7 +325,7 @@ $( document ).ready(function() {
         $('.boxRonin').prepend(
         '<div class="boxNPC">'+
           '<strong>Esqueleto no Armário: </strong>'+random(esqueleto())+
-        '<br></div>');
+        '</div><br>');
 
     });
 
@@ -334,7 +334,7 @@ $( document ).ready(function() {
         $('.boxRonin').prepend(
         '<div class="boxNPC">'+
           '<strong>Encontro Urbano: </strong>'+random(urbano())+
-        '<br></div>');
+        '</div><br>');
 
     });
 
@@ -343,7 +343,7 @@ $( document ).ready(function() {
         $('.boxRonin').prepend(
         '<div class="boxNPC">'+
           '<strong>Encontro na Estrada: </strong>'+random(estrada())+
-        '<br></div>');
+        '</div><br>');
 
     });
 
@@ -352,7 +352,7 @@ $( document ).ready(function() {
         $('.boxRonin').prepend(
         '<div class="boxNPC">'+
           '<strong>Localidade: </strong>'+random(localidade())+
-        '<br></div>');
+        '</div><br>');
 
     });
 
@@ -361,7 +361,7 @@ $( document ).ready(function() {
         $('.boxRonin').prepend(
         '<div class="boxNPC">'+
           '<strong>Rota: </strong>'+random(rota())+
-        '<br></div>');
+        '</div><br>');
 
     });
 
@@ -372,7 +372,7 @@ $( document ).ready(function() {
           '<p><center><img width=78 src="./img/cla'+Number(Math.floor(Math.random() * (36)) + 1)+'.jpg"></center></p>'+
           '<strong>Nome:</strong> '+random(nomeCla())+
           '<br><strong>Característica:</strong> '+random(caracteristicaCla())+
-        '<br></div>');
+        '</div><br>');
 
         titulo('cla');
         
@@ -389,7 +389,7 @@ $( document ).ready(function() {
           '<br><strong>Aparência:</strong> '+random(aparencia())+' / '+random(aparencia())+
           '<br><strong>Técnica:</strong> '+random(tecnica())+
           '<br><strong>Vantagem:</strong> '+random(vantagem())+
-        '<br></div>');
+        '</div><br>');
 
         titulo('vilaoFinal');
         
@@ -405,7 +405,7 @@ $( document ).ready(function() {
           '<br><strong>Sexo:</strong> '+random(['Masculino','Feminino'])+
           '<br><strong>Aparência:</strong> '+random(aparencia())+' / '+random(aparencia())+
           '<br><strong>Técnica:</strong> '+random(tecnica())+
-        '<br></div>');
+        '</div><br>');
 
         titulo('vilao');
         
@@ -426,7 +426,7 @@ $( document ).ready(function() {
           '<br><strong>Aparência:</strong> '+random(aparencia())+' / '+random(aparencia())+
           '<br><strong>Ocupação:</strong> '+ocupacaoAliado+
           tecnicaAliado+
-        '<br></div>');
+        '</div><br>');
 
         titulo('aliado');
         
@@ -443,7 +443,7 @@ $( document ).ready(function() {
           '<br><strong>Pesadelo Constante:</strong> '+random(pesadelo())+
           '<br><strong>Cicatriz:</strong> '+random(cicatriz())+
           '<br><strong>Significado da Cicatriz:</strong> '+random(significadoCicatriz())+
-        '<br></div>');
+        '</div><br>');
 
         titulo('ronin');
         
