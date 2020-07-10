@@ -576,6 +576,82 @@ $( document ).ready(function() {
                     ]
                 };
                 break;
+            case "Lorelei":
+                return {
+                    imglider: "https://cdn.bulbagarden.net/upload/f/f7/Lets_Go_Pikachu_Eevee_Lorelei.png",
+                    lider: "Lorelei",
+                    objetivo: "Derrotar todos os Pokémons para vencer, na seguinte ordem:",
+                    pokemons: [
+                        {nivel:"17",atributo:"18",nome:'Articuno',tipo:'Gelo Voador',fraqueza:'Metálico, Fogo, Elétrico e Pedra',num:'144'},
+                        {nivel:"17",atributo:"17",nome:'Dewgong',tipo:'Água Gelo',fraqueza:'Grama, Elétrico, Lutador e Pedra',num:'087'},
+                        {nivel:"16",atributo:"17",nome:'Cloyster',tipo:'Água Gelo',fraqueza:'Grama, Elétrico, Lutador e Pedra',num:'091'},
+                        {nivel:"17",atributo:"18",nome:'Slowbro',tipo:'Água Psíquico',fraqueza:'Fantasma, Noturno, Grama, Elétrico e Inseto',num:'080'},
+                        {nivel:"18",atributo:"19",nome:'Jynx',tipo:'Gelo Psíquico',fraqueza:'Metálico, Fantasma, Fogo, Noturno, Pedra e Inseto',num:'124'},
+                        {nivel:"18",atributo:"18",nome:'Lapras',tipo:'Água Gelo',fraqueza:'Grama, Elétrico, Lutador e Pedra',num:'131'},
+                    ]
+                };
+                break;
+            case "Bruno":
+                return {
+                    imglider: "https://cdn.bulbagarden.net/upload/4/4c/Lets_Go_Pikachu_Eevee_Bruno.png",
+                    lider: "Bruno",
+                    objetivo: "Derrotar todos os Pokémons para vencer, na seguinte ordem:",
+                    pokemons: [
+                        {nivel:"18",atributo:"17",nome:'Onix',tipo:'Pedra Terrestre',fraqueza:'Metálico, Lutador, Água, Gelo, Grama e Terrestre',num:'095'},
+                        {nivel:"18",atributo:"18",nome:'Poliwrath',tipo:'Água Lutador',fraqueza:'Fada, Grama, Voador, Psíquico e Elétrico',num:'062'},
+                        {nivel:"19",atributo:"18",nome:'Onix',tipo:'Pedra Terrestre',fraqueza:'Metálico, Lutador, Água, Gelo, Grama e Terrestre',num:'095'},
+                        {nivel:"19",atributo:"19",nome:'Hitmonlee',tipo:'Lutador',fraqueza:'Psíquico, Voador e Fada',num:'106'},
+                        {nivel:"19",atributo:"20",nome:'Hitmonchan',tipo:'Lutador',fraqueza:'Psíquico, Voador e Fada',num:'107'},
+                        {nivel:"20",atributo:"21",nome:'Machamp',tipo:'Lutador',fraqueza:'Psíquico, Voador e Fada',num:'068'},
+                    ]
+                };
+                break;
+            case "Agatha":
+                return {
+                    imglider: "https://cdn.bulbagarden.net/upload/5/5c/Lets_Go_Pikachu_Eevee_Agatha.png",
+                    lider: "Agatha",
+                    objetivo: "Derrotar todos os Pokémons para vencer, na seguinte ordem:",
+                    pokemons: [
+                        {nivel:"20",atributo:"19",nome:'Marowak',tipo:'Terrestre',fraqueza:'Água, Grama e Gelo',num:'105'},
+                        {nivel:"20",atributo:"20",nome:'Haunter',tipo:'Fantasma Venenoso',fraqueza:'Fantasma, Noturno, Psíquico e Terrestre',num:'093'},
+                        {nivel:"21",atributo:"20",nome:'Gengar',tipo:'Fantasma Venenoso',fraqueza:'Fantasma, Noturno, Psíquico e Terrestre',num:'094'},
+                        {nivel:"21",atributo:"21",nome:'Golbat',tipo:'Voador Venenoso',fraqueza:'Psíquico, Elétrico, Gelo e Pedra',num:'042'},
+                        {nivel:"22",atributo:"22",nome:'Arbok',tipo:'Venenoso',fraqueza:'Psíquico e Terrestre',num:'024'},
+                        {nivel:"22",atributo:"23",nome:'Gengar',tipo:'Fantasma Venenoso',fraqueza:'Fantasma, Noturno, Psíquico e Terrestre',num:'094'},
+                    ]
+                };
+                break;
+            case "Lance":
+                return {
+                    imglider: "https://cdn.bulbagarden.net/upload/c/cd/Lets_Go_Pikachu_Eevee_Lance.png",
+                    lider: "Lance",
+                    objetivo: "Derrotar todos os Pokémons para vencer, na seguinte ordem:",
+                    pokemons: [
+                        {nivel:"22",atributo:"22",nome:'Dragonair',tipo:'Dragão',fraqueza:'Fada, Gelo e Dragão',num:'148'},
+                        {nivel:"22",atributo:"21",nome:'Dragonair',tipo:'Dragão',fraqueza:'Fada, Gelo e Dragão',num:'148'},
+                        {nivel:"22",atributo:"23",nome:'Charizard',tipo:'Fogo Voador',fraqueza:'Água, Elétrico e Pedra',num:'006'},
+                        {nivel:"23",atributo:"22",nome:'Gyarados',tipo:'Água Voador',fraqueza:'Elétrico e Pedra',num:'130'},
+                        {nivel:"24",atributo:"24",nome:'Aerodactyl',tipo:'Pedra Voador',fraqueza:'Metálico, Água, Elétrico, Gelo e Pedra',num:'142'},
+                        {nivel:"24",atributo:"25",nome:'Dragonite',tipo:'Dragão Voador',fraqueza:'Fada, Dragão, Gelo e Pedra',num:'149'},
+                    ]
+                };
+                break;
+            case "Rival":
+                return {
+                    imglider: "https://cdn.bulbagarden.net/upload/1/1a/Lets_Go_Pikachu_Eevee_Blue.png",
+                    lider: "Rival",
+                    objetivo: "Derrotar todos os Pokémons para vencer, na seguinte ordem:",
+                    pokemons: [
+                        {nivel:"24",atributo:"25",nome:'Alakazam',tipo:'Psíquico',fraqueza:'Fantasma, Noturno e Inseto',num:'065'},
+                        {nivel:"25",atributo:"26",nome:'Pidgeot',tipo:'Voador Normal',fraqueza:'Elétrico, Gelo e Pedra',num:'018'},
+                        {nivel:"25",atributo:"26",nome:'Rhydon',tipo:'Pedra Terrestre',fraqueza:'Metálico, Gelo, Água, Lutador, Grama e Terrestre',num:'112'},
+                        {nivel:"25",atributo:"25",nome:'Gyarados',tipo:'Água Voador',fraqueza:'Elétrico e Pedra',num:'130'},
+                        {nivel:"26",atributo:"26",nome:'Arcanine',tipo:'Fogo',fraqueza:'Água, Terrestre e Pedra',num:'059'},
+                        {nivel:"26",atributo:"27",nome:'Exeggutor',tipo:'Grama Psíquico',fraqueza:'Fantasma, Fogo, Voador, Gelo, Noturno, Venenoso e Inseto',num:'103'},
+                    ]
+                };
+                break;
+                
         }
     }
 
@@ -608,34 +684,67 @@ $( document ).ready(function() {
         var ginasio = lideres($('#selectGinasio').val());
         var pokemons = exclusiveRandom(ginasio.pokemons,6);
 
-        $('.boxPokemon').prepend(
-        '<div class="boxNPC">'+
-          '<center><img style="vertical-align: bottom;" width=60 src='+ginasio.imginsignia+'> <img height=284 src='+ginasio.imglider+'></center>'+
-          '<br><strong>Líder: </strong>'+ginasio.lider+
-          '<br><strong>Insígnia: </strong>'+ginasio.insignia+
-          '<br><strong>Recompensa: </strong>'+ginasio.recompensa+
-          '<br><strong>Objetivo: </strong>'+ginasio.objetivo+
-          '<p><center><img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pokemons[0].num+'.png>'+
-          '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pokemons[1].num+'.png>'+
-          '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pokemons[2].num+'.png></center>'+
-          '<center><img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pokemons[3].num+'.png>'+
-          '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pokemons[4].num+'.png>'+
-          '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pokemons[5].num+'.png></center></p>'+
-          '<strong>Pokémon:</strong> '+pokemons[0].nome+' '+pokemons[0].nivel+' / '+pokemons[0].tipo+' / Atributo '+pokemons[0].atributo+' / Dano '+stress(3,3)+'<br>Fraquezas: '+pokemons[0].fraqueza+
-          '<br><br><strong>Pokémon:</strong> '+pokemons[1].nome+' '+pokemons[1].nivel+' / '+pokemons[1].tipo+' / Atributo '+pokemons[1].atributo+' / Dano '+stress(3,3)+'<br>Fraquezas: '+pokemons[1].fraqueza+
-          '<br><br><strong>Pokémon:</strong> '+pokemons[2].nome+' '+pokemons[2].nivel+' / '+pokemons[2].tipo+' / Atributo '+pokemons[2].atributo+' / Dano '+stress(3,3)+'<br>Fraquezas: '+pokemons[2].fraqueza+
-          '<br><br><strong>Pokémon:</strong> '+pokemons[3].nome+' '+pokemons[3].nivel+' / '+pokemons[3].tipo+' / Atributo '+pokemons[3].atributo+' / Dano '+stress(3,3)+'<br>Fraquezas: '+pokemons[3].fraqueza+
-          '<br><br><strong>Pokémon:</strong> '+pokemons[4].nome+' '+pokemons[4].nivel+' / '+pokemons[4].tipo+' / Atributo '+pokemons[4].atributo+' / Dano '+stress(3,3)+'<br>Fraquezas: '+pokemons[4].fraqueza+
-          '<br><br><strong>Pokémon:</strong> '+pokemons[5].nome+' '+pokemons[5].nivel+' / '+pokemons[5].tipo+' / Atributo '+pokemons[5].atributo+' / Dano '+stress(3,3)+'<br>Fraquezas: '+pokemons[5].fraqueza+
-        '</div><br>');
+        if((ginasio.lider == 'Lorelei') || (ginasio.lider == 'Bruno') || (ginasio.lider == 'Agatha') || (ginasio.lider == 'Lance') || (ginasio.lider == 'Rival')){
 
-        activateStressBox();
+            $('.boxPokemon').prepend(
+            '<div class="boxNPC">'+
+              '<center><img height=284 src='+ginasio.imglider+'></center>'+
+              '<br><strong>Oponente: </strong>'+ginasio.lider+
+              '<br><strong>Objetivo: </strong>'+ginasio.objetivo+
+              '<p><center><img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pokemons[0].num+'.png>'+
+              '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pokemons[1].num+'.png>'+
+              '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pokemons[2].num+'.png></center>'+
+              '<center><img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pokemons[3].num+'.png>'+
+              '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pokemons[4].num+'.png>'+
+              '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pokemons[5].num+'.png></center></p>'+
+              '<strong>Pokémon:</strong> '+pokemons[0].nome+' '+pokemons[0].nivel+' / '+pokemons[0].tipo+' / Atributo '+pokemons[0].atributo+' / Dano '+stress(3,3)+'<br>Fraquezas: '+pokemons[0].fraqueza+
+              '<br><br><strong>Pokémon:</strong> '+pokemons[1].nome+' '+pokemons[1].nivel+' / '+pokemons[1].tipo+' / Atributo '+pokemons[1].atributo+' / Dano '+stress(3,3)+'<br>Fraquezas: '+pokemons[1].fraqueza+
+              '<br><br><strong>Pokémon:</strong> '+pokemons[2].nome+' '+pokemons[2].nivel+' / '+pokemons[2].tipo+' / Atributo '+pokemons[2].atributo+' / Dano '+stress(3,3)+'<br>Fraquezas: '+pokemons[2].fraqueza+
+              '<br><br><strong>Pokémon:</strong> '+pokemons[3].nome+' '+pokemons[3].nivel+' / '+pokemons[3].tipo+' / Atributo '+pokemons[3].atributo+' / Dano '+stress(3,3)+'<br>Fraquezas: '+pokemons[3].fraqueza+
+              '<br><br><strong>Pokémon:</strong> '+pokemons[4].nome+' '+pokemons[4].nivel+' / '+pokemons[4].tipo+' / Atributo '+pokemons[4].atributo+' / Dano '+stress(3,3)+'<br>Fraquezas: '+pokemons[4].fraqueza+
+              '<br><br><strong>Pokémon:</strong> '+pokemons[5].nome+' '+pokemons[5].nivel+' / '+pokemons[5].tipo+' / Atributo '+pokemons[5].atributo+' / Dano '+stress(3,3)+'<br>Fraquezas: '+pokemons[5].fraqueza+
+            '</div><br>');
 
-        $('#musicaTocando').val('');
-        som.unload();
-        som = play('29 Battle! (Gym Leader Battle).mp3');
-        if($('#btnSom').val() == 'unmute') 
-            som.play();
+            activateStressBox();
+
+            $('#musicaTocando').val('');
+            som.unload();
+            som = play('54 Final Battle! (Rival).mp3');
+            if($('#btnSom').val() == 'unmute') 
+                som.play();
+
+        } else {
+
+            $('.boxPokemon').prepend(
+            '<div class="boxNPC">'+
+              '<center><img style="vertical-align: bottom;" width=60 src='+ginasio.imginsignia+'> <img height=284 src='+ginasio.imglider+'></center>'+
+              '<br><strong>Líder: </strong>'+ginasio.lider+
+              '<br><strong>Insígnia: </strong>'+ginasio.insignia+
+              '<br><strong>Recompensa: </strong>'+ginasio.recompensa+
+              '<br><strong>Objetivo: </strong>'+ginasio.objetivo+
+              '<p><center><img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pokemons[0].num+'.png>'+
+              '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pokemons[1].num+'.png>'+
+              '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pokemons[2].num+'.png></center>'+
+              '<center><img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pokemons[3].num+'.png>'+
+              '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pokemons[4].num+'.png>'+
+              '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pokemons[5].num+'.png></center></p>'+
+              '<strong>Pokémon:</strong> '+pokemons[0].nome+' '+pokemons[0].nivel+' / '+pokemons[0].tipo+' / Atributo '+pokemons[0].atributo+' / Dano '+stress(3,3)+'<br>Fraquezas: '+pokemons[0].fraqueza+
+              '<br><br><strong>Pokémon:</strong> '+pokemons[1].nome+' '+pokemons[1].nivel+' / '+pokemons[1].tipo+' / Atributo '+pokemons[1].atributo+' / Dano '+stress(3,3)+'<br>Fraquezas: '+pokemons[1].fraqueza+
+              '<br><br><strong>Pokémon:</strong> '+pokemons[2].nome+' '+pokemons[2].nivel+' / '+pokemons[2].tipo+' / Atributo '+pokemons[2].atributo+' / Dano '+stress(3,3)+'<br>Fraquezas: '+pokemons[2].fraqueza+
+              '<br><br><strong>Pokémon:</strong> '+pokemons[3].nome+' '+pokemons[3].nivel+' / '+pokemons[3].tipo+' / Atributo '+pokemons[3].atributo+' / Dano '+stress(3,3)+'<br>Fraquezas: '+pokemons[3].fraqueza+
+              '<br><br><strong>Pokémon:</strong> '+pokemons[4].nome+' '+pokemons[4].nivel+' / '+pokemons[4].tipo+' / Atributo '+pokemons[4].atributo+' / Dano '+stress(3,3)+'<br>Fraquezas: '+pokemons[4].fraqueza+
+              '<br><br><strong>Pokémon:</strong> '+pokemons[5].nome+' '+pokemons[5].nivel+' / '+pokemons[5].tipo+' / Atributo '+pokemons[5].atributo+' / Dano '+stress(3,3)+'<br>Fraquezas: '+pokemons[5].fraqueza+
+            '</div><br>');
+
+            activateStressBox();
+
+            $('#musicaTocando').val('');
+            som.unload();
+            som = play('29 Battle! (Gym Leader Battle).mp3');
+            if($('#btnSom').val() == 'unmute') 
+                som.play();
+
+        }
 
     });
 
