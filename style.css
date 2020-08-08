@@ -4,6 +4,15 @@ nav a{text-decoration: none;}
 label {cursor: pointer;}
 label:hover {color: #009688;}
 
+.inputDice{
+  width: 45px;
+  margin-left: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+  height: 34px;
+  padding-top: 0px;
+}
+
 .inputText{
   border: none;
   width: 400px;
