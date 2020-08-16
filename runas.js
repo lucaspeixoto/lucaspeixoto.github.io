@@ -104,7 +104,87 @@ $( document ).ready(function() {
     }
 
     function runa() {
-        return ['ᚠ fé','ᚼ hagall','ᛒ bjarkan','ᚢ úr','ᚾ nauðr','ᛘ maðr','ᚦ ðurs','ᛁ isa','ᛚ lögr','ᚭ óss','ᛅ ár','ᛦ yr','ᚱ reið','ᛋ sól','ᚴ kaun','ᛏ týr'];
+        return [{
+                nome: 'ᚠ fé',
+                entidade: 'Freyr',
+                efeito: 'Riqueza, abundância, fertilidade, sorte',
+                malogro: 'Pobreza, escassez, ruína, azar'
+            },{
+                nome: 'ᚢ úr',
+                entidade: 'Móði e Magni',
+                efeito: 'Força física, terra, energia, saúde',
+                malogro: 'Perda, doença, fraqueza, passividade'
+            },{
+                nome: 'ᚦ ðurs',
+                entidade: 'Loki',
+                efeito: 'Gigante, poderoso, fogo, temperamento explosivo',
+                malogro: 'Egoísmo, conflito, dificuldades, riscos'
+            },{
+                nome: 'ᚭ óss',
+                entidade: 'Oðinn',
+                efeito: 'Deuses, intuição, comunicação, inspiração',
+                malogro: 'Intrigas, mentiras, fofocas, difamação'
+            },{
+                nome: 'ᚱ reið',
+                entidade: 'Hermóðr',
+                efeito: 'Deslocamento, jornada, mudança, viagem',
+                malogro: 'Sequestro, infortúnios, paralisia, estagnação'
+            },{
+                nome: 'ᚴ kaun',
+                entidade: 'Frigg',
+                efeito: 'Revelação, imaginação, conhecimento, paixão',
+                malogro: 'Desgraça, infelicidade, ódio, ignorância'
+            },{
+                nome: 'ᚼ hagall',
+                entidade: 'Njörðr',
+                efeito: 'Fúria da natureza, ar, tempestade, nevasca',
+                malogro: 'Recuo, rendição, seca, alagamento'
+            },{
+                nome: 'ᚾ nauðr',
+                entidade: 'Hel',
+                efeito: 'Sofrimento, dificuldade, pobreza, tormento',
+                malogro: 'Aprisionamento, morte, submissão, inanição'
+            },{
+                nome: 'ᛁ isa',
+                entidade: 'Skaði',
+                efeito: 'Inverno, desafio, gelo, paciência',
+                malogro: 'Estagnação, bloqueios, aflição, inflexibilidade'
+            },{
+                nome: 'ᛅ ár',
+                entidade: 'Thor',
+                efeito: 'Colheita, fartura, paz, prosperidade',
+                malogro: 'Fome, guerra, declínio, miséria'
+            },{
+                nome: 'ᛋ sól',
+                entidade: 'Heimdallr',
+                efeito: 'Sol, vitória, honra, cura',
+                malogro: 'Frio, desonra, derrota, definhar'
+            },{
+                nome: 'ᛏ týr',
+                entidade: 'Týr',
+                efeito: 'Justiça, coragem, disciplina, liderança',
+                malogro: 'Traição, derrota, vingança, covardia'
+            },{
+                nome: 'ᛒ bjarkan',
+                entidade: 'Freya',
+                efeito: 'Nascimento, casamento, recomeço, crescimento',
+                malogro: 'Morte, moléstia, fim abrupto, doença'
+            },{
+                nome: 'ᛘ maðr',
+                entidade: 'Forseti',
+                efeito: 'Humanidade, amizade, família, ordem social ',
+                malogro: 'Solidão, egoísmo, falsidade, inimigos'
+            },{
+                nome: 'ᛚ lögr',
+                entidade: 'Bragi',
+                efeito: 'Emoções, sentimentos, sonhos, água',
+                malogro: 'Pesadelos, medo, náufrago, confusão'
+            },{
+                nome: 'ᛦ yr',
+                entidade: 'Ullr',
+                efeito: 'Animais, sustento, proteção, conforto',
+                malogro: 'Angústia, desânimo, fadiga, vulnerabilidade'
+            }];
     }
 
     function rolarDadosd6(){
@@ -355,8 +435,8 @@ $( document ).ready(function() {
 
         $('.boxRonin').prepend(
         '<div class="boxNPC">'+
-          '<center><h4>'+nome(sexo)+', '+apelido(sexo)+'</h4></center>'+
-          '<center><p><i>'+aparencia()+'</i></p></center>'+
+          '<center><h4>'+nome(sexo)+', '+apelido(sexo)+'</h4>'+
+          '<p><i>'+aparencia()+'</i></p></center>'+
           '<div><strong>Origem:</strong> '+xama.origem+'</div>'+
           '<div><strong>Personalidade:</strong> '+xama.personalidade+'</div>'+
           '<div><strong>Animal totêmico:</strong> '+xama.animal+'</div>'+
@@ -370,10 +450,10 @@ $( document ).ready(function() {
           '<div class="textIndent">Galdr '+nbsp(2)+stress(xama.galdr,xama.galdr)+'</div>'+
           '<div class="textIndent">Völva '+nbsp(2)+stress(xama.volva,xama.volva)+'</div></div><br>'+
           '<div><strong>Runas</strong>'+
-          '<div class="textIndent">'+runas[0]+'</div>'+
-          '<div class="textIndent">'+runas[1]+'</div>'+
-          '<div class="textIndent">'+runas[2]+'</div>'+
-          '<div class="textIndent">'+runas[3]+'</div></div><br>'+
+          '<div class="textIndent">'+runas[0].nome+'</div>'+
+          '<div class="textIndent">'+runas[1].nome+'</div>'+
+          '<div class="textIndent">'+runas[2].nome+'</div>'+
+          '<div class="textIndent">'+runas[3].nome+'</div></div><br>'+
         '</div>');
 
     });
@@ -384,7 +464,15 @@ $( document ).ready(function() {
 
         $('.boxRonin').prepend(
         '<div class="boxNPC">'+
-          '<strong>Urd: </strong>'+random(urd())+'<br>Runas: '+runas[0]+' '+runas[1]+
+          '<strong>Urd: </strong>'+random(urd())+'<br>'+
+          '<div><h4>'+runas[0].nome+'</h4></div>'+
+          '<div><strong>Entidade: </strong>'+runas[0].entidade+'</div>'+
+          '<div><strong>Efeito: </strong>'+runas[0].efeito+'</div>'+
+          '<div><strong>Malogro: </strong>'+runas[0].malogro+'</div>'+
+          '<div><h4>'+runas[1].nome+'</h4></div>'+
+          '<div><strong>Entidade: </strong>'+runas[1].entidade+'</div>'+
+          '<div><strong>Efeito: </strong>'+runas[1].efeito+'</div>'+
+          '<div><strong>Malogro: </strong>'+runas[1].malogro+'</div>'+
         '</div><br>');
 
     });
@@ -395,7 +483,15 @@ $( document ).ready(function() {
 
         $('.boxRonin').prepend(
         '<div class="boxNPC">'+
-          '<strong>Verdandi: </strong>'+verdandi()+'<br>Runas: '+runas[0]+' '+runas[1]+
+          '<strong>Verdandi: </strong>'+verdandi()+'<br>'+
+          '<div><h4>'+runas[0].nome+'</h4></div>'+
+          '<div><strong>Entidade: </strong>'+runas[0].entidade+'</div>'+
+          '<div><strong>Efeito: </strong>'+runas[0].efeito+'</div>'+
+          '<div><strong>Malogro: </strong>'+runas[0].malogro+'</div>'+
+          '<div><h4>'+runas[1].nome+'</h4></div>'+
+          '<div><strong>Entidade: </strong>'+runas[1].entidade+'</div>'+
+          '<div><strong>Efeito: </strong>'+runas[1].efeito+'</div>'+
+          '<div><strong>Malogro: </strong>'+runas[1].malogro+'</div>'+
         '</div><br>');
 
     });
