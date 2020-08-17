@@ -78,7 +78,7 @@ $( document ).ready(function() {
             'Você encontra um anão dvergar que diz saber a localização da espada mítica Tyrfing. Você pode criar um presságio para obter a espada, porém ela é amaldiçoada. Ela torna o seu portador ganancioso, perverso e assassino.',
             'Você chega em um bosque onde habita um landvættir, um espírito da natureza. Caso você lhe dê algo especial de presente ele irá lhe fazer um favor. Explore um presságio deste território sem gastar uma ação.',
             'Você encontra uma pedra pintada, estela, com cenas da morte de um rei. Cria um presságio para descobrir mais sobre esta estela e o seu significado.',
-            'Você encontra uma caverna onde habita um tröll. Se quiser, crie um presságio para usar o tröll contra os seus inimigos.',
+            'Você encontra uma caverna onde habita um tröll. Se quiser, conjure um feitiço para usar o tröll contra os seus inimigos.',
         ]);
     };
 
@@ -148,7 +148,7 @@ $( document ).ready(function() {
                 nome: 'ᛁ isa',
                 entidade: 'Skaði',
                 efeito: 'Inverno, desafio, gelo, paciência',
-                malogro: 'Estagnação, bloqueios, aflição, inflexibilidade'
+                malogro: 'Ansiedade, bloqueios, aflição, inflexibilidade'
             },{
                 nome: 'ᛅ ár',
                 entidade: 'Thor',
@@ -413,7 +413,7 @@ $( document ).ready(function() {
 
         $('.boxRonin').prepend(
         '<div class="boxNPC">'+
-          '<strong>Encontro Neutro: </strong>'+encontroNeutro()+
+          '<strong>Evento Neutro: </strong>'+encontroNeutro()+
         '</div><br>');
 
     });
@@ -422,7 +422,7 @@ $( document ).ready(function() {
 
         $('.boxRonin').prepend(
         '<div class="boxNPC">'+
-          '<strong>Encontro Hostil: </strong>'+encontroHostil()+
+          '<strong>Evento Hostil: </strong>'+encontroHostil()+
         '</div><br>');
 
     });
