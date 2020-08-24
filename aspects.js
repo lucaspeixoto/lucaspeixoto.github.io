@@ -23,7 +23,7 @@ function aspects(type) {
             break;
 
         case "ambition":
-            return ['Estabelecer meu próprio feudo','Encontrar o santo graal','Ter minhas aventuras contadas nas canções','Descobrir o segredo arcano de Fausten','Chegar às terras livres','Comandar meu próprio exército','Libertar o povo da opressão','Acabar com a escravidão','Conquistar grandes tesouros','Dar exemplo aos meus amigos','Derrotar meu arqui-inimigo','Ser o maior aventureiro de todos','Ser lembrado para todo o sempre','Realizar grandes feitos','Ser o mais famoso de todos','Possuir muitos itens mágicos','Ser conhecido por todo o mundo','Comandar reinos'];
+            return ['Estabelecer meu próprio feudo','Encontrar o santo graal','Ter minhas aventuras contadas nas canções','Descobrir o segredo arcano de Fausten','Chegar às terras livres','Comandar meu próprio exército','Libertar o povo da opressão','Acabar com a escravidão','Conquistar grandes tesouros','Dar exemplo aos meus amigos','Derrotar meu arqui-inimigo','Ser o maior aventureiro de todos','Ser lembrado para todo o sempre','Realizar grandes feitos','Ser o mais famoso de todos','Possuir muitos itens mágicos','Ser conhecido por todo o mundo','Comandar reinos','Obter muitas riquezas','Tudo o que eu quero são itens mágicos','Trazer paz ao mundo','Trazer guerra ao mundo','Tirar a dor do mundo','Que ninguém mais sofra','Obter todos os conhecimentos secretos','Livrar todos os animais','Proteger a natureza ao meu redor','Ajudar as pessoas no que puder','Proteger os fracos e oprimidos','Ser mundialmente famoso','Ser cada vez melhor no que faço','Buscar a paz interior'];
             break;
 
         case "carrot":
