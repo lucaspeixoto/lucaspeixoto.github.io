@@ -34,23 +34,23 @@ function classes(type='') {
         case "fighter":
             return {
                 
-                aspects: [],
-                stunts: [],
-                tradition: [],
-                '': {
-                    skills: [],
-                    approach: [],
-                    stunts: []
+                aspects: ['Guerreiro Campeão', 'Guerreiro Cavaleiro Arcano', 'Guerreiro Mestre de Batalha'],
+                stunts: ['<strong>Retomar o fôlego:</strong> você possui estamina extra durante um conflito. Uma vez por cena, no seu turno, você pode limpar até 3 caixas de estresse físico.','<strong>Surto de ação:</strong> o guerreiro ganha uma nova barra de estresse chamada Determinação em Combate, ela possui 3 caixas de valor 1 e pode ser utilizada somente para Esforços Extras em testes que envolvam Atletismo, Lutar, Vigor ou Vontade.','<strong>Ataques múltiplos:</strong> o guerreiro é capaz de realizar um ataque contra todos os inimigos de uma mesma zona, se usar Atirar, ou todos os inimigos adjacentes, se usar Lutar. Se optar por fazê-lo, deve realizar uma rolagem somente, com -2. As defesas são feitas individualmente por cada alvo.','<strong>Indomável:</strong> o guerreiro recebe +2 em rolagens para evitar receber qualquer condição.','<strong>Estilos de luta:</strong> o guerreiro recebe efeitos diversos de acordo com a arma empunhada. Arco: +2 em Ataques com Atirar. Armas de duas mãos: em um sucesso com estilo você causa 1 de dano a mais. Duas armas: em um sucesso com estilo você pode reduzir o dano em 1 para realizar um outro ataque contra o mesmo alvo.','<strong>Foco em defesa:</strong> o guerreiro recebe efeitos diversos de acordo com o foco, somente um foco pode ser utilizado ao longo de uma cena. Escudo: ao obter sucesso com estilo em um jogada de Defesa, você concede +2 de defesa para um aliado adjacente, até o seu próximo turno. Armadura: você tem Armadura:1. Duelismo: ao empunhar uma arma em uma mão e nada na outra, você recebe +2 para se Defender com Lutar.'],
+                tradition: [''],
+                'Guerreiro Campeão': {
+                    skills: ['Atletismo','Lutar','Vigor','Vontade','Percepção'],
+                    approach: ['Ágil'],
+                    stunts: ['<strong>Crítico aprimorado:</strong> uma rolagem de Atacar com Lutar ou Atirar se torna sucesso com estilo com somente duas tensões de diferença, ao invés de três.','<strong>Atletismo extraordinário:</strong> você recebe +1 em qualquer rolagem de Atletismo, Vigor ou Vontade.','<strong>Sobrevivente:</strong> o guerreiro campeão limpa uma caixa de estresse, físico ou mental, a cada turno.',]
                 },
-                '': {
-                    skills: [],
-                    approach: [],
-                    stunts: []
+                'Guerreiro Cavaleiro Arcano': {
+                    skills: ['Lutar','Ocultismo','Vigor','Provocar','Vontade'],
+                    approach: ['Poderoso'],
+                    stunts: ['<strong>Vínculo com arma:</strong> você cria um vínculo mágico com a sua arma. Você não pode ser desarmado e, a qualquer momento em que a arma esteja distante de você, um comando mágico mental teletransporta a arma para a sua mão.','<strong>Golpe místico:</strong> uma vez por sessão, a arma que você empunhar é considerada Arma:2 e para todos os efeitos pode ser considerada uma arma mágica. O efeito dura uma cena.','<strong>Investida arcana:</strong> no seu turno, você é capaz de se teletransportar para qualquer local da sua zona ou de uma zona adjacente, isso não conta como a sua ação.']
                 },
-                '': {
-                    skills: [],
-                    approach: [],
-                    stunts: []
+                'Guerreiro Mestre de Batalha': {
+                    skills: ['Lutar','Provocar','Vigor','Vontade','Percepção'],
+                    approach: ['Esperto'],
+                    stunts: ['<strong>Conheça seu inimigo:</strong> ao custo de 1 PD você pode descobrir um aspecto de um inimigo livremente, considere a rolagem como um sucesso com estilo.','<strong>Inspirar aliados:</strong> uma vez por sessão você pode dar um grito de guerra para inspirar os seus aliados. Durante uma cena, eles recebem +1 em testes de Defesa contra Lutar e Atirar.','<strong>Golpe do comandante:</strong> ao obter sucesso com estilo em um Ataque com Lutar, você pode reduzir o dano em 1 para conceder um ataque extra a qualquer aliado, instantâneamente. O ataque deve ser feito contra o mesmo inimigo.']
                 }
             }
             break;
@@ -58,23 +58,23 @@ function classes(type='') {
         case "sorcerer":
             return {
                 
-                aspects: [],
-                stunts: [],
-                tradition: [],
-                '': {
-                    skills: [],
-                    approach: [],
-                    stunts: []
+                aspects: ['Feiticeiro de Linhagem Dracônica', 'Feiticeiro da Magia Selvagem', 'Feiticeiro dos Planos'],
+                stunts: ['<strong>Magia aumentada:</strong> quando o feiticeiro conjura uma magia que exige rolagem de Defesa do seu alvo, este receberá -2 em sua rolagem. O efeito se aplica somente uma vez por criatura, por cena.','<strong>Magia cuidadosa:</strong> quando o feiticeiro conjura uma magia que atinge toda uma zona, ele pode gastar 1 PD para que alvos escolhidos por ele não sejam atingidos, como aliados, por exemplo.','<strong>Magia distante:</strong> quando o feiticeiro conjura uma magia cujo alvo precisa ser tocado, ele pode escolher como alvo qualquer criatura de sua zona ou adjacentes.','<strong>Magia duplicada:</strong> quando o feiticeiro conjura uma magia que tenha somente uma única criatura como alvo, ele pode gastar 1 PD para atingir uma criatura extra.','<strong>Magia potencializada:</strong> quando o feiticeiro conjura uma magia, ele pode gastar 1 PD e escolher não rolar os dados, ao invés disso ele considera a rolagem como Boa (+3).','<strong>Magia sutil:</strong> ao conjurar uma magia, você pode gastar 1 PD e realizá-la sem fazer qualquer gesto ou proferir palavras mágicas. É impossível perceber que você conjurou a magia.'],
+                tradition: ['Arcana'],
+                'Feiticeiro de Linhagem Dracônica': {
+                    skills: ['Enganar','Magia','Provocar','Vontade','Vigor'],
+                    approach: ['Estiloso'],
+                    stunts: ['<strong>Ancestral dracônico:</strong> você é capaz de ler, escrever e falar o dracônico. Além disso, recebe +2 em teste de Comunicação e Empatia quando estiver interagindo com dragões.','<strong>Afinidade elemental:</strong> ao conjurar uma magia do mesmo elemento de seu ancestral dracônico, você recebe +2 nas rolagens. Caso seja alvo de uma magia do mesmo tipo, você recebe +2 para se Defender.','<strong>Resiliência dracônica:</strong> você recebe Armadura:2 contra danos do tipo do seu dragão ancestral, conforme o tipo de dragão. Além disso, você recebe uma caixa de estresse físico e mental a mais.']
                 },
-                '': {
-                    skills: [],
-                    approach: [],
-                    stunts: []
+                'Feiticeiro da Magia Selvagem': {
+                    skills: ['Animais','Magia','Vontade','Atletismo','Percepção'],
+                    approach: ['Poderoso'],
+                    stunts: ['<strong>Primal:</strong> o feiticeiro da magia selvagem é capaz de lançar magias da tradição primal e recebe +1 nela.','<strong>Surto de magia:</strong> ao obter sucesso com estilo com Magia, você pode gastar 1 PD para que ocorra um efeito extraordinário. Escolha a seguir: a magia atinge uma zona extra, a magia atinge um alvo extra, a magia irá durar toda a cena ou magia irá causar/prevenir o dobro de tensões.','<strong>Dobrar a sorte:</strong> uma vez por cena, você pode aplicar uma penalidade de -2 nas rolagens de um inimigo que você possa ver, ativar este efeito não conta como uma ação e ele dura até o seu próximo turno.']
                 },
-                '': {
-                    skills: [],
-                    approach: [],
-                    stunts: []
+                'Feiticeiro dos Planos': {
+                    skills: ['Magia','Ocultismo','Vontade','Provocar','Comunicação'],
+                    approach: ['Esperto'],
+                    stunts: ['<strong>Viajante dos planos:</strong> o feiticeiro dos planos é capaz de lançar magias da tradição ocultista e recebe +1 nela.','<strong>Piscar:</strong> o feiticeiro dos planos é capaz de acessar por uma fração de segundo um outro plano qualquer. Ele recebe +2 para se Defender com Atletismo contra ataques físicos ou mágicos.','<strong>Convocar criatura extraplanar:</strong> ao custo de 1 PD o feiticeiro dos planos é capaz de conjurar uma criatura de outro plano, à sua escolha. A criatura permanece no plano somente por uma cena. A sua reação ao feiticeiro irá depender do plano em que ela habita. De maneira geral, planos superiores trazem criaturas aliadas, planos elementais trazem criaturas neutras e planos inferiores trazem criaturas hostis. Para qualquer outro caso decida a atitude da criatura com a narradora.']
                 }
             }
             break;
@@ -82,23 +82,43 @@ function classes(type='') {
         case "cleric":
             return {
                 
-                aspects: [],
-                stunts: [],
-                tradition: [],
-                '': {
-                    skills: [],
-                    approach: [],
-                    stunts: []
+                aspects: ['Clérigo do Conhecimento', 'Clérigo da Enganação', 'Clérigo da Guerra', 'Clérigo da Luz', 'Clérigo da Natureza', 'Clérigo da Tempestade', 'Clérigo da Vida'],
+                stunts: ['<strong>Truques mágicos:</strong> o clérigo sabe realizar três truques mágicos simples à sua escolha. Ele conjura esses truques livremente, sem limitações de vezes e sem falhar. Alguns exemplos de truques são: mãos mágicas, luz, prestidigitação, pequenas ilusões etc.','<strong>Expulsar mortos-vivos:</strong> uma vez por cena o clérigo invoca os seus poderes divinos para expulsar os mortos-vivos que estejam em sua zona. Cada um deles fará um teste de Vontade contra uma dificuldade Ótima (+4), em caso de empate o morto-vivo recebe a Condição Fascinado, em caso de falha ele recebe a Condição Amedrontado e sua única ação possível será se afastar do clérigo para uma zona adjacente.','<strong>Intervenção divina:</strong> uma vez por sessão o clérigo pode pedir que a sua divindade aja em seu favor. Faça uma rolagem, em caso de resultado positivo você obteve sucesso e um aspecto é criado em seu favor. Em caso de empate ou falha nada acontece. É possível gastar 1 PD para somar +2 ao resultado.'],
+                tradition: ['Divina'],
+                'Clérigo do Conhecimento': {
+                    skills: ['Acadêmico','Magia','Ocultismo','Vontade','Vigor'],
+                    approach: ['Esperto'],
+                    stunts: ['<strong>Conhecimento das eras:</strong> uma vez por sessão você recebe +2 em rolagens da perícia que escolher. O efeito dura uma cena.','<strong>Ler pensamentos:</strong> você pode ler os pensamentos de uma criatura em sua zona. Faça um teste resistido de Vontade. Em caso de sucesso você pode ler os pensamentos da criatura, em caso de empate você lê somente pensamentos superficiais. Em caso de falha você não lê a mente da criatura e ela percebe a sua intenção.','<strong>Visões do passado:</strong> uma vez por sessão você pode obter conhecimentos sobre um objeto ou um local. Você consegue informações sobre o passado recente do objeto ou local, que teve contato com o objeto ou esteve no local, emoções que estiveram presentes e outras informações que a narrador julgar pertinente. É possível gastar 1 PD para obter as mesmas informações de uma pessoa que tocou o objeto ou esteve no local.']
                 },
-                '': {
-                    skills: [],
-                    approach: [],
-                    stunts: []
+                'Clérigo da Enganação': {
+                    skills: ['Enganar','Magia','Vontade','Furtividade','Roubo'],
+                    approach: ['Sorrateiro'],
+                    stunts: ['<strong>Benção do trapaceiro:</strong> você recebe +2 para Criar Vantagem com Furtividade. Caso queira, você pode passar esse bônus para um aliado pelo tempo que desejar.','<strong>Déjà vu:</strong> uma vez por sessão você pode criar uma ilusão de si mesmo na zona em que está. Você pode controlar os movimentos da ilusão e até mesmo conjurar magias por ela. O efeito dura uma cena, até que você a desfaça ou a ilusão sofra um ataque físico.','<strong>Manto das sombras:</strong> uma vez por cena você pode se tornar invisível. O efeito dura até o seu próximo turno.']
                 },
-                '': {
-                    skills: [],
-                    approach: [],
-                    stunts: []
+                'Clérigo da Guerra': {
+                    skills: ['Lutar','Magia','Vigor','Vontade','Atletismo'],
+                    approach: ['Poderoso'],
+                    stunts: ['<strong>Sacerdote da guerra:</strong> ao custo de 1 PD, ao realizar uma ação de Atacar com Lutar, você pode atacar o mesmo alvo novamente, com um bônus de +2 na rolagem.','<strong>Ataque dirigido:</strong> uma vez por sessão você invoca os poderes de sua divindade e recebe +2 para Atacar com Lutar, o efeito dura uma cena.','<strong>Avatar da batalha:</strong> uma vez por sessão você recebe a proteção de sua divindade e recebe Armadura:2 contra estresse físico, o efeito dura uma cena.']
+                },
+                'Clérigo da Luz': {
+                    skills: ['Percepção','Magia','Vontade','Ocultismo','Empatia'],
+                    approach: ['Estiloso'],
+                    stunts: ['<strong>Radiação do amanhecer:</strong> uma vez por cena o clérigo da luz pode criar uma explosão de luz em uma zona. A escuridão mágica do local é dissipada e inimigos que possam ver a explosão recebem a condição Fascinado por uma rodada.','<strong>Labareda protetora:</strong> uma vez por cena o clérigo da luz pode invocar uma barreira de luz que ficará estacionada em um local à sua escolha, possui o tamanho necessário para dividir a zona ao meio. A barreira de luz não é física e não causa dano, porém a visibilidade através de um dos lados é obstruída completamente com uma forte emanação de luz. Do lado do clérigo é possível enxergar normalmente através da barreira.','<strong>Coroa de luz:</strong> o clérigo da luz emana uma luz forte constantemente. Ele pode ativar e desativar o efeito quando desejar. A luz preenche toda a sua zona e concede +2 em rolagens de Magia que envolvam fogo ou luz.']
+                },
+                'Clérigo da Natureza': {
+                    skills: ['Animais','Empatia','Magia','Atletismo','Vontade'],
+                    approach: ['Ágil'],
+                    stunts: ['<strong>Enfeitiçar animais e plantas:</strong> uma vez por cena o clérigo da natureza invoca os seus poderes divinos para fascinar plantas vivas e animais que estejam em sua zona. Cada um deles fará um teste de Vontade contra uma dificuldade Ótima (+4), em caso de empate ou falha a criatura recebe a Condição Fascinado.','<strong>Amortecer elementos:</strong> o clérigo da natureza possui Armadura:2 contra ataques elementais. Quando quiser, ele pode tocar uma criatura voluntária e passar o efeito para ela, pela duração que desejar.','<strong>Senhor da natureza:</strong> o clérigo da natureza pode convocar um animal de sua região que irão lhe ajudar durante uma cena, da melhor maneira que puder. O tipo de animal que aparece depende do habitat em que o clérigo estiver. O animal tem uma ficha como em FAE e tem ações e turnos próprios.']
+                },
+                'Clérigo da Tempestade': {
+                    skills: ['Lutar','Magia','Vontade','Ocultismo','Provocar'],
+                    approach: ['Poderoso'],
+                    stunts: ['<strong>Ira da tormenta:</strong> ao obter sucesso com estilo em uma rolagem de defesa contra Lutar, o clérigo da tempestade pode retornar o ataque ao seu inimigo na forma de um choque elétrico. O dano causado é igual ao nível da perícia Magia do clérigo.','<strong>Golpe de relâmpago:</strong> uma vez por sessão o clérigo da tempestade pode fazer com o que o seu ataque cause danos elétricos. Durante uma cena ele recebe Arma:2.','<strong>Filho da tempestade:</strong> o clérigo da tempestade pode voar, desde que não esteja no subterrâneo ou em um local fechado.']
+                },
+                'Clérigo da Vida': {
+                    skills: ['Magia','Vigor','Vontade','Comunicação','Empatia'],
+                    approach: ['Cuidadoso'],
+                    stunts: ['<strong>Discípulo da vida:</strong> todas as magias conjuradas pelo clérigo da vida que tenham o efeito de limpar caixas de estresse, remover condições ou curar consequências recebem +2 na rolagem.','<strong>Preservar a vida:</strong> o clérigo invoca o poder de sua divindade para curar os seus aliados. Uma vez por cena ele pode limpar até 6 caixas de estresse, distribuídos da forma que desejar entre todos os aliados que estiverem em sua zona.','<strong>Curandeiro abençoado:</strong> ao realizar qualquer Magia que tenha como efeito curar alguma criatura ou remover uma condição ou consequência dela, o mesmo efeito se aplica à você.']
                 }
             }
             break;
@@ -106,23 +126,23 @@ function classes(type='') {
         case "warlock":
             return {
                 
-                aspects: [],
-                stunts: [],
-                tradition: [],
-                '': {
-                    skills: [],
-                    approach: [],
-                    stunts: []
+                aspects: ['Bruxo da Arquifada', 'Bruxo Corruptor', 'Bruxo do Grande Antigo'],
+                stunts: ['<strong>Rajada mística:</strong> o bruxo é capaz de realizar ataques com Atirar em alvos da mesma zona. Ele dispara um prójetil mágico em seu alvo. Em um sucesso com estilo ele pode reduzir as tensões em 1 para atingir um alvo extra, uma nova rolagem deve ser feita para o alvo.','<strong>Pacto da corrente:</strong> o bruxo adquire um familiar, uma criatura mística que irá obedecê-lo e também combater ao lado dele. O bruxo também pode conjurar magias simples através do familiar, a critério da narradora. O familiar tem uma ficha como em FAE e tem ações e turnos próprios. Entre as opções de familiar estão o diabrete, pseudodragão, quasit e sprite.','<strong>Pacto da lâmina:</strong> de forma livre, o bruxo é capaz de materializar em suas mãos uma arma corpo-a-corpo no formato que desejar. Esta arma é considerada mágica para todos os efeitos. A arma desaparece se estiver a uma zona ou mais de distância do bruxo. Quando quiser, o bruxo pode fazer com que a arma de desmaterialize.','<strong>Pacto do tomo:</strong> o bruxo possui um grimório amaldiçoado que lhe garante poderes extras de conjuração. Uma vez por sessão o bruxo pode lançar uma magia da tradição arcana, uma da tradição divina e uma da tradição primal.','<strong>Poder profano:</strong> ao conjurar uma magia, uma vez por cena, o bruxo pode marcar quantas caixas de estresse quiser para adicionar à sua rolagem o valor igual a de caixas marcadas.','<strong>Invocações místicas:</strong> o bruxo é capaz de acessar conhecimentos antigos e ocultos, alterando a realidade ao seu redor para obter vantagem para si próprio. Escolha duas invocações místicas da lista abaixo, você pode utilizar cada uma delas uma vez por sessão. A cada fim de sessão você pode alterar qualquer uma delas ou ambas por outras invocações da lista.'],
+                tradition: ['Ocultista'],
+                'Bruxo da Arquifada': {
+                    skills: ['Enganar','Magia','Provocar','Vontade','Ocultismo'],
+                    approach: ['Estiloso'],
+                    stunts: ['<strong>Presença feérica:</strong> o seu patrono lhe concede uma habilidade de sedução e terror. Uma vez por sessão, o bruxo da arquifada recebe +2 em Criar Vantagem com Provocar para marcar a Condição Fascinado ou Amedrontado em todos os inimigos de sua zona, é feito um teste de Defender com Vontade para impedir o efeito.','<strong>Névoa de fuga:</strong> o primeiro dano que você recebe durante um conflito pode ser ignorado e você desaparece como névoa momentâneamente. Você fica com o aspecto invisível até o seu próximo turno e pode reaparecer em qualquer lugar dentro de sua zona. Este efeito pode ser utilizado uma vez por cena.','<strong>Defesa sedutora:</strong> quando uma magia é conjurada contra você com o intuito de enfeitiçá-lo, seja marcando alguma condição mental ou impondo um aspecto, você pode reverter o efeito para o conjurador. Um teste resistido de Magia deve ser feito. Além disso, você recebe +2 em rolagens de Defesa para impedir ter qualquer condição mental marcada.']
                 },
-                '': {
-                    skills: [],
-                    approach: [],
-                    stunts: []
+                'Bruxo Corruptor': {
+                    skills: ['Atirar','Ocultismo','Vigor','Vontade','Magia'],
+                    approach: ['Poderoso'],
+                    stunts: ['<strong>Benção do obscuro:</strong> ao realizar uma ação de Atacar ou Atirar e obter sucesso com estilo, o bruxo do obscuro pode limpar uma de suas caixas de estresse.','<strong>Sorte obscura:</strong> após qualquer rolagem de dados, uma vez por sessão, o bruxo corruptor pode adicionar +1d6 ao resultado.','<strong>Resistência demoníaca:</strong> no início de toda cena o bruxo corruptor deve escolher entre danos físicos e mentais, ele recebe Armadura:1 durante esta cena com o tipo de dano escolhido.']
                 },
-                '': {
-                    skills: [],
-                    approach: [],
-                    stunts: []
+                'Bruxo do Grande Antigo': {
+                    skills: ['Magia','Ocultismo','Vontade','Acadêmico','Provocar'],
+                    approach: ['Esperto'],
+                    stunts: ['<strong>Despertar a mente:</strong> você pode se comunicar telepaticamente com qualquer criatura inteligente que esteja em sua zona, vocês não precisam partilhar de um idioma em comum para tal e conseguem se entender mesmo que de maneira simplória.','<strong>Proteção entrópica:</strong> ao defender com sucesso o ataque de um inimigo, você receberá +2 para atacá-lo com Lutar em seu próximo turno.','<strong>Escudo de pensamentos:</strong> os seus pensamentos não podem ser lidos em nenhuma hipótese, a não ser que você permita. Além disso, você recebe +2 em rolagens de Defesa para impedir ter qualquer condição mental marcada.']
                 }
             }
             break;
@@ -130,23 +150,23 @@ function classes(type='') {
         case "bard":
             return {
                 
-                aspects: [],
-                stunts: [],
-                tradition: [],
-                '': {
-                    skills: [],
-                    approach: [],
-                    stunts: []
+                aspects: ['Bardo do Colégio do Conhecimento', 'Bardo do Colégio da Bravura', 'Bardo do Colégio das Artes'],
+                stunts: ['<strong>Conhecimento do bardo:</strong> você recebe +2 em testes de Superar e Criar Vantagem com Acadêmico e Ocultismo, além disso, pode se lembrar de qualquer informação sobre qualquer assunto.','<strong>Truques mágicos:</strong> o bardo sabe realizar dois truques mágicos simples à sua escolha. Ele conjura esses truques livremente, sem limitações de vezes e sem falhar. Alguns exemplos de truques são: mãos mágicas, luz, prestidigitação, pequenas ilusões etc.','<strong>Inspiração de bardo:</strong> ao custo de 1 PD, o bardo pode tocar o seu instrumento para inspirar os seus aliados e a si mesmo. Até o final da cena, no momento em que desejar, o bardo e seus aliados poderão realizar qualquer rolagem com dois dados extras, escolhendo os melhores resultados. É possível jogar os dois dados depois da rolagem normal com quatro. A inspiração é gasta depois de usada.','<strong>Canção do descanso:</strong> o bardo usa sua música para auxiliar na recuperação de seus aliados. Enquanto o bardo estiver tocando, o teste para se recuperar de consequências é considerado um nível mais fácil. Medíocre (+0) para suave, Razoável (+2) para moderada e Ótima (+4) para severa.','<strong>Canção de proteção:</strong> a música do bardo ajuda aliados a resistirem efeitos mentais. Enquanto o bardo estiver tocando, ele e seus aliados recebem +2 em rolagens de Defesa para evitar receber condições mentais (amedrontado, confuso e fascinado).','<strong>Segredos mágicos:</strong> uma vez por sessão, o bardo é capaz de conjurar uma única magia de qualquer tradição mágica, mesmo que não tenha pontos na tradição. Ele utiliza o valor de sua perícia Magia para tal, é possível somar o valor da subperícia da tradição escolhida, se houver.'],
+                tradition: ['Ocultista'],
+                'Bardo do Colégio do Conhecimento': {
+                    skills: ['Acadêmico','Magia','Ocultismo','Empatia','Comunicação'],
+                    approach: ['Esperto'],
+                    stunts: ['<strong>Arcanista:</strong> O bardo do colégio do conhecimento é capaz de lançar magias da tradição arcana e recebe +1 nela.','<strong>Palavras de interrupção:</strong> uma vez por cena, o bardo do colégio do conhecimento pode utilizar sua música para distrair e confundir os seus inimigos. Ele escolhe um inimigo que possa ouvi-lo e toca sua canção para ele. No momento em que o bardo desejar, uma rolagem deste inimigo deverá ser feita com dois dados extras, escolhendos os piores resultados. É possível jogar os dois dados depois da rolagem normal com quatro.','<strong>Aptidão:</strong> o bardo escolhe 4 perícias quaisquer. Ele recebe +1 em testes de Superar e Criar Vantagem com as perícias escolhidas.']
                 },
-                '': {
-                    skills: [],
-                    approach: [],
-                    stunts: []
+                'Bardo do Colégio da Bravura': {
+                    skills: ['Lutar','Provocar','Roubo','Atletismo','Magia'],
+                    approach: ['Ágil'],
+                    stunts: ['<strong>Encantar armas:</strong> as armas equipadas pelo bardo do colégio da bravura são consideradas mágicas para todos os efeitos. Uma vez por sessão ele pode aprimorar suas armas, que recebem Arma:1 durante toda uma cena.','<strong>Magia de batalha:</strong> ao custo de 1 PD, ao conjurar magia durante um conflito, você pode realizar um ataque com Lutar (Ágil) no mesmo turno.','<strong>Inspiração em combate:</strong> uma vez por sessão, durante um conflito, enquanto o bardo estiver tocando a sua música os seus aliados recebem +1 para Atacar e Defender com Lutar.']
                 },
-                '': {
-                    skills: [],
-                    approach: [],
-                    stunts: []
+                'Bardo do Colégio das Artes': {
+                    skills: ['Acadêmico','Comunicação','Enganar','Empatia','Magia'],
+                    approach: ['Estiloso'],
+                    stunts: ['<strong>Magia melodiosa:</strong> o bardo do colégio das artes é capaz de realizar suas magias disfarçadamente enquanto faz uma performance. Antes de conjurar uma magia, ele pode fazer um teste de Enganar contra a Percepção de seus observadores. Em caso de empate ou sucesso, ele oculta a conjuração. Em caso de falha ele deixa clara as suas intenções e gera um impulso para os inimigos.','<strong>Dança hipnotizante:</strong> o bardo do colégio das artes pode fazer uma dança que hipnotiza a todos que possam vê-lo dentro da zona. Uma vez por sessão, o bardo recebe +2 em Criar Vantagem com Provocar para marcar a Condição Fascinado em todos os inimigos de sua zona, é feito um teste de Defender com Vontade para impedir o efeito.','<strong>Canção persistente:</strong> com esta façanha, qualquer efeito da música do bardo que só funcione enquanto ele estiver tocando mantém o seu efeito até o fim da cena, mesmo que o bardo realize outras ações.']
                 }
             }
             break;

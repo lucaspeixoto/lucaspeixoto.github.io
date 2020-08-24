@@ -140,16 +140,19 @@ function characterTraditions(classTradition,subclassTradition,skills,system){
   var subtradition = '';
   var tradValue = 0;
 
-  if((subclassTradition.indexOf("Conjuração:") >= 0) || 
+  if((subclassTradition.indexOf("Arcanista:") >= 0) ||
+    (subclassTradition.indexOf("Conjuração:") >= 0) || 
     (subclassTradition.indexOf("Conhecimento arcano:") >= 0)){
     subtradition = 'Arcana';
   } else if(subclassTradition.indexOf("Adorador da natureza:") >= 0){
     subtradition = 'Divina';
   } else if((subclassTradition.indexOf("Magia marcial:") >= 0) ||
+    (subclassTradition.indexOf("Primal:") >= 0) ||
     (subclassTradition.indexOf("Conhecimentos selvagens:") >= 0) ||
     (subclassTradition.indexOf("Conhecimento primordial:") >= 0)){
     subtradition = 'Primal';
-  } else if(subclassTradition.indexOf("Conhecimentos obscuros:") >= 0){
+  } else if((subclassTradition.indexOf("Conhecimentos obscuros:") >= 0) ||
+    (subclassTradition.indexOf("Viajante dos planos:") >= 0)){
     subtradition = 'Ocultista';
   }
 
