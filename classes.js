@@ -27,9 +27,153 @@
 function classes(type='') {
 
     if (type == '') 
-        type = random(['thief','druid','monk','mage','paladin','ranger']);
+        type = random(['thief','druid','monk','mage','paladin','ranger','barbarian','bard','warlock','cleric','sorcerer','fighter']);
   
     switch(type) {
+
+        case "fighter":
+            return {
+                
+                aspects: [],
+                stunts: [],
+                tradition: [],
+                '': {
+                    skills: [],
+                    approach: [],
+                    stunts: []
+                },
+                '': {
+                    skills: [],
+                    approach: [],
+                    stunts: []
+                },
+                '': {
+                    skills: [],
+                    approach: [],
+                    stunts: []
+                }
+            }
+            break;
+
+        case "sorcerer":
+            return {
+                
+                aspects: [],
+                stunts: [],
+                tradition: [],
+                '': {
+                    skills: [],
+                    approach: [],
+                    stunts: []
+                },
+                '': {
+                    skills: [],
+                    approach: [],
+                    stunts: []
+                },
+                '': {
+                    skills: [],
+                    approach: [],
+                    stunts: []
+                }
+            }
+            break;
+
+        case "cleric":
+            return {
+                
+                aspects: [],
+                stunts: [],
+                tradition: [],
+                '': {
+                    skills: [],
+                    approach: [],
+                    stunts: []
+                },
+                '': {
+                    skills: [],
+                    approach: [],
+                    stunts: []
+                },
+                '': {
+                    skills: [],
+                    approach: [],
+                    stunts: []
+                }
+            }
+            break;
+
+        case "warlock":
+            return {
+                
+                aspects: [],
+                stunts: [],
+                tradition: [],
+                '': {
+                    skills: [],
+                    approach: [],
+                    stunts: []
+                },
+                '': {
+                    skills: [],
+                    approach: [],
+                    stunts: []
+                },
+                '': {
+                    skills: [],
+                    approach: [],
+                    stunts: []
+                }
+            }
+            break;
+
+        case "bard":
+            return {
+                
+                aspects: [],
+                stunts: [],
+                tradition: [],
+                '': {
+                    skills: [],
+                    approach: [],
+                    stunts: []
+                },
+                '': {
+                    skills: [],
+                    approach: [],
+                    stunts: []
+                },
+                '': {
+                    skills: [],
+                    approach: [],
+                    stunts: []
+                }
+            }
+            break;
+
+        case "barbarian":
+            return {
+                
+                aspects: ['Bárbaro do Caminho da Frenesi','Bárbaro do Caminho Totêmico','Bárbaro do Caminho do Instinto'],
+                stunts: ['<strong>Fúria:</strong> ao custo de 1 PD, durante um conflito, o Bárbaro pode se entregar a uma fúria insana, que lhe concede +2 em ações de Atacar. Nesse estado, ações além de Atacar recebem -2 de penalidade. Além disso, o bárbaro recebe +1 de Armadura contra ataques físicos. O efeito dura até o fim da cena ou até quando o jogador desejar. Ao sair da fúria, o personagem recebe o aspecto “Exausto”.','<strong>Armadura natural:</strong> enquanto o Bárbaro não estiver usando nenhuma armadura ele possui Armadura:1.','<strong>Ataque descuidado:</strong> você pode atacar sem se preocupar com a sua defesa. Quando quiser, você pode optar por receber +2 em ações de Ataque com Lutar (Poderoso). Até o seu próximo turno as suas jogadas de Defesa recebem -2 de penalidade.','<strong>Sentido de perigo:</strong> você consegue perceber melhor os perigos que te cercam. Recebe +2 em Percepção (Esperto) para notar que existe algo incomum na cena, como armadilhas ou efeitos mágicos.','<strong>Carga brutal:</strong> você é capaz de se deslocar por uma zona extra durante um conflito, para isso deve realizar um ataque em carga contra um oponente. Se o fizer, você recebe +2 em sua jogada de Ataque com Lutar (Poderoso).','<strong>Fôlego bruto:</strong> uma vez por cena, durante um conflito, você pode retomar o fôlego da batalha. Limpe até três caixas de estresse.'],
+                tradition: [''],
+                'Bárbaro do Caminho da Frenesi': {
+                    skills: ['Lutar','Provocar','Vigor','Vontade','Atletismo'],
+                    approach: ['Poderoso'],
+                    stunts: ['<strong>Frenesi:</strong> ao entrar em Fúria, você pode optar por entrar em Frenesi. A cada turno você pode realizar um único ataque extra, contudo deve marcar uma caixa de estresse para tal. Além disso, você ignora Condições enquanto estiver em Frenesi.','<strong>Presença intimidante:</strong> uma vez por cena, com uma rolagem de Criar Vantagem com Provocar (Estiloso) você pode colocar a Condição Amedrontado em todos que estão mesma zona que você (exceto aliados). Um teste de Defesa com Vontade (Esperto) pode ser feito para evitar a condição.','<strong>Retaliação:</strong> ao receber um ataque com Lutar que lhe cause uma consequência, você não concede uma invocação gratuita desta consequência e, além disso, poderá realizar um ataque com Lutar (Poderoso) neste mesmo inimigo.']
+                },
+                'Bárbaro do Caminho Totêmico': {
+                    skills: ['Atletismo','Furtividade','Vigor','Lutar','Percepção'],
+                    approach: ['Ágil'],
+                    stunts: ['<strong>Totem da águia:</strong> você possui uma visão aguçada e pode ver até 2 km de distância sem nenhuma dificuldade. Dentro da sua zona você consegue discernir todos os pequenos detalhes. Além disso, durante a Fúria você pode se deslocar por zonas verticais, realizando grande saltos.','<strong>Totem do lobo:</strong> você adquire os instintos de caça de um lobo. Recebe +1 em ações de Investigar quando está rastreando alguém e +1 em ações de Furtividade quando está em terreno selvagem. Além disso, durante a Fúria, em um sucesso com estilo com Lutar (Poderoso) você pode reduzir as tensões em 1 para colocar a Condição Derrubado no seu alvo, em uma criatura até um tamanho maior que você na escala.','<strong>Totem do urso:</strong> você adquire a força de um urso. Recebe +2 ao Criar Vantagem em ações que exijam demonstração de grande força ou resistência física. Além disso, durante a Fúria, qualquer inimigo em sua zona que não tenha você como alvo terá uma penalidade de -1 em seus ataques.']
+                },
+                'Bárbaro do Caminho do Instinto': {
+                    skills: ['Animais','Percepção','Vontade','Lutar','Vigor'],
+                    approach: ['Esperto'],
+                    stunts: ['<strong>Elo com animais:</strong> o bárbaro do caminho do instinto recebe +2 em qualquer ação da perícia Animais (Estiloso) e consegue perceber claramente o ânimo de um animal, na forma de um adjetivo (calmo, raivoso, assustado etc).','<strong>Instinto Selvagem:</strong> o bárbaro do caminho do instinto nunca é pego de surpresa em um início de conflito. Sempre que quiser você poderá agir antes de todo mundo no início de um conflito, porém deve entrar em Fúria antes de sua ação. Se optar por fazê-lo, recebe +2 para Atacar com Lutar (Poderoso) nesta rodada.','<strong>Comunhão ancestral:</strong> você se conecta às forças da natureza e retira dela uma grande força interior. Se estiver em ambientes naturais, como florestas, cavernas ou planícies, você recebe Arma:1. Além disso, as armas equipadas pelo bárbaro são consideradas mágicas para todos os efeitos.',]
+                }
+            }
+            break;
 
         case "thief":
             return {

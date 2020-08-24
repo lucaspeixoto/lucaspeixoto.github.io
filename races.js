@@ -1,8 +1,7 @@
 function races(type='') {
 
 	if (type == '') 
-        type = random(['halfling','elf','dwarf','human','dragonborn']);
-    	//type = random(['halfling','elf','dwarf','human','','gnome','touched']);
+        type = random(['halfling','elf','dwarf','human','dragonborn','goblin','gnome','touched']);
   
     switch(type){
 
@@ -15,6 +14,27 @@ function races(type='') {
     	        bioform: ['ocks','iards','en','ols','ri','ors','ons','als','dja','ani','ians','ites','ans','icans','um']
     		}
     		break;
+
+    	   case "goblin":
+    		return {
+
+			    aspects: ['Goblin Bucho-de-Ferro','Goblin Couro-Chamuscado'],
+			    stunts: ['<strong>Funileiro de Sucata:</strong> O goblin é capaz de fazer itens úteis que duram uma cena a partir de lixo. Ele também recebe 3 caixas de estresse de equipamento exclusivas para sucata.','<strong>Montaria Goblin:</strong> O goblin tem um cão que lhe serve como montaria. O cão tem uma ficha como em FAE e tem ações e turnos próprios.'],
+			    'Goblin Bucho-de-Ferro': {
+					names: ['Gnaalx','Fiq','Vres','Eag','Rac','Zrieguct','Kriotiakt','Zryknuq','Weazlurd','Brisboiz','Aalb','Iegz','Blit','Riets','Ylx','Padniakt','Wybhylb','Zuznucs','Gluigrord','Gnaterm','Rokz','Stalk','Vragz','Bokt','Aq','Woaard','Pialdikt','Srizierm','Cysuix','Plorrosz'],
+			        skills: ['Vigor'],
+			        approach: ['Poderoso'],
+			        stunts: ['<strong>Tudívoro:</strong> O goblin bucho-de-ferro pode se alimentar até de comida apodrecida e tem um pulso de performance para resistir à efeitos adversos por ingerir comida estranha.','<strong>Dentes de Navalha:</strong> O goblin bucho-de-ferro pode Atacar com mordidas. Seus dentes contam como Arma: 1.']
+			    },
+			    'Goblin Couro-Chamuscado': {
+			        names: ['Nuth','Cishai','Ath','Jielm','Phuix','Heemes','Wrimruf','Falkozz','Japyld','Gnopeld','Lirt','Shuinx','Glyhxai','Vreeth','Greefz','Gnatlyrte','Eplos','Thestolt','Ufsussi','Chegmiolka','Kliohx','Ifs','Colsi','Hiah','Alm','Prikviossi','Thoikvuh','Grelbux','Haatnuf','Kleebbuxai'],
+			        skills: ['Atirar'],
+			        approach: ['Estiloso'],
+			        stunts: ['<strong>Incendiário:</strong> O goblin couro-chamuscado recebe +2 para Atacar com Atirar quando usar uma arma capaz de atear fogo.','<strong>Pele Grossa:</strong> O goblin couro-chamuscado tem Armadura: 1 quando é atacado com armas ou magias que ateiem fogo.']
+			    }
+			}
+    		break;
+
 
     	case "halfling":
     		return {
@@ -192,12 +212,12 @@ function races(type='') {
     		return {
 
     			aspects: ['Gnomo da Floresta','Gnomo das Rochas','Gnomo das Profundezas'],
-			    stunts: ['<strong>Visão no escuro:</strong> O gnomo enxerga normalmente na mais completa escuridão.','<strong>Esperteza gnômica:</strong> O gnomo é mais resistente contra efeitos mágicos, recebendo +2 em testes de Superar contra magias que tenham o gnomo como alvo.'],
+			    stunts: ['<strong>Visão no escuro:</strong> O gnomo enxerga na mais completa escuridão, mas não pode discernir cores no escuro, apenas tons de cinza.','<strong>Esperteza gnômica:</strong> O gnomo é mais resistente contra efeitos mágicos, uma vez por cena ele recebe um pulso de performance em uma rolagem para se Defender de magias que tenham exclusivamente o gnomo como alvo.'],
 			    'Gnomo da Floresta': {
 			    	names: ['Yosvyn','Wremin','Mangrim','Felben','Nimin','Sinpos','Gagrim','Wilmorn','Farkur','Rascorin','Mylys','Carwyse','Kloxis','Inaroe','Wrowyn','Nysys','Odana','Galgani','Fenpine','Vomiphi'],
 			        skills: ['Magia'],
 			        approach: ['Estiloso'],
-			        stunts: ['<strong>Ilusionista nato:</strong> O gnomo da floresta conhece alguma magia simples de ilusão e pode conjurá-la gratuitamente.','<strong>Falar com animais:</strong> O gnomo da floresta pode se comunicar com animais pequenos de maneira muito rudimentar.']
+			        stunts: ['<strong>Ilusionista nato:</strong> O gnomo da floresta é capaz de conjurar gratuitamente truques mágicos de ilusão, como criar sons ou imagens de objetos pequenos. Um teste de Percepção regular (+1) é o suficiente para perceber que é apenas um truque.','<strong>Falar com animais:</strong> O gnomo da floresta pode se comunicar com animais pequenos de maneira muito rudimentar.']
 			    },
 			    'Gnomo das Rochas': {
 			    	names: ['Orxim','Orben','Panakur','Jorlin','Warner','Mancorin','Valpip','Zanmin','Kaswor','Sinkas','Dofi','Sadysa','Quephina','Arizyre','Heldira','Vennoa','Zinnove','Galna','Spimyra','Elrhana'],
@@ -218,42 +238,42 @@ function races(type='') {
     		return {
 
     			aspects: ['Tiefling','Aasimar','Genasi do Ar','Genasi da Terra','Genasi do Fogo','Genasi da Água'],
-			    stunts: ['<strong>Visão no escuro:</strong> Você enxerga normalmente na mais completa escuridão.'],
+			    stunts: ['<strong>Visão no escuro:</strong> Um tocado pelos planos enxerga na mais completa escuridão, mas não pode discernir cores no escuro, apenas tons de cinza.'],
 			    'Tiefling': {
 			    	names: ['Aranrai','Salrias','Garnon','Reus','Moremon','Zarxire','Akrus','Content','Master','Mastery','Mormus','Horrakas','Merut','Zarros','Zornon','Skaron','Ekthus','Uncommon','Confidence','Pure','Natbis','Naphi','Anicria','Iniwure','Nethtish','Pescyra','Velrissa','Piety','Trust','Life','Inyola','Rotish','Kallyvia','Grizes','Quhiri','Frivari','Crelyvia','Open','Interesting','Master'],
 			        skills: ['Provocar'],
 			        approach: ['Estiloso'],
-			        stunts: ['<strong>Legado infernal:</strong> Uma vez por sessão, o tiefling pode lançar a magia Repreensão Infernal.','<strong>Resistência infernal:</strong> O tiefling recebe +2 ao se Defender de ataques ou magias de fogo.']
+			        stunts: ['<strong>Legado infernal:</strong> Uma vez por sessão, o tiefling pode lançar gratuitamente a magia Repreensão Infernal. Ele aponto o dedo para uma criatura que tenha causado dano a ele e o último dano recebido é causado no alvo, na forma de fogos infernais. Um teste Bom (+3) em Atletismo evita o dano.','<strong>Resistência infernal:</strong> O tiefling recebe +2 ao se Defender de ataques ou magias de fogo.']
 			    },
 			    'Aasimar': {
 			    	names: ['Tarwil','Pealgom','Yrnail','Cygwer','Nogwar','Urlin','Weltetim','Altalir','Neiwotant','Lovreteint','Tywein','Migeem','Modrail','Zavil','Iklim','Todem','Tuvuman','Vakameen','Havimil','Eidridar','Malla','Rhidan','Vedah','Anlah','Horse','Vorki','Havire','Videama','Dordimi','Mandriemi','Amo','Deojem','Villier','Phersi','Rhosrem','Thamne','Minrori','Dirose','Phindremar','Amena'],
 			        skills: ['Empatia'],
 			        approach: ['Estiloso'],
-			        stunts: ['<strong>Cura pelas mãos:</strong> Uma vez por cena, você pode tocar uma criatura e limpar até três caixas de estresse físico que ela possua.','<strong>Portador da luz:</strong> Você pode lançar a magia Luz gratuitamente.']
+			        stunts: ['<strong>Cura pelas mãos:</strong> Uma vez por cena, você pode tocar uma criatura e limpar até três caixas de estresse físico que ela possua.','<strong>Portador da luz:</strong> O aasimar pode lançar a magia Luz gratuitamente. Ele toca um pequeno objeto que passa a emitir luz plena em uma zona. A magia termina se ele conjurá-la novamente ou dissipá-la.']
 			    },
 			    'Genasi do Ar': {
 			    	names: ['Flux','Gust','Gale','Tornado','Spinel','Heave','Blow','Air','Hurricane','Hiss','Wind','Aviate','Cyclone','Nether','Flash','Breeze','Ascend','Flurry','Murmur','Fly','Rivulet','Drench','Ripple','Pebble','Rubble','Celeste','Turbulence','Tempest'],
 			        skills: ['Percepção'],
 			        approach: ['Esperto'],
-			        stunts: ['<strong>Fôlego infinito:</strong> O genasi do ar pode prender a respiração indefinidamente.','<strong>Leve como o vento:</strong> Uma vez por sessão, o genasi do ar pode lançar a magia Levitar em si mesmo, o efeito dura uma cena.']
+			        stunts: ['<strong>Fôlego infinito:</strong> O genasi do ar pode prender a respiração indefinidamente.','<strong>Leve como o vento:</strong> Uma vez por sessão, o genasi do ar pode lançar gratuitamente a magia Levitar em si mesmo, o efeito dura uma cena. Ele poderá se elevar até 6 metros de altura por rodada. Ao fim da magia ele flutua levemente até o chão.']
 			    },
 			    'Genasi da Terra': {
 			    	names: ['Zircon','Quarry','Lazuli','Hiss','Umber','Hill','Shelf','Rough','Cobblestone','Marble','Marble','Tile','Clay','Tumult','Heave','Dew','Cliff','Boulder','Jewel','Shriek','Rough','Rocky','Basalt'],
 			        skills: ['Vigor'],
 			        approach: ['Poderoso'],
-			        stunts: ['<strong>Passo elemental:</strong> O genasi da terra pode se locomover por até duas zonas gratuitamente, desde que possa tocar o chão natural.','<strong>Sem rastros:</strong> Uma vez por sessão, o genasi da terra pode lançar a magia Passos sem Pegadas, o efeito dura uma cena.']
+			        stunts: ['<strong>Passo elemental:</strong> Em um conflito, o genasi da terra pode se locomover por até duas zonas gratuitamente, desde que possa tocar o chão natural.','<strong>Sem rastros:</strong> Uma vez por sessão, o genasi da terra pode lançar gratuitamente a magia Passos sem Pegadas. O genasi da terra e seus aliados não deixam quaisquer pegadas ou outros vestígios e não podem ser rastreados. O efeito dura uma cena.']
 			    },
 			    'Genasi do Fogo': {
 			    	names: ['Fry','Cinder','Scald','Spring','Gush','Char','Ardour','Lava','Inferno','Soot','Singe','Douse','Furnace','Rivulet','Fever','Boil','Scorch','Flare','Volcano','Hot','Scorch','Flash'],
 			        skills: ['Provocar'],
 			        approach: ['Estiloso'],
-			        stunts: ['<strong>Resistência ígnea:</strong> O genasi do fogo recebe +2 ao se Defender de ataques ou magias de fogo.','<strong>Mãos flamejantes:</strong> Uma vez por sessão, o genasi do fogo pode lançar a magia Mãos Flamejantes.']
+			        stunts: ['<strong>Resistência ígnea:</strong> O genasi do fogo recebe +2 ao se Defender de ataques ou magias de fogo.','<strong>Mãos flamejantes:</strong> Uma vez por sessão, o genasi do fogo pode lançar gratuitamente a magia Mãos Flamejantes. Ele fará um teste resistido de sua perícia mais adequada (Atirar, Vontade, Ocultismo ou Magia) contra o Atletismo do alvo, causando a diferença das tensões em dano  (no mínimo 1). O fogo incendeia qualquer objeto inflamável na zona que não esteja sendo vestido ou carregado.']
 			    },
 			    'Genasi da Água': {
 			    	names: ['Drift','Pool','Glare','Scoria','Beck','Dewdrop','Lagoon','Plunge','River','Teardrop','Droplet','Grime','Bath','Dewdrop','Whisk','Enkindle','Estuary','Well','Rain','Cleanse','Tide','Shelf'],
 			        skills: ['Vontade'],
 			        approach: ['Esperto'],
-			        stunts: ['<strong>Anfíbio:</strong> O genasi da água pode respirar tanto na água quanto no ar.','<strong>Chamar as ondas:</strong> Uma vez por sessão, o genasi da água pode lançar a magia Criar ou Destruir Água.']
+			        stunts: ['<strong>Anfíbio:</strong> O genasi da água pode respirar tanto na água quanto no ar.','<strong>Chamar as ondas:</strong> Uma vez por sessão, o genasi da água pode lançar gratuitamente a magia Criar ou Destruir Água. Ao criar água ele cria 30 metros cúbicos de limpa, em um recipiente ou caindo como chuva em uma zona. Ao destruir água ele destrói 30 metros cúbicos de água ou destrói um nevoeiro em uma zona.']
 			    }
 			    
     		}
