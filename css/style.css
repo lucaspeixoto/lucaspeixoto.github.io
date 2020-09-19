@@ -5,11 +5,15 @@ label {cursor: pointer;}
 label:hover {color: #009688;}
 
 .boxLabirinto {
-  border-spacing: 1px;
+  border-spacing: 0px;
+  border: 1px solid black;
+  border-right: 0px;
+  border-bottom: 0px;
 }
 
 .boxLabirinto td{
-  border: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
   height: 50px;
   min-width: 50px;
   max-width: 50px;
