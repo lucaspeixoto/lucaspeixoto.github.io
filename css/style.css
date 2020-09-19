@@ -6,9 +6,39 @@ label:hover {color: #009688;}
 
 .boxLabirinto td{
   border: 1px solid black;
-  height: 30px;
-  width: 30px;
+  height: 50px;
+  width: 50px;
   cursor: pointer;
+  background-color: white;
+}
+
+.tabelaHerois{
+  text-align: left;
+}
+
+.tabelaHerois input{
+  width: 45px;
+}
+
+.pvsVilao {
+ width: 45px; 
+}
+
+.inventario {
+  position: relative;
+  float: right;
+  color: grey;
+  cursor: pointer;
+}
+
+.jogoTorre{
+  width: 300px;
+}
+
+#btnSubir{
+  display: none;
+  position: relative;
+  float: right;
 }
 
 .inputDice{

@@ -51,119 +51,106 @@ fetch("./nav.html")
   
   <div class="w3-container w3-padding-large" style="margin-bottom:32px">
 
-    <span class="hidePrint">
-      <p><strong>Ao atualizar a página a caixa será limpa.</strong>
-      <br><i>Conteúdo gerado com base no jogo criado por mim. (<a href="index.html">link</a>)</i></p>
-      
+    <div class="jogoTorre">
+      <span class="hidePrint">
+        <p><strong>Ao atualizar a página tudo será limpo.</strong>
+        <br><i>Conteúdo gerado com base no jogo criado por mim. (<a href="index.html">link</a>)</i></p>
+        
+        <p>
+          <select id="selectDificuldade" class="w3-button w3-teal">
+            <option value="muitoDificil">Muito difícil</option>
+            <option value="dificil">Difícil</option>
+            <option value="medio" selected="">Médio</option>
+            <option value="facil">Fácil</option>
+            <option value="muitoFacil">Muito fácil</option>
+          </select>
+          <button id="btnGerarGrupo" class="w3-button w3-teal w3-hover-black">Novo jogo</button>
+        </p>
+        <p>
+          <table class="tabelaHerois">
+            <thead>
+              <tr>
+                <th width="100px">Herói</th>
+                <th width="20px">Nível</th>
+                <th width="20px">PVs</th>
+              </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+          </table>
+        </p>
+        <p>
+          <button id="btnRolarDados" class="w3-button w3-teal w3-hover-black"><i class="fa fa-cube"></i></button>
+          <span class="spanDados"></span>
+          <button id="btnSubir" class="w3-button w3-teal w3-hover-black">Subir</button>
+        </p>
+      </span>
+
+      <div class="watermark">Jogo criado em https://lucaspeixoto.github.io</div>
+
+      <table class="boxLabirinto">
+        <tr class="linha1">
+          <td class="coluna1"></td>
+          <td class="coluna2"></td>
+          <td class="coluna3"></td>
+          <td class="coluna4"></td>
+          <td class="coluna5"></td>
+          <td class="coluna6"></td>
+        </tr>
+        <tr class="linha2">
+          <td class="coluna1"></td>
+          <td class="coluna2"></td>
+          <td class="coluna3"></td>
+          <td class="coluna4"></td>
+          <td class="coluna5"></td>
+          <td class="coluna6"></td>
+        </tr>
+        <tr class="linha3">
+          <td class="coluna1"></td>
+          <td class="coluna2"></td>
+          <td class="coluna3"></td>
+          <td class="coluna4"></td>
+          <td class="coluna5"></td>
+          <td class="coluna6"></td>
+        </tr>
+        <tr class="linha4">
+          <td class="coluna1"></td>
+          <td class="coluna2"></td>
+          <td class="coluna3"></td>
+          <td class="coluna4"></td>
+          <td class="coluna5"></td>
+          <td class="coluna6"></td>
+        </tr>
+        <tr class="linha5">
+          <td class="coluna1"></td>
+          <td class="coluna2"></td>
+          <td class="coluna3"></td>
+          <td class="coluna4"></td>
+          <td class="coluna5"></td>
+          <td class="coluna6"></td>
+        </tr>
+        <tr class="linha6">
+          <td class="coluna1"></td>
+          <td class="coluna2"></td>
+          <td class="coluna3"></td>
+          <td class="coluna4"></td>
+          <td class="coluna5"></td>
+          <td class="coluna6"></td>
+        </tr>
+      </table>
       <p>
-        <select id="selectDificuldade" class="w3-button w3-teal">
-          <option value="muitoDificil">Muito difícil</option>
-          <option value="dificil">Difícil</option>
-          <option value="medio" selected="">Médio</option>
-          <option value="facil">Fácil</option>
-          <option value="muitoFacil">Muito fácil</option>
-        </select>
-        <button id="btnGerarGrupo" class="w3-button w3-teal w3-hover-black">Gerar grupo de heróis</button>
+        Andar <span class="numeroAndar"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        PVs Vilão <input class="pvsVilao" type="number">
+        <span class="inventario">
+          <span class="bota">Bota</span>
+          <span class="anel">Anel</span>
+        </span>
       </p>
-      <p>
-        <table>
-          <thead>
-            <tr>
-              <th>Herói</th>
-              <th>Nível</th>
-              <th>PVs</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Guerreiro</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>Clérigo</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>Mago</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>Ladrão</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>Paladino</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-          </tbody>
-        </table>
-      </p>
-    </span>
 
-    <div class="watermark">Jogo criado em https://lucaspeixoto.github.io</div>
-
-    <table class="boxLabirinto">
-      <tr class="linha1">
-        <td class="coluna1">tata</td>
-        <td class="coluna2"></td>
-        <td class="coluna3"></td>
-        <td class="coluna4"></td>
-        <td class="coluna5"></td>
-        <td class="coluna6"></td>
-      </tr>
-      <tr class="linha2">
-        <td class="coluna1"></td>
-        <td class="coluna2"></td>
-        <td class="coluna3"></td>
-        <td class="coluna4"></td>
-        <td class="coluna5"></td>
-        <td class="coluna6"></td>
-      </tr>
-      <tr class="linha3">
-        <td class="coluna1"></td>
-        <td class="coluna2"></td>
-        <td class="coluna3"></td>
-        <td class="coluna4"></td>
-        <td class="coluna5"></td>
-        <td class="coluna6"></td>
-      </tr>
-      <tr class="linha4">
-        <td class="coluna1"></td>
-        <td class="coluna2"></td>
-        <td class="coluna3"></td>
-        <td class="coluna4"></td>
-        <td class="coluna5"></td>
-        <td class="coluna6"></td>
-      </tr>
-      <tr class="linha5">
-        <td class="coluna1"></td>
-        <td class="coluna2"></td>
-        <td class="coluna3"></td>
-        <td class="coluna4"></td>
-        <td class="coluna5"></td>
-        <td class="coluna6"></td>
-      </tr>
-      <tr class="linha6">
-        <td class="coluna1"></td>
-        <td class="coluna2"></td>
-        <td class="coluna3"></td>
-        <td class="coluna4"></td>
-        <td class="coluna5"></td>
-        <td class="coluna6"></td>
-      </tr>
-    </table>
-
-    <div class="boxTorre">
-      
+      <a href="javascript: window.print();" id="btnPrint"><i class="fa fa-file-pdf-o w3-hover-opacity" style="color: red;"></i> PDF</a>
 
     </div>
-
-    <a href="javascript: window.print();" id="btnPrint"><i class="fa fa-file-pdf-o w3-hover-opacity" style="color: red;"></i> PDF</a>
     
   </div> 
 
