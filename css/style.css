@@ -4,6 +4,13 @@ nav a{text-decoration: none;}
 label {cursor: pointer;}
 label:hover {color: #009688;}
 
+.boxLabirinto td{
+  border: 1px solid black;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+
 .inputDice{
   padding-left: 7px;
   width: 45px;
