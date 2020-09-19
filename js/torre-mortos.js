@@ -1,9 +1,5 @@
 $( document ).ready(function() {
 
-    function gerarConteudo() {
-        return ['Esqueleto','Fantasma','Múmia','Zumbi','Baú','Buraco'];
-    }
-
     function setarDificuldade(dificuldade) {
 
         var dados = 0;
@@ -57,17 +53,19 @@ $( document ).ready(function() {
 
     function gerarEntradas(entrada,saida,lado){
         if(lado == 'esquerdo'){
-            $('.linha'+entrada+' .coluna1').html('Entrada');
-            $('.linha'+saida+' .coluna6').html('Saída');
+            $('.linha'+entrada+' .coluna1').html('<img src="./img/escada.png">');
+            $('.linha'+entrada+' .coluna1').css('background-color','lightgrey');
+            $('.linha'+saida+' .coluna6').html('<img src="./img/escada.png">');
         } else {
-            $('.linha'+entrada+' .coluna6').html('Entrada');
-            $('.linha'+saida+' .coluna1').html('Saída');
+            $('.linha'+entrada+' .coluna6').html('<img src="./img/escada.png">');
+            $('.linha'+entrada+' .coluna1').css('background-color','lightgrey');
+            $('.linha'+saida+' .coluna1').html('<img src="./img/escada.png">');
         }
     }
 
     function gerarVilao(){
 
-        var viloes = ['Cavaleiro da Morte','Banshee','Espectro','Assombração','Vampiro','Necrolich'];
+        var vilao = random(['guerreiro','clerigo','mago','ladrao','paladino','neutro']);
         var vilaoGerado = 'nao';
         var linha = '';
         var coluna = '';
@@ -76,32 +74,11 @@ $( document ).ready(function() {
             linha = randomNumber(1,6);
             coluna = randomNumber(1,6);
             if($('.linha'+linha+' .coluna'+coluna).html() == ''){
-                $('.linha'+linha+' .coluna'+coluna).html(random(viloes))
+                $('.linha'+linha+' .coluna'+coluna).html('<img src="./img/vilao_'+vilao+'.png">');
                 vilaoGerado = 'sim';
             }
         }
 
-    }
-
-    function colorir(){
-        $('td:contains("Guerreiro")').css('color', 'green');
-        $('td:contains("Clérigo")').css('color', 'blue');
-        $('td:contains("Mago")').css('color', 'purple');
-        $('td:contains("Ladrão")').css('color', 'maroon');
-        $('td:contains("Paladino")').css('color', 'orange');
-
-        $('td:contains("Zumbi")').css('color', 'green');
-        $('td:contains("Múmia")').css('color', 'blue');
-        $('td:contains("Fantasma")').css('color', 'purple');
-        $('td:contains("Esqueleto")').css('color', 'maroon');
-        $('td:contains("Baú")').css('color', 'fuchsia');
-        $('td:contains("Buraco")').css('background-color', 'black');
-
-        $('td:contains("Cavaleiro da Morte")').css('color', 'green');
-        $('td:contains("Banshee")').css('color', 'blue');
-        $('td:contains("Espectro")').css('color', 'purple');
-        $('td:contains("Assombração")').css('color', 'maroon');
-        $('td:contains("Vampiro")').css('color', 'orange');
     }
 
     $('#btnRolarDados').click(function(){
@@ -119,23 +96,23 @@ $( document ).ready(function() {
 
         for(i=0;i<5;i++){
             if(grupo['Guerreiro'] > 0){
-                $('.tabelaHerois tbody').append('<tr><td>Guerreiro</td><td><input type="number" value="'+grupo['Guerreiro']+'"></td><td><input type="number" value="'+Number(grupo['Guerreiro']+1)+'"></td>');
+                $('.tabelaHerois tbody').append('<tr><td><img src="./img/guerreiro.png">&nbsp;&nbsp;Guerreiro</td><td><input type="number" value="'+grupo['Guerreiro']+'"></td><td><input type="number" value="'+Number(grupo['Guerreiro']+1)+'"></td>');
                 grupo['Guerreiro'] = 0;
             }
             if(grupo['Clérigo'] > 0){
-                $('.tabelaHerois tbody').append('<tr><td>Clérigo</td><td><input type="number" value="'+grupo['Clérigo']+'"></td><td><input type="number" value="'+Number(grupo['Clérigo']+1)+'"></td>');
+                $('.tabelaHerois tbody').append('<tr><td><img src="./img/clerigo.png">&nbsp;&nbsp;Clérigo</td><td><input type="number" value="'+grupo['Clérigo']+'"></td><td><input type="number" value="'+Number(grupo['Clérigo']+1)+'"></td>');
                 grupo['Clérigo'] = 0;
             }
             if(grupo['Mago'] > 0){
-                $('.tabelaHerois tbody').append('<tr><td>Mago</td><td><input type="number" value="'+grupo['Mago']+'"></td><td><input type="number" value="'+Number(grupo['Mago']+1)+'"></td>');
+                $('.tabelaHerois tbody').append('<tr><td><img src="./img/mago.png">&nbsp;&nbsp;Mago</td><td><input type="number" value="'+grupo['Mago']+'"></td><td><input type="number" value="'+Number(grupo['Mago']+1)+'"></td>');
                 grupo['Mago'] = 0;
             }
             if(grupo['Ladrão'] > 0){
-                $('.tabelaHerois tbody').append('<tr><td>Ladrão</td><td><input type="number" value="'+grupo['Ladrão']+'"></td><td><input type="number" value="'+Number(grupo['Ladrão']+1)+'"></td>');
+                $('.tabelaHerois tbody').append('<tr><td><img src="./img/ladrao.png">&nbsp;&nbsp;Ladrão</td><td><input type="number" value="'+grupo['Ladrão']+'"></td><td><input type="number" value="'+Number(grupo['Ladrão']+1)+'"></td>');
                 grupo['Ladrão'] = 0;
             }
             if(grupo['Paladino'] > 0){
-                $('.tabelaHerois tbody').append('<tr><td>Paladino</td><td><input type="number" value="'+grupo['Paladino']+'"></td><td><input type="number" value="'+Number(grupo['Paladino']+1)+'"></td>');
+                $('.tabelaHerois tbody').append('<tr><td><img src="./img/paladino.png">&nbsp;&nbsp;Paladino</td><td><input type="number" value="'+grupo['Paladino']+'"></td><td><input type="number" value="'+Number(grupo['Paladino']+1)+'"></td>');
                 grupo['Paladino'] = 0;
             }
         }
@@ -148,26 +125,27 @@ $( document ).ready(function() {
 
         $('#btnSubir').show();
 
-        colorir();
-
     });
 
     $('.boxLabirinto td').click(function(){
 
-        var conteudoBau = ['Armadilha','Espada','Cetro','Bota','Anel','Poção'];
+        var conteudoTile = random(['esqueleto','fantasma','mumia','zumbi','bau','buraco']);
+        var conteudoBau = random(['armadilha','espada','cetro','bota','anel','pocao']);
         var color = $(this).css('background-color');
 
-        if($(this).html() == 'Baú')
-            $(this).html(random(conteudoBau));
+        if($(this).html() == '<img src="./img/bau.png">')
+            $(this).html('<img src="./img/'+conteudoBau+'.png">');
 
-        if($(this).html() == '')
-            $(this).html(random(gerarConteudo()));
+        if($(this).html() == ''){
+            if(conteudoTile == 'buraco')
+                $(this).css('background-color','black');
+            else
+                $(this).html('<img src="./img/'+conteudoTile+'.png">');
+        }
         else if(color == 'rgb(255, 255, 255)')
             $(this).css('background-color','lightgrey');
         else
             $(this).css('background-color','white');
-
-        colorir();
 
     });
 
@@ -184,17 +162,17 @@ $( document ).ready(function() {
 
     $('#btnSubir').click(function(){
         
-        var colunaAntiga = $("td:contains('Saída')").attr('class'); 
+        /*var colunaAntiga = $("td:contains('Saída')").attr('class'); 
         var linhaAntiga = $("td:contains('Saída')").parent().attr('class');
 
         if(colunaAntiga == 'coluna6')
             lado = 'direito';
         else
             lado = 'esquerdo';
-
+        */
         limparLabirinto();
 
-        gerarEntradas(linhaAntiga[5],randomNumber(1,6),lado);
+        gerarEntradas(randomNumber(1,6),randomNumber(1,6),'esquerdo');
 
         gerarVilao();
 
@@ -205,7 +183,6 @@ $( document ).ready(function() {
 
         $('.bota, .anel').css('color','grey');
 
-        colorir();
     });
 
 });

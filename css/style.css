@@ -4,16 +4,29 @@ nav a{text-decoration: none;}
 label {cursor: pointer;}
 label:hover {color: #009688;}
 
+.boxLabirinto {
+  border-spacing: 1px;
+}
+
 .boxLabirinto td{
   border: 1px solid black;
   height: 50px;
-  width: 50px;
+  min-width: 50px;
+  max-width: 50px;
   cursor: pointer;
   background-color: white;
 }
 
 .tabelaHerois{
   text-align: left;
+}
+
+.tabelaHerois img{
+  width: 35px;
+}
+
+.boxLabirinto img{
+  width: 45px;
 }
 
 .tabelaHerois input{
