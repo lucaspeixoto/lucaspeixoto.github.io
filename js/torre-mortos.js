@@ -49,17 +49,19 @@ $( document ).ready(function() {
         $('.boxLabirinto td').html('');
         $('.boxLabirinto td').css('color','black');
         $('.boxLabirinto td').css('background-color','white');
+        $('.bauVilao img').attr('src','./img/bau.png');
+        $('.inventario img').css('filter','opacity(0.3)');
     }
 
     function gerarEntradas(entrada,saida,lado){
         if(lado == 'esquerdo'){
-            $('.linha'+entrada+' .coluna1').html('<img src="./img/escada.png">');
+            $('.linha'+entrada+' .coluna1').html('<img src="./img/escada_entrada.png">');
             $('.linha'+entrada+' .coluna1').css('background-color','lightgrey');
-            $('.linha'+saida+' .coluna6').html('<img src="./img/escada.png">');
+            $('.linha'+saida+' .coluna6').html('<img class="escadaSaida" src="./img/escada_saida.png">');
         } else {
-            $('.linha'+entrada+' .coluna6').html('<img src="./img/escada.png">');
-            $('.linha'+entrada+' .coluna1').css('background-color','lightgrey');
-            $('.linha'+saida+' .coluna1').html('<img src="./img/escada.png">');
+            $('.linha'+entrada+' .coluna6').html('<img src="./img/escada_saida.png">');
+            $('.linha'+entrada+' .coluna6').css('background-color','lightgrey');
+            $('.linha'+saida+' .coluna1').html('<img class="escadaSaida" src="./img/escada_entrada.png">');
         }
     }
 
@@ -125,6 +127,7 @@ $( document ).ready(function() {
 
         $('#btnSubir').show();
 
+        activateStressBox();
     });
 
     $('.boxLabirinto td').click(function(){
@@ -133,8 +136,10 @@ $( document ).ready(function() {
         var conteudoBau = random(['armadilha','espada','cetro','bota','anel','pocao']);
         var color = $(this).css('background-color');
 
-        if($(this).html() == '<img src="./img/bau.png">')
+        if($(this).html() == '<img src="./img/bau.png">'){
             $(this).html('<img src="./img/'+conteudoBau+'.png">');
+            $('.'+conteudoBau+' img').css('filter','opacity(1)');
+        }
 
         if($(this).html() == ''){
             if(conteudoTile == 'buraco')
@@ -149,30 +154,43 @@ $( document ).ready(function() {
 
     });
 
-    $('.bota, .anel').click(function(){
+    $('.bauVilao').on('click',function(){
 
-        var color = $(this).css('color');
+        var conteudoBau = random(['armadilha','espada','cetro','bota','anel','pocao']);
+        
+        if(($(this).html() == '<img src="./img/bau.png">') || 
+            ($(this).html() == '<img src="./img/bau.png" style="filter: opacity(1);">') ||
+            ($(this).html() == '<img src="./img/bau.png" style="filter: opacity(0.3);">')){
+            $(this).html('<img src="./img/'+conteudoBau+'.png">');
+            $('.bauVilao img').css('filter','opacity(1)');
+        }
+        
+    });
 
-        if(color == 'rgb(0, 0, 0)')
-            $(this).css('color','grey');
+    $('.bota img, .anel img').click(function(){
+
+        var color = $(this).css('filter');
+
+        if(color == 'opacity(1)')
+            $(this).css('filter','opacity(0.3)');
         else
-            $(this).css('color','black');
+            $(this).css('filter','opacity(1)');
 
     });
 
     $('#btnSubir').click(function(){
         
-        /*var colunaAntiga = $("td:contains('Saída')").attr('class'); 
-        var linhaAntiga = $("td:contains('Saída')").parent().attr('class');
+        var colunaAntiga = $(".escadaSaida").parent().attr('class'); 
+        var linhaAntiga = $(".escadaSaida").parent().parent().attr('class');
 
         if(colunaAntiga == 'coluna6')
             lado = 'direito';
         else
             lado = 'esquerdo';
-        */
+        
         limparLabirinto();
 
-        gerarEntradas(randomNumber(1,6),randomNumber(1,6),'esquerdo');
+        gerarEntradas(linhaAntiga[5],randomNumber(1,6),lado);
 
         gerarVilao();
 
