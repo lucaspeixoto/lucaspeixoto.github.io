@@ -94,7 +94,7 @@ $( document ).ready(function() {
         $('td:contains("Múmia")').css('color', 'blue');
         $('td:contains("Fantasma")').css('color', 'purple');
         $('td:contains("Esqueleto")').css('color', 'maroon');
-        $('td:contains("Baú")').css('color', 'yellow');
+        $('td:contains("Baú")').css('color', 'fuchsia');
         $('td:contains("Buraco")').css('background-color', 'black');
 
         $('td:contains("Cavaleiro da Morte")').css('color', 'green');
@@ -202,6 +202,8 @@ $( document ).ready(function() {
 
         $('.numeroAndar').html(Number(numero+1));
         $('.pvsVilao').attr('value',Number(numero+2));
+
+        $('.bota, .anel').css('color','grey');
 
         colorir();
     });
