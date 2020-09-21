@@ -123,7 +123,7 @@ $( document ).ready(function() {
         gerarVilao();
 
         $('.numeroAndar').html('1');
-        $('.pvsVilao').attr('value','2');
+        $('.pvsVilao').val(2);
 
         $('#btnSubir').show();
 
