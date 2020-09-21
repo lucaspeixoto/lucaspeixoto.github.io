@@ -197,7 +197,7 @@ $( document ).ready(function() {
         var numero = Number($('.numeroAndar').html());
 
         $('.numeroAndar').html(Number(numero+1));
-        $('.pvsVilao').attr('value',Number(numero+2));
+        $('.pvsVilao').val(Number(numero+2));
 
         $('.bota, .anel').css('color','grey');
 
