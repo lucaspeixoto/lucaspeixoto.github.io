@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160380893-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-160380893-1');
+    </script>
+
+    <title>Pokémon: A Jornada - Materiais Fate</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="./img/pokemon-logo.webp">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+<body class="w3-white w3-content" style="max-width:1600px">
+
+<script>
+fetch("./nav.html")
+  .then(response => {
+    return response.text()
+  })
+  .then(data => {
+    document.querySelector("nav").innerHTML = data;
+  });
+</script>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-light-grey" style="z-index:3;width:300px;" id="mySidebar"></nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Header -->
+  <header id="portfolio">
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <div class="w3-container">
+    	<h1><b>Pokémon: A Jornada</b></h1>
+    </div>
+  </header>
+  
+  <div class="w3-container w3-padding-large" style="margin-bottom:32px">
+
+    <span class="hidePrint">
+      Clique em <i class="fa fa-music"></i> para ativar/desativar o som.
+      <p>Gerar Pokémon, Treinador, Equipe Rocket leva em consideração o mapa e o terreno.
+        <br><strong>Ao atualizar a página a caixa será limpa.</strong> <i>Caixas de dano são interativas!</i> 
+      <br><i>Conteúdo gerado com base no jogo criado por mim. (<a href="https://drive.google.com/file/d/1kL4R6_g6N3b0DRCocvjSNkFDQ_FE3xqZ/view" target="_blank">pdf</a>)</i></p>
+      <p>
+        <select id="selectMapa" class="w3-button w3-teal">
+          <option value="cidadePallet">Cidade de Pallet</option>
+          <option value="rota1">Rota 01</option>
+          <option value="cidadeViridiana">Cidade de Viridiana</option>
+          <option value="rota22">Rota 22</option>
+          <option value="rota2">Rota 02</option>
+          <option value="florestaViridiana">Floresta de Viridiana</option>
+          <option value="saidaFloresta">Saída da Floresta</option>
+          <option value="cidadePewter">Cidade de Pewter</option>
+        </select>
+
+        <select id="selectTerreno" class="w3-button w3-teal">
+          <option value="vila">Vila</option>
+          <option value="estrada">Estrada</option>
+          <option value="mato">Mato</option>
+          <option value="relva">Relva</option>
+          <option value="floresta">Floresta</option>
+        </select>
+
+        <button id="btnGerarPokemon" class="w3-button w3-teal w3-hover-black"><i class="fa fa-bug"></i> Pokémon</button>
+        <button id="btnGerarTreinador" class="w3-button w3-teal w3-hover-black"><i class="fa fa-male"></i> Treinador</button>
+        <button id="btnGerarRocket" class="w3-button w3-teal w3-hover-black"><i class="fa fa-rocket"></i> Eq. Rocket</button>
+      </p>
+      <p>
+        <button id="btnGerarEncontro" class="w3-button w3-teal w3-hover-black"><i class="fa fa-bicycle"></i> Encontro</button>
+        <button id="btnGerarItemComum" class="w3-button w3-teal w3-hover-black"><i class="fa fa-usd"></i> Item Comum</button>
+        <button id="btnGerarItemRaro" class="w3-button w3-teal w3-hover-black"><i class="fa fa-usd"></i> Item Raro</button>
+        <button id="btnGerarGinasio" class="w3-button w3-teal w3-hover-black"><i class="fa fa-star"></i> Líder</button>
+        <select id="selectGinasio" class="w3-button w3-teal">
+          <option value="Pewter">Pewter</option>
+        </select>
+        <button id="btnUndo" style="color: red;" class="w3-button w3-hover-red">Undo</button>
+        <button id="btnSom" style="color: teal;" class="w3-button w3-hover-red" value="unmute"><i class="fa fa-music"></i></button>
+      </p>
+      
+    </span>
+    
+    <div class="watermark">Jogo criado em https://lucaspeixoto.github.io</div>
+    <input type="hidden" id="musicaTocando" value="">
+
+    <div class="boxPokemon"></div>
+    
+    <a href="javascript: window.print();" id="btnPrint"><i class="fa fa-file-pdf-o w3-hover-opacity" style="color: red;"></i> PDF</a>
+    
+  </div> 
+
+<!-- End page content -->
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="./js/howler.min.js"></script>
+<script src="./js/pokemon_jornada.js" type="text/javascript"></script>
+<script src="./js/functions.js" type="text/javascript"></script>
+<script src="./js/script.js" type="text/javascript"></script>
+
+</body>
+</html>
