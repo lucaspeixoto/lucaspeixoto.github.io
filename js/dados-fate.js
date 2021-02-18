@@ -204,12 +204,12 @@ $( document ).ready(function() {
 
         $('.boxRonin').html(
         '<div class="boxNPC">'+
-          '<center><p><img src="./img/fate_'+resultado[0]+'.png">&nbsp;&nbsp;&nbsp;&nbsp;'+
-          '<img src="./img/fate_'+resultado[1]+'.png">&nbsp;&nbsp;&nbsp;&nbsp;'+
-          '<img src="./img/fate_'+resultado[2]+'.png">&nbsp;&nbsp;&nbsp;&nbsp;'+
-          '<img src="./img/fate_'+resultado[3]+'.png"></p>'+
-          '<div><h3><strong>('+bonus+')+('+resultado[4]+') = '+resultado[5]+'</strong>&nbsp;&nbsp;&nbsp;&nbsp;<i>('+ladder(resultado[5])+')</i></h3></div>'+
-          '<h5><p>'+resultado[5]+' | '+target+' = <strong>'+resultado[6]+'</strong></p><p>'+resultado[7]+'</p></h5></center>'+
+          '<center><p><img src="./img/fate_'+resultado[0]+'.png" style="width: 60px;">&nbsp;&nbsp;&nbsp;'+
+          '<img src="./img/fate_'+resultado[1]+'.png" style="width: 60px;">&nbsp;&nbsp;&nbsp;'+
+          '<img src="./img/fate_'+resultado[2]+'.png" style="width: 60px;">&nbsp;&nbsp;&nbsp;'+
+          '<img src="./img/fate_'+resultado[3]+'.png" style="width: 60px;"></p>'+
+          '<div><h4><strong>('+bonus+')+('+resultado[4]+') = '+resultado[5]+'</strong>&nbsp;&nbsp;&nbsp;&nbsp;<i>('+ladder(resultado[5])+')</i></h4></div>'+
+          '<h6><p>'+resultado[5]+' | '+target+' = <strong>'+resultado[6]+'</strong></p><p>'+resultado[7]+'</p></h6></center>'+
         '</div>');
 
     });
@@ -220,11 +220,11 @@ $( document ).ready(function() {
 
         $('.boxRonin').html(
         '<div class="boxNPC">'+
-          '<center><p><img src="./img/fate_'+resultado[0]+'.png">&nbsp;&nbsp;&nbsp;&nbsp;'+
-          '<img src="./img/fate_'+resultado[1]+'.png">&nbsp;&nbsp;&nbsp;&nbsp;'+
-          '<img src="./img/fate_'+resultado[2]+'.png">&nbsp;&nbsp;&nbsp;&nbsp;'+
-          '<img src="./img/fate_'+resultado[3]+'.png"></p>'+
-          '<div><h3><strong>'+resultado[4]+'</strong>&nbsp;&nbsp;&nbsp;&nbsp;<i>('+ladder(resultado[4])+')</i></h3></div></center>'+
+          '<center><p><img src="./img/fate_'+resultado[0]+'.png" style="width: 60px;">&nbsp;&nbsp;&nbsp;'+
+          '<img src="./img/fate_'+resultado[1]+'.png" style="width: 60px;">&nbsp;&nbsp;&nbsp;'+
+          '<img src="./img/fate_'+resultado[2]+'.png" style="width: 60px;">&nbsp;&nbsp;&nbsp;'+
+          '<img src="./img/fate_'+resultado[3]+'.png" style="width: 60px;"></p>'+
+          '<div><h4><strong>'+resultado[4]+'</strong>&nbsp;&nbsp;&nbsp;&nbsp;<i>('+ladder(resultado[4])+')</i></h4></div></center>'+
         '</div>');
 
     });
