@@ -10,6 +10,29 @@ $( document ).ready(function() {
     return ['Artes','Atletismo','Combate à Distância','Combate Corporal','Condução','Conhecimento','Idiomas','Investigação','Manipulação','Sobrevivência','Subterfúgio','Tecnologia'];
   };
 
+  function periciasCthulhu() {
+    return ['Artes','Atletismo','Combate à Distância','Combate Corporal','Condução','Conhecimento','Idiomas','Investigação','Magia','Manipulação','Sobrevivência','Subterfúgio','Tecnologia'];
+  };
+
+  function feiticosCthulhu(){
+    return ['Afastar Servos dos Antigos (pág. 28)','Alarme (pág. 28)','Aprisionar Corpo (pág. 28)','Aprisionar Espírito (pág. 29)','Aprisionar Entidade (pág. 29)','Coma (pág. 29)','Comandar Abissais (pág. 29)','Comandar Byakhee (pág. 29)','Comandar Carniçais (pág. 29)','Comandar Desmortos (pág. 29)','Comandar Entidade (pág. 29)','Contra Feitiço (pág. 29)','Criar Desmorto (pág. 29)','Criar Runa Arcana (pág. 29)','Curar Doença (pág. 30)','Curar Ferimento (pág. 30)','Debilitar Saúde (pág. 30)','Debilitar Postura (pág. 30)','Debilitar Vontade (pág. 30)','Doença (pág. 30)','Dominar Animais/Pessoas (pág. 30)','Enlouquecer (pág. 30)','Escudo Arcano (pág. 30)','Ferir (pág. 30)','Fogo Fátuo (pág. 30)','Fortalecer Arma/Armadura (pág. 31)','Invisibilidade (pág. 31)','Invocar Animal (pág. 31)','Invocar Coisa Rato (pág. 31)','Ler a Mente (pág. 31)','Luz Tênue (pág. 31)','Medo (pág. 31)','Portal (pág. 31)','Projeção Astral (pág. 31)','Ressurreição (pág. 32)','Sugar Espírito (pág. 32)']
+  }
+
+  function nomeSobrevivente(sexo){
+    switch(sexo){
+      case "masc":
+        return ['Liam','Noah','William','James','Oliver','Benjamin','Elijah','Lucas','Mason','Logan','Alexander','Ethan','Jacob','Michael','Daniel','Henry','Jackson','Sebastian','Aiden','Matthew','Samuel','David','Joseph','Carter','Owen','Wyatt','John','Jack','Luke','Jayden','Dylan','Grayson','Levi','Isaac','Gabriel','Julian','Mateo','Anthony','Jaxon','Lincoln','Joshua','Christopher','Andrew','Theodore','Caleb','Ryan','Asher','Nathan','Thomas','Leo'];
+        break;
+      case "fem":
+        return ['Emma','Olivia','Ava','Isabella','Sophia','Charlotte','Mia','Amelia','Harper','Evelyn','Abigail','Emily','Elizabeth','Mila','Ella','Avery','Sofia','Camila','Aria','Scarlett','Victoria','Madison','Luna','Grace','Chloe','Penelope','Layla','Riley','Zoey','Nora','Lily','Eleanor','Hannah','Lillian','Addison','Aubrey','Ellie','Stella','Natalie','Zoe','Leah','Hazel','Violet','Aurora','Savannah','Audrey','Brooklyn','Bella','Claire','Skylar'];
+        break;
+      case "sobrenome":
+        return ['Smith','Johnson','Williams','Jones','Brown','Davis','Miller','Wilson','Moore','Taylor','Anderson','Thomas','Jackson','White','Harris','Martin','Thompson','Garcia','Martinez','Robinson','Clark','Rodriguez','Lewis','Lee','Walker','Hall','Allen','Young','Hernandez','King','Wright','Lopez','Hill','Scott','Green','Adams','Baker','Gonzalez','Nelson','Carter','Mitchell','Perez','Roberts','Turner','Phillips','Campbell','Parker','Evans','Edwards','Collins'];
+        break;
+    }
+  }
+
+
   var pactos = ['Aurora Dourada','Brujeria','Feri','Onmyodo','Rosacruz','Zangbeto'];
   var linhagens = ['Arbac-Apuhc','Hamtammr','Loup-Garou','Luison','Óboroten','Volkodlak'];
   var castas = ['Adze','Gaki','Ghul','Lilitu','Vyrolakos','Baital'];
@@ -165,9 +188,38 @@ $( document ).ready(function() {
       case 'armadura':
         return ['Roupas pesadas (RD 1)','Roupas pesadas (RD 1)','Roupas pesadas (RD 1)','Colete Leve (RD 1)','Colete Leve (RD 1)','Colete Pesado (RD 2)','Colete Pesado (RD 2)','Armadura de Couro (RD 2)','Armadura Tática (RD 3)'];
         break;
+      case 'aleatorio':
+        return ['Arma/Armadura (Tabela 14)','Arma/Armadura (Tabela 14)','Equipamento (Tabela 16)','Equipamento (Tabela 16)','Recurso (Tabela 17)','Recurso (Tabela 17)','Veículo (Tabela 18)','Veículo (Tabela 18)','Artefato Poderoso (Tabela 19)'];
+        break;
+      case 'equipamento':
+        return ['Roupas','Roupas de Frio','Mochila','Coldre','Corda','Isqueiro','Algemas','Lanterna','Sinaleiro','Walkie Talkie','Rádio Comunicador','Binóculo','Mira Telescópica','Megafone','Óculos Infravermelhos','Kit de Primeiros Socorros','Kit de Estudo','Kit de Sobrevivência','Kit de Arrombamento','Kit de Eletrônica','Ferramentas Mecânicas'];
+        break;
+      case 'arma-armadura':
+        return ['Faca','Punhal','Soqueira','Armadura Tática','Facão','Machado','Martelo','Colete','Pistola','Revólver','Colete Pesado','Espingarda','Escopeta','Roupas Pesadas','Metralhadora','Fuzil','Granada','Explosivo'];
+        break;
+      case 'recurso':
+        return ['1D10 Combustível','1D10 Peças','1D10 Munições','1D10 Comidas','1D10 Remédios','5+1D10 Peças ','5+1D10 Munições','5+1D10 Comidas','5+1D10 Remédios'];
+        break;
+      case 'veiculo':
+        return ['Moto','Carro pequeno','Carro grande','Ônibus','Helicóptero'];
+        break;
+      case 'artefato':
+        return ['Necronomicon','Escultura de Argila','Adaga Ritual','Grimório','Manto Amarelo','Coroa de Carcosa','Amuleto de Proteção','Escrituras Sagradas','Veneno de Homem Serpente','Teia dos Sonhos','Balas Abençoadas','Lâmina Abençoada','Cristal de Energia','Página do Necronomicon','Pó de Ibn-Gazi','Cajado de Ossos','Amuleto de Yig','Teia dos Sonhos','Chave Prateada','Bíblia do Rei James'];
+        break;
     }
 
   };
+
+  function melhorias(tipo){
+    switch(tipo){
+      case 'espaco':
+        return ['Passagem Secreta (Espaço -1)','Horta (Espaço -2)','Garagem (Espaço -1)','Dormitório (Espaço -2)','Criadouro (Espaço -2)','Coletor de Água (Espaço -1)','Ambulatório (Espaço -1)','Barricada (Espaço -1)','Biblioteca (Espaço -1)','Câmara Ritualística (Espaço -1)'];
+        break;
+      case 'tecnologia':
+        return ['Sistema de Armas (Tecnologia -2)','Rádio Comunicador (Tecnologia -1)','Posto de Observação (Tecnologia -1, Pré-Requisito: Eletricidade)','Oficina (Espaço -1, Tecnologia -1)','Eletricidade (Tecnologia -2)','Defesas de Perímetro (Tecnologia -1)','Cerca Eletrificada (Tecnologia -1, Pré-Requisito: Eletricidade)'];
+        break;
+    }
+  }
 
   $('#btnGerarBruxo').click(function(){
 
@@ -338,6 +390,164 @@ $( document ).ready(function() {
     );
 
     $('.boxPersonagemFate').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '550px', 'box-shadow': '5px 5px 10px #ef9292'});
+
+  });
+
+  $('#btnGerarSobrevivente').click(function(){
+
+    var valAtributos = exclusiveRandom(atributos(),3);
+    var valPericias = exclusiveRandom(periciasCthulhu(),3);
+    var valFeiticos = '';
+    var feiticosSobrevivente = '';
+
+    if((valPericias[0] == 'Magia') || (valPericias[1] == 'Magia') || (valPericias[2] == 'Magia')){
+
+      feiticosSobrevivente = '<div><strong>FEITIÇOS</strong>'+valFeiticos+'</div>';
+
+      if(valAtributos[2] == 2){
+        valFeiticos = exclusiveRandom(feiticosCthulhu(),2);
+
+        feiticosSobrevivente = feiticosSobrevivente + '<div class="textIndent">'+valFeiticos[0]+'</div>';
+        feiticosSobrevivente = feiticosSobrevivente + '<div class="textIndent">'+valFeiticos[1]+'</div>';
+
+      } else if (valAtributos[2] == 3){
+        valFeiticos = exclusiveRandom(feiticosCthulhu(),3);
+
+        feiticosSobrevivente = feiticosSobrevivente + '<div class="textIndent">'+valFeiticos[0]+'</div>';
+        feiticosSobrevivente = feiticosSobrevivente + '<div class="textIndent">'+valFeiticos[1]+'</div>';
+        feiticosSobrevivente = feiticosSobrevivente + '<div class="textIndent">'+valFeiticos[2]+'</div>';
+
+      } else if (valAtributos[2] == 4){
+        valFeiticos = exclusiveRandom(feiticosCthulhu(),4);
+        
+        feiticosSobrevivente = feiticosSobrevivente + '<div class="textIndent">'+valFeiticos[0]+'</div>';
+        feiticosSobrevivente = feiticosSobrevivente + '<div class="textIndent">'+valFeiticos[1]+'</div>';
+        feiticosSobrevivente = feiticosSobrevivente + '<div class="textIndent">'+valFeiticos[2]+'</div>';
+        feiticosSobrevivente = feiticosSobrevivente + '<div class="textIndent">'+valFeiticos[3]+'</div>';
+      }
+
+      feiticosSobrevivente = feiticosSobrevivente + '</div>';
+    }
+
+    $('.boxPersonagemFate').html(
+      '<center><h4>'+random(nomeSobrevivente(random(['fem','masc'])))+' '+random(nomeSobrevivente('sobrenome'))+'</h4></center>'+
+      '<div><strong>ATRIBUTOS</strong>'+
+      '<div class="textIndent"><strong>Corpo:</strong> '+valAtributos[0]+'</div>'+
+      '<div class="textIndent"><strong>Espírito:</strong> '+valAtributos[1]+'</div>'+
+      '<div class="textIndent"><strong>Mente:</strong> '+valAtributos[2]+'</div>'+
+      '<br><div class="textIndent"><strong>Saúde:</strong> '+Number(valAtributos[0]+5)+'</div>'+
+      '<div class="textIndent"><strong>Postura:</strong> '+Number(valAtributos[1]+5)+'</div>'+
+      '<div class="textIndent"><strong>Vontade:</strong> '+Number(valAtributos[2]+5)+'</div></div><br>'+
+      '<div><strong>PERÍCIAS</strong>'+
+      '<div class="textIndent">'+valPericias[0]+', '+valPericias[1]+' e '+valPericias[2]+'</div><br>'+
+      '<div><strong>PERTENCES</strong>'+
+      '<div class="textIndent">'+random(pertences(random(['corporal','distancia'])))+'</div>'+
+      '<div class="textIndent">'+random(pertences('armadura'))+'</div>'+
+      '<div class="textIndent">'+random(pertences('equipamento'))+'</div>'+
+      '<div class="textIndent">'+random(pertences(random(['arma-armadura','arma-armadura','equipamento','equipamento','recurso','recurso','veiculo','veiculo','artefato'])))+'</div>'+
+      '<div class="textIndent">'+random(pertences(random(['arma-armadura','arma-armadura','equipamento','equipamento','recurso','recurso','veiculo','veiculo','artefato'])))+'</div>'+
+      '<div class="textIndent">'+randomNumber(5,15)+' comidas</div>'+
+      '<div class="textIndent">'+randomNumber(1,10)+' remédios</div>'+
+      '<div class="textIndent">'+randomNumber(1,10)+' munições</div>'+
+      '</div><br>'+
+      feiticosSobrevivente
+    );
+
+    $('.boxPersonagemFate').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '550px', 'box-shadow': '5px 5px 10px #70d670'});
+
+  });
+
+  $('#btnGerarRefugio').click(function(){
+
+    var valTipo = random(['Residência','Câmara','Galpão','Morada','Fazenda']);
+    var valLocalizacao = '';
+    var valMelhorias = '';
+
+    if(valTipo == 'Residência'){
+      valLocalizacao = 'Escombros';
+      valDefesa = '50';
+      valEspaco = '5';
+      valTecnologia = '5';
+      valEspacos = exclusiveRandom(melhorias('espaco'),2);
+      valTecnologias = exclusiveRandom(melhorias('tecnologia'),2);
+
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valEspacos[0]+'</div>';
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valEspacos[1]+'</div>';
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valTecnologias[0]+'</div>';
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valTecnologias[1]+'</div>';
+    }
+
+    if(valTipo == 'Câmara'){
+      valLocalizacao = 'Subterrâneo';
+      valDefesa = '70';
+      valEspaco = '3';
+      valTecnologia = '5';
+      valEspacos = exclusiveRandom(melhorias('espaco'),1);
+      valTecnologias = exclusiveRandom(melhorias('tecnologia'),2);
+
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valEspacos[0]+'</div>';
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valTecnologias[0]+'</div>';
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valTecnologias[1]+'</div>';
+    }
+
+    if(valTipo == 'Galpão'){
+      valLocalizacao = 'Ruínas';
+      valDefesa = '30';
+      valEspaco = '7';
+      valTecnologia = '5';
+      valEspacos = exclusiveRandom(melhorias('espaco'),3);
+      valTecnologias = exclusiveRandom(melhorias('tecnologia'),2);
+
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valEspacos[0]+'</div>';
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valEspacos[1]+'</div>';
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valEspacos[2]+'</div>';
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valTecnologias[0]+'</div>';
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valTecnologias[1]+'</div>';
+    }
+
+    if(valTipo == 'Morada'){
+      valLocalizacao = 'Litoral';
+      valDefesa = '50';
+      valEspaco = '5';
+      valTecnologia = '5';
+      valEspacos = exclusiveRandom(melhorias('espaco'),2);
+      valTecnologias = exclusiveRandom(melhorias('tecnologia'),2);
+
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valEspacos[0]+'</div>';
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valEspacos[1]+'</div>';
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valTecnologias[0]+'</div>';
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valTecnologias[1]+'</div>';
+    }
+
+    if(valTipo == 'Fazenda'){
+      valLocalizacao = 'Ermo';
+      valDefesa = '30';
+      valEspaco = '9';
+      valTecnologia = '3';
+      valEspacos = exclusiveRandom(melhorias('espaco'),4);
+      valTecnologias = exclusiveRandom(melhorias('tecnologia'),1);
+
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valEspacos[0]+'</div>';
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valEspacos[1]+'</div>';
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valEspacos[2]+'</div>';
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valEspacos[3]+'</div>';
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valTecnologias[0]+'</div>';
+    }
+
+    $('.boxPersonagemFate').html(
+      '<center><h4>Refúgio</h4></center>'+
+      '<div class="textIndent"><strong>Tipo:</strong> '+valTipo+'</div>'+
+      '<div class="textIndent"><strong>Localização:</strong> '+valLocalizacao+'</div><br>'+
+      '<div><strong>ATRIBUTOS</strong>'+
+      '<div class="textIndent"><strong>Defesa:</strong> '+valDefesa+'</div>'+
+      '<div class="textIndent"><strong>Espaço:</strong> '+valEspaco+'</div>'+
+      '<div class="textIndent"><strong>Tecnologia:</strong> '+valTecnologia+'</div></div><br>'+
+      '<div><strong>MELHORIAS</strong>'+
+      valMelhorias+
+      '</div>'
+    );
+
+    $('.boxPersonagemFate').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '550px', 'box-shadow': '5px 5px 10px #70d670'});
 
   });
 
