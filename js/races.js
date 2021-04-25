@@ -15,11 +15,17 @@ function races(type='') {
     		}
     		break;
 
-    	   case "goblin":
+    	case "goblin":
     		return {
 
 			    aspects: ['Goblin Bucho-de-Ferro','Goblin Couro-Chamuscado'],
 			    stunts: ['<strong>Funileiro de Sucata:</strong> O goblin é capaz de fazer itens úteis que duram uma cena a partir de lixo. Ele também recebe 3 caixas de estresse de equipamento exclusivas para sucata.','<strong>Montaria Goblin:</strong> O goblin tem um cão que lhe serve como montaria. O cão tem uma ficha como em FAE e tem ações e turnos próprios.'],
+			    'Goblin Armadilheiro': {
+					names: ['Gnaalx','Fiq','Vres','Eag','Rac','Zrieguct','Kriotiakt','Zryknuq','Weazlurd','Brisboiz','Aalb','Iegz','Blit','Riets','Ylx','Padniakt','Wybhylb','Zuznucs','Gluigrord','Gnaterm','Rokz','Stalk','Vragz','Bokt','Aq','Woaard','Pialdikt','Srizierm','Cysuix','Plorrosz'],
+			        skills: ['Ofícios'],
+			        approach: ['Sorrateiro'],
+			        stunts: ['<strong>Improvisador:</strong> O goblin armadilheiro pode improvisar na hora de criar arapucas e usar o que estiver ao seu redor para fazer qualquer tipo de arapuca.','<strong>Buliçoso:</strong> O goblin armadilheiro recebe um bônus de +1 em rolagens de Atletismo (Ágil) para evitar cair em uma armadilha ou arapuca.']
+			    },
 			    'Goblin Bucho-de-Ferro': {
 					names: ['Gnaalx','Fiq','Vres','Eag','Rac','Zrieguct','Kriotiakt','Zryknuq','Weazlurd','Brisboiz','Aalb','Iegz','Blit','Riets','Ylx','Padniakt','Wybhylb','Zuznucs','Gluigrord','Gnaterm','Rokz','Stalk','Vragz','Bokt','Aq','Woaard','Pialdikt','Srizierm','Cysuix','Plorrosz'],
 			        skills: ['Vigor'],
@@ -34,7 +40,6 @@ function races(type='') {
 			    }
 			}
     		break;
-
 
     	case "halfling":
     		return {
