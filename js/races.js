@@ -18,7 +18,7 @@ function races(type='') {
     	case "goblin":
     		return {
 
-			    aspects: ['Goblin Bucho-de-Ferro','Goblin Couro-Chamuscado'],
+			    aspects: ['Goblin Bucho-de-Ferro','Goblin Couro-Chamuscado','Goblin Armadilheiro'],
 			    stunts: ['<strong>Funileiro de Sucata:</strong> O goblin é capaz de fazer itens úteis que duram uma cena a partir de lixo. Ele também recebe 3 caixas de estresse de equipamento exclusivas para sucata.','<strong>Montaria Goblin:</strong> O goblin tem um cão que lhe serve como montaria. O cão tem uma ficha como em FAE e tem ações e turnos próprios.'],
 			    'Goblin Armadilheiro': {
 					names: ['Gnaalx','Fiq','Vres','Eag','Rac','Zrieguct','Kriotiakt','Zryknuq','Weazlurd','Brisboiz','Aalb','Iegz','Blit','Riets','Ylx','Padniakt','Wybhylb','Zuznucs','Gluigrord','Gnaterm','Rokz','Stalk','Vragz','Bokt','Aq','Woaard','Pialdikt','Srizierm','Cysuix','Plorrosz'],
