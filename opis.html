@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+			<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160380893-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-160380893-1');
+		</script>
+
+		<title>OPIS - Materiais Fate</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" href="./img/favicon.ico">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+	</head>
+<body class="w3-white w3-content" style="max-width:1600px">
+
+<script>
+fetch("./nav.html")
+  .then(response => {
+    return response.text()
+  })
+  .then(data => {
+    document.querySelector("nav").innerHTML = data;
+  });
+</script>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-light-grey" style="z-index:3;width:300px;" id="mySidebar"></nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Header -->
+  <header id="portfolio">
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <div class="w3-container">
+      <h1><b>OPIS - Oráculo para Iniciantes no Solo</b></h1>
+    </div>
+  </header>
+  
+  <div class="w3-container w3-padding-large" style="margin-bottom:32px">
+
+    <span class="hidePrint">
+      <p><strong>Ao atualizar a página a caixa será limpa.</strong>
+        <br><i>Conteúdo gerado com base no oráculo criado por mim. (<a href="https://drive.google.com/file/d/1_xR4khniaKur-fkxOTjK7_4NtzLu_rgJ/view" target="_blank">link</a>)</i>
+        <br><i>Complicações, eventos, locais e NPCs sempre estão relacionados a um ambiente (hostil, neutro ou amigável)</i>
+      </p>
+      
+      <p>
+        <button id="btnGerarSN" class="w3-button w3-teal w3-hover-black">Sim/Não</button>
+        <button id="btnGerarSNMais" class="w3-button w3-teal w3-hover-black">Sim+/Não</button>
+        <button id="btnGerarSNMenos" class="w3-button w3-teal w3-hover-black">Sim/Não+</button>
+        <button id="btnGerarInspiracao" class="w3-button w3-teal w3-hover-black">Inspiração</button>
+        <button id="btnGerarDetalhes" class="w3-button w3-teal w3-hover-black">Detalhes</button>
+      </p>
+      <p>
+        <select id="selectAmbiente" class="w3-button w3-teal">
+          <option value="">Ambiente</option>
+          <option value="h">Hostil</option>
+          <option value="n">Neutro</option>
+          <option value="a">Amigável</option>
+        </select>
+        <button id="btnGerarComplicacao" class="w3-button w3-teal w3-hover-black">Complicação</button>
+        <button id="btnGerarEvento" class="w3-button w3-teal w3-hover-black">Evento</button>
+        <button id="btnGerarLocal" class="w3-button w3-teal w3-hover-black">Local</button>
+        <button id="btnGerarNPC" class="w3-button w3-teal w3-hover-black">NPC</button>
+      </p>
+
+    </span>
+
+    <div class="watermark">Jogo criado em https://lucaspeixoto.github.io</div>
+
+    <div class="boxOpis"></div>
+
+    <a href="javascript: window.print();" id="btnPrint"><i class="fa fa-file-pdf-o w3-hover-opacity" style="color: red;"></i> PDF</a>
+    
+  </div> 
+
+<!-- End page content -->
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="./js/functions.js" type="text/javascript"></script>
+<script src="./js/opis.js" type="text/javascript"></script>
+
+</body>
+</html>
