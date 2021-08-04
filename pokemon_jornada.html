@@ -53,40 +53,74 @@ fetch("./nav.html")
 
     <span class="hidePrint">
       Clique em <i class="fa fa-music"></i> para ativar/desativar o som.
-      <p>Gerar Pokémon, Treinador, Equipe Rocket e Encontro leva em consideração o mapa e o terreno.
+      <p>Gerar Pokémon, Treinador, Equipe Rocket e Encontro leva em consideração a quantidade de insígnias e o terreno.
         <br><strong>Ao atualizar a página a caixa será limpa.</strong> <i>Caixas de dano são interativas!</i> 
       <br><i>Conteúdo gerado com base no jogo criado por mim. (<a href="https://drive.google.com/file/d/1kL4R6_g6N3b0DRCocvjSNkFDQ_FE3xqZ/view" target="_blank">pdf</a>)</i></p>
-      <p>
-        <select id="selectMapa" class="w3-button w3-teal">
-          <option value="cidadePallet">Cidade de Pallet</option>
-          <option value="rota1">Rota 01</option>
-          <option value="cidadeViridiana">Cidade de Viridiana</option>
-          <option value="rota22">Rota 22</option>
-          <option value="rota2">Rota 02</option>
-          <option value="florestaViridiana">Floresta de Viridiana</option>
-          <option value="saidaFloresta">Saída da Floresta</option>
-          <option value="cidadePewter">Cidade de Pewter</option>
+      <p style="border: black 1px solid; max-width: 550px; border-radius: 5px; padding: 5px;">
+        Insígnias
+        <select id="selectInsignias" class="w3-button w3-teal">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
         </select>
-
+        <span id="qttd_insignias">Nível pokémons: 1-6 / Nível obediência: 20</span>
+      </p>
+      <p>
         <select id="selectTerreno" class="w3-button w3-teal">
-          <option value="vila">Vila</option>
-          <option value="estrada">Estrada</option>
-          <option value="mato">Mato</option>
+          <option value="planicie">Planície</option>
           <option value="relva">Relva</option>
           <option value="floresta">Floresta</option>
+          <option value="colina">Colina</option>
+          <option value="montanha">Montanha</option>
+          <option value="agua">Água</option>
+          <option disabled>──────────</option>
+          <option value="mata">Mata fechada</option>
+          <option value="caverna">Caverna</option>
+          <option value="plato">Platô elevado</option>
+          <option value="ilha">Ilha</option>
+          <option disabled>──────────</option>
+          <option value="pewter">Monte Lua</option>
+          <option value="cerulean">Usina Elétrica</option>
+          <option value="vermilion">Ilhas Seafoam</option>
+          <option value="lavender">Torre Pokémon</option>
+          <option value="celadon">Esconderijo Rocket</option>
+          <option value="fuchsia">Safari</option>
+          <option value="cinnabar">Vulcão</option>
+          <option value="planalto">Rua da Vitória</option>
         </select>
 
+        <button id="btnGerarEncontro" class="w3-button w3-teal w3-hover-black"><i class="fa fa-bicycle"></i> Encontro</button>
         <button id="btnGerarPokemon" class="w3-button w3-teal w3-hover-black"><i class="fa fa-bug"></i> Pokémon</button>
         <button id="btnGerarTreinador" class="w3-button w3-teal w3-hover-black"><i class="fa fa-male"></i> Treinador</button>
         <button id="btnGerarRocket" class="w3-button w3-teal w3-hover-black"><i class="fa fa-rocket"></i> Eq. Rocket</button>
       </p>
       <p>
-        <button id="btnGerarEncontro" class="w3-button w3-teal w3-hover-black"><i class="fa fa-bicycle"></i> Encontro</button>
         <button id="btnGerarItemComum" class="w3-button w3-teal w3-hover-black"><i class="fa fa-usd"></i> Item Comum</button>
         <button id="btnGerarItemRaro" class="w3-button w3-teal w3-hover-black"><i class="fa fa-usd"></i> Item Raro</button>
-        <button id="btnGerarGinasio" class="w3-button w3-teal w3-hover-black"><i class="fa fa-star"></i> Líder</button>
-        <select id="selectGinasio" class="w3-button w3-teal">
+        <button id="btnGerarTM" class="w3-button w3-teal w3-hover-black"><i class="fa fa-cog"></i> TM</button>
+        <button disabled id="btnGerarGinasio" class="w3-button w3-teal w3-hover-black"><i class="fa fa-star"></i> Líder</button>
+        <select disabled id="selectGinasio" class="w3-button w3-teal">
           <option value="Pewter">Pewter</option>
+          <option value="Cerulean">Cerulean</option>
+          <option value="Vermilion">Vermilion</option>
+          <option value="Celadon">Celadon</option>
+          <option value="Fuschia">Fuschia</option>
+          <option value="Dojo">Dojo de Lutas</option>
+          <option value="Silph">Silph Co.</option>
+          <option value="Saffron">Saffron</option>
+          <option value="Cinnabar">Cinnabar</option>
+          <option value="Viridian">Viridian</option>
+          <option value="Lorelei">E4-Lorelei</option>
+          <option value="Bruno">E4-Bruno</option>
+          <option value="Agatha">E4-Agatha</option>
+          <option value="Lance">E4-Lance</option>
+          <option value="Rival">Rival</option>
         </select>
         <button id="btnUndo" style="color: red;" class="w3-button w3-hover-red">Undo</button>
         <button id="btnSom" style="color: teal;" class="w3-button w3-hover-red" value="unmute"><i class="fa fa-music"></i></button>
