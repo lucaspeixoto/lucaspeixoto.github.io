@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+	<head>
+			<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160380893-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-160380893-1');
+		</script>
+
+		<title>Fate e RPG Solo - Lucas Peixoto</title> 
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" href="./img/favicon.ico">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+	</head>
+<body class="w3-white w3-content" style="max-width:1600px">
+
+<script>
+fetch("./nav.html")
+  .then(response => {
+    return response.text()
+  })
+  .then(data => {
+    document.querySelector("nav").innerHTML = data;
+  });
+</script>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-light-grey" style="z-index:3;width:300px;" id="mySidebar"></nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Header -->
+  <header id="portfolio">
+  	<span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <div class="w3-container">
+    	<h1><b>Geradores e autômatos</b></h1>
+    </div>
+  </header>
+
+  <div class="w3-row-padding">
+    <a href="gerador_fate.html">
+      <div class="w3-quarter w3-container w3-margin-bottom">
+        <img src="/img/bg_fantasia.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-light-grey">
+          <center><p>Gerador de Personagem para Fantasia Medieval em Fate</p></center>
+        </div>
+      </div>
+    </a>
+    <a href="gerador_woa.html">
+      <div class="w3-quarter w3-container w3-margin-bottom">
+        <img src="/img/bg_ger_mundosfate.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-light-grey">
+          <center><p>Gerador de Personagem para Mundos de Aventuras em Fate</p></center>
+        </div>
+      </div>
+    </a>
+    <a href="gerador_umdaar.html">
+      <div class="w3-quarter w3-container w3-margin-bottom">
+        <img src="/img/bg_ger_umdaar.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-light-grey">
+          <center><p>Gerador de Aventuras para o cenário Mestres de Umdaar</p></center>
+        </div>
+      </div>
+    </a>
+    <a href="gerador_creatures.html">
+      <div class="w3-quarter w3-container w3-margin-bottom">
+        <img src="/img/bg_ger_criaturas.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-light-grey">
+          <center><p>Gerador de Criaturas Fantásticas em Fate</p></center>
+        </div>
+      </div>
+    </a>
+  </div>
+  <p></p>
+  <div class="w3-row-padding">
+    <a href="opis.html">
+      <div class="w3-quarter w3-container w3-margin-bottom">
+        <img src="/img/bg_opis.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-light-grey">
+          <center><p>Tabelas do OPIS - Oráculo para Iniciantes no Solo</p></center>
+        </div>
+      </div>
+    </a>
+    <a href="gerador_npc.html">
+      <div class="w3-quarter w3-container w3-margin-bottom">
+        <img src="/img/bg_ger_mundosfate.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-light-grey">
+          <center><p>Gerador de Personagens da Narradora em Fate</p></center>
+        </div>
+      </div>
+    </a>
+    <a href="gerador_solo10.html">
+      <div class="w3-quarter w3-container w3-margin-bottom">
+        <img src="/img/bg_ger_solo10.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-light-grey">
+          <center><p>Gerador de Personagens do sistema Solo10</p></center>
+        </div>
+      </div>
+    </a>
+    <a href="c4.html">
+      <div class="w3-quarter w3-container w3-margin-bottom">
+        <img src="/img/bg_ger_c4.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-light-grey">
+          <center><p>Gerador de Personagens do sistema C4</p></center>
+        </div>
+      </div>
+    </a>
+  </div>
+  <p></p>
+  <div class="w3-row-padding">
+    <a href="runas.html">
+      <div class="w3-quarter w3-container w3-margin-bottom">
+        <img src="/img/bg_runas.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-light-grey">
+          <center><p>Tabelas e oráculos do<br>Runas de Óðinn</p></center>
+        </div>
+      </div>
+    </a>
+    <a href="pokemon_jornada.html">
+      <div class="w3-quarter w3-container w3-margin-bottom">
+        <img src="/img/bg_pokemon.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-light-grey">
+          <center><p>Pokémons, encontros, treinadores e mais do Pokémon: A Jornada</p></center>
+        </div>
+      </div>
+    </a>
+    <a href="torre-mortos.html">
+      <div class="w3-quarter w3-container w3-margin-bottom">
+        <img src="/img/bg_torre.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-light-grey">
+          <center><p>Adaptação digital completa de<br>A Torre dos Mortos Vivos</p></center>
+        </div>
+      </div>
+    </a>
+    <a href="notequest.html">
+      <div class="w3-quarter w3-container w3-margin-bottom">
+        <img src="/img/bg_ger_notequest.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-light-grey">
+          <center><p>Simulação do mundo expandido de NoteQuest</p></center>
+        </div>
+      </div>
+    </a>
+  </div>
+  <p></p>
+  <div class="w3-row-padding">
+    <a href="ronin.html">
+      <div class="w3-quarter w3-container w3-margin-bottom">
+        <img src="/img/bg_ger_ronin.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-light-grey">
+          <center><p>Geradores de personagens, tabelas e rolagens do Ronin</p></center>
+        </div>
+      </div>
+    </a>
+    <a href="intrepidos.html">
+      <div class="w3-quarter w3-container w3-margin-bottom">
+        <img src="/img/bg_ger_intrepidos.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-light-grey">
+          <center><p>Tabelas, rolagens e oráculos do Intrépidos!</p></center>
+        </div>
+      </div>
+    </a>
+  </div>
+
+<!-- End page content -->
+</div>
+
+<br>
+<br>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="./js/functions.js" type="text/javascript"></script>
+
+</body>
+</html>
