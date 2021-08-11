@@ -289,7 +289,7 @@ $( document ).ready(function() {
     $('#btnGerarInspiracao').click(function(){
 
         $('.boxOpis').prepend(
-          '<strong>Palavras de inspiração: </strong><i>'+random(opis_insp().substantivo)+' - '+random(opis_insp().adjetivo)+' - '+random(opis_insp().verbo)+'</i><br><br>'
+          '<strong>Palavras de inspiração: </strong><i>'+random(opis_insp().verbo)+' - '+random(opis_insp().substantivo)+' - '+random(opis_insp().adjetivo)+'</i><br><br>'
         );
 
     });
