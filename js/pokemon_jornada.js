@@ -3179,8 +3179,8 @@ $( document ).ready(function() {
             case "Pewter":
 
                 lider = {
-                    imglider: "https://cdn.bulbagarden.net/upload/a/a6/Lets_Go_Pikachu_Eevee_Brock.png",
-                    imginsignia: "https://cdn.bulbagarden.net/upload/d/dd/Boulder_Badge.png",
+                    imglider: "https://cdn2.bulbagarden.net/upload/a/a6/Lets_Go_Pikachu_Eevee_Brock.png",
+                    imginsignia: "https://cdn2.bulbagarden.net/upload/d/dd/Boulder_Badge.png",
                     lider: "Brock",
                     insignia: "Rocha",
                     pokemons: [
@@ -3242,13 +3242,134 @@ $( document ).ready(function() {
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
                 pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
 
-                $('.boxPokemon').prepend('<div class="boxNPC"><strong>Desafiante Liam:</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
+                $('.boxPokemon').prepend('<div class="boxNPC"><strong>Treinador Escoteiro Liam:</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
 
                 $('.boxPokemon').prepend(
                 '<div class="boxNPC">'+
-                  '<h5 style="background-color: #ccc; border-radius: 5px; padding: 5px;"> <i class="fa fa-star"></i> Derrote todos os desafiantes antes do Líder</h5>'+
+                  '<h5 style="background-color: #ccc; border-radius: 5px; padding: 5px;"> <i class="fa fa-star"></i> Derrote todos os treinadores antes do Líder</h5>'+
                 '</div>');
 
+                break;
+
+            case "Cerulean":
+
+                lider = {
+                    imglider: "https://cdn2.bulbagarden.net/upload/f/f6/Lets_Go_Pikachu_Eevee_Misty.png",
+                    imginsignia: "https://cdn2.bulbagarden.net/upload/9/9c/Cascade_Badge.png",
+                    lider: "Misty",
+                    insignia: "Cascata",
+                    pokemons: [
+                        {nivel:"18",nome:'Staryu',tipo:'Água',fraqueza:'Grama e Elétrico',num:'120',evo:'0'},
+                        {nivel:"21",nome:'Starmie',tipo:'Água Psíquico',fraqueza:'Fantasma, Noturno, Grama, Elétrico e Inseto',num:'121',evo:'1'},
+                    ]
+                };
+
+                pkmn = lider.pokemons[0];
+                nivelPkmn = lider.pokemons[0].nivel;
+                poderPkmn = calculaPoder(pkmn,nivelPkmn);
+                nivel = nivelHabilidade(pkmn.nome,Number(nivelPkmn));
+                habil = buscaHabilidade(pkmn.nome,Number(nivel));
+
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+
+                pkmn = lider.pokemons[1];
+                nivelPkmn = lider.pokemons[1].nivel;
+                poderPkmn = calculaPoder(pkmn,nivelPkmn);
+                nivel = nivelHabilidade(pkmn.nome,Number(nivelPkmn));
+                habil = buscaHabilidade(pkmn.nome,Number(nivel));
+
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+
+                $('.boxPokemon').prepend(
+                    '<center><img style="vertical-align: bottom;" width=60 src='+lider.imginsignia+'> <img height=284 src='+lider.imglider+'></center>'+
+                    '<br><strong>Líder: </strong>'+lider.lider+
+                    '<br><strong>Insígnia: </strong>'+lider.insignia+
+                    '<center>'+imagens+'</center>'+pokemons+
+                '</div><br>');
+
+                imagens = '';
+                pokemons = '';
+
+                desafiante = {
+                    pokemons: [
+                        {nivel:"19",nome:'Goldeen',tipo:'Água',fraqueza:'Grama e Elétrico',num:'118',evo:'0'},
+                    ]
+                };
+
+                pkmn = desafiante.pokemons[0];
+                nivelPkmn = desafiante.pokemons[0].nivel;
+                poderPkmn = calculaPoder(pkmn,nivelPkmn);
+                nivel = nivelHabilidade(pkmn.nome,Number(nivelPkmn));
+                habil = buscaHabilidade(pkmn.nome,Number(nivel));
+
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+
+                $('.boxPokemon').prepend('<div class="boxNPC"><strong>Treinadora Fã de piquenique Diana:</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
+
+                imagens = '';
+                pokemons = '';
+
+                desafiante = {
+                    pokemons: [
+                        {nivel:"16",nome:'Horsea',tipo:'Água',fraqueza:'Grama e Elétrico',num:'116',evo:'0'},
+                        {nivel:"16",nome:'Shellder',tipo:'Água',fraqueza:'Grama e Elétrico',num:'090',evo:'0'},
+                    ]
+                };
+
+                pkmn = desafiante.pokemons[0];
+                nivelPkmn = desafiante.pokemons[0].nivel;
+                poderPkmn = calculaPoder(pkmn,nivelPkmn);
+                nivel = nivelHabilidade(pkmn.nome,Number(nivelPkmn));
+                habil = buscaHabilidade(pkmn.nome,Number(nivel));
+
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+
+                pkmn = desafiante.pokemons[1];
+                nivelPkmn = desafiante.pokemons[1].nivel;
+                poderPkmn = calculaPoder(pkmn,nivelPkmn);
+                nivel = nivelHabilidade(pkmn.nome,Number(nivelPkmn));
+                habil = buscaHabilidade(pkmn.nome,Number(nivel));
+
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+
+                $('.boxPokemon').prepend('<div class="boxNPC"><strong>Treinador Nadador Luis:</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
+
+                $('.boxPokemon').prepend(
+                '<div class="boxNPC">'+
+                  '<h5 style="background-color: #ccc; border-radius: 5px; padding: 5px;"> <i class="fa fa-star"></i> Derrote todos os treinadores antes da Líder</h5>'+
+                '</div>');
+
+                break;
+            case "Vermilion":
+                break;
+            case "Celadon":
+                break;
+            case "Fuschia":
+                break;
+            case "Dojo":
+                break;
+            case "Silph":
+                break;
+            case "Saffron":
+                break;
+            case "Cinnabar":
+                break;
+            case "Viridian":
+                break;
+            case "Lorelei":
+                break;
+            case "Bruno":
+                break;
+            case "Agatha":
+                break;
+            case "Lance":
+                break;
+            case "Rival":
                 break;
         }
 
