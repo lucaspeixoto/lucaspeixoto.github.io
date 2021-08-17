@@ -6,6 +6,74 @@ $( document ).ready(function() {
     return [4,3,2];
   };
 
+  function periciasHiboriana() {
+    return ['Artes','Atletismo','Combate à Distância','Combate Corporal','Condução','Conhecimento','Feitiçaria','Idiomas','Investigação','Manipulação','Ofícios','Sobrevivência','Subterfúgio'];
+  };
+
+  function feiticosHiboriana() {
+    return ['Afastar Espírito/Entidade','Aprisionar Corpo','Aprisionar Espírito/Entidade','Aranha de Jade','Cajado em Serpente','Coma','Comandar Carniçais','Comandar Desmortos','Comandar Entidade','Compreender/Detectar Magia','Contrafeitiço','Corpo de Energia','Criar/Destruir Desmorto','Criar Runa Arcana','Curar Doença','Curar Ferimento','Debilitar Saúde','Debilitar Postura','Debilitar Vontade','Destroçar Barreiras','Doença','Dominar Animais/Pessoas','Enlouquecer','Escudo Arcano','Explosão de Energia','Ferir','Fortalecer Arma/Armadura','Ilusão','Invisibilidade','Invocar Animal','Invocar Elementos','Invocar Entidade','Ler a Mente','Línguas','Luz/Escuridão','Medo','Mensagem','Múltiplas Imagens','Passos nas Nuvens','Projeção Astral','Ressurreição','Sugar Espírito','Santidade','Sentidos Extraordinários','Som Fantasmagórico','Sonho/Pesadelo','Telecinésia','Transformação Animal','Ver a Verdade','Ver o Passado/Futuro']
+  };
+
+  function qualidades() {
+    return ['Abastado','Agilidade da Pantera','Alma Iluminada','Ambidestria','Ameaçador','Amigo dos Animais','Aparência Inofensiva','Armadilheiro','Arqueria Montada','Aristocrata','Artefato','Atirador de Elite','Ataque em Arco','Ataque Selvagem','Boa Vida','Camaleão','Cão de Briga','Capitão de Navio','Chefe de Organização','Comandante de Tropas','Conjurador Prodígio','Cuidadoso','Curandeiro','Defensor','Desarme','Destemido','Dívida de Honra','Dom Sobrenatural','Espírito Guardião','Falsificador','Fé Verdadeira','Feiticeiro','Filho do Mar','Força Titânica','Genial','Golpista','Herbanário','Herdeiro do Trono','Homem de Armas','Honrado','Investida Montada','Irmandade Secreta','Lutador Veloz','Mãos Leves','Matador de Feiticeiros','Mensageiro da Morte','Mestre Artífice','Perito','Perseverante','Poliglota','Protetor','Rastros Invisíveis','Rede de Contatos','Reflexos de Combate','Sacerdote','Senhor da Guerra','Senhor de Terras','Sentidos Aguçados','Viajante','Vigoroso']
+  };
+
+  function nomeHiboriano(regiao) {
+
+    var nome = '';
+    var sobrenome = '';
+
+    switch(regiao){
+      case "hiboriana":
+        nome = random(['Adriano','Augusto','Beoto','Bruno','Cesar','Dante','Francesco','Galeso','Marcus','Marius','Martim','Octavio','Vicente','Ágata','Agnes','Alice','Aurora','Beatrice','Camilla','Chiara','Gaia','Ginevra','Greta','Helena','Isadora','Íris','Laís','Sara','Sofia','Vitoria']);
+        sobrenome = random(['da Aquilônia','de Corinthia','de Koth','da Nemédia','de Ophir','de Argos','do Reino da Fronteira']);
+        break;
+      case "norte":
+        nome = random(['Andor','Ari','Baggi','Brynjar','Elof','Folke','Hakon','Hallbjorn','Ivor','Loki','Rudolf','Thor','Torsten','Vidar','Annveig','Bergunn','Dagny','Freya','Frig','Idonea','Liv','Magnhild','Randi','Sif','Sigrun','Urd','Verdandi','Barra','Coll','Conall','Conan','Eadan','Earc','Finnean','Garbhan','Gormal','Macrath','Osgar','Rodachan','Solas','Aithne','Blaanid','Brianag','Caitlín','Fíne','Malamhin','Mordag','Muirin','Naomh','Saraid','Slaine']);
+        sobrenome = random(['de Asgard','de Vanahein','da Ciméria','da Britúnia','da Hiperbórea']);
+        break;    
+      case "sul":
+        nome = random(['Adisa','Ayo','Bomani','Danso','Jafari','Kambami','Kayin','Kwame','Leke','Nilo','Sekani','Zaki','Zola','Amara','Ayana','Bintu','Dalji','Dandara','Eno','Fayola','Kieza','Jendayi','Lueji','Monifa','Zuri']);
+        sobrenome = random(['de Darfar','de Keshan','de Kush','dos Reinos Negros','de Punt','de Zimbabo','de Shem','da Estígia']);
+        break;
+      case "terras":
+        nome = random(['Abu','Ashur','Bineil','Ennanum','Hanu','Ili-Ellat','Khalil','Khammo','Madsa','Malik','Meesha','Ram','Asiah','Damrina','Emmita','Huda','Khannah','Leja','Lilith','Nasibin','Ramina','Shimta','Yata']);
+        sobrenome = random(['da Hirkania','do Iranistão','de Turan','de Khitai','de Vendhya','de Zamora','de Zíngara','das Ilhas Barachas','do Território Selvagem Picto']);
+        break;
+    }
+
+    return nome+', '+sobrenome;
+  }
+
+  function pertencesHiborianos(type){
+
+    switch(type){
+      case 'arma':
+        return ['Adaga (+1)','Alabarda (+2)','Arco Curto (+1)','Arco Médio (+2)','Arco Longo (+3)','Azagaia (+1)','Bastão (+1)','Besta Pequena (+1)','Besta Média (+2)','Besta Grande (+3)','Boleadeiras (+1)','Bumerangue (+1)','Chicote (+1)','Clava (+1)','Espada Curta (+1)','Espada Longa (+2)','Espada Larga (+3)','Faca (+1)','Foice Pequena (+1)','Funda (+1)','Katana (+2)','Lança (+2)','Maça Pequena (+1)','Maça Média (+2)','Maça Grande (+3)','Machadinha (+1)','Machado Médio (+2)','Machado Grande (+3)','Mangual (+2)','Martelo Pequeno (+1)','Martelo Médio (+2)','Martelo Grande (+3)','Punhal (+1)','Rede (enredar)','Tridente (+2)','Zarabatana (veneno)'];
+        break;
+      case 'armadura':
+        return ['Manto (Res 0)','Gibão de Couro Rústico (Res 1)','Lorigo de Couro (Res 1)','Loriga de Couro e Aço (Res 1)','Camisão de Malha (Res 2)','Cota de Malha (Res 2)','Cota de Malha e Placas (Res 2)','Armadura de Placas (Res 3)','Armadura de Combate (Res 3)','Armadura de Batalha (Res 3)','Armadura Completa (Res 3)','Luva Fechada (Res 0)','Escudo Médio (Res 1)','Escudo Grande (Res 2)'];
+        break;
+      case 'equipamento':
+        return ['Alforge para Animal','Algemas','Algibeira','Aljava','Ampulheta','Apito','Barraca','Baú','Cantil','Corda com Gancho','Equipamento de Pesca','Ferramentas','Instrumento Musical','Isqueiro','Kit de Arrombamento','Kit de Estudos','Kit de Medicina','Kit de Sobrevivência','Lanterna','Luneta','Mapa','Mochila','Munição','Óleo para Lanterna','Pá','Panelas','Pé-de-Cabra','Pedra de Amolar','Pergaminho','Picareta','Saco de Dormir','Sela e Arreios','Saco','Tocha','Tomo','Botas','Calça','Camisa','Capa','Chapéu','Luvas','Casaca','Vestido','Roupas de Frio','Roupas de Qualidade','Roupas Luxuosas','Roupas de Trabalho'];
+        break;
+      case 'animal':
+        return ['Animal Pequeno','Animal Médio','Animal Grande','Animal de Companhia','Animal de Caça','Ave de Caça','Camelo','Cavalo Normal','Cavalo de Corrida','Cavalo de Carga','Cavalo de Guerra','Elefante'];
+        break;
+      case 'artefato':
+        return ['Adaga Ritual','Amuleto de Proteção','Anel da Serpente de Set','Armadilha Astral','Bolas de Cristal','Cajado Mágico','Cinturão de Proteção','Coração de Ahriman','Cristal de Energia','Estrela de Khorala','Fruto de Derketo','Grimório','Lâmina Abençoada','Livro de Skelos','Lótus Amarela','Lótus Cinzenta','Lótus Dourada','Lótus Negra','Lótus Púrpura','Pífaro da Loucura','Pó da Verdade','Pó de Fogo','Receptáculo Divino','Runas Arcanas','Símbolo de Jhebbal Sag','Símbolo de Proteção'];
+        break;
+    }
+
+  };
+
+  function checkQualidade(vetor,qualidade){
+    if(vetor[0] == qualidade) return true;
+    if(vetor[1] == qualidade) return true;
+    if(vetor[2] == qualidade) return true;
+    return false;
+  }
+
   function pericias() {
     return ['Artes','Atletismo','Combate à Distância','Combate Corporal','Condução','Conhecimento','Idiomas','Investigação','Manipulação','Sobrevivência','Subterfúgio','Tecnologia'];
   };
@@ -30,8 +98,7 @@ $( document ).ready(function() {
         return ['Smith','Johnson','Williams','Jones','Brown','Davis','Miller','Wilson','Moore','Taylor','Anderson','Thomas','Jackson','White','Harris','Martin','Thompson','Garcia','Martinez','Robinson','Clark','Rodriguez','Lewis','Lee','Walker','Hall','Allen','Young','Hernandez','King','Wright','Lopez','Hill','Scott','Green','Adams','Baker','Gonzalez','Nelson','Carter','Mitchell','Perez','Roberts','Turner','Phillips','Campbell','Parker','Evans','Edwards','Collins'];
         break;
     }
-  }
-
+  };
 
   var pactos = ['Aurora Dourada','Brujeria','Feri','Onmyodo','Rosacruz','Zangbeto'];
   var linhagens = ['Arbac-Apuhc','Hamtammr','Loup-Garou','Luison','Óboroten','Volkodlak'];
@@ -550,5 +617,134 @@ $( document ).ready(function() {
     $('.boxPersonagemFate').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '550px', 'box-shadow': '5px 5px 10px #70d670'});
 
   });
+
+  $('#btnGerarAEH').click(function(){
+
+    var valAtributos = exclusiveRandom(atributos(),3);
+    var valFeiticos = '';
+    var feiticosHiboriano = '';
+    var valQualidades = exclusiveRandom(qualidades(),3);
+    var valPericias = '';
+    var textoPericias = '';
+    var moedas = randomNumber(1,10)*5;
+    var equipamentos = exclusiveRandom(pertencesHiborianos('equipamento'),3);
+    var extra = '';
+    var bonusPostura = 0;
+    var bonusVontade = 0;
+    var bonusSaude = 0;
+    var textoFeiticeiro = '';
+
+    if(checkQualidade(valQualidades,'Perito')){
+      valPericias = exclusiveRandom(periciasHiboriana(),4);
+      textoPericias = textoPericias + '<div class="textIndent">'+valPericias[0]+'</div>';
+      textoPericias = textoPericias + '<div class="textIndent">'+valPericias[1]+'</div>';
+      textoPericias = textoPericias + '<div class="textIndent">'+valPericias[2]+'</div>';
+      textoPericias = textoPericias + '<div class="textIndent">'+valPericias[3]+'</div><br>';
+    } else {
+      valPericias = exclusiveRandom(periciasHiboriana(),3);
+      textoPericias = textoPericias + '<div class="textIndent">'+valPericias[0]+'</div>';
+      textoPericias = textoPericias + '<div class="textIndent">'+valPericias[1]+'</div>';
+      textoPericias = textoPericias + '<div class="textIndent">'+valPericias[2]+'</div><br>';
+    }
+
+    if(checkQualidade(valPericias,'Feitiçaria') || checkQualidade(valQualidades,'Dom Sobrenatural') || checkQualidade(valQualidades,'Feiticeiro')){
+
+      valFeiticos = exclusiveRandom(feiticosHiboriana(),9);
+
+      feiticosHiboriano = '<div><strong>FEITIÇOS</strong></div>';
+
+      if(checkQualidade(valQualidades,'Dom Sobrenatural'))
+        feiticosHiboriano = feiticosHiboriano + '<div class="textIndent">'+valFeiticos[0]+' - Dom Sobrenatural</div>';
+
+      if(checkQualidade(valPericias,'Feitiçaria') || checkQualidade(valQualidades,'Feiticeiro')){
+
+        textoFeiticeiro = '<center><p><i>Tradição Arcana: '+random(['Anel Negro da Estígia','Círculo Sombrio de Yimsha','Filhos de Dagon e Derketo','Sacerdotes do Crânio Amarelo de Khitai','Sacerdotes do Culto Imortal da Hiperbórea'])+'</i></p></center>';
+
+        feiticosHiboriano = feiticosHiboriano + '<div class="textIndent">'+valFeiticos[1]+'</div>';
+        feiticosHiboriano = feiticosHiboriano + '<div class="textIndent">'+valFeiticos[2]+'</div>';
+
+        if (valAtributos[2] >= 3)
+          feiticosHiboriano = feiticosHiboriano + '<div class="textIndent">'+valFeiticos[3]+'</div>';
+
+        if (valAtributos[2] >= 4)
+          feiticosHiboriano = feiticosHiboriano + '<div class="textIndent">'+valFeiticos[4]+'</div>';
+
+      }
+
+      if(checkQualidade(valPericias,'Feitiçaria') && checkQualidade(valQualidades,'Feiticeiro')){
+
+        feiticosHiboriano = feiticosHiboriano + '<div class="textIndent">'+valFeiticos[5]+'</div>';
+        feiticosHiboriano = feiticosHiboriano + '<div class="textIndent">'+valFeiticos[6]+'</div>';
+
+        if (valAtributos[2] >= 3)
+          feiticosHiboriano = feiticosHiboriano + '<div class="textIndent">'+valFeiticos[7]+'</div>';
+
+        if (valAtributos[2] >= 4)
+          feiticosHiboriano = feiticosHiboriano + '<div class="textIndent">'+valFeiticos[8]+'</div>';
+
+      }
+
+      feiticosHiboriano = feiticosHiboriano + '</div>';
+
+    }
+
+    if(checkQualidade(valQualidades,'Abastado')){
+      moedas = moedas*10;
+    }
+
+    if(checkQualidade(valQualidades,'Amigo dos Animais')){
+      extra = extra + '<div class="textIndent">'+random(pertencesHiborianos('animal'))+'</div>';
+    }
+
+    if(checkQualidade(valQualidades,'Artefato')){
+      extra = extra + '<div class="textIndent">'+random(pertencesHiborianos('artefato'))+' (artefato)</div>';
+    }
+
+    if(checkQualidade(valQualidades,'Capitão de Navio')){
+      extra = extra + '<div class="textIndent">Embarcação Média</div>';
+    }
+    
+    if(checkQualidade(valQualidades,'Aristocrata')){
+      bonusPostura = bonusPostura+4;
+    }
+
+    if(checkQualidade(valQualidades,'Perseverante')){
+      bonusVontade = bonusVontade+4;
+    }
+
+    if(checkQualidade(valQualidades,'Vigoroso')){
+      bonusSaude = bonusSaude+4;
+    }
+ 
+    $('.boxPersonagemFate').html(
+      '<center><h4>'+nomeHiboriano(random(['hiboriana','norte','sul','terras']))+'</h4></center>'+
+      textoFeiticeiro+
+      '<div><strong>ATRIBUTOS</strong>'+
+      '<div class="textIndent"><strong>Corpo:</strong> '+valAtributos[0]+nbsp(12)+'<strong>Saúde:</strong> '+Number(valAtributos[0]+5+bonusSaude)+'</div>'+
+      '<div class="textIndent"><strong>Espírito:</strong> '+valAtributos[1]+nbsp(10)+'<strong>Postura:</strong> '+Number(valAtributos[1]+5+bonusPostura)+'</div>'+
+      '<div class="textIndent"><strong>Mente:</strong> '+valAtributos[2]+nbsp(12)+'<strong>Vontade:</strong> '+Number(valAtributos[2]+5+bonusVontade)+'</div><br>'+
+      '<div><strong>PERÍCIAS</strong>'+
+      textoPericias+
+      '<div><strong>QUALIDADES</strong>'+
+      '<div class="textIndent">'+valQualidades[0]+'</div>'+
+      '<div class="textIndent">'+valQualidades[1]+'</div>'+
+      '<div class="textIndent">'+valQualidades[2]+'</div><br>'+
+      '<div><strong>PERTENCES</strong>'+
+      '<div class="textIndent">Bolsa com '+moedas+' moedas</div>'+
+      '<div class="textIndent">'+random(pertencesHiborianos('arma'))+'</div>'+
+      '<div class="textIndent">'+random(pertencesHiborianos('arma'))+'</div>'+
+      '<div class="textIndent">'+random(pertencesHiborianos('armadura'))+'</div>'+
+      '<div class="textIndent">'+equipamentos[0]+'</div>'+
+      '<div class="textIndent">'+equipamentos[1]+'</div>'+
+      '<div class="textIndent">'+equipamentos[2]+'</div>'+
+      extra+
+      '</div><br>'+
+      feiticosHiboriano
+    );
+
+    $('.boxPersonagemFate').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '550px', 'box-shadow': '5px 5px 10px #8b181b'});
+
+  });
+
 
 });
