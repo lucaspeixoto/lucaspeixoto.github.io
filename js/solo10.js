@@ -18,6 +18,33 @@ $( document ).ready(function() {
     return ['Abastado','Agilidade da Pantera','Alma Iluminada','Ambidestria','Ameaçador','Amigo dos Animais','Aparência Inofensiva','Armadilheiro','Arqueria Montada','Aristocrata','Artefato','Atirador de Elite','Ataque em Arco','Ataque Selvagem','Boa Vida','Camaleão','Cão de Briga','Capitão de Navio','Chefe de Organização','Comandante de Tropas','Conjurador Prodígio','Cuidadoso','Curandeiro','Defensor','Desarme','Destemido','Dívida de Honra','Dom Sobrenatural','Espírito Guardião','Falsificador','Fé Verdadeira','Feiticeiro','Filho do Mar','Força Titânica','Genial','Golpista','Herbanário','Herdeiro do Trono','Homem de Armas','Honrado','Investida Montada','Irmandade Secreta','Lutador Veloz','Mãos Leves','Matador de Feiticeiros','Mensageiro da Morte','Mestre Artífice','Perito','Perseverante','Poliglota','Protetor','Rastros Invisíveis','Rede de Contatos','Reflexos de Combate','Sacerdote','Senhor da Guerra','Senhor de Terras','Sentidos Aguçados','Viajante','Vigoroso']
   };
 
+  function fortificacao(tipo){
+    switch(tipo){
+      case 'melhoria':
+        return ['Biblioteca','Casa de Cura','Coletor de Água','Criadouro','Dormitório','Estábulos','Estufa','Forja','Jardim','Laboratório','Paliçada','Passagem Secreta','Plantação','Posto de Observação','Templo Pequeno','Templo Grande'];
+        break;
+      case 'guarnicao':
+        return [
+          { nome: 'Serviçal', poder: 2 },
+          { nome: 'Aldeão', poder: 2 },
+          { nome: 'Guarda', poder: 3 },
+          { nome: 'Guarda Treinado', poder: 4 },
+          { nome: 'Infantaria Leve', poder: 3 },
+          { nome: 'Infantaria Média', poder: 4 },
+          { nome: 'Infantaria Pesada', poder: 5 },
+          { nome: 'Arqueria', poder: 4 },
+          { nome: 'Besteiro', poder: 4 },
+          { nome: 'Cavalaria Leve', poder: 4 },
+          { nome: 'Cavalaria Média', poder: 5 },
+          { nome: 'Cavalaria Pesada', poder: 6 },
+          { nome: 'Elefante', poder: 10 }];
+          /*{ nome: 'Arma de Cerco Pequena', poder: 10 },
+          { nome: 'Arma de Cerco Média', poder: 15 },
+          { nome: 'Arma de Cerco Grande', poder: 20 }];*/
+        break;
+    }
+  }
+
   function nomeHiboriano(regiao) {
 
     var nome = '';
@@ -615,6 +642,201 @@ $( document ).ready(function() {
     );
 
     $('.boxPersonagemFate').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '550px', 'box-shadow': '5px 5px 10px #70d670'});
+
+  });
+
+  $('#btnGerarFortificacao').click(function(){
+
+    var valTipo = random(['Cabana','Casa','Mansão','Torre','Fortim','Fortaleza']);
+    var valMelhorias = '';
+    var valTropas = '';
+    var valGuarnicoes = '';
+    var valPoder = 0;
+    var valQtdd = [];
+
+    if(valTipo == 'Cabana'){
+      valQualidades = exclusiveRandom(fortificacao('melhoria'),1);
+      valGuarnicoes = exclusiveRandom(fortificacao('guarnicao'),1);
+      
+      valQtdd[0] = randomNumber(1,5);
+
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valQualidades[0]+'</div>';
+      valTropas = valTropas + '<div class="textIndent">'+valQtdd[0]+' '+valGuarnicoes[0].nome+'</div>';
+      
+      valPoder = valQtdd[0]*valGuarnicoes[0].poder;
+
+      if(valQtdd[0]>1){
+        valPoder = valPoder + 10;
+        if(checkQualidade(valQualidades,'Paliçada'))
+          valPoder = valPoder + 5;
+      }
+
+    }
+
+    if(valTipo == 'Casa'){
+      valQualidades = exclusiveRandom(fortificacao('melhoria'),2);
+      valGuarnicoes = exclusiveRandom(fortificacao('guarnicao'),2);
+
+      valQtdd[0] = randomNumber(1,5);
+      valQtdd[1] = randomNumber(1,5);
+
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valQualidades[0]+'</div>';
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valQualidades[1]+'</div>';
+      valTropas = valTropas + '<div class="textIndent">'+valQtdd[0]+' '+valGuarnicoes[0].nome+'</div>';
+      valTropas = valTropas + '<div class="textIndent">'+valQtdd[1]+' '+valGuarnicoes[1].nome+'</div>';
+
+      valPoder = valPoder + valQtdd[0]*valGuarnicoes[0].poder;
+      valPoder = valPoder + valQtdd[1]*valGuarnicoes[1].poder;
+
+      if((valQtdd[0]+valQtdd[1])>4){
+        valPoder = valPoder + 20;
+        if(checkQualidade(valQualidades,'Paliçada'))
+          valPoder = valPoder + 10;
+      }
+    }
+
+    if(valTipo == 'Mansão'){
+      valQualidades = exclusiveRandom(fortificacao('melhoria'),3);
+      valGuarnicoes = exclusiveRandom(fortificacao('guarnicao'),3);
+
+      valQtdd[0] = randomNumber(1,8);
+      valQtdd[1] = randomNumber(1,8);
+      valQtdd[2] = randomNumber(1,8);
+
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valQualidades[0]+'</div>';
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valQualidades[1]+'</div>';
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valQualidades[2]+'</div>';
+      valTropas = valTropas + '<div class="textIndent">'+valQtdd[0]+' '+valGuarnicoes[0].nome+'</div>';
+      valTropas = valTropas + '<div class="textIndent">'+valQtdd[1]+' '+valGuarnicoes[1].nome+'</div>';
+      valTropas = valTropas + '<div class="textIndent">'+valQtdd[2]+' '+valGuarnicoes[2].nome+'</div>';
+
+      valPoder = valPoder + valQtdd[0]*valGuarnicoes[0].poder;
+      valPoder = valPoder + valQtdd[1]*valGuarnicoes[1].poder;
+      valPoder = valPoder + valQtdd[2]*valGuarnicoes[2].poder;
+
+      if((valQtdd[0]+valQtdd[1]+valQtdd[2])>9){
+        valPoder = valPoder + 50;
+        if(checkQualidade(valQualidades,'Paliçada'))
+          valPoder = valPoder + 25;
+      }
+    }
+
+    if(valTipo == 'Torre'){
+      valQualidades = exclusiveRandom(fortificacao('melhoria'),4);
+      valGuarnicoes = exclusiveRandom(fortificacao('guarnicao'),4);
+
+      valQtdd[0] = randomNumber(1,10);
+      valQtdd[1] = randomNumber(1,10);
+      valQtdd[2] = randomNumber(1,10);
+      valQtdd[3] = randomNumber(1,10);
+
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valQualidades[0]+'</div>';
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valQualidades[1]+'</div>';
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valQualidades[2]+'</div>';
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valQualidades[3]+'</div>';
+      valTropas = valTropas + '<div class="textIndent">'+valQtdd[0]+' '+valGuarnicoes[0].nome+'</div>';
+      valTropas = valTropas + '<div class="textIndent">'+valQtdd[1]+' '+valGuarnicoes[1].nome+'</div>';
+      valTropas = valTropas + '<div class="textIndent">'+valQtdd[2]+' '+valGuarnicoes[2].nome+'</div>';
+      valTropas = valTropas + '<div class="textIndent">'+valQtdd[3]+' '+valGuarnicoes[3].nome+'</div>';
+
+      valPoder = valPoder + valQtdd[0]*valGuarnicoes[0].poder;
+      valPoder = valPoder + valQtdd[1]*valGuarnicoes[1].poder;
+      valPoder = valPoder + valQtdd[2]*valGuarnicoes[2].poder;
+      valPoder = valPoder + valQtdd[3]*valGuarnicoes[3].poder;
+
+      if((valQtdd[0]+valQtdd[1]+valQtdd[2]+valQtdd[3])>19){
+        valPoder = valPoder + 100;
+        if(checkQualidade(valQualidades,'Paliçada'))
+          valPoder = valPoder + 50;
+      }
+    }
+
+    if(valTipo == 'Fortim'){
+      valQualidades = exclusiveRandom(fortificacao('melhoria'),5);
+      valGuarnicoes = exclusiveRandom(fortificacao('guarnicao'),5);
+
+      valQtdd[0] = randomNumber(1,12);
+      valQtdd[1] = randomNumber(1,12);
+      valQtdd[2] = randomNumber(1,12);
+      valQtdd[3] = randomNumber(1,12);
+      valQtdd[4] = randomNumber(1,12);
+
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valQualidades[0]+'</div>';
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valQualidades[1]+'</div>';
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valQualidades[2]+'</div>';
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valQualidades[3]+'</div>';
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valQualidades[4]+'</div>';
+      valTropas = valTropas + '<div class="textIndent">'+valQtdd[0]+' '+valGuarnicoes[0].nome+'</div>';
+      valTropas = valTropas + '<div class="textIndent">'+valQtdd[1]+' '+valGuarnicoes[1].nome+'</div>';
+      valTropas = valTropas + '<div class="textIndent">'+valQtdd[2]+' '+valGuarnicoes[2].nome+'</div>';
+      valTropas = valTropas + '<div class="textIndent">'+valQtdd[3]+' '+valGuarnicoes[3].nome+'</div>';
+      valTropas = valTropas + '<div class="textIndent">'+valQtdd[4]+' '+valGuarnicoes[4].nome+'</div>';
+
+      valPoder = valPoder + valQtdd[0]*valGuarnicoes[0].poder;
+      valPoder = valPoder + valQtdd[1]*valGuarnicoes[1].poder;
+      valPoder = valPoder + valQtdd[2]*valGuarnicoes[2].poder;
+      valPoder = valPoder + valQtdd[3]*valGuarnicoes[3].poder;
+      valPoder = valPoder + valQtdd[4]*valGuarnicoes[4].poder;
+
+      if((valQtdd[0]+valQtdd[1]+valQtdd[2]+valQtdd[3]+valQtdd[4])>29){
+        valPoder = valPoder + 200;
+        if(checkQualidade(valQualidades,'Paliçada'))
+          valPoder = valPoder + 100;
+      }
+    }
+
+    if(valTipo == 'Fortaleza'){
+      valQualidades = exclusiveRandom(fortificacao('melhoria'),6);
+      valGuarnicoes = exclusiveRandom(fortificacao('guarnicao'),6);
+
+      valQtdd[0] = randomNumber(1,20);
+      valQtdd[1] = randomNumber(1,20);
+      valQtdd[2] = randomNumber(1,20);
+      valQtdd[3] = randomNumber(1,20);
+      valQtdd[4] = randomNumber(1,20);
+      valQtdd[5] = randomNumber(1,20);
+
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valQualidades[0]+'</div>';
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valQualidades[1]+'</div>';
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valQualidades[2]+'</div>';
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valQualidades[3]+'</div>';
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valQualidades[4]+'</div>';
+      valMelhorias = valMelhorias + '<div class="textIndent">'+valQualidades[5]+'</div>';
+      valTropas = valTropas + '<div class="textIndent">'+valQtdd[0]+' '+valGuarnicoes[0].nome+'</div>';
+      valTropas = valTropas + '<div class="textIndent">'+valQtdd[1]+' '+valGuarnicoes[1].nome+'</div>';
+      valTropas = valTropas + '<div class="textIndent">'+valQtdd[2]+' '+valGuarnicoes[2].nome+'</div>';
+      valTropas = valTropas + '<div class="textIndent">'+valQtdd[3]+' '+valGuarnicoes[3].nome+'</div>';
+      valTropas = valTropas + '<div class="textIndent">'+valQtdd[4]+' '+valGuarnicoes[4].nome+'</div>';
+      valTropas = valTropas + '<div class="textIndent">'+valQtdd[5]+' '+valGuarnicoes[5].nome+'</div>';
+
+      valPoder = valPoder + valQtdd[0]*valGuarnicoes[0].poder;
+      valPoder = valPoder + valQtdd[1]*valGuarnicoes[1].poder;
+      valPoder = valPoder + valQtdd[2]*valGuarnicoes[2].poder;
+      valPoder = valPoder + valQtdd[3]*valGuarnicoes[3].poder;
+      valPoder = valPoder + valQtdd[4]*valGuarnicoes[4].poder;
+      valPoder = valPoder + valQtdd[5]*valGuarnicoes[5].poder;
+
+      if((valQtdd[0]+valQtdd[1]+valQtdd[2]+valQtdd[3]+valQtdd[4]+valQtdd[5])>49){
+        valPoder = valPoder + 500;
+        if(checkQualidade(valQualidades,'Paliçada'))
+          valPoder = valPoder + 250;
+      }
+    }
+
+    $('.boxPersonagemFate').html(
+      '<center><h4>Fortificação</h4></center>'+
+      '<div class="textIndent"><strong>Tipo:</strong> '+valTipo+'</div>'+
+      '<div class="textIndent"><strong>Líder:</strong> '+nomeHiboriano(random(['hiboriana','norte','sul','terras']))+'</div>'+
+      '<div class="textIndent"><strong>Poder:</strong> '+valPoder+'</div><br>'+
+      '<div><strong>MELHORIAS</strong>'+
+      valMelhorias+
+      '</div><br>'+
+      '<div><strong>GUARNIÇÕES</strong>'+
+      valTropas+
+      '</div>'
+    );
+
+    $('.boxPersonagemFate').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '550px', 'box-shadow': '5px 5px 10px #8b181b'});
 
   });
 
