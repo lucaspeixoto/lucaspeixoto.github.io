@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://lucaspeixoto.github.io/</loc>
+  <lastmod>2021-09-01T13:26:47+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://lucaspeixoto.github.io/jogo_drak-mauter.html</loc>
+  <lastmod>2021-09-01T13:26:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lucaspeixoto.github.io/jogo_fantasia-medieval.html</loc>
+  <lastmod>2021-09-01T13:26:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lucaspeixoto.github.io/jogo_pindorama.html</loc>
+  <lastmod>2021-09-01T13:26:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lucaspeixoto.github.io/jogo_runas-odin.html</loc>
+  <lastmod>2021-09-01T13:26:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lucaspeixoto.github.io/jogo_pokemon-jornada.html</loc>
+  <lastmod>2021-09-01T13:26:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lucaspeixoto.github.io/jogo_torre-mortos-vivos.html</loc>
+  <lastmod>2021-09-01T13:26:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lucaspeixoto.github.io/gerador_fate.html</loc>
+  <lastmod>2021-09-01T13:26:47+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lucaspeixoto.github.io/runas.html</loc>
+  <lastmod>2021-09-01T13:26:47+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lucaspeixoto.github.io/pokemon_jornada.html</loc>
+  <lastmod>2021-09-01T13:26:47+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lucaspeixoto.github.io/torre-mortos.html</loc>
+  <lastmod>2021-09-01T13:26:47+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lucaspeixoto.github.io/index.html</loc>
+  <lastmod>2021-09-01T13:26:47+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
+</urlset>
