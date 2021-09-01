@@ -645,6 +645,47 @@ $( document ).ready(function() {
 
   });
 
+$('#btnGerarTropa').click(function(){
+
+    var valPoder = 0;
+
+    if($('#tropa_personagem').val()>0) valPoder = valPoder + $('#tropa_personagem').val()*9;
+    if($('#tropa_aldeao').val()>0) valPoder = valPoder + $('#tropa_aldeao').val()*2;
+    if($('#tropa_guarda').val()>0) valPoder = valPoder + $('#tropa_guarda').val()*3;
+    if($('#tropa_treinado').val()>0) valPoder = valPoder + $('#tropa_treinado').val()*4;
+    if($('#tropa_infant_leve').val()>0) valPoder = valPoder + $('#tropa_infant_leve').val()*3;
+    if($('#tropa_infant_med').val()>0) valPoder = valPoder + $('#tropa_infant_med').val()*4;
+    if($('#tropa_infant_pes').val()>0) valPoder = valPoder + $('#tropa_infant_pes').val()*5;
+    if($('#tropa_arqueria').val()>0) valPoder = valPoder + $('#tropa_arqueria').val()*4;
+    if($('#tropa_besteiro').val()>0) valPoder = valPoder + $('#tropa_besteiro').val()*4;
+    if($('#tropa_cav_leve').val()>0) valPoder = valPoder + $('#tropa_cav_leve').val()*4;
+    if($('#tropa_cav_med').val()>0) valPoder = valPoder + $('#tropa_cav_med').val()*5;
+    if($('#tropa_cav_pes').val()>0) valPoder = valPoder + $('#tropa_cav_pes').val()*6;
+    if($('#tropa_elefante').val()>0) valPoder = valPoder + $('#tropa_elefante').val()*10;
+    if($('#tropa_cerco_leve').val()>0) valPoder = valPoder + $('#tropa_cerco_leve').val()*10;
+    if($('#tropa_cerco_med').val()>0) valPoder = valPoder + $('#tropa_cerco_med').val()*15;
+    if($('#tropa_cerco_pes').val()>0) valPoder = valPoder + $('#tropa_cerco_pes').val()*20;
+
+    if((document.getElementById('check_bonus').checked) && (document.getElementById('check_palicada').checked)){
+      valPoder = valPoder + (Number($('#select_fortificacao').val())*1.5);
+    } else if (document.getElementById('check_bonus').checked) {
+      valPoder = valPoder + Number($('#select_fortificacao').val());
+    }
+      
+    if(document.getElementById('check_terreno').checked) valPoder = valPoder*1.5;
+    if(document.getElementById('check_moral').checked) valPoder = valPoder*1.5;
+    
+    valPoder = Math.floor(valPoder);
+
+    $('.boxPersonagemFate').html(
+      '<center><h4>Fortificação</h4></center>'+
+      '<div class="textIndent"><strong>Poder:</strong> '+valPoder+'</div><br>'
+    );
+
+    $('.boxPersonagemFate').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '550px', 'box-shadow': '5px 5px 10px #8b181b'});
+
+  });
+
   $('#btnGerarFortificacao').click(function(){
 
     var valTipo = random(['Cabana','Casa','Mansão','Torre','Fortim','Fortaleza']);
