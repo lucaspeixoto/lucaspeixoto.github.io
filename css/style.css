@@ -4,6 +4,12 @@ nav a{text-decoration: none;}
 label {cursor: pointer;}
 label:hover {color: #3f51b5;}
 
+#titulo-menu {
+  margin-top: 10px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
 .boxLabirinto {
   border-spacing: 0px;
   border: 1px solid black;
