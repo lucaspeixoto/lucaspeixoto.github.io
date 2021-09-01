@@ -36,18 +36,29 @@
 	</head>
 <body class="w3-white w3-content" style="max-width:1600px">
 
-<script>
-fetch("./nav.html")
-  .then(response => {
-    return response.text()
-  })
-  .then(data => {
-    document.querySelector("nav").innerHTML = data;
-  });
-</script>
-
 <!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-light-grey" style="z-index:3;width:300px;" id="mySidebar"></nav>
+<nav class="w3-sidebar w3-collapse w3-light-grey" style="z-index:3;width:300px;" id="mySidebar">
+  <div class="w3-container">
+    <img src="./img/fudge-dice.png" alt="Dados Fate/Fudge" style="width:100%; margin-top: 30px;" class="w3-round"><br><br>
+    <div id='titulo-menu'>Fate e RPG Solo</div>
+    <p class="w3-text-grey">Por Lucas Peixoto</p>
+  </div>
+  <div class="w3-bar-block">
+    <a href="/" class="w3-bar-item w3-button w3-padding w3-text-indigo">Meus jogos analógicos</a> 
+    <a href="geradores.html" class="w3-bar-item w3-button w3-padding w3-text-indigo">Geradores e autômatos</a> 
+    <a href="oraculos.html" class="w3-bar-item w3-button w3-padding w3-text-indigo">Oráculos e tabelas</a>
+    <a href="outros.html" class="w3-bar-item w3-button w3-padding w3-text-indigo">Outros</a> 
+  </div>
+  <div class="w3-panel w3-large w3-display-bottomleft">
+    <a href="mailto:lucaspeixoto.cco@gmail.com"><i class="fa fa-envelope w3-hover-opacity"></i></a>
+    <a href="https://www.facebook.com/lucaspeixoto.cco" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <a href="https://www.instagram.com/peixotsss/" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <a href="https://twitter.com/peixotsss" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+    <a href="https://br.pinterest.com/lucasskald/" target="_blank"><i class="fa fa-pinterest-p w3-hover-opacity"></i></a>
+    <a href="https://www.linkedin.com/in/lucas-peixoto-de-lima-70128a45/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+    <a href="http://lattes.cnpq.br/9182966590820045" target="_blank"><img src="./img/lattes-new.svg" alt="lattes" style="width: 24px;"></a>
+  </div>
+</nav>
 
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
@@ -59,7 +70,7 @@ fetch("./nav.html")
   <header id="portfolio">
   	<span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
     <div class="w3-container">
-    	<h1><b>Meus jogos analógicos</b></h1>
+    	<div class="titulo-pagina">Meus jogos analógicos</div>
     </div>
   </header>
 
