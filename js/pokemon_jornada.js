@@ -1032,10 +1032,10 @@ $( document ).ready(function() {
                 habilidade[1] = {nome:'Cabeçada',tipo:'Normal',desc:'Ataque com +1d6'};
                 habilidade[9] = {nome:'Guinchar',tipo:'Normal',desc:'Os seus ataques bem sucedidos causam 2 de dano a mais no oponente atual'};
                 habilidade[17] = {nome:'Explosão Sônica',tipo:'Normal',desc:'Sempre causa 2 de dano, não precisa rolar dados'};
-                habilidade[22] = {nome:'Autodestruição',tipo:'Normal',desc:'Ataque com +10d6. Voltorb desmaia após o ataque'};
+                habilidade[22] = {nome:'Autodestruição',tipo:'Normal',desc:'Ataque com +10d6. Electrode desmaia após o ataque'};
                 habilidade[29] = {nome:'Tela de Luz',tipo:'Psíquico',desc:'Até o fim do combate recebe +2d6 de ataque, não cumulativo'};
                 habilidade[40] = {nome:'Rapidez',tipo:'Normal',desc:'Ataque com +3d6 com sucesso a 3-6'};
-                habilidade[50] = {nome:'Explosão',tipo:'Normal',desc:'Ataque com +13d6. Voltorb desmaia após o ataque'};
+                habilidade[50] = {nome:'Explosão',tipo:'Normal',desc:'Ataque com +13d6. Electrode desmaia após o ataque'};
                 return habilidade[nivel];
                 break;
             case "Exeggcute":
@@ -3346,30 +3346,779 @@ $( document ).ready(function() {
 
                 break;
             case "Vermilion":
+            
+                lider = {
+                    imglider: "https://cdn2.bulbagarden.net/upload/b/bc/Lets_Go_Pikachu_Eevee_Lt_Surge.png",
+                    imginsignia: "https://cdn2.bulbagarden.net/upload/a/a6/Thunder_Badge.png",
+                    lider: "Lt. Surge",
+                    insignia: "Trovão",
+                    pokemons: [
+                        {nivel:"21",nome:'Voltorb',tipo:'Elétrico',fraqueza:'Terrestre',num:'100',evo:'0'},
+                        {nivel:"18",nome:'Pikachu',tipo:'Elétrico',fraqueza:'Terreste',num:'025',evo:'0'},
+                        {nivel:"24",nome:'Raichu',tipo:'Elétrico',fraqueza:'Terreste',num:'026',evo:'1'},
+                    ]
+                };
+
+                pkmn = lider.pokemons[0];
+                nivelPkmn = lider.pokemons[0].nivel;
+                poderPkmn = calculaPoder(pkmn,nivelPkmn);
+                nivel = nivelHabilidade(pkmn.nome,Number(nivelPkmn));
+                habil = buscaHabilidade(pkmn.nome,Number(nivel));
+
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+
+                pkmn = lider.pokemons[1];
+                nivelPkmn = lider.pokemons[1].nivel;
+                poderPkmn = calculaPoder(pkmn,nivelPkmn);
+                nivel = nivelHabilidade(pkmn.nome,Number(nivelPkmn));
+                habil = buscaHabilidade(pkmn.nome,Number(nivel));
+
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+
+                pkmn = lider.pokemons[2];
+                nivelPkmn = lider.pokemons[2].nivel;
+                poderPkmn = calculaPoder(pkmn,nivelPkmn);
+                nivel = nivelHabilidade(pkmn.nome,Number(nivelPkmn));
+                habil = buscaHabilidade(pkmn.nome,Number(nivel));
+
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+
+                $('.boxPokemon').prepend(
+                    '<center><img style="vertical-align: bottom;" width=60 src='+lider.imginsignia+'> <img height=284 src='+lider.imglider+'></center>'+
+                    '<br><strong>Líder: </strong>'+lider.lider+
+                    '<br><strong>Insígnia: </strong>'+lider.insignia+
+                    '<center>'+imagens+'</center>'+pokemons+
+                '</div><br>');
+
+
+                imagens = '';
+                pokemons = '';
+
+                desafiante = {
+                    pokemons: [
+                        {nivel:"23",nome:'Pikachu',tipo:'Elétrico',fraqueza:'Terreste',num:'025',evo:'0'},
+                    ]
+                };
+
+                nomeDesafiante = 'Treinador Cavalheiro Tucker';
+                pkmn = desafiante.pokemons[0];
+                nivelPkmn = desafiante.pokemons[0].nivel;
+                poderPkmn = calculaPoder(pkmn,nivelPkmn);
+                nivel = nivelHabilidade(pkmn.nome,Number(nivelPkmn));
+                habil = buscaHabilidade(pkmn.nome,Number(nivel));
+
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+
+                $('.boxPokemon').prepend('<div class="boxNPC"><strong>'+nomeDesafiante+':</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
+
+                imagens = '';
+                pokemons = '';
+
+                desafiante = {
+                    pokemons: [
+                        {nivel:"22",nome:'Voltorb',tipo:'Elétrico',fraqueza:'Terrestre',num:'100',evo:'0'},
+                        {nivel:"22",nome:'Magnemite',tipo:'Elétrico Metálico',fraqueza:'Fogo, Lutador e Terrestre',num:'081',evo:'0'},
+                    ]
+                };
+
+                nomeDesafiante = 'Treinador Engenheiro Baily';
+                pkmn = desafiante.pokemons[0];
+                nivelPkmn = desafiante.pokemons[0].nivel;
+                poderPkmn = calculaPoder(pkmn,nivelPkmn);
+                nivel = nivelHabilidade(pkmn.nome,Number(nivelPkmn));
+                habil = buscaHabilidade(pkmn.nome,Number(nivel));
+
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+
+                pkmn = desafiante.pokemons[1];
+                nivelPkmn = desafiante.pokemons[1].nivel;
+                poderPkmn = calculaPoder(pkmn,nivelPkmn);
+                nivel = nivelHabilidade(pkmn.nome,Number(nivelPkmn));
+                habil = buscaHabilidade(pkmn.nome,Number(nivel));
+
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+
+                $('.boxPokemon').prepend('<div class="boxNPC"><strong>'+nomeDesafiante+':</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
+
+                imagens = '';
+                pokemons = '';
+
+                desafiante = {
+                    pokemons: [
+                        {nivel:"21",nome:'Pikachu',tipo:'Elétrico',fraqueza:'Terreste',num:'025',evo:'0'},
+                        {nivel:"26",nome:'Pikachu',tipo:'Elétrico',fraqueza:'Terreste',num:'025',evo:'0'},
+                    ]
+                };
+
+                nomeDesafiante = 'Treinador Marinheiro Dwayne';
+                pkmn = desafiante.pokemons[0];
+                nivelPkmn = desafiante.pokemons[0].nivel;
+                poderPkmn = calculaPoder(pkmn,nivelPkmn);
+                nivel = nivelHabilidade(pkmn.nome,Number(nivelPkmn));
+                habil = buscaHabilidade(pkmn.nome,Number(nivel));
+
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+
+                pkmn = desafiante.pokemons[1];
+                nivelPkmn = desafiante.pokemons[1].nivel;
+                poderPkmn = calculaPoder(pkmn,nivelPkmn);
+                nivel = nivelHabilidade(pkmn.nome,Number(nivelPkmn));
+                habil = buscaHabilidade(pkmn.nome,Number(nivel));
+
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+
+
+                $('.boxPokemon').prepend('<div class="boxNPC"><strong>'+nomeDesafiante+':</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
+
+                $('.boxPokemon').prepend(
+                '<div class="boxNPC">'+
+                  '<h5 style="background-color: #ccc; border-radius: 5px; padding: 5px;"> <i class="fa fa-star"></i> Derrote todos os treinadores antes do Líder</h5>'+
+                '</div>');
+
                 break;
             case "Celadon":
+
+                lider = {
+                    imglider: "",
+                    imginsignia: "",
+                    lider: "",
+                    insignia: "",
+                    pokemons: [
+                    ]
+                };
+
+                pkmn = lider.pokemons[0];
+                nivelPkmn = lider.pokemons[0].nivel;
+                poderPkmn = calculaPoder(pkmn,nivelPkmn);
+                nivel = nivelHabilidade(pkmn.nome,Number(nivelPkmn));
+                habil = buscaHabilidade(pkmn.nome,Number(nivel));
+
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+
+                $('.boxPokemon').prepend(
+                    '<center><img style="vertical-align: bottom;" width=60 src='+lider.imginsignia+'> <img height=284 src='+lider.imglider+'></center>'+
+                    '<br><strong>Líder: </strong>'+lider.lider+
+                    '<br><strong>Insígnia: </strong>'+lider.insignia+
+                    '<center>'+imagens+'</center>'+pokemons+
+                '</div><br>');
+
+                imagens = '';
+                pokemons = '';
+
+                desafiante = {
+                    pokemons: [
+                    ]
+                };
+
+                nomeDesafiante = '';
+                pkmn = desafiante.pokemons[0];
+                nivelPkmn = desafiante.pokemons[0].nivel;
+                poderPkmn = calculaPoder(pkmn,nivelPkmn);
+                nivel = nivelHabilidade(pkmn.nome,Number(nivelPkmn));
+                habil = buscaHabilidade(pkmn.nome,Number(nivel));
+
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+
+                $('.boxPokemon').prepend('<div class="boxNPC"><strong>'+nomeDesafiante+':</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
+
+                $('.boxPokemon').prepend(
+                '<div class="boxNPC">'+
+                  '<h5 style="background-color: #ccc; border-radius: 5px; padding: 5px;"> <i class="fa fa-star"></i> Derrote todos os treinadores antes da Líder</h5>'+
+                '</div>');
+
                 break;
             case "Fuschia":
+
+                lider = {
+                    imglider: "",
+                    imginsignia: "",
+                    lider: "",
+                    insignia: "",
+                    pokemons: [
+                    ]
+                };
+
+                pkmn = lider.pokemons[0];
+                nivelPkmn = lider.pokemons[0].nivel;
+                poderPkmn = calculaPoder(pkmn,nivelPkmn);
+                nivel = nivelHabilidade(pkmn.nome,Number(nivelPkmn));
+                habil = buscaHabilidade(pkmn.nome,Number(nivel));
+
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+
+                $('.boxPokemon').prepend(
+                    '<center><img style="vertical-align: bottom;" width=60 src='+lider.imginsignia+'> <img height=284 src='+lider.imglider+'></center>'+
+                    '<br><strong>Líder: </strong>'+lider.lider+
+                    '<br><strong>Insígnia: </strong>'+lider.insignia+
+                    '<center>'+imagens+'</center>'+pokemons+
+                '</div><br>');
+
+                imagens = '';
+                pokemons = '';
+
+                desafiante = {
+                    pokemons: [
+                    ]
+                };
+
+                nomeDesafiante = '';
+                pkmn = desafiante.pokemons[0];
+                nivelPkmn = desafiante.pokemons[0].nivel;
+                poderPkmn = calculaPoder(pkmn,nivelPkmn);
+                nivel = nivelHabilidade(pkmn.nome,Number(nivelPkmn));
+                habil = buscaHabilidade(pkmn.nome,Number(nivel));
+
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+
+                $('.boxPokemon').prepend('<div class="boxNPC"><strong>'+nomeDesafiante+':</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
+
+                $('.boxPokemon').prepend(
+                '<div class="boxNPC">'+
+                  '<h5 style="background-color: #ccc; border-radius: 5px; padding: 5px;"> <i class="fa fa-star"></i> Derrote todos os treinadores antes da Líder</h5>'+
+                '</div>');
+
                 break;
             case "Dojo":
+
+                lider = {
+                    imglider: "",
+                    imginsignia: "",
+                    lider: "",
+                    insignia: "",
+                    pokemons: [
+                    ]
+                };
+
+                pkmn = lider.pokemons[0];
+                nivelPkmn = lider.pokemons[0].nivel;
+                poderPkmn = calculaPoder(pkmn,nivelPkmn);
+                nivel = nivelHabilidade(pkmn.nome,Number(nivelPkmn));
+                habil = buscaHabilidade(pkmn.nome,Number(nivel));
+
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+
+                $('.boxPokemon').prepend(
+                    '<center><img style="vertical-align: bottom;" width=60 src='+lider.imginsignia+'> <img height=284 src='+lider.imglider+'></center>'+
+                    '<br><strong>Líder: </strong>'+lider.lider+
+                    '<br><strong>Insígnia: </strong>'+lider.insignia+
+                    '<center>'+imagens+'</center>'+pokemons+
+                '</div><br>');
+
+                imagens = '';
+                pokemons = '';
+
+                desafiante = {
+                    pokemons: [
+                    ]
+                };
+
+                nomeDesafiante = '';
+                pkmn = desafiante.pokemons[0];
+                nivelPkmn = desafiante.pokemons[0].nivel;
+                poderPkmn = calculaPoder(pkmn,nivelPkmn);
+                nivel = nivelHabilidade(pkmn.nome,Number(nivelPkmn));
+                habil = buscaHabilidade(pkmn.nome,Number(nivel));
+
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+
+                $('.boxPokemon').prepend('<div class="boxNPC"><strong>'+nomeDesafiante+':</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
+
+                $('.boxPokemon').prepend(
+                '<div class="boxNPC">'+
+                  '<h5 style="background-color: #ccc; border-radius: 5px; padding: 5px;"> <i class="fa fa-star"></i> Derrote todos os treinadores antes da Líder</h5>'+
+                '</div>');
+
                 break;
             case "Silph":
+
+                lider = {
+                    imglider: "",
+                    imginsignia: "",
+                    lider: "",
+                    insignia: "",
+                    pokemons: [
+                    ]
+                };
+
+                pkmn = lider.pokemons[0];
+                nivelPkmn = lider.pokemons[0].nivel;
+                poderPkmn = calculaPoder(pkmn,nivelPkmn);
+                nivel = nivelHabilidade(pkmn.nome,Number(nivelPkmn));
+                habil = buscaHabilidade(pkmn.nome,Number(nivel));
+
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+
+                $('.boxPokemon').prepend(
+                    '<center><img style="vertical-align: bottom;" width=60 src='+lider.imginsignia+'> <img height=284 src='+lider.imglider+'></center>'+
+                    '<br><strong>Líder: </strong>'+lider.lider+
+                    '<br><strong>Insígnia: </strong>'+lider.insignia+
+                    '<center>'+imagens+'</center>'+pokemons+
+                '</div><br>');
+
+                imagens = '';
+                pokemons = '';
+
+                desafiante = {
+                    pokemons: [
+                    ]
+                };
+
+                nomeDesafiante = '';
+                pkmn = desafiante.pokemons[0];
+                nivelPkmn = desafiante.pokemons[0].nivel;
+                poderPkmn = calculaPoder(pkmn,nivelPkmn);
+                nivel = nivelHabilidade(pkmn.nome,Number(nivelPkmn));
+                habil = buscaHabilidade(pkmn.nome,Number(nivel));
+
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+
+                $('.boxPokemon').prepend('<div class="boxNPC"><strong>'+nomeDesafiante+':</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
+
+                $('.boxPokemon').prepend(
+                '<div class="boxNPC">'+
+                  '<h5 style="background-color: #ccc; border-radius: 5px; padding: 5px;"> <i class="fa fa-star"></i> Derrote todos os treinadores antes da Líder</h5>'+
+                '</div>');
+
                 break;
             case "Saffron":
+
+                lider = {
+                    imglider: "",
+                    imginsignia: "",
+                    lider: "",
+                    insignia: "",
+                    pokemons: [
+                    ]
+                };
+
+                pkmn = lider.pokemons[0];
+                nivelPkmn = lider.pokemons[0].nivel;
+                poderPkmn = calculaPoder(pkmn,nivelPkmn);
+                nivel = nivelHabilidade(pkmn.nome,Number(nivelPkmn));
+                habil = buscaHabilidade(pkmn.nome,Number(nivel));
+
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+
+                $('.boxPokemon').prepend(
+                    '<center><img style="vertical-align: bottom;" width=60 src='+lider.imginsignia+'> <img height=284 src='+lider.imglider+'></center>'+
+                    '<br><strong>Líder: </strong>'+lider.lider+
+                    '<br><strong>Insígnia: </strong>'+lider.insignia+
+                    '<center>'+imagens+'</center>'+pokemons+
+                '</div><br>');
+
+                imagens = '';
+                pokemons = '';
+
+                desafiante = {
+                    pokemons: [
+                    ]
+                };
+
+                nomeDesafiante = '';
+                pkmn = desafiante.pokemons[0];
+                nivelPkmn = desafiante.pokemons[0].nivel;
+                poderPkmn = calculaPoder(pkmn,nivelPkmn);
+                nivel = nivelHabilidade(pkmn.nome,Number(nivelPkmn));
+                habil = buscaHabilidade(pkmn.nome,Number(nivel));
+
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+
+                $('.boxPokemon').prepend('<div class="boxNPC"><strong>'+nomeDesafiante+':</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
+
+                $('.boxPokemon').prepend(
+                '<div class="boxNPC">'+
+                  '<h5 style="background-color: #ccc; border-radius: 5px; padding: 5px;"> <i class="fa fa-star"></i> Derrote todos os treinadores antes da Líder</h5>'+
+                '</div>');
+
                 break;
             case "Cinnabar":
+
+                lider = {
+                    imglider: "",
+                    imginsignia: "",
+                    lider: "",
+                    insignia: "",
+                    pokemons: [
+                    ]
+                };
+
+                pkmn = lider.pokemons[0];
+                nivelPkmn = lider.pokemons[0].nivel;
+                poderPkmn = calculaPoder(pkmn,nivelPkmn);
+                nivel = nivelHabilidade(pkmn.nome,Number(nivelPkmn));
+                habil = buscaHabilidade(pkmn.nome,Number(nivel));
+
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+
+                $('.boxPokemon').prepend(
+                    '<center><img style="vertical-align: bottom;" width=60 src='+lider.imginsignia+'> <img height=284 src='+lider.imglider+'></center>'+
+                    '<br><strong>Líder: </strong>'+lider.lider+
+                    '<br><strong>Insígnia: </strong>'+lider.insignia+
+                    '<center>'+imagens+'</center>'+pokemons+
+                '</div><br>');
+
+                imagens = '';
+                pokemons = '';
+
+                desafiante = {
+                    pokemons: [
+                    ]
+                };
+
+                nomeDesafiante = '';
+                pkmn = desafiante.pokemons[0];
+                nivelPkmn = desafiante.pokemons[0].nivel;
+                poderPkmn = calculaPoder(pkmn,nivelPkmn);
+                nivel = nivelHabilidade(pkmn.nome,Number(nivelPkmn));
+                habil = buscaHabilidade(pkmn.nome,Number(nivel));
+
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+
+                $('.boxPokemon').prepend('<div class="boxNPC"><strong>'+nomeDesafiante+':</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
+
+                $('.boxPokemon').prepend(
+                '<div class="boxNPC">'+
+                  '<h5 style="background-color: #ccc; border-radius: 5px; padding: 5px;"> <i class="fa fa-star"></i> Derrote todos os treinadores antes da Líder</h5>'+
+                '</div>');
+
                 break;
             case "Viridian":
+
+                lider = {
+                    imglider: "",
+                    imginsignia: "",
+                    lider: "",
+                    insignia: "",
+                    pokemons: [
+                    ]
+                };
+
+                pkmn = lider.pokemons[0];
+                nivelPkmn = lider.pokemons[0].nivel;
+                poderPkmn = calculaPoder(pkmn,nivelPkmn);
+                nivel = nivelHabilidade(pkmn.nome,Number(nivelPkmn));
+                habil = buscaHabilidade(pkmn.nome,Number(nivel));
+
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+
+                $('.boxPokemon').prepend(
+                    '<center><img style="vertical-align: bottom;" width=60 src='+lider.imginsignia+'> <img height=284 src='+lider.imglider+'></center>'+
+                    '<br><strong>Líder: </strong>'+lider.lider+
+                    '<br><strong>Insígnia: </strong>'+lider.insignia+
+                    '<center>'+imagens+'</center>'+pokemons+
+                '</div><br>');
+
+                imagens = '';
+                pokemons = '';
+
+                desafiante = {
+                    pokemons: [
+                    ]
+                };
+
+                nomeDesafiante = '';
+                pkmn = desafiante.pokemons[0];
+                nivelPkmn = desafiante.pokemons[0].nivel;
+                poderPkmn = calculaPoder(pkmn,nivelPkmn);
+                nivel = nivelHabilidade(pkmn.nome,Number(nivelPkmn));
+                habil = buscaHabilidade(pkmn.nome,Number(nivel));
+
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+
+                $('.boxPokemon').prepend('<div class="boxNPC"><strong>'+nomeDesafiante+':</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
+
+                $('.boxPokemon').prepend(
+                '<div class="boxNPC">'+
+                  '<h5 style="background-color: #ccc; border-radius: 5px; padding: 5px;"> <i class="fa fa-star"></i> Derrote todos os treinadores antes da Líder</h5>'+
+                '</div>');
+
                 break;
             case "Lorelei":
+
+                lider = {
+                    imglider: "",
+                    imginsignia: "",
+                    lider: "",
+                    insignia: "",
+                    pokemons: [
+                    ]
+                };
+
+                pkmn = lider.pokemons[0];
+                nivelPkmn = lider.pokemons[0].nivel;
+                poderPkmn = calculaPoder(pkmn,nivelPkmn);
+                nivel = nivelHabilidade(pkmn.nome,Number(nivelPkmn));
+                habil = buscaHabilidade(pkmn.nome,Number(nivel));
+
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+
+                $('.boxPokemon').prepend(
+                    '<center><img style="vertical-align: bottom;" width=60 src='+lider.imginsignia+'> <img height=284 src='+lider.imglider+'></center>'+
+                    '<br><strong>Líder: </strong>'+lider.lider+
+                    '<br><strong>Insígnia: </strong>'+lider.insignia+
+                    '<center>'+imagens+'</center>'+pokemons+
+                '</div><br>');
+
+                imagens = '';
+                pokemons = '';
+
+                desafiante = {
+                    pokemons: [
+                    ]
+                };
+
+                nomeDesafiante = '';
+                pkmn = desafiante.pokemons[0];
+                nivelPkmn = desafiante.pokemons[0].nivel;
+                poderPkmn = calculaPoder(pkmn,nivelPkmn);
+                nivel = nivelHabilidade(pkmn.nome,Number(nivelPkmn));
+                habil = buscaHabilidade(pkmn.nome,Number(nivel));
+
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+
+                $('.boxPokemon').prepend('<div class="boxNPC"><strong>'+nomeDesafiante+':</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
+
+                $('.boxPokemon').prepend(
+                '<div class="boxNPC">'+
+                  '<h5 style="background-color: #ccc; border-radius: 5px; padding: 5px;"> <i class="fa fa-star"></i> Derrote todos os treinadores antes da Líder</h5>'+
+                '</div>');
+
                 break;
             case "Bruno":
+
+                lider = {
+                    imglider: "",
+                    imginsignia: "",
+                    lider: "",
+                    insignia: "",
+                    pokemons: [
+                    ]
+                };
+
+                pkmn = lider.pokemons[0];
+                nivelPkmn = lider.pokemons[0].nivel;
+                poderPkmn = calculaPoder(pkmn,nivelPkmn);
+                nivel = nivelHabilidade(pkmn.nome,Number(nivelPkmn));
+                habil = buscaHabilidade(pkmn.nome,Number(nivel));
+
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+
+                $('.boxPokemon').prepend(
+                    '<center><img style="vertical-align: bottom;" width=60 src='+lider.imginsignia+'> <img height=284 src='+lider.imglider+'></center>'+
+                    '<br><strong>Líder: </strong>'+lider.lider+
+                    '<br><strong>Insígnia: </strong>'+lider.insignia+
+                    '<center>'+imagens+'</center>'+pokemons+
+                '</div><br>');
+
+                imagens = '';
+                pokemons = '';
+
+                desafiante = {
+                    pokemons: [
+                    ]
+                };
+
+                nomeDesafiante = '';
+                pkmn = desafiante.pokemons[0];
+                nivelPkmn = desafiante.pokemons[0].nivel;
+                poderPkmn = calculaPoder(pkmn,nivelPkmn);
+                nivel = nivelHabilidade(pkmn.nome,Number(nivelPkmn));
+                habil = buscaHabilidade(pkmn.nome,Number(nivel));
+
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+
+                $('.boxPokemon').prepend('<div class="boxNPC"><strong>'+nomeDesafiante+':</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
+
+                $('.boxPokemon').prepend(
+                '<div class="boxNPC">'+
+                  '<h5 style="background-color: #ccc; border-radius: 5px; padding: 5px;"> <i class="fa fa-star"></i> Derrote todos os treinadores antes da Líder</h5>'+
+                '</div>');
+
                 break;
             case "Agatha":
+
+                lider = {
+                    imglider: "",
+                    imginsignia: "",
+                    lider: "",
+                    insignia: "",
+                    pokemons: [
+                    ]
+                };
+
+                pkmn = lider.pokemons[0];
+                nivelPkmn = lider.pokemons[0].nivel;
+                poderPkmn = calculaPoder(pkmn,nivelPkmn);
+                nivel = nivelHabilidade(pkmn.nome,Number(nivelPkmn));
+                habil = buscaHabilidade(pkmn.nome,Number(nivel));
+
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+
+                $('.boxPokemon').prepend(
+                    '<center><img style="vertical-align: bottom;" width=60 src='+lider.imginsignia+'> <img height=284 src='+lider.imglider+'></center>'+
+                    '<br><strong>Líder: </strong>'+lider.lider+
+                    '<br><strong>Insígnia: </strong>'+lider.insignia+
+                    '<center>'+imagens+'</center>'+pokemons+
+                '</div><br>');
+
+                imagens = '';
+                pokemons = '';
+
+                desafiante = {
+                    pokemons: [
+                    ]
+                };
+
+                nomeDesafiante = '';
+                pkmn = desafiante.pokemons[0];
+                nivelPkmn = desafiante.pokemons[0].nivel;
+                poderPkmn = calculaPoder(pkmn,nivelPkmn);
+                nivel = nivelHabilidade(pkmn.nome,Number(nivelPkmn));
+                habil = buscaHabilidade(pkmn.nome,Number(nivel));
+
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+
+                $('.boxPokemon').prepend('<div class="boxNPC"><strong>'+nomeDesafiante+':</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
+
+                $('.boxPokemon').prepend(
+                '<div class="boxNPC">'+
+                  '<h5 style="background-color: #ccc; border-radius: 5px; padding: 5px;"> <i class="fa fa-star"></i> Derrote todos os treinadores antes da Líder</h5>'+
+                '</div>');
+
                 break;
             case "Lance":
+
+                lider = {
+                    imglider: "",
+                    imginsignia: "",
+                    lider: "",
+                    insignia: "",
+                    pokemons: [
+                    ]
+                };
+
+                pkmn = lider.pokemons[0];
+                nivelPkmn = lider.pokemons[0].nivel;
+                poderPkmn = calculaPoder(pkmn,nivelPkmn);
+                nivel = nivelHabilidade(pkmn.nome,Number(nivelPkmn));
+                habil = buscaHabilidade(pkmn.nome,Number(nivel));
+
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+
+                $('.boxPokemon').prepend(
+                    '<center><img style="vertical-align: bottom;" width=60 src='+lider.imginsignia+'> <img height=284 src='+lider.imglider+'></center>'+
+                    '<br><strong>Líder: </strong>'+lider.lider+
+                    '<br><strong>Insígnia: </strong>'+lider.insignia+
+                    '<center>'+imagens+'</center>'+pokemons+
+                '</div><br>');
+
+                imagens = '';
+                pokemons = '';
+
+                desafiante = {
+                    pokemons: [
+                    ]
+                };
+
+                nomeDesafiante = '';
+                pkmn = desafiante.pokemons[0];
+                nivelPkmn = desafiante.pokemons[0].nivel;
+                poderPkmn = calculaPoder(pkmn,nivelPkmn);
+                nivel = nivelHabilidade(pkmn.nome,Number(nivelPkmn));
+                habil = buscaHabilidade(pkmn.nome,Number(nivel));
+
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+
+                $('.boxPokemon').prepend('<div class="boxNPC"><strong>'+nomeDesafiante+':</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
+
+                $('.boxPokemon').prepend(
+                '<div class="boxNPC">'+
+                  '<h5 style="background-color: #ccc; border-radius: 5px; padding: 5px;"> <i class="fa fa-star"></i> Derrote todos os treinadores antes da Líder</h5>'+
+                '</div>');
+
                 break;
             case "Rival":
+
+                lider = {
+                    imglider: "",
+                    imginsignia: "",
+                    lider: "",
+                    insignia: "",
+                    pokemons: [
+                    ]
+                };
+
+                pkmn = lider.pokemons[0];
+                nivelPkmn = lider.pokemons[0].nivel;
+                poderPkmn = calculaPoder(pkmn,nivelPkmn);
+                nivel = nivelHabilidade(pkmn.nome,Number(nivelPkmn));
+                habil = buscaHabilidade(pkmn.nome,Number(nivel));
+
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+
+                $('.boxPokemon').prepend(
+                    '<center><img style="vertical-align: bottom;" width=60 src='+lider.imginsignia+'> <img height=284 src='+lider.imglider+'></center>'+
+                    '<br><strong>Líder: </strong>'+lider.lider+
+                    '<br><strong>Insígnia: </strong>'+lider.insignia+
+                    '<center>'+imagens+'</center>'+pokemons+
+                '</div><br>');
+
+                imagens = '';
+                pokemons = '';
+
+                desafiante = {
+                    pokemons: [
+                    ]
+                };
+
+                nomeDesafiante = '';
+                pkmn = desafiante.pokemons[0];
+                nivelPkmn = desafiante.pokemons[0].nivel;
+                poderPkmn = calculaPoder(pkmn,nivelPkmn);
+                nivel = nivelHabilidade(pkmn.nome,Number(nivelPkmn));
+                habil = buscaHabilidade(pkmn.nome,Number(nivel));
+
+                imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+
+                $('.boxPokemon').prepend('<div class="boxNPC"><strong>'+nomeDesafiante+':</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
+
+                $('.boxPokemon').prepend(
+                '<div class="boxNPC">'+
+                  '<h5 style="background-color: #ccc; border-radius: 5px; padding: 5px;"> <i class="fa fa-star"></i> Derrote todos os treinadores antes da Líder</h5>'+
+                '</div>');
+
                 break;
         }
 
