@@ -2352,8 +2352,8 @@ $( document ).ready(function() {
             case 'floresta':
                 return [
                     {nome:'Dodrio',tipo:'Normal Voador',fraqueza:'Elétrico, Gelo e Pedra',num:'085',evo:'1'},
-                    {nome:'Pikachu',tipo:'Elétrico',fraqueza:'Terreste',num:'025',evo:'0'},
-                    {nome:'Pikachu',tipo:'Elétrico',fraqueza:'Terreste',num:'025',evo:'0'},
+                    {nome:'Pikachu',tipo:'Elétrico',fraqueza:'Terrestre',num:'025',evo:'0'},
+                    {nome:'Pikachu',tipo:'Elétrico',fraqueza:'Terrestre',num:'025',evo:'0'},
                     {nome:'Bellsprout',tipo:'Grama Venenoso',fraqueza:'Fogo, Psíquico, Voador e Gelo',num:'069',evo:'0'},
                     {nome:'Bellsprout',tipo:'Grama Venenoso',fraqueza:'Fogo, Psíquico, Voador e Gelo',num:'069',evo:'0'},
                     {nome:'Bellsprout',tipo:'Grama Venenoso',fraqueza:'Fogo, Psíquico, Voador e Gelo',num:'069',evo:'0'},
@@ -2737,15 +2737,15 @@ $( document ).ready(function() {
                     {nome:'Grimer',tipo:'Venenoso',fraqueza:'Psíquico e Terrestre',num:'088',evo:'0'},
                     {nome:'Grimer',tipo:'Venenoso',fraqueza:'Psíquico e Terrestre',num:'088',evo:'0'},
                     {nome:'Grimer',tipo:'Venenoso',fraqueza:'Psíquico e Terrestre',num:'088',evo:'0'},
-                    {nome:'Pikachu',tipo:'Elétrico',fraqueza:'Terreste',num:'025',evo:'0'},
-                    {nome:'Pikachu',tipo:'Elétrico',fraqueza:'Terreste',num:'025',evo:'0'},
-                    {nome:'Pikachu',tipo:'Elétrico',fraqueza:'Terreste',num:'025',evo:'0'},
-                    {nome:'Pikachu',tipo:'Elétrico',fraqueza:'Terreste',num:'025',evo:'0'},
+                    {nome:'Pikachu',tipo:'Elétrico',fraqueza:'Terrestre',num:'025',evo:'0'},
+                    {nome:'Pikachu',tipo:'Elétrico',fraqueza:'Terrestre',num:'025',evo:'0'},
+                    {nome:'Pikachu',tipo:'Elétrico',fraqueza:'Terrestre',num:'025',evo:'0'},
+                    {nome:'Pikachu',tipo:'Elétrico',fraqueza:'Terrestre',num:'025',evo:'0'},
                     {nome:'Electrode',tipo:'Elétrico',fraqueza:'Terrestre',num:'101',evo:'1'},
                     {nome:'Electrode',tipo:'Elétrico',fraqueza:'Terrestre',num:'101',evo:'1'},
                     {nome:'Electrode',tipo:'Elétrico',fraqueza:'Terrestre',num:'101',evo:'1'},
-                    {nome:'Raichu',tipo:'Elétrico',fraqueza:'Terreste',num:'026',evo:'1'},
-                    {nome:'Raichu',tipo:'Elétrico',fraqueza:'Terreste',num:'026',evo:'1'},
+                    {nome:'Raichu',tipo:'Elétrico',fraqueza:'Terrestre',num:'026',evo:'1'},
+                    {nome:'Raichu',tipo:'Elétrico',fraqueza:'Terrestre',num:'026',evo:'1'},
                     {nome:'Zapdos',tipo:'Elétrico Voador',fraqueza:'Gelo e Pedra',num:'145',evo:'0'},
                 ];
                 break;
@@ -3354,8 +3354,8 @@ $( document ).ready(function() {
                     insignia: "Trovão",
                     pokemons: [
                         {nivel:"21",nome:'Voltorb',tipo:'Elétrico',fraqueza:'Terrestre',num:'100',evo:'0'},
-                        {nivel:"18",nome:'Pikachu',tipo:'Elétrico',fraqueza:'Terreste',num:'025',evo:'0'},
-                        {nivel:"24",nome:'Raichu',tipo:'Elétrico',fraqueza:'Terreste',num:'026',evo:'1'},
+                        {nivel:"18",nome:'Pikachu',tipo:'Elétrico',fraqueza:'Terrestre',num:'025',evo:'0'},
+                        {nivel:"24",nome:'Raichu',tipo:'Elétrico',fraqueza:'Terrestre',num:'026',evo:'1'},
                     ]
                 };
 
@@ -3399,7 +3399,7 @@ $( document ).ready(function() {
 
                 desafiante = {
                     pokemons: [
-                        {nivel:"23",nome:'Pikachu',tipo:'Elétrico',fraqueza:'Terreste',num:'025',evo:'0'},
+                        {nivel:"23",nome:'Pikachu',tipo:'Elétrico',fraqueza:'Terrestre',num:'025',evo:'0'},
                     ]
                 };
 
@@ -3451,8 +3451,8 @@ $( document ).ready(function() {
 
                 desafiante = {
                     pokemons: [
-                        {nivel:"21",nome:'Pikachu',tipo:'Elétrico',fraqueza:'Terreste',num:'025',evo:'0'},
-                        {nivel:"26",nome:'Pikachu',tipo:'Elétrico',fraqueza:'Terreste',num:'025',evo:'0'},
+                        {nivel:"21",nome:'Pikachu',tipo:'Elétrico',fraqueza:'Terrestre',num:'025',evo:'0'},
+                        {nivel:"26",nome:'Pikachu',tipo:'Elétrico',fraqueza:'Terrestre',num:'025',evo:'0'},
                     ]
                 };
 
