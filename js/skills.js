@@ -22,6 +22,10 @@ function skills(type) {
             return ['Horrível','Violento','Ágil','Instintivo'];
             break;
 
+        case "ihunt":
+            return ['Acadêmico','Assassino','Atleta','Lutador','Trambiqueiro','Guerrilheiro','Hacker','Influencer','Investigador','Criador','Médico','Ocultista','Organizador','Profissional','Socialite','Assistente Social','Espião','Sobrevivente'];
+            break;
+
     }
 
 };

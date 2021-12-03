@@ -9,6 +9,152 @@ $( document ).ready(function() {
       $("#btnGerarCacada").trigger('click');
   },10);
 
+
+  $('#btnGerarMonstro').click(function(){
+
+    var clado = $('#selectClado').val();
+    var estrelas = $('#selectEstrelas').val();
+    var habilidades = '';
+    var nivel_max = '';
+    var retorno = '';
+    var subclado = '';
+    var features = [];
+    var gifts = [];
+    var banes = [];
+    var pericias = '';
+    var attributes = '';
+    var estresse = '';
+
+    if(clado == '') clado = random(['vampiro','bruxo','lobisomem','demonio','morto','reptiliano','estranho']);
+    if(estrelas == '') estrelas = random(['1','2','3','4','5']);
+
+    switch(estrelas){
+      case '1':
+
+        pericias = exclusiveRandom(skills('ihunt'),6);
+
+        attributes = '<div><strong>HABILIDADES</strong>'+
+          '<div class="textIndent"><strong>Boa (+3):</strong> '+pericias[0]+'</div>'+
+          '<div class="textIndent"><strong>Razoável (+2):</strong> '+pericias[1]+', '+pericias[2]+'</div>'+
+          '<div class="textIndent"><strong>Média (+1):</strong> '+pericias[3]+', '+pericias[4]+', '+pericias[5]+'</div></div>';
+
+        estrelas = '<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i>';
+
+        break;
+      case '2':
+
+        pericias = exclusiveRandom(skills('ihunt'),8);
+
+        attributes = '<div><strong>HABILIDADES</strong>'+
+          '<div class="textIndent"><strong>Grande (+4):</strong> '+pericias[0]+'</div>'+
+          '<div class="textIndent"><strong>Boa (+3):</strong> '+pericias[1]+'</div>'+
+          '<div class="textIndent"><strong>Razoável (+2):</strong> '+pericias[2]+', '+pericias[3]+'</div>'+
+          '<div class="textIndent"><strong>Média (+1):</strong> '+pericias[4]+', '+pericias[5]+', '+pericias[6]+', '+pericias[7]+'</div></div>';
+
+        estrelas = '<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i>';
+
+        break;
+      case '3':
+
+        pericias = exclusiveRandom(skills('ihunt'),9);
+
+        attributes = '<div><strong>HABILIDADES</strong>'+
+          '<div class="textIndent"><strong>Ótima (+5):</strong> '+pericias[8]+'</div>'+
+          '<div class="textIndent"><strong>Grande (+4):</strong> '+pericias[0]+'</div>'+
+          '<div class="textIndent"><strong>Boa (+3):</strong> '+pericias[1]+'</div>'+
+          '<div class="textIndent"><strong>Razoável (+2):</strong> '+pericias[2]+', '+pericias[3]+'</div>'+
+          '<div class="textIndent"><strong>Média (+1):</strong> '+pericias[4]+', '+pericias[5]+', '+pericias[6]+', '+pericias[7]+'</div></div>';
+
+        estrelas = '<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i>';
+
+        break;
+      case '4':
+
+        pericias = exclusiveRandom(skills('ihunt'),11);
+
+        attributes = '<div><strong>HABILIDADES</strong>'+
+          '<div class="textIndent"><strong>Ótima (+5):</strong> '+pericias[8]+'</div>'+
+          '<div class="textIndent"><strong>Grande (+4):</strong> '+pericias[0]+'</div>'+
+          '<div class="textIndent"><strong>Boa (+3):</strong> '+pericias[1]+', '+pericias[9]+'</div>'+
+          '<div class="textIndent"><strong>Razoável (+2):</strong> '+pericias[2]+', '+pericias[3]+', '+pericias[10]+'</div>'+
+          '<div class="textIndent"><strong>Média (+1):</strong> '+pericias[4]+', '+pericias[5]+', '+pericias[6]+', '+pericias[7]+'</div></div>';
+
+        estrelas = '<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i>';
+
+        break;
+      case '5':
+
+        pericias = exclusiveRandom(skills('ihunt'),12);
+
+        attributes = '<div><strong>HABILIDADES</strong>'+
+          '<div class="textIndent"><strong>Incrível (+6):</strong> '+pericias[10]+'</div>'+
+          '<div class="textIndent"><strong>Ótima (+5):</strong> '+pericias[8]+'</div>'+
+          '<div class="textIndent"><strong>Grande (+4):</strong> '+pericias[0]+'</div>'+
+          '<div class="textIndent"><strong>Boa (+3):</strong> '+pericias[1]+', '+pericias[9]+'</div>'+
+          '<div class="textIndent"><strong>Razoável (+2):</strong> '+pericias[2]+', '+pericias[3]+', '+pericias[10]+'</div>'+
+          '<div class="textIndent"><strong>Média (+1):</strong> '+pericias[4]+', '+pericias[5]+', '+pericias[6]+'</div></div>';
+
+        estrelas = '<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>';
+
+        break;
+    };
+
+    estresse = '<p><strong>ESTRESSE</strong><br>'+
+      '<strong>'+nbsp(4)+'Físico: </strong>'+characterStressHunt('Atleta',pericias)+' + Valor da Habilidade Atleta<br>'+
+      '<strong>'+nbsp(4)+'Mental: </strong>'+characterStressHunt('Sobrevivente',pericias)+' + Valor da Habilidade Sobrevivente';
+
+    switch(clado){
+      case "vampiro":
+        subclado = random(['Vampiro','Morcego Vampiro','Cascavel Vampira','Lobo Vampiro']);
+        break;
+    };
+
+    switch(subclado){
+      case "Vampiro":
+        features.push('Bebedor de Sangue (5)',' Propagação: Propagação Inferior e Levantar do Túmulo (2)',' Regeneração (3)',' Sentidos Especiais: Farejar Sangue (2)',' Imortal: Não Envelhece (2)');
+        banes.push('Fraqueza Mortal: Estaca no Coração (U2, P5)',' Fome: Sangue (U1, P2)');
+        break;
+      case "Morcego Vampiro":
+        features.push('Bebedor de Sangue (5)',' Propagação: Propagação Inferior e Levantar do Túmulo (2)',' Regeneração (3)',' Sentidos Especiais: Farejar Sangue (2)',' Imortal: Não Envelhece (2)',' Euforia (1)',' Sentidos Especiais: Leitura De Almas (+1)');
+        gifts.push('Telepatia (1)');
+        banes.push('Fraqueza Mortal: Estaca no Coração (U2, P5)',' Fome: Sangue (U1, P2)',' Fraqueza Mortal: Luz do Sol (U2, P3)');
+        break;
+      case "Cascavel Vampira":
+        features.push('Bebedor de Sangue (5)',' Propagação: Propagação Inferior e Levantar do Túmulo (2)',' Regeneração (3)',' Sentidos Especiais: Farejar Sangue (2)',' Imortal: Não Envelhece (2)',' Arma Natural: Letal (6)');
+        banes.push('Fraqueza Mortal: Estaca no Coração (U2, P5)',' Fome: Sangue (U2, P2)');
+        break;
+      case "Lobo Vampiro":
+        features.push('Bebedor de Sangue (5)',' Propagação: Propagação Inferior e Levantar do Túmulo (2)',' Regeneração (3)',' Sentidos Especiais: Farejar Sangue (2)',' Imortal: Não Envelhece (2)',' Euforia (1)',' Potência Desumana (3)',' Armadura Profana (3)');
+        banes.push('Fraqueza Mortal: Estaca no Coração (U2, P5)',' Fome: Sangue (U1, P2)',' Territorialista: Enfrentará ameaças ao território com violência abjeta e avassaladora');
+        break;
+    };
+
+    if(gifts == '') 
+      gifts = 'Nenhum';
+
+    $('.boxiHunt').html(
+      '<center><h4>'+subclado+'</h4></center>'+
+      '<center><h6>'+estrelas+'</h6></center>'+
+      '<div><strong>ASPECTOS</strong></div>'+
+      '<div class="textIndent"><strong>Alto-conceito:</strong> '+''+'</div>'+
+      '<div class="textIndent"><strong>Drama:</strong> '+''+'</div>'+
+      '<div class="textIndent"><strong>Emprego:</strong> '+''+'</div>'+
+      '<div class="textIndent"><strong>Quadro dos Sonhos:</strong> '+''+'</div><br>'+
+      attributes+'<br>'+
+      '<div><strong>TRAÇOS</strong>'+
+      '<div class="textIndent"><strong>Características:</strong> '+features+'</div>'+
+      '<div class="textIndent"><strong>Dons:</strong> '+gifts+'</div>'+
+      '<div class="textIndent"><strong>Fraquezas:</strong> '+banes+'</div>'+
+      '</div>'+
+      estresse
+    );
+
+    $('.boxiHunt').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '550px', 'box-shadow': '5px 5px 10px lightgrey'});
+
+    activateStressBox();
+
+  });
+
   $('#btnGerarCacada').click(function(){
 
     var cliente = random(['Um monstro','Um cliente representando uma corporação','Um indivíduo milionário','Uma pessoa desesperada','Um contratante profissional obcecado pelo sucesso da caçada','Um grupo muito curioso acerca do alvo','Uma comunidade pobre precisando de ajuda','Um anônimo benevolente']);

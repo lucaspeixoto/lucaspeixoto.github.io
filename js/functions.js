@@ -120,6 +120,11 @@ function characterStress(type,skills) {
   return stress;
 }
 
+function characterStressHunt(type,skills) {
+  var stress = '<i class="fa fa-square-o"></i><i class="fa fa-square-o"></i><i class="fa fa-square-o"></i><i class="fa fa-square-o"></i><i class="fa fa-square-o"></i>';
+  return stress;
+}
+
 function npcStunts(npcSkills){
   var npcStuntsList = [];
   var pericias = skills('core');
