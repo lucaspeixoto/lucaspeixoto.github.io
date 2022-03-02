@@ -26,11 +26,127 @@ function aventuraTiny(type) {
 
 };
 
+function herancaTiny() {
+
+    return [{
+        tipo: 'Humano',
+        pv: 6,
+        traco: ''
+    },{
+        tipo: 'Fey',
+        pv: 6,
+        traco: 'Especialização em Arco'
+    },{
+        tipo: 'Anão',
+        pv: 8,
+        traco: 'Visão no Escuro'
+    },{
+        tipo: 'Goblin',
+        pv: 4,
+        traco: 'Agilidade Goblin'
+    },{
+        tipo: 'Salimar',
+        pv: 5,
+        traco: 'cura'
+    },{
+        tipo: 'Arvorídeo',
+        pv: 9,
+        traco: 'Coração Ancestral'
+    },{
+        tipo: 'Karhu',
+        pv: 7,
+        traco: 'Garras Poderosas'
+    },{
+        tipo: 'Lagartino',
+        pv: 6,
+        traco: 'Sangue Frio'
+    }]
+
+};
+
+function tracosTiny() {
+    return ['Acadêmico','Acrobata','Alquimista','Artista Marcial','Atirador','Brigão de Bar','Carismático','Contramestre','Curandeiro','Defensor','Duro de Matar','Durão','Especializado em Armadura','Estudante de Magia','Explorador de Masmorras','Familiar','Ferreiro','Forte','Furioso','Furtivo','Guerreiro da Escuridão','Memória Eidética','Mestre Bêbado','Mestre de Armadilhas','Mãos Leves','Oportunista','Orador das Feras','Perceptivo','Perspicaz','Portador do Escudo','Pugilista','Pés Ligeiros','Rastreador','Resoluto','Sobrevivente','Sortudo','Tiro Rápido','Tocado pela Magia','Transpassar','Vigilante']
+}
+
+function especializacaoArma(type){
+    switch(type){
+        case 'Corpo a Corpo Leve':
+            return ['Adaga','Espada Curta','Machado de Mão','Rapieira','Maça','Cajado','Tacape'];
+            break;
+        case 'Corpo a Corpo Pesada':
+            return ['Espada Grande','Machado de Guerra','Lança','Armas de Haste','Mangual de Duas Mãos','Martelo de Guerra'];
+            break;
+        case 'À Distância':
+            return ['Funda','Besta','Arco','Dardos','Shuriken'];
+            break;
+    }
+}
+
+function checkTraco(vetor,traco){
+    if(vetor[0] == traco) return true;
+    if(vetor[1] == traco) return true;
+    if(vetor[2] == traco) return true;
+    if(vetor[3] == traco) return true;
+    return false;
+}
+
+function ramofamilia(){
+    return ['Acólito','Acrobata','Advogado','Apostador','Apresentador','Artesão','Artista','Batedor','Caçador','Gladiador','Charlatão','Criminoso','Detetive','Discípulo','Emissário','Espião','Eremita','Estudioso','Funileiro','Forasteiro','Herói do Povo','Guarda','Herbalista','Lavrador','Médico','Marinheiro','Mercador','Mineiro','Pirata','Nômade','Nobre','Operário','Cavaleiro','Órfão','Sábio','Soldado','Prisioneiro','Taverneiro','Vidente']
+}
+
+function crencaTiny(){
+    return ['Estabelecer meu próprio feudo','Encontrar o santo graal','Ter minhas aventuras contadas nas canções','Descobrir o segredo arcano de Fausten','Chegar às terras livres','Comandar meu próprio exército','Libertar o povo da opressão','Acabar com a escravidão','Conquistar grandes tesouros','Dar exemplo aos meus amigos','Derrotar meu arqui-inimigo','Ser o maior aventureiro de todos','Ser lembrado para todo o sempre','Realizar grandes feitos','Ser o mais famoso de todos','Possuir muitos itens mágicos','Ser conhecido por todo o mundo','Comandar reinos','Obter muitas riquezas','Tudo o que eu quero são itens mágicos','Trazer paz ao mundo','Trazer guerra ao mundo','Tirar a dor do mundo','Que ninguém mais sofra','Obter todos os conhecimentos secretos','Livrar todos os animais','Proteger a natureza ao meu redor','Ajudar as pessoas no que puder','Proteger os fracos e oprimidos','Ser mundialmente famoso','Ser cada vez melhor no que faço','Buscar a paz interior']
+}
+
 $( document ).ready(function() {
 
   setTimeout(function() {
-      $("#btnGerarAventura").trigger('click');
+      $("#btnGerarPersonagem").trigger('click');
   },10);
+
+  $('#btnGerarPersonagem').click(function(){
+
+    var heranca = random(herancaTiny());
+    var tracos = exclusiveRandom(tracosTiny(),3);
+    var armaEspec = '';
+    var grupoArmas = random(['Corpo a Corpo Leve','Corpo a Corpo Pesada','À Distância']);
+    var armaEspec = random(especializacaoArma(grupoArmas));
+    var ramoFamilia = random(ramofamilia());
+    var crenca = random(crencaTiny());
+
+    if (heranca.tipo == 'Humano')
+        tracos = exclusiveRandom(tracosTiny(),4);
+    else if (heranca.tipo == 'Salimar')
+        heranca.traco = random(['Cura Pirotérmica','Cura Criotérmica']);
+    else if (heranca.tipo == 'Karhu')
+        armaEspec = armaEspec +', Garras';
+    else if (heranca.tipo == 'Fey')
+        armaEspec = armaEspec +', Arco';
+    
+    tracos.push(heranca.traco)
+
+    if(checkTraco(tracos,'Durão'))
+        heranca.pv += 2;
+
+    $('.boxAventura').html(
+        '<u><h5>'+random(nomePersonagem(heranca.tipo))+'</h5></u>'+
+        '<strong>Herança</strong>: '+heranca.tipo+
+        '<br><strong>Ramo da Família</strong>: '+ramoFamilia+
+        '<br><strong>Crença</strong>: '+crenca+
+        '<br><br><strong>Pontos de Vida</strong>: '+heranca.pv+
+        '<br><strong>Grupo de Armas</strong>: '+grupoArmas+
+        '<br><strong>Arma Especializada</strong>: '+armaEspec+
+        '<br><br><strong>Traços</strong>'+
+        '<div class="textIndent">'+tracos[0]+'</div>'+
+        '<div class="textIndent">'+tracos[1]+'</div>'+
+        '<div class="textIndent">'+tracos[2]+'</div>'+
+        '<div class="textIndent">'+tracos[3]+'</div>'
+    );
+
+    $('.boxAventura').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '550px', 'box-shadow': '5px 5px 10px lightgrey'});
+
+  });
+
 
   $('#btnGerarAventura').click(function(){
 
@@ -46,6 +162,6 @@ $( document ).ready(function() {
 
     $('.boxAventura').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '550px', 'box-shadow': '5px 5px 10px lightgrey'});
 
-    });
+  });
 
 });
