@@ -678,7 +678,7 @@ $('#btnGerarTropa').click(function(){
     valPoder = Math.floor(valPoder);
 
     $('.boxPersonagemFate').html(
-      '<center><h4>Fortificação</h4></center>'+
+      '<center><h4>Poder da Tropa</h4></center>'+
       '<div class="textIndent"><strong>Poder:</strong> '+valPoder+'</div><br>'
     );
 
