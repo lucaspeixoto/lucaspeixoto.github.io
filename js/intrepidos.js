@@ -4,6 +4,10 @@ $( document ).ready(function() {
         return random(['Piratas','Zumbis','Robôs','Fantasmas','Vampiros','Licantropos','Magos','Fadas','Animais falantes','Alienígenas','Super-heróis','Monstros','Dinossauros','Ninjas','Espiões','Cientistas','Dragões','Ladrões','Cowboys','Cavaleiros','Soldados','Mafiosos','Samurais','Vikings','Investigadores','Exploradores','Mutantes','Mechas','Lutadores','Anjos','Demônios','Bruxos','Caçadores','Cultistas','Sobreviventes','Pilotos']);
     };
 
+    function ambiente() {
+        return random(['No espaço ou em outro planeta','Em um passado fictício','Em um futuro distópico','Na natureza selvagem','Em um presente alternativo','Em ambientes inóspitos ou inconcebíveis']);
+    };
+
     function reacao() {
         parte_um = random(['Abortar','Agarrar','Ajudar','Atordoar','Avançar','Bloquear','Cobrir','Colidir','Combater','Concentrar','Consolidar','Coordenar','Defletir','Derrubar','Desafiar','Destruir','Embrenhar','Enganar','Escalar','Esquivar','Forçar','Impactar','Intensificar','Investir','Mirar','Opor','Penetrar','Perder','Perseverar','Proteger','Recuar','Romper','Separar','Sondar','Suportar','Surpreender']);
         parte_dois = random(['Abertura','Alcance','Aliado','Ambiente','Arma','Barreira','Chance','Controle','Coragem','Dano','Defesa','Determinação','Entendimento','Equilíbrio','Estratégia','Ferida','Ferocidade','Foco','Força','Fraqueza','Impulso','Instinto','Manobra','Medo','Objeto','Orgulho','Poder','Posição','Postura','Precisão','Recurso','Sentidos','Sutileza','Técnica','Vantagem','Velocidade']);
@@ -12,7 +16,7 @@ $( document ).ready(function() {
 
     function decisao() {
         parte_um = random(['Sim','Não']);
-        parte_dois = random([', mas...',', e...','','','','']);
+        parte_dois = random([' fraco',' forte','','','','']);
         return parte_um+parte_dois;
     };
 
@@ -31,6 +35,12 @@ $( document ).ready(function() {
     function missao() {
         parte_um = random(['Atacar','Batalhar','Capturar','Competir','Conquistar','Contatar','Corromper','Criar','Decifrar','Defender','Descobrir','Destruir','Eliminar','Encontrar','Enfrentar','Entregar','Espionar','Evitar','Explorar','Expulsar','Fortalecer','Fugir','Invadir','Investigar','Matar','Negociar','Perseguir','Proteger','Recuperar','Resgatar','Resistir','Revelar','Roubar','Salvar','Sobreviver','Superar']);
         parte_dois = random(['Aliado','Ambiente','Criatura','Evento','Fenômeno','Grupo','Ideia','Informação','Inimigo','Inocente','Local','Objeto','Organização','Pessoa importante','Poder','Recurso','Relacionamento','Tecnologia']);
+        return parte_um+' / '+parte_dois;
+    };
+
+    function missaoPessoal() {
+        parte_um = random(['Encontrar (explorar, descobrir)','Destruir (derrotar, derrubar)','Proteger (defender, salvar)','Conquistar (cativar, dominar)','Superar (sobreviver, escapar)','Capturar (recuperar, aprisionar)']);
+        parte_dois = random(['Entidade (pessoa, organização, criatura)','Conhecimento (informação, segredo, ideia)','Valor (reputação, poder, riqueza)','Local (caminho, comunidade, lugar)','Recurso (artefato, ingrediente, elemento)','Evento (fenômeno, incidente, lenda)']);
         return parte_um+' / '+parte_dois;
     };
 
@@ -181,6 +191,15 @@ $( document ).ready(function() {
 
     });
 
+    $('#btnGerarAmbiente').click(function(){
+
+        $('.boxRonin').prepend(
+        '<div class="boxNPC">'+
+          '<strong>Ambiente: </strong>'+ambiente()+
+        '</div>');
+
+    });
+
     $('#btnGerarDesafio').click(function(){
 
         $('.boxRonin').prepend(
@@ -204,6 +223,15 @@ $( document ).ready(function() {
         $('.boxRonin').prepend(
         '<div class="boxNPC">'+
           '<strong>Missão de Aventura: </strong>'+missao()+
+        '</div>');
+
+    });
+
+    $('#btnGerarMissaoPessoal').click(function(){
+
+        $('.boxRonin').prepend(
+        '<div class="boxNPC">'+
+          '<strong>Missão Pessoal: </strong>'+missaoPessoal()+
         '</div>');
 
     });
