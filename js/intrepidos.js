@@ -204,7 +204,7 @@ $( document ).ready(function() {
 
         $('.boxRonin').prepend(
         '<div class="boxNPC">'+
-          '<strong>Desafio: </strong>'+desafio()+'<br>Intensidade '+intensidade()+
+          '<strong>Desafio: </strong>'+desafio()+
         '</div>');
 
     });
