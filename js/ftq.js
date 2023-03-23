@@ -9,32 +9,27 @@ $( document ).ready(function() {
   function nomeHiboriano(regiao) {
 
     var nome = '';
-    var sobrenome = '';
 
     switch(regiao){
       case "hiboriana":
         nome = random(['Adriano','Augusto','Beoto','Bruno','Cesar','Dante','Francesco','Galeso','Marcus','Marius','Martim','Octavio','Vicente','Ágata','Agnes','Alice','Aurora','Beatrice','Camilla','Chiara','Gaia','Ginevra','Greta','Helena','Isadora','Íris','Laís','Sara','Sofia','Vitoria']);
-        sobrenome = random(['da Aquilônia','de Corinthia','de Koth','da Nemédia','de Ophir','de Argos','do Reino da Fronteira']);
         break;
       case "norte":
         nome = random(['Andor','Ari','Baggi','Brynjar','Elof','Folke','Hakon','Hallbjorn','Ivor','Loki','Rudolf','Thor','Torsten','Vidar','Annveig','Bergunn','Dagny','Freya','Frig','Idonea','Liv','Magnhild','Randi','Sif','Sigrun','Urd','Verdandi','Barra','Coll','Conall','Conan','Eadan','Earc','Finnean','Garbhan','Gormal','Macrath','Osgar','Rodachan','Solas','Aithne','Blaanid','Brianag','Caitlín','Fíne','Malamhin','Mordag','Muirin','Naomh','Saraid','Slaine']);
-        sobrenome = random(['de Asgard','de Vanahein','da Ciméria','da Britúnia','da Hiperbórea']);
         break;    
       case "sul":
         nome = random(['Adisa','Ayo','Bomani','Danso','Jafari','Kambami','Kayin','Kwame','Leke','Nilo','Sekani','Zaki','Zola','Amara','Ayana','Bintu','Dalji','Dandara','Eno','Fayola','Kieza','Jendayi','Lueji','Monifa','Zuri']);
-        sobrenome = random(['de Darfar','de Keshan','de Kush','dos Reinos Negros','de Punt','de Zimbabo','de Shem','da Estígia']);
         break;
       case "terras":
         nome = random(['Abu','Ashur','Bineil','Ennanum','Hanu','Ili-Ellat','Khalil','Khammo','Madsa','Malik','Meesha','Ram','Asiah','Damrina','Emmita','Huda','Khannah','Leja','Lilith','Nasibin','Ramina','Shimta','Yata']);
-        sobrenome = random(['da Hirkania','do Iranistão','de Turan','de Khitai','de Vendhya','de Zamora','de Zíngara','das Ilhas Barachas','do Território Selvagem Picto']);
         break;
     }
 
-    return nome+', '+sobrenome;
+    return nome;
   }
 
   function habilidades() {
-    return [];
+    return ['Alquimista','Ambidestro','Artista Marcial','Ataque Tático','Bastião','Canções','Carga','Companheiro Animal','Concentração','Contra-ataque','Curandeiro','Empurrão','Encantos','Encorajar','Especialista em Arma','Fascinar','Fé Verdadeira','Ferreiro','Fúria','Golpe Furtivo','Intimidador','Ladinagem','Lutador Sagaz','Lutar com Escudo','Magias','Orações','Protetor','Rajada Mística','Rituais','Romper o Mal','Teleporte','Tiro Certeiro','Veloz','Vigoroso'];
   };
 
   function regiao() {
@@ -275,6 +270,42 @@ $( document ).ready(function() {
       '<div class="textIndent"><strong>Errante: </strong> '+grupoMonstrosErrante(nivel)+'</div>'+
       '</div>'
     );
+    $('.boxPersonagemFate').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '650px', 'box-shadow': '5px 5px 10px darkred'});
+
+  });
+
+
+  $('#btnGerarPersonagem').click(function(){
+
+    var valAtributos = exclusiveRandom(atributos(),3);
+    var valRegiao = random(regiao());
+    var valHabilidades = exclusiveRandom(habilidades(),2);
+    var valDefesa = 2;
+    var valSaude = '';
+    var valPassos = '';
+
+    if(valAtributos[0] == 4 || valAtributos[1] == 4 || valAtributos[2] == 4)
+      valDefesa = 4;
+
+    if(valAtributos[0] == 3 || valAtributos[1] == 3 || valAtributos[2] == 3)
+      valDefesa = 3;
+
+    $('.boxPersonagemFate').html(
+      '<center><h4>'+nomeHiboriano(random(['hiboriana','norte','sul','terras']))+'</h4>'+
+      '<p><i>de '+valRegiao+'</i></p></center>'+
+      '<div><strong>ATRIBUTOS</strong>'+
+      '<div class="textIndent"><strong>Força:</strong> '+valAtributos[0]+'</div>'+
+      '<div class="textIndent"><strong>Destreza:</strong> '+valAtributos[1]+'</div>'+
+      '<div class="textIndent"><strong>Intelecto:</strong> '+valAtributos[2]+'</div><br>'+
+      '<div class="textIndent"><strong>Defesa:</strong> '+valDefesa+'</div>'+
+      '<div class="textIndent"><strong>Saúde:</strong> '+Number(valAtributos[0]+5)+'</div>'+
+      '<div class="textIndent"><strong>Passos:</strong> '+Number(valAtributos[1]+5)+'</div><br>'+
+      '<div><strong>HABILIDADES</strong>'+
+      '<div class="textIndent">'+valHabilidades[0]+'</div>'+
+      '<div class="textIndent">'+valHabilidades[1]+'</div>'+
+      '</div>'
+    );
+
     $('.boxPersonagemFate').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '650px', 'box-shadow': '5px 5px 10px darkred'});
 
   });
