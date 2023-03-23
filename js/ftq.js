@@ -258,7 +258,7 @@ $( document ).ready(function() {
       '<div class="textIndent"><strong>Mobílias:</strong> '+mobilias(numSalas)+'</div><br>'+
       '<div><strong>EVENTOS</strong>'+
       '<div class="textIndent"><strong>Portais de Nokron:</strong> '+numPortais+'</div>'+
-      '<div class="textIndent"><strong>Eventos Especial:</strong> '+valEventoEspecial+'</div>'+
+      '<div class="textIndent"><strong>Evento Especial:</strong> '+valEventoEspecial+'</div>'+
       '<div class="textIndent"><strong>Sala Secreta:</strong> '+valSalaSecreta+'</div><br>'+
         eventos+'<br>'+
       '<div><strong>MONSTROS</strong>'+
