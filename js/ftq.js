@@ -2,8 +2,56 @@ $( document ).ready(function() {
 
   $('.boxPersonagemFate').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '650px', 'box-shadow': '5px 5px 10px lightgrey'});
 
-  function atributos() {
-    return random([[3,2,1],[4,1,1],[2,2,2]]);
+  function atributos(nivel) {
+
+    switch(nivel){
+      case "1":
+        return random([[3,2,1],[4,1,1],[2,2,2]]);
+        break;
+      case "2":
+        return random([[3,2,1],[4,1,1],[2,2,2]]);
+        break;
+      case "3":
+        return random([[4,2,1],[5,1,1],[3,2,2]]);
+        break;
+      case "4":
+        return random([[4,3,1],[5,2,1],[3,3,2]]);
+        break;
+      case "5":
+        return random([[4,3,2],[5,2,2],[3,3,3]]);
+        break;
+      case "6":
+        return random([[4,3,2],[5,2,2],[3,3,3]]);
+        break;
+      case "7":
+        return random([[5,3,2],[6,2,2],[4,3,3]]);
+        break;
+      case "8":
+        return random([[5,4,3],[6,3,2],[4,4,3]]);
+        break;
+    }
+    
+  };
+
+  function nivelHabilidade(nivel) {
+
+    switch(nivel){
+      case "1":
+        return ' (NV 1)';
+        break;
+      case "2":
+      case "3":
+      case "4":
+      case "5":
+        return ' (NV 2)';
+        break;
+      case "6":
+      case "7":
+      case "8":
+        return ' (NV 3)';
+        break;
+    }
+    
   };
 
   function nomeHiboriano(regiao) {
@@ -277,18 +325,13 @@ $( document ).ready(function() {
 
   $('#btnGerarPersonagem').click(function(){
 
-    var valAtributos = exclusiveRandom(atributos(),3);
+    var nivel = $('#selectNivel').val();
+
+    var valAtributos = exclusiveRandom(atributos(nivel),3);
     var valRegiao = random(regiao());
     var valHabilidades = exclusiveRandom(habilidades(),2);
-    var valDefesa = 2;
-    var valSaude = '';
-    var valPassos = '';
-
-    if(valAtributos[0] == 4 || valAtributos[1] == 4 || valAtributos[2] == 4)
-      valDefesa = 4;
-
-    if(valAtributos[0] == 3 || valAtributos[1] == 3 || valAtributos[2] == 3)
-      valDefesa = 3;
+    var valDefesa = Math.max([Number(valAtributos[0])],[Number(valAtributos[1])],[Number(valAtributos[2])]);
+    var checkLvl = nivelHabilidade(nivel);
 
     $('.boxPersonagemFate').html(
       '<center><h4>'+nomeHiboriano(random(['hiboriana','norte','sul','terras']))+'</h4>'+
@@ -301,8 +344,8 @@ $( document ).ready(function() {
       '<div class="textIndent"><strong>Saúde:</strong> '+Number(valAtributos[0]+5)+'</div>'+
       '<div class="textIndent"><strong>Passos:</strong> '+Number(valAtributos[1]+5)+'</div><br>'+
       '<div><strong>HABILIDADES</strong>'+
-      '<div class="textIndent">'+valHabilidades[0]+'</div>'+
-      '<div class="textIndent">'+valHabilidades[1]+'</div>'+
+      '<div class="textIndent">'+valHabilidades[0]+checkLvl+'</div>'+
+      '<div class="textIndent">'+valHabilidades[1]+checkLvl+'</div>'+
       '</div>'
     );
 
