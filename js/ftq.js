@@ -59,7 +59,7 @@ $( document ).ready(function() {
   };
 
   function tipoEvento() {
-    return ['Personagem','Armadilha','Armadilha','Tesouro','Tesouro','Alavanca'];
+    return ['Personagem (vermelho)','Personagem (azul)','Armadilha (vermelho)','Armadilha (amarelo)','Armadilha (laranja)','Armadilha (azul)','Tesouro (vermelho)','Tesouro (amarelo)','Tesouro (laranja)','Tesouro (azul)','Alavanca (vermelho)','Alavanca (azul)'];
   };
 
   function evento(tipo,nivel) {
@@ -70,16 +70,24 @@ $( document ).ready(function() {
     var pocao = random(['Poção de Cura','Água Benta','Antídoto','Poção de Proteção','Tônico da Força','Pena de Fênix']);
     
     switch(tipo){
-      case "Personagem":
-        return ['Um Monstro escondido','Um comerciante','Um traidor','Um nobre dono de terras','Um Herói do passado','Um informante importante'];
+      case "Personagem (vermelho)":
+      case "Personagem (azul)":
+          return ['Um Monstro escondido','Um comerciante','Um traidor','Um nobre dono de terras','Um Herói do passado','Um informante importante'];
         break;
-      case "Armadilha":
+      case "Armadilha (vermelho)":
+      case "Armadilha (laranja)":
+      case "Armadilha (amarelo)":
+      case "Armadilha (azul)":
         return ['Dano '+dano,'Perde a rodada','Dano '+Number(dano-1)+' e Amaldiçoado','Preso (teste para libertar)','Dano '+Number(dano-1)+' e Envenenado','Dano '+dano];
         break;
-      case "Tesouro":
+      case "Tesouro (vermelho)":
+      case "Tesouro (laranja)":
+      case "Tesouro (amarelo)":
+      case "Tesouro (azul)":
         return [moedas+' Moedas','Joias ('+Number(moedas*2)+')',Number(moedas*2)+' Moedas',equipamento,'Joias ('+moedas+')',pocao];
         break;
-      case "Alavanca":
+      case "Alavanca (vermelho)":
+      case "Alavanca (azul)":
         return ['Desbloqueia a saída','Sabota a estrutura','Desbloqueia a sala final','Abre um portal','Abre um cofre (Tesouro)','Enfraquece um Monstro'];
         break;        
       case "Sala Secreta":
@@ -175,7 +183,7 @@ $( document ).ready(function() {
 
     switch(salas){
       case 9:
-        return exclusiveRandom(varMobilias,4);
+        return exclusiveRandom(varMobilias,3);
         break;
       case 10:
         return exclusiveRandom(varMobilias,4);
@@ -190,7 +198,7 @@ $( document ).ready(function() {
         return exclusiveRandom(varMobilias,7);
         break;
       case 14:
-        return exclusiveRandom(varMobilias,7);
+        return exclusiveRandom(varMobilias,8);
         break;
     }
 
@@ -208,26 +216,22 @@ $( document ).ready(function() {
     var valObjetivo = random(objetivo());
     var valCenario = cenario();
 
-    var tipoEvento1 = random(tipoEvento());
-    var tipoEvento2 = random(tipoEvento());
-    var tipoEvento3 = random(tipoEvento());
-    var tipoEvento4 = random(tipoEvento());
-    var tipoEvento5 = random(tipoEvento());
+    var tipoEventos = exclusiveRandom(tipoEvento(),5);
 
-    var valEvento1 = random(evento(tipoEvento1,nivel));
-    var valEvento2 = random(evento(tipoEvento2,nivel));
-    var valEvento3 = random(evento(tipoEvento3,nivel));
-    var valEvento4 = random(evento(tipoEvento4,nivel));
-    var valEvento5 = random(evento(tipoEvento5,nivel));
+    var valEvento1 = random(evento(tipoEventos[0],nivel));
+    var valEvento2 = random(evento(tipoEventos[1],nivel));
+    var valEvento3 = random(evento(tipoEventos[2],nivel));
+    var valEvento4 = random(evento(tipoEventos[3],nivel));
+    var valEvento5 = random(evento(tipoEventos[4],nivel));
 
     var numEventos = random([3,4,5]);
     var numPortais = 0;
 
     var eventos = '';
 
-    eventos = eventos + '<div class="textIndent"><strong>1. '+tipoEvento1+':</strong> '+valEvento1+'</div>';
-    eventos = eventos + '<div class="textIndent"><strong>2. '+tipoEvento2+':</strong> '+valEvento2+'</div>';
-    eventos = eventos + '<div class="textIndent"><strong>3. '+tipoEvento3+':</strong> '+valEvento3+'</div>';
+    eventos = eventos + '<div class="textIndent"><strong>'+tipoEventos[0]+':</strong> '+valEvento1+'</div>';
+    eventos = eventos + '<div class="textIndent"><strong>'+tipoEventos[1]+':</strong> '+valEvento2+'</div>';
+    eventos = eventos + '<div class="textIndent"><strong>'+tipoEventos[2]+':</strong> '+valEvento3+'</div>';
 
     if(numEventos == 3){
       numPortais = 3;
@@ -235,13 +239,13 @@ $( document ).ready(function() {
 
     if(numEventos == 4){
       numPortais = 2;
-      eventos = eventos + '<div class="textIndent"><strong>4. '+tipoEvento4+':</strong> '+valEvento4+'</div>';
+      eventos = eventos + '<div class="textIndent"><strong>'+tipoEventos[3]+':</strong> '+valEvento4+'</div>';
     }
 
     if(numEventos == 5){
       numPortais = 1;
-      eventos = eventos + '<div class="textIndent"><strong>4. '+tipoEvento4+':</strong> '+valEvento4+'</div>';
-      eventos = eventos + '<div class="textIndent"><strong>5. '+tipoEvento5+':</strong> '+valEvento5+'</div>';
+      eventos = eventos + '<div class="textIndent"><strong>'+tipoEventos[3]+':</strong> '+valEvento4+'</div>';
+      eventos = eventos + '<div class="textIndent"><strong>'+tipoEventos[4]+':</strong> '+valEvento5+'</div>';
     }
 
     var valEventoEspecial = random(eventoEspecial(valObjetivo));
