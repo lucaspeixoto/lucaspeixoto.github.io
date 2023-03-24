@@ -88,6 +88,10 @@ $( document ).ready(function() {
     return ['Fugir das forças de Nokron/Encontrar uma saída.','Resgatar um importante Personagem.','Encontrar um importante Item.','Sabotar os planos de Nokron e seus aliados.','Buscar informações importantes.','Encontrar e enfrentar um terrível Monstro.'];
   };
 
+  function portas(){
+    return ['Corredor principal','Corredor secundário e ligação','Corredor principal e ligação','Corredor secundário','Ligação']
+  }
+
   function cenario() {
 
     tiposCenario = ['Floresta','Vulcão','Masmorra','Caverna'];
@@ -302,6 +306,7 @@ $( document ).ready(function() {
       '<div><strong>TABULEIRO</strong>'+
       '<div class="textIndent"><strong>Cenário:</strong> '+valCenario+'</div>'+
       '<div class="textIndent"><strong>Salas:</strong> '+numSalas+'</div>'+
+      '<div class="textIndent"><strong>Portas:</strong> '+random(portas())+'</div>'+
       '<div class="textIndent"><strong>Mobílias:</strong> '+mobilias(numSalas)+'</div><br>'+
       '<div><strong>EVENTOS</strong>'+
       '<div class="textIndent"><strong>Portais de Nokron:</strong> '+numPortais+'</div>'+
