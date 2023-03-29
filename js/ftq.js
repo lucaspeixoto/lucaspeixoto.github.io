@@ -6,8 +6,6 @@ $( document ).ready(function() {
 
     switch(nivel){
       case "1":
-        return random([[3,2,1],[4,1,1],[2,2,2]]);
-        break;
       case "2":
         return random([[3,2,1],[4,1,1],[2,2,2]]);
         break;
@@ -15,19 +13,17 @@ $( document ).ready(function() {
         return random([[4,2,1],[5,1,1],[3,2,2]]);
         break;
       case "4":
-        return random([[4,3,1],[5,2,1],[3,3,2]]);
+        return random([[4,3,1],[4,2,2],[5,2,1],[3,3,2]]);
         break;
       case "5":
         return random([[4,3,2],[5,2,2],[3,3,3]]);
         break;
       case "6":
-        return random([[4,3,2],[5,2,2],[3,3,3]]);
-        break;
       case "7":
         return random([[5,3,2],[6,2,2],[4,3,3]]);
         break;
       case "8":
-        return random([[5,4,3],[6,3,2],[4,4,3]]);
+        return random([[5,4,2],[5,3,3],[6,3,2],[4,4,3]]);
         break;
     }
     
