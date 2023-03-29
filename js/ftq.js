@@ -16,9 +16,9 @@ $( document ).ready(function() {
         return random([[4,3,1],[4,2,2],[5,2,1],[3,3,2]]);
         break;
       case "5":
+      case "6":
         return random([[4,3,2],[5,2,2],[3,3,3]]);
         break;
-      case "6":
       case "7":
         return random([[5,3,2],[6,2,2],[4,3,3]]);
         break;
