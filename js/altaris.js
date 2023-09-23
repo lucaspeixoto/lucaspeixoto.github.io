@@ -78,6 +78,94 @@ $( document ).ready(function() {
     }
   }
 
+  function jornada(path){
+
+    switch(path){
+      case 'planicie':
+        var lugar = random(['Flores coloridas','Pasto rasteiro','Arbustos distantes','Árvore solitária','Grama alta','Gramado verdejante']);
+        var curiosidade = random(['Rastro de animal','Pássaros voando em círculos','Placa de madeira quebrada','Carcaça de animal','Acampamento abandonado','Buraco grande e estranho']);
+        var obstaculo = random(['Chuva constante','Rio largo no caminho','Caminho com espinhos','Nuvem de insetos','[Lobos] estão devorando uma caça','[Assaltantes] estão acampados ali']);
+        var complicacao = random(['Chuva aperta e dificulta a visão','Raio (dano 1) cai sobre um personagem!','O chão se abre nos pés do grupo','[Assaltantes] surgem!','[Insetos Gigantes] aparecem do chão!','[Dragonetes] se aproximam!']);
+        var tempero1 = exclusiveRandom(['Vazio / Flor','Barulho / Chuva','Terra / Trilha','Eco / Grama','Vento / Frio','Calor / Luz'],2);
+        var tempero2 = exclusiveRandom(['Verdejante','Distante','Comprido','Cansado','ao fundo','Tranquilo'],2);
+      break;
+      case 'floresta':
+        var lugar = random(['Árvores altas','Folhas por todo o chão','Floresta densa e escura','Galhos caídos','Árvores variadas','Várias árvores iguais']);
+        var curiosidade = random(['Rastro de animal','Barulho do alto das árvores','Trilha no chão','Carcaça de animal','Acampamento abandonado','Árvore oca com algo dentro']);
+        var obstaculo = random(['Barranco alto à frente','Rio largo no caminho','Árvore imensa caída à frente','Caminho com espinhos','[Ursos] no caminho','[Trolls] no caminho']);
+        var complicacao = random(['Uma grande árvore cai sobre o grupo','Perfume de flores soníferas','[Ursos] atacam o grupo!','[Lobos] atacam o grupo!','[Goblins] atacam o grupo!','[Trolls] atacam o grupo!']);
+        var tempero1 = exclusiveRandom(['Folhas / Flecha','Escuro / Tronco','Limo / Pássaros','Trilha / Broto','Confusão / Casca','Raiz / Marcas'],2);
+        var tempero2 = exclusiveRandom(['Úmido','Seco','Vívido','Alto','Perdido','Antigo'],2);
+        break;
+      case 'montanha':
+        var lugar = random(['Pedras gigantes dos lados','Caminho entre as pedras','Pedras rachadas','Muitas pedras pequenas','Plantas crescentes entre as pedras','Pedra grande com forma estranha']);
+        var curiosidade = random(['Ninhos de pássaros','Pássaros voando em círculos','Inscrição nas pedras','Carcaça de animal','Acampamento abandonado','Caverna ao lado']);
+        var obstaculo = random(['Subida íngreme, é preciso escalar','Chão instável','Desfiladeiro à frente','Parede lateral instável','[Abutres] no caminho','[Kaprotauros] distraídos']);
+        var complicacao = random(['Um personagem escorrega e pode cair!','Desmoronamento!','Uma pedra cai e bloqueia o caminho','[Abutres] atacam o grupo!','[Kaprotauros] atacam o grupo!','[Dragonetes] se aproximam!']);
+        var tempero1 = exclusiveRandom(['Aves / Nuvens','Calor / Dente','Fumaça / Caverna','Pedras / Penas','Machado / Ferro','Árvore / Escudo'],2);
+        var tempero2 = exclusiveRandom(['Duro','Cinza','Quente','Distante','Afiado','Vertiginoso'],2);
+        break;
+      case 'pantano':
+        var lugar = random(['Árvores secas','Mato alto sobre as águas','Cheiro fétido das águas','O chão é só lama','Árvores estranhas','Peixes nadando na lama']);
+        var curiosidade = random(['Rastro de animal','Pássaros voando em círculos','Casa de madeira em ruínas','Carcaça de animal','Acampamento abandonado','Planta colorida e misteriosa']);
+        var obstaculo = random(['Lama impede o grupo de se mover','Grande lago à frente','Neblina densa impede de enxergar','Nuvem de mosquitos','[Jacaré] no caminho','[Boitatá] no caminho']);
+        var complicacao = random(['Sanguessugas em seus pés','Chuva pesada começa a cair','Lama nos seus pés começa a puxar para baixo','[Abutres] atacam o grupo!','[Insetos Gigantes] aparecem!','[Trolls] atacam o grupo!']);
+        var tempero1 = exclusiveRandom(['Lama / Espada', 'Chuva / Musgo', 'Gases / Placa', 'Frio / Sanguessuga', 'Neblina / Galhos', 'Árvore / Casebre'],2);
+        var tempero2 = exclusiveRandom(['Abandonado','Sujo','Flamejante','Apodrecido','Fedorento','Perdido'],2);
+        break;
+      case 'deserto':
+        var lugar = random(['Duna alta','Dunas baixas','Chão mais firme','Areia muito macia','Alguns cactos e plantas rasteiras','Região mais plana']);
+        var curiosidade = random(['Parece ter água ali (ou não?)','Uma planta colorida','Alguns animais pequenos','Aves sobrevoam o local','Esqueleto de um aventureiro','Ruínas antigas']);
+        var obstaculo = random(['Areia cobre a visão','Pés ficam presos na areia','Andando em círculos','Vento muito forte','Miragens confundem o grupo','Parede de dunas muito altas à frente']);
+        var complicacao = random(['Uma ilusão faz alguém ficar assustado','Areia movediça','Areia movediça','[Abutres] atacam o grupo!','[Verme Gigante] surge na frente do grupo!','[Dragonetes] se aproximam!']);
+        var tempero1 = exclusiveRandom(['Areia / Templo','Sol / Ruínas','Vento / Deuses','Lua / Animal','Miragem / Ossos','Oásis / Povo'],2);
+        var tempero2 = exclusiveRandom(['Antigo','Escaldante','Misterioso','Gigante','Inacreditável','Resistente'],2);
+        break;
+      case 'artico':
+        var lugar = random(['Tundra congelada sem fim','Geleiras imponentes','Planalto nevado e deserto','Aldeia esquecida pelo tempo','Lago congelado','Cavernas de gelo misteriosas']);
+        var curiosidade = random(['Pegadas misteriosas na neve','Vestígios de uma antiga civilização','Estranhas luzes no horizonte','Ruínas de um navio encalhado','Esqueletos de criaturas gigantes','Pedaço de uma relíquia congelada']);
+        var obstaculo = random(['Tempestade de neve furiosa','Abismo traiçoeiro à frente','Ponte de gelo instável','Vento cortante e gélido','Gruta de gelo bloqueada','[Yetis] vigiando o caminho']);
+        var complicacao = random(['Frio intenso debilitante','Aparecimento de uma avalanche','[Espectros de Gelo] assombram!','Gelo rachando sob seus pés','[Yetis] curiosos cercam o grupo','Visão embaçada devido à nevasca']);
+        var tempero1 = exclusiveRandom(['Ventos / Cortantes','Pegadas / Congelado','Luz / Lua prateada','Distante / Uivo','Estalos / Rachadura','Silêncio / Sepulto'],2);
+        var tempero2 = exclusiveRandom(['Implacável','Desolado','Gélido','Enigmático','Eterno','Glacial'],2);
+        break;/*
+      case 'oceano':
+        var lugar = random([]);
+        var curiosidade = random([]);
+        var obstaculo = random([]);
+        var complicacao = random([]);
+        var tempero1 = exclusiveRandom([],2);
+        var tempero2 = exclusiveRandom([],2);
+        break;
+      case 'praia':
+        var lugar = random([]);
+        var curiosidade = random([]);
+        var obstaculo = random([]);
+        var complicacao = random([]);
+        var tempero1 = exclusiveRandom([],2);
+        var tempero2 = exclusiveRandom([],2);
+        break;
+      case 'urbano':
+        var lugar = random([]);
+        var curiosidade = random([]);
+        var obstaculo = random([]);
+        var complicacao = random([]);
+        var tempero1 = exclusiveRandom([],2);
+        var tempero2 = exclusiveRandom([],2);
+        break;
+      /*case '':
+        var lugar = random([]);
+        var curiosidade = random([]);
+        var obstaculo = random([]);
+        var complicacao = random([]);
+        var tempero1 = exclusiveRandom([],2);
+        var tempero2 = exclusiveRandom([],2);
+        break;*/
+    }
+
+    return '<b>Lugar</b>: '+lugar+'<br><b>Curiosidade</b>: '+curiosidade+'<br><b>Obstáculo</b>: '+obstaculo+'<br><b>Complicação</b>: '+complicacao+'<br><b>Tempero 1</b>: '+tempero1[0]+' - '+tempero2[0]+'<br><b>Tempero 2</b>: '+tempero1[1]+' - '+tempero2[1];
+
+  }
 
   $('#btnGerarBusca').click(function(){
 
@@ -125,6 +213,19 @@ $( document ).ready(function() {
     '<div class="boxNPC">'+
       '<p><b>'+busca+'</b>'+
       '<br>'+item+'</p>'+
+    '</div>');
+
+    $('.boxNPC').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '550px', 'box-shadow': '5px 5px 10px lightgrey'});
+
+  });
+
+  $('#btnGerarJornada').click(function(){
+
+    var path = jornada($('#selectPath').val());
+    
+    $('.boxNPCs').html(
+    '<div class="boxNPC">'+
+      path+
     '</div>');
 
     $('.boxNPC').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '550px', 'box-shadow': '5px 5px 10px lightgrey'});
