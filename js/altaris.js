@@ -128,32 +128,42 @@ $( document ).ready(function() {
         var complicacao = random(['Frio intenso debilitante','Aparecimento de uma avalanche','[Espectros de Gelo] assombram!','Gelo rachando sob seus pés','[Yetis] curiosos cercam o grupo','Visão embaçada devido à nevasca']);
         var tempero1 = exclusiveRandom(['Ventos / Cortantes','Pegadas / Congelado','Luz / Lua prateada','Distante / Uivo','Estalos / Rachadura','Silêncio / Sepulto'],2);
         var tempero2 = exclusiveRandom(['Implacável','Desolado','Gélido','Enigmático','Eterno','Glacial'],2);
-        break;/*
+        break;
       case 'oceano':
-        var lugar = random([]);
-        var curiosidade = random([]);
-        var obstaculo = random([]);
-        var complicacao = random([]);
-        var tempero1 = exclusiveRandom([],2);
-        var tempero2 = exclusiveRandom([],2);
+        var lugar = random(['Mar profundo', 'Oceano calmo', 'Recifes de coral','Navio pirata naufragado', 'Ilha misteriosa', 'Caverna subaquática']);
+        var curiosidade = random(['Vestígios de um naufrágio', 'Criaturas marinhas exóticas', 'Antiga cidade submersa','Mapa do tesouro enigmático', 'Sereias cantando', 'Naufrágio lendário']);
+        var obstaculo = random(['Tempestade furiosa', 'Tubarões famintos', 'Redemoinho perigoso','Navio pirata hostil', 'Rede de pescadores', 'Recife traiçoeiro']);
+        var complicacao = random(['Maré subindo rapidamente', 'Submersão de equipamento', 'Maldição do mar','Ataque de [Kraken]', 'Confronto com [piratas]', 'Perdidos na neblina']);
+        var tempero1 = exclusiveRandom(['Ondas / Chuva', 'Baú / Coral', 'Jangada / Cavernas','Baleias / Tubarões', 'Cardumes / Conchas', 'Mergulhadores / Ilhas'],2);
+        var tempero2 = exclusiveRandom(['Profundo', 'Infinito', 'Colorido','Misterioso', 'Ameaçador', 'Calmo'],2);
         break;
       case 'praia':
-        var lugar = random([]);
-        var curiosidade = random([]);
-        var obstaculo = random([]);
-        var complicacao = random([]);
-        var tempero1 = exclusiveRandom([],2);
-        var tempero2 = exclusiveRandom([],2);
+        var lugar = random(['Praia de areia branca', 'Lago sereno', 'Falésias altas','Pier abandonado', 'Delta de rio', 'Enseada escondida']);
+        var curiosidade = random(['Conchas coloridas na areia', 'Ninho de pássaros', 'Barco naufragado','Antiga cabana de pescador', 'Fogueira acesa', 'Pescadores locais']);
+        var obstaculo = random(['Maré alta repentina', 'Correntes fortes', 'Rochas enormes','Rede de pescadores', 'Pescadores hostis', 'Furacão se aproximando']);
+        var complicacao = random(['Naufrágio próximo', 'Ataque de [dragonetes do mar]', 'Perdidos na névoa','Animal marinho misterioso', 'Confronto com [piratas]', 'Corrente perigosa']);
+        var tempero1 = exclusiveRandom(['Sol / Brisa', 'Gaivotas / Ondas', 'Conchas / Barcos','Coqueiros / Quiosque', 'Crianças / Castelos de areia', 'Pescadores  / Rede de pesca'],2);
+        var tempero2 = exclusiveRandom(['Tranquila', 'Idílica', 'Serena','Pitoresca', 'Isolada', 'Animada'],2);
         break;
-      case 'urbano':
-        var lugar = random([]);
-        var curiosidade = random([]);
-        var obstaculo = random([]);
-        var complicacao = random([]);
-        var tempero1 = exclusiveRandom([],2);
-        var tempero2 = exclusiveRandom([],2);
+      case 'caverna':
+        var lugar = random(['Caverna profunda', 'Abismo subterrâneo', 'Túneis sinuosos','Câmara de cristais', 'Caverna de lava', 'Covas habitadas']);
+        var curiosidade = random(['Estalactites reluzentes', 'Fungos bioluminescentes', 'Pinturas rupestres enigmáticas','Restos de antigas civilizações', 'Tesouros enterrados', 'Sussurros nas sombras']);
+        var obstaculo = random(['Abismos sem fundo', 'Túneis bloqueados', 'Gás venenoso', 'Inundações súbitas','Sons de mineração', 'Criaturas subterrâneas hostis']);
+        var complicacao = random(['Escurecimento repentino', 'Alucinações causadas por esporos', 'Colapso de túnel','[Serpentes] subterrâneas', 'Colônias de [morcegos]', '[Espíritos] inquietos']);
+        var tempero1 = exclusiveRandom([ 'Passos / Frio', 'Gotejamento / Silêncio','Murmúrios / Cristais', 'Lago / Umidade',
+        'Correntes / Minerais ', 'Estalos / Fendas'],2);
+        var tempero2 = exclusiveRandom(['Sombria', 'Misteriosa', 'Hostil', 'Opulenta', 'Desolada', 'Perigosa'],2);
         break;
-      /*case '':
+      case 'ruina':
+        var lugar = random(['Cidade abandonada', 'Templo em ruínas', 'Fortaleza desmoronada','Palácio em decadência', 'Cemitério antigo', 'Casebres destruídos']);
+        var curiosidade = random(['Esculturas antigas', 'Manuscritos enigmáticos', 'Sons sussurrantes','Ecos de vozes passadas', 'Tesouros ocultos', 'Máscaras quebradas']);
+        var obstaculo = random(['Escombros bloqueando passagens', 'Armadilhas antigas', '[Guardiões] espectrais', 'Escadarias em colapso', 'Desmoronamento iminente', 'Caminhos instáveis']);
+        var complicacao = random(['Ataque de [mortos-vivos]', 'Maldições antigas', 'Confronto com [saqueadores]', 
+        '[Aparições vingativas]', 'Quebra de equipamento', 'Labirinto sem saída']);
+        var tempero1 = exclusiveRandom(['Silêncio / Poeira', 'Frescor / Mistério', 'Eco / Escuridão', 'Estátuas / História', 'Luz / Vida', 'Sombras / Ventos'],2);
+        var tempero2 = exclusiveRandom(['Abandonado', 'Misterioso', 'Decadente', 'Esquecido', 'Assombrado', 'Antigo'],2);
+        break;
+        /*case '':
         var lugar = random([]);
         var curiosidade = random([]);
         var obstaculo = random([]);
