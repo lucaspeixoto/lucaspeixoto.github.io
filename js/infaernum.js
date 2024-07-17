@@ -24,10 +24,10 @@ $( document ).ready(function() {
     
     $('.boxNPCs').html(
     '<div class="boxNPC">'+
-      '<p><b>Passado: '+random(passado())+'</b>'+
-      '<br><b>Sorte: </b>'+random(sorte())+'</p>'+
-      '<br><b>Azar: </b>'+random(azar())+'</p>'+
-      '<br><b>Tralha: </b>'+random(tralha())+'</p>'+
+      '<p><b>Passado: </b>'+random(passado())+
+      '<br><b>Sorte: </b>'+random(sorte())+
+      '<br><b>Azar: </b>'+random(azar())+
+      '<br><b>Tralha: </b>'+random(tralha())+
       '<br><b>Benção: </b>'+random(bencao())+'</p>'+
     '</div>');
 
