@@ -20,6 +20,18 @@ $( document ).ready(function() {
     return ['Um escudo com um brasão estranho capaz de invocar relâmpagos','Um livro com vontade própria que materializa o que for escrito nele','Uma marreta ou berrante com o poder de causar tremores','Uma adaga que permite controlar a alma de quem for estocado por ela','Uma cruz com o dom de repelir caídos','Um mangual capaz de acertar golpes que explodem em chamas','Um animal possuído por um caído','Uma espada que fareja sangue','Um arco que cria flechas necrotizantes por sua corda retesada','Um espelho que mostra a verdade','Um chicote que congela o que é envolto por ele','Uma esfera de vidro que revela o que está por vir','Um cetro que comanda o corpo de alguém morto por ele','Um tridente capaz de controlar as águas e o que delas emerge','Um manto que torna invisível o que cobrir','Uma tatuagem que ganha vida quando seu sangue é derramado'];
   }
 
+  function verbo(){
+    return ['Ignorar','Descobrir','Começar','Bloquear','Ganhar','Perseguir','Julgar','Fazer','Terminar','Vingar','Imitar','Iludir','Esconder','Conquistar','Aumentar','Guiar','Oprimir','Ajudar','Proteger','Pacificar','Diminuir','Expor','Emboscar','Controlar','Mudar','Encontrar','Tomar','Planejar','Criar','Recusar','Conhecer','Curar','Pausar','Perder','Trair','Aceitar'];
+  }
+
+  function substantivo(){
+    return ['ambiente','poder','falha','clima','animal','perigo','aliança','problema','atenção','boato','negócio','cilada','inimigo','lar','ferimento','caído','medo','prova','confronto','caminho','ilusão','fé','solidão','vazio','dor','doença','raiva','viagem','esperança','objetivo','mentira','morte','pista','riqueza','verdade','sucesso'];
+  }
+
+  function dado(){
+    return ['Desgraça','Acontecimento Neutro','Acontecimento Neutro','Façanha','Façanha','Milagre'];
+  }
+
   $('#btnGerarPersonagem').click(function(){
     
     $('.boxNPCs').html(
@@ -29,6 +41,42 @@ $( document ).ready(function() {
       '<br><b>Azar: </b>'+random(azar())+
       '<br><b>Tralha: </b>'+random(tralha())+
       '<br><b>Benção: </b>'+random(bencao())+'</p>'+
+    '</div>');
+
+    $('.boxNPC').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '550px', 'box-shadow': '5px 5px 10px lightgrey'});
+
+  });
+
+  $('#btnGerarResposta').click(function(){
+    
+    $('.boxNPCs').html(
+    '<div class="boxNPC">'+
+      '<p><b>Resposta: </b>'+random(['Não','Sim'])+'</p>'+
+    '</div>');
+
+    $('.boxNPC').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '550px', 'box-shadow': '5px 5px 10px lightgrey'});
+
+  });
+
+  $('#btnGerarIdeia').click(function(){
+    
+    $('.boxNPCs').html(
+    '<div class="boxNPC">'+
+      '<p><b>Ideia: </b>'+random(verbo())+' '+random(substantivo())+'</p>'+
+    '</div>');
+
+    $('.boxNPC').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '550px', 'box-shadow': '5px 5px 10px lightgrey'});
+
+  });
+
+  $('#btnGerarAcao').click(function(){
+    
+    $('.boxNPCs').html(
+    '<div class="boxNPC">'+
+      '<p><b>Ação: </b>'+
+      '<br>'+random(dado())+
+      '<br>'+random(dado())+
+      '<br>'+random(dado())+'</p>'+
     '</div>');
 
     $('.boxNPC').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '550px', 'box-shadow': '5px 5px 10px lightgrey'});
