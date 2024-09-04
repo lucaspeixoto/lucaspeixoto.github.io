@@ -1,5 +1,15 @@
 $( document ).ready(function() {
 
+    function pokemonConditions(){
+        return '<br><i>Condição:</i> <select name="pokemon-condition">'+
+                '<option value="envenenado">Envenenado</option>'+
+                '<option value="paralisado">Paralisado</option>'+
+                '<option value="congelado">Congelado</option>'+
+                '<option value="confuso">Confuso</option>'+
+                '<option value="incendiado">Incendiado</option>'+
+                '<option value="adormecido">Adormecido</option></select>'
+    };
+
     $('#selectInsignias').change(function() {
       
         if($(this).val() == 0) $('#qttd_insignias').html('Nível pokémons: 1-6 / Nível obediência: 20');
@@ -4465,13 +4475,7 @@ $( document ).ready(function() {
           '<br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+
           '<br><i>Fraquezas:</i> '+pkmn.fraqueza+
           '<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+
-          '<br><i>Condição:</i> <select name="pokemon-condition">'+
-            '<option value="envenenado">Envenenado</option>'+
-            '<option value="paralisado">Paralisado</option>'+
-            '<option value="congelado">Congelado</option>'+
-            '<option value="confuso">Confuso</option>'+
-            '<option value="incendiado">Incendiado</option>'+
-            '<option value="adormecido">Adormecido</option></select>'+
+          pokemonConditions()+
         '</div><br>');
 
         activateStressBox();
