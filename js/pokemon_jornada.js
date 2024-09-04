@@ -2,6 +2,7 @@ $( document ).ready(function() {
 
     function pokemonConditions(){
         return '<br><i>Condição:</i> <select name="pokemon-condition">'+
+                '<option value="nenhum"></option>'+
                 '<option value="envenenado">Envenenado</option>'+
                 '<option value="paralisado">Paralisado</option>'+
                 '<option value="congelado">Congelado</option>'+
