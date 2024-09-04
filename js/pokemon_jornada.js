@@ -3207,7 +3207,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 pkmn = lider.pokemons[1];
                 nivelPkmn = lider.pokemons[1].nivel;
@@ -3216,7 +3216,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 $('.boxPokemon').prepend(
                     '<center><img style="vertical-align: bottom;" width=60 src='+lider.imginsignia+'> <img height=284 src='+lider.imglider+'></center>'+
@@ -3242,7 +3242,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 pkmn = desafianteLiam.pokemons[1];
                 nivelPkmn = desafianteLiam.pokemons[1].nivel;
@@ -3251,7 +3251,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 $('.boxPokemon').prepend('<div class="boxNPC"><strong>Treinador Escoteiro Liam:</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
 
@@ -3282,7 +3282,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 pkmn = lider.pokemons[1];
                 nivelPkmn = lider.pokemons[1].nivel;
@@ -3291,7 +3291,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 $('.boxPokemon').prepend(
                     '<center><img style="vertical-align: bottom;" width=60 src='+lider.imginsignia+'> <img height=284 src='+lider.imglider+'></center>'+
@@ -3316,7 +3316,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 $('.boxPokemon').prepend('<div class="boxNPC"><strong>Treinadora Fã de piquenique Diana:</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
 
@@ -3337,7 +3337,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 pkmn = desafiante.pokemons[1];
                 nivelPkmn = desafiante.pokemons[1].nivel;
@@ -3346,7 +3346,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 $('.boxPokemon').prepend('<div class="boxNPC"><strong>Treinador Nadador Luis:</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
 
@@ -3377,7 +3377,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 pkmn = lider.pokemons[1];
                 nivelPkmn = lider.pokemons[1].nivel;
@@ -3386,7 +3386,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 pkmn = lider.pokemons[2];
                 nivelPkmn = lider.pokemons[2].nivel;
@@ -3395,7 +3395,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 $('.boxPokemon').prepend(
                     '<center><img style="vertical-align: bottom;" width=60 src='+lider.imginsignia+'> <img height=284 src='+lider.imglider+'></center>'+
@@ -3422,7 +3422,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 $('.boxPokemon').prepend('<div class="boxNPC"><strong>'+nomeDesafiante+':</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
 
@@ -3444,7 +3444,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 pkmn = desafiante.pokemons[1];
                 nivelPkmn = desafiante.pokemons[1].nivel;
@@ -3453,7 +3453,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 $('.boxPokemon').prepend('<div class="boxNPC"><strong>'+nomeDesafiante+':</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
 
@@ -3475,7 +3475,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 pkmn = desafiante.pokemons[1];
                 nivelPkmn = desafiante.pokemons[1].nivel;
@@ -3484,7 +3484,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
 
                 $('.boxPokemon').prepend('<div class="boxNPC"><strong>'+nomeDesafiante+':</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
@@ -3513,7 +3513,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 $('.boxPokemon').prepend(
                     '<center><img style="vertical-align: bottom;" width=60 src='+lider.imginsignia+'> <img height=284 src='+lider.imglider+'></center>'+
@@ -3538,7 +3538,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 $('.boxPokemon').prepend('<div class="boxNPC"><strong>'+nomeDesafiante+':</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
 
@@ -3566,7 +3566,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 $('.boxPokemon').prepend(
                     '<center><img style="vertical-align: bottom;" width=60 src='+lider.imginsignia+'> <img height=284 src='+lider.imglider+'></center>'+
@@ -3591,7 +3591,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 $('.boxPokemon').prepend('<div class="boxNPC"><strong>'+nomeDesafiante+':</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
 
@@ -3619,7 +3619,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 $('.boxPokemon').prepend(
                     '<center><img style="vertical-align: bottom;" width=60 src='+lider.imginsignia+'> <img height=284 src='+lider.imglider+'></center>'+
@@ -3644,7 +3644,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 $('.boxPokemon').prepend('<div class="boxNPC"><strong>'+nomeDesafiante+':</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
 
@@ -3672,7 +3672,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 $('.boxPokemon').prepend(
                     '<center><img style="vertical-align: bottom;" width=60 src='+lider.imginsignia+'> <img height=284 src='+lider.imglider+'></center>'+
@@ -3697,7 +3697,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 $('.boxPokemon').prepend('<div class="boxNPC"><strong>'+nomeDesafiante+':</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
 
@@ -3725,7 +3725,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 $('.boxPokemon').prepend(
                     '<center><img style="vertical-align: bottom;" width=60 src='+lider.imginsignia+'> <img height=284 src='+lider.imglider+'></center>'+
@@ -3750,7 +3750,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 $('.boxPokemon').prepend('<div class="boxNPC"><strong>'+nomeDesafiante+':</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
 
@@ -3778,7 +3778,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 $('.boxPokemon').prepend(
                     '<center><img style="vertical-align: bottom;" width=60 src='+lider.imginsignia+'> <img height=284 src='+lider.imglider+'></center>'+
@@ -3803,7 +3803,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 $('.boxPokemon').prepend('<div class="boxNPC"><strong>'+nomeDesafiante+':</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
 
@@ -3831,7 +3831,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 $('.boxPokemon').prepend(
                     '<center><img style="vertical-align: bottom;" width=60 src='+lider.imginsignia+'> <img height=284 src='+lider.imglider+'></center>'+
@@ -3856,7 +3856,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 $('.boxPokemon').prepend('<div class="boxNPC"><strong>'+nomeDesafiante+':</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
 
@@ -3884,7 +3884,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 $('.boxPokemon').prepend(
                     '<center><img style="vertical-align: bottom;" width=60 src='+lider.imginsignia+'> <img height=284 src='+lider.imglider+'></center>'+
@@ -3909,7 +3909,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 $('.boxPokemon').prepend('<div class="boxNPC"><strong>'+nomeDesafiante+':</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
 
@@ -3937,7 +3937,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 $('.boxPokemon').prepend(
                     '<center><img style="vertical-align: bottom;" width=60 src='+lider.imginsignia+'> <img height=284 src='+lider.imglider+'></center>'+
@@ -3962,7 +3962,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 $('.boxPokemon').prepend('<div class="boxNPC"><strong>'+nomeDesafiante+':</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
 
@@ -3990,7 +3990,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 $('.boxPokemon').prepend(
                     '<center><img style="vertical-align: bottom;" width=60 src='+lider.imginsignia+'> <img height=284 src='+lider.imglider+'></center>'+
@@ -4015,7 +4015,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 $('.boxPokemon').prepend('<div class="boxNPC"><strong>'+nomeDesafiante+':</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
 
@@ -4043,7 +4043,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 $('.boxPokemon').prepend(
                     '<center><img style="vertical-align: bottom;" width=60 src='+lider.imginsignia+'> <img height=284 src='+lider.imglider+'></center>'+
@@ -4068,7 +4068,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 $('.boxPokemon').prepend('<div class="boxNPC"><strong>'+nomeDesafiante+':</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
 
@@ -4096,7 +4096,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 $('.boxPokemon').prepend(
                     '<center><img style="vertical-align: bottom;" width=60 src='+lider.imginsignia+'> <img height=284 src='+lider.imglider+'></center>'+
@@ -4121,7 +4121,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 $('.boxPokemon').prepend('<div class="boxNPC"><strong>'+nomeDesafiante+':</strong><br><center>'+imagens+'</center>'+pokemons+'</div><br>');
 
@@ -4165,7 +4165,7 @@ $( document ).ready(function() {
         habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
         imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-        pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+        pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
         if(qtdd >= 2){
 
@@ -4176,7 +4176,7 @@ $( document ).ready(function() {
             habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
             imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-            pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+            pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
             if(qtdd >= 3){
 
@@ -4187,7 +4187,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 if(qtdd >= 4){
 
@@ -4198,7 +4198,7 @@ $( document ).ready(function() {
                     habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                     imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                    pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                    pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                     if(qtdd >= 5){
 
@@ -4213,7 +4213,7 @@ $( document ).ready(function() {
                         habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                         imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                        pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                        pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                     }
                 }
@@ -4255,7 +4255,7 @@ $( document ).ready(function() {
         habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
         imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-        pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+        pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
         if(qtdd >= 2){
 
@@ -4267,7 +4267,7 @@ $( document ).ready(function() {
             habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
             imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-            pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+            pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
             if(qtdd >= 3){
 
@@ -4279,7 +4279,7 @@ $( document ).ready(function() {
                 habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                 imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                 if(qtdd >= 4){
 
@@ -4291,7 +4291,7 @@ $( document ).ready(function() {
                     habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                     imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                    pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                    pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                     if(qtdd >= 5){
 
@@ -4307,7 +4307,7 @@ $( document ).ready(function() {
                         habil = buscaHabilidade(pkmn.nome,Number(nivel));
 
                         imagens = imagens + '<img width=150 src=https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+pkmn.num+'.png>';
-                        pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+'<br>';
+                        pokemons = pokemons + '<br><strong>'+pkmn.nome+'</strong><br>Nível '+nivelPkmn+' / '+pkmn.tipo+' / Ataque '+poderPkmn.atk+'d6 / PVs '+stress(poderPkmn.pv,poderPkmn.pv)+'<br><i>Fraquezas:</i> '+pkmn.fraqueza+'<br><i>Habilidade:</i> '+habil.nome+' ('+habil.tipo+') '+'- '+habil.desc+pokemonConditions()+'<br>';
 
                     }
                 }
