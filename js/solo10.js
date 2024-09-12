@@ -1067,7 +1067,9 @@ $('#btnGerarTropa').click(function(){
     var raca = races();
     var racaEspecifica = random(raca.aspects);
 
-    valQualidades[0] = random(qualidadesUnicasHeroiseHordas());
+    var origem = random(['Humano','Humano','Humano','Outro','Outro','Outro']);
+    if(origem == 'Outro')
+      valQualidades[0] = random(qualidadesUnicasHeroiseHordas());
 
     if(checkQualidade(valQualidades,'Perito')){
       valPericias = exclusiveRandom(periciasHeroiseHordas(),4);
