@@ -6,6 +6,44 @@ $( document ).ready(function() {
     return [4,3,2];
   };
 
+  function periciasHeroiseHordas() {
+    return ['Artes','Atletismo','Combate à Distância','Combate Corporal','Condução','Conhecimento','Magia','Idiomas','Investigação','Manipulação','Ofícios','Sobrevivência','Subterfúgio','Tecnologia'];
+  };
+
+  function qualidadesHeroiseHordas() {
+    return ['Abastado','Ágil','Alma Iluminada','Ambidestria','Ameaçador','Amigo dos Animais','Aparência Inofensiva','Armadilheiro','Arqueria Montada','Aristocrata','Artefato','Atirador de Elite','Ataque em Arco','Ataque Furtivo','Ataque Selvagem','Aura de Influência','Aura Sagrada','Boa Vida','Caçador de Magos','Camaleão','Caminho da Magia','Campeão Sagrado','Cão de Briga','Capitão de Navio','Chefe de Guilda','Comandante de Tropas','Companheiro Animal','Conjurador Prodígio','Cuidadoso','Curandeiro','Defensor','Desarme','Destemido','Destruição Divina','Dívida de Honra','Dom Sobrenatural','Esquivo','Espírito Guardião','Energia Interior','Falsificador','Fé Verdadeira','Filho do Mar','Força Titânica','Forma Animal','Fúria','Genial','Golpe de Energia','Golpista','Herbanário','Herdeiro do Trono','Homem de Armas','Honrado','Inimigo Favorito','Investida Montada','Irmandade Secreta','Lutador Veloz','Mãos Leves','Mensageiro da Morte','Mestre Artífice','Pacto Sobrenatural','Perito','Perseverante','Poliglota','Protetor','Rastros Invisíveis','Rede de Contatos','Reflexos de Combate','Ritualista','Sacerdote','Sacerdote Errante','Senhor da Guerra','Senhor de Terras','Sentidos Aguçados','Sentidos Sobrenaturais','Toque Curativo','Veloz','Viajante','Vigoroso']
+  };
+
+  function qualidadesUnicasHeroiseHordas() {
+    return ['Anão','Construto','Elfo','Elfo Sombrio','Gnomo','Goblin','Meio-Abissal','Meio-Celestial','Meio-Dragão','Meio-Elemental','Meio-Elfo','Meio-Gigante','Meio-Orc','Orc','Pequenino','Povo Ave','Povo do Mar','Povo Gato','Sátiro'];
+  }
+  
+  function magiasHeroiseHordas() {
+    return ['Afastar Entidade','Aprisionar Corpo','Aprisionar Entidade','Aumentar/Reduzir','Aura de Cura','Cajado em Serpente','Cegueira/Surdez','Coma','Comandar Zumbis','Comandar Entidade','Compreender/Detectar Magia','Contramagia','Controlar Enxame','Corpo de Energia','Corpo Etéreo','Criar/Purificar Alimento','Criar Runa/Pergaminho Arcano','Criar/Destruir Construto','Criar/Destruir Zumbi','Curar Doença','Curar Ferimento','Debilitar Saúde','Debilitar Postura','Debilitar Vontade','Destroçar Barreiras','Doença','Dominar Animais/Pessoas','Enlouquecer','Escudo Arcano','Explosão de Energia','Ferir','Fortalecer Arma/Armadura','Fortalecer Atributo','Ilusão','Invisibilidade','Invocar Animal','Invocar Elementos','Invocar Entidade','Invocar Elementos','Ler a Mente','Línguas','Luz/Escuridão','Medo','Mensagem','Mudar a Aparência','Múltiplas Imagens','Muralha de Energia','Passos nas Nuvens','Projeção Astral','Rajada de Energia','Ressurreição','Sugar Espírito','Santidade','Sentidos Extraordinários','Som Fantasmagórico','Sonho/Pesadelo','Teleporte','Telecinésia','Transformação Animal','Velocidade/Lentidão','Ver a Verdade','Ver o Passado/Futuro','Voo']
+  };
+
+  function pertencesHeroiseHordas(type){
+
+    switch(type){
+      case 'arma':
+        return ['Adaga (+1)','Adaga de Soco (+1)','Alabarda (+2)','Arco Curto (+1)','Arco Médio (+2)','Arco Longo (+3)','Azagaia (+1)','Bastão (+1)','Besta Pequena (+1)','Besta Média (+2)','Besta Grande (+3)','Boleadeiras (+1)','Bumerangue (+1)','Chicote (+1)','Cimitarra (+2)','Clava (+1)','Clava Média (+2)','Clava Grande (+3)','Dardo (+1)','Espada Curta (+1)','Espada Longa (+2)','Espada Larga (+3)','Faca (+1)','Foice Pequena (+1)','Funda (+1)','Katana (+2)','Kukri (+1)','Lança (+2)','Maça Pequena (+1)','Maça Média (+2)','Maça Grande (+3)','Machadinha (+1)','Machado Médio (+2)','Machado Grande (+3)','Mangual (+2)','Manopla com Cravos (+1)','Martelo Pequeno (+1)','Martelo Médio (+2)','Martelo Grande (+3)','Picareta (+2)','Punhal (+1)','Rede (enredar)','Tridente (+2)','Zarabatana (veneno)'];
+        break;
+      case 'armadura':
+        return ['Manto (Res 0)','Gibão de Couro Rústico (Res 1)','Lorigo de Couro (Res 1)','Loriga de Couro e Aço (Res 1)','Camisão de Malha (Res 2)','Cota de Malha (Res 2)','Cota de Malha e Placas (Res 2)','Armadura de Placas (Res 3)','Armadura de Combate (Res 3)','Armadura de Batalha (Res 3)','Armadura Completa (Res 3)','Luva Fechada (Res 0)','Farpas na Armadura (+1)','Escudo Médio (Res 1)','Escudo Grande (Res 2)','Escudo Torre (Res 3)','Farpas no Escudo (+1)'];
+        break;
+      case 'equipamento':
+        return ['Alforge para Animal','Algemas','Algibeira','Aljava','Ampulheta','Apito','Barraca','Baú','Caneca','Cantil','Componentes Mágicos','Corda com Gancho','Equipamento de Pesca','Espelho de Metal Pequeno','Ferramentas','Instrumento Musical','Isqueiro e Pederneira','Kit de Arrombamento','Kit de Costura','Kit de Estudos','Kit de Medicina','Kit de Sobrevivência','Lanterna','Luneta','Mapa','Mochila','Munição','Óleo para Lanterna','Pá','Panelas','Pé-de-Cabra','Pedra de Amolar','Pergaminho','Picareta','Saco de Dormir','Sela e Arreios','Saco','Tocha','Tomo','Botas','Calça','Camisa','Capa','Capa com Capuz','Chapéu','Luvas','Manto','Casaca','Vestido','Óculos','Roupas de Frio','Roupas de Qualidade','Roupas Luxuosas','Roupas de Trabalho','Cobertor de Inverno','Ração para Viagem','Água','Cerveja','Vinho','Aguardente','Ração para Animais'];
+        break;
+      case 'animal':
+        return ['Animal Pequeno','Animal Médio','Animal Grande','Animal de Companhia','Animal de Caça','Ave de Caça','Camelo','Cavalo Normal','Cavalo de Corrida','Cavalo de Carga','Cavalo de Guerra','Elefante'];
+        break;
+      case 'artefato':
+        return ['Adaga Ritual','Arma Abençoada','Arma Congelante','Arma Dançante','Arma Defensora +1','Arma Defensora +2','Arma Defensora +3','Arma Envenenada','Arma Flamejante','Arma Furiosa','Arma Juramentada','Arma Mágica +1','Arma Mágica +2','Arma Mágica +3','Arma Retornável','Matadora de Dragões','Matadora de Gigantes','Matadora de Goblinóides','Vingadora Sagrada','Armadura de Escamas de Dragão','Armadura Mágica +1','Armadura Mágica +2','Armadura Mágica +3','Cota Élfica','Escudo Animado','Escudo Mágico +1','Escudo Mágico +2','Escudo Mágico +3','Robe do Mago','Placa dos Anões','Cajado da Serpente','Cajado de Cura','Cajado do Encanto','Cajado do Fogo','Cajado do Gelo','Cajado do Relâmpago','Cajado dos Insetos','Cristal de Energia','Foco Mágico','Guardião do Descanso','Grimório','Pergaminho Mágico','Runas Arcanas','Símbolo de Proteção','Varinha da Detecção','Varinha da Polimorfia','Aljava do Caçador','Amuleto de Proteção','Anel da Amizade','Anel da Invisibilidade','Anel de Comandar Elemental','Anel de Regeneração','Anel de Voo','Armadilha Astral','Bolsa de Carga','Botas de Velocidade','Braçadeira da Defesa','Chapéu do Disfarce','Cinturão de Força','Colar da Saúde','Colar do Carisma','Coroa da Proteção Mental','Coroa do Intelecto','Estatueta do Poder','Manopla da Força','Manto da Aranha','Manto da Resistência','Pífaro da Loucura','Tapete Voador','Bebida do Furioso','Elixir do Torpor','Elixir Supremo','Óleo do Etéreo','Pó da Verdade','Pó de Fogo','Pó dos Sonhos','Poção de Agilidade','Poção de Carisma','Poção de Cura Menor','Poção de Cura Média','Poção de Cura Maior','Poção de Força','Poção de Inteligência','Poção de Invisibilidade','Poção de Resistência','Poção de Voo','Veneno de Contato','Bebida do Furioso','Elixir do Torpor','Elixir Supremo','Óleo do Etéreo','Pó da Verdade','Pó de Fogo','Pó dos Sonhos','Poção de Agilidade','Poção de Carisma','Poção de Cura Menor','Poção de Cura Média','Poção de Cura Maior','Poção de Força','Poção de Inteligência','Poção de Invisibilidade','Poção de Resistência','Poção de Voo','Veneno de Contato','Anel do Arquimago','Receptáculo Divino','Orbe dos Dragões','Robe do Arquimago','Tomo do Arquimago'];
+        break;
+    }
+
+  };
+
   function periciasHiboriana() {
     return ['Artes','Atletismo','Combate à Distância','Combate Corporal','Condução','Conhecimento','Feitiçaria','Idiomas','Investigação','Manipulação','Ofícios','Sobrevivência','Subterfúgio'];
   };
@@ -21,7 +59,7 @@ $( document ).ready(function() {
   function fortificacao(tipo){
     switch(tipo){
       case 'melhoria':
-        return ['Biblioteca','Casa de Cura','Coletor de Água','Criadouro','Dormitório','Estábulos','Estufa','Forja','Jardim','Laboratório','Paliçada','Passagem Secreta','Plantação','Posto de Observação','Templo Pequeno','Templo Grande'];
+        return ['Biblioteca','Casa de Cura','Coletor de Água','Criadouro','Dormitório','Estábulos','Estufa','Forja','Jardim','Laboratório','Muralha','Paliçada','Passagem Secreta','Plantação','Posto de Observação','Taverna','Templo Pequeno','Templo Grande'];
         break;
       case 'guarnicao':
         return [
@@ -1009,5 +1047,144 @@ $('#btnGerarTropa').click(function(){
 
   });
 
+  $('#btnGerarHeH').click(function(){
+
+    var valAtributos = exclusiveRandom(atributos(),3);
+    var valFeiticos = '';
+    var feiticosHiboriano = '';
+    var valQualidades = exclusiveRandom(qualidadesHeroiseHordas(),3);
+    var valPericias = '';
+    var textoPericias = '';
+    var moedas = randomNumber(1,10)*5;
+    var equipamentos = exclusiveRandom(pertencesHeroiseHordas('equipamento'),3);
+    var extra = '';
+    var bonusPostura = 0;
+    var bonusVontade = 0;
+    var bonusSaude = 0;
+    var textoFeiticeiro = '';
+    var textoPacto = '';
+
+    var raca = races();
+    var racaEspecifica = random(raca.aspects);
+
+    valQualidades[0] = random(qualidadesUnicasHeroiseHordas());
+
+    if(checkQualidade(valQualidades,'Perito')){
+      valPericias = exclusiveRandom(periciasHeroiseHordas(),4);
+      textoPericias = textoPericias + '<div class="textIndent">'+valPericias[0]+'</div>';
+      textoPericias = textoPericias + '<div class="textIndent">'+valPericias[1]+'</div>';
+      textoPericias = textoPericias + '<div class="textIndent">'+valPericias[2]+'</div>';
+      textoPericias = textoPericias + '<div class="textIndent">'+valPericias[3]+'</div><br>';
+    } else {
+      valPericias = exclusiveRandom(periciasHeroiseHordas(),3);
+      textoPericias = textoPericias + '<div class="textIndent">'+valPericias[0]+'</div>';
+      textoPericias = textoPericias + '<div class="textIndent">'+valPericias[1]+'</div>';
+      textoPericias = textoPericias + '<div class="textIndent">'+valPericias[2]+'</div><br>';
+    }
+
+    if(checkQualidade(valQualidades,'Pacto Sobrenatural')){
+      textoPacto = '<center><p><i>Pacto Sobrenatural: '+random(['Pacto Infernal','Pacto Celestial','Pacto da Floresta','Pacto Mortal'])+'</i></p></center>';
+    }
+    
+    if(checkQualidade(valPericias,'Magia') || checkQualidade(valQualidades,'Dom Sobrenatural') || checkQualidade(valQualidades,'Caminho da Magia')){
+
+      valFeiticos = exclusiveRandom(magiasHeroiseHordas(),9);
+
+      feiticosHiboriano = '<div><strong>MAGIAS</strong></div>';
+
+      if(checkQualidade(valQualidades,'Dom Sobrenatural'))
+        feiticosHiboriano = feiticosHiboriano + '<div class="textIndent">'+valFeiticos[0]+' - Dom Sobrenatural</div>';
+
+      if(checkQualidade(valPericias,'Magia') || checkQualidade(valQualidades,'Caminho da Magia')){
+
+        textoFeiticeiro = '<center><p><i>Caminho da Magia: '+random(['Artífice Arcano','Canção de Poder','Magia Arcana','Magia Sanguínea','Magia Divina','Magia Primal','Pacto de Poder'])+'</i></p></center>';
+
+        feiticosHiboriano = feiticosHiboriano + '<div class="textIndent">'+valFeiticos[1]+'</div>';
+        feiticosHiboriano = feiticosHiboriano + '<div class="textIndent">'+valFeiticos[2]+'</div>';
+
+        if (valAtributos[2] >= 3)
+          feiticosHiboriano = feiticosHiboriano + '<div class="textIndent">'+valFeiticos[3]+'</div>';
+
+        if (valAtributos[2] >= 4)
+          feiticosHiboriano = feiticosHiboriano + '<div class="textIndent">'+valFeiticos[4]+'</div>';
+
+      }
+
+      if(checkQualidade(valPericias,'Magia') && checkQualidade(valQualidades,'Caminho da Magia')){
+
+        feiticosHiboriano = feiticosHiboriano + '<div class="textIndent">'+valFeiticos[5]+'</div>';
+        feiticosHiboriano = feiticosHiboriano + '<div class="textIndent">'+valFeiticos[6]+'</div>';
+
+        if (valAtributos[2] >= 3)
+          feiticosHiboriano = feiticosHiboriano + '<div class="textIndent">'+valFeiticos[7]+'</div>';
+
+        if (valAtributos[2] >= 4)
+          feiticosHiboriano = feiticosHiboriano + '<div class="textIndent">'+valFeiticos[8]+'</div>';
+
+      }
+
+      feiticosHiboriano = feiticosHiboriano + '</div>';
+
+    }
+
+    if(checkQualidade(valQualidades,'Abastado')){
+      moedas = moedas*10;
+    }
+
+    if(checkQualidade(valQualidades,'Amigo dos Animais')){
+      extra = extra + '<div class="textIndent">'+random(pertencesHeroiseHordas('animal'))+'</div>';
+    }
+
+    if(checkQualidade(valQualidades,'Artefato')){
+      extra = extra + '<div class="textIndent">'+random(pertencesHeroiseHordas('artefato'))+' (artefato)</div>';
+    }
+
+    if(checkQualidade(valQualidades,'Capitão de Navio')){
+      extra = extra + '<div class="textIndent">Embarcação Média</div>';
+    }
+    
+    if(checkQualidade(valQualidades,'Aristocrata')){
+      bonusPostura = bonusPostura+4;
+    }
+
+    if(checkQualidade(valQualidades,'Perseverante')){
+      bonusVontade = bonusVontade+4;
+    }
+
+    if(checkQualidade(valQualidades,'Vigoroso')){
+      bonusSaude = bonusSaude+4;
+    }
+ 
+    $('.boxPersonagemFate').html(
+      '<center><h4>'+random(raca[racaEspecifica].names)+'</h4></center>'+
+      textoFeiticeiro+
+      textoPacto+
+      '<div><strong>ATRIBUTOS</strong>'+
+      '<div class="textIndent"><strong>Corpo:</strong> '+valAtributos[0]+nbsp(12)+'<strong>Saúde:</strong> '+Number(valAtributos[0]+5+bonusSaude)+'</div>'+
+      '<div class="textIndent"><strong>Espírito:</strong> '+valAtributos[1]+nbsp(10)+'<strong>Postura:</strong> '+Number(valAtributos[1]+5+bonusPostura)+'</div>'+
+      '<div class="textIndent"><strong>Mente:</strong> '+valAtributos[2]+nbsp(12)+'<strong>Vontade:</strong> '+Number(valAtributos[2]+5+bonusVontade)+'</div><br>'+
+      '<div><strong>PERÍCIAS</strong>'+
+      textoPericias+
+      '<div><strong>QUALIDADES</strong>'+
+      '<div class="textIndent">'+valQualidades[0]+'</div>'+
+      '<div class="textIndent">'+valQualidades[1]+'</div>'+
+      '<div class="textIndent">'+valQualidades[2]+'</div><br>'+
+      '<div><strong>PERTENCES</strong>'+
+      '<div class="textIndent">Bolsa com '+moedas+' moedas</div>'+
+      '<div class="textIndent">'+random(pertencesHeroiseHordas('artefato'))+'</div>'+
+      '<div class="textIndent">'+random(pertencesHeroiseHordas('arma'))+'</div>'+
+      '<div class="textIndent">'+random(pertencesHeroiseHordas('arma'))+'</div>'+
+      '<div class="textIndent">'+random(pertencesHeroiseHordas('armadura'))+'</div>'+
+      '<div class="textIndent">'+equipamentos[0]+'</div>'+
+      '<div class="textIndent">'+equipamentos[1]+'</div>'+
+      '<div class="textIndent">'+equipamentos[2]+'</div>'+
+      extra+
+      '</div><br>'+
+      feiticosHiboriano
+    );
+
+    $('.boxPersonagemFate').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '550px', 'box-shadow': '5px 5px 10px #30698b'});
+
+  });
 
 });
