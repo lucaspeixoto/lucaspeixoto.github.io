@@ -9,28 +9,28 @@ $( document ).ready(function() {
         case "humano":
             return {
                 aparencia: "Um humano com cabeça de ",
-                habilidades: "(Vida 40 / Força 8 / Proteção 5)"
+                habilidades: "Vida 40 / Força 8 / Proteção 5"
             }
             break;
 
         case "criatura":
               return {
                   aparencia: "Uma criatura que lembra um(a) ",
-                  habilidades: "(Vida 70 / Força 10 / Proteção 10)"
+                  habilidades: "Vida 70 / Força 10 / Proteção 10"
               }
               break;
 
         case "humanoide":
             return {
                 aparencia: "Um humanoide alto parecido com um(a) ",
-                habilidades: "(Vida 60 / Força 8 / Proteção 10)"
+                habilidades: "Vida 60 / Força 8 / Proteção 10"
             }
             break;
             
         case "forte":
             return {
                 aparencia: "Um humano forte com características de ",
-                habilidades: "(Vida 50 / Força 10 / Proteção 5)"
+                habilidades: "Vida 50 / Força 10 / Proteção 5"
             }
             break;
     }
@@ -93,13 +93,14 @@ $( document ).ready(function() {
     $('.boxNPCs').html(
     '<div class="boxNPC">'+
       '<p><b>Aparência: </b>'+criatura.aparencia+' '+random(animal())+
+      '<br><b>Habilidades: </b>'+criatura.habilidades+
+      '<br><br><b>Características: </b>'+
       '<br>'+random(caracteristica1())+
       '<br>'+random(caracteristica2())+
       '<br>'+random(caracteristica3())+
-      '<br><br><b>Habilidades: </b>'+criatura.habilidades+
-      '<br><br><b>Um pedido: </b>'+random(pedido())+
-      '<br><b>E uma recompensa: </b>'+random(recompensa())+
-      '<br><b>E/ou uma ameaça: </b>'+random(ameaca())+'</p>'+
+      '<br><br><b>Pedido: </b>'+random(pedido())+
+      '<br><b>Recompensa: </b>'+random(recompensa())+
+      '<br><b>Ameaça: </b>'+random(ameaca())+'</p>'+
     '</div>');
 
     $('.boxNPC').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '550px', 'box-shadow': '5px 5px 10px lightgrey'});
