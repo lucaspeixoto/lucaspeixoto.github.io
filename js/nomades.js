@@ -32,7 +32,29 @@ $( document ).ready(function() {
     return ['Ela irá matar um Aliado.','A criatura irá espalhar o caos pela Cidade. Os personagens aceitarão?','Entregará os personagens a um Inimigo ou Antagonista. Haverá uma emboscada.','Irá se juntar ao Antagonista ou a um Inimigo relevante para a Temporada.','Influenciará um dos Aliados a se tornar um traidor/Inimigo.','Matar os personagens.','Impedir que os personagens cumpram o Objetivo Final da temporada.','Atacar e destruir a base de operações (p.151) dos personagens, se houver.','Capturar um Aliado e entregá-lo a um Inimigo.','Entregar os personagens para o Culto do Vidro. Haverá uma emboscada.','Transformar um Aliado em um Inimigo através de controle mental.','Influenciar a Guilda a considerar os personagens traidores. Ela se tornará inimiga.','Ela irá atrás dos Aliados para matá-los, um por Temporada.'];
   }
 
-$('#btnGerarCriatura').click(function(){
+  function objeto(){
+    return ['Um anel (+1 de Foco máximo).','Um par de luvas.','Um instrumento musical. Qual?','Estatueta de Criatura Estranha. (p.224)','Bracelete. (+1 de Poder, se possível).','Um Medalhão.','Uma <i>Arma Medieval</i> (p.213).','Uma máscara (+1 de Destino máximo).','Saco com ervas (usos limitados, p.87).','Uma <i>Arma Futurista</i> (p.213).','Uma fruta (perecível, p.87).','Um gadget com bateria infinita.','Uma vela (usos limitados, p.87).'];
+  }
+
+
+  function caracteristica_objeto(){
+    return ['Dourado.','Congelado. Não fere o usuário.','Feito de ossos.','Muito leve. Pesa poucos gramas.','Pesa mais de 10 quilos.','<i>Instável</i> (p.87).','Quente ao toque.','Fica invisível ao comando do usuário.','<i>Imprevisível</i> (p.87).','Emite luz forte quando segurado.','Emite fogo, mas não queima o usuário.','Afasta o Vazio. (+1 de Proteção).','Muda forma (novo Objeto ao usar).'];
+  }
+
+
+  function vantagem_objeto(){
+    return ['Recupera 10 pontos de Vida de alguém. <i>Imprevisível</i> (p.87)','Usuário ganha o talento Muito Forte (p.109) por 5 turnos.','Usuário fica invisível por 5 Turnos.','Anima um cadáver por 10 Turnos, obediente ao criador (Vida 15 / Força 8 / Proteção 3).','Usuário pode flutuar por 3 Turnos. Altura máxima de 20 metros, velocidade de corrida.','Cria um escudo ao redor do usuário com Proteção +10 por 2 Turnos.','Velocidade! Personagem ganha uma ação extra por Turno. Dura 3 Turnos.','Usuário é transportado para um lugar no raio de 1 km. Ele deve conhecer o local e mentalizá-lo.','Comanda a mente de alguém a fazer algo, desde que não o coloque em risco.','Cria uma aura de fogo de 2 metros de raio, com Força 10, por 2 Turnos.','Se usado por uma Terceira Entidade (p.205), ganha +1 de Poder por uma Cena.','Pode ler a mente de alguém por 30 segundos. O resultado surge em até 3 Palavras-Chave (p.234).','Traz alguém de volta à vida, com Vida 5. Artefato se desmancha em seguida.'];
+  }
+
+  function pedido_objeto(){
+    return ['Atrai uma Criatura Estranha (p.224) como Inimigo. Sorteie novamente para o próximo uso.','É ilógico que o usuário perca a consciência por 3 turnos.','Artefato explode com Força 15 no final do Turno seguinte. É destruído.','Objetos eletrônicos no ambiente deixam de funcionar.','Usuário passa por um espelho sem querer! (p.99)','Funciona apenas uma vez ao dia.','Tem um efeito diferente a cada uso. Sorteie um cada vez que usá-lo.','Queima! O usuário perde 5 pontos de Vida.','Funciona apenas duas vezes ao dia.','Afeta a memória do personagem, perde 1 ponto de Experiência. Se não tiver, perde 5 de Vida.','Causa uma onda de choque de 5 metros e Força 5 quando ativado. Atinge também o usuário.','Usuário gasta 1 ponto de Foco. Se não tiver, perde 5 pontos de Vida.','Suga a Força Primordial! Usuário e perde 5 pontos de Vida.'];
+  }
+
+  function consequencia_objeto(){
+    return ['O dono original, uma Criatura Estranha (p.224) quer ele de volta, e vira um Inimigo.','Um Antagonista (p.210) novo ou já existente quer o Artefato.','O Culto do Vidro (p.51) busca o Artefato e pode fazer uma emboscada.','Um grupo ou seita verá o portador do Artefato como um profeta.','Até três Inimigos se unem para roubá-lo. Quando um aparecer, é lógico que apareçam outros.','O portador contrai uma doença. Em três Temporadas ele morrerá. Qual a cura?','Um novo Antagonista (p.210 ) surge na próxima Temporada para recuperar o Artefato.','Um membro da Guilda quer o Artefato, mas não sabe que ele está com os jogadores.','Uma Criatura Estranha (p.224) precisa do Artefato para sobreviver e fará de tudo para obtê-lo.','Um Aliado torna-se obcecado pelo Artefato e pretende obtê-lo, custe o que custar.','Outro personagem (sorteado e mantido em segredo, só ele saberá) fica obcecado pelo Artefato.','Um Antagonista (p.210) quer o Artefato. Ele se revelará no próximo episódio.','O Artefato é a isca de uma armadilha criada por um Inimigo. É uma emboscada! Ele está aqui!'];
+  }
+
+  $('#btnGerarCriatura').click(function(){
     
     $('.boxNPCs').html(
     '<div class="boxNPC">'+
@@ -43,6 +65,21 @@ $('#btnGerarCriatura').click(function(){
       '<br><br><b>Um pedido: </b>'+random(pedido())+
       '<br><b>E uma recompensa: </b>'+random(recompensa())+
       '<br><b>E/ou uma ameaça: </b>'+random(ameaca())+'</p>'+
+    '</div>');
+
+    $('.boxNPC').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '550px', 'box-shadow': '5px 5px 10px lightgrey'});
+
+  });
+
+  $('#btnGerarArtefato').click(function(){
+    
+    $('.boxNPCs').html(
+    '<div class="boxNPC">'+
+      '<p><b>Objeto: </b>'+random(objeto())+
+      '<br><b>Característica: </b>'+random(caracteristica_objeto())+
+      '<br><b>O que ele dá: </b>'+random(vantagem_objeto())+
+      '<br><b>O que ele pede: </b>'+random(pedido_objeto())+
+      '<br><b>As consequências: </b>'+random(consequencia_objeto())+'</p>'+
     '</div>');
 
     $('.boxNPC').css({'border': 'solid 1px black', 'border-radius': '5px', 'padding': '10px', 'margin': '10px', 'margin-left': '0px', 'max-width': '550px', 'box-shadow': '5px 5px 10px lightgrey'});
