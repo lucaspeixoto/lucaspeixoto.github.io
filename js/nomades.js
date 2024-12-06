@@ -1,7 +1,39 @@
 $( document ).ready(function() {
 
   function tipo(){
-    return ["Um humano (Vida 40 / Força 8 / Proteção 5) com cabeça de ","Uma criatura (Vida 70 / Força 10 / Proteção 10) que lembra um(a) ","Um humanoide alto (Vida 60 / Força 8 / Proteção 10) parecido com um(a) ","Um humano forte (Vida 50 / Força 10 / Proteção 5) com características de "];
+
+    type = random(['humano','criatura','humanoide','forte']);
+
+    switch(type) {
+
+        case "humano":
+            return {
+                aparencia: "Um humano com cabeça de ",
+                habilidades: "(Vida 40 / Força 8 / Proteção 5)"
+            }
+            break;
+
+        case "criatura":
+              return {
+                  aparencia: "Uma criatura que lembra um(a) ",
+                  habilidades: "(Vida 70 / Força 10 / Proteção 10)"
+              }
+              break;
+
+        case "humanoide":
+            return {
+                aparencia: "Um humanoide alto parecido com um(a) ",
+                habilidades: "(Vida 60 / Força 8 / Proteção 10)"
+            }
+            break;
+            
+        case "forte":
+            return {
+                aparencia: "Um humano forte com características de ",
+                habilidades: "(Vida 50 / Força 10 / Proteção 5)"
+            }
+            break;
+    }
   }
 
   function animal(){
@@ -55,13 +87,16 @@ $( document ).ready(function() {
   }
 
   $('#btnGerarCriatura').click(function(){
+
+    var criatura = random(tipo());
     
     $('.boxNPCs').html(
     '<div class="boxNPC">'+
-      '<p><b>Aparência e habilidades: </b>'+random(tipo())+' '+random(animal())+
+      '<p><b>Aparência: </b>'+criatura.aparencia+' '+random(animal())+
       '<br>'+random(caracteristica1())+
       '<br>'+random(caracteristica2())+
       '<br>'+random(caracteristica3())+
+      '<br><br><b>Habilidades: </b>'+criatura.habilidades+
       '<br><br><b>Um pedido: </b>'+random(pedido())+
       '<br><b>E uma recompensa: </b>'+random(recompensa())+
       '<br><b>E/ou uma ameaça: </b>'+random(ameaca())+'</p>'+
