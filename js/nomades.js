@@ -2,7 +2,7 @@ $( document ).ready(function() {
 
   function tipo(){
 
-    type = random(['humano','criatura','humanoide','forte']);
+    let type = random(['humano','criatura','humanoide','forte']);
 
     switch(type) {
 
@@ -88,7 +88,7 @@ $( document ).ready(function() {
 
   $('#btnGerarCriatura').click(function(){
 
-    var criatura = random(tipo());
+    var criatura = tipo();
     
     $('.boxNPCs').html(
     '<div class="boxNPC">'+
