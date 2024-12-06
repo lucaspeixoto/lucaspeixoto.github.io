@@ -8,21 +8,21 @@ $( document ).ready(function() {
 
         case "humano":
             return {
-                aparencia: "Um humano com cabeça de ",
+                aparencia: "Um humano com a cabeça de ",
                 habilidades: "Vida 40 / Força 8 / Proteção 5"
             }
             break;
 
         case "criatura":
               return {
-                  aparencia: "Uma criatura que lembra um(a) ",
+                  aparencia: "Uma criatura que lembra ",
                   habilidades: "Vida 70 / Força 10 / Proteção 10"
               }
               break;
 
         case "humanoide":
             return {
-                aparencia: "Um humanoide alto parecido com um(a) ",
+                aparencia: "Um humanoide alto parecido com ",
                 habilidades: "Vida 60 / Força 8 / Proteção 10"
             }
             break;
@@ -37,7 +37,7 @@ $( document ).ready(function() {
   }
 
   function animal(){
-    return ['Rato','Aranha','Corvo','Bode','Cachorro','Cobra','Morcego','Esqueleto','Mosca','Lobo','Gafanhoto','Réptil','Polvo'];
+    return ['um Rato','uma Aranha','um Corvo','um Bode','um Cachorro','uma Cobra','um Morcego','um Esqueleto','uma Mosca','um Lobo','um Gafanhoto','um Réptil','um Polvo'];
   }
   
   function caracteristica1(){
