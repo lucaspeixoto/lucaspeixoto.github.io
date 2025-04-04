@@ -1,6 +1,6 @@
 const CACHE_NAME = "solorpg-cache-v1";
 const urlsToCache = [
-    "css/stuquery.hexmap.css",
+    "/",
     "css/style.css",
     "img/android-chrome-192x192.png",
     "img/android-chrome-512x512.png",
@@ -243,10 +243,9 @@ const urlsToCache = [
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(urlsToCache).catch((err) => {
-        console.error("Erro ao adicionar arquivos ao cache:", err);
-      });
-    })
+      console.log("Armazenando arquivos no cache...");
+      return cache.addAll(urlsToCache).then(() => self.skipWaiting());
+    }).catch((err) => console.error("Erro ao adicionar arquivos ao cache:", err))
   );
 });
 
@@ -254,7 +253,9 @@ self.addEventListener("install", (event) => {
 self.addEventListener("fetch", (event) => {
   event.respondWith(
     caches.match(event.request).then((response) => {
-      return response || fetch(event.request);
+      return response || fetch(event.request).catch(() => {
+        return caches.match("/geradores.html"); // Página fallback para quando estiver offline
+      });
     })
   );
 });
