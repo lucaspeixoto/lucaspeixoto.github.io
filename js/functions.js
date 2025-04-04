@@ -1,4 +1,10 @@
 //PWA
+const installButton = document.getElementById("install-button");
+
+if (!navigator.userAgent.toLowerCase().includes("mobile")) {  
+  installButton.style.display = "none";  
+}
+
 let installPrompt;
 
 window.addEventListener("beforeinstallprompt", (event) => {
