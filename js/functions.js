@@ -1,27 +1,17 @@
-//PWA
+// PWA
 let installPrompt;
 
 window.addEventListener("beforeinstallprompt", (event) => {
   console.log("Evento beforeinstallprompt disparado!");
-  
-  // Guarda o evento para uso posterior
+
+  // Previne o comportamento padrão e armazena o evento para uso posterior
+  event.preventDefault();
   installPrompt = event;
 
-  // Exibe o prompt automaticamente
-  installPrompt.prompt();
-  
-  installPrompt.userChoice.then((choiceResult) => {
-    if (choiceResult.outcome === "accepted") {
-      console.log("Usuário instalou o PWA");
-    } else {
-      console.log("Usuário recusou a instalação");
-      mostrarBotaoInstalacao();
-    }
-    installPrompt = null;
-  });
+  // Exibe o botão para permitir a instalação manual
+  mostrarBotaoInstalacao();
 });
 
-// Exibe o botão caso o usuário não instale automaticamente
 function mostrarBotaoInstalacao() {
   const installButton = document.getElementById("install-button");
   installButton.style.display = "block";
