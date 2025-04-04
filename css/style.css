@@ -176,7 +176,7 @@ select.w3-button {
 
 /* Oculta o botão de Instalar App em telas maiores (como desktops) */
 @media (min-width: 768px) {
-  #install-button {
+  .install-button {
     display: none;
   }
 }
