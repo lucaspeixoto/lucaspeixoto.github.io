@@ -1,11 +1,7 @@
 const CACHE_NAME = "solorpg-cache-v1";
 const urlsToCache = [
-    // CSS
     "css/stuquery.hexmap.css",
     "css/style.css",
-  
-    // Imagens
-    "img/aliado.jpg",
     "img/android-chrome-192x192.png",
     "img/android-chrome-512x512.png",
     "img/anel.png",
@@ -69,6 +65,42 @@ const urlsToCache = [
     "img/bota.png",
     "img/buraco.png",
     "img/cetro.png",
+    "img/cla1.jpg",
+    "img/cla2.jpg",
+    "img/cla3.jpg",
+    "img/cla4.jpg",
+    "img/cla5.jpg",
+    "img/cla6.jpg",
+    "img/cla7.jpg",
+    "img/cla8.jpg",
+    "img/cla9.jpg",
+    "img/cla10.jpg",
+    "img/cla11.jpg",
+    "img/cla12.jpg",
+    "img/cla13.jpg",
+    "img/cla14.jpg",
+    "img/cla15.jpg",
+    "img/cla16.jpg",
+    "img/cla17.jpg",
+    "img/cla18.jpg",
+    "img/cla19.jpg",
+    "img/cla20.jpg",
+    "img/cla21.jpg",
+    "img/cla22.jpg",
+    "img/cla23.jpg",
+    "img/cla24.jpg",
+    "img/cla25.jpg",
+    "img/cla26.jpg",
+    "img/cla27.jpg",
+    "img/cla28.jpg",
+    "img/cla29.jpg",
+    "img/cla30.jpg",
+    "img/cla31.jpg",
+    "img/cla32.jpg",
+    "img/cla33.jpg",
+    "img/cla34.jpg",
+    "img/cla35.jpg",
+    "img/cla36.jpg",
     "img/clerigo.png",
     "img/codex_dominus.png",
     "img/d6_1.jpg",
@@ -77,6 +109,16 @@ const urlsToCache = [
     "img/d6_4.jpg",
     "img/d6_5.jpg",
     "img/d6_6.jpg",
+    "img/d10_1.jpg",
+    "img/d10_2.jpg",
+    "img/d10_3.jpg",
+    "img/d10_4.jpg",
+    "img/d10_5.jpg",
+    "img/d10_6.jpg",
+    "img/d10_7.jpg",
+    "img/d10_8.jpg",
+    "img/d10_9.jpg",
+    "img/d10_10.jpg",
     "img/dwarf-face.png",
     "img/escada_entrada.png",
     "img/escada_saida.png",
@@ -115,9 +157,13 @@ const urlsToCache = [
     "img/vilao_mago.png",
     "img/vilao_neutro.png",
     "img/vilao_paladino.png",
+    "img/w1.jpg",
+    "img/w2.jpg",
+    "img/w3.jpg",
+    "img/w4.jpg",
+    "img/w5.jpg",
+    "img/w6.jpg",
     "img/zumbi.png",
-  
-    // JavaScript
     "js/altaris.js",
     "js/aspects.js",
     "js/c4.js",
@@ -145,14 +191,10 @@ const urlsToCache = [
     "js/skills.js",
     "js/solo10.js",
     "js/stunts.js",
-    "js/stuquery.hexmap.js",
-    "js/stuquery.js",
     "js/tinydungeon.js",
     "js/torre-mortos.js",
     "js/umdaar.js",
     "js/uvg.js",
-  
-    // HTML
     "c4.html",
     "dados_fate.html",
     "discord_bot.html",
@@ -201,7 +243,9 @@ const urlsToCache = [
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(urlsToCache);
+      return cache.addAll(urlsToCache).catch((err) => {
+        console.error("Erro ao adicionar arquivos ao cache:", err);
+      });
     })
   );
 });
