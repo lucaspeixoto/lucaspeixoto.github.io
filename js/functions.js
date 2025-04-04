@@ -1,32 +1,3 @@
-//PWA
-const installButton = document.getElementById("install-button");
-
-if (!navigator.userAgent.toLowerCase().includes("mobile")) {  
-  installButton.style.display = "none";  
-}
-
-let installPrompt;
-
-window.addEventListener("beforeinstallprompt", (event) => {
-  event.preventDefault();
-  installPrompt = event;
-
-  const installButton = document.getElementById("install-button");
-  installButton.style.display = "block";
-
-  installButton.addEventListener("click", () => {
-    installPrompt.prompt();
-    installPrompt.userChoice.then((choiceResult) => {
-      if (choiceResult.outcome === "accepted") {
-        console.log("Usuário instalou o PWA");
-      } else {
-        console.log("Usuário recusou a instalação");
-      }
-      installPrompt = null;
-    });
-  });
-});
-
 // Script to open and close sidebar
 function w3_open() {
   document.getElementById("mySidebar").style.display = "block";
