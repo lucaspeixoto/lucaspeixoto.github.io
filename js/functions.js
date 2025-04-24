@@ -1,3 +1,36 @@
+// PWA
+let installPrompt;
+
+window.addEventListener("beforeinstallprompt", (event) => {
+  console.log("Evento beforeinstallprompt disparado!");
+
+  // Previne o comportamento padrão e armazena o evento para uso posterior
+  event.preventDefault();
+  installPrompt = event;
+
+  // Exibe o botão para permitir a instalação manual
+  mostrarBotaoInstalacao();
+});
+
+function mostrarBotaoInstalacao() {
+  const installButton = document.getElementById("install-button");
+  installButton.style.display = "block";
+
+  installButton.addEventListener("click", () => {
+    if (installPrompt) {
+      installPrompt.prompt();
+      installPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === "accepted") {
+          console.log("Usuário instalou o PWA");
+        } else {
+          console.log("Usuário recusou a instalação");
+        }
+        installPrompt = null;
+      });
+    }
+  });
+}
+
 // Script to open and close sidebar
 function w3_open() {
   document.getElementById("mySidebar").style.display = "block";

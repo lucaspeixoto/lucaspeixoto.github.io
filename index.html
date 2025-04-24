@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 	<head>
+    <link rel="manifest" href="manifest.json">
     <link rel="canonical" href="https://lucaspeixoto.github.io/" data-pjax-transient>
 
 			<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -12,6 +13,13 @@
 
 		  gtag('config', 'UA-160380893-1');
 		</script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("sw.js")
+        .then(() => console.log("Service Worker registrado com sucesso!"))
+        .catch((error) => console.log("Erro ao registrar o Service Worker:", error));
+      }
+    </script>
 
 		<title>Fate e RPG Solo - Jogos, Geradores e Oráculos - Lucas Peixoto</title> 
 		<meta charset="UTF-8">
@@ -47,7 +55,8 @@
     <a href="/" class="w3-bar-item w3-button w3-padding w3-text-indigo">Meus jogos analógicos</a> 
     <a href="geradores.html" class="w3-bar-item w3-button w3-padding w3-text-indigo">Geradores e autômatos</a> 
     <a href="oraculos.html" class="w3-bar-item w3-button w3-padding w3-text-indigo">Oráculos e tabelas</a>
-    <a href="outros.html" class="w3-bar-item w3-button w3-padding w3-text-indigo">Outros</a> 
+    <a href="outros.html" class="w3-bar-item w3-button w3-padding w3-text-indigo">Outros</a>
+    <button id="install-button" style="display: none;" class="install-button w3-button w3-indigo w3-hover-black">Instalar App</button>
   </div>
   <div class="w3-panel w3-large w3-display-bottomleft">
     <a href="https://bibliotecarpgsolo.wordpress.com/" target="_blank"><img src="./img/ico_bibliotecarpgsolo.webp" alt="biblioteca rpg solo" style="width: 20px;"></a>
