@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mini Chat</title>
+  <title>Codex Dominus</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#3f51b5" />
+  <link rel="icon" href="icon-192.png" />
 </head>
 <body>
   <div id="chat-container">
@@ -31,9 +34,20 @@
       </form>
   </div>
 
-  <!-- jQuery (local) -->
   <script src="jquery-3.7.1.min.js"></script>
-  <!-- Seu script -->
   <script src="script.js"></script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js').then(() => {
+          console.log('Service Worker registrado com sucesso!');
+        }).catch(error => {
+          console.log('Falha ao registrar o Service Worker:', error);
+        });
+      });
+    }
+  </script>
+  
 </body>
 </html>
