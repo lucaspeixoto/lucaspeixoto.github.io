@@ -100,7 +100,7 @@ $(function () {
 						const plot = getRandomPlot(selectedScenarios);
 				
 						resultado = `
-							📜<br>
+							📜 <strong>Trama</strong><br>
 							<strong>Algo aconteceu:</strong> ${plot["Something happened"]}<br>
 							<strong>Você precisa:</strong> ${plot["You need"]}<br>
 							<strong>Senão:</strong> ${plot["Otherwise"]}
@@ -117,7 +117,7 @@ $(function () {
 					const retorno = getRandomArchetypeFromSingleScenario(selectedScenarios);
 				
 					if (retorno) {
-						let formatted = `🧙 <strong>Arquétipo (${retorno.cenario}):</strong><br>`;
+						let formatted = `🧙 <strong>Personagem</strong><br>`;
 						for (const [coluna, valor] of Object.entries(retorno.resultado)) {
 							formatted += `<strong>${coluna}:</strong> ${valor}<br>`;
 						}
@@ -143,7 +143,7 @@ $(function () {
 					if (hasValidScene) {
 						const scene = getRandomScene(selectedScenarios);
 						resultado = `
-							🎬<br>
+							🎬 <strong>Cena</strong><br>
 							<strong>Lugar:</strong> ${scene["Place"]}<br>
 							<strong>Personagem:</strong> ${scene["Character"]}<br>
 							<strong>Evento:</strong> ${scene["Event"]}
@@ -169,7 +169,7 @@ $(function () {
 					if (hasValidIdeaBank) {
 						const idea = getRandomIdeaBank(selectedScenarios);
 						resultado = `
-							💡<br>
+							💡 <strong>Ideias</strong><br>
 							<strong>Assunto:</strong> ${idea["Subject"]}<br>
 							<strong>Ação:</strong> ${idea["Action"]}<br>
 							<strong>Coisa:</strong> ${idea["Thing"]}<br>
@@ -191,7 +191,7 @@ $(function () {
 				
 					if (hasValidExtras) {
 						const extras = getRandomExtras(selectedScenarios);
-						let formatted = "✨<br>";
+						let formatted = "✨ <strong>Extras</strong><br>";
 						for (const [coluna, valor] of Object.entries(extras)) {
 							formatted += `<strong>${coluna}:</strong> ${valor}<br>`;
 						}
