@@ -780,7 +780,7 @@ const plotEntries = {
 
 const archetypesEntries = { 
   "Pré-História": {
-		"Arquetipo": [
+		"Arquétipo": [
 			"Da Paz. Não gosta de violência, é excelente em coletar alimentos e recursos, esconder-se e fugir.",
 			"Xereta Cientista. Tem curiosidade impulsiva, é hábil em investigar, rastrear e criar engenhocas.",
 			"Força Selvagem. É forte e brutal, lançando-se aos predadores e adversários sem cuidado.",
@@ -790,7 +790,7 @@ const archetypesEntries = {
 		]
 	},
   "Era Do Gelo": {
-		"Arquetipo": [
+		"Arquétipo": [
 			"Artesão. Especialista em transformar recursos brutos em ferramentas.",
 			"Caçador. Especialista em rastrear e abater feras para servirem de alimento.",
 			"Contador de histórias. Especialista em entreter e espalhar notícias entre comunidades.",
@@ -800,7 +800,7 @@ const archetypesEntries = {
 		]
 	},
   "Mitologias": {
-		"Arquetipo": [
+		"Arquétipo": [
 			"Herói Ancestral. Descendente direto de uma antiga linhagem de heróis ou deuses.",
 			"Mago Perdido. Erudito das artes arcanas, em busca de segredos mágicos e feitiços poderosos.",
 			"Caçador de Relíquias. Aventureiro dedicado a encontrar artefatos mágicos e antigas relíquias.",
@@ -836,7 +836,7 @@ const archetypesEntries = {
 		]
 	},
   "Contos De Fadas": {
-		"Arquetipo": [
+		"Arquétipo": [
 			"Inconsequência. Não teme os perigos e age sem pensar. (role em desvantagem quando agir com cautela)",
 			"Ingenuidade. Crença cega na bondade dos outros. (role com desvantagem quando agir com desconfiança ou sem acreditar em alguém)",
 			"Alienação. Não tem atenção para o que acontece ao redor. (role com desvantagem quando tentar perceber algo, seja algum cheiro, som, pessoa, ser, o que for)",
@@ -846,7 +846,7 @@ const archetypesEntries = {
 		]
 	},
   "Piratas": {
-		"Arquetipo": [
+		"Arquétipo": [
 			"Pilantra. Seu estilo é o do malandro, você não só é bom em enganar como adora fazer isso.",
 			"Heroico. Seu sonho é entrar para a história com um feito épico!",
 			"Almofadinha. Ser nobre era um saco e você fugiu para uma vida de aventuras.",
@@ -874,67 +874,307 @@ const archetypesEntries = {
 		]
 	},
   "Horror Gótico": {
-
-	},
+		"Criatura": [
+			"Assombração (ex: fantasma, espectro)",
+			"Infernal (ex: demônio, caído, cão do inferno)",
+			"Encantado (ex: bruxo, fada, duende)",
+			"Licantropo (escolha o animal em que se transforma)",
+			"Morto-vivo (ex: vampiro, múmia, zumbi)",
+			"Reanimado (ex: monstro do Dr. Frankenstein, golem)"
+		],
+		"Profissão": [
+			"Acadêmico(a) / Médico(a)",
+			"Artista / Criminoso(a)",
+			"Caçador(a) / Religioso(a)",
+			"Detetive / Policial",
+			"Jornalista / Escritor(a)",
+			"Místico(a) / Ocultista"
+		]
+},
   "Horror Cósmico": {
-
+		"Arquétipo": [
+			"Detetive Cético. Um investigador que procura explicação lógica para os eventos estranhos.",
+			"Ocultista Acólito. Um estudante das artes ocultas e do sobrenatural.",
+			"Artista Atormentado. Um artista cujas obras são influenciadas por visões cósmicas.",
+			"Acadêmico Perspicaz. Um estudioso que se dedica a desvendar segredos antigos.",
+			"Jornalista Investigativo. Um repórter que segue eventos misteriosos e teorias da conspiração.",
+			"Arqueólogo. Um aventureiro corajoso que busca artefatos antigos e conhecimento perdido."
+		]
 	},
   "Máfia": {
-
+		"Arquétipo": [
+			"Grandão. Você sempre foi o músculo da operação.",
+			"Baby-face. Seu rosto amigável traz tanto soluções quanto problemas.",
+			"Contador. Quebrando a cabeça com números, enquanto outros quebram os joelhos.",
+			"Herdeiro. Seu pai é muito respeitado. Você quer o respeito.",
+			"Recém Chegado. O primo que acabou de chegar. Quer achar seu lugar.",
+			"Desertor. Você quer sair da família. Isso não é tão simples."
+		]
 	},
   "Investigação": {
-
+		"Arquétipo": [
+			"Detetive Cínico. Investigador particular endurecido pela vida, sempre desconfiado e observador.",
+			"Repórter Intrépido. Jornalista destemido que busca a verdade, disposto a arriscar tudo.",
+			"Policial Aposentado. Ex-policial que usa sua experiência para resolver crimes por conta própria.",
+			"Femme Fatale. Misteriosa e sedutora, com uma capacidade surpreendente de manipulação.",
+			"Artista Boêmio. Navega pelo submundo da cidade em busca de inspiração.",
+			"Espião Carismático. Agente secreto que opera nas sombras da cidade coletando informações."
+		]
 	},
   "Guerra": {
-
+		"Arquétipo": [
+			"Infantaria. Soldado raso, possui vantagem ao rolar contra outras infantarias.",
+			"Infantaria pesada. Equipado com armamento explosivo, possui vantagem contra veículos.",
+			"Médico. Primeiros socorros, possui vantagem ao rolar para curar uma pessoa.",
+			"Condutor. Piloto da equipe, possui vantagem ao rolar para conduzir qualquer veículo.",
+			"Sargento. Líder de batalhão, possui vantagem ao rolar para liderar um grupo de soldados.",
+			"Franco-atirador. Sniper, possui vantagem ao rolar para se camuflar no ambiente."
+		]
 	},
   "Comédia Romântica": {
-
+		"Arquétipo": [
+			"Amante de Animais. Gótico. Atrapalhado.",
+			"Estudante Modelo. Cinéfila. Coleção de Bugigangas.",
+			"Gamer. Pavio Curto. Zen.",
+			"Tagarela. Nerd do Sci-Fi. Devora-Livros.",
+			"Bicho do Mato. Fã de Banda. Pura Meigura.",
+			"Atleta. Antisocial. Piadista.",
+			"Amante de Animais. Gótico. Piadista.",
+			"Estudante Modelo. Cinéfila. Atrapalhado.",
+			"Gamer. Pavio Curto. Devora-Livros.",
+			"Tagarela. Nerd do Sci-Fi. Fã de Banda.",
+			"Bicho do Mato. Pura Meigura. Zen.",
+			"Atleta. Antisocial. Coleção de Bugigangas.",
+			"Amante de Animais. Gótico. Zen.",
+			"Estudante Modelo. Cinéfila. Piadista.",
+			"Gamer. Pavio Curto. Fã de Banda.",
+			"Tagarela. Nerd do Sci-Fi. Pura Meigura.",
+			"Bicho do Mato. Fã de Banda. Devora-Livros.",
+			"Atleta. Antisocial. Atrapalhado."
+		]
 	},
   "Artes Marciais": {
-
+		"Arquétipo": [
+			"Competidor. Você se especializou em treinos e torneios, tendo conquistado diversas medalhas.",
+			"Combatente do Crime. Você usa os seus talentos para enfrentar bandidos e ladrões.",
+			"Instrutor. Você possui uma academia e a confiança de muitos alunos.",
+			"Dublê de Cinema. Você se arrisca em cenas perigosas de filmes de ação e aventura.",
+			"Aprendiz. Você faz parte de uma academia e um mestre lhe ajuda sempre que pode.",
+			"Autodidata. Você aprendeu sozinho tudo o que sabe sobre artes marciais."
+		]
 	},
   "Fantasia Urbana": {
-
+		"Profissão": [
+			"Detetive. Investigador astuto com um passado misterioso.",
+			"Jornalista. Sempre em busca de notícias sobrenaturais.",
+			"Colecionador. Possui diversos artefatos mágicos.",
+			"Diplomata. Tem boas relações com todas as criaturas.",
+			"Caçador. Quer livrar o mundo das aberrações.",
+			"Estudioso. Tem acesso a grandes conhecimentos ocultos."
+		],
+		"Poder": [
+			"Arcano",
+			"Licantropia",
+			"Clarividência",
+			"Imortalidade",
+			"Angelical",
+			"Demoníaco"
+		]
 	},
   "Super-Heróis": {
-
+		"Poderes": [
+			"Vigilante. Habilidades de espionagem avançada, camuflagem e estratégias furtivas.",
+			"Metamorfo(a). Capacidade de mudar de forma e imitar qualquer ser ou objeto.",
+			"Bruto(a). Superforça, resistência extrema e habilidades de combate corpo a corpo.",
+			"Psíquico(a). Poderes mentais, como telepatia, telecinese e controle mental.",
+			"Velocista. Habilidade de correr a velocidades extraordinárias, além de reflexos rápidos.",
+			"Super soldado(a). Força sobre-humana, resistência aprimorada e habilidades de combate militares."
+		],
+		"Tipo": [
+			"Super espião(ã). Habilidades de infiltração, inteligência estratégica e uso de gadgets.",
+			"Mimético(a). Capacidade de imitar habilidades ou poderes de outros heróis ou vilões.",
+			"Armadurado(a). Capacidade de vestir armaduras tecnologicamente avançadas que oferecem alta defesa.",
+			"Mago(a). Conhecimento de artes arcanas e habilidade para lançar feitiços e manipular energia mágica.",
+			"Disparador(a) de rajadas. Capacidade de lançar rajadas de energia ou de força.",
+			"Acrobata. Habilidades de movimento ágil, flexibilidade e equilíbrio excepcionais."
+		],
+		"Equipamento": [
+			"Inventor(a). Ferramentas de alta tecnologia, gadgets e dispositivos mecânicos criados para combate e espionagem.",
+			"Controlador(a) de elementos. Dispositivos ou habilidades para manipular fogo, água, terra e ar.",
+			"Cósmico(a). Equipamento alienígena ou relacionado com o espaço que amplifica poderes ou oferece habilidades especiais.",
+			"Manipulador(a) de substâncias. Equipamentos ou poderes que permitem alterar a estrutura e composição de materiais.",
+			"Manipulador(a) corporal. Equipamentos que aumentam força física ou permitem controlar partes do corpo com precisão.",
+			"Mestre em artes marciais. Habilidades de combate sem armas, ou com uso de armas especializadas."
+		]
 	},
   "Tokusatsu": {
-
+		"Arquétipo": [
+			"Destemido Líder. Corajoso e carismático, inspira todos com sua determinação e paixão.",
+			"Gênio da Tecnologia. Inteligente e inventivo, fornece equipamentos e soluções inovadoras.",
+			"Solitário Enigmático. Misterioso e introspectivo, possui conhecimento esotérico e oculto.",
+			"Atleta Impulsivo. Energético e cheio de entusiasmo, age com emoção e rapidez.",
+			"Estrategista Tático. Calculista e astuto, analisa cada situação e cria planos detalhados.",
+			"Guardião Leal. Protetor e devotado, coloca a segurança dos outros acima de tudo."
+		]
 	},
   "Cartoons": {
-
+		"Espécie": [
+			"Animal", 
+			"Inseto", 
+			"Planta falante", 
+			"Alienígena", 
+			"Máquina consciente", 
+			"Monstro", 
+			"Ser mágico", 
+			"Humano", 
+			"Humanóide", 
+			"Objeto animado"
+		],
+		"Profissão": [
+			"Policial", 
+			"Detetive", 
+			"Bombeiro", 
+			"Cientista", 
+			"Astronauta", 
+			"Agente secreto", 
+			"Vendedor", 
+			"Cozinheiro", 
+			"Mordomo", 
+			"Esportista", 
+			"Ator", 
+			"Cantor", 
+			"Pirata", 
+			"Marinheiro", 
+			"Piloto", 
+			"Agricultor", 
+			"Caçador", 
+			"Pescador"
+		],
+		"Traço": [
+			"Egoísta", 
+			"Ambicioso", 
+			"Solidário", 
+			"Trapaceiro", 
+			"Mal-humorado", 
+			"Ingênuo"
+		]
 	},
   "Zumbis": {
-
+		"Arquétipo": [
+			"Durão(ona). Vantagem em lutas corporais e em resistir a ferimentos.",
+			"Caçador(a). Vantagem em lutas a distância e em rastreamento.",
+			"Socorrista. Vantagem para tratar ferimentos e doenças.",
+			"Faz-tudo. Vantagem para transformar materiais/peças em objetos úteis.",
+			"Sabichão(ona). Vantagem para solucionar problemas e perceber riscos no ambiente.",
+			"Bom(a) de papo. Vantagem para convencer pessoas."
+		]
 	},
   "Steampunk": {
-
+		"Arquétipo": [
+			"Engenheira(o) do vapor. Cria as mais maravilhosas geringonças à vapor e ama o metal.",
+			"Detetive particular. Investiga as mais minuciosas pistas para descobrir a verdade.",
+			"Cientista inventor. Máquinas imensas que fazem de tudo são sua especialidade.",
+			"Dama / Cavalheiro. Uma pessoa nobre e honrada que frequenta a alta sociedade.",
+			"Aventureiro(a) explorador(a). Intrépido e impetuoso em busca de tesouros e emoções.",
+			"Jornalista amador. Nenhum segredo ou ameaça passa despercebido ao seu faro apurado."
+		]
 	},
   "Cyberpunk": {
-
+		"Arquétipo": [
+			"Hacker. Você sabe tudo sobre computadores e a internet.",
+			"Solo. Mais metal do que homem, o seu aspecto amedronta as pessoas e você gosta disso!",
+			"Infiltrador. Nenhum lugar é seguro o suficiente para que não possa ser invadido.",
+			"Atravessador. Você sabe onde conseguir qualquer coisa, em qualquer hora do dia.",
+			"Bon-vivant. Todos te conhecem e você sabe usar as pessoas para sua própria vantagem.",
+			"Fixxxer. As máquinas são a sua segunda paixão, a primeira são as suas ferramentas!"
+		]
 	},
   "Dieselpunk": {
-
+		"Arquétipo": [
+			"Músculo. Você é grande, pesado. Machucar e fazer façanhas físicas é com você.",
+			"Cabeça. Pensamento ágil, consegue operar sistemas e máquinas antigas.",
+			"Volante. Atrás de um volante, não há igual. Você é uma fera das estradas.",
+			"Vigia. Olhos atentos e sempre no horizonte. Consegue atirar muito bem.",
+			"Boca. Sempre sabe o que dizer. Carisma em pessoa. Mesmo que isso traga problemas.",
+			"Novato. Nunca conheceu um mundo que não esse. Quer provar seu valor para os seus."
+		]
 	},
   "Solarpunk": {
-
+		"Arquétipo": [
+			"Guarda Ambiental. Acesso a áreas de alta-preservação e uso de armas de contenção.",
+			"Agente de Saúde. Conhecimento de medicamentos e realização de procedimentos médicos.",
+			"Agricultor(a). Conhecimento sobre plantio, solo e clima.",
+			"Engenheiro(a). Habilidade para criação de reparo de estruturas e mecanismos.",
+			"Servidor(a) Público(a). Acesso ao sistema de governo, documentos e contatos.",
+			"Comerciante. Habilidade para comércio e manipulação de produtos."
+		]
 	},
   "Hopepunk": {
-
+		"Arquétipo": [
+			"Professor(a). Possui grande conhecimento dentro de uma área específica.",
+			"Enfermeiro(a). Sabe prestar primeiros socorros e tem acesso a material proibido.",
+			"Engenheiro(a). Constrói e conserta de um tudo.",
+			"Advogado(a). Entende de tudo das leis e pode aliviar a barra quando necessário.",
+			"Atleta. Super forte e ágil, supera qualquer obstáculo físico.",
+			"Vendedor(a). Consegue levar qualquer pessoa na lábia."
+		]
 	},
   "Ficção Científica": {
-
+		"Arquétipo": [
+			"Engenheiro aeroespacial. Recebe vantagem ao realizar reparos mecânicos e eletrônicos.",
+			"Fuzileiro e piloto de caças. Recebe vantagem ao pilotar naves e intimidar pessoas.",
+			"Biomédico pesquisador. Recebe vantagem ao tratar de ferimentos.",
+			"Cientista inventor. Recebe vantagem ao pesquisar e desenvolver novas tecnologias.",
+			"Caçador de recompensas. Recebe vantagem no trato social e no escambo.",
+			"Hacker infiltrador. Recebe vantagem ao lidar com computadores."
+		]
 	},
   "Fantasia Científica": {
-
+		"Arquétipo": [
+			"Piloto Espacial. Recebe vantagem ao pilotar veículos e combater com armas lasers.",
+			"Xamã Intergaláctico. Recebe vantagem ao interagir com espíritos e energias místicas.",
+			"Cientista Exobiológico. Recebe vantagem ao estudar e compreender formas de vida alienígenas.",
+			"Caçador de Relíquias. Recebe vantagem ao explorar ruínas e combater criaturas estranhas.",
+			"Engenheiro Alien. Recebe vantagem ao criar e consertar qualquer tipo de tralha, humana ou não.",
+			"Guerreiro Cósmico. Recebe vantagem em artes marciais e domina as forças do universo."
+		]
 	},
   "Exploração Espacial": {
+		"Descrição": [
+			"Pirata intergaláctico",
+			"Caçador psiônico",
+			"Androide carismático",
+			"Diplomata do Império",
+			"Mercenário rebelde",
+			"Cientista explorador"
+		],
+		"Aparência": [
+			"Humanoide",
+			"Insectóide",
+			"Fungoide",
+			"Monstruosa",
+			"Vegetal",
+			"Mineral"
+		],
+		"Característica": [
+			"Chifres",
+			"Penas",
+			"Escamas",
+			"Pelos",
+			"Múltiplos membros",
+			"Carapaça"
+		]
 
 	},
   "Viagem No Tempo": {
-
+		"Arquétipo": [
+			"Cientista Temporal. Focado na pesquisa e na compreensão dos paradoxos temporais.",
+			"Historiador Curioso. Tem conhecimento abrangente de diferentes períodos e suas culturas.",
+			"Investigador de Anomalias. Especializado em identificar e resolver anomalias temporais.",
+			"Engenheiro Temporal. Especialista em construção e reparo de dispositivos de viagem no tempo.",
+			"Viajante Cronológico. Já experimentou várias eras e sabe se adaptar a diferentes períodos.",
+			"Jornalista Investigativo. Especialista em descobrir informações secretas ao longo das viagens."
+		]
 	}
 };
 
