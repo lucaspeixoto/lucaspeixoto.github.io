@@ -1323,12 +1323,173 @@ const sceneEntries = {
 
 const ideaBankEntries = {
 	"Pré-História": {
-		"Subject": ["Um ancestral misterioso", "A primeira tribo", "Um animal lendário"],
-		"Action": ["descobriu", "escondeu", "caçou", "protegeu"],
-		"Thing": ["um artefato sagrado", "um segredo ancestral", "um fogo eterno"],
-		"Quality": ["com consequências desastrosas", "em segredo", "sem saber o motivo"]
+		"Subject": ["Boas Notícias!", "Como o esperado...", "Fora da realidade!", "Como foi capaz?", "Tragédia", "Perigo!"],
+		"Action": ["Mover / Mudar", "Invadir / Infiltrar", "Subir / Descer", "Fuçar / Escavar", "Proteger / Salvar", "Entender / Conversar"],
+		"Thing": ["Ovos", "Pedra brilhante", "Ossada", "Ferramenta Alienígena", "Substância Degradada", "...de Gente / ...de Dino"],
+		"Quality": ["Rara", "Boa", "Interessante", "Alienígena", "Degradada", "Perigosa"]
 	},
-	// ... outros cenários
+	"Era Do Gelo": {
+		"Subject": ["Sobrevivência", "Misticismo", "Descoberta", "Tradição", "Comunidade", "Natureza"],
+		"Action": ["Fabricar / Gravar", "Caçar / Coletar", "Celebrar / Sacrificar", "Negociar / Transportar", "Fugir / Esconder", "Viajar / Mudar"],
+		"Thing": ["Artefato estranho", "Totem / Entalhe", "Arma / Vestimenta", "Colar de presas", "Recurso Extremo", "Ferramenta Quente"],
+		"Quality": ["Resistente", "Simbólico", "Ameaçador", "Misterioso", "Extremo", "Quente"]
+	},
+	"Mitologias": {
+		"Subject": ["Uma divindade está revoltada", "Tudo parece se relacionar a uma profecia", "Uma batalha épica está próxima", "Houve uma traição severa entre reis", "Estão falando sobre proibição de magias", "Uma cerimônia importante irá acontecer"],
+		"Action": ["Empunhar", "Conquistar", "Forjar", "Desafiar", "Defender", "Desbravar"],
+		"Thing": ["Lira dourada", "Pergaminho Arcano", "Ânfora de néctar", "Cetro real", "Máscara sagrada", "Sandália divina"],
+		"Quality": ["Celestial", "Arcano", "Antigo", "Lendário", "Amaldiçoado", "Ornamentado"]
+	},
+	"Espada E Feitiçaria": {
+		"Subject": ["Ilusão", "Maldição", "Imortalidade", "Dimensão", "Demônio", "Ambição"],
+		"Action": ["Sacrificar", "Torturar", "Chantagear", "Viajar", "Cultuar", "Simular"],
+		"Thing": ["Artefato", "Arma", "Arca", "Carta", "Elixir", "Harpa"],
+		"Quality": ["Ancestral", "Bizarro(a)", "Caótico(a)", "Imaterial", "Encantado(a)", "Profano(a)"]
+	},
+	"Contos De Fadas": {
+		"Subject": [],
+		"Action": [],
+		"Thing": [],
+		"Quality": []
+	},
+	"Piratas": {
+		"Subject": [],
+		"Action": [],
+		"Thing": [],
+		"Quality": []
+	},
+	"Velho Oeste": {
+		"Subject": [],
+		"Action": [],
+		"Thing": [],
+		"Quality": []
+	},
+	"Horror Gótico": {
+		"Subject": [],
+		"Action": [],
+		"Thing": [],
+		"Quality": []
+	},
+	"Horror Cósmico": {
+		"Subject": [],
+		"Action": [],
+		"Thing": [],
+		"Quality": []
+	},
+	"Máfia": {
+		"Subject": [],
+		"Action": [],
+		"Thing": [],
+		"Quality": []
+	},
+	"Investigação": {
+		"Subject": [],
+		"Action": [],
+		"Thing": [],
+		"Quality": []
+	},
+	"Guerra": {
+		"Subject": [],
+		"Action": [],
+		"Thing": [],
+		"Quality": []
+	},
+	"Comédia Romântica": {
+		"Subject": [],
+		"Action": [],
+		"Thing": [],
+		"Quality": []
+	},
+	"Artes Marciais": {
+		"Subject": [],
+		"Action": [],
+		"Thing": [],
+		"Quality": []
+	},
+	"Fantasia Urbana": {
+		"Subject": [],
+		"Action": [],
+		"Thing": [],
+		"Quality": []
+	},
+	"Super-Heróis": {
+		"Subject": [],
+		"Action": [],
+		"Thing": [],
+		"Quality": []
+	},
+	"Tokusatsu": {
+		"Subject": [],
+		"Action": [],
+		"Thing": [],
+		"Quality": []
+	},
+	"Cartoons": {
+		"Subject": [],
+		"Action": [],
+		"Thing": [],
+		"Quality": []
+	},
+	"Zumbis": {
+		"Subject": [],
+		"Action": [],
+		"Thing": [],
+		"Quality": []
+	},
+	"Steampunk": {
+		"Subject": [],
+		"Action": [],
+		"Thing": [],
+		"Quality": []
+	},
+	"Cyberpunk": {
+		"Subject": [],
+		"Action": [],
+		"Thing": [],
+		"Quality": []
+	},
+	"Dieselpunk": {
+		"Subject": [],
+		"Action": [],
+		"Thing": [],
+		"Quality": []
+	},
+	"Solarpunk": {
+		"Subject": [],
+		"Action": [],
+		"Thing": [],
+		"Quality": []
+	},
+	"Hopepunk": {
+		"Subject": [],
+		"Action": [],
+		"Thing": [],
+		"Quality": []
+	},
+	"Ficção Científica": {
+		"Subject": [],
+		"Action": [],
+		"Thing": [],
+		"Quality": []
+	},
+	"Fantasia Científica": {
+		"Subject": [],
+		"Action": [],
+		"Thing": [],
+		"Quality": []
+	},
+	"Exploração Espacial": {
+		"Subject": [],
+		"Action": [],
+		"Thing": [],
+		"Quality": []
+	},
+	"Viagem No Tempo": {
+		"Subject": [],
+		"Action": [],
+		"Thing": [],
+		"Quality": []
+	}
 };
 
 const extrasEntries = {
