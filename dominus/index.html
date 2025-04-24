@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mini Chat</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="chat-container">
+    <div id="messages"></div>
+    <form id="chat-form">
+
+        <div id="action-container">
+            <button type="button" id="open-actions" title="Ações">
+              🎲
+            </button>
+            <div id="action-menu" class="hidden">
+              <button type="button" class="action-option" data-action="roll-1d6">🎲 Rolar 1d6</button>
+              <button type="button" class="action-option" data-action="roll-2d6">🎲 Rolar 2d6</button>
+            </div>
+          </div>
+
+        <input type="text" id="message-input" placeholder="Digite sua mensagem..." autocomplete="off" inputmode="text"/>
+        <button type="submit">Enviar</button>
+        
+        <button type="button" id="open-settings" title="Configurações">
+            ⚙️
+          </button>
+          <div id="settings-menu" class="hidden">
+            <button type="button" class="settings-option" id="btn-undo">⤺ Desfazer</button>
+            <button type="button" class="settings-option" id="btn-clear">🗑️ Limpar</button>
+          </div>
+
+        <!--<button type="button" id="btn-undo">⤺</button>
+        <button type="button" id="btn-clear">🗑️</button>-->
+        
+      </form>
+  </div>
+
+  <!-- jQuery (local) -->
+  <script src="jquery-3.7.1.min.js"></script>
+  <!-- Seu script -->
+  <script src="script.js"></script>
+</body>
+</html>
