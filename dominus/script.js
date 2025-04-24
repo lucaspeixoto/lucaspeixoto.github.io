@@ -58,7 +58,8 @@ $(function () {
       });
 
     // Mostrar ou ocultar menu flutuante
-    $('#open-actions').on('click', function () {
+    $('#open-actions').on('click', function (e) {
+        e.stopPropagation(); 
         $('#action-menu').toggleClass('hidden');
     });
 
@@ -83,6 +84,22 @@ $(function () {
         $('#action-menu').addClass('hidden');
         salvarMensagem({ texto: resultado, tipo: 'bot' });
     });
-      
+
+    // Toggle menu de configurações (engrenagem)
+    $('#open-settings').on('click', function (e) {
+        e.stopPropagation();
+        $('#settings-menu').toggleClass('hidden');
+    });
+    
+    // Fechar menu de configurações e de ação ao clicar fora
+    $(document).on('click', function (e) {
+        if (!$(e.target).closest('#settings-container').length) {
+            $('#settings-menu').addClass('hidden');
+        }
+        if (!$(e.target).closest('#action-menu').length) {
+            $('#action-menu').addClass('hidden');
+        }
+    });
+        
   });
   

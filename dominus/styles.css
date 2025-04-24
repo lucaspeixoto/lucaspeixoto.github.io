@@ -71,6 +71,12 @@ html, body {
 	word-break: break-word;
 }
 
+.message.bot {
+	align-self: flex-start;
+  background-color: var(--message-bot-bg);
+  color: var(--message-bot-text);
+}
+
 #chat-form {
 	display: flex;
 	padding: 0.5rem;
@@ -107,6 +113,22 @@ button {
 	border-radius: 25px;
 	cursor: pointer;
 	white-space: nowrap;
+}
+
+/* Estilização refinada para botão do dado */
+#open-actions {
+	font-size: 1.25rem;
+	border: none;
+	border-radius: 50%;
+	width: 46px;
+	height: 46px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background 0.3s ease;
+	background-color: var(--button-bg);
+  color: var(--text-color);
 }
 
 #action-container {
@@ -146,28 +168,61 @@ button {
 	background-color: var(--action-hover-bg);
 }
 
-/* Mensagens do sistema */
-.message.bot {
-	align-self: flex-start;
-  background-color: var(--message-bot-bg);
-  color: var(--message-bot-text);
+
+
+#settings-container {
+  position: relative;
+  margin-left: 0.5rem;
 }
 
-/* Estilização refinada para botão do dado */
-#open-actions {
-	font-size: 1.25rem;
-	border: none;
-	border-radius: 50%;
-	width: 46px;
-	height: 46px;
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	transition: background 0.3s ease;
-	background-color: var(--button-bg);
+#open-settings {
+  font-size: 1.25rem;
+  border: none;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--button-bg);
   color: var(--text-color);
+  transition: background 0.3s ease;
 }
+
+#settings-menu {
+  position: absolute;
+  bottom: 73px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  background: var(--action-menu-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  overflow: hidden;
+}
+
+#settings-menu.hidden {
+  display: none;
+}
+
+.settings-option {
+  padding: 0.75rem 1rem;
+  border: none;
+  background: none;
+  text-align: left;
+  width: 100%;
+  font-size: 0.95rem;
+  cursor: pointer;
+  color: var(--action-text);
+}
+
+.settings-option:hover {
+  background-color: var(--action-hover-bg);
+}
+
 
 /* Melhora usabilidade no modo paisagem */
 @media (max-width: 600px) {
@@ -179,78 +234,5 @@ button {
 	}
 	button {
 		font-size: 0.95rem;
-	}
-}
-
-@media (prefers-color-scheme: dark) {
-	body, html {
-		background-color: #121212;
-	}
-
-	#chat-container {
-		background-color: #121212;
-	}
-
-	#messages {
-		background-color: #121212;
-	}
-
-	.message {
-		background-color: #3f51b5;
-		color: #fff;
-	}
-
-	#chat-form {
-		background-color: #1e1e1e;
-		border-top: 1px solid #333;
-	}
-
-	#message-input {
-		background-color: #2a2a2a;
-		border: 1px solid #444;
-		color: #fff;
-	}
-
-	button {
-		background-color: #3f51b5;
-	}
-
-	#action-menu {
-			background-color: #2c2c2c;
-			border: 1px solid #444;
-		}
-	
-		.action-option {
-			color: white;
-		}
-	
-		.action-option:hover {
-			background-color: #3a3a3a;
-		}
-	
-		#open-actions {
-			background-color: #3f51b5;
-			color: white;
-		}
-		
-}
-
-@media (prefers-color-scheme: light) {
-	#action-menu {
-		background-color: white;
-		border: 1px solid #ccc;
-	}
-
-	.action-option {
-		color: black;
-	}
-
-	.action-option:hover {
-		background-color: #f0f0f0;
-	}
-
-	#open-actions {
-		background-color: #eeeeee;
-		color: black;
 	}
 }
