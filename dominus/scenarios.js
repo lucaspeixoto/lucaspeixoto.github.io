@@ -1180,11 +1180,145 @@ const archetypesEntries = {
 
 const sceneEntries = {
 	"Pré-História": {
-		"Place": ["Uma caverna escondida", "Planície repleta de fósseis", "Vulcão ativo"],
-		"Character": ["Xamã da tribo", "Caçador solitário", "Membro da tribo rival"],
-		"Event": ["Descoberta de fogo", "Ritual tribal", "Caçada a um mamute"]
+		"Place": ["No olho d'água", "Entre rochedos", "Na toca", "Mar", "Em casa", "Pomares"],
+		"Character": ["Família das Cavernas", "Criança perdida", "Nômade(s)", "Pessoa muito estranha", "Caçador(a) solitário(a)", "Deuses"],
+		"Event": ["Manada de herbívoros", "Natureza Selvagem (Tabela Extra)", "Ovos eclodem", "Rastros estranhos", "Tempestade", "Astronautas!", "Grande pedra preta e lisa"]
 	},
-	// ... outros cenários com as três tabelas
+	"Era Do Gelo": {
+		"Place": ["Acampamento", "Túnel natural", "Floresta congelada", "Caverna", "Montanha", "Geleira", "Rio congelado", "Cânion", "Campo de gêiseres", "Monumento misterioso"],
+		"Character": ["Líder de comunidade", "Xamã enigmático", "Pária ermitão", "Criança perdida", "Alguém criado por lobos", "Uma colecionadora de ossos"],
+		"Event": ["Encontro com feras!", "Um fenômeno natural", "Disputa por recursos", "Forasteiros pedem ajuda", "Uma coisa presa no gelo", "Passagem secreta?"]
+	},
+	"Mitologias": {
+		"Place": ["Mercado de Bazar", "Vila Costeira", "Ruínas Antigas", "Templo Celestial", "Cemitério Sombrio", "Floresta Amaldiçoada"],
+		"Character": ["Oráculo enigmático", "Divindade caprichosa", "Navegador intrépido", "Caçador de monstros", "Músico ambulante", "Mercador viajante"],
+		"Event": ["Armadilha oculta", "Ataque surpresa", "Ressurreição inesperada", "Revelação de segredo", "Aparição sobrenatural", "Aliado traiçoeiro"]
+	},
+	"Espada E Feitiçaria": {
+		"Place": ["Vilarejo", "Cidade", "Cidade-Estado", "Caverna", "Cume", "Deserto", "Floresta", "Templo", "Ruína", "Forte", "Torre", "Palácio", "Tumba", "Monumento", "Ponte", "Portal", "Passagem", "Círculo", "Pântano", "Vulcão", "Vale estéril"],
+		"Character": ["Um oponente (ver tabelas)", "Religioso(a)", "Nobre", "Conjurador(a)", "Sábio(a)", "Bárbaro(a)", "Pirata", "Líder de guilda", "Mercador(a)", "Fugitivo(a)", "Criminoso(a)"],
+		"Event": ["Fenômeno natural", "Emboscada", "Luta repentina", "Fenômeno mágico", "Um pedido de ajuda", "Um enigma para continuar"]
+	},
+	"Contos De Fadas": {
+		"Place": ["Bosques", "Ruínas", "Gruta", "Ruas da Vila", "Estrada", "Castelo"],
+		"Character": ["Ser Mágico", "Pessoa Idosa", "Criança", "Pessoa de fora", "Ser sombrio", "Animal falante"],
+		"Event": ["Desmoronamento ou Chuva forte", "Perda da direção", "Um Enigma se apresenta e precisa ser resolvido", "Peças de um Quebra-Cabeças", "Vozes no Nevoeiro Misterioso", "Uma Reviravolta"]
+	},
+	"Piratas": {
+		"Place": ["Alto Mar", "Ilha Solitária", "Docas", "Naquela Taverna Suja", "Convés", "Caverna da Caveira"],
+		"Character": ["Corsário", "Comparsa", "Oficial da Marinha Real", "Aquele sujeito estranho...", "Pirata \"como você\"", "Contrabandista"],
+		"Event": ["Duelo", "Um dobrão, uma informação", "Ameaça na ponta da faca", "Boatos sobre você", "\"Homem Ao Mar!!!\"", "Você ouve o canto de sereias"]
+	},
+	"Velho Oeste": {
+		"Place": ["Comércio / Vegetação / Frio", "Agricultura / Areia / Vento", "Diversão / Rocha / Animal", "Transporte / Altitude / Segredo", "Ouro / Calor / Madeira", "Serviço / Lei / Força"],
+		"Character": ["Extroversão / Lei / Comida", "Prudência / Negócio / Arma", "Arrogância / Necessidade / Animal", "Sabedoria / Oportunidade / Ouro", "Curiosidade / Desafio / Planta", "Educação / Promessa / Papel"],
+		"Event": ["Sobrevivência", "Confronto", "Exploração", "Negociação", "Jornada", "Descoberta"]
+	},
+	"Horror Gótico": {
+		"Place": ["Mansão / Casa abandonada", "Catedral / Hospital / Laboratório", "Cemitério / Tumba / Subterrâneo", "Asilo / Sonho / Plano astral", "Ermos / Estação / Porto", "Fábrica / Armazém / Beco"],
+		"Character": ["Palidez / Corrupção / Experimento", "Olheira / Desespero / Pacto", "Ferimento / Fragilidade / Dívida", "Rouquidão / Susto / Crime", "Confusão / Desejo / Servidão", "Malícia / Orgulho / Facção"],
+		"Event": ["Confronto", "Sobrenatural", "Sobrevivência", "Manipulação", "Disrupção", "Revelação"]
+	},
+	"Horror Cósmico": {
+		"Place": ["Universidade", "Mansão abandonada", "Sanatório psiquiátrico", "Ruínas do templo antigo", "Biblioteca proibida", "Museu de história natural"],
+		"Character": ["Professor obscuro", "Mulher enigmática", "Cultista desesperado", "Vidente atormentado", "Criança inocente", "Médico estranho"],
+		"Event": ["Vulto sinistro", "Desaparecimento misterioso", "Ilusões enganosas", "Ataque de criaturas aberrantes", "Culto ritualístico", "Surto de loucura"]
+	},
+	"Máfia": {
+		"Place": ["Armazém cheio de caixas", "Lojas comerciais no centro da cidade", "Estrada de terra na saída da cidade", "Festa da alta sociedade", "Casa de campo da família", "Distrito da polícia"],
+		"Character": ["Comerciante com medo", "Membro do sindicato", "Membro da máfia rival", "Político está preocupado com alguma coisa", "Detetive da polícia precisa falar com você", "Contrabandista e seu carregamento"],
+		"Event": ["Greve do sindicato", "Tiroteio entre os presentes", "Proposta irrecusável para um mafioso", "Uma mensagem chega até você", "Apagão na cidade gera caos nas ruas", "Uma armadilha afeta a família"]
+	},
+	"Investigação": {
+		"Place": ["Prefeitura ou Biblioteca", "Estação de trem ou Docas", "Beco ou Coreto", "Cabaré ou Bar", "Necrotério ou Penitenciária", "Antiquário ou Museu"],
+		"Character": ["Dama misteriosa da alta sociedade", "Informante de rua", "Advogado corrupto", "Gângster endividado", "Médico forense", "Policial à paisana"],
+		"Event": ["Uma janela se quebra com um estrondo", "Um carro preto acelera pela rua e some na escuridão", "Uma testemunha que passa desconfiança", "O local é invadido por policiais", "Você é chantageado", "Alguém é assassinado"]
+	},
+	"Guerra": {
+		"Place": ["Ponte sobre um rio", "Meio da mata", "Em um bunker", "Em um desfiladeiro", "Uma praia", "Cidade em ruínas"],
+		"Character": ["Soldado aliado ferido", "Um sargento inimigo", "Um civil escondido", "Soldado inimigo desarmado", "Um desertor", "Veículo inimigo com tropa"],
+		"Event": ["Tropas inimigas avistadas", "Explosão no seu quartel", "Veículos se aproximando", "Uma chuva torrencial", "Você cai numa emboscada!", "Um pedido de ajuda pelo rádio"]
+	},
+	"Comédia Romântica": {
+		"Place": ["Praça", "Trabalho", "Escola", "Casa", "Centro", "Metrô"],
+		"Character": ["Interesse Amoroso", "Irmão(ã)", "Colega", "Gerente", "Amigo(a)", "Rival"],
+		"Event": ["Caiu nos braços", "Trancados", "Chuva!", "Te tirou pra dançar", "Te chamou pra sair", "Dormiu no ombro"]
+	},
+	"Artes Marciais": {
+		"Place": ["Academia de treino", "Ruas do centro", "Prédio público", "Arranha-céu", "Auto-estrada", "Santuário distante"],
+		"Character": ["Político corrupto", "Guerreiro vilão", "Capanga", "Discípulo", "Mestre", "Corporativo e seus guardas"],
+		"Event": ["Desabamento", "Emboscada", "Traição", "Chantagem", "Grito de socorro", "É hora de lutar!"]
+	},
+	"Fantasia Urbana": {
+		"Place": ["Nas ruas da cidade", "Em um beco obscuro", "Em um edifício público", "Em uma residência", "Na estação de trem ou metrô", "Indústria ou comércio"],
+		"Character": ["Artista atormentado", "Empresário inescrupuloso", "Investigador policial", "Coveiro sombrio", "Psiquiatra estranho", "Açougueiro mórbido"],
+		"Event": ["Confronto mental", "Traição esperada", "Incêndio suspeito", "Testemunha ocular", "Tentativa de assassinato", "Sabotagem"]
+	},
+	"Super-Heróis": {
+		"Place": ["Armazém", "Porto", "Selva", "Pântano", "Castelo", "Mansão", "Deserto", "Vulcão", "Rua movimentada", "Estação de metrô", "Cachoeira", "Cânion", "Prédio abandonado", "Cemitério", "Ilha", "Caverna", "Hospital", "Igreja", "Mar", "Cratera", "Banco", "Arranha-céu", "Lago", "Espaço"],
+		"Character": ["Supervilão", "Criatura mágica", "Entidade cósmica", "Alienígena", "Andróide", "Ser sobrenatural", "Espião", "Terrorista", "Líder de gangue", "Cientista", "Jornalista", "Religioso", "Policial", "Político", "Diplomata", "Super-herói", "Divindade", "Supercomputador"],
+		"Event": ["Uma reviravolta acontece", "Um desastre", "Um desafio tecnológico", "Capangas aparecem", "Uma organização age", "Uma viagem", "Você encontra algo"]
+	},
+	"Tokusatsu": {
+		"Place": ["Distrito Central", "Reserva natural", "Túneis Subterrâneos", "Colégio", "Parque de Diversões", "Região do Porto"],
+		"Character": ["Cientista excêntrico", "Detetive astuta", "Ex-herói aposentado", "Artista marcial solitário", "Sábia misteriosa", "Adolescente corajoso"],
+		"Event": ["Uma gangue de capangas!", "O vilão surge!", "O morfador pifa", "Uma armadilha do vilão", "O vilão faz um refém", "A energia da cidade toda cai"]
+	},
+	"Cartoons": {
+		"Place": ["Espaço", "Planeta", "Lua", "Ilha", "Hotel", "Zoológico", "Montanha", "Trem", "Bar", "Mar", "Fábrica", "Museu", "Loja", "Deserto", "Mina", "Hospital", "Laboratório", "Metrô", "Escola"],
+		"Character": ["Artista", "Cientista", "Esportista", "Advogado", "Inventor", "Mágico", "Criança", "Astronauta", "Espião", "Pirata", "Cowboy", "Cozinheiro", "Político", "Criminoso", "Caçador", "Carteiro", "Bombeiro", "Policial"],
+		"Event": ["Desafiado por um antagonista / grupo", "Acha uma coisa, mas precisa (Ação + Qualidade) para pegar", "Um pedido de ajuda", "Uma loucura acontece", "Um obstáculo mágico", "Vai parar no meio de uma"]
+	},
+	"Zumbis": {
+		"Place": ["Colégio", "Clube", "Parque", "Zoológico", "Hospital", "Cemitério", "Supermercado", "Shopping", "Presídio", "Prédio público", "Fazenda", "Estação"],
+		"Character": ["Professor(a)", "Antigo(a) inimigo(a)", "Ex-policial", "Líder de facção", "Criança", "Velho(a) amigo(a)", "Cientista", "Um(a) traidor(a)", "Médico(a)", "Casal em fuga", "Engenheiro(a)", "Recém-infectado(a)"],
+		"Event": ["Zumbi(s)!", "Encontro com facção", "Um obstáculo no caminho", "Um lugar inexplorado", "Você achou uma coisa"]
+	},
+	"Steampunk": {
+		"Place": ["Baile de máscaras", "Castelo Luxuoso", "Jantar social", "Café popular", "Praça movimentada", "Laboratório Científico", "Covil do vilão", "Mansão de um nobre", "Forte de guerra", "Trem em movimento", "Bosque citadino", "Zepelim nas nuvens"],
+		"Character": ["Mestre mecânico", "Engenheiro do vapor", "Um oficial da lei", "Agente secreto", "Espião", "Membro da realeza", "Ladrão vigarista", "Trapaceiro", "Gênio louco", "Inventor"],
+		"Event": ["O vilão é visto nas redondezas há poucos segundos", "Você é desafiado para um duelo em nome da honra", "Capangas do vilão tentam impedir o seu progresso", "Você cai em uma armadilha preparada pelo vilão", "Você é confundido com o vilão", "Um experimento científico falha e causa uma catástrofe"]
+	},
+	"Cyberpunk": {
+		"Place": ["Um galpão industrial", "Prédio governamental", "Clínica clandestina", "Clube noturno", "Bairro suburbano", "Hotel de beira de estrada"],
+		"Character": ["Membro de uma gangue", "Magnata corporativo", "Agente da mídia", "Morador de rua", "Mercenário", "Agente do governo"],
+		"Event": ["Há um traidor no seu grupo", "Motivações disfarçadas", "A informação era falsa", "Um assalto de gangue", "O vilão na verdade é outro", "Explosão EMP"]
+	},
+	"Dieselpunk": {
+		"Place": ["Arena de Lutas", "Fila da ração", "Mercado de pulgas", "Mansão de um senhor de armas", "Torre de Vigia", "Oficina de carros"],
+		"Character": ["Chefão regional", "Oráculo eremita", "Bandidos", "Sobrevivente solitário", "Grupo de famintos", "Sábio recluso"],
+		"Event": ["Um tiroteio começa inesperadamente!", "Acidente na estrada impede o avanço", "Uma conversa sincera ao volante", "Uma sombra do passado volta a te atormentar", "Emboscada de saqueadores ferais!", "Convite para uma corrida de carros"]
+	},
+	"Solarpunk": {
+		"Place": ["Grande Praça", "Eco Fazendas", "Centro Comunitário", "Aero-Estradas", "Cata-Ventos", "Centro de Tecnologias"],
+		"Character": ["Amizade antiga", "Guarda Ecoambiental", "Figura de Liderança", "Alguém de Fora", "Alguém próximo", "O(A) Infrator(a)"],
+		"Event": ["As luzes falham", "Odor forte toma o ambiente", "Caminho bloqueado", "Uma invasão", "Um barulho repentino", "Recebe uma e-Chamada"]
+	},
+	"Hopepunk": {
+		"Place": ["Universidade", "Hospital", "Delegacia", "Fábrica", "Praça", "Hotel"],
+		"Character": ["Um grupo de policiais", "Alguém muito próximo a você", "Uma pessoa que já te traiu", "Alguém do alto escalão", "Outro membro da resistência", "Uma pessoa desconfiada"],
+		"Event": ["Uma emboscada!", "Um incêndio num lugar muito próximo", "Uma batida policial", "Queda de energia e corte de água", "Um confronto físico inesperado", "Um sistema de segurança é ativado"]
+	},
+	"Ficção Científica": {
+		"Place": ["Sede da Comunidade", "Espaçoporto", "Estação orbital", "Oficina estelar", "Colônia lunar", "Centro de pesquisa"],
+		"Character": ["Comandante", "Aristocrata", "Pirata espacial", "Piloto rebelde", "Ativista", "Diplomata"],
+		"Event": ["Os sistemas de comunicação falham", "Há uma queda geral de energia", "Os propulsores da sua nave param de funcionar", "Radiação está vazando de um equipamento", "Você chegou aqui tarde demais", "Surge um intruso inesperado"]
+	},
+	"Fantasia Científica": {
+		"Place": ["Cidade flutuante", "Ruínas antigas tecnológicas", "Abismo estelar", "Floresta bioluminescente", "Estação espacial", "Mar profundo"],
+		"Character": ["Mestre dos Portais", "Arqueóloga", "Contrabandista Espacial", "Diplomata Galáctico", "Feiticeiro Cósmico", "Robô Guardião"],
+		"Event": ["Uma criatura exótica amigável", "Caçadora", "Desaparecimento misterioso", "Armadilha alienígena mortal", "Avaria nos veículos", "Pequeno salto temporal"]
+	},
+	"Exploração Espacial": {
+		"Place": ["Bar intergaláctico", "Ruínas de uma estação espacial", "Planeta-jardim exótico", "Nave-Estado imperial", "Portal estelar ancestral", "Asteroide-mina"],
+		"Character": ["Um dos arquétipos", "Robô / Super computador", "Caçador de recompensas", "Guarda ou Nobre Imperial", "Mestre sábio / Líder insurgente", "Cultista / Guardião cósmico"],
+		"Event": ["Uma nave desconhecida", "Mensagem misteriosa", "Fenômeno cósmico", "Explosão iminente", "Uma negociação perigosa", "Uma emboscada"]
+	},
+	"Viagem No Tempo": {
+		"Place": ["Biblioteca de Alexandria", "Cidade submersa", "Estação espacial", "Laboratório científico", "Floresta proibida", "Templo desconhecido"],
+		"Character": ["Leonardo da Vinci", "Marco Polo", "Cleópatra", "Nikola Tesla", "Joana d'Arc", "Carmen Miranda"],
+		"Event": ["Distúrbio temporal súbito", "Encontro com outra versão de si mesmo", "Vigilância por observadores temporais", "Conflito com uma consequência histórica", "Roubo de um artefato temporal", "Intervenção de uma força temporal antagônica"]
+	}
 };
 
 const ideaBankEntries = {
