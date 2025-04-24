@@ -11,6 +11,10 @@
 </head>
 <body>
   <div id="chat-container">
+    <div id="install-banner" class="hidden">
+      <span id="close-install-banner">✖</span>
+      <button id="btn-install">📲 Instalar Codex Dominus</button>
+    </div>
     <div id="messages"></div>
     <form id="chat-form">
 
@@ -25,10 +29,12 @@
         <input type="text" id="message-input" placeholder="Digite sua mensagem..." autocomplete="off" inputmode="text"/>
         <button type="submit">Enviar</button>
         
-        <button type="button" id="open-settings" title="Configurações">⚙️</button>
-        <div id="settings-menu" class="hidden">
+        <div id="settings-container">
+          <button type="button" id="open-settings" title="Configurações">⚙️</button>
+          <div id="settings-menu" class="hidden">
             <button type="button" class="settings-option" id="btn-undo">⤺ Desfazer</button>
             <button type="button" class="settings-option" id="btn-clear">🗑️ Limpar</button>
+          </div>
         </div>
 
       </form>

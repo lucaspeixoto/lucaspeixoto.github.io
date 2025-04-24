@@ -168,11 +168,8 @@ button {
 	background-color: var(--action-hover-bg);
 }
 
-
-
 #settings-container {
   position: relative;
-  margin-left: 0.5rem;
 }
 
 #open-settings {
@@ -192,8 +189,8 @@ button {
 
 #settings-menu {
   position: absolute;
-  bottom: 73px;
-  right: 10px;
+  bottom: 65px;
+  right: 0px;
   display: flex;
   flex-direction: column;
   background: var(--action-menu-bg);
@@ -221,6 +218,38 @@ button {
 
 .settings-option:hover {
   background-color: var(--action-hover-bg);
+}
+
+
+#install-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5rem 1rem;
+  background-color: #3f51b5;
+  color: white;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+}
+
+#btn-install {
+  background: white;
+  color: #3f51b5;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
+}
+
+#close-install-banner {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
 
