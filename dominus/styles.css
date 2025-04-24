@@ -252,6 +252,71 @@ button {
   cursor: pointer;
 }
 
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: var(--bg-color);
+  padding: 2rem;
+  border-radius: 12px;
+  max-height: 80vh;
+  overflow-y: auto;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  color: var(--text-color);
+}
+
+.scenario-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+.scenario-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+#modal-scenarios h2 {
+	margin-bottom: 1.5rem;
+	font-size: 1.5rem;
+	text-transform: capitalize;
+	color: var(--text-color);
+	text-align: center;
+}
+
+#modal-scenarios button.close-btn {
+  margin-top: 25px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* Melhora usabilidade no modo paisagem */
 @media (max-width: 600px) {
@@ -264,4 +329,40 @@ button {
 	button {
 		font-size: 0.95rem;
 	}
+}
+
+@media (min-width: 1024px) {
+  #chat-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
+
+/* Barra de Rolagem */
+/* Firefox */
+* {
+  scrollbar-width: auto; /* Mais grossa */
+  scrollbar-color: #666 transparent;
+}
+
+/* WebKit (Chrome, Edge, Safari) */
+*::-webkit-scrollbar {
+  width: 12px; /* Mais grossa */
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent; /* Sem interferir no padding */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #666;
+  border-radius: 6px;
+  border: 3px solid transparent; /* Cria espaçamento interno */
+  background-clip: content-box;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #888;
 }

@@ -18,29 +18,47 @@
     <div id="messages"></div>
     <form id="chat-form">
 
-        <div id="action-container">
-            <button type="button" id="open-actions" title="Ações">🎲</button>
-            <div id="action-menu" class="hidden">
-              <button type="button" class="action-option" data-action="roll-1d6">🎲 Rolar 1d6</button>
-              <button type="button" class="action-option" data-action="roll-2d6">🎲 Rolar 2d6</button>
-            </div>
-          </div>
-
-        <input type="text" id="message-input" placeholder="Digite sua mensagem..." autocomplete="off" inputmode="text"/>
-        <button type="submit">Enviar</button>
-        
-        <div id="settings-container">
-          <button type="button" id="open-settings" title="Configurações">⚙️</button>
-          <div id="settings-menu" class="hidden">
-            <button type="button" class="settings-option" id="btn-undo">⤺ Desfazer</button>
-            <button type="button" class="settings-option" id="btn-clear">🗑️ Limpar</button>
-          </div>
+      <div id="action-container">
+        <button type="button" id="open-actions" title="Ações">🎲</button>
+        <div id="action-menu" class="hidden">
+          <button type="button" class="action-option" data-action="plot">📜 Trama</button>
+          <button type="button" class="action-option" data-action="archetype">🧙 Arquétipo</button>
+          <button type="button" class="action-option" data-action="scene">🎬 Cena</button>
+          <button type="button" class="action-option" data-action="idea-bank">💡 Banco de Ideias</button>
+          <button type="button" class="action-option" data-action="extras">✨ Extras</button>
+          <hr>
+          <button type="button" class="action-option" data-action="roll-1d6">🎲 Rolar 1d6</button>
+          <button type="button" class="action-option" data-action="roll-2d6">🎲 Rolar 2d6</button>
         </div>
+      </div>
 
-      </form>
+      <input type="text" id="message-input" placeholder="Digite sua mensagem..." autocomplete="off" inputmode="text"/>
+      <button type="submit">Enviar</button>
+      
+      <div id="settings-container">
+        <button type="button" id="open-settings" title="Configurações">⚙️</button>
+        <div id="settings-menu" class="hidden">
+          <button type="button" class="settings-option" id="btn-scenarios">📜 Cenários</button>
+          <hr>
+          <button type="button" class="settings-option" id="btn-undo">⤺ Desfazer</button>
+          <button type="button" class="settings-option" id="btn-clear">🗑️ Limpar</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+
+  <div id="modal-scenarios" class="modal hidden">
+    <div class="modal-content">
+      <h2>Cenários Codex Dominus</h2>
+      <div class="scenario-list">
+      </div>
+      <button id="close-modal" class="close-btn">Fechar</button>
+    </div>
   </div>
 
   <script src="jquery-3.7.1.min.js"></script>
+  <script src="scenarios.js"></script>
   <script src="script.js"></script>
 
   <script>
