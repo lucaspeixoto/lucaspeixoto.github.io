@@ -1,4 +1,4 @@
-const CACHE_NAME = "dominus-v0.4";
+const CACHE_NAME = "dominus-v0.5";
 const urlsToCache = [
   "./index.html",
   "./styles.css",

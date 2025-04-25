@@ -85,11 +85,15 @@ $(function () {
 				} 
 			
 			if (action === 'ask-oracle') 
-			
+
 				{
-					const answer = Math.random() < 0.5 ? "Sim" : "Não";
-					resultado = `❓ ${answer}`;
-				} 
+					const oracleResponses = [
+						"Sim", "Sim e...", "Sim, mas...",
+						"Não", "Não, mas...", "Não e..."
+					];
+					const answer = oracleResponses[Math.floor(Math.random() * oracleResponses.length)];
+					resultado = `🔮 ${answer}`
+				}
 				
 			else if (action === 'plot') 
 				
@@ -326,35 +330,106 @@ $(function () {
 		}
 	});
 
+	function getScenariosText() {
+		const selectedScenarios = JSON.parse(localStorage.getItem("selectedScenarios")) || [];
+		return selectedScenarios.length > 0 
+		  ? `Cenários: ${selectedScenarios.join(", ")}\n\n`
+		  : "Cenários: Nenhum\n\n";
+	}
+
 	$("#btn-export-pdf").on("click", function () {
 		const element = document.getElementById("messages");
-		
+		const scenariosText = getScenariosText(); // Obtém os cenários selecionados
+	  
+		// Clona o elemento original para preservar o layout e os estilos
+		const clonedElement = element.cloneNode(true);
+	  
+		// Cria um contêiner para os cenários e adiciona ao topo do clone
+		const scenariosContainer = document.createElement("div");
+		scenariosContainer.style.fontWeight = "bold";
+		scenariosContainer.style.color = "black";
+		scenariosContainer.innerHTML = scenariosText.replace(/\n/g, "<br>");
+		clonedElement.prepend(scenariosContainer);
+	  
 		const opt = {
-		  margin:       0.5,
-		  filename:     'dominus-chat.pdf',
-		  image:        { type: 'jpeg', quality: 0.98 },
-		  html2canvas:  { scale: 2 },
-		  jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+		  margin: 0.5,
+		  filename: 'dominus-chat.pdf',
+		  image: { type: 'jpeg', quality: 0.98 },
+		  html2canvas: { scale: 2 },
+		  jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
 		};
 	  
-		html2pdf().set(opt).from(element).save();
+		// Gera o PDF com o conteúdo atualizado
+		html2pdf().set(opt).from(clonedElement).save();
 	});
-
+	  
 	$("#btn-export-txt").on("click", function () {
 		const element = document.getElementById("messages");
-		const text = element.innerText || element.textContent;
-		
+		const scenariosText = getScenariosText(); 
+	  
+		const text = scenariosText + (element.innerText || element.textContent);
+	  
 		const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
 		const link = document.createElement("a");
 		link.href = URL.createObjectURL(blob);
-		link.download = "dominuns-chat.txt";
-		
+		link.download = "dominus-chat.txt";
+	  
 		document.body.appendChild(link);
 		link.click();
 		document.body.removeChild(link);
 	});
-	  
-	  
+
+	// Verifica se o PWA já está instalado
+	function isPWAInstalled() {
+		return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+	}
+	
+	// Instalação do PWA
+	let deferredPrompt;
+	
+	window.addEventListener("beforeinstallprompt", (e) => {
+		// Impede o comportamento padrão
+		e.preventDefault();
+	
+		// Só exibe o banner se o PWA não estiver instalado
+		if (!isPWAInstalled()) {
+			deferredPrompt = e; // Armazena o evento para uso posterior
+			$("#install-banner").show(); // Exibe o banner
+			hideInstallBannerAfterDelay(); // Faz o banner desaparecer após 5 segundos
+		}
+	});
+	
+	$("#btn-install").on("click", async function () {
+		if (deferredPrompt) {
+			deferredPrompt.prompt();
+			const { outcome } = await deferredPrompt.userChoice;
+			if (outcome === "accepted") {
+				$("#install-banner").hide(); // Oculta o banner após a instalação
+			}
+			deferredPrompt = null;
+		}
+	});
+	
+	$("#close-install-banner").on("click", function () {
+		$("#install-banner").hide(); // Fecha o banner
+	});
+	
+	// Oculta o banner se o PWA já estiver instalado ao carregar a página
+	document.addEventListener("DOMContentLoaded", () => {
+		if (isPWAInstalled()) {
+			$("#install-banner").hide();
+		}
+	}); 
+
+	function hideInstallBannerAfterDelay() {
+		setTimeout(() => {
+		  $("#install-banner").fadeOut(500, function () {
+			$(this).hide(); // Garante que o banner seja ocultado após o fade out
+		  });
+		}, 10000); // 10 segundos de atraso
+	  }
+	
+	/*
 	// Verifica se o PWA já está instalado
 	function isPWAInstalled() {
 		return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
@@ -395,5 +470,5 @@ $(function () {
 		$("#install-banner").hide();
 		}
 	});
-
+*/
 });
