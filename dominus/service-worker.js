@@ -1,10 +1,11 @@
-const CACHE_NAME = "dominus-v2.2";
+const CACHE_NAME = "dominus-v2.3";
 const urlsToCache = [
   "./index.html",
   "./styles.css",
   "./scenarios.js",
   "./script.js",
   "./jquery-3.7.1.min.js",
+  "./html2pdf.bundle.min.js",
   "./manifest.json",
   "./icon-192.png",
   "./icon-512.png"
@@ -47,34 +48,10 @@ self.addEventListener("fetch", (event) => {
             return fetchResponse;
           });
         }).catch(() => {
-          // Pode colocar um fallback aqui se quiser, tipo uma página offline
+          // Se falhar, retorna o arquivo offline (se existir)
+          return caches.match("./index.html");
         })
       );
     })
   );
 });
-
-
-/*const CACHE_NAME = "dominus-v1";
-const urlsToCache = [
-    "./index.html",
-    "./styles.css",
-    "./script.js",
-    "./jquery-3.7.1.min.js",
-    "./manifest.json",
-    "./icon-192.png",
-    "./icon-512.png"
-  ];
-
-self.addEventListener("install", (event) => {
-    event.waitUntil(
-      caches.open(CACHE_NAME).then((cache) => cache.addAll(urlsToCache))
-    );
-  });
-  
-
-self.addEventListener("fetch", (event) => {
-  event.respondWith(
-    caches.match(event.request).then((response) => response || fetch(event.request))
-  );
-});*/

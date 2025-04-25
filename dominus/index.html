@@ -44,6 +44,9 @@
           <button type="button" class="settings-option" id="btn-about">ℹ️ Sobre</button>
           <button type="button" class="settings-option" id="btn-rules">📃 Regras</button>
           <hr>
+          <button type="button" class="settings-option" id="btn-export-pdf">📄 Exportar PDF</button>
+          <button type="button" class="settings-option" id="btn-export-txt">📄 Exportar TXT</button>
+          <hr>
           <button type="button" class="settings-option" id="btn-undo">⤺ Desfazer</button>
           <button type="button" class="settings-option" id="btn-clear">🗑️ Limpar</button>
         </div>
@@ -136,6 +139,7 @@
   <script src="jquery-3.7.1.min.js"></script>
   <script src="scenarios.js"></script>
   <script src="script.js"></script>
+  <script src="html2pdf.bundle.min.js"></script>
 
   <script>
     if ('serviceWorker' in navigator) {

@@ -106,7 +106,7 @@ html, body {
 
 #message-input:focus {
 	outline: none;
-	background-color: #333;
+	background-color: var(--action-hover-bg);
 }
 
 button {
@@ -396,6 +396,22 @@ button.close-btn {
 .rules-content li {
   margin-bottom: 0.4rem;
 }
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #messages, #messages * {
+    visibility: visible;
+  }
+  #messages {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}
+
 
 /* Melhora usabilidade no modo paisagem */
 @media (max-width: 600px) {

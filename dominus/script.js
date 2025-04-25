@@ -320,6 +320,35 @@ $(function () {
 		$("#modal-about").addClass("hidden");
 	});
 
+	$("#btn-export-pdf").on("click", function () {
+		const element = document.getElementById("messages");
+		
+		const opt = {
+		  margin:       0.5,
+		  filename:     'dominus-chat.pdf',
+		  image:        { type: 'jpeg', quality: 0.98 },
+		  html2canvas:  { scale: 2 },
+		  jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+		};
+	  
+		html2pdf().set(opt).from(element).save();
+	});
+
+	$("#btn-export-txt").on("click", function () {
+		const element = document.getElementById("messages");
+		const text = element.innerText || element.textContent;
+		
+		const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
+		const link = document.createElement("a");
+		link.href = URL.createObjectURL(blob);
+		link.download = "dominuns-chat.txt";
+		
+		document.body.appendChild(link);
+		link.click();
+		document.body.removeChild(link);
+	});
+	  
+	  
 	// Verifica se o PWA já está instalado
 	function isPWAInstalled() {
 		return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
