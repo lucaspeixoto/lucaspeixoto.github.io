@@ -320,28 +320,45 @@ $(function () {
 		$("#modal-about").addClass("hidden");
 	});
 
-	//Instalação do PWA
+	// Verifica se o PWA já está instalado
+	function isPWAInstalled() {
+		return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+ 	}
+  
+	// Instalação do PWA
 	let deferredPrompt;
-
+	
 	window.addEventListener("beforeinstallprompt", (e) => {
+		// Impede o comportamento padrão
 		e.preventDefault();
 		deferredPrompt = e;
+	
+		// Só exibe o banner se o PWA não estiver instalado
+		if (!isPWAInstalled()) {
 		$("#install-banner").show(); // Exibe o banner
-	});
-
-	$("#btn-install").on("click", async function () {
-		if (deferredPrompt) {
-			deferredPrompt.prompt();
-			const { outcome } = await deferredPrompt.userChoice;
-			if (outcome === "accepted") {
-				$("#install-banner").hide();
-			}
-			deferredPrompt = null;
 		}
 	});
-
+	
+	$("#btn-install").on("click", async function () {
+		if (deferredPrompt) {
+		deferredPrompt.prompt();
+		const { outcome } = await deferredPrompt.userChoice;
+		if (outcome === "accepted") {
+			$("#install-banner").hide(); // Oculta o banner após a instalação
+		}
+		deferredPrompt = null;
+		}
+	});
+	
 	$("#close-install-banner").on("click", function () {
 		$("#install-banner").hide(); // Fecha o banner
+	});
+	
+	// Oculta o banner se o PWA já estiver instalado ao carregar a página
+	document.addEventListener("DOMContentLoaded", () => {
+		if (isPWAInstalled()) {
+		$("#install-banner").hide();
+		}
 	});
 
 });
