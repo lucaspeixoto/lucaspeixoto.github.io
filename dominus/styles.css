@@ -296,7 +296,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  max-height: 50vh;
+  max-height: 40vh;
   overflow-y: auto;
   color: var(--text-color)
 }
@@ -378,7 +378,7 @@ button.close-btn {
 }
 
 .rules-content {
-  max-height: 60vh;
+  max-height: 50vh;
   overflow-y: auto;
   padding: 1rem;
   line-height: 1.6;
