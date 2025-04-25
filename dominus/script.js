@@ -73,7 +73,7 @@ $(function () {
 				
 				{
 					const roll = Math.floor(Math.random() * 6) + 1;
-					resultado = `🎲: ${roll}`;
+					resultado = `🎲 ${roll}`;
 				} 
 			
 			else if (action === 'roll-2d6') 
@@ -81,9 +81,16 @@ $(function () {
 				{
 					const roll1 = Math.floor(Math.random() * 6) + 1;
 					const roll2 = Math.floor(Math.random() * 6) + 1;
-					resultado = `🎲: ${roll1} e ${roll2}`;
+					resultado = `🎲🎲 ${roll1} e ${roll2}`;
 				} 
 			
+			if (action === 'ask-oracle') 
+			
+				{
+					const answer = Math.random() < 0.5 ? "Sim" : "Não";
+					resultado = `❓ ${answer}`;
+				} 
+				
 			else if (action === 'plot') 
 				
 				{
@@ -106,7 +113,7 @@ $(function () {
 							<strong>Senão:</strong> ${plot["Otherwise"]}
 						`;
 					} else {
-						resultado = `⚠️ Selecione pelo menos um cenário no menu Engrenagem -> Cenários.`;
+						resultado = `⚠️ Selecione pelo menos um cenário!`;
 					}
 				} 
 			
@@ -123,7 +130,7 @@ $(function () {
 						}
 						resultado = formatted;
 				} else {
-					resultado = `⚠️ Selecione pelo menos um cenário no menu Engrenagem -> Cenários.`;
+					resultado = `⚠️ Selecione pelo menos um cenário!`;
 				}
 				
 			} 
@@ -149,7 +156,7 @@ $(function () {
 							<strong>Evento:</strong> ${scene["Event"]}
 						`;
 					} else {
-						resultado = `⚠️ Selecione pelo menos um cenário no menu Engrenagem -> Cenários.`;
+						resultado = `⚠️ Selecione pelo menos um cenário!`;
 					}
 				}
 
@@ -176,7 +183,7 @@ $(function () {
 							<strong>Qualidade:</strong> ${idea["Quality"]}
 						`;
 					} else {
-						resultado = `⚠️ Selecione pelo menos um cenário no menu Engrenagem -> Cenários.`;
+						resultado = `⚠️ Selecione pelo menos um cenário!`;
 					}
 				}
 
@@ -197,7 +204,7 @@ $(function () {
 						}
 						resultado = formatted;
 					} else {
-						resultado = `⚠️ Selecione pelo menos um cenário no menu Engrenagem -> Cenários.`;
+						resultado = `⚠️ Selecione pelo menos um cenário!`;
 					}
 				}
 
@@ -226,11 +233,11 @@ $(function () {
 	});
 
 	const scenarioList = [
-		"Pré-História", "Era Do Gelo", "Mitologias", "Espada E Feitiçaria", "Contos De Fadas",
+		"Pré-História", "Era do Gelo", "Mitologias", "Espada e Feitiçaria", "Contos de Fadas",
 		"Piratas", "Velho Oeste", "Horror Gótico", "Horror Cósmico", "Máfia", "Investigação",
 		"Guerra", "Comédia Romântica", "Artes Marciais", "Fantasia Urbana", "Super-Heróis",
 		"Tokusatsu", "Cartoons", "Zumbis", "Steampunk", "Cyberpunk", "Dieselpunk", "Solarpunk",
-		"Hopepunk", "Ficção Científica", "Fantasia Científica", "Exploração Espacial", "Viagem No Tempo"
+		"Hopepunk", "Ficção Científica", "Fantasia Científica", "Exploração Espacial", "Viagem no Tempo"
 	];
 
 	function loadScenarios() {
@@ -251,6 +258,16 @@ $(function () {
 		});
 	}
 
+	// Aplica a lógica de limite de 3
+	updateCheckboxLimits();
+
+	// A cada clique, atualiza o controle
+	$(".scenario-list").on("change", "input[type='checkbox']", function() {
+		console.log("Checkbox changed:", this.checked, this.value);
+		saveScenarios();
+		updateCheckboxLimits();
+	});
+
 	function saveScenarios() {
 		const selected = $(".scenario-list input[type='checkbox']:checked")
 			.map(function() {
@@ -260,15 +277,48 @@ $(function () {
 		localStorage.setItem("selectedScenarios", JSON.stringify(selected));
 	}
 
+	function updateCheckboxLimits() {
+		const $checkboxes = $(".scenario-list input[type='checkbox']");
+		const checkedCount = $checkboxes.filter(":checked").length;
+	
+		if (checkedCount >= 3) {
+			$checkboxes.not(":checked").prop("disabled", true);
+		} else {
+			$checkboxes.prop("disabled", false);
+		}
+	}
+
+	// Abrir modal de cenários
 	$("#btn-scenarios").on("click", function() {
 		loadScenarios();
-    $("#modal-scenarios").removeClass("hidden");
-  });
+		updateCheckboxLimits();
+    	$("#modal-scenarios").removeClass("hidden");
+  	});
 
-  $("#close-modal").on("click", function() {
-    saveScenarios();
-    $("#modal-scenarios").addClass("hidden");
-  });
+	// Fechar modal de cenários
+  	$("#close-scenarios-modal").on("click", function() {
+	    $("#modal-scenarios").addClass("hidden");
+  	});
+
+	// Abrir modal de regras
+	$("#btn-rules").on("click", function () {
+		$("#modal-rules").removeClass("hidden");
+	});
+	
+	// Fechar modal de regras
+	$("#close-rules-modal").on("click", function () {
+		$("#modal-rules").addClass("hidden");
+	});
+  
+	// Abrir modal de about
+	$("#btn-about").on("click", function () {
+		$("#modal-about").removeClass("hidden");
+	});
+	
+	// Fechar modal de about
+	$("#close-about-modal").on("click", function () {
+		$("#modal-about").addClass("hidden");
+	});
 
 	//Instalação do PWA
 	let deferredPrompt;

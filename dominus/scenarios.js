@@ -1,11 +1,3 @@
-/*const scenarioList = [
-	"Pré-História", "Era Do Gelo", "Mitologias", "Espada E Feitiçaria", "Contos De Fadas",
-	"Piratas", "Velho Oeste", "Horror Gótico", "Horror Cósmico", "Máfia", "Investigação",
-	"Guerra", "Comédia Romântica", "Artes Marciais", "Fantasia Urbana", "Super-Heróis",
-	"Tokusatsu", "Cartoons", "Zumbis", "Steampunk", "Cyberpunk", "Dieselpunk", "Solarpunk",
-	"Hopepunk", "Ficção Científica", "Fantasia Científica", "Exploração Espacial", "Viagem No Tempo"
-];*/
-
 // Lista de entradas para cada cenário
 const plotEntries = {
 	"Pré-História": {
@@ -34,7 +26,7 @@ const plotEntries = {
 		"O mundo acaba!"
       ]
     },
-    "Era Do Gelo": {
+    "Era do Gelo": {
       "Something happened": [
 			"Parte de sua comunidade saiu para uma caçada e não retornou",
 			"Um fenômeno natural coloca sua comunidade em perigo",
@@ -86,7 +78,7 @@ const plotEntries = {
 			"A sua divindade desaparecerá"
 		]
 	},
-	"Espada E Feitiçaria": {
+	"Espada e Feitiçaria": {
 		"Something happened": [
 			"Você teve um sonho ou uma visão",
 			"Alguém próximo foi assassinado",
@@ -112,7 +104,7 @@ const plotEntries = {
 			"Verá alguém estimado sofrer"
 		]
 	},
-	"Contos De Fadas": {
+	"Contos de Fadas": {
 		"Something happened": [
 			"A Vovó ficou doente",
 			"Te trancaram em uma torre",
@@ -750,7 +742,7 @@ const plotEntries = {
 			"Algo terrível despertará"
 		]
 	},
-	"Viagem No Tempo": {
+	"Viagem no Tempo": {
 		"Something happened": [
 			"Estranhos símbolos aparecem gravados nas paredes",
 			"Fragmentos de um diário antigo foram encontrados",
@@ -789,7 +781,7 @@ const archetypesEntries = {
 			"Filhote das Feras. Se sente seguro perto das feras e só sabe interagir com elas."
 		]
 	},
-  "Era Do Gelo": {
+  "Era do Gelo": {
 		"Arquétipo": [
 			"Artesão. Especialista em transformar recursos brutos em ferramentas.",
 			"Caçador. Especialista em rastrear e abater feras para servirem de alimento.",
@@ -809,7 +801,7 @@ const archetypesEntries = {
 			"Alquimista Curioso. Mestre na criação de poções e experimentação com substâncias mágicas."
 		]
 	},
-  "Espada E Feitiçaria": {
+  "Espada e Feitiçaria": {
 		"Ocupação": [
 			"Mercenário(a) / Soldado(a)",
 			"Ladrão(a) / Pirata",
@@ -835,7 +827,7 @@ const archetypesEntries = {
 			"Mentiroso(a)"
 		]
 	},
-  "Contos De Fadas": {
+  "Contos de Fadas": {
 		"Arquétipo": [
 			"Inconsequência. Não teme os perigos e age sem pensar. (role em desvantagem quando agir com cautela)",
 			"Ingenuidade. Crença cega na bondade dos outros. (role com desvantagem quando agir com desconfiança ou sem acreditar em alguém)",
@@ -1166,7 +1158,7 @@ const archetypesEntries = {
 		]
 
 	},
-  "Viagem No Tempo": {
+  "Viagem no Tempo": {
 		"Arquétipo": [
 			"Cientista Temporal. Focado na pesquisa e na compreensão dos paradoxos temporais.",
 			"Historiador Curioso. Tem conhecimento abrangente de diferentes períodos e suas culturas.",
@@ -1184,7 +1176,7 @@ const sceneEntries = {
 		"Character": ["Família das Cavernas", "Criança perdida", "Nômade(s)", "Pessoa muito estranha", "Caçador(a) solitário(a)", "Deuses"],
 		"Event": ["Manada de herbívoros", "Natureza Selvagem (Tabela Extra)", "Ovos eclodem", "Rastros estranhos", "Tempestade", "Astronautas!", "Grande pedra preta e lisa"]
 	},
-	"Era Do Gelo": {
+	"Era do Gelo": {
 		"Place": ["Acampamento", "Túnel natural", "Floresta congelada", "Caverna", "Montanha", "Geleira", "Rio congelado", "Cânion", "Campo de gêiseres", "Monumento misterioso"],
 		"Character": ["Líder de comunidade", "Xamã enigmático", "Pária ermitão", "Criança perdida", "Alguém criado por lobos", "Uma colecionadora de ossos"],
 		"Event": ["Encontro com feras!", "Um fenômeno natural", "Disputa por recursos", "Forasteiros pedem ajuda", "Uma coisa presa no gelo", "Passagem secreta?"]
@@ -1194,12 +1186,12 @@ const sceneEntries = {
 		"Character": ["Oráculo enigmático", "Divindade caprichosa", "Navegador intrépido", "Caçador de monstros", "Músico ambulante", "Mercador viajante"],
 		"Event": ["Armadilha oculta", "Ataque surpresa", "Ressurreição inesperada", "Revelação de segredo", "Aparição sobrenatural", "Aliado traiçoeiro"]
 	},
-	"Espada E Feitiçaria": {
+	"Espada e Feitiçaria": {
 		"Place": ["Vilarejo", "Cidade", "Cidade-Estado", "Caverna", "Cume", "Deserto", "Floresta", "Templo", "Ruína", "Forte", "Torre", "Palácio", "Tumba", "Monumento", "Ponte", "Portal", "Passagem", "Círculo", "Pântano", "Vulcão", "Vale estéril"],
 		"Character": ["Um oponente (ver tabelas)", "Religioso(a)", "Nobre", "Conjurador(a)", "Sábio(a)", "Bárbaro(a)", "Pirata", "Líder de guilda", "Mercador(a)", "Fugitivo(a)", "Criminoso(a)"],
 		"Event": ["Fenômeno natural", "Emboscada", "Luta repentina", "Fenômeno mágico", "Um pedido de ajuda", "Um enigma para continuar"]
 	},
-	"Contos De Fadas": {
+	"Contos de Fadas": {
 		"Place": ["Bosques", "Ruínas", "Gruta", "Ruas da Vila", "Estrada", "Castelo"],
 		"Character": ["Ser Mágico", "Pessoa Idosa", "Criança", "Pessoa de fora", "Ser sombrio", "Animal falante"],
 		"Event": ["Desmoronamento ou Chuva forte", "Perda da direção", "Um Enigma se apresenta e precisa ser resolvido", "Peças de um Quebra-Cabeças", "Vozes no Nevoeiro Misterioso", "Uma Reviravolta"]
@@ -1314,7 +1306,7 @@ const sceneEntries = {
 		"Character": ["Um dos arquétipos", "Robô / Super computador", "Caçador de recompensas", "Guarda ou Nobre Imperial", "Mestre sábio / Líder insurgente", "Cultista / Guardião cósmico"],
 		"Event": ["Uma nave desconhecida", "Mensagem misteriosa", "Fenômeno cósmico", "Explosão iminente", "Uma negociação perigosa", "Uma emboscada"]
 	},
-	"Viagem No Tempo": {
+	"Viagem no Tempo": {
 		"Place": ["Biblioteca de Alexandria", "Cidade submersa", "Estação espacial", "Laboratório científico", "Floresta proibida", "Templo desconhecido"],
 		"Character": ["Leonardo da Vinci", "Marco Polo", "Cleópatra", "Nikola Tesla", "Joana d'Arc", "Carmen Miranda"],
 		"Event": ["Distúrbio temporal súbito", "Encontro com outra versão de si mesmo", "Vigilância por observadores temporais", "Conflito com uma consequência histórica", "Roubo de um artefato temporal", "Intervenção de uma força temporal antagônica"]
@@ -1328,7 +1320,7 @@ const ideaBankEntries = {
 		"Thing": ["Ovos", "Pedra brilhante", "Ossada", "Ferramenta Alienígena", "Substância Degradada", "...de Gente / ...de Dino"],
 		"Quality": ["Rara", "Boa", "Interessante", "Alienígena", "Degradada", "Perigosa"]
 	},
-	"Era Do Gelo": {
+	"Era do Gelo": {
 		"Subject": ["Sobrevivência", "Misticismo", "Descoberta", "Tradição", "Comunidade", "Natureza"],
 		"Action": ["Fabricar / Gravar", "Caçar / Coletar", "Celebrar / Sacrificar", "Negociar / Transportar", "Fugir / Esconder", "Viajar / Mudar"],
 		"Thing": ["Artefato estranho", "Totem / Entalhe", "Arma / Vestimenta", "Colar de presas", "Recurso Extremo", "Ferramenta Quente"],
@@ -1340,172 +1332,323 @@ const ideaBankEntries = {
 		"Thing": ["Lira dourada", "Pergaminho Arcano", "Ânfora de néctar", "Cetro real", "Máscara sagrada", "Sandália divina"],
 		"Quality": ["Celestial", "Arcano", "Antigo", "Lendário", "Amaldiçoado", "Ornamentado"]
 	},
-	"Espada E Feitiçaria": {
+	"Espada e Feitiçaria": {
 		"Subject": ["Ilusão", "Maldição", "Imortalidade", "Dimensão", "Demônio", "Ambição"],
 		"Action": ["Sacrificar", "Torturar", "Chantagear", "Viajar", "Cultuar", "Simular"],
 		"Thing": ["Artefato", "Arma", "Arca", "Carta", "Elixir", "Harpa"],
 		"Quality": ["Ancestral", "Bizarro(a)", "Caótico(a)", "Imaterial", "Encantado(a)", "Profano(a)"]
 	},
-	"Contos De Fadas": {
-		"Subject": [],
-		"Action": [],
-		"Thing": [],
-		"Quality": []
+	"Contos de Fadas": {
+		"Subject": ["Ilusão", "Sorte", "Caminhos", "Segredo", "Encanto", "Afeto"],
+		"Action": ["Buscar", "Fuçar", "Esconder", "Manter", "Falar", "Enfrentar"],
+		"Thing": ["Caixa", "Chave", "Livro", "Pluma", "Linha", "Joia"],
+		"Quality": ["Mágica", "Ancestral", "Triste", "Sagrada", "Cruel", "Afável"]
 	},
 	"Piratas": {
-		"Subject": [],
-		"Action": [],
-		"Thing": [],
-		"Quality": []
+		"Subject": ["Estratagemas", "Jornada", "Fama", "Assombrações", "Justiça", "Salto de fé"],
+		"Action": ["Blefar", "Sabotar", "Desafiar", "Navegar", "Farrear", "Entregar"],
+		"Thing": ["Baú", "Dobrões", "Mapa", "Correntes", "Corda", "Trajes"],
+		"Quality": ["Encantado", "Valioso", "Frágil", "Encerrado", "Decrépito", "Amaldiçoado"]
 	},
 	"Velho Oeste": {
-		"Subject": [],
-		"Action": [],
-		"Thing": [],
-		"Quality": []
+		"Subject": ["Afeição / Honra", "Comunhão / Justiça", "Natureza / Dinheiro", "Cultura / Corrupção", "Caminho / Fabricação", "Lealdade / Morte"],
+		"Action": ["Sentir / Manipular", "Libertar / Limitar", "Encontrar / Sofrer", "Criar / Acabar", "Conciliar / Ganhar", "Guiar / Silenciar"],
+		"Thing": ["Erva / Pólvora", "Ferramenta / Mapa", "Alimento / Cartas", "Saco / Cantil", "Roupa / Chapéu", "Símbolo / Corda"],
+		"Quality": ["Sábio / Forte", "Belo / Triste", "Amigável / Frágil", "Calmo / Egoísta", "Livre / Mentiroso", "Generoso / Cansado"]
 	},
 	"Horror Gótico": {
-		"Subject": [],
-		"Action": [],
-		"Thing": [],
-		"Quality": []
+		"Subject": ["Dilema", "Relacionamento", "Decadência", "Loucura", "Redenção", "Desespero"],
+		"Action": ["Desvendar", "Optar", "Simular", "Esconder", "Transformar", "Possuir"],
+		"Thing": ["Diário / Livro / Anotações", "Relíquia / Artefato / Amuleto", "Espelho / Retrato / Quadro", "Cálice / Adaga / Máscara", "Relógio / Estátua / Alavanca", "Caixa de música / Máquina"],
+		"Quality": ["Selado", "Amaldiçoado", "Perdido", "Corrompido", "Secreto", "Monstruoso"]
 	},
 	"Horror Cósmico": {
-		"Subject": [],
-		"Action": [],
-		"Thing": [],
-		"Quality": []
+		"Subject": ["Alinhamento de constelações", "Um objeto ancestral perturbador", "Pesadelos que se tornam realidade", "Desaparecimento de pescadores", "Um livro proibido foi roubado", "Cânticos noturnos aterradores"],
+		"Action": ["Mergulhar", "Emanar", "Esquivar", "Sussurrar", "Delirar", "Rastejar"],
+		"Thing": ["Talismã estelar", "Lanterna a querosene", "Estatueta antiga", "Pergaminhos com revelações", "Pedra de obsidiana", "Livro com encantamentos"],
+		"Quality": ["Antigo", "Inominável", "Inefável", "Macabro", "Cósmico", "Enigmático"]
 	},
 	"Máfia": {
-		"Subject": [],
-		"Action": [],
-		"Thing": [],
-		"Quality": []
+		"Subject": ["Complô para matar...", "Mas ano passado...", "Um carregamento...", "Faça o que precisar...", "Tenho eles na mão...", "Motores velozes..."],
+		"Action": ["Furtar", "Investigar", "Fugir", "Atacar", "Despistar", "Prender"],
+		"Thing": ["Arma", "Fotos Incriminantes", "Jóias", "Jornal do dia", "Maleta com trava", "Carro veloz"],
+		"Quality": ["Roubado", "Antigo", "Quebrado", "Inestimável", "Novíssimo", "De Primeira!"]
 	},
 	"Investigação": {
-		"Subject": [],
-		"Action": [],
-		"Thing": [],
-		"Quality": []
+		"Subject": ["Corrupção política", "Conspiração empresarial", "Chantagem e extorsão", "Máfia local", "Falsificação de documentos", "Vingança pessoal"],
+		"Action": ["Decifrar", "Interrogar", "Deduzir", "Contradizer", "Confrontar", "Observar"],
+		"Thing": ["Bengala", "Relógio de bolso", "Chapéu", "Par de luvas", "Jornal do dia anterior", "Garrotes"],
+		"Quality": ["Desgastado", "Elegante", "Manchado", "Esfarrapado", "Polido", "Intocado"]
 	},
 	"Guerra": {
-		"Subject": [],
-		"Action": [],
-		"Thing": [],
-		"Quality": []
+		"Subject": ["Ataque aéreo", "Reféns em perigo", "Mensagem criptografada", "Plano secreto", "Tropas em movimento", "Campo minado"],
+		"Action": ["Atacar", "Emboscar", "Defender", "Proteger", "Posicionar", "Resgatar"],
+		"Thing": ["Tanque", "Suprimento", "Armamento", "Transporte", "Explosivos", "Rádio comunicador"],
+		"Quality": ["Emperrado", "Aprimorado", "Vazio", "Estragado", "Carregado", "Molhado"]
 	},
 	"Comédia Romântica": {
-		"Subject": [],
-		"Action": [],
-		"Thing": [],
-		"Quality": []
+		"Subject": ["Trabalho", "Encontro", "Amizade", "Conflito", "Desencontro", "Passado"],
+		"Action": ["Sair", "Conversar", "Comemorar", "Deter", "Ouvir", "Doar"],
+		"Thing": ["Anel", "Carta", "Caixa", "Camisa", "Flores", "Café"],
+		"Quality": ["Carente", "Alegre", "Triste", "Valoroso", "Decepcionante", "Vacilante"]
 	},
 	"Artes Marciais": {
-		"Subject": [],
-		"Action": [],
-		"Thing": [],
-		"Quality": []
+		"Subject": ["Amizade prejudicada", "Um pedido de ajuda", "Relação complicada", "Uma escolha difícil", "Briga desnecessária", "Boletos acumulando"],
+		"Action": ["Atacar", "Defender", "Proteger", "Arriscar", "Fugir", "Desafiar"],
+		"Thing": ["Arma", "Faixa", "Kimono", "Veículo", "Academia", "Jóias"],
+		"Quality": ["Limpo", "Sujo", "Forte", "Fraco", "Lento", "Ágil"]
 	},
 	"Fantasia Urbana": {
-		"Subject": [],
-		"Action": [],
-		"Thing": [],
-		"Quality": []
+		"Subject": ["Magia obscura", "Sequestro / Furto", "Conflitos políticos", "Perseguição", "Acordo / Diplomacia", "Sobrenatural"],
+		"Action": ["Enganar", "Arquitetar", "Furtar", "Desvendar", "Escapar", "Conspirar"],
+		"Thing": ["Joia / Relíquia", "Tomo / Escritura", "Escultura / Obra", "Documento / Carta", "Substância / Rastros", "Caixa / Maleta"],
+		"Quality": ["Conservado", "Decrépito", "Arcano", "Incoerente / Irreal", "Sobrenatural", "Rústico"]
 	},
 	"Super-Heróis": {
-		"Subject": [],
-		"Action": [],
-		"Thing": [],
-		"Quality": []
+		"Subject": ["Destruição", "Vingança", "Destino", "Futuro / Passado", "Ascensão", "Dor"],
+		"Action": ["Corromper", "Explodir", "Transportar", "Esconder", "Congelar", "Confundir"],
+		"Thing": ["Cristal bioenergético", "Acessório supressor", "Gerador de portais", "Artefato de poder", "Veículo multipropósito", "Esfera do microcosmo"],
+		"Quality": ["Enigmático", "Sobrenatural", "Cósmico", "Ilusório", "Ilimitado", "Horrorizante"]
 	},
 	"Tokusatsu": {
-		"Subject": [],
-		"Action": [],
-		"Thing": [],
-		"Quality": []
+		"Subject": ["Provas finais", "Um romance", "Um novo vilão", "Amizade desfeita", "Capangas assaltam", "Competição esportiva"],
+		"Action": ["Invadir", "Destruir", "Sequestrar", "Roubar", "Ameaçar", "Chantagear"],
+		"Thing": ["Morfador", "Comunicador", "Robô gigante", "Mochila", "Cristal estranho", "Veículo diferente"],
+		"Quality": ["Imenso", "Minúsculo", "Complexo", "Distante", "Fechado", "Oculto"]
 	},
 	"Cartoons": {
-		"Subject": [],
-		"Action": [],
-		"Thing": [],
-		"Quality": []
+		"Subject": ["Dispositivo", "Grupo", "Magia", "Antagonista", "Mundo / Universo", "Revolta"],
+		"Action": ["Festejar / Celebrar", "Brincar / Sacudir / Pular", "Jogar / Dançar / Brigar", "Comprar / Entrar / Roubar", "Voar / Lançar / Disparar", "Correr / Fugir / Cavar"],
+		"Thing": ["Arma laser", "Lápis do desenhista", "Jet Pack", "Nave espacial", "Kit de super disfarce", "Varinha mágica"],
+		"Quality": ["Divertido / Mágico", "Maluco / Antigo", "Genial / Brilhante", "Maldoso / Selvagem", "Explosivo / Aquático", "Mutável / Invisível"]
 	},
 	"Zumbis": {
-		"Subject": [],
-		"Action": [],
-		"Thing": [],
-		"Quality": []
+		"Subject": ["Cura / Experimento", "Conflito / Traição", "Segurança / Medo", "Fome / Insanidade", "Lealdade / Covardia", "Comunidade / Abrigo"],
+		"Action": ["Atacar / Tramar", "Torturar / Intimidar", "Morder / Arranhar", "Resgatar / Recuperar", "Corromper / Convencer", "Mentir / Manipular"],
+		"Thing": ["Suprimento", "Documento / Carta", "Arma de fogo", "Chave / Cofre", "Arma branca", "Veículo / Gerador"],
+		"Quality": ["Promissor(a)", "Antigo(a)", "Perigoso(a)", "Perdido(a)", "Confiável", "Sombrio(a)"]
 	},
 	"Steampunk": {
-		"Subject": [],
-		"Action": [],
-		"Thing": [],
-		"Quality": []
+		"Subject": ["Traição inesperada", "Romance proibido", "Briga generalizada", "Máquina disfuncional", "Pessoa indesejada", "Encontro marcado"],
+		"Action": ["Golpear", "Seduzir", "Enganar", "Distrair", "Esconder", "Atirar"],
+		"Thing": ["Luvas com garrote", "Membro mecânico com serra", "Livro com pistola", "Broche envenenado", "Cartola com lâminas", "Monóculo com microscópio"],
+		"Quality": ["Belo", "Valioso", "Quebrado", "Antigo", "Ilegal", "Destruído"]
 	},
 	"Cyberpunk": {
-		"Subject": [],
-		"Action": [],
-		"Thing": [],
-		"Quality": []
+		"Subject": ["Cena de crime", "Lab de drogas", "Corp assassinado", "Guerra entre gangues", "Tempestade elétrica", "Quebra da bolsa"],
+		"Action": ["Roubar", "Assassinar", "Hackear", "Fugir", "Coletar", "Negociar"],
+		"Thing": ["Katana", "Estimulantes", "Eletrônicos", "Farmacêuticos", "Armamento", "Ciberespaço"],
+		"Quality": ["Cromado", "Bugado", "Danoso", "Valioso", "Camuflado", "Cibernético"]
 	},
 	"Dieselpunk": {
-		"Subject": [],
-		"Action": [],
-		"Thing": [],
-		"Quality": []
+		"Subject": ["Não tem jeito, tem que refazer", "É pelo bem da Tribo", "Na feira de troca tem isso!", "Ondas de calor terríveis", "Anarquia ou morte", "A estrada sem fim"], 
+		"Action": ["Rachar", "Correr", "Sabotar", "Negociar", "Armar", "Obstruir"], 
+		"Thing": ["Galão de combustível", "Metralhadora Gatling", "Instrumento Musical", "Muda de planta", "Analgésicos", "Sucatas Variadas"], 
+		"Quality": ["Resistente", "Personalizado", "Agressivo", "Oculto", "Frágil", "Arruinado"] 
 	},
 	"Solarpunk": {
-		"Subject": [],
-		"Action": [],
-		"Thing": [],
-		"Quality": []
+		"Subject": ["Saúde", "Natureza", "Tecnologia", "Comunidade", "Jurisdição", "Tempo"],
+		"Action": ["Analisar", "Ocultar", "Corrigir", "Tornar", "Suprimir", "Toar"],
+		"Thing": ["Robô-Drone", "Chave estriada", "Celular-Prisma", "Caixa hermética", "Nutri-Suplementos", "e-Docs"],
+		"Quality": ["Inovadora", "Sucata", "Err0 - Ñ Indentificad0", "Ecológico", "Ativado", "Escuso"]
 	},
 	"Hopepunk": {
-		"Subject": [],
-		"Action": [],
-		"Thing": [],
-		"Quality": []
+		"Subject": ["Um refúgio seguro", "Nova célula de resistência", "Grupos dissidentes", "Escassez de recursos", "Mensagens vazadas", "Pessoas em perigo"],
+		"Action": ["Sobreviver", "Esconder", "Fugir", "Lutar", "Invadir", "Proteger"],
+		"Thing": ["Mensagem criptografada", "Aparato de vigilância", "Rádio comunicador clandestino", "Material explosivo", "Armas de fogo", "Documentos ilegais"],
+		"Quality": ["Oculto", "Proibido", "Perigoso", "Pesado", "Falso", "Letal"]
 	},
 	"Ficção Científica": {
-		"Subject": [],
-		"Action": [],
-		"Thing": [],
-		"Quality": []
+		"Subject": ["Os estoques de alimento estão no fim", "Os suprimentos de reserva perderam-se", "Uma inteligência artificial saiu do controle", "Um novo minério foi descoberto", "Conflitos políticos e separatistas", "Mudanças climáticas em planetas"],
+		"Action": ["Mapear", "Sintetizar", "Codificar", "Investigar", "Manipular", "Calibrar"],
+		"Thing": ["Comunicadores portáteis", "Cinto com barreira de proteção pessoal", "Alimentos sintéticos", "Bastão atordoante", "Pulseira de gravidade ajustável", "Esquemas e plantas de instalações"],
+		"Quality": ["Sintético", "Holográfico", "Nanotecnológico", "Multifuncional", "Regenerativo", "Interativo"]
 	},
 	"Fantasia Científica": {
-		"Subject": [],
-		"Action": [],
-		"Thing": [],
-		"Quality": []
+		"Subject": ["Tecnologia avançada", "Poderes psíquicos", "Fronteira inexplorada", "Mistérios cósmicos", "Conflito intergaláctico", "Exploração interplanetária"],
+		"Action": ["Abduzir", "Espalhar", "Dominar", "Guerrear", "Explorar", "Obter"],
+		"Thing": ["Cristal de energia", "Mochila gravitacional", "Rifle de pulso de plasma", "Nanorrobôs medicinais", "Lente multiespectral", "Neuralizador Neural"],
+		"Quality": ["Potente", "Versátil", "Preciso", "Durável", "Discreto", "Confiável"]
 	},
 	"Exploração Espacial": {
-		"Subject": [],
-		"Action": [],
-		"Thing": [],
-		"Quality": []
+		"Subject": ["Rebelião", "Aliança / Planos", "Supernova", "Contrabando", "Inteligência Artificial", "Simbiose"],
+		"Action": ["Decifrar / Planejar", "Confrontar / Ordenar", "Desviar / Salvar", "Reparar / Enganar", "Fugir / Simular", "Capturar / Abastecer"],
+		"Thing": ["Espada de força / Arma laser", "Semente de planta exótica", "Dispositivo de camuflagem", "Artefato de poder", "Diário de bordo / Mapa", "Amplificador psiônico"],
+		"Quality": ["Instável", "Luminescente", "Poderoso", "Ancestral", "Cósmico", "Secreto"]
 	},
-	"Viagem No Tempo": {
-		"Subject": [],
-		"Action": [],
-		"Thing": [],
-		"Quality": []
+	"Viagem no Tempo": {
+		"Subject": ["Paradoxo", "Catástrofe", "Efeitos psicológicos", "Artefato temporal", "Linha do tempo alternativa", "Viagem temporal acidental"],
+		"Action": ["Explorar", "Sintetizar", "Mapear", "Calibrar", "Reconfigurar", "Analisar"],
+		"Thing": ["Diário Antigo", "Chave Futurista", "Ferramenta", "Amuleto Misterioso", "Moeda", "Mosaico"],
+		"Quality": ["Preservado", "Futurista", "Preservado", "Misterioso", "Raro", "Intrigante"]
 	}
 };
 
 const extrasEntries = {
 	"Pré-História": {
-		"Animal Sagrado": ["Mamute", "Tigre Dentes de Sabre"],
-		"Ritual": ["Dança da Chuva", "Sacrifício do Fogo"]
+		"Tipos de Cenários": ["Sou um Dinossauro!", "Dinossauros no quintal.", "Dente por dente", "Techno-Jurássico!", "Máquina do tempo", "Sociedade Sauro-sapiens"],
+		"Natureza": ["Ventania cortante", "Invasão das águas", "Terremoto", "Seca escaldante", "Tempestade de Raios", "Vulcão!!!"],
+		"Selvagem": ["Tricerátops / Chifrudos", "Pterodáctilo / Voador", "Estegossauro / Corpulento", "Braquiossauro / Pescoçudo", "Velociraptor / Raptor", "Tiranossauro Rex!!!"],
+		"Reação": ["Amigável", "Pacífica", "Indiferente", "Desconfiada", "Arredia / Ressentida", "Violenta"]
+	},
+	"Era do Gelo": {
+		"Ferramentas": ["Raspador de carne/osso", "Moedor de ervas / Tigela", "Machadinha / Martelo", "Broca / Espigão", "Corda / Saco / Odre", "Tocha / Lamparina"],
+		"Feras": ["Tigre dentes-de-sabre", "Mamute", "Rinoceronte lanudo", "Urso de cara-curta", "Leão-das-cavernas", "Lobo cinzento"],
+		"Recursos": ["Ossos", "Galhos", "Pedra", "Pele", "Fibra vegetal", "Minério"],
+		"Fenômeno natural": ["Nevasca", "Terremoto", "Tornado", "Vulcão", "Meteorito", "Avalanche"]
+	},
+	"Mitologias": {
+		"Benção": ["Invulnerabilidade", "Clarividência", "Velocidade", "Multiplicação", "Eloquência divina", "Dança da chuva"],
+		"Maldição": ["Confusão de identidade", "Troca de gênero", "Enfraquecimento", "Paralisia intermitente", "Poder descontrolado", "Azar constante"],
+		"Divindade": ["do Sol e da Lua", "da Guerra e Destruição", "da Fertilidade", "das Artes e da Sabedoria", "do Submundo", "da Morte"],
+		"Artefato": ["Lâmina da Eternidade", "Espelho da Verdade", "Caldeirão da Criação", "Cajado dos Elementos", "Máscara da Ilusão", "Orbe da Sabedoria"]
+	},
+	"Espada e Feitiçaria": {
+		"Artefato": ["Talismã / Medalhão", "Anel / Brincos", "Joia / Orbe", "Cetro / Cajado", "Vestimenta / Tiara", "Arma / Escudo"],
+		"Propriedade": ["Fogo / Gelo", "Vida / Morte", "Sombras / Luz", "Terra / Vento", "Mente / Alma", "Tempo"],
+		"Oponente": ["Besta", "Entidade", "Animal / Artrópode", "Animal / Artrópode", "Humano", "Humano"],
+		"Tipo": ["Demoníaco", "Poderoso", "Misterioso", "Dissimulado", "Comum", "Comum"],
+		"Revés mágico": ["Inconsciência", "Efeito reverso", "Inaptidão mágica", "Invocação", "Metamorfose", "Corrupção mágica"]
+	},
+	"Contos de Fadas": {
+		"Reviravoltas": ["Falsa Amizade", "Não é bem assim", "É melhor do que esperava", "É pior do que parece", "É o completo oposto", "Falsa Inimizade"],
+		"Sentimentos": ["Amor", "Raiva", "Medo", "Alegria", "Tristeza", "Nojo"],
+		"Sensações": ["Mudança de Temperatura", "Cheiro marcante", "Diferença de Umidade", "Ruído persistente", "Textura estranha", "Vem de dentro"]
+	},
+	"Piratas": {
+		"Vícios": ["Cartas/ Dados", "Rum", "Luxúria", "Comida", "Ouro/Joias", "Punga"],
+		"Habilidade do Navio": ["Veloz", "Robusto", "Camuflado", "Agressivo", "Ágil", "Temido"],
+		"Destinos": ["Você me deve uma", "Espólios (role)", "Espólios x2 (role)", "Seu navio", "Preso/refém", "Morte!"],
+		"Espólios": ["10 Dobrões", "20 Dobrões", "50 Dobrões", "100 Dobrões", "200 Dobrões", "Joias (negocie)"]
+	},
+	"Velho Oeste": {
+		"Locais selvagens": ["Pradaria / Mina", "Cânion / Rancho", "Deserto / Forte", "Bosque / Acampamento", "Montanha / Trilho", "Rio / Posto comercial"],
+		"Locais urbanos": ["Bar / Estação", "Delegacia / Jornal", "Igreja / Cemitério", "Banco / Hotel", "Loja / Enfermaria", "Praça / Estábulo"],
+		"Materiais": ["Madeira", "Couro", "Tecido", "Metal", "Pedra", "Osso"],
+		"Propósito": ["Proteção", "Diversão", "Fabricação", "Religião", "Transporte", "Subsistência"]
+	},
+	"Horror Gótico": {
+		"Perda de humanidade": ["Fúria incontrolável", "Amnésia temporária", "Transformação", "Fome insaciável", "Visão sobrenatural", "Sobrecarga de poder"],
+		"Perda de racionalidade": ["Tremor excessivo", "Fobia", "Perda de identidade", "Alucinação", "Paralisia", "Desmaio"],
+		"Evento sobrenatural": ["Uma criatura", "Fenômeno místico", "Magia ritualística", "Compreensão do oculto", "Visão bizarra", "Ciência estranha"],
+		"Dilemas": ["Vida ou morte?", "Paixão ou objetivo?", "Pacto ou liberdade?", "Segredo ou salvação?", "Paz ou oportunidade?", "Luz ou trevas?"]
+	},
+	"Horror Cósmico": {
+		"Corrupção": ["[Mutação corporal]", "Marca sinistra", "Isolamento social", "Visões delirantes", "Atração pelo abismo", "Obsessão cósmica"],
+		"Mutação corporal": ["Tentáculos caudais", "Pele escamada", "Garras afiadas", "Olhos vazados", "Inchaço tumoral", "Corpo retorcido"],
+		"Monstro": ["Criatura aquática", "Ser invisível", "Horror amorfo", "Aberração genética", "Híbrido humano", "Entidade intangível"],
+		"Pista": ["Diário criptografado", "Símbolos arcanos", "Fotografias antigas", "Cartas enigmáticas", "Idolatria obscura", "Túneis subterrâneos"]
+	},
+	"Máfia": {
+		"O Grande Golpe": ["Roubo à joalheria", "Comandar o sindicato", "Contrabando", "Desvio de verbas", "Tomada de operações", "Assalto a banco"],
+		"Autoridade": ["Chefe de polícia", "Detetive", "Reitor", "Empresário/Industrial", "Chefe do Sindicato", "Governador"],
+		"Posição": ["Músculo", "Agregado", "Contador", "Político", "Gerente", "Chefe"],
+		"Evento Social": ["Baile beneficente", "Comício político", "Festa de casamento", "Final de ano", "Greve dos estivadores", "Parada de carros"]
+	},
+	"Investigação": {
+		"Na rua": ["Marcas de pneus", "Pegadas sujas", "Símbolos grafitados", "Cartuchos de munição", "Rastro de sangue", "Carro abandonado"],
+		"Em aposentos": ["Cacos de vidro", "Lenço esquecido", "Mancha de sangue", "Dinheiro rasgado", "Carta anônima", "Chave perdida"],
+		"Em corpos": ["Tatuagem enigmática", "Cicatrizes incomuns", "Injeção intravenosa", "Fragrância distinta", "Manchas de tinta", "Marca de mordida"],
+		"Em eventos": ["Bebida envenenada", "Fichas de jogo", "Convite riscado", "Máscara quebrada", "Pulseira de identificação", "Manchas de maquiagem"]
+	},
+	"Guerra": {
+		"Veículos": ["Caça (3 pv)", "Tanque (Blindado, 4 pv)", "Moto (1 pv)", "Jipe (2 pv)", "Lancha (2 pv)", "Helicóptero (Blindado, 3 pv)"],
+		"Equipamentos": ["Morteiro de chão (vantagem contra veículos)", "Bateria anti-aérea (vantagem contra aeronaves)", "Metralhadora de chão (vantagem contra tropas)", "Barricada (cobertura, vantagem para se proteger)", "Torre de comunicação", "Artilharia costeira (vantagem contra navios)"]
+	},
+	"Comédia Romântica": {
+		"Profissão": ["Vendas", "Artes", "Ensino", "Administrativo", "Atendimento", "Confecção"],
+		"Curso": ["Letras", "Design Digital", "Administração", "Medicina", "Propaganda", "Música"],
+		"Vícios": ["Chocolate", "Filmes Ruins", "Bebida Amarga", "Pets", "Enfeitinhos", "Suspensórios"],
+		"Reação": ["Entusiasmada", "Boa", "Calma", "Indiferente", "Desconfiada", "Irritada"]
+	},
+	"Artes Marciais": {
+		"Estilo": ["Agressivo", "Auto-defesa", "Combate próximo", "Combate distante", "Combate com armas", "Combate no chão"],
+		"Especialidade": ["Resistência a dano", "Esquiva aprimorada", "Velocidade no ataque", "Flexibilidade", "Sentidos aguçados", "Mestre com armas"],
+		"Técnicas de ataque": ["Chave de braço", "Agarrar", "Contra-ataque", "Chave de perna", "Gancho", "Voadora"],
+		"Técnicas de defesa": ["Desarmar", "Finta", "Evasão", "Derrubar", "Subjugar", "Prender"]
+	},
+	"Fantasia Urbana": {
+		"Facção": ["Gangue [sobrenatural]", "Políticos corruptos", "A Resistência", "O Culto", "Os Operários", "A Sombra"],
+		"Sobrenatural Criatura": ["Vampiros", "Lobisomens", "Espíritos", "Necromantes", "Magos", "Cultistas"],
+		"Artefato": ["Relógio de Bolso Temporal", "Lanterna de Revelação", "Anel da Persuasão", "Bússola da Verdade", "Máquina de Projeção do Passado", "Joias do Esquecimento"]
+	},
+	"Super-Heróis": {
+		"Capangas": ["Monstros", "Construtos", "Robôs", "Mutantes", "Animais gigantes", "Humanos"],
+		"Equipamentos": ["Anéis de poder", "Alta tecnologia", "Campos de força", "Armas mágicas", "Armas pesadas", "Armas comuns"],
+		"Organizações": ["Gangue", "Grupo alienígena", "Sociedade secreta", "Sindicato do crime", "Culto sombrio", "Grupo de supervilões"],
+		"Reviravolta": ["O inimigo não é quem você pensava","Você é acusado de ser parte do problema","Você é capturado","O problema se agrava","Um segredo sombrio seu é revelado","Mais um problema pra resolver (role na tabela de trama novamente)"]
+	},
+	"Tokusatsu": {
+		"Grupo": ["Guardiões da Aurora", "Sentinelas da Luz", "Sociedade dos Defensores", "Ordem dos Protetores", "Fênix Radiante", "Equipe Estrelar"],
+		"Robô Gigante": ["Humanóide com armas","Com formato de animal","Com traços elementais","Voador e mergulhador","Movido a energia psíquica","Que controla a natureza"],
+		"Capangas": ["Boneco de Massinha","Mercenários Mutantes","Ciborgues das Sombras","Ninjas Crepusculares","Espiões Tech","Místicos das Trevas"],
+		"Vilão": ["Dama Tecnocrata","Conquistador Intergaláctico","Mestre da Ilusão","Rainha das Marés","Lorde das Chamas Eternas","Caçador de Relíquias"]
+	},
+	"Cartoons": {
+		"Espécie": ["Animal / Inseto / Planta falante", "Alienígena", "Máquina consciente", "Monstro / Ser mágico", "Humano / Humanóide", "Objeto animado"],
+		"Profissão": ["Policial / Detetive / Bombeiro", "Cientista / Astronauta / Agente secreto", "Vendedor / Cozinheiro / Mordomo", "Esportista / Ator / Cantor", "Pirata / Marinheiro / Piloto", "Agricultor / Caçador / Pescador"],
+		"Traço": ["Egoísta", "Ambicioso", "Solidário", "Trapaceiro", "Mal-humorado", "Ingênuo"]
+	},
+	"Zumbis": {
+		"Tipo de zumbi": ["Ágil", "Parrudo", "Esperto", "Tóxico", "Farejador", "Falante"],
+		"Suprimento": ["Medicamento", "Comida enlatada", "Munição", "Peças", "Combustível", "Explosivo"],
+		"Arma de fogo": [".38", "Pistola", "Espingarda", "Escopeta", "Rifle", "Metralhadora"],
+		"Arma branca": ["Soco inglês", "Taco de beisebol", "Chave inglesa", "Punhal", "Katana", "Arco longo"],
+		"Facção": ["Saqueadores", "Fanáticos", "Libertadores", "Pró-zumbis", "Coletores", "Armamentistas"]
+	},
+	"Steampunk": {
+		"Identidade do Vilão": ["O próprio rei/rainha","Uma cientista genial","Uma pessoa que você confiava","Um famoso salafrário","Alguém da nobreza","Um artista de grande renome"],
+		"Objetivo do Vilão": ["Fama","Riqueza","Poder","Caos","Destruição","Derrubar a monarquia"],
+		"Movimento do Vilão": ["Atrasar burocraticamente o seu avanço","Enviar capangas para te pegar","Planejar maldades no seu covil","Subornar alguém desta cena","Sumir com alguém desta cena","Descansar, porque ninguém é de ferro"]
 	},
 	"Cyberpunk": {
-		"Corporação": ["NeoTek", "BioCore"],
-		"Implante": ["Visão Noturna", "Chip Neural"],
-		"Zona de Perigo": ["Distrito 9", "Subnível Delta"]
+		"Implantes": ["Bolsos ocultos", "Impulsionador adrenal", "Armadura subcutânea", "Gravadores", "Radar e sensores", "Um membro inteiro"],
+		"Bugs": ["Conexão ruim", "Erro na interface", "Acesso proibido", "Reboot constante", "Sistema lento", "Bateria no fim"],
+		"Hackeável": ["GPS", "Sistema de monitoramento", "Robô de manutenção", "Drone", "TV e projetores", "Veículo autônomo"],
+		"Trabalhador": ["Barista", "Analista de Sistemas", "Motorista de app", "Prostituta", "Traficante de drogas", "Peão de fábrica"]
 	},
-	// ... outros cenários
+	"Dieselpunk": {
+		"Carros": ["Gurgel Monstro", "Maverick Camuflado", "Camaro Amarelo", "Belina Envenenada", "Trailer Reforçado", "Harley de Sucata"],
+		"Sucata": ["Ferro / Alumínio", "Cobre / Eletrônico", "Madeira / Natural", "Explosivos / Munição", "Armas / Lâminas", "Alimento / Remédios"],
+		"Passado": ["Livro", "Fotografia", "Computador", "Toca-fitas", "Papéis"],
+		"Esperança": ["Combustível suficiente.", "O santuário existe.", "Arrumar o carro.", "Não precisar lutar.", "Que estejam vivos.", "Encontrar amor."]
+	},
+	"Solarpunk": {
+		"Cenários": ["Cidades Verdejantes", "Domos-Oásis", "Afrofuturista", "Amazofuturista", "Fazendas Verticais", "Rios Aéreos"],
+		"Recursos": ["Água", "Fonte energética", "Alimento", "Medicamento", "Plantas", "Minerais"],
+		"Desastres": ["Alagamento", "Tremores", "Vendaval", "Desmoronamento", "Relâmpago", "Temperatura extrema"],
+		"Crimes": ["Lixo", "Pesca / Caça", "Desmatamento", "Incêndio", "Extração Ilegal", "Resíduos Tóxicos"]
+	},
+	"Hopepunk": {
+		"Organização": ["Polícia militar", "Propaganda", "Segurança Nacional", "Minas e Energia", "Cultura e Educação", "Vigilância e Punição"],
+		"Escalão": ["Estagiário", "Concursado", "Cargo de Confiança", "Soldado", "Oficial", "Representante máximo"],
+		"Especialidade da Célula de Resistência": ["Técnicas de Guerrilha", "Comunicação e Criptografia", "Medicina e Laboratórios Químicos", "Inteligência e Informações", "Logística e Contrabando", "Infiltração e Extração"]
+	},
+	"Ficção Científica": {
+		"Planeta": ["Terra", "Marte", "Júpiter", "Plutão", "Mercúrio", "Vênus"],
+		"Anomalias espaciais": ["Bolha de dobra temporal", "Campo gravitacional fraturado", "Corrente estelar instável", "Nevoeiro magnético", "Vórtice quântico", "Campo de distorção elétrica"],
+		"Conflitos": ["Linhagens genéticas", "Ideologias espaciais", "Propósitos de colonização", "Território orbital", "Recursos naturais", "Gerações espaciais"],
+		"Riscos científicos": ["Vazamento de vírus", "IA descontrolada", "Contenção quântica", "Manipulação genética", "Materiais exóticos", "Fusão nuclear instável"]
+	},
+	"Fantasia Científica": {
+		"Corpo alienígena": ["Insetóide", "Gasoso", "Amorfo", "Baseado em silício", "De energia", "Aquático"],
+		"Comunicação alienígena": ["Telepatia", "Sonora e complexa", "Substâncias químicas", "Vibracional", "Eletromagnética", "Energética"],
+		"Planeta alienígena": ["Oceânico", "Desértico", "Vulcânico", "Glacial", "Flutuante", "Tecnológico"],
+		"Peculiaridade": ["Espectral", "Robótico", "Cósmico", "Galáctico", "Cadente", "Titânico"]
+	},
+	"Exploração Espacial": {
+		"Corpo central": ["Buraco negro", "Estrela de nêutron", "Anã marrom", "Gigante vermelha", "Gigante azul", "Anã amarela"],
+		"Planetas": ["Gasoso / Rochoso", "Pequeno / Grande", "Frio / Quente", "Árido / Úmido", "Tóxico / Respirável", "Natureza / Tecnologia"],
+		"Ponto de interesse 1": ["Fenômeno", "Evento", "Local", "Mistério", "Entidade / Facção", "Anomalia"],
+		"Ponto de interesse 2": ["Natureza / Tecnologia", "Vida / Recursos", "Radiação / Pressão", "Conflito / Interação", "Tempo / Construção", "Segredo / Energia"]
+	},
+	"Viagem no Tempo": {
+		"Tempo": ["Idade Antiga", "Idade Média", "Renascimento", "Era Industrial", "Era Moderna", "Futuro"],
+		"Continente": ["América", "África", "Europa", "Ásia", "Oceania", "Antártida"],
+		"Dispositivo de viagem": ["Transdutor Temporal", "Espelho Cronal", "Gerador de Ondas", "Núcleo de Dobra", "Máquina de Distensão", "Vórtex Portátil"],
+		"Grupo vilão": ["O Tribunal Temporal", "Culto dos Guardiões do Tempo", "Conselho dos Anacronistas", "Sombra Cronal", "A Cabala Paradoxal", "Exilados Temporais"]
+	}
 };
-
-
     
   // Função para sortear as entradas de "Trama"
   function getRandomPlot(cenariosSelecionados) {

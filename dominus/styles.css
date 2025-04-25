@@ -1,9 +1,11 @@
 :root {
   --bg-color: #ffffff;
-  --text-color: #ffffff;
+  --text-color: #000000;
+  --button-text: #ffffff;
   --input-bg: #f0f0f0;
   --input-border: #ccc;
   --message-user-bg: #3f51b5;
+  --message-user-text: #eeeeee;
   --message-bot-bg: #eeeeee;
   --message-bot-text: #000000;
   --button-bg: #3f51b5;
@@ -16,9 +18,11 @@
   :root {
     --bg-color: #121212;
     --text-color: #ffffff;
+    --button-text: #ffffff;
     --input-bg: #2a2a2a;
     --input-border: #444;
     --message-user-bg: #3f51b5;
+    --message-user-text: #eeeeee;
     --message-bot-bg: #6f6f6f;
     --message-bot-text: #ffffff;
     --button-bg: #3f51b5;
@@ -62,7 +66,7 @@ html, body {
 
 .message {
 	background-color: var(--message-user-bg);
-  color: var(--text-color);
+  color: var(--message-user-text);
 	align-self: flex-end;
 	padding: 0.6rem 1rem;
 	border-radius: 15px;
@@ -108,7 +112,7 @@ html, body {
 button {
 	padding: 0 1rem;
   background-color: var(--button-bg);
-  color: var(--text-color);
+  color: var(--button-text);
 	font-size: 1rem;
 	border: none;
 	border-radius: 25px;
@@ -261,10 +265,11 @@ button {
   align-items: center;
   justify-content: center;
   z-index: 999;
+  overflow: hidden; 
 }
 
 .modal.hidden {
-  display: none;
+  display: none !important;
 }
 
 .modal-content {
@@ -276,6 +281,8 @@ button {
   width: 90%;
   max-width: 500px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  position: relative;
 }
 
 .modal-content h2 {
@@ -291,6 +298,7 @@ button {
   gap: 0.5rem;
   max-height: 50vh;
   overflow-y: auto;
+  color: var(--text-color)
 }
 
 .scenario-item {
@@ -302,14 +310,20 @@ button {
 }
 
 #modal-scenarios h2 {
-	margin-bottom: 1.5rem;
+	margin-bottom: 1rem;
 	font-size: 1.5rem;
 	text-transform: capitalize;
 	color: var(--text-color);
 	text-align: center;
 }
 
-#modal-scenarios button.close-btn {
+#modal-scenarios p {
+	margin-bottom: 1rem;
+	color: var(--text-color);
+	text-align: center;
+}
+
+button.close-btn {
   margin-top: 25px;
   padding: 8px 16px;
   border-radius: 8px;
@@ -317,6 +331,70 @@ button {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.scenario-item input[type="checkbox"]:disabled + span {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+#modal-rules {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+#modal-rules h2 {
+	margin-bottom: 1.5rem;
+	font-size: 1.5rem;
+	color: var(--text-color);
+	text-align: center;
+}
+
+#modal-rules .modal-content {
+  background: var(--bg-color);
+  color: var(--text-color);
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 80%;
+  overflow-y: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+#modal-rules .rules-content {
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.rules-content {
+  max-height: 60vh;
+  overflow-y: auto;
+  padding: 1rem;
+  line-height: 1.6;
+}
+
+.rules-content p {
+  margin-bottom: 0.8rem;
+}
+
+.rules-content ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.rules-content li {
+  margin-bottom: 0.4rem;
 }
 
 /* Melhora usabilidade no modo paisagem */
