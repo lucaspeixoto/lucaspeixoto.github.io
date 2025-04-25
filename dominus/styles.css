@@ -397,6 +397,10 @@ button.close-btn {
   margin-bottom: 0.4rem;
 }
 
+#modal-about .modal-content {
+  overflow: scroll !important;
+}
+
 @media print {
   body * {
     visibility: hidden;

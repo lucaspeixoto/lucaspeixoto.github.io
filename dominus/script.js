@@ -320,6 +320,12 @@ $(function () {
 		$("#modal-about").addClass("hidden");
 	});
 
+	$(".modal").on("click", function (e) {
+		if ($(e.target).hasClass("modal")) {
+		  	$(this).addClass("hidden");
+		}
+	});
+
 	$("#btn-export-pdf").on("click", function () {
 		const element = document.getElementById("messages");
 		
