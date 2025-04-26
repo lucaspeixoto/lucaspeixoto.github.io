@@ -10,14 +10,22 @@
   <link rel="icon" href="icon-192.png" />
 </head>
 <body>
+
   <div id="chat-container">
+
+    <!-- Banner de Instalação -->
     <div id="install-banner" class="hidden">
       <span id="close-install-banner">✖</span>
       <button id="btn-install">📲 Instalar Codex Dominus</button>
     </div>
+
+    <!-- Chat -->
     <div id="messages"></div>
+
+    <!-- Barra Inferior -->
     <form id="chat-form">
 
+      <!-- Menu de Ações -->
       <div id="action-container">
         <button type="button" id="open-actions" title="Ações">🎲</button>
         <div id="action-menu" class="hidden">
@@ -35,9 +43,11 @@
         </div>
       </div>
 
+      <!-- Input de mensagem -->
       <input type="text" id="message-input" placeholder="Digite sua mensagem..." autocomplete="off" inputmode="text"/>
       <button type="submit">Enviar</button>
       
+      <!-- Menu de Configurações -->
       <div id="settings-container">
         <button type="button" id="open-settings" title="Configurações">⚙️</button>
         <div id="settings-menu" class="hidden">
@@ -52,9 +62,11 @@
       </div>
 
     </form>
+
   </div>
 
-  <div id="modal-scenarios" class="modal hidden">
+  <!-- Modal: Cenários -->
+  <section id="modal-scenarios" class="modal hidden">
     <div class="modal-content">
       <h2>Cenários Codex Dominus</h2>
       <p>Escolha entre 1 e 3 cenários para jogar. Os geradores consideram todos os cenários escolhidos!</p>
@@ -62,9 +74,10 @@
       </div>
       <button id="close-scenarios-modal" class="close-btn">Fechar</button>
     </div>
-  </div>
-  
-  <div id="modal-rules" class="modal hidden">
+  </section>
+
+  <!-- Modal: Regras -->  
+  <section id="modal-rules" class="modal hidden">
     <div class="modal-content">
       <h2>Regras Dominus</h2>
       <div class="rules-content">
@@ -121,39 +134,43 @@
       </div>
       <button id="close-rules-modal" class="close-btn">Fechar</button>
     </div>
-  </div>
+  </section>
 
-  <div id="modal-about" class="modal hidden">
+  <!-- Modal: Sobre -->
+  <section id="modal-about" class="modal hidden">
     <div class="modal-content">
       <h2>Sobre</h2>
-      <p>Bem-vindo ao Codex Dominus, um sistema genérico, minimalista e narrativo para RPG solo. Aqui você será guiado por menus de ação que sorteiam os elementos do jogo, como Tramas, Arquétipos, Cenas e muito mais, sempre de acordo com os cenários escolhidos. Basta interagir com o chat, que registrará todas as suas decisões, enquanto você constrói a história, cria personagens e enfrenta desafios. Prepare-se para uma experiência totalmente customizável e única!</p>
-      <br>
-      <p>Se você gostou da jornada, uma cerveja na taverna é uma recompensa justa!</p>
-      <br>
-      <p><em>Chave Pix: 00b231c7-93ca-4dfc-ab1d-f00a3dbf0916</em></p>
-      <br>
+      <p>Bem-vindo ao Codex Dominus, um sistema genérico, minimalista e narrativo para RPG solo. Aqui você será guiado por menus de ação que sorteiam os elementos do jogo, como Tramas, Arquétipos, Cenas e muito mais, sempre de acordo com os cenários escolhidos. Basta interagir com o chat, que registrará todas as suas decisões, enquanto você constrói a história, cria personagens e enfrenta desafios. Prepare-se para uma experiência totalmente customizável e única!</p><br>
+      <p>Se você gostou da jornada, uma cerveja na taverna é uma recompensa justa!</p><br>
+      <p><em>Chave Pix: 00b231c7-93ca-4dfc-ab1d-f00a3dbf0916</em></p><br>
       <p style="text-align: right"><small><em>Ver.: 0.7</em></small></p>
       <button id="close-about-modal" class="close-btn">Fechar</button>
     </div>
-  </div>
+  </section>
 
-  <div id="modal-settings" class="modal hidden">
+  <!-- Modal: Configurações -->
+  <section id="modal-settings" class="modal hidden">
     <div class="modal-content">
       <h2>Configurações</h2>
+
       <!-- Seção de Exportação -->
       <div class="settings-section">
         <h3>Exportar</h3>
-        <button type="button" id="btn-export-pdf">📄 Exportar como PDF</button>
-        <button type="button" id="btn-export-txt">📄 Exportar como TXT</button>
+        <button type="button" id="btn-export-pdf" aria-label="Exportar como PDF">📄 Exportar como PDF</button>
+        <button type="button" id="btn-export-txt" aria-label="Exportar como TXT">📄 Exportar como TXT</button>
       </div>
       <hr>
+
+      <!-- Seção de Backup -->
       <div class="settings-section">
         <h3>Backup</h3>
-        <button type="button" id="btn-export-backup">📤 Exportar Backup</button>
-        <label for="import-backup" class="backup-label">📥 Importar Backup</label>
+        <button type="button" id="btn-export-backup" aria-label="Exportar Backup">📤 Exportar Backup</button>
+        <label for="import-backup" class="backup-label" aria-label="Importar Backup">📥 Importar Backup</label>
         <input type="file" id="import-backup" class="hidden" accept=".bkp" />
       </div>
       <hr>
+
+      <!-- Seção de Armazenamento -->
       <div class="settings-section">
         <h3>Armazenamento</h3>
         <div class="storage-info">
@@ -164,9 +181,10 @@
         </div>
       </div>
       <hr>
+
       <button id="close-settings-modal" class="close-btn">Fechar</button>
     </div>
-  </div>
+  </section>
 
   <!-- Botão Flutuante -->
   <button id="btn-profile" class="floating-btn">
@@ -174,7 +192,7 @@
   </button>
 
   <!-- Modal de Perfil -->
-  <div id="modal-profile" class="modal hidden">
+  <section id="modal-profile" class="modal hidden">
     <div class="modal-content">
       <h2>Personagem</h2>
       <div class="tabs">
@@ -199,13 +217,15 @@
       </div>
       <button id="close-profile-modal" class="close-btn">Fechar</button>
     </div>
-  </div>
+  </section>
 
+  <!-- Javascripts -->
   <script src="jquery-3.7.1.min.js"></script>
   <script src="scenarios.js"></script>
   <script src="script.js"></script>
   <script src="html2pdf.bundle.min.js"></script>
 
+  <!-- Service Worker -->
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
