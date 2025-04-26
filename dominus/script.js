@@ -9,9 +9,9 @@ $(function () {
 	let mensagensSalvas = JSON.parse(localStorage.getItem('chatMensagens')) || [];
 
 	function adicionarMensagemNaTela(texto) {
-			const $msg = $('<div></div>').addClass('message').html(texto);
-			$messages.append($msg);
-			$messages.scrollTop($messages[0].scrollHeight);
+		const $msg = $('<div></div>').addClass('message').html(texto);
+		$messages.append($msg);
+		$messages.scrollTop($messages[0].scrollHeight);
 	}
 
 	function salvarMensagem(texto) {
@@ -20,15 +20,15 @@ $(function () {
 	}
 
 	function renderMensagens() {
-			$messages.empty();
-			mensagensSalvas.forEach(m => {
-				const $msg = $('<div></div>')
-					.addClass('message')
-					.addClass(m.tipo === 'bot' ? 'bot' : '')
-					.html(m.texto);
-				$messages.append($msg);
-			});
-			$messages.scrollTop($messages[0].scrollHeight);
+		$messages.empty();
+		mensagensSalvas.forEach(m => {
+			const $msg = $('<div></div>')
+				.addClass('message')
+				.addClass(m.tipo === 'bot' ? 'bot' : '')
+				.html(m.texto);
+			$messages.append($msg);
+		});
+		$messages.scrollTop($messages[0].scrollHeight);
 	}
 			
 	renderMensagens();
@@ -52,197 +52,199 @@ $(function () {
 	});
 
 	$btnUndo.on('click', function () {
-			if (mensagensSalvas.length === 0) return;
-			mensagensSalvas.pop();
-			localStorage.setItem('chatMensagens', JSON.stringify(mensagensSalvas));
-			$messages.children().last().remove();
-		});
+		if (mensagensSalvas.length === 0) return;
+		mensagensSalvas.pop();
+		localStorage.setItem('chatMensagens', JSON.stringify(mensagensSalvas));
+		$messages.children().last().remove();
+	});
 
 	// Mostrar ou ocultar menu flutuante
 	$('#open-actions').on('click', function (e) {
-			e.stopPropagation(); 
-			$('#action-menu').toggleClass('hidden');
+		e.stopPropagation(); 
+		$('#action-menu').toggleClass('hidden');
 	});
 
 	// Rolar dados ao clicar nas opções
 	$('.action-option').on('click', function () {
-			const action = $(this).data('action');
-			let resultado = '';
+		const action = $(this).data('action');
+		let resultado = '';
 
-			if (action === 'roll-1d6') 
-				
-				{
-					const roll = Math.floor(Math.random() * 6) + 1;
-					resultado = `🎲 ${roll}`;
-				} 
+		if (action === 'roll-1d6') 
 			
-			else if (action === 'roll-2d6') 
-				
-				{
-					const roll1 = Math.floor(Math.random() * 6) + 1;
-					const roll2 = Math.floor(Math.random() * 6) + 1;
-					resultado = `🎲🎲 ${roll1} e ${roll2}`;
-				} 
+			{
+				const roll = Math.floor(Math.random() * 6) + 1;
+				resultado = `🎲 ${roll}`;
+			} 
+		
+		else if (action === 'roll-2d6') 
 			
-			if (action === 'ask-oracle') 
+			{
+				const roll1 = Math.floor(Math.random() * 6) + 1;
+				const roll2 = Math.floor(Math.random() * 6) + 1;
+				resultado = `🎲🎲 ${roll1} e ${roll2}`;
+			} 
+		
+		if (action === 'ask-oracle') 
 
-				{
-					const oracleResponses = [
-						"Sim", "Sim e...", "Sim, mas...",
-						"Não", "Não, mas...", "Não e..."
-					];
-					const answer = oracleResponses[Math.floor(Math.random() * oracleResponses.length)];
-					resultado = `🔮 ${answer}`
-				}
-				
-			else if (action === 'plot') 
-				
-				{
-					const selectedScenarios = JSON.parse(localStorage.getItem("selectedScenarios")) || [];
-
-					const hasValidPlot = selectedScenarios.some(cenario => {
-						return plotEntries[cenario] &&
-							plotEntries[cenario]["Something happened"]?.length &&
-							plotEntries[cenario]["You need"]?.length &&
-							plotEntries[cenario]["Otherwise"]?.length;
-					});
-				
-					if (hasValidPlot) {
-						const plot = getRandomPlot(selectedScenarios);
-				
-						resultado = `
-							📜 <strong>Trama</strong><br>
-							<strong>Algo aconteceu:</strong> ${plot["Something happened"]}<br>
-							<strong>Você precisa:</strong> ${plot["You need"]}<br>
-							<strong>Senão:</strong> ${plot["Otherwise"]}
-						`;
-					} else {
-						resultado = `⚠️ Selecione pelo menos um cenário!`;
-					}
-				} 
+			{
+				const oracleResponses = [
+					"Sim", "Sim e...", "Sim, mas...",
+					"Não", "Não, mas...", "Não e..."
+				];
+				const answer = oracleResponses[Math.floor(Math.random() * oracleResponses.length)];
+				resultado = `🔮 ${answer}`
+			}
 			
-			else if (action === 'archetype') 
-				
-				{
-					const selectedScenarios = JSON.parse(localStorage.getItem("selectedScenarios")) || [];
-					const retorno = getRandomArchetypeFromSingleScenario(selectedScenarios);
-				
-					if (retorno) {
-						let formatted = `🧙 <strong>Personagem</strong><br>`;
-						for (const [coluna, valor] of Object.entries(retorno.resultado)) {
-							formatted += `<strong>${coluna}:</strong> ${valor}<br>`;
-						}
-						resultado = formatted;
+		else if (action === 'plot') 
+			
+			{
+				const selectedScenarios = JSON.parse(localStorage.getItem("selectedScenarios")) || [];
+
+				const hasValidPlot = selectedScenarios.some(cenario => {
+					return plotEntries[cenario] &&
+						plotEntries[cenario]["Something happened"]?.length &&
+						plotEntries[cenario]["You need"]?.length &&
+						plotEntries[cenario]["Otherwise"]?.length;
+				});
+			
+				if (hasValidPlot) {
+					const plot = getRandomPlot(selectedScenarios);
+			
+					resultado = `
+						📜 <strong>Trama</strong><br>
+						<strong>Algo aconteceu:</strong> ${plot["Something happened"]}<br>
+						<strong>Você precisa:</strong> ${plot["You need"]}<br>
+						<strong>Senão:</strong> ${plot["Otherwise"]}
+					`;
 				} else {
 					resultado = `⚠️ Selecione pelo menos um cenário!`;
 				}
-				
 			} 
-
-			else if (action === 'scene') 
-				
-				{
-					const selectedScenarios = JSON.parse(localStorage.getItem("selectedScenarios")) || [];
-				
-					const hasValidScene = selectedScenarios.some(cenario => {
-						return sceneEntries[cenario] &&
-							sceneEntries[cenario]["Place"]?.length &&
-							sceneEntries[cenario]["Character"]?.length &&
-							sceneEntries[cenario]["Event"]?.length;
-					});
-				
-					if (hasValidScene) {
-						const scene = getRandomScene(selectedScenarios);
-						resultado = `
-							🎬 <strong>Cena</strong><br>
-							<strong>Lugar:</strong> ${scene["Place"]}<br>
-							<strong>Personagem:</strong> ${scene["Character"]}<br>
-							<strong>Evento:</strong> ${scene["Event"]}
-						`;
-					} else {
-						resultado = `⚠️ Selecione pelo menos um cenário!`;
+		
+		else if (action === 'archetype') 
+			
+			{
+				const selectedScenarios = JSON.parse(localStorage.getItem("selectedScenarios")) || [];
+				const retorno = getRandomArchetypeFromSingleScenario(selectedScenarios);
+			
+				if (retorno) {
+					let formatted = `🧙 <strong>Personagem</strong><br>`;
+					for (const [coluna, valor] of Object.entries(retorno.resultado)) {
+						formatted += `<strong>${coluna}:</strong> ${valor}<br>`;
 					}
-				}
+					resultado = formatted;
+			} else {
+				resultado = `⚠️ Selecione pelo menos um cenário!`;
+			}
+			
+		} 
 
-			else if (action === 'idea-bank') 
-				
-				{
-					const selectedScenarios = JSON.parse(localStorage.getItem("selectedScenarios")) || [];
-				
-					const hasValidIdeaBank = selectedScenarios.some(cenario => {
-						return ideaBankEntries[cenario] &&
-							ideaBankEntries[cenario]["Subject"]?.length &&
-							ideaBankEntries[cenario]["Action"]?.length &&
-							ideaBankEntries[cenario]["Thing"]?.length &&
-							ideaBankEntries[cenario]["Quality"]?.length;
-					});
-				
-					if (hasValidIdeaBank) {
-						const idea = getRandomIdeaBank(selectedScenarios);
-						resultado = `
-							💡 <strong>Ideias</strong><br>
-							<strong>Assunto:</strong> ${idea["Subject"]}<br>
-							<strong>Ação:</strong> ${idea["Action"]}<br>
-							<strong>Coisa:</strong> ${idea["Thing"]}<br>
-							<strong>Qualidade:</strong> ${idea["Quality"]}
-						`;
-					} else {
-						resultado = `⚠️ Selecione pelo menos um cenário!`;
+		else if (action === 'scene') 
+			
+			{
+				const selectedScenarios = JSON.parse(localStorage.getItem("selectedScenarios")) || [];
+			
+				const hasValidScene = selectedScenarios.some(cenario => {
+					return sceneEntries[cenario] &&
+						sceneEntries[cenario]["Place"]?.length &&
+						sceneEntries[cenario]["Character"]?.length &&
+						sceneEntries[cenario]["Event"]?.length;
+				});
+			
+				if (hasValidScene) {
+					const scene = getRandomScene(selectedScenarios);
+					resultado = `
+						🎬 <strong>Cena</strong><br>
+						<strong>Lugar:</strong> ${scene["Place"]}<br>
+						<strong>Personagem:</strong> ${scene["Character"]}<br>
+						<strong>Evento:</strong> ${scene["Event"]}
+					`;
+				} else {
+					resultado = `⚠️ Selecione pelo menos um cenário!`;
+				}
+			}
+
+		else if (action === 'idea-bank') 
+			
+			{
+				const selectedScenarios = JSON.parse(localStorage.getItem("selectedScenarios")) || [];
+			
+				const hasValidIdeaBank = selectedScenarios.some(cenario => {
+					return ideaBankEntries[cenario] &&
+						ideaBankEntries[cenario]["Subject"]?.length &&
+						ideaBankEntries[cenario]["Action"]?.length &&
+						ideaBankEntries[cenario]["Thing"]?.length &&
+						ideaBankEntries[cenario]["Quality"]?.length;
+				});
+			
+				if (hasValidIdeaBank) {
+					const idea = getRandomIdeaBank(selectedScenarios);
+					resultado = `
+						💡 <strong>Ideias</strong><br>
+						<strong>Assunto:</strong> ${idea["Subject"]}<br>
+						<strong>Ação:</strong> ${idea["Action"]}<br>
+						<strong>Coisa:</strong> ${idea["Thing"]}<br>
+						<strong>Qualidade:</strong> ${idea["Quality"]}
+					`;
+				} else {
+					resultado = `⚠️ Selecione pelo menos um cenário!`;
+				}
+			}
+
+		else if (action === 'extras') 
+			
+			{
+				const selectedScenarios = JSON.parse(localStorage.getItem("selectedScenarios")) || [];
+			
+				const hasValidExtras = selectedScenarios.some(cenario => {
+					return extrasEntries[cenario] && Object.keys(extrasEntries[cenario]).length;
+				});
+			
+				if (hasValidExtras) {
+					const extras = getRandomExtras(selectedScenarios);
+					let formatted = "✨ <strong>Extras</strong><br>";
+					for (const [coluna, valor] of Object.entries(extras)) {
+						formatted += `<strong>${coluna}:</strong> ${valor}<br>`;
 					}
+					resultado = formatted;
+				} else {
+					resultado = `⚠️ Selecione pelo menos um cenário!`;
 				}
+			}
 
-			else if (action === 'extras') 
-				
-				{
-					const selectedScenarios = JSON.parse(localStorage.getItem("selectedScenarios")) || [];
-				
-					const hasValidExtras = selectedScenarios.some(cenario => {
-						return extrasEntries[cenario] && Object.keys(extrasEntries[cenario]).length;
-					});
-				
-					if (hasValidExtras) {
-						const extras = getRandomExtras(selectedScenarios);
-						let formatted = "✨ <strong>Extras</strong><br>";
-						for (const [coluna, valor] of Object.entries(extras)) {
-							formatted += `<strong>${coluna}:</strong> ${valor}<br>`;
-						}
-						resultado = formatted;
-					} else {
-						resultado = `⚠️ Selecione pelo menos um cenário!`;
-					}
-				}
-
-			// Mostrar resultado como resposta no chat (lado esquerdo)
-			const $msg = $('<div></div>').addClass('message bot').html(resultado);
-			$('#messages').append($msg);
-			$('#messages').scrollTop($('#messages')[0].scrollHeight);
-			$('#action-menu').addClass('hidden');
-			salvarMensagem({ texto: resultado, tipo: 'bot' });
+		// Mostrar resultado como resposta no chat (lado esquerdo)
+		const $msg = $('<div></div>').addClass('message bot').html(resultado);
+		$('#messages').append($msg);
+		$('#messages').scrollTop($('#messages')[0].scrollHeight);
+		$('#action-menu').addClass('hidden');
+		salvarMensagem({ texto: resultado, tipo: 'bot' });
 	});
 
 	// Toggle menu de configurações (engrenagem)
 	$('#open-settings').on('click', function (e) {
-			e.stopPropagation();
-			$('#settings-menu').toggleClass('hidden');
+		e.stopPropagation();
+		$('#settings-menu').toggleClass('hidden');
 	});
 	
 	// Fechar menu de configurações e de ação ao clicar fora
 	$(document).on('click', function (e) {
-			if (!$(e.target).closest('#settings-container').length) {
-					$('#settings-menu').addClass('hidden');
-			}
-			if (!$(e.target).closest('#action-menu').length) {
-					$('#action-menu').addClass('hidden');
-			}
+		if (!$(e.target).closest('#settings-container').length) {
+				$('#settings-menu').addClass('hidden');
+		}
+		if (!$(e.target).closest('#action-menu').length) {
+				$('#action-menu').addClass('hidden');
+		}
 	});
 
 	const scenarioList = [
-		"Pré-História", "Era do Gelo", "Mitologias", "Espada e Feitiçaria", "Contos de Fadas",
-		"Piratas", "Velho Oeste", "Horror Gótico", "Horror Cósmico", "Máfia", "Investigação",
-		"Guerra", "Comédia Romântica", "Artes Marciais", "Fantasia Urbana", "Super-Heróis",
-		"Tokusatsu", "Cartoons", "Zumbis", "Steampunk", "Cyberpunk", "Dieselpunk", "Solarpunk",
-		"Hopepunk", "Ficção Científica", "Fantasia Científica", "Exploração Espacial", "Viagem no Tempo"
+		"Artes Marciais","Cartoons","Comédia Romântica","Contos de Fadas","Cyberpunk",
+		"Dieselpunk","Era do Gelo","Espada e Feitiçaria","Exploração Espacial",
+		"Fantasia Científica","Fantasia Urbana","Ficção Científica","Guerra","Hopepunk",
+		"Horror Cósmico","Horror Gótico","Investigação","Máfia","Mitologias","Piratas",
+		"Pré-História","Solarpunk","Steampunk","Super-Heróis","Tokusatsu","Velho Oeste",
+		"Viagem no Tempo","Zumbis"
 	];
+	
 
 	function loadScenarios() {
 		const selected = JSON.parse(localStorage.getItem("selectedScenarios")) || [];
@@ -324,9 +326,17 @@ $(function () {
 		$("#modal-about").addClass("hidden");
 	});
 
+	// Fechar modal ao clicar fora dele
 	$(".modal").on("click", function (e) {
 		if ($(e.target).hasClass("modal")) {
-		  	$(this).addClass("hidden");
+		  const modalId = $(this).attr("id");
+	  
+		  // Salva os dados se for o modal de perfil
+		  if (modalId === "modal-profile") {
+			saveProfileData();
+		  }
+	  
+		  $(this).addClass("hidden");
 		}
 	});
 
@@ -335,6 +345,53 @@ $(function () {
 		return selectedScenarios.length > 0 
 		  ? `Cenários: ${selectedScenarios.join(", ")}\n\n`
 		  : "Cenários: Nenhum\n\n";
+	}
+
+	// Abrir modal de perfil
+	$("#btn-profile").on("click", function () {
+		$("#modal-profile").removeClass("hidden");
+		loadProfileData();
+	});
+	
+	// Fechar modal de perfil
+	$("#close-profile-modal").on("click", function () {
+		$("#modal-profile").addClass("hidden");
+		saveProfileData();
+	});
+	
+	// Alternar abas
+	$(".tab-btn").on("click", function () {
+		const tab = $(this).data("tab");
+	
+		// Ativar aba selecionada
+		$(".tab-btn").removeClass("active");
+		$(this).addClass("active");
+	
+		// Mostrar conteúdo da aba correspondente
+		$(".tab-pane").removeClass("active");
+		$("#" + tab).addClass("active");
+	});
+	
+	// Salvar dados no LocalStorage
+	function saveProfileData() {
+		["perfil", "inventario", "historico", "anotacoes"].forEach((id) => {
+		const value = $("#" + id + " textarea").val();
+		localStorage.setItem(id, value);
+		});
+	}
+	
+	// Carregar dados do LocalStorage
+	function loadProfileData() {
+		["perfil", "inventario", "historico", "anotacoes"].forEach((id) => {
+		const value = localStorage.getItem(id) || "";
+		$("#" + id + " textarea").val(value);
+		});
+	
+		// Ativar aba "perfil" ao abrir
+		$(".tab-btn").removeClass("active");
+		$(".tab-pane").removeClass("active");
+		$("[data-tab='perfil']").addClass("active");
+		$("#perfil").addClass("active");
 	}
 
 	$("#btn-export-pdf").on("click", function () {
@@ -428,47 +485,5 @@ $(function () {
 		  });
 		}, 10000); // 10 segundos de atraso
 	  }
-	
-	/*
-	// Verifica se o PWA já está instalado
-	function isPWAInstalled() {
-		return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
- 	}
-  
-	// Instalação do PWA
-	let deferredPrompt;
-	
-	window.addEventListener("beforeinstallprompt", (e) => {
-		// Impede o comportamento padrão
-		e.preventDefault();
-		deferredPrompt = e;
-	
-		// Só exibe o banner se o PWA não estiver instalado
-		if (!isPWAInstalled()) {
-		$("#install-banner").show(); // Exibe o banner
-		}
-	});
-	
-	$("#btn-install").on("click", async function () {
-		if (deferredPrompt) {
-		deferredPrompt.prompt();
-		const { outcome } = await deferredPrompt.userChoice;
-		if (outcome === "accepted") {
-			$("#install-banner").hide(); // Oculta o banner após a instalação
-		}
-		deferredPrompt = null;
-		}
-	});
-	
-	$("#close-install-banner").on("click", function () {
-		$("#install-banner").hide(); // Fecha o banner
-	});
-	
-	// Oculta o banner se o PWA já estiver instalado ao carregar a página
-	document.addEventListener("DOMContentLoaded", () => {
-		if (isPWAInstalled()) {
-		$("#install-banner").hide();
-		}
-	});
-*/
+
 });

@@ -1,4 +1,4 @@
-const CACHE_NAME = "dominus-v0.5";
+const CACHE_NAME = "dominus-v0.6";
 const urlsToCache = [
   "./index.html",
   "./styles.css",
@@ -8,7 +8,8 @@ const urlsToCache = [
   "./html2pdf.bundle.min.js",
   "./manifest.json",
   "./icon-192.png",
-  "./icon-512.png"
+  "./icon-512.png",
+  "./character.png",
 ];
 
 // Instala e pré-cacheia os arquivos

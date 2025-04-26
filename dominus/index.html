@@ -133,10 +133,45 @@
       <br>
       <p><em>Chave Pix: 00b231c7-93ca-4dfc-ab1d-f00a3dbf0916</em></p>
       <br>
-      <p style="text-align: right"><small><em>Ver.: 0.5</em></small></p>
+      <p style="text-align: right"><small><em>Ver.: 0.6</em></small></p>
       <button id="close-about-modal" class="close-btn">Fechar</button>
     </div>
   </div>
+
+  <!-- Botão Flutuante -->
+  <button id="btn-profile" class="floating-btn">
+    <img id="profile-img" src="character.png" alt="Perfil">
+  </button>
+
+  <!-- Modal de Perfil -->
+  <div id="modal-profile" class="modal hidden">
+    <div class="modal-content">
+      <h2>Personagem</h2>
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="perfil">👤</button>
+        <button class="tab-btn" data-tab="inventario">🎒</button>
+        <button class="tab-btn" data-tab="historico">📜</button>
+        <button class="tab-btn" data-tab="anotacoes">📝</button>
+      </div>
+      <div class="tab-content">
+        <div id="perfil" class="tab-pane active">
+          <textarea placeholder="Seu Perfil..."></textarea>
+        </div>
+        <div id="inventario" class="tab-pane">
+          <textarea placeholder="Seu Inventário..."></textarea>
+        </div>
+        <div id="historico" class="tab-pane">
+          <textarea placeholder="Seu Histórico..."></textarea>
+        </div>
+        <div id="anotacoes" class="tab-pane">
+          <textarea placeholder="Suas Anotações..."></textarea>
+        </div>
+      </div>
+      <button id="close-profile-modal" class="close-btn">Fechar</button>
+    </div>
+  </div>
+
+
 
   <script src="jquery-3.7.1.min.js"></script>
   <script src="scenarios.js"></script>
