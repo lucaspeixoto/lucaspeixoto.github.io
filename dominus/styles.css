@@ -9,6 +9,7 @@
   --message-bot-bg: #eeeeee;
   --message-bot-text: #000000;
   --button-bg: #3f51b5;
+  --button-hover-bg: #2c387e;
   --action-menu-bg: #ffffff;
   --action-hover-bg: #f0f0f0;
   --action-text: #000000;
@@ -26,6 +27,7 @@
     --message-bot-bg: #6f6f6f;
     --message-bot-text: #ffffff;
     --button-bg: #3f51b5;
+    --button-hover-bg: #2c387e;
     --action-menu-bg: #2c2c2c;
     --action-hover-bg: #3a3a3a;
     --action-text: #ffffff;
@@ -402,6 +404,94 @@ button.close-btn {
   max-height: 90vh;
 }
 
+/* Modal de Configurações */
+.settings-section {
+  margin-bottom: 20px;
+}
+
+.settings-section h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.settings-section button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  transition: background-color 0.3s;
+}
+
+.settings-section button:hover {
+  background-color: var(--button-hover-bg);
+}
+
+#modal-settings .modal-content hr {
+  border: none;
+  border-top: 1px solid var(--input-border);
+  margin: 20px 0;
+}
+
+/* Estilo para o botão de importação */
+.backup-label {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  transition: background-color 0.3s;
+}
+
+.backup-label:hover {
+  background-color: var(--button-hover-bg);
+}
+
+/* Ocultar o campo de arquivo */
+.hidden {
+  display: none;
+}
+
+/* Seção de Armazenamento */
+.storage-info {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.progress {
+  height: 100%;
+  background-color: var(--button-bg);
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+#storage-text {
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
 /* Botão Flutuante */
 .floating-btn {
   position: fixed;
@@ -487,7 +577,6 @@ button.close-btn {
     width: 100%;
   }
 }
-
 
 /* Melhora usabilidade no modo paisagem */
 @media (max-width: 600px) {

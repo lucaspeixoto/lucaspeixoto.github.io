@@ -44,8 +44,7 @@
           <button type="button" class="settings-option" id="btn-about">ℹ️ Sobre</button>
           <button type="button" class="settings-option" id="btn-rules">📃 Regras</button>
           <hr>
-          <button type="button" class="settings-option" id="btn-export-pdf">📄 Exportar PDF</button>
-          <button type="button" class="settings-option" id="btn-export-txt">📄 Exportar TXT</button>
+          <button type="button" class="settings-option" id="btn-settings">⚙️ Configurações</button>
           <hr>
           <button type="button" class="settings-option" id="btn-undo">⤺ Desfazer</button>
           <button type="button" class="settings-option" id="btn-clear">🗑️ Limpar</button>
@@ -133,8 +132,39 @@
       <br>
       <p><em>Chave Pix: 00b231c7-93ca-4dfc-ab1d-f00a3dbf0916</em></p>
       <br>
-      <p style="text-align: right"><small><em>Ver.: 0.6</em></small></p>
+      <p style="text-align: right"><small><em>Ver.: 0.7</em></small></p>
       <button id="close-about-modal" class="close-btn">Fechar</button>
+    </div>
+  </div>
+
+  <div id="modal-settings" class="modal hidden">
+    <div class="modal-content">
+      <h2>Configurações</h2>
+      <!-- Seção de Exportação -->
+      <div class="settings-section">
+        <h3>Exportar</h3>
+        <button type="button" id="btn-export-pdf">📄 Exportar como PDF</button>
+        <button type="button" id="btn-export-txt">📄 Exportar como TXT</button>
+      </div>
+      <hr>
+      <div class="settings-section">
+        <h3>Backup</h3>
+        <button type="button" id="btn-export-backup">📤 Exportar Backup</button>
+        <label for="import-backup" class="backup-label">📥 Importar Backup</label>
+        <input type="file" id="import-backup" class="hidden" accept=".bkp" />
+      </div>
+      <hr>
+      <div class="settings-section">
+        <h3>Armazenamento</h3>
+        <div class="storage-info">
+          <div class="progress-bar">
+            <div class="progress" id="storage-progress"></div>
+          </div>
+          <p id="storage-text">0 KB de 5120 KB usados</p>
+        </div>
+      </div>
+      <hr>
+      <button id="close-settings-modal" class="close-btn">Fechar</button>
     </div>
   </div>
 
@@ -170,8 +200,6 @@
       <button id="close-profile-modal" class="close-btn">Fechar</button>
     </div>
   </div>
-
-
 
   <script src="jquery-3.7.1.min.js"></script>
   <script src="scenarios.js"></script>

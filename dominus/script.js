@@ -326,6 +326,72 @@ $(function () {
 		$("#modal-about").addClass("hidden");
 	});
 
+	// Abrir modal de settings
+	$("#btn-settings").on("click", function () {
+		$("#modal-settings").removeClass("hidden");
+	});
+	
+	// Fechar modal de settings
+	$("#close-settings-modal").on("click", function () {
+		$("#modal-settings").addClass("hidden");
+	});
+
+	// Exportar backup
+	$("#btn-export-backup").on("click", function () {
+		const backupData = JSON.stringify(localStorage);
+		const blob = new Blob([backupData], { type: "application/json" });
+		const link = document.createElement("a");
+		link.href = URL.createObjectURL(blob);
+		link.download = "codex-dominus-backup.bkp";
+		document.body.appendChild(link);
+		link.click();
+		document.body.removeChild(link);
+		alert("Backup exportado com sucesso!");
+	});
+  
+	// Importar backup
+	$("#import-backup").on("change", function (e) {
+		const file = e.target.files[0];
+		if (!file) return;
+
+		const reader = new FileReader();
+		reader.onload = function (event) {
+		try {
+			const backupData = JSON.parse(event.target.result);
+			if (typeof backupData === "object") {
+			Object.keys(backupData).forEach((key) => {
+				localStorage.setItem(key, backupData[key]);
+			});
+			alert("Backup importado com sucesso!");
+			location.reload(); // Recarrega a página para aplicar os dados importados
+			} else {
+			alert("Arquivo de backup inválido.");
+			}
+		} catch (error) {
+			alert("Erro ao importar o backup. Certifique-se de que o arquivo é válido.");
+		}
+		};
+		reader.readAsText(file);
+	});
+
+	// Atualiza a barra de progresso do armazenamento
+	function updateStorageUsage() {
+		const totalBytes = new Blob(Object.values(localStorage)).size; // Calcula o tamanho total em bytes
+		const totalKB = (totalBytes / 1024).toFixed(2); // Converte para KB
+		const maxKB = 5120; // Limite de 5 MB em KB
+		const percentage = Math.min((totalKB / maxKB) * 100, 100); // Calcula a porcentagem usada
+	
+		// Atualiza a barra de progresso e o texto
+		$("#storage-progress").css("width", `${percentage}%`);
+		$("#storage-text").text(`${totalKB} KB de ${maxKB} KB usados`);
+	}
+	
+	// Atualiza o uso do armazenamento ao abrir o modal de configurações
+	$("#btn-settings").on("click", function () {
+		$("#modal-settings").removeClass("hidden");
+		updateStorageUsage();
+	});
+
 	// Fechar modal ao clicar fora dele
 	$(".modal").on("click", function (e) {
 		if ($(e.target).hasClass("modal")) {
@@ -339,13 +405,6 @@ $(function () {
 		  $(this).addClass("hidden");
 		}
 	});
-
-	function getScenariosText() {
-		const selectedScenarios = JSON.parse(localStorage.getItem("selectedScenarios")) || [];
-		return selectedScenarios.length > 0 
-		  ? `Cenários: ${selectedScenarios.join(", ")}\n\n`
-		  : "Cenários: Nenhum\n\n";
-	}
 
 	// Abrir modal de perfil
 	$("#btn-profile").on("click", function () {
@@ -392,6 +451,32 @@ $(function () {
 		$(".tab-pane").removeClass("active");
 		$("[data-tab='perfil']").addClass("active");
 		$("#perfil").addClass("active");
+	}
+
+	function getScenariosText() {
+		const selectedScenarios = JSON.parse(localStorage.getItem("selectedScenarios")) || [];
+		const scenariosText = selectedScenarios.length > 0 
+		  ? `Cenários: ${selectedScenarios.join(", ")}\n\n`
+		  : "Cenários: Nenhum\n\n";
+	  
+		// Carregar os conteúdos dos textareas do modal de perfil
+		const profileSections = {
+		  perfil: "Perfil",
+		  inventario: "Inventário",
+		  historico: "Histórico",
+		  anotacoes: "Anotações"
+		};
+	  
+		let profileText = "";
+	  
+		Object.keys(profileSections).forEach((section) => {
+		  const value = localStorage.getItem(section) || "";
+		  if (value.trim() !== "") {
+			profileText += `${profileSections[section]}:\n${value}\n\n`;
+		  }
+		});
+	  
+		return scenariosText + profileText;
 	}
 
 	$("#btn-export-pdf").on("click", function () {
