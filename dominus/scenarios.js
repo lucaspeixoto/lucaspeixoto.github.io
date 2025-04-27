@@ -1757,7 +1757,17 @@ function getRandomExtras(cenariosSelecionados) {
 		resultado[coluna] = sorteado;
 	}
 
-	return resultado;
+	// Selecionar até 4 linhas aleatórias do resultado
+    const chavesAleatorias = Object.keys(resultado)
+        .sort(() => Math.random() - 0.5) // Embaralhar as chaves
+        .slice(0, 4); // Selecionar as primeiras 4 chaves
+
+    let resultadoFiltrado = {};
+    chavesAleatorias.forEach(chave => {
+        resultadoFiltrado[chave] = resultado[chave];
+    });
+
+    return resultadoFiltrado;
 }
 
 function getRandomArchetypeFromSingleScenario(cenariosSelecionados) {
