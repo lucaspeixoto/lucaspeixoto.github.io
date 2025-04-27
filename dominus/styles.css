@@ -507,13 +507,18 @@ button.close-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+  z-index: 5;
+  opacity: 1;
 }
 
 .floating-btn img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+}
+
+.modal-open .floating-btn {
+  opacity: 0.5;
 }
 
 /* Tabs */
