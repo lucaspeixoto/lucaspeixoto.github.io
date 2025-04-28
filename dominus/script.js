@@ -89,7 +89,9 @@ $(function () {
 			{
 				const oracleResponses = [
 					"Sim", "Sim e...", "Sim, mas...",
-					"Não", "Não, mas...", "Não e..."
+					"Não", "Não, mas...", "Não e...",
+					"Sim","Sim","Sim","Sim","Sim",
+					"Não","Não","Não","Não","Não"
 				];
 				const answer = oracleResponses[Math.floor(Math.random() * oracleResponses.length)];
 				resultado = `🔮 ${answer}`
@@ -520,6 +522,34 @@ $(function () {
 		link.click();
 		document.body.removeChild(link);
 	});
+
+	// Verificar se o chat está vazio
+    if ($messages.children().length === 0) {
+        // Mensagem de boas-vindas
+        const mensagemBoasVindas = `
+		👋 <strong>Bem-vindo ao Codex Dominus App!</strong><br>
+		Aqui você encontrará ferramentas para gerar elementos aleatórios e criar histórias incríveis no RPG solo!<br><br>
+		<strong>Como usar:</strong><br>
+		🎲 Use o <strong>menu de ações</strong> para acessar os geradores principais:<br><br>
+		- <strong>Cenários</strong> (🌍) Selecione até 3 cenários para personalizar sua experiência.<br>
+		- <strong>Trama</strong> (📜): Crie a história principal.<br>
+		- <strong>Arquétipo</strong> (🧙): Crie seu personagem.<br>
+		- <strong>Cena</strong> (🎬): Descubra o lugar, personagem e evento.<br>
+		- <strong>Banco de Ideias</strong> (💡): Obtenha inspiração para enriquecer sua história.<br>
+		- <strong>Extras</strong> (✨): Gere elementos adicionais baseados nos cenários escolhidos.<br><br>
+		🔮 Use o <strong>Oráculo</strong> para resolver dilemas e tomar decisões.<br><br>
+		🎲 Role os dados (1d6 ou 2d6) para enfrentar desafios e avançar na história.<br><br>
+		📝 Todas as suas ações e decisões serão registradas no chat para que você possa acompanhar sua jornada.<br><br>
+		✍️ Você também pode enviar suas próprias mensagens no chat para fazer anotações importantes.<br><br>
+    	👤 Clique no botão flutuante no canto superior direito para acessar e preencher a ficha do seu personagem.<br><br>
+		Divirta-se e crie uma história única!
+        `;
+
+        // Exibir a mensagem no chat
+        const $msg = $('<div></div>').addClass('message bot').html(mensagemBoasVindas);
+        $messages.append($msg);
+        $messages.scrollTop($messages[0].scrollHeight);
+    }
 
 	// Verifica se o PWA já está instalado
 	function isPWAInstalled() {
