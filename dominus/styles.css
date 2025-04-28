@@ -517,10 +517,6 @@ button.close-btn {
   border-radius: 50%;
 }
 
-.modal-open .floating-btn {
-  opacity: 0.5;
-}
-
 /* Tabs */
 .tabs {
   display: flex;
