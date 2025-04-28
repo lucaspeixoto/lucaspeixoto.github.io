@@ -540,7 +540,6 @@ $(function () {
 		🔮 Use o <strong>Oráculo</strong> para resolver dilemas e tomar decisões.<br><br>
 		🎲 Role os dados (1d6 ou 2d6) para enfrentar desafios e avançar na história.<br><br>
 		📝 Todas as suas ações e decisões serão registradas no chat para que você possa acompanhar sua jornada.<br><br>
-		✍️ Você também pode enviar suas próprias mensagens no chat para fazer anotações importantes.<br><br>
     	👤 Clique no botão flutuante no canto superior direito para acessar e preencher a ficha do seu personagem.<br><br>
 		Divirta-se e crie uma história única!
         `;
