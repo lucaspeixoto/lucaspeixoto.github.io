@@ -236,7 +236,16 @@ const urlsToCache = [
     "rpg_solo.html",
     "runas.html",
     "sitemap.xml",
-    "sw.js"
+    "sw.js",
+    "dominus/index.html",
+    "dominus/styles.css",
+    "dominus/scenarios.js",
+    "dominus/script.js",
+    "dominus/jquery-3.7.1.min.js",
+    "dominus/html2pdf.bundle.min.js",
+    "dominus/icon-192.png",
+    "dominus/icon-512.png",
+    "dominus/character.png",
   ];
   
 // Instalando o Service Worker e armazenando arquivos no cache
