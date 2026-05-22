@@ -1,3 +1,5 @@
+$(document).ready(function() {
+
 function random(lista) {
     return lista[Math.floor(Math.random() * lista.length)];
 }
@@ -224,7 +226,6 @@ function gerarNPCShadowdark() {
 
 }
 
-$(document).ready(function() {
 
     setTimeout(function() {
         $('#btnGerarNPC').trigger('click');
