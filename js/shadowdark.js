@@ -24,29 +24,6 @@ $(document).ready(function() {
         return lista[Math.floor(Math.random() * lista.length)];
     }
 
-    function randomSemRepetir(lista, quantidade) {
-
-        let copia = [...lista];
-        let resultado = [];
-
-        for (let i = 0; i < quantidade; i++) {
-
-            if (copia.length == 0) {
-                break;
-            }
-
-            const indice = Math.floor(Math.random() * copia.length);
-
-            resultado.push(copia[indice]);
-
-            copia.splice(indice, 1);
-
-        }
-
-        return resultado;
-
-    }
-
     function modificador(valor) {
 
         if (valor <= 3) return -4;
@@ -364,75 +341,31 @@ $(document).ready(function() {
         const armas = {
 
             'Guerreiro': [
-                {
-                    nome: 'Espada longa',
-                    dano: '1d8',
-                    atributo: 'forca'
-                },
-                {
-                    nome: 'Machado grande',
-                    dano: '1d10',
-                    atributo: 'forca'
-                },
-                {
-                    nome: 'Martelo de guerra',
-                    dano: '1d10',
-                    atributo: 'forca'
-                },
-                {
-                    nome: 'Arco longo',
-                    dano: '1d8',
-                    atributo: 'destreza'
-                }
+                'Espada longa',
+                'Machado grande',
+                'Martelo de guerra',
+                'Arco longo',
+                'Lança'
             ],
 
             'Ladrão': [
-                {
-                    nome: 'Adaga',
-                    dano: '1d4',
-                    atributo: 'destreza'
-                },
-                {
-                    nome: 'Espada curta',
-                    dano: '1d6',
-                    atributo: 'forca'
-                },
-                {
-                    nome: 'Arco curto',
-                    dano: '1d4',
-                    atributo: 'destreza'
-                }
+                'Adaga',
+                'Espada curta',
+                'Arco curto',
+                'Besta'
             ],
 
             'Mago': [
-                {
-                    nome: 'Adaga',
-                    dano: '1d4',
-                    atributo: 'destreza'
-                },
-                {
-                    nome: 'Cajado',
-                    dano: '1d4',
-                    atributo: 'forca'
-                }
+                'Adaga',
+                'Cajado'
             ],
 
             'Sacerdote': [
-                {
-                    nome: 'Maça',
-                    dano: '1d6',
-                    atributo: 'forca'
-                },
-                {
-                    nome: 'Clava',
-                    dano: '1d4',
-                    atributo: 'forca'
-                },
-                {
-                    nome: 'Martelo de guerra',
-                    dano: '1d10',
-                    atributo: 'forca'
-                }
+                'Maça',
+                'Clava',
+                'Martelo de guerra',
+                'Cajado',
+                'Espada longa'
             ]
 
         };
@@ -493,35 +426,6 @@ $(document).ready(function() {
         return idiomas;
     }
 
-
-    function habilidadeClasse(classe) {
-
-        const habilidades = {
-
-            'Guerreiro': [
-                'Armas Preferidas: ataques com vantagem usando arma escolhida.'
-            ],
-
-            'Ladrão': [
-                'Ataque Furtivo: vantagem ao atacar alvos distraídos ou desprevenidos.'
-            ],
-
-            'Mago': [
-                'Conjuração Arcana',
-                'Aprender magias através de pergaminhos.'
-            ],
-
-            'Sacerdote': [
-                'Conjuração Divina',
-                'Expulsar Mortos-vivos'
-            ]
-
-        };
-
-        return habilidades[classe];
-    }
-
-
     function gerarPersonagem() {
 
         const ancestralidadePJ = ancestralidade();
@@ -530,19 +434,8 @@ $(document).ready(function() {
 
         const atributos = gerarAtributos();
 
-        const modFor = modificador(atributos.forca);
-        const modDes = modificador(atributos.destreza);
         const modCon = modificador(atributos.constituicao);
-
-        const arma = gerarArma(classePJ);
-
-        let modAtaque = 0;
-
-        if (arma.atributo == 'forca') {
-            modAtaque = modFor;
-        } else {
-            modAtaque = modDes;
-        }
+        const modDes = modificador(atributos.destreza);
 
         const personagem = {
 
@@ -569,16 +462,7 @@ $(document).ready(function() {
 
             ouro: rolar('2d6') * 5,
 
-            arma: arma,
-
-            ataque: textoModificador(modAtaque),
-
-            dano:
-                arma.dano +
-                ' ' +
-                textoModificador(modAtaque),
-
-            habilidades: habilidadeClasse(classePJ),
+            arma: gerarArma(classePJ),
 
             idiomas: gerarIdiomas(
                 ancestralidadePJ,
@@ -604,11 +488,11 @@ $(document).ready(function() {
 
         if (classePJ == 'Mago') {
 
-            personagem.magias =
-                randomSemRepetir(
-                    magiaMago(),
-                    3
-                );
+            personagem.magias = [
+                magiaMago(),
+                magiaMago(),
+                magiaMago()
+            ];
 
         }
 
@@ -616,11 +500,10 @@ $(document).ready(function() {
 
             personagem.divindade = divindade();
 
-            personagem.magias =
-                randomSemRepetir(
-                    magiaSacerdote(),
-                    2
-                );
+            personagem.magias = [
+                magiaSacerdote(),
+                magiaSacerdote()
+            ];
 
         }
 
@@ -661,21 +544,8 @@ $(document).ready(function() {
 
             <strong>PV:</strong> ${personagem.pv}<br>
             <strong>CA:</strong> ${personagem.ca}<br>
-            <strong>Ataque:</strong>
-            ${personagem.ataque}<br>
-
-            <strong>Arma:</strong>
-            ${personagem.arma.nome}<br>
-
-            <strong>Dano:</strong>
-            ${personagem.dano}<br>
-
+            <strong>Arma:</strong> ${personagem.arma}<br>
             <strong>Ouro:</strong> ${personagem.ouro} PO<br>
-
-            <hr>
-
-            <strong>Habilidades:</strong><br>
-            ${personagem.habilidades.join('<br>')}
 
             <hr>
 
