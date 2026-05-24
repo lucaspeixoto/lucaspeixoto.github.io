@@ -24,6 +24,29 @@ $(document).ready(function() {
         return lista[Math.floor(Math.random() * lista.length)];
     }
 
+    function randomSemRepetir(lista, quantidade) {
+
+        let copia = [...lista];
+        let resultado = [];
+
+        for (let i = 0; i < quantidade; i++) {
+
+            if (copia.length == 0) {
+                break;
+            }
+
+            const indice = Math.floor(Math.random() * copia.length);
+
+            resultado.push(copia[indice]);
+
+            copia.splice(indice, 1);
+
+        }
+
+        return resultado;
+
+    }
+
     function modificador(valor) {
 
         if (valor <= 3) return -4;
@@ -341,31 +364,75 @@ $(document).ready(function() {
         const armas = {
 
             'Guerreiro': [
-                'Espada longa',
-                'Machado grande',
-                'Martelo de guerra',
-                'Arco longo',
-                'Lança'
+                {
+                    nome: 'Espada longa',
+                    dano: '1d8',
+                    atributo: 'forca'
+                },
+                {
+                    nome: 'Machado grande',
+                    dano: '1d10',
+                    atributo: 'forca'
+                },
+                {
+                    nome: 'Martelo de guerra',
+                    dano: '1d10',
+                    atributo: 'forca'
+                },
+                {
+                    nome: 'Arco longo',
+                    dano: '1d8',
+                    atributo: 'destreza'
+                }
             ],
 
             'Ladrão': [
-                'Adaga',
-                'Espada curta',
-                'Arco curto',
-                'Besta'
+                {
+                    nome: 'Adaga',
+                    dano: '1d4',
+                    atributo: 'destreza'
+                },
+                {
+                    nome: 'Espada curta',
+                    dano: '1d6',
+                    atributo: 'forca'
+                },
+                {
+                    nome: 'Arco curto',
+                    dano: '1d4',
+                    atributo: 'destreza'
+                }
             ],
 
             'Mago': [
-                'Adaga',
-                'Cajado'
+                {
+                    nome: 'Adaga',
+                    dano: '1d4',
+                    atributo: 'destreza'
+                },
+                {
+                    nome: 'Cajado',
+                    dano: '1d4',
+                    atributo: 'forca'
+                }
             ],
 
             'Sacerdote': [
-                'Maça',
-                'Clava',
-                'Martelo de guerra',
-                'Cajado',
-                'Espada longa'
+                {
+                    nome: 'Maça',
+                    dano: '1d6',
+                    atributo: 'forca'
+                },
+                {
+                    nome: 'Clava',
+                    dano: '1d4',
+                    atributo: 'forca'
+                },
+                {
+                    nome: 'Martelo de guerra',
+                    dano: '1d10',
+                    atributo: 'forca'
+                }
             ]
 
         };
@@ -426,6 +493,35 @@ $(document).ready(function() {
         return idiomas;
     }
 
+
+    function habilidadeClasse(classe) {
+
+        const habilidades = {
+
+            'Guerreiro': [
+                'Armas Preferidas: ataques com vantagem usando arma escolhida.'
+            ],
+
+            'Ladrão': [
+                'Ataque Furtivo: vantagem ao atacar alvos distraídos ou desprevenidos.'
+            ],
+
+            'Mago': [
+                'Conjuração Arcana',
+                'Aprender magias através de pergaminhos.'
+            ],
+
+            'Sacerdote': [
+                'Conjuração Divina',
+                'Expulsar Mortos-vivos'
+            ]
+
+        };
+
+        return habilidades[classe];
+    }
+
+
     function gerarPersonagem() {
 
         const ancestralidadePJ = ancestralidade();
@@ -434,8 +530,19 @@ $(document).ready(function() {
 
         const atributos = gerarAtributos();
 
-        const modCon = modificador(atributos.constituicao);
+        const modFor = modificador(atributos.forca);
         const modDes = modificador(atributos.destreza);
+        const modCon = modificador(atributos.constituicao);
+
+        const arma = gerarArma(classePJ);
+
+        let modAtaque = 0;
+
+        if (arma.atributo == 'forca') {
+            modAtaque = modFor;
+        } else {
+            modAtaque = modDes;
+        }
 
         const personagem = {
 
@@ -462,7 +569,16 @@ $(document).ready(function() {
 
             ouro: rolar('2d6') * 5,
 
-            arma: gerarArma(classePJ),
+            arma: arma,
+
+            ataque: textoModificador(modAtaque),
+
+            dano:
+                arma.dano +
+                ' ' +
+                textoModificador(modAtaque),
+
+            habilidades: habilidadeClasse(classePJ),
 
             idiomas: gerarIdiomas(
                 ancestralidadePJ,
@@ -488,11 +604,11 @@ $(document).ready(function() {
 
         if (classePJ == 'Mago') {
 
-            personagem.magias = [
-                magiaMago(),
-                magiaMago(),
-                magiaMago()
-            ];
+            personagem.magias =
+                randomSemRepetir(
+                    magiaMago(),
+                    3
+                );
 
         }
 
@@ -500,10 +616,11 @@ $(document).ready(function() {
 
             personagem.divindade = divindade();
 
-            personagem.magias = [
-                magiaSacerdote(),
-                magiaSacerdote()
-            ];
+            personagem.magias =
+                randomSemRepetir(
+                    magiaSacerdote(),
+                    2
+                );
 
         }
 
@@ -544,8 +661,21 @@ $(document).ready(function() {
 
             <strong>PV:</strong> ${personagem.pv}<br>
             <strong>CA:</strong> ${personagem.ca}<br>
-            <strong>Arma:</strong> ${personagem.arma}<br>
+            <strong>Ataque:</strong>
+            ${personagem.ataque}<br>
+
+            <strong>Arma:</strong>
+            ${personagem.arma.nome}<br>
+
+            <strong>Dano:</strong>
+            ${personagem.dano}<br>
+
             <strong>Ouro:</strong> ${personagem.ouro} PO<br>
+
+            <hr>
+
+            <strong>Habilidades:</strong><br>
+            ${personagem.habilidades.join('<br>')}
 
             <hr>
 
@@ -577,16 +707,16 @@ $(document).ready(function() {
         gerarPersonagem();
     });
 
-function ancestralidadeShadowdark(valor) {
+    function ancestralidadeShadowdark(valor) {
 
-    if (valor >= 1 && valor <= 4) return 'Humano';
-    if (valor >= 5 && valor <= 6) return 'Elfo';
-    if (valor >= 7 && valor <= 8) return 'Anão';
-    if (valor >= 9 && valor <= 10) return 'Halfling';
-    if (valor == 11) return 'Meio-orc';
+        if (valor >= 1 && valor <= 4) return 'Humano';
+        if (valor >= 5 && valor <= 6) return 'Elfo';
+        if (valor >= 7 && valor <= 8) return 'Anão';
+        if (valor >= 9 && valor <= 10) return 'Halfling';
+        if (valor == 11) return 'Meio-orc';
 
-    return 'Goblin';
-}
+        return 'Goblin';
+    }
 
 function idadeShadowdark(valor) {
 
