@@ -171,6 +171,154 @@ $(document).ready(function() {
         return random(nomes[ancestralidade]);
     }
 
+    function nomeNPC(ancestralidade) {
+
+        const nomes = {
+
+            'Anão': [
+                'Hera',
+                'Torin',
+                'Ginny',
+                'Gant',
+                'Olga',
+                'Dendor',
+                'Ygrid',
+                'Pike',
+                'Sarda',
+                'Brigg',
+                'Zorli',
+                'Yorin',
+                'Jorgena',
+                'Trogin',
+                'Riga',
+                'Barton',
+                'Katrina',
+                'Egrim',
+                'Elsa',
+                'Orgo'
+            ],
+
+            'Elfo': [
+                'Sarenia',
+                'Ravos',
+                'Imeria',
+                'Farond',
+                'Isolden',
+                'Kieren',
+                'Mirenel',
+                'Riarden',
+                'Allindra',
+                'Arlomas',
+                'Sylara',
+                'Tyr',
+                'Rinariel',
+                'Saramir',
+                'Vedana',
+                'Elindos',
+                'Ophelia',
+                'Cydaros',
+                'Tiramel',
+                'Varond'
+            ],
+
+            'Goblin': [
+                'Kog',
+                'Dibbs',
+                'Fronk',
+                'Irv',
+                'Squag',
+                'Mort',
+                'Vig',
+                'Sticks',
+                'Gorb',
+                'Yogg',
+                'Plok',
+                'Zrak',
+                'Dent',
+                'Krik',
+                'Mizzo',
+                'Bort',
+                'Nabo',
+                'Hink',
+                'Bree',
+                'Kreeb'
+            ],
+
+            'Halfling': [
+                'Myrtle',
+                'Robby',
+                'Nora',
+                'Percy',
+                'Daisy',
+                'Jolly',
+                'Evelyn',
+                'Horace',
+                'Willie',
+                'Gertie',
+                'Peri',
+                'Carlsby',
+                'Nyx',
+                'Kellan',
+                'Fern',
+                'Harlow',
+                'Moira',
+                'Sage',
+                'Reenie',
+                'Wendry'
+            ],
+
+            'Humano': [
+                'Hesta',
+                'Matteo',
+                'Rosalin',
+                'Endric',
+                'Kiara',
+                'Yao',
+                'Corina',
+                'Rowan',
+                'Hariko',
+                'Ikam',
+                'Mariel',
+                'Jin',
+                'Hana',
+                'Lios',
+                'Indra',
+                'Remy',
+                'Nura',
+                'Vakesh',
+                'Una',
+                'Nabilo'
+            ],
+
+            'Meio-orc': [
+                'Troga',
+                'Boraal',
+                'Urgana',
+                'Zoraal',
+                'Scalga',
+                'Krell',
+                'Voraga',
+                'Morak',
+                'Draga',
+                'Sorak',
+                'Varga',
+                'Ulgar',
+                'Jala',
+                'Kresh',
+                'Zana',
+                'Torvash',
+                'Rokara',
+                'Gartak',
+                'Iskana',
+                'Ziraak'
+            ]
+
+        };
+
+        return random(nomes[ancestralidade]);
+
+    }
+
     function idiomaComum() {
 
         const lista = [
@@ -511,7 +659,7 @@ $(document).ready(function() {
 
             <h2>${personagem.nome}</h2>
 
-            <hr>
+            <br>
 
             <strong>Título:</strong> ${personagem.titulo}<br>
             <strong>Ancestralidade:</strong> ${personagem.ancestralidade}<br>
@@ -520,7 +668,7 @@ $(document).ready(function() {
             <strong>Alinhamento:</strong> ${personagem.alinhamento}<br>
             <strong>Antecedente:</strong> ${personagem.antecedente}<br>
 
-            <hr>
+            <br>
 
             <strong>FOR:</strong> ${personagem.forca}
             (${textoModificador(modificador(personagem.forca))})<br>
@@ -540,31 +688,31 @@ $(document).ready(function() {
             <strong>CAR:</strong> ${personagem.carisma}
             (${textoModificador(modificador(personagem.carisma))})<br>
 
-            <hr>
+            <br>
 
             <strong>PV:</strong> ${personagem.pv}<br>
             <strong>CA:</strong> ${personagem.ca}<br>
             <strong>Arma:</strong> ${personagem.arma}<br>
             <strong>Ouro:</strong> ${personagem.ouro} PO<br>
 
-            <hr>
+            <br>
 
             <strong>Idiomas:</strong><br>
             ${personagem.idiomas.join(', ')}
 
-            <hr>
+            <br>
 
             <strong>Equipamentos:</strong><br>
             ${personagem.equipamento.join('<br>')}
 
             ${personagem.divindade ? `
-                <hr>
+                <br>
                 <strong>Divindade:</strong>
                 ${personagem.divindade}
             ` : ''}
 
             ${personagem.magias ? `
-                <hr>
+                <br>
                 <strong>Magias:</strong><br>
                 ${personagem.magias.join('<br>')}
             ` : ''}
@@ -588,172 +736,173 @@ $(document).ready(function() {
         return 'Goblin';
     }
 
-function idadeShadowdark(valor) {
+    function idadeShadowdark(valor) {
 
-    switch(valor) {
+        switch(valor) {
 
-        case 1:
-            return 'Adolescente';
+            case 1:
+                return 'Adolescente';
 
-        case 2:
-            return 'Jovem adulto';
+            case 2:
+                return 'Jovem adulto';
 
-        case 3:
-        case 4:
-            return 'Adulto';
+            case 3:
+            case 4:
+                return 'Adulto';
 
-        case 5:
-        case 6:
-            return 'Meia-idade';
+            case 5:
+            case 6:
+                return 'Meia-idade';
 
-        case 7:
-            return 'Idoso';
+            case 7:
+                return 'Idoso';
 
-        case 8:
-            return 'Ancião';
+            case 8:
+                return 'Ancião';
 
-    }
-
-}
-
-function alinhamentoShadowdark(valor) {
-
-    if (valor >= 1 && valor <= 3) return 'Ordeiro';
-    if (valor == 4) return 'Neutro';
-
-    return 'Caótico';
-
-}
-
-function riquezaShadowdark(valor) {
-
-    switch(valor) {
-
-        case 1:
-            return 'Pobre';
-
-        case 2:
-        case 3:
-            return 'Padrão';
-
-        case 4:
-        case 5:
-            return 'Rico';
-
-        case 6:
-            return 'Extravagante';
+        }
 
     }
 
-}
+    function alinhamentoShadowdark(valor) {
 
-function aparenciaShadowdark() {
+        if (valor >= 1 && valor <= 3) return 'Ordeiro';
+        if (valor == 4) return 'Neutro';
 
-    return [
-        'Careca',
-        'Robusto',
-        'Muito alto',
-        'Marca de beleza',
-        'Caolho',
-        'Cabelos trançados',
-        'Musculoso',
-        'Grisalho',
-        'Cicatriz no rosto',
-        'Esbelto',
-        'Sua muito',
-        'Queixo fendido',
-        'Frágil',
-        'Sobrancelhas grossas',
-        'Tatuado',
-        'Chapéu largo',
-        'Dente de ouro',
-        'Seis dedos',
-        'Muito baixo',
-        'Nariz grande'
-    ];
+        return 'Caótico';
 
-}
+    }
 
-function trejeitoShadowdark() {
+    function riquezaShadowdark(valor) {
 
-    return [
-        'Cospe muito',
-        'Sempre comendo',
-        'Se move rápido',
-        'Truques com cartas',
-        'Reza em voz alta',
-        'Escreve em um diário',
-        'Apologético',
-        'Impulsivo',
-        'Deixa coisas caírem',
-        'Faz juramentos',
-        'Faz trocadilhos',
-        'Sotaque raro',
-        'Se assusta facilmente',
-        'Esquecido',
-        'Fala baixo',
-        'Tem tremores',
-        'Se move devagar',
-        'Fala alto',
-        'Arrogante',
-        'Fuma cachimbo'
-    ];
+        switch(valor) {
 
-}
+            case 1:
+                return 'Pobre';
 
-function segredoShadowdark() {
+            case 2:
+            case 3:
+                return 'Padrão';
 
-    return [
-        'Oculta fugitivos',
-        'Adora filhotes',
-        'Incendiário',
-        'Em um culto religioso',
-        'É meio-demônio',
-        'Foi aprendiz de um mago',
-        'Furta sem precisar',
-        'Tem uma identidade falsa',
-        'Medo de tempestades',
-        'Quer as funcionais',
-        'Grande débito em apostas',
-        'É contrabandista',
-        'É um lobisomem',
-        'Cheira mentiras',
-        'Expulso de família rica',
-        'Apaixonado pelo garçom',
-        'Saiu da Guilda dos Ladrões',
-        'Amigo do príncipe',
-        'Explorador aposentado',
-        'Basílisco mascote'
-    ];
+            case 4:
+            case 5:
+                return 'Rico';
 
-}
+            case 6:
+                return 'Extravagante';
 
-function ocupacaoShadowdark() {
+        }
 
-    return [
-        'Coveiro',
-        'Carpinteiro',
-        'Erudito',
-        'Ferreiro',
-        'Coletor de impostos',
-        'Fazendeiro',
-        'Garçom',
-        'Pedinte',
-        'Padeiro',
-        'Cozinheiro',
-        'Marinheiro',
-        'Açougueiro',
-        'Chaveiro',
-        'Sapateiro',
-        'Frade/freira',
-        'Mercador'
-    ];
+    }
 
-}
+    function aparenciaShadowdark() {
+
+        return [
+            'Careca',
+            'Robusto',
+            'Muito alto',
+            'Marca de beleza',
+            'Caolho',
+            'Cabelos trançados',
+            'Musculoso',
+            'Grisalho',
+            'Cicatriz no rosto',
+            'Esbelto',
+            'Sua muito',
+            'Queixo fendido',
+            'Frágil',
+            'Sobrancelhas grossas',
+            'Tatuado',
+            'Chapéu largo',
+            'Dente de ouro',
+            'Seis dedos',
+            'Muito baixo',
+            'Nariz grande'
+        ];
+
+    }
+
+    function trejeitoShadowdark() {
+
+        return [
+            'Cospe muito',
+            'Sempre comendo',
+            'Se move rápido',
+            'Truques com cartas',
+            'Reza em voz alta',
+            'Escreve em um diário',
+            'Apologético',
+            'Impulsivo',
+            'Deixa coisas caírem',
+            'Faz juramentos',
+            'Faz trocadilhos',
+            'Sotaque raro',
+            'Se assusta facilmente',
+            'Esquecido',
+            'Fala baixo',
+            'Tem tremores',
+            'Se move devagar',
+            'Fala alto',
+            'Arrogante',
+            'Fuma cachimbo'
+        ];
+
+    }
+
+    function segredoShadowdark() {
+
+        return [
+            'Oculta fugitivos',
+            'Adora filhotes',
+            'Incendiário',
+            'Em um culto religioso',
+            'É meio-demônio',
+            'Foi aprendiz de um mago',
+            'Furta sem precisar',
+            'Tem uma identidade falsa',
+            'Medo de tempestades',
+            'Quer as funcionais',
+            'Grande débito em apostas',
+            'É contrabandista',
+            'É um lobisomem',
+            'Cheira mentiras',
+            'Expulso de família rica',
+            'Apaixonado pelo garçom',
+            'Saiu da Guilda dos Ladrões',
+            'Amigo do príncipe',
+            'Explorador aposentado',
+            'Basílisco mascote'
+        ];
+
+    }
+
+    function ocupacaoShadowdark() {
+
+        return [
+            'Coveiro',
+            'Carpinteiro',
+            'Erudito',
+            'Ferreiro',
+            'Coletor de impostos',
+            'Fazendeiro',
+            'Garçom',
+            'Pedinte',
+            'Padeiro',
+            'Cozinheiro',
+            'Marinheiro',
+            'Açougueiro',
+            'Chaveiro',
+            'Sapateiro',
+            'Frade/freira',
+            'Mercador'
+        ];
+
+    }
 
 function gerarNPCShadowdark() {
 
     var ancestralidade = ancestralidadeShadowdark(rolarDado(12));
+    var nomeNPC = nomeNPC(ancestralidade);
     var idade = idadeShadowdark(rolarDado(8));
     var alinhamento = alinhamentoShadowdark(rolarDado(6));
     var riqueza = riquezaShadowdark(rolarDado(6));
@@ -765,16 +914,16 @@ function gerarNPCShadowdark() {
 
     $('.boxNPC').html(
 
-        '<h2><strong>NPC Gerado</strong></h2>' +
+        '<h2><strong>' + nomeNPC + '</strong></h2>' +
 
-        '<hr>' +
+        '<br>' +
 
         '<strong>Ancestralidade:</strong> ' + ancestralidade +
         '<br><strong>Idade:</strong> ' + idade +
         '<br><strong>Alinhamento:</strong> ' + alinhamento +
         '<br><strong>Riqueza:</strong> ' + riqueza +
 
-        '<hr>' +
+        '<br>' +
 
         '<strong>Ocupação:</strong> ' + ocupacao +
         '<br><strong>Aparência:</strong> ' + aparencia +
@@ -789,7 +938,6 @@ function gerarNPCShadowdark() {
         'padding': '15px',
         'margin-top': '20px',
         'max-width': '600px',
-        'background-color': '#f5f5f5',
         'box-shadow': '5px 5px 10px lightgrey'
     });
 
