@@ -171,7 +171,7 @@ $(document).ready(function() {
         return random(nomes[ancestralidade]);
     }
 
-    function nomeNPC(ancestralidade) {
+    function nomeNPCs(ancestralidade) {
 
         const nomes = {
 
@@ -899,50 +899,49 @@ $(document).ready(function() {
 
     }
 
-function gerarNPCShadowdark() {
+    function gerarNPCShadowdark() {
 
-    var ancestralidade = ancestralidadeShadowdark(rolarDado(12));
-    var nomeNPC = nomeNPC(ancestralidade);
-    var idade = idadeShadowdark(rolarDado(8));
-    var alinhamento = alinhamentoShadowdark(rolarDado(6));
-    var riqueza = riquezaShadowdark(rolarDado(6));
+        var ancestralidade = ancestralidadeShadowdark(rolarDado(12));
+        var nomeNPC = nomeNPCs(ancestralidade);
+        var idade = idadeShadowdark(rolarDado(8));
+        var alinhamento = alinhamentoShadowdark(rolarDado(6));
+        var riqueza = riquezaShadowdark(rolarDado(6));
 
-    var aparencia = random(aparenciaShadowdark());
-    var trejeito = random(trejeitoShadowdark());
-    var segredo = random(segredoShadowdark());
-    var ocupacao = random(ocupacaoShadowdark());
+        var aparencia = random(aparenciaShadowdark());
+        var trejeito = random(trejeitoShadowdark());
+        var segredo = random(segredoShadowdark());
+        var ocupacao = random(ocupacaoShadowdark());
 
-    $('.boxNPC').html(
+        $('.boxNPC').html(
 
-        '<h2><strong>' + nomeNPC + '</strong></h2>' +
+            '<h2>' + nomeNPC + '</h2>' +
 
-        '<br>' +
+            '<br>' +
 
-        '<strong>Ancestralidade:</strong> ' + ancestralidade +
-        '<br><strong>Idade:</strong> ' + idade +
-        '<br><strong>Alinhamento:</strong> ' + alinhamento +
-        '<br><strong>Riqueza:</strong> ' + riqueza +
+            '<strong>Ancestralidade:</strong> ' + ancestralidade +
+            '<br><strong>Idade:</strong> ' + idade +
+            '<br><strong>Alinhamento:</strong> ' + alinhamento +
+            '<br><strong>Riqueza:</strong> ' + riqueza +
 
-        '<br>' +
+            '<br>' +
 
-        '<strong>Ocupação:</strong> ' + ocupacao +
-        '<br><strong>Aparência:</strong> ' + aparencia +
-        '<br><strong>Trejeito:</strong> ' + trejeito +
-        '<br><strong>Segredo:</strong> ' + segredo
+            '<strong>Ocupação:</strong> ' + ocupacao +
+            '<br><strong>Aparência:</strong> ' + aparencia +
+            '<br><strong>Trejeito:</strong> ' + trejeito +
+            '<br><strong>Segredo:</strong> ' + segredo
 
-    );
+        );
 
-    $('.boxNPC').css({
-        'border': 'solid 1px black',
-        'border-radius': '5px',
-        'padding': '15px',
-        'margin-top': '20px',
-        'max-width': '600px',
-        'box-shadow': '5px 5px 10px lightgrey'
-    });
+        $('.boxNPC').css({
+            'border': 'solid 1px black',
+            'border-radius': '5px',
+            'padding': '15px',
+            'margin-top': '20px',
+            'max-width': '600px',
+            'box-shadow': '5px 5px 10px lightgrey'
+        });
 
-}
-
+    }
 
     setTimeout(function() {
         $('#btnGerarNPC').trigger('click');
