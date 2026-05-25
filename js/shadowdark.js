@@ -923,7 +923,7 @@ $(document).ready(function() {
             '<br><strong>Alinhamento:</strong> ' + alinhamento +
             '<br><strong>Riqueza:</strong> ' + riqueza +
 
-            '<br>' +
+            '<br><br>' +
 
             '<strong>Ocupação:</strong> ' + ocupacao +
             '<br><strong>Aparência:</strong> ' + aparencia +
