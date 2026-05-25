@@ -700,19 +700,19 @@ $(document).ready(function() {
             <strong>Idiomas:</strong><br>
             ${personagem.idiomas.join(', ')}
 
-            <br>
+            <br><br>
 
             <strong>Equipamentos:</strong><br>
             ${personagem.equipamento.join('<br>')}
 
             ${personagem.divindade ? `
-                <br>
+                <br><br>
                 <strong>Divindade:</strong>
                 ${personagem.divindade}
             ` : ''}
 
             ${personagem.magias ? `
-                <br>
+                <br><br>
                 <strong>Magias:</strong><br>
                 ${personagem.magias.join('<br>')}
             ` : ''}
