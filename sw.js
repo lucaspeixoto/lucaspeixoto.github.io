@@ -1,4 +1,4 @@
-const CACHE_NAME = "solorpg-cache-v1";
+const CACHE_NAME = "solorpg-cache-v2";
 const urlsToCache = [
     "/",
     "css/style.css",
@@ -188,6 +188,7 @@ const urlsToCache = [
     "js/ronin.js",
     "js/runas.js",
     "js/script.js",
+    "js/shadowdark.js",
     "js/skills.js",
     "js/solo10.js",
     "js/stunts.js",
@@ -205,6 +206,7 @@ const urlsToCache = [
     "gerador_ftq.html",
     "gerador_ihunt.html",
     "gerador_npc.html",
+    "gerador_shadowdark.html",
     "gerador_solo10_tropas.html",
     "gerador_solo10.html",
     "gerador_tinydungeon.html",
